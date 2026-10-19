@@ -8,7 +8,7 @@ export async function GET(request: NextRequest) {
   const response = NextResponse.redirect(new URL('/admin', url.origin));
   if (!code) return NextResponse.redirect(new URL('/admin/login?error=missing_code', url.origin));
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
   if (!supabaseUrl || !supabaseKey) return NextResponse.redirect(new URL('/admin/login?error=configuration', url.origin));
   const client = createServerClient(supabaseUrl, supabaseKey, {
     cookies: {
