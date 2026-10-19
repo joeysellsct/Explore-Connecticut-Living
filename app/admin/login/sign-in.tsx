@@ -5,7 +5,7 @@ export function LoginButton(){
   const [error,setError]=useState('');
   async function signIn(){
     const url=process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const key=process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    const key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
     if(!url||!key){setError('Authentication has not been configured.');return;}
     const client=createBrowserClient(url,key);
     const result=await client.auth.signInWithOAuth({provider:'google',options:{redirectTo:window.location.origin+'/auth/callback'}});
