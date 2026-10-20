@@ -13,9 +13,10 @@ export default async function LocaleLayout({children,params}:{children:ReactNode
     </header>
     {children}
     <footer className="compliance-footer">
+      <strong>Joey McVety</strong>
+      <span>License #RES.0820513 · {locale==='es'?'Agente inmobiliario con licencia en Connecticut':'Real Estate Agent · Licensed in Connecticut'} · <a href="tel:+12036277262">203-627-7262</a> · <a href="mailto:JoeySellsCT@gmail.com">JoeySellsCT@gmail.com</a></span>
       <strong>mygoodagent LLC</strong>
       <span>680 Boston Post Rd, Suite H, Milford, CT 06460 · <a href="tel:+18882578265">888-257-8265</a></span>
-      <span>Joey McVety · License #RES.0820513 · {locale==='es'?'Agente inmobiliario con licencia en Connecticut':'Real Estate Agent · Licensed in Connecticut'} · <a href="tel:+12036277262">203-627-7262</a> · <a href="mailto:JoeySellsCT@gmail.com">JoeySellsCT@gmail.com</a></span>
       <div className="fair-housing"><svg viewBox="0 0 64 64" width="52" height="52" role="img" aria-label="Equal Housing Opportunity symbol" xmlns="http://www.w3.org/2000/svg"><path d="M7 30 L32 9 L57 30 V57 H7 Z" fill="none" stroke="currentColor" strokeWidth="5" strokeLinejoin="round"/><path d="M20 36 H44 M20 46 H44" stroke="currentColor" strokeWidth="5" strokeLinecap="square"/></svg><div><strong>{locale==='es'?'Igualdad de oportunidades de vivienda':'Equal Housing Opportunity'}</strong><p>{locale==='es'?'Apoyamos la igualdad de oportunidades de vivienda para todas las personas, sin discriminación por motivos protegidos por las leyes federales y de Connecticut.':'We support equal housing opportunity for everyone, without discrimination on any basis protected by federal or Connecticut law.'}</p></div></div>
       <span><Link href={`/${locale}/privacy`}>{locale==='es'?'Privacidad':'Privacy Policy'}</Link> · <Link href={`/${locale}/terms`}>{locale==='es'?'Condiciones':'Terms & Disclosures'}</Link></span>
       <small>{locale==='es'?'Explore Connecticut Living es un sitio informativo y de marketing inmobiliario de Joey McVety, agente de mygoodagent LLC. No es una correduría independiente.':'Explore Connecticut Living is a real estate information and marketing website operated by Joey McVety, an agent affiliated with mygoodagent LLC. It is not a separate brokerage.'}</small>
