@@ -143,3 +143,6 @@
  .compliance-footer .footer-brand strong{font-size:1rem}
  .compliance-footer .footer-brand span{font-size:.78rem}
 }
+
+/* Accessible visually hidden bot-trap field: excluded from normal tab order. */
+.match-honeypot{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important}
