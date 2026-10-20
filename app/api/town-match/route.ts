@@ -1,7 +1,11 @@
 import {NextRequest,NextResponse} from 'next/server';
 export async function POST(req:NextRequest){
  try {
+ const origin=req.headers.get('origin');
+ if(origin&&new URL(origin).host!==req.nextUrl.host)return NextResponse.json({error:'Forbidden'},{status:403});
+ if(Number(req.headers.get('content-length')||0)>12000)return NextResponse.json({error:'Request too large'},{status:413});
  const d=await req.json();
+ if(typeof d.name!=='string'||d.name.length>120||typeof d.email!=='string'||d.email.length>254||typeof d.phone!=='string'||d.phone.length>30||typeof d.message!=='string'||d.message.length>2000||!Array.isArray(d.matches)||d.matches.length!==4||d.matches.some((x:unknown)=>typeof x!=='string'||x.length>80))return NextResponse.json({error:'Invalid details'},{status:400});
  if(d.website!==''||typeof d.formStartedAt!=='number'||Date.now()-d.formStartedAt<3000||Date.now()-d.formStartedAt>86400000)return NextResponse.json({error:'Invalid submission'},{status:400});
  if(d.consent!==true||typeof d.name!=='string'||d.name.trim().length<2||typeof d.email!=='string'||!/^\S+@\S+\.\S+$/.test(d.email)||typeof d.phone!=='string'||d.phone.replace(/\D/g,'').length<10||!d.answers||!Array.isArray(d.matches))return NextResponse.json({error:'Invalid details'},{status:400});
  const key=process.env.FOLLOW_UP_BOSS_API_KEY;
