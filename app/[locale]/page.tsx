@@ -120,6 +120,5 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <div className="meet-actions"><a className="button-primary" href="tel:+12036277262">{t.meetCall}: 203-627-7262</a><a className="button-outline" href="mailto:JoeySellsCT@gmail.com">{t.meetEmail} ↗</a></div>
       </div>
     </section>
-    <footer className="site-footer"><strong>Explore Connecticut Living</strong><span>{t.footer}</span></footer>
   </main>;
 }
