@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
   const client = createServerClient(supabaseUrl, supabaseKey, {
     cookies: {
       getAll() { return request.cookies.getAll(); },
-      setAll(values) { values.forEach(({ name, value, options }) => { request.cookies.set(name, value); response.cookies.set(name, value, options); }); }
+      setAll(values: { name: string; value: string; options?: Parameters<typeof response.cookies.set>[2] }[]) { values.forEach(({ name, value, options }) => { request.cookies.set(name, value); response.cookies.set(name, value, options); }); }
     }
   });
   const { error } = await client.auth.exchangeCodeForSession(code);
