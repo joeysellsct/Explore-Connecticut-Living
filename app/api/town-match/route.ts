@@ -2,6 +2,7 @@ import {NextRequest,NextResponse} from 'next/server';
 export async function POST(req:NextRequest){
  try {
  const d=await req.json();
+ if(d.website!==''||typeof d.formStartedAt!=='number'||Date.now()-d.formStartedAt<3000||Date.now()-d.formStartedAt>86400000)return NextResponse.json({error:'Invalid submission'},{status:400});
  if(d.consent!==true||typeof d.name!=='string'||d.name.trim().length<2||typeof d.email!=='string'||!/^\S+@\S+\.\S+$/.test(d.email)||typeof d.phone!=='string'||d.phone.replace(/\D/g,'').length<10||!d.answers||!Array.isArray(d.matches))return NextResponse.json({error:'Invalid details'},{status:400});
  const key=process.env.FOLLOW_UP_BOSS_API_KEY;
  const systemKey=process.env.FOLLOW_UP_BOSS_SYSTEM_KEY;
