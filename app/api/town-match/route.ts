@@ -17,7 +17,7 @@ export async function POST(req:NextRequest){
  const fields:[string,string][]=[['budget','Budget'],['setting','Preferred setting'],['commute','Commute'],['priority','Lifestyle priorities'],['home','Home types']];
  const readable=fields.map(([key,title])=>title+': '+(Array.isArray(d.answers[key])?d.answers[key].map((v:string)=>labels[key][v]||v).join(', '):'Not specified')).join('\n');
  const inquiry=['CONNECTICUT TOWN MATCH','',readable,'','RECOMMENDED TOWNS',...(d.matches as string[]).slice(0,4).map((town:string)=>'• '+town),'','VISITOR MESSAGE',String(d.message||'').trim().slice(0,2000)||'No additional message'].join('\n');
- const payload={source:'explore-connecticut-living-staging.joeysellsct.workers.dev',system:'ExploreConnecticutLiving',type:'General Inquiry',message:inquiry,person:{firstName:parts.shift(),lastName:parts.join(' '),emails:[{value:d.email}],phones:[{value:d.phone}]}};
+ const payload={source:'explore-connecticut-living-staging.joeysellsct.workers.dev',system:'ExploreConnecticutLiving',type:'General Inquiry',message:inquiry,person:{firstName:parts.shift(),lastName:parts.join(' '),emails:[{value:d.email}],phones:[{value:d.phone}],tags:['Explore Connecticut Living']}};
  const r=await fetch('https://api.followupboss.com/v1/events',{method:'POST',headers:{'Authorization':'Basic '+btoa(key+':'),'Content-Type':'application/json','X-System':'ExploreConnecticutLiving','X-System-Key':systemKey},body:JSON.stringify(payload)});
  if(r.status!==200&&r.status!==201)return NextResponse.json({error:'CRM submission failed'},{status:502});
  return NextResponse.json({ok:true});
