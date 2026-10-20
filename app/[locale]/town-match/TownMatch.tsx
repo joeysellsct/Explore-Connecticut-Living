@@ -15,7 +15,9 @@ const towns=[
  {slug:'guilford',name:'Guilford',setting:['shore','country'],commute:['new-haven'],priority:['water','quiet'],home:['single','condo']},
  {slug:'hamden',name:'Hamden',setting:['suburb'],commute:['new-haven'],priority:['quiet','walk'],home:['single','condo','multi']}
 ];
-const copy={
+type Question=[string,[string,string][]];
+type Translations={eyebrow:string;title:string;intro:string;step:string;of:string;questions:Question[];[key:string]:string|Question[]};
+const copy:{en:Translations;es:Translations}={
  en:{eyebrow:'YOUR CONNECTICUT TOWN MATCH',title:'Where in Connecticut could you feel at home?',intro:'Answer five quick questions to discover communities worth exploring. No account required.',step:'Question',of:'of',questions:[
  ['What is your approximate home-buying budget?',[['under300','Under $300,000'],['300-450','$300,000–$450,000'],['450-650','$450,000–$650,000'],['over650','$650,000+'],['unsure','Still figuring it out']]],
  ['What kind of setting appeals to you?',[['shore','Coastal / shoreline'],['suburb','Suburban neighborhoods'],['city','Walkable city living'],['country','Quieter / more rural']]],
