@@ -104,9 +104,14 @@ export default function TownMatch({locale}:{locale:string}){
    return {town,score:lifestyle+budget,lifestyle,budget};
   });
   scored.sort((a,b)=>b.score-a.score||b.lifestyle-a.lifestyle||a.town.name.localeCompare(b.town.name));
-  const anchor=scored[0]?.town;
+  // A selected commute destination is a geographic requirement, not a minor lifestyle bonus.
+  // Never recommend a different commute region solely because its pricing data is more complete.
+  const destinations=answers.commute.filter(v=>['new-haven','hartford','nyc'].includes(v));
+  const eligible=destinations.length?scored.filter(item=>destinations.some(v=>item.town.commute.includes(v))):scored;
+  const ranked=eligible.length?eligible:scored;
+  const anchor=ranked[0]?.town;
   if(!anchor)return [];
-  return scored.map(item=>({...item,regionalScore:item.score+matchArea(item.town,anchor)}))
+  return ranked.map(item=>({...item,regionalScore:item.score+matchArea(item.town,anchor)}))
    .sort((a,b)=>b.regionalScore-a.regionalScore||b.score-a.score||a.town.name.localeCompare(b.town.name)).slice(0,4);
  },[answers]);
  const done=step===keys.length;const current=keys[step];
