@@ -10,7 +10,7 @@ export async function POST(req:NextRequest){
  const labels:Record<string,Record<string,string>>={
  budget:{under300:'Under $300,000','300-450':'$300,000–$450,000','450-650':'$450,000–$650,000',over650:'$650,000+',unsure:'Not sure yet'},
  setting:{shore:'Coastal / shoreline',suburb:'Suburban',city:'City',country:'Rural / quieter area'},
- commute:{'new-haven':'Near New Haven',train:'Metro-North / rail access',flexible:'Flexible / remote work'},
+ commute:{'new-haven':'Near New Haven',train:'Rail / train access',hartford:'Near Hartford',nyc:'Commute toward New York City',flexible:'Flexible / remote work'},
  priority:{water:'Waterfront and beaches',walk:'Restaurants and downtown',quiet:'Space and quiet'},
  home:{single:'Single-family',condo:'Condo / townhome',multi:'Multi-family',unsure:'Open to options'}
  };
