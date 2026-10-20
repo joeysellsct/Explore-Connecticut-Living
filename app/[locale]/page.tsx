@@ -25,8 +25,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     photoTag: 'EXPLORA POR ESTILO DE VIDA',
     photoTitle: 'Un lugar para cada estilo de vida.',
     photoLead: 'Encuentra la comunidad que mejor se adapte a ti.',
-    meetTag: 'TU CONTACTO LOCAL',
-    meetTitle: 'Conoce a Joey McVety',
+    meetTag: 'CONOCE A TU AGENTE',
+    meetTitle: 'Joey McVety',
     meetBody: '¿Estás pensando en mudarte a Connecticut? Soy un agente de bienes raíces de mygoodagent y trabajo con compradores y vendedores en todo Connecticut. Exploremos juntos tus opciones.',
     meetCall: 'Llama a Joey',
     meetEmail: 'Enviar un correo',
@@ -54,9 +54,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     photoTag: 'EXPLORE BY LIFESTYLE',
     photoTitle: 'A place for every kind of life.',
     photoLead: 'Start with the Connecticut setting that feels right for you.',
-    meetTag: 'YOUR LOCAL CONNECTION',
-    meetTitle: 'Meet Joey McVety',
-    meetBody: "Thinking about making a move in Connecticut? I'm a real estate agent with mygoodagent, helping buyers and sellers throughout the state. Let's talk about your next move.",
+    meetTag: 'MEET YOUR AGENT',
+    meetTitle: 'Joey McVety',
+    meetBody: "Helping Connecticut buyers and sellers make their next move with local knowledge, honest advice, and no pressure. Whether you're relocating or moving across town, I'm here to help.",
     meetCall: 'Call Joey',
     meetEmail: 'Email Joey',
     footer: 'Powered by Joey McVety of mygoodagent',
@@ -110,13 +110,13 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <div className="guide-art" aria-hidden="true"><span>169</span><small>CONNECTICUT TOWNS</small></div>
     </section>
     <section className="meet-joey" id="meet-joey">
-      <div className="meet-photo"><img src="/headshotnew.png" alt="Joey McVety, Connecticut real estate agent with mygoodagent" loading="lazy" /></div>
+      <div className="meet-photo"><img src="/headshotnew.png" alt="Joey McVety, Connecticut real estate agent with mygoodagent" loading="lazy" /><span className="meet-photo-accent" aria-hidden="true" /></div>
       <div className="meet-copy">
         <span className="eyebrow dark">{t.meetTag}</span>
-        <h2>{t.meetTitle}</h2>
+        <h2>{t.meetTitle}</h2><div className="meet-underline" aria-hidden="true" /><strong className="meet-role">CONNECTICUT REAL ESTATE AGENT</strong>
         <p>{t.meetBody}</p>
         <div className="meet-brand"><img src="/The%20Good%20Agent.jpg" alt="mygoodagent logo" loading="lazy" /></div>
-        <p className="meet-license">Real Estate Agent · Licensed in Connecticut</p>
+        <p className="meet-license">✓ LICENSED IN CONNECTICUT</p>
         <div className="meet-actions"><a className="button-primary" href="tel:+12036277262">{t.meetCall}: 203-627-7262</a><a className="button-outline" href="mailto:JoeySellsCT@gmail.com">{t.meetEmail} ↗</a></div>
       </div>
     </section>
