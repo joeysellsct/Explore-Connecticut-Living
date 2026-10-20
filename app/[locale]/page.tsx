@@ -22,6 +22,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     guideTitle: 'La búsqueda de tu próximo hogar empieza con el lugar adecuado.',
     guideBody: 'Estamos construyendo guías de municipios, herramientas de comparación y recursos de reubicación para ayudarte a explorar Connecticut.',
     guideButton: 'Ver municipios',
+    photoTag: 'EXPLORA POR ESTILO DE VIDA',
+    photoTitle: 'Un lugar para cada estilo de vida.',
+    photoLead: 'Encuentra la comunidad que mejor se adapte a ti.',
     footer: 'Impulsado por Joey McVety de mygoodagent',
     note: 'Las herramientas de comparación y las guías detalladas se agregarán próximamente.'
   } : {
@@ -43,6 +46,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     guideTitle: 'Finding the right home starts with finding the right place.',
     guideBody: 'We are building town guides, comparison tools, and relocation resources to help you explore Connecticut with confidence.',
     guideButton: 'Browse Connecticut towns',
+    photoTag: 'EXPLORE BY LIFESTYLE',
+    photoTitle: 'A place for every kind of life.',
+    photoLead: 'Start with the Connecticut setting that feels right for you.',
     footer: 'Powered by Joey McVety of mygoodagent',
     note: 'Detailed town guides and comparison tools are coming soon.'
   };
@@ -71,6 +77,15 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <article className="feature-card"><div className="feature-icon" aria-hidden="true">≈</div><h3>{t.coastal}</h3><p>{t.coastalBody}</p></article>
         <article className="feature-card"><div className="feature-icon" aria-hidden="true">⌂</div><h3>{t.towns}</h3><p>{t.townsBody}</p></article>
         <article className="feature-card"><div className="feature-icon" aria-hidden="true">↗</div><h3>{t.commute}</h3><p>{t.commuteBody}</p></article>
+      </div>
+    </section>
+
+    <section className="photo-section">
+      <div className="photo-heading"><span className="eyebrow dark">{t.photoTag}</span><h2>{t.photoTitle}</h2><p>{t.photoLead}</p></div>
+      <div className="photo-grid">
+        <Link href={`/${locale}/towns`} className="photo-tile tile-shore"><span className="tile-label">{t.coastal}<small>{t.coastalBody}</small></span><span className="tile-arrow" aria-hidden="true">↗</span></Link>
+        <Link href={`/${locale}/towns`} className="photo-tile tile-village"><span className="tile-label">{t.towns}<small>{t.townsBody}</small></span><span className="tile-arrow" aria-hidden="true">↗</span></Link>
+        <Link href={`/${locale}/towns`} className="photo-tile tile-city"><span className="tile-label">{t.commute}<small>{t.commuteBody}</small></span><span className="tile-arrow" aria-hidden="true">↗</span></Link>
       </div>
     </section>
 
