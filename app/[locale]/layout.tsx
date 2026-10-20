@@ -1,6 +1,16 @@
 import type { ReactNode } from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+export async function generateMetadata({params}:{params:Promise<{locale:string}>}):Promise<Metadata>{
+ const {locale}=await params;
+ const es=locale==='es';
+ return {
+  title:es?'Explora Connecticut | Ciudades, comunidades y bienes raíces':'Explore Connecticut Living | Towns, Communities & Real Estate',
+  description:es?'Explora los 169 municipios de Connecticut, compara estilos de vida y encuentra comunidades que se adapten a tus prioridades con Joey McVety, agente inmobiliario de mygoodagent LLC.':'Explore Connecticut towns, compare communities, and find places that fit your lifestyle with Joey McVety, Connecticut real estate agent with mygoodagent LLC.',
+  robots:{index:false,follow:false}, // Staging site: do not index until a production domain is approved.
+ };
+}
 export default async function LocaleLayout({children,params}:{children:ReactNode;params:Promise<{locale:string}>}) {
   const {locale}=await params;
   if(!['en','es'].includes(locale))notFound();
