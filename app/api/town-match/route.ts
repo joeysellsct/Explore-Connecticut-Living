@@ -7,7 +7,17 @@ export async function POST(req:NextRequest){
  const systemKey=process.env.FOLLOW_UP_BOSS_SYSTEM_KEY;
  if(!key||!systemKey)return NextResponse.json({error:'Integration not configured'},{status:503});
  const parts=d.name.trim().split(/\s+/);
- const payload={source:'explore-connecticut-living-staging.joeysellsct.workers.dev',system:'Explore Connecticut Living',type:'General Inquiry',message:JSON.stringify({answers:d.answers,matches:d.matches,message:String(d.message||'').slice(0,2000)}),person:{firstName:parts.shift(),lastName:parts.join(' '),emails:[{value:d.email}],phones:[{value:d.phone}]}};
+ const labels:Record<string,Record<string,string>>={
+ budget:{under300:'Under $300,000','300-450':'$300,000–$450,000','450-650':'$450,000–$650,000',over650:'$650,000+',unsure:'Not sure yet'},
+ setting:{shore:'Coastal / shoreline',suburb:'Suburban',city:'City',country:'Rural / quieter area'},
+ commute:{'new-haven':'Near New Haven',train:'Metro-North / rail access',flexible:'Flexible / remote work'},
+ priority:{water:'Waterfront and beaches',walk:'Restaurants and downtown',quiet:'Space and quiet'},
+ home:{single:'Single-family',condo:'Condo / townhome',multi:'Multi-family',unsure:'Open to options'}
+ };
+ const fields:[string,string][]=[['budget','Budget'],['setting','Preferred setting'],['commute','Commute'],['priority','Lifestyle priorities'],['home','Home types']];
+ const readable=fields.map(([key,title])=>title+': '+(Array.isArray(d.answers[key])?d.answers[key].map((v:string)=>labels[key][v]||v).join(', '):'Not specified')).join('\n');
+ const inquiry=['CONNECTICUT TOWN MATCH','',readable,'','RECOMMENDED TOWNS',...(d.matches as string[]).slice(0,4).map((town:string)=>'• '+town),'','VISITOR MESSAGE',String(d.message||'').trim().slice(0,2000)||'No additional message'].join('\n');
+ const payload={source:'Explore Connecticut Living',system:'ExploreConnecticutLiving',type:'General Inquiry',message:inquiry,person:{firstName:parts.shift(),lastName:parts.join(' '),emails:[{value:d.email}],phones:[{value:d.phone}]}};
  const r=await fetch('https://api.followupboss.com/v1/events',{method:'POST',headers:{'Authorization':'Basic '+btoa(key+':'),'Content-Type':'application/json','X-System':'ExploreConnecticutLiving','X-System-Key':systemKey},body:JSON.stringify(payload)});
  if(r.status!==200&&r.status!==201)return NextResponse.json({error:'CRM submission failed'},{status:502});
  return NextResponse.json({ok:true});
