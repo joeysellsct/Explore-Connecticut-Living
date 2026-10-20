@@ -13,6 +13,7 @@ export default async function LocaleLayout({children,params}:{children:ReactNode
     </header>
     {children}
     <footer className="compliance-footer">
+      <div className="footer-brand"><strong>Explore Connecticut Living</strong><span>{locale==='es'?'Tu recurso para explorar Connecticut':'Your Connecticut relocation resource'}</span></div>
       <strong>Joey McVety</strong>
       <span>License #RES.0820513 · {locale==='es'?'Agente inmobiliario con licencia en Connecticut':'Real Estate Agent · Licensed in Connecticut'} · <a href="tel:+12036277262">203-627-7262</a> · <a href="mailto:JoeySellsCT@gmail.com">JoeySellsCT@gmail.com</a></span>
       <strong>mygoodagent LLC</strong>
