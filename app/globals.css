@@ -68,3 +68,21 @@
 .compliance-footer small{font-size:.85rem;color:#d2e2e5;max-width:950px}
 .legal-page{max-width:860px!important;line-height:1.75}
 .legal-page h2{margin-top:2rem}
+
+
+.fair-housing{display:flex;align-items:center;gap:1rem;max-width:900px;padding:1rem 0}
+.fair-housing svg{flex:none;color:#fff}
+.fair-housing strong{font-size:1rem}
+.fair-housing p{font-size:.88rem;line-height:1.55;margin:.35rem 0 0;color:#d2e2e5}
+@media(max-width:760px){
+ .brand-header{display:flex;flex-direction:column;align-items:stretch;gap:.8rem;padding:1rem 1.1rem}
+ .brand-header .site-logo{max-width:100%;min-width:0}
+ .brand-header .main-nav{display:flex;flex-wrap:wrap;gap:.6rem;max-width:100%;padding:.65rem 0}
+ .brand-header .agent-header{display:flex;flex-direction:column;align-items:stretch;gap:.65rem;min-width:0;width:100%}
+ .brand-header .agent-header-text{min-width:0;overflow-wrap:anywhere}
+ .brand-header .agent-header-text>strong{font-size:1.1rem}
+ .brand-header .agent-header-text small{font-size:.94rem;line-height:1.55}
+ .brand-header .agent-contact{align-self:flex-start}
+ .compliance-footer{padding:1.5rem 1.1rem;overflow-wrap:anywhere}
+ .fair-housing{align-items:flex-start}
+}
