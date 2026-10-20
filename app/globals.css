@@ -129,3 +129,17 @@
  .brand-header .agent-contact{padding:.45rem;font-size:.68rem;max-width:90px}
  .brand-header .agent-header-text .agent-identity span,.brand-header .agent-header-text .broker-identity span{font-size:.75rem}
 }
+
+
+/* Unified footer and streamlined mobile contact action */
+.footer-brand{display:flex;flex-direction:column;gap:.12rem;padding-bottom:.45rem;margin-bottom:.25rem;border-bottom:1px solid rgba(255,255,255,.2)}
+.footer-brand strong{font-size:1.12rem}
+.footer-brand span{font-size:.84rem;color:#d2e2e5}
+@media(max-width:760px){
+ .brand-header .agent-header{flex-direction:column;align-items:stretch;gap:.35rem}
+ .brand-header .agent-header-text{width:100%}
+ .brand-header .agent-contact{align-self:flex-start;max-width:none;padding:.42rem .75rem;font-size:.78rem;line-height:1.35}
+ .compliance-footer .footer-brand{padding-bottom:.4rem;margin-bottom:.15rem}
+ .compliance-footer .footer-brand strong{font-size:1rem}
+ .compliance-footer .footer-brand span{font-size:.78rem}
+}
