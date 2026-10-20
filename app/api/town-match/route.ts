@@ -8,6 +8,17 @@ export async function POST(req:NextRequest){
  if(typeof d.name!=='string'||d.name.length>120||typeof d.email!=='string'||d.email.length>254||typeof d.phone!=='string'||d.phone.length>30||typeof d.message!=='string'||d.message.length>2000||!Array.isArray(d.matches)||d.matches.length!==4||d.matches.some((x:unknown)=>typeof x!=='string'||x.length>80))return NextResponse.json({error:'Invalid details'},{status:400});
  if(d.website!==''||typeof d.formStartedAt!=='number'||Date.now()-d.formStartedAt<3000||Date.now()-d.formStartedAt>86400000)return NextResponse.json({error:'Invalid submission'},{status:400});
  if(d.consent!==true||typeof d.name!=='string'||d.name.trim().length<2||typeof d.email!=='string'||!/^\S+@\S+\.\S+$/.test(d.email)||typeof d.phone!=='string'||d.phone.replace(/\D/g,'').length<10||!d.answers||!Array.isArray(d.matches))return NextResponse.json({error:'Invalid details'},{status:400});
+ const turnstileSecret=process.env.TURNSTILE_SECRET_KEY;
+ if(turnstileSecret){
+  if(typeof d.turnstileToken!=='string'||!d.turnstileToken||d.turnstileToken.length>2048)return NextResponse.json({error:'Security verification required'},{status:403});
+  const verification=await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify',{
+   method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},
+   body:new URLSearchParams({secret:turnstileSecret,response:d.turnstileToken})
+  });
+  if(!verification.ok)return NextResponse.json({error:'Security verification unavailable'},{status:503});
+  const result=await verification.json() as {success?:boolean,hostname?:string};
+  if(!result.success||result.hostname!==req.nextUrl.hostname)return NextResponse.json({error:'Security verification failed'},{status:403});
+ }
  const key=process.env.FOLLOW_UP_BOSS_API_KEY;
  const systemKey=process.env.FOLLOW_UP_BOSS_SYSTEM_KEY;
  if(!key||!systemKey)return NextResponse.json({error:'Integration not configured'},{status:503});
