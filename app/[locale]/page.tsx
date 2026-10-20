@@ -70,7 +70,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <h1>{t.title}</h1>
         <p className="hero-copy">{t.subtitle}</p>
         <div className="hero-actions">
-          <Link className="button-primary" href={`/${locale}/towns`}>{t.browse} <span aria-hidden="true">→</span></Link>
+          <Link className="button-primary" href={`/${locale}/town-match`}>{es ? "Encuentra tu municipio ideal" : "Find your town match"} →</Link><Link className="button-secondary" href={`/${locale}/towns`}>{t.browse} <span aria-hidden="true">→</span></Link>
           <a className="button-secondary" href="#discover">{t.discover} <span aria-hidden="true">↓</span></a>
         </div>
       </div>
