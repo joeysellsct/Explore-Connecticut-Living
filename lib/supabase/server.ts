@@ -9,7 +9,7 @@ export async function createSupabaseServerClient() {
   return createServerClient(url, key, {
     cookies: {
       getAll() { return cookieStore.getAll(); },
-      setAll(values) {
+      setAll(values: { name: string; value: string; options?: Parameters<typeof cookieStore.set>[2] }[]) {
         try { values.forEach(({ name, value, options }) => cookieStore.set(name, value, options)); }
         catch { /* Read-only Server Components; route handlers may set cookies. */ }
       }
