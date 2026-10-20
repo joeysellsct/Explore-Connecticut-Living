@@ -86,3 +86,12 @@
  .compliance-footer{padding:1.5rem 1.1rem;overflow-wrap:anywhere}
  .fair-housing{align-items:flex-start}
 }
+
+
+/* Agent first in reading order; supervising brokerage retains equal or greater visual prominence. */
+.agent-header-text .agent-identity,.agent-header-text .broker-identity{display:flex;flex-direction:column;gap:.18rem}
+.agent-header-text .broker-identity{margin-top:.5rem;padding-top:.5rem;border-top:1px solid #dce5eb}
+.agent-header-text .agent-identity strong,.agent-header-text .broker-identity strong{font-size:1.06rem;font-weight:800;line-height:1.35}
+.agent-header-text .agent-identity span,.agent-header-text .broker-identity span{font-size:.95rem;line-height:1.45}
+.agent-header-text .broker-identity a,.agent-header-text .agent-identity a{color:inherit}
+@media(max-width:760px){.agent-header-text .agent-identity strong,.agent-header-text .broker-identity strong{font-size:1.08rem}.agent-header-text .agent-identity span,.agent-header-text .broker-identity span{font-size:.95rem}}
