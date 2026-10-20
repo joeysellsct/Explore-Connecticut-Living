@@ -95,3 +95,37 @@
 .agent-header-text .agent-identity span,.agent-header-text .broker-identity span{font-size:.95rem;line-height:1.45}
 .agent-header-text .broker-identity a,.agent-header-text .agent-identity a{color:inherit}
 @media(max-width:760px){.agent-header-text .agent-identity strong,.agent-header-text .broker-identity strong{font-size:1.08rem}.agent-header-text .agent-identity span,.agent-header-text .broker-identity span{font-size:.95rem}}
+
+
+/* Compact mobile masthead: keep full agent and brokerage identification visible. */
+@media(max-width:760px){
+ .topbar{padding:.35rem 1rem;font-size:.68rem;gap:.5rem}
+ .brand-header{display:flex;flex-direction:column;align-items:stretch;gap:.55rem;padding:.65rem 1rem .75rem}
+ .brand-header .site-logo{align-self:flex-start;gap:.45rem}
+ .brand-header .logo-symbol{font-size:1.75rem;padding-right:.45rem}
+ .brand-header .logo-wordmark{font-size:.55rem;line-height:1.1}
+ .brand-header .logo-wordmark strong{font-size:.72rem}
+ .brand-header .logo-wordmark small{font-size:.58rem;letter-spacing:.28em}
+ .brand-header .agent-header{order:2;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:.65rem;width:100%;margin:0;padding:0;border:0}
+ .brand-header .agent-header-text{gap:.25rem;flex:1;min-width:0;white-space:normal}
+ .brand-header .agent-header-text .agent-identity,.brand-header .agent-header-text .broker-identity{gap:.08rem}
+ .brand-header .agent-header-text .broker-identity{margin-top:.2rem;padding-top:.25rem;border-top:1px solid #dce5eb}
+ .brand-header .agent-header-text .agent-identity strong,.brand-header .agent-header-text .broker-identity strong{font-size:.96rem;line-height:1.22}
+ .brand-header .agent-header-text .agent-identity span,.brand-header .agent-header-text .broker-identity span{font-size:.79rem;line-height:1.35}
+ .brand-header .agent-contact{flex:none;align-self:center;padding:.55rem .65rem;font-size:.73rem;text-align:center;max-width:110px}
+ .brand-header .main-nav{order:3;display:flex;gap:.35rem .85rem;width:100%;padding:.4rem 0 0;border-top:1px solid #e4e9e6}
+ .brand-header .main-nav a{font-size:.8rem;line-height:1.4}
+ .compliance-footer{padding:1rem 1rem 1.2rem;gap:.3rem;line-height:1.35}
+ .compliance-footer strong{font-size:1rem}
+ .compliance-footer span{font-size:.84rem;line-height:1.4}
+ .compliance-footer small{font-size:.77rem;line-height:1.45}
+ .compliance-footer .fair-housing{gap:.6rem;padding:.45rem 0;align-items:center}
+ .compliance-footer .fair-housing svg{width:36px;height:36px}
+ .compliance-footer .fair-housing strong{font-size:.9rem}
+ .compliance-footer .fair-housing p{font-size:.78rem;line-height:1.4;margin:.15rem 0 0}
+}
+@media(max-width:380px){
+ .brand-header .agent-header{align-items:flex-start}
+ .brand-header .agent-contact{padding:.45rem;font-size:.68rem;max-width:90px}
+ .brand-header .agent-header-text .agent-identity span,.brand-header .agent-header-text .broker-identity span{font-size:.75rem}
+}
