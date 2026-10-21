@@ -11,6 +11,11 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  'madison': [
+    {"name":"Bar Bouchée","cuisine":"French bistro","sourceUrl":"https://barbouchee.com/","checkedOn":"2026-10-21"},
+    {"name":"The Wharf Restaurant","cuisine":"New England coastal","sourceUrl":"https://thewharfmadison.com/","checkedOn":"2026-10-21"},
+    {"name":"Donahue's Madison Beach Grille","cuisine":"American pub and seafood","sourceUrl":"https://donahuesmadisonbeachgrille.com/our-story/","checkedOn":"2026-10-21"},
+  ],
   'guilford': [
     {"name":"South Lane Bistro","cuisine":"Contemporary American","sourceUrl":"https://www.southlanebistro.com/","checkedOn":"2026-10-21"},
     {"name":"Quattro's Italian Restaurant and Wine Bar","cuisine":"Italian and Latin-inspired","sourceUrl":"https://www.quattrositalian.com/","checkedOn":"2026-10-21"},
