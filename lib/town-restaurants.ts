@@ -11,6 +11,13 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  'east-haven': [
+    {"name":"Bistro Mediterranean & Tapas Bar","cuisine":"Mediterranean and Spanish tapas","sourceUrl":"https://www.bistromediterraneanandtapasbar.com/","checkedOn":"2026-10-21"},
+    {"name":"Tolli's Apizza","cuisine":"Pizza and Italian","sourceUrl":"https://www.tolliseasthaven.com/","checkedOn":"2026-10-21"},
+    {"name":"Transilvania Restaurant and Bar","cuisine":"Romanian and Eastern European","sourceUrl":"https://transilvaniact.com/","checkedOn":"2026-10-21"},
+    {"name":"Sandpiper Restaurant","cuisine":"Seafood and American","sourceUrl":"https://sandpiper-easthaven.com/","checkedOn":"2026-10-21"},
+    {"name":"The Lobster Shack","cuisine":"Seafood and lobster rolls","sourceUrl":"https://www.connecticutlobster.com/","checkedOn":"2026-10-21"},
+  ],
   'new-haven': [
     {"name":"Sally’s Apizza","cuisine":"New Haven-style pizza","sourceUrl":"https://visitnewhaven.com/places/sallys-apizza/","checkedOn":"2026-10-21"},
     {"name":"Modern Apizza","cuisine":"New Haven-style pizza","sourceUrl":"https://visitnewhaven.com/events/national-pizza-day/","checkedOn":"2026-10-21"},
