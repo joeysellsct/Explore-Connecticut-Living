@@ -146,3 +146,12 @@
 
 /* Accessible visually hidden bot-trap field: excluded from normal tab order. */
 .match-honeypot{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important}
+
+/* Navigation usability and keyboard accessibility */
+:where(a,button,input,select,textarea):focus-visible{outline:3px solid #176b45;outline-offset:3px}
+.main-nav a{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:760px){
+ .brand-header .main-nav{row-gap:.25rem;column-gap:.7rem}
+ .brand-header .main-nav a{min-height:44px;padding:.35rem .55rem;border-radius:6px}
+ .brand-header .main-nav a:focus-visible{background:#eaf5ed}
+}
