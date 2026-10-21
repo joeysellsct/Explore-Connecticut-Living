@@ -1,7 +1,15 @@
 import Link from 'next/link';
+import type {Metadata} from 'next';
 import { notFound } from 'next/navigation';
 import { connecticutTowns } from '../../../../lib/connecticut-towns';
 
+export async function generateMetadata({params}:{params:Promise<{locale:string;slug:string}>}):Promise<Metadata>{
+ const {locale,slug}=await params;
+ const town=connecticutTowns.find(t=>t.slug===slug);
+ if(!town)return {};
+ const es=locale==='es';
+ return {title:es?`${town.name}, Connecticut | Guía de municipios`:`${town.name}, CT | Connecticut Town Guide`,description:es?`Explora ${town.name}, en el condado histórico de ${town.county}, Connecticut. Información local para planificar tu mudanza.`:`Explore ${town.name} in historic ${town.county} County, Connecticut, with community information for your next move.`};
+}
 export function generateStaticParams(){return ['en','es'].flatMap(locale=>connecticutTowns.map(t=>({locale,slug:t.slug})));}
 export default async function TownProfile({params}:{params:Promise<{locale:string;slug:string}>}){
   const {locale,slug}=await params;
