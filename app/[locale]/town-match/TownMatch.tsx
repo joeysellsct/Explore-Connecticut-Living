@@ -24,7 +24,7 @@ const towns:Profile[]=connecticutTowns.map(t=>{
  priority:[...(coast?['water']:[]),...(walk?['walk']:[]),...(!urban?['quiet']:[])],
  home:urban?['single','condo','multi']:['single','condo',...(rural?[]:['multi'])]};});
 // Published town-level median asking prices, approximate September 2026 Realtor.com snapshot.
-// Only towns with a verified figure receive a price score; missing data is never treated as affordable.
+// Prices are a dated market snapshot, not current inventory or an affordability determination. Missing prices receive a neutral score.
 const medianAsking:Record<string,number>={
  'waterbury':309950,'stamford':715000,'bridgeport':329450,'danbury':501500,
  'new-haven':334500,'norwalk':727000,'hamden':359900,'stratford':539000,
