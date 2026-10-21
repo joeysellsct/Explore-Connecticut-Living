@@ -11,6 +11,13 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  'guilford': [
+    {"name":"South Lane Bistro","cuisine":"Contemporary American","sourceUrl":"https://www.southlanebistro.com/","checkedOn":"2026-10-21"},
+    {"name":"Quattro's Italian Restaurant and Wine Bar","cuisine":"Italian and Latin-inspired","sourceUrl":"https://www.quattrositalian.com/","checkedOn":"2026-10-21"},
+    {"name":"The Guilford Bistro","cuisine":"Italian","sourceUrl":"https://www.theguilfordbistro.com/","checkedOn":"2026-10-21"},
+    {"name":"Pasta Avest & Pizzeria","cuisine":"Italian and pizza","sourceUrl":"https://www.pastaavest.com/","checkedOn":"2026-10-21"},
+    {"name":"Kamana Fine Indian Cuisine","cuisine":"Indian and Nepalese","sourceUrl":"https://www.kamanacuisine.com/","checkedOn":"2026-10-21"},
+  ],
   'east-haven': [
     {"name":"Bistro Mediterranean & Tapas Bar","cuisine":"Mediterranean and Spanish tapas","sourceUrl":"https://www.bistromediterraneanandtapasbar.com/","checkedOn":"2026-10-21"},
     {"name":"Tolli's Apizza","cuisine":"Pizza and Italian","sourceUrl":"https://www.tolliseasthaven.com/","checkedOn":"2026-10-21"},
