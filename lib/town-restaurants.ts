@@ -21,3 +21,5 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
 };
 // Personal recommendations are separate from third-party ratings.
 export const joeyTopPicks:Record<string,{name:string;note?:string;url?:string}[]> = {};
+
+// Deployment trigger test: no change to restaurant listings.
