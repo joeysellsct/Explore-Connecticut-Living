@@ -12,6 +12,8 @@ export type TownRestaurant = {
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
   'madison': [
+    {"name":"Cafe Allegre","cuisine":"Italian and Mediterranean","sourceUrl":"https://cafeallegre.com/","checkedOn":"2026-10-21"},
+    {"name":"Amato's Pizza & Pasta","cuisine":"Pizza and Italian","sourceUrl":"https://www.visitmadisonct.org/BusinessDirectoryII.aspx?lngBusinessCategoryID=28","checkedOn":"2026-10-21"},
     {"name":"Bar Bouchée","cuisine":"French bistro","sourceUrl":"https://barbouchee.com/","checkedOn":"2026-10-21"},
     {"name":"The Wharf Restaurant","cuisine":"New England coastal","sourceUrl":"https://thewharfmadison.com/","checkedOn":"2026-10-21"},
     {"name":"Donahue's Madison Beach Grille","cuisine":"American pub and seafood","sourceUrl":"https://donahuesmadisonbeachgrille.com/our-story/","checkedOn":"2026-10-21"},
