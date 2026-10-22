@@ -3,6 +3,7 @@ import type {Metadata} from 'next';
 import { notFound } from 'next/navigation';
 import { connecticutTowns } from '../../../../lib/connecticut-towns';
 import { townHighlights } from '../../../../lib/town-highlights';
+import { localizedSeo } from '../../../../lib/seo';
 import { townPhotography } from '../../../../lib/town-photography';
 import { townRestaurants, joeyTopPicks } from '../../../../lib/town-restaurants';
 
@@ -11,7 +12,10 @@ export async function generateMetadata({params}:{params:Promise<{locale:string;s
  const town=connecticutTowns.find(t=>t.slug===slug);
  if(!town)return {};
  const es=locale==='es';
- return {title:es?`${town.name}, Connecticut | Guía de municipios`:`${town.name}, CT | Connecticut Town Guide`,description:es?`Explora ${town.name}, en el condado histórico de ${town.county}, Connecticut. Información local para planificar tu mudanza.`:`Explore ${town.name} in historic ${town.county} County, Connecticut, with community information for your next move.`};
+ const title=es?`Vivir en ${town.name}, CT | Guía local y bienes raíces`:`Living in ${town.name}, CT | Town Guide & Real Estate`;
+ const detail=townHighlights[slug];
+ const description=es?(detail?.es || `Explora ${town.name}, Connecticut: viviendas, restaurantes, comunidad y recursos para mudarte con Joey McVety, agente inmobiliario con licencia en Connecticut.`):(detail?.en || `Explore ${town.name}, Connecticut: homes, local dining, neighborhoods and moving resources with Joey McVety, Connecticut real estate agent.`);
+ return localizedSeo(locale,`towns/${slug}`,title,description);
 }
 export function generateStaticParams(){return ['en','es'].flatMap(locale=>connecticutTowns.map(t=>({locale,slug:t.slug})));}
 export default async function TownProfile({params}:{params:Promise<{locale:string;slug:string}>}){
