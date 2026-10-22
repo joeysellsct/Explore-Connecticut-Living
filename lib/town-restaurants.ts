@@ -11,6 +11,13 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  'seymour': [
+    {"name":"Thai Dish","cuisine":"Thai","sourceUrl":"https://www.thaidishseymour.com/","checkedOn":"2026-10-22"},
+    {"name":"Dock 34","cuisine":"American tavern","sourceUrl":"https://www.dock34.com/","checkedOn":"2026-10-22"},
+    {"name":"First Street Apizza","cuisine":"Pizza and Italian","sourceUrl":"https://www.firststreetapizza.com/","checkedOn":"2026-10-22"},
+    {"name":"Alberto's","cuisine":"Italian","sourceUrl":"https://www.albertosct.com/","checkedOn":"2026-10-22"},
+    {"name":"Train Station Pizza","cuisine":"Pizza and Italian","sourceUrl":"https://www.trainstationpizza.com/","checkedOn":"2026-10-22"},
+  ],
   'derby': [
     {"name":"Roseland Apizza","cuisine":"Pizza and Italian","sourceUrl":"https://www.roselandapizza.com/","checkedOn":"2026-10-22"},
     {"name":"Dew Drop Inn","cuisine":"American pub and wings","sourceUrl":"https://www.dewdropinnct.com/","checkedOn":"2026-10-22"},
