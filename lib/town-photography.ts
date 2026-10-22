@@ -2,6 +2,10 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ 'cheshire':[
+  {title:'Farmington Canal Heritage Trail in West Cheshire',file:'Farmington Canal Heritage Trail, West Cheshire CT.jpg',credit:'John Phelan',license:'CC BY 4.0',licenseUrl:'https://creativecommons.org/licenses/by/4.0/'},
+  {title:'Historic Farmington Canal Lock 12 in Cheshire',file:'Farmington canal lock 12.jpg',credit:'Staib',license:'CC BY-SA 3.0',licenseUrl:'https://creativecommons.org/licenses/by-sa/3.0/'}
+ ],
  'milford':[{title:'Milford Green',file:'Milford Green.jpg',credit:'Wikimedia Commons contributor',license:'CC0 / public domain',licenseUrl:'https://commons.wikimedia.org/wiki/File:Milford_Green.jpg'}],
  'new-haven':[
   {title:'New Haven Green',file:'New Haven Green (54106261478).jpg',credit:'ajay_suresh',license:'CC BY 2.0',licenseUrl:'https://creativecommons.org/licenses/by/2.0/'},
