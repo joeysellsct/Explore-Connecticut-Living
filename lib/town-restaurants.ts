@@ -11,6 +11,13 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  'ansonia': [
+    {"name":"Relish Wine Bar & Grill","cuisine":"New American","sourceUrl":"https://www.relishwinebarandgrill.net/","checkedOn":"2026-10-22"},
+    {"name":"Retro Bar & Char","cuisine":"Pizza and American bar","sourceUrl":"https://www.retrobarandchar.com/","checkedOn":"2026-10-22"},
+    {"name":"Chifrijos Restaurant","cuisine":"Peruvian and Costa Rican","sourceUrl":"https://www.chifrijosct.com/","checkedOn":"2026-10-22"},
+    {"name":"Koi Sushi Hibachi Asian Fusion","cuisine":"Asian fusion and sushi","sourceUrl":"https://www.koiasianfusionct.com/","checkedOn":"2026-10-22"},
+    {"name":"Bangkok Room Ansonia","cuisine":"Thai","sourceUrl":"https://bangkokroomansonia.com/","checkedOn":"2026-10-22"},
+  ],
   'seymour': [
     {"name":"Thai Dish","cuisine":"Thai","sourceUrl":"https://www.thaidishseymour.com/","checkedOn":"2026-10-22"},
     {"name":"Dock 34","cuisine":"American tavern","sourceUrl":"https://www.dock34.com/","checkedOn":"2026-10-22"},
