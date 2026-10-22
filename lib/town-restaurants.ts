@@ -11,6 +11,13 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  'derby': [
+    {"name":"Roseland Apizza","cuisine":"Pizza and Italian","sourceUrl":"https://www.roselandapizza.com/","checkedOn":"2026-10-22"},
+    {"name":"Dew Drop Inn","cuisine":"American pub and wings","sourceUrl":"https://www.dewdropinnct.com/","checkedOn":"2026-10-22"},
+    {"name":"Twisted Vine Restaurant","cuisine":"American and Italian","sourceUrl":"https://www.twistedvinerestaurant.com/","checkedOn":"2026-10-22"},
+    {"name":"Tipsy Tomato Bar and Pizzeria","cuisine":"Pizza and Italian","sourceUrl":"https://www.tipsytomatopizzeria.com/","checkedOn":"2026-10-22"},
+    {"name":"River Rock Tavern","cuisine":"American tavern","sourceUrl":"https://www.riverrocktavern.com/","checkedOn":"2026-10-22"},
+  ],
   'chester': [
     {"name":"Grano Arso","cuisine":"Italian","sourceUrl":"https://www.visitchesterct.com/dining","checkedOn":"2026-10-21"},
     {"name":"River Tavern","cuisine":"Seasonal American","sourceUrl":"https://www.visitchesterct.com/dining","checkedOn":"2026-10-21"},
