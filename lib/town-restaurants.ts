@@ -104,6 +104,10 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
   ],
 };
 // Personal recommendations are separate from third-party ratings.
-export const joeyTopPicks:Record<string,{name:string;note?:string;url?:string}[]> = {};
+export const joeyTopPicks:Record<string,{name:string;note?:string;url?:string}[]> = {
+  'west-haven': [
+    {name:'Zuppardi’s Apizza',note:'Joey’s personal pick for West Haven. A longtime favorite for classic New Haven-style apizza.',url:'https://zuppardisapizza.com/'},
+  ],
+};
 
 // Deployment trigger test: no change to restaurant listings.
