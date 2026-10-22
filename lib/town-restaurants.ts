@@ -11,6 +11,9 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  'cheshire': [
+    {name:'Fuoco Coal Fired Apizza',cuisine:'Coal-fired New Haven-style apizza',website:'https://fuocoapizza.com/',sourceUrl:'https://fuocoapizza.com/contact/',checkedOn:'2026-10-22'},
+  ],
   'ansonia': [
     {"name":"Relish Wine Bar & Grill","cuisine":"New American","sourceUrl":"https://www.relishwinebarandgrill.net/","checkedOn":"2026-10-22"},
     {"name":"Retro Bar & Char","cuisine":"Pizza and American bar","sourceUrl":"https://www.retrobarandchar.com/","checkedOn":"2026-10-22"},
@@ -112,6 +115,9 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
 };
 // Personal recommendations are separate from third-party ratings.
 export const joeyTopPicks:Record<string,{name:string;note?:string;url?:string}[]> = {
+  'cheshire': [
+    {name:'Fuoco Coal Fired Apizza',note:'Joey’s personal pick for Cheshire. Coal-fired New Haven-style apizza.',url:'https://fuocoapizza.com/'},
+  ],
   'branford': [
     {name:'Rosso Vino',note:'Joey’s personal pick for Branford.',url:'https://rossovino.net/'},
   ],
