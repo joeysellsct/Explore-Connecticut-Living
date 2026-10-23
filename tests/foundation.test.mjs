@@ -176,7 +176,7 @@ test('Greenwich bilingual guide, restaurant sourcing and municipal resources',()
  const links=resources.match(/'greenwich':\[([\s\S]*?)\],/);
  assert.ok(links,'Greenwich official resources exist');
  for(const field of ['en','es','url'])
-  assert.equal((links[1].match(new RegExp(field+':','g'))||[]).length,4,'Four bilingual '+field+' fields');
+  assert.equal((links[1].match(new RegExp('"'+field+'":','g'))||[]).length,4,'Four bilingual '+field+' fields');
  assert.match(links[1],/greenwichct\.gov\/319\/Town-Clerk/);
 });
 
@@ -202,6 +202,6 @@ test('Farmington bilingual guide and official dining sources',()=>{
  const links=resources.match(/'farmington':\[([\s\S]*?)\],/);
  assert.ok(links,'Farmington official resources exist');
  for(const field of ['en','es','url'])
-  assert.equal((links[1].match(new RegExp(field+':','g'))||[]).length,4,'Four bilingual '+field+' fields');
+  assert.equal((links[1].match(new RegExp('"'+field+'":','g'))||[]).length,4,'Four bilingual '+field+' fields');
  assert.match(links[1],/farmington-ct\.org\/departments\/town-clerk\/land-records/);
 });
