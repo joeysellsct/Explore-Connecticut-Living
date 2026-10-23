@@ -14,6 +14,7 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
   'newtown': [
     {name:"Sal e Pepe Contemporary Italian Bistro",cuisine:"Northern Italian and contemporary Italian",website:"https://www.salepeperestaurant.com/",sourceUrl:"https://www.salepeperestaurant.com/",checkedOn:'2026-10-23'},
     {name:"Barnwood Grill - Newtown",cuisine:"Contemporary American",website:"https://www.barnwoodgrill.com/location/connecticut/",sourceUrl:"https://www.barnwoodgrill.com/location/connecticut/",checkedOn:'2026-10-23'},
+    {name:"Jewel of Himalaya",cuisine:"Himalayan, Nepalese and Tibetan",website:"https://www.jewelofhimalayact.com/",sourceUrl:"https://www.jewelofhimalayact.com/",checkedOn:'2026-10-23'},
   ],
   'monroe': [
     {name:"Monroe Diner",cuisine:"American diner and all-day breakfast",website:"https://monroediner.com/",sourceUrl:"https://monroediner.com/",checkedOn:'2026-10-23'},
