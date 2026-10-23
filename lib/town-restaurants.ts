@@ -11,6 +11,9 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  'shelton': [
+    {name:"Market Place Kitchen & Bar",cuisine:"Contemporary American",website:"https://marketplacekitchenbar.com/locations/shelton",sourceUrl:"https://marketplacekitchenbar.com/locations/shelton",checkedOn:'2026-10-23'},
+  ],
   'trumbull': [
     {name:"Antonio’s Kitchen & Bar",cuisine:"Italian",website:"https://antoniostrumbull.com/",sourceUrl:"https://antoniostrumbull.com/",checkedOn:'2026-10-23'},
     {name:"Prime One Eleven",cuisine:"Steakhouse and New American",website:"https://primeoneeleven.com/",sourceUrl:"https://primeoneeleven.com/",checkedOn:'2026-10-23'},
