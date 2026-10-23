@@ -20,10 +20,7 @@ export default async function LocaleLayout({children,params}:{children:ReactNode
     </header>
     {children}
     <footer className="compliance-footer compact-footer">
-      <div className="footer-minimal">
-        <div className="footer-minimal-brand"><strong>Explore Connecticut Living</strong><span>{locale==='es'?'Por Joey McVety de mygoodagent LLC':'By Joey McVety of mygoodagent LLC'}</span></div>
-        <div className="footer-minimal-contact"><a href="tel:+12036277262">203-627-7262</a><a href="mailto:JoeySellsCT@gmail.com">JoeySellsCT@gmail.com</a></div>
-      </div>
+      <div className="footer-minimal"><div className="footer-minimal-brand"><strong>Explore Connecticut Living</strong></div></div>
       <div className="footer-minimal-legal">
         <span>Joey McVety · {locale==='es'?'Agente inmobiliario con licencia en Connecticut':'Connecticut Licensed Real Estate Agent'} · RES.0820513</span>
         <span>mygoodagent LLC · 680 Boston Post Rd, Suite H, Milford, CT 06460 · <a href="tel:+18882578265">888-257-8265</a></span>
