@@ -83,6 +83,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <div className="hero-caption">CONNECTICUT · NEW ENGLAND</div>
     </section>
 
+    <div className="editorial-strip" aria-label={es?'Explora Connecticut':'Explore Connecticut'}><span>{es?'169 MUNICIPIOS':'169 TOWNS'}</span><i aria-hidden="true">✦</i><span>{es?'UN ESTADO PARA DESCUBRIR':'ONE STATE TO DISCOVER'}</span><i aria-hidden="true">✦</i><span>{es?'GUÍAS LOCALES Y RECURSOS':'LOCAL GUIDES & RESOURCES'}</span></div>
+
     <section className="intro-section" id="discover">
       <div className="section-heading">
         <span className="eyebrow dark">{t.introTag}</span>
@@ -95,6 +97,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <article className="feature-card"><div className="feature-icon" aria-hidden="true">↗</div><h3>{t.commute}</h3><p>{t.commuteBody}</p></article>
       </div>
     </section>
+
+    <section className="magazine-towns"><div className="magazine-towns-head"><div><span className="eyebrow dark">{es?'GUÍAS DE DESTINOS':'THE CONNECTICUT EDIT'}</span><h2>{es?'Lugares que vale la pena conocer.':'Places worth getting to know.'}</h2><p>{es?'Descubre las comunidades que hacen especial a Connecticut.':'A closer look at the communities that make Connecticut special.'}</p></div><Link href={`/${locale}/towns`} className="meet-bio-link">{es?'Ver los 169 municipios':'Explore all 169 towns'} →</Link></div><div className="magazine-town-grid">{[{name:'West Haven',slug:'west-haven',en:'Shoreline character',es:'Vida junto al mar'},{name:'Milford',slug:'milford',en:'Coastal & connected',es:'Costa y conexiones'},{name:'New Haven',slug:'new-haven',en:'Culture & city life',es:'Cultura y ciudad'},{name:'Branford',slug:'branford',en:'Classic shoreline',es:'Costa tradicional'}].map((town,i)=><Link href={`/${locale}/towns/${town.slug}`} className={`magazine-town-card magazine-town-${i+1}`} key={town.slug}><span className="magazine-town-index">0{i+1} / CONNECTICUT</span><div><small>{es?town.es:town.en}</small><h3>{town.name}</h3><span className="magazine-town-arrow" aria-hidden="true">↗</span></div></Link>)}</div></section>
 
     <section className="photo-section">
       <div className="photo-heading"><span className="eyebrow dark">{t.photoTag}</span><h2>{t.photoTitle}</h2><p>{t.photoLead}</p></div>
