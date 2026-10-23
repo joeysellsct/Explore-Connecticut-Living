@@ -8,7 +8,8 @@ test('English and Spanish routes exist',()=>{assert.match(read('app/[locale]/lay
 
 test('restaurant directory has unique town keys and five sourced Brookfield listings',()=>{
  const source=read('lib/town-restaurants.ts');
- const slugs=[...source.matchAll(/^\s*'([a-z]+(?:-[a-z]+)*)':\s*\[/gm)].map(m=>m[1]);
+ const directory=source.split('export const joeyTopPicks')[0];
+ const slugs=[...directory.matchAll(/^\s*'([a-z]+(?:-[a-z]+)*)':\s*\[/gm)].map(m=>m[1]);
  assert.equal(new Set(slugs).size,slugs.length,'Duplicate town key would silently hide restaurants');
  const brookfield=source.match(/'brookfield':\s*\[([\s\S]*?)\],/);
  assert.ok(brookfield,'Brookfield listings are present');
