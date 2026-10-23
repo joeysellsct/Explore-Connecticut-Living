@@ -20,12 +20,17 @@ export default async function LocaleLayout({children,params}:{children:ReactNode
     </header>
     {children}
     <footer className="compliance-footer compact-footer">
-      <div className="footer-top">
-       <div className="footer-brand"><strong>Explore Connecticut Living</strong><span>{locale==='es'?'Descubre tu próximo hogar en Connecticut':'Discover your next home in Connecticut'}</span><p>{locale==='es'?'Por Joey McVety de mygoodagent LLC':'By Joey McVety of mygoodagent LLC'}</p></div>
-       <div className="footer-quick-links"><strong>{locale==='es'?'Explorar':'Explore'}</strong><Link href={`/${locale}/towns`}>{locale==='es'?'Municipios':'Towns'}</Link><Link href={`/${locale}/town-match`}>Town Match</Link><Link href={`/${locale}/moving-resources`}>{locale==='es'?'Mudanza':'Moving Resources'}</Link><Link href={`/${locale}/about`}>{locale==='es'?'Conoce a Joey':'Meet Joey'}</Link></div>
-       <div className="footer-contact"><strong>{locale==='es'?'Contacto':'Contact'}</strong><a href="tel:+12036277262">203-627-7262</a><a href="mailto:JoeySellsCT@gmail.com">JoeySellsCT@gmail.com</a><span>Milford, Connecticut</span></div>
+      <div className="footer-minimal">
+        <div className="footer-minimal-brand"><strong>Explore Connecticut Living</strong><span>{locale==='es'?'Por Joey McVety de mygoodagent LLC':'By Joey McVety of mygoodagent LLC'}</span></div>
+        <div className="footer-minimal-contact"><a href="tel:+12036277262">203-627-7262</a><a href="mailto:JoeySellsCT@gmail.com">JoeySellsCT@gmail.com</a></div>
       </div>
-      <div className="footer-compliance"><div><strong>Joey McVety</strong> · {locale==='es'?'Agente inmobiliario con licencia en Connecticut':'Real Estate Agent · Licensed in Connecticut'} · License #RES.0820513</div><div><strong>mygoodagent LLC</strong> · 680 Boston Post Rd, Suite H, Milford, CT 06460 · <a href="tel:+18882578265">888-257-8265</a></div><div className="fair-housing"><svg viewBox="0 0 64 64" width="32" height="32" role="img" aria-label="Equal Housing Opportunity symbol" xmlns="http://www.w3.org/2000/svg"><path d="M7 30 L32 9 L57 30 V57 H7 Z" fill="none" stroke="currentColor" strokeWidth="5" strokeLinejoin="round"/><path d="M20 36 H44 M20 46 H44" stroke="currentColor" strokeWidth="5" strokeLinecap="square"/></svg><span>{locale==='es'?'Igualdad de oportunidades de vivienda':'Equal Housing Opportunity'}</span></div><div><Link href={`/${locale}/privacy`}>{locale==='es'?'Privacidad':'Privacy'}</Link> · <Link href={`/${locale}/terms`}>{locale==='es'?'Términos y divulgaciones':'Terms & Disclosures'}</Link></div><small>{locale==='es'?'Sitio informativo y de marketing inmobiliario de Joey McVety, agente de mygoodagent LLC; no es una correduría independiente.':'Real estate information and marketing website operated by Joey McVety, an agent affiliated with mygoodagent LLC; not a separate brokerage.'}</small></div>
+      <div className="footer-minimal-legal">
+        <span>Joey McVety · {locale==='es'?'Agente inmobiliario con licencia en Connecticut':'Real Estate Agent · Licensed in Connecticut'} · License #RES.0820513 · mygoodagent LLC</span>
+        <span>680 Boston Post Rd, Suite H, Milford, CT 06460 · <a href="tel:+18882578265">888-257-8265</a></span>
+        <span className="footer-minimal-housing">{locale==='es'?'Igualdad de oportunidades de vivienda':'Equal Housing Opportunity'}</span>
+        <span><Link href={`/${locale}/privacy`}>{locale==='es'?'Privacidad':'Privacy'}</Link> · <Link href={`/${locale}/terms`}>{locale==='es'?'Términos y divulgaciones':'Terms & Disclosures'}</Link></span>
+        <small>{locale==='es'?'Sitio informativo y de marketing inmobiliario de Joey McVety, agente de mygoodagent LLC; no es una correduría independiente.':'Real estate information and marketing website operated by Joey McVety, an agent affiliated with mygoodagent LLC; not a separate brokerage.'}</small>
+      </div>
     </footer>
   </>;
 }
