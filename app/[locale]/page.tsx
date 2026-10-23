@@ -28,7 +28,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     photoLead: 'Descubre distintos lugares reales de Connecticut en cada visita. Elige la costa o el interior.',
     meetTag: 'TU CONTACTO LOCAL',
     meetTitle: 'Conoce a Joey McVety',
-    meetBody: '¿Estás pensando en mudarte a Connecticut? Soy un agente de bienes raíces de mygoodagent y trabajo con compradores y vendedores en todo Connecticut. Exploremos juntos tus opciones.',
+    meetBody: 'He vivido toda mi vida en Connecticut y soy agente inmobiliario desde 2021. Crecí en West Haven, ahora vivo en East Haven y ayudo personalmente a compradores y vendedores en todo el estado. Creo en el asesoramiento sincero, sin presiones, y en apoyar a las comunidades que llamamos hogar.',
+    meetMore: 'Lee mi historia completa',
     meetCall: 'Llama a Joey',
     meetEmail: 'Enviar un correo',
     footer: 'Impulsado por Joey McVety de mygoodagent',
@@ -57,7 +58,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     photoLead: 'Discover a different mix of real Connecticut locations each visit. Choose shoreline or inland to explore.',
     meetTag: 'YOUR LOCAL CONNECTION',
     meetTitle: 'Meet Joey McVety',
-    meetBody: "Thinking about making a move in Connecticut? I'm a real estate agent with mygoodagent, helping buyers and sellers throughout the state. Let's talk about your next move.",
+    meetBody: "I’ve lived my entire life in Connecticut and have been a licensed real estate agent since 2021. Raised in West Haven and now living in East Haven, I personally help buyers and sellers across the state with honest advice and a no-pressure approach.",
+    meetMore: "Read my full story",
     meetCall: 'Call Joey',
     meetEmail: 'Email Joey',
     footer: 'Powered by Joey McVety of mygoodagent',
@@ -113,6 +115,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <span className="eyebrow dark">{t.meetTag}</span>
         <h2>{t.meetTitle}</h2>
         <p>{t.meetBody}</p>
+        <Link className="meet-bio-link" href={`/${locale}/about`}>{t.meetMore} <span aria-hidden="true">→</span></Link>
         <div className="meet-brand"><img src="/The%20Good%20Agent.jpg" alt="mygoodagent logo" loading="lazy" /></div>
         <p className="meet-license">Real Estate Agent · Licensed in Connecticut</p>
         <div className="meet-actions"><a className="button-primary" href="tel:+12036277262">{t.meetCall}: 203-627-7262</a><a className="button-outline" href="mailto:JoeySellsCT@gmail.com">{t.meetEmail} ↗</a></div>
