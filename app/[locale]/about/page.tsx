@@ -14,8 +14,6 @@ export default async function AboutPage({params}:{params:Promise<{locale:string}
  <span className="towns-kicker">{es?'CONOCE A TU AGENTE':'MEET YOUR CONNECTICUT AGENT'}</span>
  <h1>{es?'Conoce a Joey McVety':'Meet Joey McVety'}</h1>
  <div className="about-joey-portrait"><img src="/headshotnew.png" alt={es?"Joey McVety, agente inmobiliario en Connecticut":"Joey McVety, Connecticut real estate agent"} width="440" height="540" /></div>
- <JoeyProductionStats locale={locale} />
- <JoeyReviews locale={locale} />
  <p className="about-joey-subtitle">{es?'Agente inmobiliario de Connecticut | mygoodagent LLC':'Connecticut Real Estate Agent | mygoodagent LLC'}</p>
  {es?<div className="about-joey-body">
  <section><h2>Connecticut no es solo donde trabajo. Es mi hogar.</h2>
@@ -78,5 +76,7 @@ export default async function AboutPage({params}:{params:Promise<{locale:string}
  <p>And if you're moving somewhere mygoodagent hasn't reached yet, I can still help by connecting you with one of my trusted real estate referral partners in that area.</p>
  <p>Whether you're buying or selling anywhere in Connecticut or planning a move out of state, I'm always happy to take your call. Here in Connecticut, I'd love to be your real estate agent. Anywhere else, I'll be happy to help you find the right one.</p></section>
  </div>}
+ <JoeyProductionStats locale={locale} />
+ <JoeyReviews locale={locale} />
  </main>;
 }
