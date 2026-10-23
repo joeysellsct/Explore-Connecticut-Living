@@ -162,3 +162,12 @@
 .tile-village{background-image:linear-gradient(180deg,#102d2520,#102d2550),url('https://commons.wikimedia.org/wiki/Special:FilePath/Farmington%20Canal%20Heritage%20Trail%2C%20West%20Cheshire%20CT.jpg?width=1100');background-position:center}
 .tile-city{background-image:linear-gradient(180deg,#102d2520,#102d2550),url('https://commons.wikimedia.org/wiki/Special:FilePath/Path%20on%20the%20New%20Haven%20Green%2C%20New%20Haven%2C%20Connecticut.jpg?width=1100')}
 .guide-art{background-image:linear-gradient(135deg,#164a2f99,#071d14cc),url('https://commons.wikimedia.org/wiki/Special:FilePath/Farmington%20Canal%20Heritage%20Trail%2C%20West%20Cheshire%20CT.jpg?width=1100')}
+
+/* Per-visit Connecticut photo rotation: hero image behind readable copy. */
+.hero{isolation:isolate;background-color:#102d25}
+.rotating-hero-image{position:absolute;inset:0;z-index:-1;background-size:cover;background-position:center;pointer-events:none}
+.hero-caption{z-index:1}
+.rotating-photo-tile{background-size:cover;background-position:center}
+.photo-credits{margin:1rem 0 0;font-size:.76rem;line-height:1.7;color:#596c62}
+.photo-credits a{color:#246a50;text-decoration:underline;text-underline-offset:2px}
+@media(prefers-reduced-motion:reduce){.rotating-photo-tile{transition:none}}
