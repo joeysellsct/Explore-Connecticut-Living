@@ -16,7 +16,11 @@ export async function generateMetadata({params}:{params:Promise<{locale:string;s
  const es=locale==='es';
  const title=es?`Vivir en ${town.name}, CT | Guía local y bienes raíces`:`Living in ${town.name}, CT | Town Guide & Real Estate`;
  const detail=townHighlights[slug];
- const description=es?(detail?.es || `Explora ${town.name}, Connecticut: viviendas, restaurantes, comunidad y recursos para mudarte con Joey McVety, agente inmobiliario con licencia en Connecticut.`):(detail?.en || `Explore ${town.name}, Connecticut: homes, local dining, neighborhoods and moving resources with Joey McVety, Connecticut real estate agent.`);
+ // Use the opening verified fact rather than the full town article in search snippets.
+ const summary=(es?detail?.es:detail?.en)?.split(/(?<=[.!?])\s+/)[0];
+ const fallback=es?`Explora ${town.name}, Connecticut: viviendas, restaurantes, comunidad y recursos para mudarte con Joey McVety, agente inmobiliario con licencia en Connecticut.`:`Explore ${town.name}, Connecticut: homes, local dining, neighborhoods and moving resources with Joey McVety, Connecticut real estate agent.`;
+ const candidate=summary?`${summary} ${es?'Explora viviendas, restaurantes y recursos para mudarte.':'Explore homes, restaurants and moving resources.'}`:fallback;
+ const description=candidate.length<=160?candidate:candidate.slice(0,159).replace(/\s+\S*$/,'')+'…';
  return localizedSeo(locale,`towns/${slug}`,title,description);
 }
 export function generateStaticParams(){return ['en','es'].flatMap(locale=>connecticutTowns.map(t=>({locale,slug:t.slug})));}
