@@ -205,3 +205,28 @@ test('Farmington bilingual guide and official dining sources',()=>{
   assert.equal((links[1].match(new RegExp('"'+field+'":','g'))||[]).length,4,'Four bilingual '+field+' fields');
  assert.match(links[1],/farmington-ct\.org\/departments\/town-clerk\/land-records/);
 });
+
+
+test('Simsbury bilingual guide and sourced resources',()=>{
+ const towns=read('lib/connecticut-towns.ts');
+ const guides=read('lib/town-highlights.ts');
+ const restaurants=read('lib/town-restaurants.ts').split('export const joeyTopPicks')[0];
+ const resources=read('lib/town-official-links.ts');
+ assert.ok(towns.includes('"slug": "simsbury"'),'Simsbury is in the statewide directory');
+ const guide=guides.split('\n').find(line=>line.includes("'simsbury':{"));
+ assert.ok(guide,'Simsbury has a dedicated guide');
+ for(const field of ['"en":','"es":','"places":'])assert.ok(guide.includes(field),'Missing '+field);
+ for(const place of ['Old Drake Hill Flower Bridge','Talcott Mountain State Park','Simsbury Farms'])assert.ok(guide.includes(place),place);
+ const dining=restaurants.match(/'simsbury':\s*\[([\s\S]*?)\],/);
+ assert.ok(dining,'Simsbury has a dining guide');
+ for(const field of ['name','cuisine','cuisineEs','website','sourceUrl','checkedOn'])
+  assert.equal((dining[1].match(new RegExp('"'+field+'":','g'))||[]).length,5,'Five '+field+' fields');
+ assert.equal((dining[1].match(/"rating":/g)||[]).length,0,'No invented ratings');
+ for(const name of ['Metro Bis',"Abigail's Grille & Wine Bar",'Old Well Tavern','Maple Tree Cafe','Pop Over Eatery'])
+  assert.ok(dining[1].includes(name),name);
+ const links=resources.match(/'simsbury':\[([\s\S]*?)\],/);
+ assert.ok(links,'Simsbury official links exist');
+ for(const field of ['en','es','url'])
+  assert.equal((links[1].match(new RegExp('"'+field+'":','g'))||[]).length,5,'Five bilingual '+field+' fields');
+ assert.match(links[1],/simsbury-ct\.gov\/370\/Town-Clerk/);
+});
