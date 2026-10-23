@@ -2,6 +2,15 @@
 // These are points of interest, not claims about proximity to a particular home.
 export const townHighlights:Record<string,{en:string;es:string;places:string[]}>= {
 
+ // New Canaan sources: https://newcanaanct.myrec.com/info/facilities/default.aspx ;
+ // https://newcanaanct.myrec.com/info/dept/ ; https://www.newcanaanlibrary.org/hours-location ;
+ // https://www.ncgardenclub.org/irwin-park-update-2025/
+ 'new-canaan':{
+  en:'New Canaan has a downtown centered on local shops, dining and the public library, along with extensive parkland. Waveny Park on South Avenue includes walking areas, Waveny House and recreational facilities; some amenities, including Spencer’s Run Dog Park and paddle courts, require membership or permits. Irwin Park on Weed Street offers a landscaped walking loop, and the New Canaan Garden Club helps maintain its grounds. New Canaan Library on Main Street provides collections and community programming. Before moving, consult the town Parks & Recreation office for current access rules and the appropriate municipal departments for property assessment, taxes, zoning and permits.',
+  es:'New Canaan combina un centro con tiendas, restaurantes y biblioteca pública con amplios parques. Waveny Park, en South Avenue, cuenta con zonas para caminar, Waveny House e instalaciones recreativas; algunas, como Spencer’s Run Dog Park y las canchas de pádel, requieren membresía o permisos. Irwin Park, en Weed Street, ofrece un sendero circular ajardinado y recibe apoyo de mantenimiento del New Canaan Garden Club. La Biblioteca de New Canaan, en Main Street, ofrece colecciones y actividades comunitarias. Antes de mudarte, consulta con Parques y Recreación las normas de acceso vigentes y con las oficinas municipales correspondientes los impuestos, la tasación, la zonificación y los permisos de cada propiedad.',
+  places:['Waveny Park','Waveny House','Irwin Park','New Canaan Library']
+ },
+
  // Darien official sources: https://www.darienct.gov/234/Parks-Beaches ; https://www.darienct.gov/208/Beaches-Parks ;
  // https://www.darienct.gov/325/Taxes-Assessment ; https://www.darienlibrary.org/about/hours-location
  'darien':{
