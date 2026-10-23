@@ -16,3 +16,19 @@ test('restaurant directory has unique town keys and five sourced Brookfield list
  assert.equal((brookfield[1].match(/checkedOn:/g)||[]).length,5);
  for(const name of ['BarNaan','Hacienda Don Manuel','Housaku Asian Fusion','Portobello Italian Restaurant',"O'Connor's Public House"])assert.ok(brookfield[1].includes(name),name);
 });
+
+test('staging remains noindex and affiliate resources appear on both surfaces',()=>{
+ assert.match(read('app/[locale]/layout.tsx'),/index:false,follow:false/);
+ assert.match(read('app/robots.ts'),/disallow:'\/'/);
+ const partners=read('lib/moving-resources.ts');
+ assert.match(partners,/frontier\.com\/ftr-buy/);
+ assert.match(partners,/amazon\.com\/shop\/influencer-/);
+ assert.match(read('app/[locale]/towns/[slug]/TownMovingResources.tsx'),/partnerLinks\.map/);
+ assert.match(read('app/[locale]/moving-resources/page.tsx'),/partnerLinks\.map/);
+});
+test('personal restaurant picks remain limited to the three approved towns',()=>{
+ const source=read('lib/town-restaurants.ts');
+ const picks=source.split('export const joeyTopPicks')[1]||'';
+ const towns=[...picks.matchAll(/^\s*'([a-z]+(?:-[a-z]+)*)':\s*\[/gm)].map(m=>m[1]).sort();
+ assert.deepEqual(towns,['branford','cheshire','west-haven']);
+});
