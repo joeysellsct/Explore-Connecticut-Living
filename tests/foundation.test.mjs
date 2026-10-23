@@ -153,3 +153,29 @@ test('Fairfield and Westport expose official bilingual municipal resources',()=>
  assert.match(townPage,/townOfficialLinks\[slug\]\.map/);
  assert.match(townPage,/Official resources for planning your move/);
 });
+
+
+test('Greenwich bilingual guide, restaurant sourcing and municipal resources',()=>{
+ const towns=read('lib/connecticut-towns.ts');
+ const guides=read('lib/town-highlights.ts');
+ const restaurants=read('lib/town-restaurants.ts').split('export const joeyTopPicks')[0];
+ const resources=read('lib/town-official-links.ts');
+ assert.ok(towns.includes('"slug": "greenwich"'));
+ const guide=guides.split('\n').find(line=>line.includes("'greenwich':{"));
+ assert.ok(guide,'Greenwich has a dedicated guide');
+ for(const field of ['"en":','"es":','"places":'])assert.ok(guide.includes(field),'Missing '+field);
+ for(const place of ['Greenwich Point Park','Binney Park','Bruce Museum'])assert.ok(guide.includes(place),place);
+ assert.match(guides,/greenwichct\.gov\/2185\/Greenwich-Point-Park/);
+ const match=restaurants.match(/'greenwich':\s*\[([\s\S]*?)\],/);
+ assert.ok(match,'Greenwich has a restaurant directory');
+ for(const field of ['name','cuisine','cuisineEs','website','sourceUrl','checkedOn'])
+  assert.equal((match[1].match(new RegExp('"'+field+'":','g'))||[]).length,5,'Five verified '+field+' fields');
+ assert.equal((match[1].match(/"rating":/g)||[]).length,0,'No invented ratings');
+ for(const name of ['Harvest Wine Bar & Restaurant','Elm Street Oyster House','Townhouse','Miku Sushi','Mediterraneo'])
+  assert.ok(match[1].includes(name),name);
+ const links=resources.match(/'greenwich':\[([\s\S]*?)\],/);
+ assert.ok(links,'Greenwich official resources exist');
+ for(const field of ['en','es','url'])
+  assert.equal((links[1].match(new RegExp(field+':','g'))||[]).length,4,'Four bilingual '+field+' fields');
+ assert.match(links[1],/greenwichct\.gov\/319\/Town-Clerk/);
+});
