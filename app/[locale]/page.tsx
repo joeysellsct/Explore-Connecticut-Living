@@ -24,7 +24,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     guideButton: 'Ver municipios',
     photoTag: 'EXPLORA POR ESTILO DE VIDA',
     photoTitle: 'Un lugar para cada estilo de vida.',
-    photoLead: 'Encuentra la comunidad que mejor se adapte a ti.',
+    photoLead: 'Imágenes de lugares reales de Connecticut: Milford, Cheshire y New Haven.',
     meetTag: 'TU CONTACTO LOCAL',
     meetTitle: 'Conoce a Joey McVety',
     meetBody: '¿Estás pensando en mudarte a Connecticut? Soy un agente de bienes raíces de mygoodagent y trabajo con compradores y vendedores en todo Connecticut. Exploremos juntos tus opciones.',
@@ -53,7 +53,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     guideButton: 'Browse Connecticut towns',
     photoTag: 'EXPLORE BY LIFESTYLE',
     photoTitle: 'A place for every kind of life.',
-    photoLead: 'Start with the Connecticut setting that feels right for you.',
+    photoLead: 'See real Connecticut places: Milford, Cheshire and New Haven.',
     meetTag: 'YOUR LOCAL CONNECTION',
     meetTitle: 'Meet Joey McVety',
     meetBody: "Thinking about making a move in Connecticut? I'm a real estate agent with mygoodagent, helping buyers and sellers throughout the state. Let's talk about your next move.",
@@ -93,10 +93,11 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     <section className="photo-section">
       <div className="photo-heading"><span className="eyebrow dark">{t.photoTag}</span><h2>{t.photoTitle}</h2><p>{t.photoLead}</p></div>
       <div className="photo-grid">
-        <Link href={`/${locale}/towns`} className="photo-tile tile-shore"><span className="tile-label">{t.coastal}<small>{t.coastalBody}</small></span><span className="tile-arrow" aria-hidden="true">↗</span></Link>
-        <Link href={`/${locale}/towns`} className="photo-tile tile-village"><span className="tile-label">{t.towns}<small>{t.townsBody}</small></span><span className="tile-arrow" aria-hidden="true">↗</span></Link>
-        <Link href={`/${locale}/towns`} className="photo-tile tile-city"><span className="tile-label">{t.commute}<small>{t.commuteBody}</small></span><span className="tile-arrow" aria-hidden="true">↗</span></Link>
+        <Link href={`/${locale}/towns`} className="photo-tile tile-shore"><span className="tile-label">Milford Green<small>{es ? "El centro histórico de Milford" : "Historic downtown Milford"}</small></span><span className="tile-arrow" aria-hidden="true">↗</span></Link>
+        <Link href={`/${locale}/towns`} className="photo-tile tile-village"><span className="tile-label">{es ? "Sendero del Canal Farmington" : "Farmington Canal Trail"}<small>Cheshire, Connecticut</small></span><span className="tile-arrow" aria-hidden="true">↗</span></Link>
+        <Link href={`/${locale}/towns`} className="photo-tile tile-city"><span className="tile-label">New Haven Green<small>{es ? "El corazón de New Haven" : "The heart of New Haven"}</small></span><span className="tile-arrow" aria-hidden="true">↗</span></Link>
       </div>
+      <p className="photo-credits">Photos: New Haven Green © ajay_suresh (CC BY 2.0); Cheshire trail © John Phelan (CC BY 4.0); New Haven Green path © Christian David (CC BY-SA 4.0). Sources: Wikimedia Commons.</p>
     </section>
 
     <section className="guide-section">
