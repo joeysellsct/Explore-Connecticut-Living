@@ -17,6 +17,7 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {name:"Broken Symmetry",cuisine:"Brewpub and American comfort food",website:"https://www.brokensymmetrybrew.com/",sourceUrl:"https://www.brokensymmetrybrew.com/lunchdinner",checkedOn:'2026-10-23'},
     {name:"House of Yoshida",cuisine:"Japanese grill and sushi",website:"https://www.houseofyoshida.com/",sourceUrl:"https://www.houseofyoshida.com/",checkedOn:'2026-10-23'},
     {name:"Bora Restaurant",cuisine:"New American",website:"https://www.borarestaurant.com/",sourceUrl:"https://www.borarestaurant.com/",checkedOn:'2026-10-23'},
+    {name:"Famous Pizza",cuisine:"Pizza and Italian-American",website:"https://famouspizzabethel.com/",sourceUrl:"https://famouspizzabethel.com/",checkedOn:'2026-10-23'},
   ],
   'newtown': [
     {name:"Sal e Pepe Contemporary Italian Bistro",cuisine:"Northern Italian and contemporary Italian",website:"https://www.salepeperestaurant.com/",sourceUrl:"https://www.salepeperestaurant.com/",checkedOn:'2026-10-23'},
