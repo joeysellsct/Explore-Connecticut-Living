@@ -139,3 +139,17 @@ test('Fairfield and Westport bilingual guides and sourced dining coverage',()=>{
  assert.match(restaurants,/barcelonawinebar\.com\/location\/fairfield/);
  assert.match(restaurants,/kawaniwestport\.com\/about/);
 });
+
+test('Fairfield and Westport expose official bilingual municipal resources',()=>{
+ const resources=read('lib/town-official-links.ts');
+ const townPage=read('app/[locale]/towns/[slug]/page.tsx');
+ for(const slug of ['fairfield','westport']){
+  const match=resources.match(new RegExp("'"+slug+"':\\[([\\s\\S]*?)\\],"));
+  assert.ok(match,slug+' has official resource links');
+  for(const field of ['en','es','url'])assert.equal((match[1].match(new RegExp(field+':','g'))||[]).length,3,slug+' has three bilingual '+field+' values');
+ }
+ assert.match(resources,/gis\.vgsi\.com\/fairfieldct/);
+ assert.match(resources,/westportct\.gov\/how-do-i\/access-property-information/);
+ assert.match(townPage,/townOfficialLinks\[slug\]\.map/);
+ assert.match(townPage,/Official resources for planning your move/);
+});
