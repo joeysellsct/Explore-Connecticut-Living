@@ -1,6 +1,11 @@
 // Editorial landmarks for the first town-specific content batch.
 // These are points of interest, not claims about proximity to a particular home.
 export const townHighlights:Record<string,{en:string;es:string;places:string[]}>= {
+
+ // Sources: https://bethel-ct.gov/bethel-facts ; https://bethel-ct.gov/bennett-memorial-park ;
+ // https://portal.ct.gov/deep/state-parks/listing-of-state-parks
+ 'bethel':{en:'Bethel has a historic downtown, a Metro-North station and access to outdoor recreation in northern Fairfield County. Bennett Memorial Park on Shelter Rock Road has a pavilion and pond, but swimming and wading in the pond are prohibited. Collis P. Huntington State Park extends into Bethel and offers wooded trails. Before moving, check town information on commuter parking permits and local recreation programs.',es:'Bethel cuenta con un centro histórico, una estación de Metro-North y opciones de recreación al aire libre en el norte del condado de Fairfield. Bennett Memorial Park, en Shelter Rock Road, tiene un pabellón y un estanque, pero está prohibido nadar o meterse en el agua. Collis P. Huntington State Park se extiende hasta Bethel y ofrece senderos boscosos. Antes de mudarte, consulta la información municipal sobre permisos de estacionamiento para viajeros y programas recreativos.',places:['Historic Downtown Bethel','Bennett Memorial Park','Collis P. Huntington State Park']},
+
  // Source: https://www.monroect.gov/p/about-monroe and town Parks & Recreation FY2025-26 budget
  // Newtown Parks & Recreation: https://www.newtown-ct.gov/parks-recreation/pages/parks-information-bicycle-playground-and-tennispickleball-court-etiquette
  // Park permits: https://www.newtown-ct.gov/parks-recreation/pages/parking-permit-information
