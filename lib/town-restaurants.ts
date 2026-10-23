@@ -11,6 +11,9 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  'monroe': [
+    {name:"Monroe Diner",cuisine:"American diner and all-day breakfast",website:"https://monroediner.com/",sourceUrl:"https://monroediner.com/",checkedOn:'2026-10-23'},
+  ],
   'shelton': [
     {name:"Spotted Horse Tavern - Shelton",cuisine:"American tavern",website:"https://spottedhorsetavernct.com/shelton/",sourceUrl:"https://spottedhorsetavernct.com/shelton/",checkedOn:'2026-10-23'},
     {name:"Ritrovo",cuisine:"Italian and pizza",website:"https://ritrovoshelton.com/",sourceUrl:"https://ritrovoshelton.com/",checkedOn:'2026-10-23'},
