@@ -32,3 +32,24 @@ test('personal restaurant picks remain limited to the three approved towns',()=>
  const towns=[...picks.matchAll(/^\s*'([a-z]+(?:-[a-z]+)*)':\s*\[/gm)].map(m=>m[1]).sort();
  assert.deepEqual(towns,['branford','cheshire','west-haven']);
 });
+
+
+test('Ridgefield bilingual editorial and restaurant coverage is source-backed',()=>{
+ const highlights=read('lib/town-highlights.ts');
+ const guide=highlights.match(/'ridgefield':\s*\{([\s\S]*?)\n \},/);
+ assert.ok(guide,'Ridgefield has a town-specific guide');
+ for(const field of ['en:','es:','Ballard Park','Martin Park Beach','ridgefieldct.gov'])assert.ok(guide[1].includes(field),field);
+ const directory=read('lib/town-restaurants.ts');
+ const listings=directory.match(/'ridgefield':\s*\[([\s\S]*?)\],/);
+ assert.ok(listings,'Ridgefield has a restaurant directory');
+ assert.equal((listings[1].match(/checkedOn:/g)||[]).length,5);
+ assert.equal((listings[1].match(/cuisineEs:/g)||[]).length,5);
+ for(const name of ["Bailey's Backyard",'TerraSole Ristorante','850 Degrees','The Hideaway','Tablao Wine Bar & Restaurant'])assert.ok(listings[1].includes(name),name);
+});
+
+test('town search descriptions use concise verified excerpts, not entire profiles',()=>{
+ const page=read('app/[locale]/towns/[slug]/page.tsx');
+ assert.match(page,/const summary=/);
+ assert.match(page,/candidate\.length<=160/);
+ assert.match(page,/return localizedSeo\(locale,/);
+});
