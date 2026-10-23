@@ -311,3 +311,33 @@ test('town pages expose localized breadcrumb structured data without fabricated 
  assert.match(read('lib/seo.ts'),/alternates:\{canonical:current,languages:/);
  assert.match(read('app/sitemap.ts'),/connecticutTowns\.map/);
 });
+
+
+test('Middletown town profile, restaurants and official links are bilingual and source-backed',()=>{
+ const highlights=read('lib/town-highlights.ts');
+ const editorial=highlights.match(/'middletown':(\{[^\n]+\}),/);
+ assert.ok(editorial,'Middletown editorial record exists');
+ const record=JSON.parse(editorial[1]);
+ assert.ok(record.en.length>700 && record.es.length>700,'Substantial bilingual editorial text');
+ for(const place of ['Harbor Park','Kidcity Children\'s Museum','Wesleyan University','Wadsworth Falls State Park'])assert.ok(record.places.includes(place),place);
+ assert.match(record.en,/Big Falls/);
+ assert.match(record.es,/Big Falls/);
+ const source=read('lib/town-restaurants.ts');
+ const restaurants=source.match(/'middletown':\s*\[([\s\S]*?)\],/);
+ assert.ok(restaurants,'Middletown restaurant directory exists');
+ const rows=[...restaurants[1].matchAll(/\{[^\n]+\}/g)].map(m=>JSON.parse(m[0]));
+ assert.equal(rows.length,5,'Five restaurants are researched, not fabricated');
+ assert.equal(new Set(rows.map(r=>r.name)).size,5,'No duplicate restaurants');
+ for(const r of rows){
+  assert.ok(r.cuisine && r.cuisineEs && r.website && r.sourceUrl,'Bilingual descriptions and provenance');
+  assert.equal(r.checkedOn,'2026-10-23');
+  assert.equal(r.rating,undefined,'Do not fabricate ratings');
+ }
+ const links=read('lib/town-official-links.ts').match(/'middletown':\s*\[([\s\S]*?)\],/);
+ assert.ok(links,'Middletown official resource directory exists');
+ const resources=[...links[1].matchAll(/\{[^\n]+\}/g)].map(m=>JSON.parse(m[0]));
+ assert.equal(resources.length,6);
+ for(const r of resources)assert.ok(r.en && r.es && r.url.startsWith('https://'));
+ const picks=source.split('export const joeyTopPicks')[1]||'';
+ assert.doesNotMatch(picks,/^\s*'middletown':/m,'Do not add Middletown as a Joey personal pick');
+});
