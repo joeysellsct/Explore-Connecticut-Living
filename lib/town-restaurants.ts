@@ -109,6 +109,9 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {"name":"Jalapeño Heaven","cuisine":"Mexican","sourceUrl":"https://visitnewhaven.com/wp-content/uploads/2024/04/New-Haven-Visitors-Guide-2024-FINAL.pdf","checkedOn":"2026-10-21"},
     {"name":"Ross Vino","cuisine":"Italian","sourceUrl":"https://ctvisit.com/articles/takeout-and-delivery-restaurants-connecticut","checkedOn":"2026-10-21"},
   ],
+  'orange': [
+    {name:"Andini's Restaurant",cuisine:'Italian-American and pizza',website:'https://andinisrestaurant.com/',sourceUrl:'https://andinisrestaurant.com/',checkedOn:'2026-10-23'},
+  ],
   milford: [
     {name:'The Corner Restaurant',cuisine:'Breakfast and brunch',website:'https://www.thecornerbrunch.com',sourceUrl:'https://www.thecornerbrunch.com',checkedOn:'2026-10-21'},
     {name:'Bin 100 Restaurant',cuisine:'Italian and Mediterranean',website:'https://www.bin100.com',sourceUrl:'https://www.bin100.com/dinner-menu',checkedOn:'2026-10-21'},
