@@ -11,6 +11,9 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  'trumbull': [
+    {name:"Antonio’s Kitchen & Bar",cuisine:"Italian",website:"https://antoniostrumbull.com/",sourceUrl:"https://antoniostrumbull.com/",checkedOn:'2026-10-23'},
+  ],
   'cheshire': [
     {name:"Rossini's Italian Restaurant & Pizza",cuisine:"Italian and pizza",sourceUrl:"https://www.rossinispizza.com/",checkedOn:'2026-10-22'},
     {name:"Pho & Spice",cuisine:"Vietnamese and Thai",sourceUrl:"https://www.phoandspice.com/",checkedOn:'2026-10-22'},
