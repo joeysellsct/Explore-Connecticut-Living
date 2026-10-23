@@ -203,3 +203,6 @@
 
 /* Meet Joey biography */
 .about-joey{max-width:1040px;margin-inline:auto}.about-joey h1{font-size:clamp(2.25rem,5vw,3.75rem);margin:.55rem 0}.about-joey-subtitle{font-size:1.1rem;font-weight:650;color:#42614c;margin-bottom:2rem}.about-joey-body{max-width:830px}.about-joey-body section{margin:0 0 2.7rem}.about-joey-body h2{font-size:clamp(1.4rem,2.5vw,2rem);margin:0 0 1rem;color:#1c4d33}.about-joey-body h3{font-size:1.3rem;margin:1.7rem 0 .8rem;color:#1c4d33}.about-joey-body p{font-size:1.04rem;line-height:1.8;margin:0 0 1rem;color:#35483c}
+
+/* Agent portrait and homepage biography teaser */
+.about-joey-portrait{float:right;width:min(38%,320px);margin:0 0 1.5rem 2rem;border-radius:18px;overflow:hidden;box-shadow:0 16px 40px rgba(18,49,30,.16)}.about-joey-portrait img{display:block;width:100%;height:auto;object-fit:cover}.meet-bio-link{display:inline-flex;align-items:center;gap:.5rem;margin:.3rem 0 1.3rem;font-weight:750;color:#205f3e;text-decoration:underline;text-underline-offset:4px}.meet-bio-link:hover{text-decoration-thickness:2px}@media(max-width:620px){.about-joey-portrait{float:none;width:min(100%,320px);margin:0 auto 1.5rem}}
