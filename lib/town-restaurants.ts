@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  // Wilton locations and cuisine verified against restaurant-owned sites on 2026-10-23.
+  'wilton': [
+    {"name":"Orem's Diner","cuisine":"Classic American diner, breakfast and comfort food","cuisineEs":"Diner estadounidense clásico, desayunos y platos caseros","website":"https://oremsdiner.com/","sourceUrl":"https://oremsdiner.com/","checkedOn":"2026-10-23"},
+    {"name":"Little Pub Wilton","cuisine":"American pub food and burgers","cuisineEs":"Comida de pub estadounidense y hamburguesas","website":"https://littlepub.com/wilton","sourceUrl":"https://littlepub.com/wilton","checkedOn":"2026-10-23"},
+    {"name":"Bianco Rosso Wine Bar & Restaurant","cuisine":"Contemporary Italian and wine bar","cuisineEs":"Cocina italiana contemporánea y bar de vinos","website":"https://www.biancorossorestaurantandbar.com/","sourceUrl":"https://www.biancorossorestaurantandbar.com/","checkedOn":"2026-10-23"},
+    {"name":"Craft 14 Kitchen + Bar","cuisine":"New American kitchen and bar","cuisineEs":"Cocina estadounidense contemporánea y bar","website":"https://www.craft14wilton.com/","sourceUrl":"https://www.craft14wilton.com/about/","checkedOn":"2026-10-23"},
+    {"name":"BALDANZA at the Schoolhouse","cuisine":"Seasonal American farm-to-table","cuisineEs":"Cocina estadounidense de temporada y de la granja a la mesa","website":"https://baldanzarestaurants.com/","sourceUrl":"https://baldanzarestaurants.com/","checkedOn":"2026-10-23"},
+  ],
+
   // New Canaan restaurant names, towns and cuisines checked against official business websites, 2026-10-23.
   'new-canaan': [
     {name:"Elm Restaurant",cuisine:"Seasonal New American",cuisineEs:"Nueva cocina estadounidense de temporada",website:"https://www.elmrestaurant.com/",sourceUrl:"https://www.elmrestaurant.com/about/",checkedOn:'2026-10-23'},
