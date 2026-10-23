@@ -12,6 +12,7 @@ export type TownRestaurant = {
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
   'shelton': [
+    {name:"Ritrovo",cuisine:"Italian and pizza",website:"https://ritrovoshelton.com/",sourceUrl:"https://ritrovoshelton.com/",checkedOn:'2026-10-23'},
     {name:"Il Palio",cuisine:"Italian and Tuscan",website:"https://ilpalioct.com/",sourceUrl:"https://ilpalioct.com/",checkedOn:'2026-10-23'},
     {name:"Tacomida",cuisine:"Mexican and tacos",website:"https://tacomidashelton.com/",sourceUrl:"https://tacomidashelton.com/",checkedOn:'2026-10-23'},
     {name:"Market Place Kitchen & Bar",cuisine:"Contemporary American",website:"https://marketplacekitchenbar.com/locations/shelton",sourceUrl:"https://marketplacekitchenbar.com/locations/shelton",checkedOn:'2026-10-23'},
