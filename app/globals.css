@@ -251,3 +251,18 @@ body{background:var(--coastal-cream);color:var(--coastal-ink)}
 .compact-footer .footer-compliance .fair-housing{color:#284c51}.compact-footer .footer-compliance small{color:#4c6365}
 @media(max-width:950px){.brand-header .main-nav{width:100%!important;justify-content:flex-start}.compact-footer .footer-top{grid-template-columns:1.2fr 1fr;gap:1.5rem}.compact-footer .footer-brand{grid-column:1/-1}}
 @media(max-width:560px){.brand-header .site-logo{transform:scale(.9);transform-origin:left center}.brand-header .main-nav{gap:.7rem}.compact-footer .footer-top{grid-template-columns:1fr}.compact-footer .footer-brand{grid-column:auto}.compact-footer .footer-contact a[href^="mailto:"]{font-size:.88rem}}
+
+/* Minimal editorial footer replaces oversized three-column link directory */
+.compliance-footer.compact-footer{background:#173b45!important;color:#edf4f1!important;border-top:3px solid #b49b64!important;padding:2.1rem max(1.5rem,calc((100vw - 1200px)/2)) 1.3rem!important}
+.footer-minimal{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-bottom:1.4rem}
+.footer-minimal-brand{display:flex;flex-direction:column;gap:.4rem}
+.compact-footer .footer-minimal-brand strong{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:1.55rem;color:#fff!important}
+.compact-footer .footer-minimal-brand span{font-size:.85rem;color:#d8e5df!important}
+.footer-minimal-contact{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.compact-footer .footer-minimal-contact a,.compact-footer .footer-minimal-contact a:link,.compact-footer .footer-minimal-contact a:visited{background:transparent!important;border:0!important;padding:0!important;color:#fff!important;font-size:.95rem!important;font-weight:650!important;text-decoration:none!important;overflow-wrap:anywhere}
+.compact-footer .footer-minimal-contact a:hover{text-decoration:underline!important}
+.footer-minimal-legal{border-top:1px solid #ffffff3d;padding-top:1rem;display:flex;align-items:center;flex-wrap:wrap;gap:.35rem 1.25rem;font-size:.7rem;line-height:1.6;color:#d9e4df}
+.footer-minimal-legal small{flex-basis:100%;color:#cad9d5;font-size:.68rem}
+.compact-footer .footer-minimal-legal a,.compact-footer .footer-minimal-legal a:visited{color:#e6efe9!important;text-decoration:underline!important}
+.footer-minimal-housing{font-weight:700;color:#e9d5ac}
+@media(max-width:760px){.footer-minimal{flex-direction:column;align-items:flex-start}.footer-minimal-contact{gap:.7rem 1.4rem}.footer-minimal-legal{display:block}.footer-minimal-legal>span{display:block;margin-bottom:.4rem}}
