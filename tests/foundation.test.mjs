@@ -341,3 +341,21 @@ test('Middletown town profile, restaurants and official links are bilingual and 
  const picks=source.split('export const joeyTopPicks')[1]||'';
  assert.doesNotMatch(picks,/^\s*'middletown':/m,'Do not add Middletown as a Joey personal pick');
 });
+
+
+test('Middletown photo gallery uses location-verified and attributed CC licenses',()=>{
+ const photos=read('lib/town-photography.ts');
+ const match=photos.match(/'middletown':\s*\[([\s\S]*?)\],/);
+ assert.ok(match,'Middletown photography is configured');
+ const records=[...match[1].matchAll(/\{[^\n]+\}/g)].map(m=>JSON.parse(m[0]));
+ assert.equal(records.length,2);
+ assert.deepEqual(records.map(p=>p.file).sort(),['Downtown Middletown, CT.jpg','Wesleyan University Middletown CT.jpg']);
+ assert.deepEqual(records.map(p=>p.credit).sort(),['Daniel Case','Steadyjohn']);
+ for(const p of records){
+  assert.equal(p.license,'CC BY-SA 3.0');
+  assert.equal(p.licenseUrl,'https://creativecommons.org/licenses/by-sa/3.0/');
+ }
+ const page=read('app/[locale]/towns/[slug]/page.tsx');
+ assert.match(page,/photo\.credit/);
+ assert.match(page,/photo\.licenseUrl/);
+});
