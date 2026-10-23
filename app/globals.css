@@ -178,3 +178,16 @@
 .photo-filter button[aria-pressed=true]{background:#194d31;color:white;border-color:#194d31}
 .rotating-hero-place{position:absolute;bottom:1.5rem;left:max(1.5rem,calc((100vw - 1180px)/2));z-index:2;color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.035em;text-shadow:0 1px 5px #0009}
 @media(max-width:760px){.rotating-hero-place{bottom:.9rem;font-size:.69rem}.photo-filter button{padding:.55rem .85rem}}
+
+/* Consistent, source-first community statistics section for all town guides */
+.community-facts{margin:3rem 0;padding:2.5rem;border-radius:18px;background:#edf6f0;border:1px solid #d5e7d9}
+.community-facts h2{font-size:clamp(1.7rem,3vw,2.6rem);letter-spacing:-.035em;margin:.65rem 0}
+.community-facts-lead{max-width:780px;line-height:1.7;color:#425d4c}
+.community-facts-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.7rem 0}
+.community-fact-card{background:white;border:1px solid #dbe8de;border-radius:12px;padding:1.4rem;display:flex;flex-direction:column;align-items:flex-start}
+.community-fact-card h3{margin:0 0 .65rem;font-size:1.15rem;color:#173c27}
+.community-fact-card p{line-height:1.65;color:#455b4c;flex:1}
+.community-fact-card a{color:#17673d;font-weight:750;text-underline-offset:3px}
+.community-fact-card small{display:block;margin-top:.75rem;color:#66776b}
+.community-facts-note{font-size:.82rem;line-height:1.65;color:#52685a}
+@media(max-width:760px){.community-facts{padding:1.5rem;margin:2rem 0}.community-facts-grid{grid-template-columns:1fr}}
