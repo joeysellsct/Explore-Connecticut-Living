@@ -112,6 +112,7 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
   'orange': [
     {name:"Andini's Restaurant",cuisine:'Italian-American and pizza',website:'https://andinisrestaurant.com/',sourceUrl:'https://andinisrestaurant.com/',checkedOn:'2026-10-23'},
     {name:'Coromandel Cuisine of India',cuisine:'Indian',website:'https://www.coromandelorange.com/',sourceUrl:'https://www.coromandelorange.com/',checkedOn:'2026-10-23'},
+    {name:'Noodle House',cuisine:'Ramen, pho and Asian noodles',website:'https://noodle-house.com/',sourceUrl:'https://noodle-house.com/',checkedOn:'2026-10-23'},
   ],
   milford: [
     {name:'The Corner Restaurant',cuisine:'Breakfast and brunch',website:'https://www.thecornerbrunch.com',sourceUrl:'https://www.thecornerbrunch.com',checkedOn:'2026-10-21'},
