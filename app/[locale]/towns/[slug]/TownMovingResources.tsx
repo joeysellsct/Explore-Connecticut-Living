@@ -35,7 +35,7 @@ export default function TownMovingResources({slug,town,locale}:{slug:string;town
   </div>
   <div className="moving-partners">
    <h3>{es?'Recursos útiles para instalarte':'Helpful resources for getting settled'}</h3>
-   <p>{es?'Aquí aparecerán recursos seleccionados para mudanzas, compras del hogar, internet y seguridad, una vez aprobados y verificados.':'This space is reserved for useful moving, home essentials, internet and security resources after their links and terms are approved.'}</p>
+   <p>{es?'Recursos opcionales para mudanzas, productos del hogar e internet. Verifica los servicios y condiciones antes de contratar.':'Optional resources for moving, home essentials and internet. Check provider availability and terms before signing up.'}</p>
    {partnerLinks.length>0&&<><p className="affiliate-disclosure">{es?'Divulgación: puedo recibir una comisión si compras o te registras mediante algunos enlaces identificados como remunerados, sin costo adicional por usar el enlace.':'Disclosure: I may earn a commission if you purchase or sign up through links marked as paid referrals, at no additional cost for using the link.'}</p><div className="partner-grid">{partnerLinks.map(link=><a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer sponsored"><strong>{link.name}</strong><span>{es?link.descriptionEs:link.descriptionEn}</span>{link.affiliate&&<small>{es?'Enlace remunerado: puedo ganar una comisión':'Paid referral: I may earn a commission'}</small>}</a>)}</div>{partnerLinks.some(p=>p.name.toLowerCase().includes('amazon'))&&<p className="affiliate-disclosure">As an Amazon Associate I earn from qualifying purchases.</p>}</>}
   </div>
  </section>;
