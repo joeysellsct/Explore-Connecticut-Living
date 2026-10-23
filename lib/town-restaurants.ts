@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  // Redding and Georgetown addresses and cuisines verified against business-owned sites, 2026-10-23.
+  'redding': [
+    {"name":"The Redding Roadhouse","cuisine":"American pub fare and seasonal entrees","cuisineEs":"Comida de pub estadounidense y platos de temporada","website":"https://www.thereddingroadhouse.com/","sourceUrl":"https://www.thereddingroadhouse.com/","checkedOn":"2026-10-23"},
+    {"name":"Milestone Georgetown","cuisine":"American comfort food and wood-fired pizza","cuisineEs":"Platos caseros estadounidenses y pizza al horno de leña","website":"https://www.milestonect.com/location/milestone-georgetown/","sourceUrl":"https://www.milestonect.com/location/milestone-georgetown/","checkedOn":"2026-10-23"},
+    {"name":"Wire Mill Saloon & Barbecue","cuisine":"Smoked barbecue and American sides","cuisineEs":"Barbacoa ahumada y acompañamientos estadounidenses","website":"https://wiremillbbq.com/","sourceUrl":"https://wiremillbbq.com/","checkedOn":"2026-10-23"},
+    {"name":"The Georgetown Owl","cuisine":"Market café and contemporary restaurant","cuisineEs":"Café de mercado y restaurante contemporáneo","website":"https://www.georgetownowl.com/","sourceUrl":"https://www.georgetownowl.com/","checkedOn":"2026-10-23"},
+    {"name":"Lombardi's Trattoria","cuisine":"Italian trattoria and pizza","cuisineEs":"Trattoria italiana y pizza","website":"https://www.lombarditrattoria.com/","sourceUrl":"https://www.lombarditrattoria.com/","checkedOn":"2026-10-23"},
+  ],
+
   // Wilton locations and cuisine verified against restaurant-owned sites on 2026-10-23.
   'wilton': [
     {"name":"Orem's Diner","cuisine":"Classic American diner, breakfast and comfort food","cuisineEs":"Diner estadounidense clásico, desayunos y platos caseros","website":"https://oremsdiner.com/","sourceUrl":"https://oremsdiner.com/","checkedOn":"2026-10-23"},
