@@ -2,6 +2,14 @@
 // These are points of interest, not claims about proximity to a particular home.
 export const townHighlights:Record<string,{en:string;es:string;places:string[]}>= {
 
+ // Darien official sources: https://www.darienct.gov/234/Parks-Beaches ; https://www.darienct.gov/208/Beaches-Parks ;
+ // https://www.darienct.gov/325/Taxes-Assessment ; https://www.darienlibrary.org/about/hours-location
+ 'darien':{
+  en:'Darien offers shoreline recreation alongside walkable parks and community services. Weed Beach and Pear Tree Point Beach Park provide access to Long Island Sound, but beach entry requires a current permit or daily admission; check the town’s Parks & Recreation information for seasonal rules. Near downtown, Tilley Pond Park has walking paths and landscaped grounds, while Cherry Lawn Park includes playing fields, courts, gardens and the Darien Nature Center. Darien Library on Post Road is another community resource. Before buying, consult the municipal Assessor and Tax Collector for parcel-specific assessment and tax details, and confirm the property’s utilities and any flood-zone considerations independently.',
+  es:'Darien ofrece espacios recreativos junto a la costa, parques y servicios comunitarios. Weed Beach y Pear Tree Point Beach Park dan acceso a Long Island Sound, pero para entrar se necesita un permiso vigente o pagar la entrada diaria; consulta las reglas de temporada de Parques y Recreación. Cerca del centro, Tilley Pond Park tiene senderos y jardines, mientras que Cherry Lawn Park cuenta con campos deportivos, canchas, huertos y el Darien Nature Center. La Biblioteca de Darien, en Post Road, es otro recurso comunitario. Antes de comprar, consulta con las oficinas municipales de tasación y recaudación de impuestos sobre los datos de cada parcela y verifica por separado los servicios públicos y posibles riesgos de inundación.',
+  places:['Weed Beach','Pear Tree Point Beach Park','Tilley Pond Park','Cherry Lawn Park','Darien Library']
+ },
+
  // Sources: https://www.ridgefieldct.gov/welcome-ridgefield-ct ;
  // https://www.ridgefieldparksandrec.org/martin-park-beach ;
  // https://www.ridgefieldct.gov/departments/ ;
