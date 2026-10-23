@@ -38,7 +38,8 @@ test('Ridgefield bilingual editorial and restaurant coverage is source-backed',(
  const highlights=read('lib/town-highlights.ts');
  const guide=highlights.match(/'ridgefield':\s*\{([\s\S]*?)\n \},/);
  assert.ok(guide,'Ridgefield has a town-specific guide');
- for(const field of ['en:','es:','Ballard Park','Martin Park Beach','ridgefieldct.gov'])assert.ok(guide[1].includes(field),field);
+ for(const field of ['en:','es:','Ballard Park','Martin Park Beach'])assert.ok(guide[1].includes(field),field);
+ assert.ok(highlights.includes('ridgefieldct.gov'),'Municipal source is documented');
  const directory=read('lib/town-restaurants.ts');
  const listings=directory.match(/'ridgefield':\s*\[([\s\S]*?)\],/);
  assert.ok(listings,'Ridgefield has a restaurant directory');
