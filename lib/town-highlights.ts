@@ -2,6 +2,16 @@
 // These are points of interest, not claims about proximity to a particular home.
 export const townHighlights:Record<string,{en:string;es:string;places:string[]}>= {
 
+ // Sources: https://www.ridgefieldct.gov/welcome-ridgefield-ct ;
+ // https://www.ridgefieldparksandrec.org/martin-park-beach ;
+ // https://www.ridgefieldct.gov/departments/ ;
+ // https://www.nps.gov/wefa/planyourvisit/directions.htm
+ 'ridgefield':{
+  en:'Ridgefield combines a walkable historic Main Street with museums, theater and outdoor recreation. Explore Ballard Park downtown, see exhibitions at the Aldrich Contemporary Art Museum, or plan a show at the Ridgefield Playhouse. Martin Park Beach offers seasonal swimming with admission rules that can change; check Ridgefield Parks & Recreation before visiting. Weir Farm National Historical Park is another nearby art destination, but its visitor entrance is in Wilton. If you are planning a move, use the town’s official departments directory to reach the assessor, tax collector, planning and zoning, and Water Pollution Control Authority. Confirm water and sewer service for the specific property rather than assuming townwide coverage.',
+  es:'Ridgefield combina una histórica calle Main Street, museos, teatro y espacios al aire libre. Puedes visitar Ballard Park en el centro, conocer las exposiciones del Aldrich Contemporary Art Museum o asistir a un espectáculo en el Ridgefield Playhouse. Martin Park Beach ofrece natación durante la temporada, pero las reglas de entrada pueden cambiar; consulta con Parques y Recreación antes de ir. Otro destino artístico cercano es Weir Farm National Historical Park, cuya entrada para visitantes está en Wilton. Si piensas mudarte, el directorio oficial del municipio permite contactar a las oficinas de tasación, cobro de impuestos, planificación y zonificación, y la autoridad de alcantarillado. Confirma los servicios de agua y alcantarillado de cada propiedad, sin suponer que cubren todo el municipio.',
+  places:['Ballard Park','Aldrich Contemporary Art Museum','Ridgefield Playhouse','Martin Park Beach']
+ },
+
  // Sources: https://www.cttrailfinder.com/trails/trail/still-river-greenway ;
  // https://www.brookfieldct.gov/181/Inland-Wetlands-Commission ;
  // https://www.brookfieldct.gov/224/Parks-Recreation
