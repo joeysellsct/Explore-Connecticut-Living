@@ -1,11 +1,14 @@
 'use client';
-import {useState} from 'react';
+import {useEffect,useState} from 'react';
 import {partnerLinks,uiElectricTowns} from '../../../../lib/moving-resources';
+import {fy2027MillRates,fy2027MillRateSource} from '../../../../lib/fy2027-mill-rates';
 
 export default function TownMovingResources({slug,town,locale}:{slug:string;town:string;locale:string}){
  const es=locale==='es';
  const [homeValue,setHomeValue]=useState('400000');
- const [millRate,setMillRate]=useState(''); // FY2027 OPM base rates are maintained in lib/fy2027-mill-rates.ts; integrate after review.
+ const verifiedRate=fy2027MillRates[slug];
+ const [millRate,setMillRate]=useState(()=>verifiedRate===undefined?'':String(verifiedRate));
+ useEffect(()=>{setMillRate(verifiedRate===undefined?'':String(verifiedRate));},[slug,verifiedRate]);
  const validValue=homeValue.trim()!==''&&Number.isFinite(Number(homeValue))&&Number(homeValue)>=0;
  const validRate=millRate.trim()!==''&&Number.isFinite(Number(millRate))&&Number(millRate)>=0;
  const estimate=validValue&&validRate?Number(homeValue)*.7*Number(millRate)/1000:null;
@@ -16,14 +19,14 @@ export default function TownMovingResources({slug,town,locale}:{slug:string;town
   <div className="moving-resources-grid">
    <article className="moving-resource-card">
     <h3>{es?'Calculadora de impuestos inmobiliarios':'Property tax estimator'}</h3>
-    <p>{es?'Consulta primero la tasa municipal oficial. La tasa no se completa automáticamente hasta verificar el año fiscal y los distritos especiales.':'Look up the official municipal mill rate first. Rates are not filled automatically until the fiscal year and special taxing districts are verified.'}</p>
-    <a href="https://portal.ct.gov/opm/igpp/publications/mill-rates" target="_blank" rel="noopener noreferrer">{es?'Tasas oficiales de Connecticut':'Connecticut official mill rates'} ↗</a>
+    <p>{verifiedRate===undefined?(es?'No tenemos una tasa municipal FY2027 verificada para este municipio. Consulta la fuente oficial e ingresa la tasa de bienes raíces correspondiente.':'A verified FY2027 municipal rate is not yet available here. Check the official source and enter the applicable real estate rate.'):(es?`Tasa municipal base FY2027: ${verifiedRate} mills (lista de tasación del 1 de octubre de 2025). Puedes editarla si corresponde un distrito tributario adicional.`:`FY2027 municipal base rate: ${verifiedRate} mills (October 1, 2025 Grand List). You can edit the rate if additional district taxes apply.`)}</p>
+    <a href={fy2027MillRateSource} target="_blank" rel="noopener noreferrer">{es?'Fuente oficial OPM, FY2027':'Official Connecticut OPM FY2027 data'} ↗</a>
     <div className="tax-fields">
      <label>{es?'Valor estimado de vivienda ($)':'Estimated home value ($)'}<input type="number" min="0" value={homeValue} onChange={e=>setHomeValue(e.target.value)}/></label>
      <label>{es?'Tasa municipal (mills)':'Verified mill rate (mills)'}<input type="number" min="0" step=".01" placeholder={es?'Ingresar tasa':'Enter rate'} value={millRate} onChange={e=>setMillRate(e.target.value)}/></label>
     </div>
     <div className="tax-estimate" aria-live="polite">{estimate===null?(es?'Ingresa una tasa para calcular.':'Enter a mill rate to calculate.'):<><strong>{estimate.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0})}</strong> {es?'al año':'per year'} · {(estimate/12).toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0})}/{es?'mes':'month'}</>}</div>
-    <small>{es?'Ejemplo basado en 70% del valor ingresado como tasación. El valor de mercado no es necesariamente el valor tasado. No incluye exenciones ni distritos especiales; verifica la factura real con el municipio.':'Illustration assumes assessment at 70% of entered value. Market value may differ from assessed value. Exemptions, special districts and actual assessments are not included. Verify actual taxes with the assessor.'}</small>
+    <small>{es?'Estimación ilustrativa para bienes raíces, no vehículos, con una tasación supuesta del 70% del valor ingresado. El valor de mercado puede diferir del valor tasado. No incluye exenciones ni impuestos de distritos especiales; confirma la factura real con el municipio.':'Illustrative real estate estimate, not motor vehicle taxes, assuming assessment at 70% of entered value. Market value may differ from assessed value. Exemptions and special district levies are excluded; confirm the actual bill with the municipality.'}</small>
    </article>
    <article className="moving-resource-card">
     <h3>{es?'Electricidad, internet y otros servicios':'Electricity, internet & other utilities'}</h3>
