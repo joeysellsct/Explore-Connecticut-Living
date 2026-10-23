@@ -16,6 +16,7 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {name:"El Gallo de Oro",cuisine:"Mexican",website:"https://www.elgallodeorotogo.com/",sourceUrl:"https://www.elgallodeorotogo.com/",checkedOn:'2026-10-23'},
     {name:"Osteria Romana Monroe",cuisine:"Italian and Roman-style pasta",website:"https://osteriaromana.com/monroe",sourceUrl:"https://osteriaromana.com/monroe",checkedOn:'2026-10-23'},
     {name:"Vazzy's Osteria",cuisine:"Italian and pizza",website:"https://vazzysosteria.com/",sourceUrl:"https://vazzysosteria.com/",checkedOn:'2026-10-23'},
+    {name:"Bella Rosa Pizzeria Ristorante",cuisine:"Italian, pizza and Portuguese dishes",website:"https://www.bellarosapizza.com/",sourceUrl:"https://www.bellarosapizza.com/",checkedOn:'2026-10-23'},
   ],
   'shelton': [
     {name:"Spotted Horse Tavern - Shelton",cuisine:"American tavern",website:"https://spottedhorsetavernct.com/shelton/",sourceUrl:"https://spottedhorsetavernct.com/shelton/",checkedOn:'2026-10-23'},
