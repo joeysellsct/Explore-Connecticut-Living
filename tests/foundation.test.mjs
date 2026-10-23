@@ -255,3 +255,28 @@ test('Avon bilingual guide and sourced resources',()=>{
   assert.equal((links[1].match(new RegExp('"'+field+'":','g'))||[]).length,5,'Five bilingual '+field+' fields');
  assert.match(links[1],/avonct\.gov\/departments\/building\/index\.php/);
 });
+
+
+test('Canton has sourced bilingual town, restaurant and municipal guides',()=>{
+ const towns=read('lib/connecticut-towns.ts');
+ const highlights=read('lib/town-highlights.ts');
+ const restaurants=read('lib/town-restaurants.ts').split('export const joeyTopPicks')[0];
+ const resources=read('lib/town-official-links.ts');
+ assert.ok(towns.includes('"slug": "canton"'),'Canton must be in the statewide directory');
+ const guide=highlights.split('\n').find(line=>line.includes("'canton':{"));
+ assert.ok(guide,'Canton editorial guide exists');
+ for(const field of ['"en":','"es":','"places":'])assert.ok(guide.includes(field),'Missing bilingual guide field '+field);
+ for(const place of ['Collinsville','Farmington River Trail','Canton Historical Museum','Roaring Brook Nature Center'])assert.ok(guide.includes(place),'Missing Canton landmark '+place);
+ const dining=restaurants.match(/'canton':\s*\[([\s\S]*?)\],/);
+ assert.ok(dining,'Canton restaurant guide exists');
+ for(const field of ['name','cuisine','cuisineEs','website','sourceUrl','checkedOn'])
+  assert.equal((dining[1].match(new RegExp('"'+field+'":','g'))||[]).length,5,'Five sourced restaurant '+field+' fields');
+ assert.equal((dining[1].match(/"rating":/g)||[]).length,0,'No invented restaurant ratings');
+ for(const name of ['LaSalle Market & Deli','Crown & Hammer Restaurant & Pub','Mercato Italian Kitchen & Bar','American Flatbread','Saybrook Fish House'])assert.ok(dining[1].includes(name),name);
+ const links=resources.match(/'canton':\s*\[([\s\S]*?)\],/);
+ assert.ok(links,'Canton official resource links exist');
+ for(const field of ['en','es','url'])assert.equal((links[1].match(new RegExp('"'+field+'":','g'))||[]).length,6,'Six bilingual official '+field+' fields');
+ assert.match(links[1],/townofcantonct\.gov\/756\/Building-Department/);
+ const picks=read('lib/town-restaurants.ts').split('export const joeyTopPicks')[1]||'';
+ assert.doesNotMatch(picks,/^\s*'canton':/m,'Canton must not appear among Joey personal picks');
+});
