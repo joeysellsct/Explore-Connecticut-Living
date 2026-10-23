@@ -2,6 +2,11 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Canton locations, creators and CC BY-SA 4.0 licenses verified 2026-10-23 on Wikimedia Commons file description pages.
+ 'canton':[
+  {"title":"Farmington River Trail bridge in Collinsville","file":"Farmington River Trail bridge over the Farmington River, Collinsville CT.jpg","credit":"John Phelan","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Canton Historical Museum in Collinsville","file":"Canton Historical Museum, Canton CT.jpg","credit":"John Phelan","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
  'cheshire':[
   {title:'Farmington Canal Heritage Trail in West Cheshire',file:'Farmington Canal Heritage Trail, West Cheshire CT.jpg',credit:'John Phelan',license:'CC BY 4.0',licenseUrl:'https://creativecommons.org/licenses/by/4.0/'},
   {title:'Historic Farmington Canal Lock 12 in Cheshire',file:'Farmington canal lock 12.jpg',credit:'Staib',license:'CC BY-SA 3.0',licenseUrl:'https://creativecommons.org/licenses/by-sa/3.0/'}
