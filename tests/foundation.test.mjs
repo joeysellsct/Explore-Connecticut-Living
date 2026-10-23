@@ -116,3 +116,26 @@ test('Wilton and Redding guides and restaurant lists have verified bilingual cov
  assert.match(guides,/merwin-meadows-pond-and-beach-closed-2025-season/);
  assert.match(guides,/ctparks\.com\/parks\/putnam-memorial-state-park/);
 });
+
+test('Fairfield and Westport bilingual guides and sourced dining coverage',()=>{
+ const towns=read('lib/connecticut-towns.ts');
+ const guides=read('lib/town-highlights.ts');
+ const restaurants=read('lib/town-restaurants.ts').split('export const joeyTopPicks')[0];
+ for(const slug of ['fairfield','westport']){
+  assert.ok(towns.includes('"slug": "'+slug+'"'),slug+' appears in the 169-town directory');
+  const line=guides.split('\n').find(row=>row.includes("'"+slug+"':{"));
+  assert.ok(line,slug+' has a town-specific guide');
+  for(const field of ['"en":','"es":','"places":'])assert.ok(line.includes(field),slug+' missing '+field);
+  const match=restaurants.match(new RegExp("'"+slug+"':\\s*\\[([\\s\\S]*?)\\],"));
+  assert.ok(match,slug+' has a dining guide');
+  const entries=match[1];
+  for(const field of ['name','cuisine','cuisineEs','website','sourceUrl','checkedOn']){
+   assert.equal((entries.match(new RegExp('"'+field+'":','g'))||[]).length,5,slug+' needs five '+field+' values');
+  }
+  assert.equal((entries.match(/"rating":/g)||[]).length,0,'Do not invent ratings');
+ }
+ assert.match(guides,/www\.westportct\.gov\/how-do-i\/access-property-information\/town-gis-map-system/);
+ assert.match(guides,/ffldcommunity\.com\/lake_mohegan\.php/);
+ assert.match(restaurants,/barcelonawinebar\.com\/location\/fairfield/);
+ assert.match(restaurants,/kawaniwestport\.com\/about/);
+});
