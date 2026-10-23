@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const googleBusiness='https://www.google.com/maps/search/?api=1&query=Joey%20McVety%20with%20mygoodagent%20680%20Boston%20Post%20Rd%20Milford%20CT';
-const zillowDirectory='https://www.zillow.com/professionals/real-estate-agent-reviews/east-haven-ct/';
+const zillowDirectory='https://zillow.com/reviews/write/?s=X1-ZUraiw82n5l3bd_6o78g';
 const realty='https://www.realty.com/real-estate-agents/3549463/joey_mcvety';
 const homes='https://www.homes.com/real-estate-agents/milford-ct/p3/';
 
@@ -23,11 +23,11 @@ export default function JoeyReviews({locale,compact=false}:{locale:string;compac
   </div>
   <h3>{es?'Otros perfiles inmobiliarios':'Other Real Estate Profiles'}</h3>
   <div className="joey-review-profiles">
-   <a href={zillowDirectory} target="_blank" rel="noopener noreferrer"><strong>Zillow</strong><span>{es?'Buscar mi perfil de agente':'Find my agent profile'} ↗</span></a>
+   <a href={zillowDirectory} target="_blank" rel="noopener noreferrer"><strong>Zillow</strong><span>{es?'Dejar una opinión en Zillow':'Leave a Zillow Review'} ↗</span></a>
    <a href={realty} target="_blank" rel="noopener noreferrer"><strong>Realty.com</strong><span>{es?'Ver mi perfil inmobiliario':'View my real estate profile'} ↗</span></a>
    <a href={homes} target="_blank" rel="noopener noreferrer"><strong>Homes.com</strong><span>{es?'Encontrarme en el directorio':'Find me in the agent directory'} ↗</span></a>
   </div>
-  <p className="joey-reviews-disclaimer">{es?'Los enlaces de Zillow y Homes.com abren directorios, no formularios directos de reseñas. No se ha verificado una URL específica de mi perfil de Zillow.':'Zillow and Homes.com links open directories, not direct review forms. My exact Zillow profile URL has not yet been verified.'}</p>
+  <p className="joey-reviews-disclaimer">{es?'El enlace de Zillow abre el formulario de reseñas proporcionado por Joey. Homes.com abre un directorio, no un formulario directo de reseñas.':'The Zillow link opens the review form provided by Joey. Homes.com opens an agent directory, not a direct review form.'}</p>
   {compact&&<Link href={`/${locale}/about`} className="meet-bio-link">{es?'Conoce más sobre Joey':'Learn more about Joey'} →</Link>}
  </section>;
 }
