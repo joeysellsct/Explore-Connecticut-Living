@@ -12,6 +12,49 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  // Wethersfield restaurant locations and cuisines checked against official websites 2026-10-23; no ratings or personal endorsements.
+  'wethersfield': [
+  {
+    "name": "The Charles",
+    "cuisine": "Contemporary American restaurant in Old Wethersfield",
+    "cuisineEs": "Restaurante de cocina estadounidense contemporánea en Old Wethersfield",
+    "website": "https://www.thecharlesct.com/",
+    "sourceUrl": "https://www.thecharlesct.com/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Lucky Lou's Bar and Grill",
+    "cuisine": "American bar-and-grill fare in a historic Main Street house",
+    "cuisineEs": "Platos estadounidenses de bar y parrilla en una casa histórica de Main Street",
+    "website": "https://www.luckylousbarandgrill.com/",
+    "sourceUrl": "https://www.luckylousbarandgrill.com/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Village Pizza Restaurant",
+    "cuisine": "Greek-style pizza, grinders and pasta",
+    "cuisineEs": "Pizza al estilo griego, sándwiches tipo grinder y pasta",
+    "website": "https://villagepizzact.com/",
+    "sourceUrl": "https://villagepizzact.com/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Heirloom Market at Comstock Ferre",
+    "cuisine": "Café and market with sandwiches, soups, salads and baked goods",
+    "cuisineEs": "Cafetería y mercado con sándwiches, sopas, ensaladas y productos de panadería",
+    "website": "https://www.heirloommkt.com/",
+    "sourceUrl": "https://www.heirloommkt.com/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "River: A Waterfront Restaurant & Bar",
+    "cuisine": "Connecticut River waterfront dining with Italian-inspired dishes",
+    "cuisineEs": "Restaurante junto al río Connecticut con platos de inspiración italiana",
+    "website": "https://riverontheriver.com/",
+    "sourceUrl": "https://riverontheriver.com/",
+    "checkedOn": "2026-10-23"
+  }
+],
   // Middletown restaurant locations and cuisines checked against official sites 2026-10-23; no ratings or personal endorsements.
   'middletown': [
     {"name":"MONDO","cuisine":"Brick-oven New York-style pizza, panini and pasta","cuisineEs":"Pizza estilo neoyorquino al horno de ladrillo, paninis y pastas","website":"https://www.mondomiddletown.com/","sourceUrl":"https://www.mondomiddletown.com/","checkedOn":"2026-10-23"},
