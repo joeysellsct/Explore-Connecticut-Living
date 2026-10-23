@@ -12,6 +12,14 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  // Avon restaurant locations and cuisines verified on restaurant-owned websites 2026-10-23.
+  'avon': [
+    {"name":"The North House","cuisine":"Modern New England and American dining","cuisineEs":"Cocina moderna de Nueva Inglaterra y estadounidense","website":"https://thenorthhouse.com/","sourceUrl":"https://thenorthhouse.com/","checkedOn":"2026-10-23"},
+    {"name":"Max A Mia Ristorante","cuisine":"Italian bistro, pasta and stone-oven pizza","cuisineEs":"Bistró italiano, pastas y pizza al horno de piedra","website":"https://www.maxamiaristorante.com/","sourceUrl":"https://www.maxamiaristorante.com/","checkedOn":"2026-10-23"},
+    {"name":"Market Place Kitchen & Bar","cuisine":"Farm-to-table American cooking and brunch","cuisineEs":"Cocina estadounidense de la granja a la mesa y brunch","website":"https://marketplacekitchenbar.com/locations/avon","sourceUrl":"https://marketplacekitchenbar.com/locations/avon","checkedOn":"2026-10-23"},
+    {"name":"Max Burger","cuisine":"American burgers and gastropub fare","cuisineEs":"Hamburguesas estadounidenses y cocina de gastropub","website":"https://maxburgerbar.com/","sourceUrl":"https://maxburgerbar.com/","checkedOn":"2026-10-23"},
+    {"name":"Seasons Restaurant & Tap Room","cuisine":"Seasonal American dining at Avon Old Farms Hotel","cuisineEs":"Cocina estadounidense de temporada en Avon Old Farms Hotel","website":"https://www.avonoldfarmshotel.com/dine","sourceUrl":"https://www.avonoldfarmshotel.com/dine","checkedOn":"2026-10-23"},
+  ],
   // Simsbury restaurant location and cuisine verified on official sites 2026-10-23.
   'simsbury': [
     {"name":"Metro Bis","cuisine":"Contemporary American bistro","cuisineEs":"Bistró de cocina estadounidense contemporánea","website":"https://metrobis.com/","sourceUrl":"https://metrobis.com/","checkedOn":"2026-10-23"},
