@@ -4,6 +4,7 @@
 export type TownRestaurant = {
  name:string;
  cuisine?:string;
+ cuisineEs?:string;
  website?:string;
  sourceUrl:string;
  rating?:number;
@@ -12,11 +13,11 @@ export type TownRestaurant = {
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
   'brookfield': [
-    {name:"O'Connor's Public House",cuisine:"Irish pub and American",website:"https://www.oconnorspublichouse.com/",sourceUrl:"https://www.oconnorspublichouse.com/locations/",checkedOn:'2026-10-23'},
-    {name:"Portobello Italian Restaurant",cuisine:"Italian",website:"https://portobelloct.com/",sourceUrl:"https://portobelloct.com/",checkedOn:'2026-10-23'},
-    {name:"Housaku Asian Fusion",cuisine:"Chinese, Japanese, Thai and sushi",website:"https://www.housakubrookfield.com/",sourceUrl:"https://www.housakubrookfield.com/locations",checkedOn:'2026-10-23'},
-    {name:"Hacienda Don Manuel",cuisine:"Mexican",website:"https://www.haciendadonmanuel.com/",sourceUrl:"https://www.haciendadonmanuel.com/contact-us/",checkedOn:'2026-10-23'},
-    {name:"BarNaan",cuisine:"Indian restaurant and cocktail bar",website:"https://barnaanct.com/",sourceUrl:"https://barnaanct.com/",checkedOn:'2026-10-23'},
+    {name:"O'Connor's Public House",cuisine:"Irish pub and American",cuisineEs:"Pub irlandés y cocina estadounidense",website:"https://www.oconnorspublichouse.com/",sourceUrl:"https://www.oconnorspublichouse.com/locations/",checkedOn:'2026-10-23'},
+    {name:"Portobello Italian Restaurant",cuisine:"Italian",cuisineEs:"Italiana",website:"https://portobelloct.com/",sourceUrl:"https://portobelloct.com/",checkedOn:'2026-10-23'},
+    {name:"Housaku Asian Fusion",cuisine:"Chinese, Japanese, Thai and sushi",cuisineEs:"China, japonesa, tailandesa y sushi",website:"https://www.housakubrookfield.com/",sourceUrl:"https://www.housakubrookfield.com/locations",checkedOn:'2026-10-23'},
+    {name:"Hacienda Don Manuel",cuisine:"Mexican",cuisineEs:"Mexicana",website:"https://www.haciendadonmanuel.com/",sourceUrl:"https://www.haciendadonmanuel.com/contact-us/",checkedOn:'2026-10-23'},
+    {name:"BarNaan",cuisine:"Indian restaurant and cocktail bar",cuisineEs:"Restaurante indio y coctelería",website:"https://barnaanct.com/",sourceUrl:"https://barnaanct.com/",checkedOn:'2026-10-23'},
   ],
 
   'bethel': [
