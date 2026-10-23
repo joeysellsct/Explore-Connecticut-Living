@@ -5,7 +5,7 @@ import {partnerLinks,uiElectricTowns} from '../../../../lib/moving-resources';
 export default function TownMovingResources({slug,town,locale}:{slug:string;town:string;locale:string}){
  const es=locale==='es';
  const [homeValue,setHomeValue]=useState('400000');
- const [millRate,setMillRate]=useState('');
+ const [millRate,setMillRate]=useState(''); // FY2027 OPM base rates are maintained in lib/fy2027-mill-rates.ts; integrate after review.
  const validValue=homeValue.trim()!==''&&Number.isFinite(Number(homeValue))&&Number(homeValue)>=0;
  const validRate=millRate.trim()!==''&&Number.isFinite(Number(millRate))&&Number(millRate)>=0;
  const estimate=validValue&&validRate?Number(homeValue)*.7*Number(millRate)/1000:null;
