@@ -14,6 +14,7 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
   'cheshire': [
     {name:'Fuoco Coal Fired Apizza',cuisine:'Coal-fired New Haven-style apizza',website:'https://fuocoapizza.com/',sourceUrl:'https://fuocoapizza.com/contact/',checkedOn:'2026-10-22'},
     {name:'Viron Rondo Osteria',cuisine:'Italian',website:'https://www.vironrondoosteria.com/',sourceUrl:'https://www.vironrondoosteria.com/',checkedOn:'2026-10-22'},
+    {name:'Avanti Grille',cuisine:'Italian',sourceUrl:'https://www.avantigrille.com/',checkedOn:'2026-10-22'},
   ],
   'ansonia': [
     {"name":"Relish Wine Bar & Grill","cuisine":"New American","sourceUrl":"https://www.relishwinebarandgrill.net/","checkedOn":"2026-10-22"},
