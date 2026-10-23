@@ -12,6 +12,14 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  // Farmington locations and cuisines checked on restaurant-owned websites 2026-10-23.
+  'farmington': [
+    {"name":"Fork & Fire","cuisine":"Contemporary American restaurant and bar","cuisineEs":"Restaurante y bar de cocina estadounidense contemporánea","website":"https://www.forkandfire.net/","sourceUrl":"https://www.forkandfire.net/","checkedOn":"2026-10-23"},
+    {"name":"Butchers & Bakers","cuisine":"Coal-fired pizza, American fare and brunch","cuisineEs":"Pizza al horno de carbón, cocina estadounidense y brunch","website":"https://www.butchersandbakers.com/","sourceUrl":"https://www.butchersandbakers.com/","checkedOn":"2026-10-23"},
+    {"name":"Piccolo Arancio","cuisine":"Italian bistro and pasta","cuisineEs":"Bistró italiano y pastas","website":"https://piccoloarancio.com/","sourceUrl":"https://piccoloarancio.com/","checkedOn":"2026-10-23"},
+    {"name":"Naples Pizza","cuisine":"Neapolitan-style pizza, calzones and sandwiches","cuisineEs":"Pizza estilo napolitano, calzones y sándwiches","website":"https://www.naplespizza.net/story","sourceUrl":"https://www.naplespizza.net/story","checkedOn":"2026-10-23"},
+    {"name":"Bamboo Asian Cuisine","cuisine":"Chinese, Thai and Japanese dishes","cuisineEs":"Platos chinos, tailandeses y japoneses","website":"https://www.bamboofarmington.com/","sourceUrl":"https://www.bamboofarmington.com/","checkedOn":"2026-10-23"},
+  ],
   // Greenwich locations and menus checked on each restaurant's official website 2026-10-23.
   'greenwich': [
     {"name":"Harvest Wine Bar & Restaurant","cuisine":"Seasonal American cooking and wine bar","cuisineEs":"Cocina estadounidense de temporada y bar de vinos","website":"https://harvestwinebar.com/greenwich/index.php","sourceUrl":"https://harvestwinebar.com/greenwich/index.php","checkedOn":"2026-10-23"},
