@@ -12,6 +12,7 @@ export type TownRestaurant = {
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
   'cheshire': [
+    {name:"Rossini's Italian Restaurant & Pizza",cuisine:"Italian and pizza",sourceUrl:"https://www.rossinispizza.com/",checkedOn:'2026-10-22'},
     {name:"Pho & Spice",cuisine:"Vietnamese and Thai",sourceUrl:"https://www.phoandspice.com/",checkedOn:'2026-10-22'},
     {name:'Fuoco Coal Fired Apizza',cuisine:'Coal-fired New Haven-style apizza',website:'https://fuocoapizza.com/',sourceUrl:'https://fuocoapizza.com/contact/',checkedOn:'2026-10-22'},
     {name:'Viron Rondo Osteria',cuisine:'Italian',website:'https://www.vironrondoosteria.com/',sourceUrl:'https://www.vironrondoosteria.com/',checkedOn:'2026-10-22'},
