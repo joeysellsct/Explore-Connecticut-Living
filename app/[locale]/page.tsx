@@ -1,3 +1,4 @@
+import {RotatingHeroPhoto,RotatingPhotoTiles} from './RotatingHomepagePhotos';
 import Link from 'next/link';
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
@@ -65,6 +66,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
   return <main className="homepage">
     <section className="hero">
+      <RotatingHeroPhoto />
       <div className="hero-inner">
         <span className="eyebrow">{t.eyebrow}</span>
         <h1>{t.title}</h1>
@@ -92,12 +94,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
     <section className="photo-section">
       <div className="photo-heading"><span className="eyebrow dark">{t.photoTag}</span><h2>{t.photoTitle}</h2><p>{t.photoLead}</p></div>
-      <div className="photo-grid">
-        <Link href={`/${locale}/towns`} className="photo-tile tile-shore"><span className="tile-label">Milford Green<small>{es ? "El centro histórico de Milford" : "Historic downtown Milford"}</small></span><span className="tile-arrow" aria-hidden="true">↗</span></Link>
-        <Link href={`/${locale}/towns`} className="photo-tile tile-village"><span className="tile-label">{es ? "Sendero del Canal Farmington" : "Farmington Canal Trail"}<small>Cheshire, Connecticut</small></span><span className="tile-arrow" aria-hidden="true">↗</span></Link>
-        <Link href={`/${locale}/towns`} className="photo-tile tile-city"><span className="tile-label">New Haven Green<small>{es ? "El corazón de New Haven" : "The heart of New Haven"}</small></span><span className="tile-arrow" aria-hidden="true">↗</span></Link>
-      </div>
-      <p className="photo-credits">Photos: New Haven Green © ajay_suresh (CC BY 2.0); Cheshire trail © John Phelan (CC BY 4.0); New Haven Green path © Christian David (CC BY-SA 4.0). Sources: Wikimedia Commons.</p>
+      <RotatingPhotoTiles locale={locale} />
     </section>
 
     <section className="guide-section">
