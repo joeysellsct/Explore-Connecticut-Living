@@ -11,6 +11,10 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+
+  'bethel': [
+    {name:"La Zingara",cuisine:"Regional Italian",website:"https://www.lazingara.com/",sourceUrl:"https://lazingara.com/about.php",checkedOn:'2026-10-23'},
+  ],
   'newtown': [
     {name:"Sal e Pepe Contemporary Italian Bistro",cuisine:"Northern Italian and contemporary Italian",website:"https://www.salepeperestaurant.com/",sourceUrl:"https://www.salepeperestaurant.com/",checkedOn:'2026-10-23'},
     {name:"Barnwood Grill - Newtown",cuisine:"Contemporary American",website:"https://www.barnwoodgrill.com/location/connecticut/",sourceUrl:"https://www.barnwoodgrill.com/location/connecticut/",checkedOn:'2026-10-23'},
