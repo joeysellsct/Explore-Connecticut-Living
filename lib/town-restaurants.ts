@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  // Fairfield restaurant locations and cuisines checked on business-owned websites 2026-10-23.
+  'fairfield': [
+    {"name":"Barcelona Wine Bar","cuisine":"Spanish tapas and Mediterranean small plates","cuisineEs":"Tapas españolas y platos pequeños mediterráneos","website":"https://barcelonawinebar.com/location/fairfield/","sourceUrl":"https://barcelonawinebar.com/location/fairfield/","checkedOn":"2026-10-23"},
+    {"name":"Sally's Apizza","cuisine":"New Haven-style apizza","cuisineEs":"Apizza al estilo de New Haven","website":"https://sallysapizza.com/locations/fairfield/","sourceUrl":"https://sallysapizza.com/locations/fairfield/","checkedOn":"2026-10-23"},
+    {"name":"Colony Grill","cuisine":"Thin-crust bar pizza","cuisineEs":"Pizza fina estilo bar","website":"https://colonygrill.com/locations","sourceUrl":"https://colonygrill.com/locations","checkedOn":"2026-10-23"},
+    {"name":"Geronimo Tequila Bar and Southwest Grill","cuisine":"Southwestern American and Mexican-inspired cuisine","cuisineEs":"Cocina del suroeste estadounidense con influencia mexicana","website":"https://www.geronimobarandgrill.com/","sourceUrl":"https://www.geronimobarandgrill.com/","checkedOn":"2026-10-23"},
+    {"name":"Brick Walk Tavern","cuisine":"Seasonal American tavern fare","cuisineEs":"Platos estadounidenses de temporada estilo taberna","website":"https://www.brickwalktavern.com/","sourceUrl":"https://www.brickwalktavern.com/","checkedOn":"2026-10-23"},
+  ],
+
   // Redding and Georgetown addresses and cuisines verified against business-owned sites, 2026-10-23.
   'redding': [
     {"name":"The Redding Roadhouse","cuisine":"American pub fare and seasonal entrees","cuisineEs":"Comida de pub estadounidense y platos de temporada","website":"https://www.thereddingroadhouse.com/","sourceUrl":"https://www.thereddingroadhouse.com/","checkedOn":"2026-10-23"},
