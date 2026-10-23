@@ -12,6 +12,13 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  'ridgefield': [
+    {name:"Bailey's Backyard",cuisine:"American farm-to-table",cuisineEs:"Cocina estadounidense de la granja a la mesa",website:"https://baileysbackyard.com/",sourceUrl:"https://baileysbackyard.com/",checkedOn:'2026-10-23'},
+    {name:"TerraSole Ristorante",cuisine:"Italian and wood-fired specialties",cuisineEs:"Italiana y especialidades al horno de leña",website:"https://terrasoleridgefield.com/",sourceUrl:"https://terrasoleridgefield.com/contact",checkedOn:'2026-10-23'},
+    {name:"850 Degrees",cuisine:"Wood-fired pizza and Italian",cuisineEs:"Pizza al horno de leña y cocina italiana",website:"https://850degrees.com/",sourceUrl:"https://850degrees.com/",checkedOn:'2026-10-23'},
+    {name:"The Hideaway",cuisine:"American gastropub",cuisineEs:"Gastropub de cocina estadounidense",website:"https://thehideawayridgefield.com/",sourceUrl:"https://thehideawayridgefield.com/",checkedOn:'2026-10-23'},
+    {name:"Tablao Wine Bar & Restaurant",cuisine:"Spanish tapas and wine bar",cuisineEs:"Tapas españolas y bar de vinos",website:"https://tablaowinebar.com/ridgefield/",sourceUrl:"https://tablaowinebar.com/ridgefield/contact-us/",checkedOn:'2026-10-23'},
+  ],
   'brookfield': [
     {name:"O'Connor's Public House",cuisine:"Irish pub and American",cuisineEs:"Pub irlandés y cocina estadounidense",website:"https://www.oconnorspublichouse.com/",sourceUrl:"https://www.oconnorspublichouse.com/locations/",checkedOn:'2026-10-23'},
     {name:"Portobello Italian Restaurant",cuisine:"Italian",cuisineEs:"Italiana",website:"https://portobelloct.com/",sourceUrl:"https://portobelloct.com/",checkedOn:'2026-10-23'},
