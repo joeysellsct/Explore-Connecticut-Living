@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  // Westport restaurant locations and cuisines checked on business-owned websites 2026-10-23.
+  'westport': [
+    {"name":"The Cottage","cuisine":"Seasonal modern American cuisine","cuisineEs":"Cocina estadounidense contemporánea de temporada","website":"https://www.thecottage.kitchen/westport","sourceUrl":"https://www.thecottage.kitchen/westport","checkedOn":"2026-10-23"},
+    {"name":"Kawa Ni","cuisine":"Japanese izakaya-inspired noodles, rice bowls and small plates","cuisineEs":"Platos pequeños, fideos y arroz inspirados en las izakayas japonesas","website":"https://www.kawaniwestport.com/about","sourceUrl":"https://www.kawaniwestport.com/about","checkedOn":"2026-10-23"},
+    {"name":"bartaco Westport","cuisine":"Tacos and Latin-inspired street food","cuisineEs":"Tacos y comida callejera de inspiración latinoamericana","website":"https://bartaco.com/location/westport/","sourceUrl":"https://bartaco.com/location/westport/","checkedOn":"2026-10-23"},
+    {"name":"The Whelk","cuisine":"Seafood and coastal American cuisine","cuisineEs":"Mariscos y cocina estadounidense costera","website":"https://thewhelkwestport.com/contact","sourceUrl":"https://thewhelkwestport.com/contact","checkedOn":"2026-10-23"},
+    {"name":"OKO Westport","cuisine":"Contemporary Japanese cuisine and sushi","cuisineEs":"Cocina japonesa contemporánea y sushi","website":"https://okokitchen.com/westport","sourceUrl":"https://okokitchen.com/westport","checkedOn":"2026-10-23"},
+  ],
+
   // Fairfield restaurant locations and cuisines checked on business-owned websites 2026-10-23.
   'fairfield': [
     {"name":"Barcelona Wine Bar","cuisine":"Spanish tapas and Mediterranean small plates","cuisineEs":"Tapas españolas y platos pequeños mediterráneos","website":"https://barcelonawinebar.com/location/fairfield/","sourceUrl":"https://barcelonawinebar.com/location/fairfield/","checkedOn":"2026-10-23"},
