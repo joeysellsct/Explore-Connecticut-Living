@@ -54,3 +54,31 @@ test('town search descriptions use concise verified excerpts, not entire profile
  assert.match(page,/candidate\.length<=160/);
  assert.match(page,/return localizedSeo\(locale,/);
 });
+
+
+test('Darien guide and restaurants are bilingual and source-backed',()=>{
+ const highlights=read('lib/town-highlights.ts');
+ const guide=highlights.match(/'darien':\s*\{([\s\S]*?)\n \},/);
+ assert.ok(guide,'Darien has a dedicated town guide');
+ for(const term of ['en:','es:','Weed Beach','Pear Tree Point Beach Park','Tilley Pond Park','Darien Library'])assert.ok(guide[1].includes(term),term);
+ assert.ok(highlights.includes('darienct.gov/234/Parks-Beaches'),'Municipal source is documented');
+ const directory=read('lib/town-restaurants.ts');
+ const listings=directory.match(/'darien':\s*\[([\s\S]*?)\],/);
+ assert.ok(listings,'Darien restaurant directory exists');
+ assert.equal((listings[1].match(/checkedOn:/g)||[]).length,5);
+ assert.equal((listings[1].match(/cuisineEs:/g)||[]).length,5);
+ for(const name of ['The Goose','Bodega Taco Bar','Ten Twenty Post','Post Corner Pizza',"Rory's Restaurant"])assert.ok(listings[1].includes(name),name);
+});
+
+test('Bethel Newtown and Monroe restaurant descriptions have Spanish cuisine labels',()=>{
+ const source=read('lib/town-restaurants.ts');
+ for(const slug of ['bethel','newtown','monroe']){
+  const key="'"+slug+"': [";
+  const start=source.indexOf(key);
+  assert.ok(start>=0,slug+' restaurant directory exists');
+  const end=source.indexOf('  ],',start);
+  assert.ok(end>start,slug+' restaurant directory terminates');
+  const listings=source.slice(start,end);
+  assert.equal((listings.match(/cuisineEs:/g)||[]).length,5,slug+' has five Spanish labels');
+ }
+});
