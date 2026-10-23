@@ -82,3 +82,18 @@ test('Bethel Newtown and Monroe restaurant descriptions have Spanish cuisine lab
   assert.equal((listings.match(/cuisineEs:/g)||[]).length,5,slug+' has five Spanish labels');
  }
 });
+
+
+test('New Canaan bilingual guide and five restaurant listings are sourced',()=>{
+ const guide=read('lib/town-highlights.ts');
+ const profile=guide.match(/'new-canaan':\s*\{([\s\S]*?)\n \},/);
+ assert.ok(profile,'New Canaan has a dedicated guide');
+ for(const term of ['en:','es:','Waveny Park','Irwin Park','New Canaan Library'])assert.ok(profile[1].includes(term),term);
+ assert.ok(guide.includes('newcanaanct.myrec.com/info/facilities'),'Town recreation source is documented');
+ const source=read('lib/town-restaurants.ts');
+ const listings=source.match(/'new-canaan':\s*\[([\s\S]*?)\],/);
+ assert.ok(listings,'New Canaan restaurant directory exists');
+ assert.equal((listings[1].match(/checkedOn:/g)||[]).length,5);
+ assert.equal((listings[1].match(/cuisineEs:/g)||[]).length,5);
+ for(const name of ['Elm Restaurant','Gates Restaurant & Bar','Solé Restaurant',"Farmer's Table",'Chef Luis Restaurant'])assert.ok(listings[1].includes(name),name);
+});
