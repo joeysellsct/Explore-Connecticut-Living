@@ -16,6 +16,7 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {name:"Prime One Eleven",cuisine:"Steakhouse and New American",website:"https://primeoneeleven.com/",sourceUrl:"https://primeoneeleven.com/",checkedOn:'2026-10-23'},
     {name:"Old Towne Restaurant",cuisine:"American, Italian and pizza",website:"https://www.oldtownerestaurant.net/",sourceUrl:"https://www.oldtownerestaurant.net/",checkedOn:'2026-10-23'},
     {name:"Mici Asian Bistro",cuisine:"Japanese, Chinese and Thai",website:"https://www.miciasianbistro.com/",sourceUrl:"https://www.miciasianbistro.com/",checkedOn:'2026-10-23'},
+    {name:"Mex On Main",cuisine:"Tex-Mex",website:"https://www.mexonmain.com/index.php",sourceUrl:"https://www.mexonmain.com/index.php",checkedOn:'2026-10-23'},
   ],
   'cheshire': [
     {name:"Rossini's Italian Restaurant & Pizza",cuisine:"Italian and pizza",sourceUrl:"https://www.rossinispizza.com/",checkedOn:'2026-10-22'},
