@@ -12,6 +12,14 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  // Middletown restaurant locations and cuisines checked against official sites 2026-10-23; no ratings or personal endorsements.
+  'middletown': [
+    {"name":"MONDO","cuisine":"Brick-oven New York-style pizza, panini and pasta","cuisineEs":"Pizza estilo neoyorquino al horno de ladrillo, paninis y pastas","website":"https://www.mondomiddletown.com/","sourceUrl":"https://www.mondomiddletown.com/","checkedOn":"2026-10-23"},
+    {"name":"Krust Pizza Bar","cuisine":"Wood-fired pizza and bourbon bar","cuisineEs":"Pizza al horno de leña y bar de bourbon","website":"https://krustpizzabar.com/","sourceUrl":"https://krustpizzabar.com/","checkedOn":"2026-10-23"},
+    {"name":"Luce Restaurant","cuisine":"Tuscan-inspired Italian and contemporary American cuisine","cuisineEs":"Cocina italiana inspirada en Toscana y platos estadounidenses contemporáneos","website":"https://lucect.com/","sourceUrl":"https://lucect.com/about/","checkedOn":"2026-10-23"},
+    {"name":"Taino Smokehouse","cuisine":"Smoked barbecue meats and comfort food","cuisineEs":"Carnes ahumadas a la barbacoa y platos caseros","website":"https://tainosmokehouse.com/","sourceUrl":"https://www.tainosmokehouse.com/Middletown/MiddletownHome","checkedOn":"2026-10-23"},
+    {"name":"Esca Restaurant & Wine Bar","cuisine":"Italian restaurant and wine bar","cuisineEs":"Restaurante italiano y bar de vinos","website":"https://escact.com/","sourceUrl":"https://escact.com/","checkedOn":"2026-10-23"},
+  ],
   // Canton restaurants verified on their own websites 2026-10-23; no ratings or endorsements.
   'canton': [
     {"name":"LaSalle Market & Deli","cuisine":"Breakfast, deli sandwiches and market fare","cuisineEs":"Desayunos, sándwiches de deli y platos de mercado","website":"https://lasallemarket.com/","sourceUrl":"https://lasallemarket.com/","checkedOn":"2026-10-23"},
