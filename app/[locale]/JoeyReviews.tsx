@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 const googleBusiness='https://www.google.com/maps/search/?api=1&query=Joey%20McVety%20with%20mygoodagent%20680%20Boston%20Post%20Rd%20Milford%20CT';
+const googleReview='https://g.page/r/CcAsaHK6A7vUEBM/review';
 const zillowDirectory='https://zillow.com/reviews/write/?s=X1-ZUraiw82n5l3bd_6o78g';
 const realty='https://www.realty.com/real-estate-agents/3549463/joey_mcvety';
 const homes='https://www.homes.com/real-estate-agents/milford-ct/p3/';
@@ -17,9 +18,9 @@ export default function JoeyReviews({locale,compact=false}:{locale:string;compac
    <p>{es?'11 opiniones de Google':'11 Google reviews'}</p>
    <div className="joey-review-actions">
     <a className="button-primary" href={googleBusiness} target="_blank" rel="noopener noreferrer">{es?'Ver opiniones en Google':'Read Google Reviews'} ↗</a>
-    <a className="button-outline" href={googleBusiness} target="_blank" rel="noopener noreferrer">{es?'Dejar una opinión en Google':'Leave a Google Review'} ↗</a>
+    <a className="button-outline" href={googleReview} target="_blank" rel="noopener noreferrer">{es?'Dejar una opinión en Google':'Leave a Google Review'} ↗</a>
    </div>
-   <small>{es?'El enlace abre mi ficha de Google; elige «Escribir una reseña» para dejar tu opinión. Calificación consultada el 23 de octubre de 2026; puede cambiar.':'The link opens my Google business listing; select “Write a review” to leave feedback. Rating checked October 23, 2026 and may change.'}</small>
+   <small>{es?'El botón para dejar una opinión abre directamente el formulario de Google. Calificación consultada el 23 de octubre de 2026; puede cambiar.':'The review button opens my direct Google review form. Rating checked October 23, 2026 and may change.'}</small>
   </div>
   <h3>{es?'Otros perfiles inmobiliarios':'Other Real Estate Profiles'}</h3>
   <div className="joey-review-profiles">
