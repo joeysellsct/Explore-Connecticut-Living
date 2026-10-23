@@ -12,6 +12,14 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  // Greenwich locations and menus checked on each restaurant's official website 2026-10-23.
+  'greenwich': [
+    {"name":"Harvest Wine Bar & Restaurant","cuisine":"Seasonal American cooking and wine bar","cuisineEs":"Cocina estadounidense de temporada y bar de vinos","website":"https://harvestwinebar.com/greenwich/index.php","sourceUrl":"https://harvestwinebar.com/greenwich/index.php","checkedOn":"2026-10-23"},
+    {"name":"Elm Street Oyster House","cuisine":"Seafood and oyster bar","cuisineEs":"Mariscos y bar de ostras","website":"https://www.elmstreetoysterhouse.com/","sourceUrl":"https://www.elmstreetoysterhouse.com/","checkedOn":"2026-10-23"},
+    {"name":"Townhouse","cuisine":"Modern seasonal American cuisine","cuisineEs":"Cocina estadounidense moderna de temporada","website":"https://www.townhousegreenwich.com/","sourceUrl":"https://www.townhousegreenwich.com/","checkedOn":"2026-10-23"},
+    {"name":"Miku Sushi","cuisine":"Japanese sushi and cooked dishes","cuisineEs":"Sushi japonés y platos cocinados","website":"https://mikugreenwich.com/about.html","sourceUrl":"https://mikugreenwich.com/about.html","checkedOn":"2026-10-23"},
+    {"name":"Mediterraneo","cuisine":"Mediterranean seafood, pasta and brick-oven pizza","cuisineEs":"Cocina mediterránea con mariscos, pasta y pizza al horno de ladrillo","website":"https://www.zhospitalitygroup.com/meditteraneo/home","sourceUrl":"https://www.zhospitalitygroup.com/meditteraneo/home","checkedOn":"2026-10-23"},
+  ],
   // Westport restaurant locations and cuisines checked on business-owned websites 2026-10-23.
   'westport': [
     {"name":"The Cottage","cuisine":"Seasonal modern American cuisine","cuisineEs":"Cocina estadounidense contemporánea de temporada","website":"https://www.thecottage.kitchen/westport","sourceUrl":"https://www.thecottage.kitchen/westport","checkedOn":"2026-10-23"},
