@@ -11,6 +11,7 @@ export default async function AboutPage({params}:{params:Promise<{locale:string}
  return <main className="compare-page about-joey">
  <span className="towns-kicker">{es?'CONOCE A TU AGENTE':'MEET YOUR CONNECTICUT AGENT'}</span>
  <h1>{es?'Conoce a Joey McVety':'Meet Joey McVety'}</h1>
+ <div className="about-joey-portrait"><img src="/headshotnew.png" alt={es?"Joey McVety, agente inmobiliario en Connecticut":"Joey McVety, Connecticut real estate agent"} width="440" height="540" /></div>
  <p className="about-joey-subtitle">{es?'Agente inmobiliario de Connecticut | mygoodagent LLC':'Connecticut Real Estate Agent | mygoodagent LLC'}</p>
  {es?<div className="about-joey-body">
  <section><h2>Connecticut no es solo donde trabajo. Es mi hogar.</h2>
