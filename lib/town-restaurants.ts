@@ -16,6 +16,7 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {name:"Barnwood Grill - Newtown",cuisine:"Contemporary American",website:"https://www.barnwoodgrill.com/location/connecticut/",sourceUrl:"https://www.barnwoodgrill.com/location/connecticut/",checkedOn:'2026-10-23'},
     {name:"Jewel of Himalaya",cuisine:"Himalayan, Nepalese and Tibetan",website:"https://www.jewelofhimalayact.com/",sourceUrl:"https://www.jewelofhimalayact.com/",checkedOn:'2026-10-23'},
     {name:"Good Old Days Pizzeria & Cocktail Den",cuisine:"Artisan pizza",website:"https://www.goodolddayspizza.com/",sourceUrl:"https://www.goodolddayspizza.com/",checkedOn:'2026-10-23'},
+    {name:"Nouveau Monde",cuisine:"New American bistro",website:"https://www.nouveaumondesandyhook.com/",sourceUrl:"https://www.nouveaumondesandyhook.com/",checkedOn:'2026-10-23'},
   ],
   'monroe': [
     {name:"Monroe Diner",cuisine:"American diner and all-day breakfast",website:"https://monroediner.com/",sourceUrl:"https://monroediner.com/",checkedOn:'2026-10-23'},
