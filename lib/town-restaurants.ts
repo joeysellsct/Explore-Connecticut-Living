@@ -12,6 +12,14 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  // Darien restaurant locations and cuisines verified against each business's official site, 2026-10-23.
+  'darien': [
+    {name:"The Goose",cuisine:"American bistro and tavern",cuisineEs:"Bistró y taberna de cocina estadounidense",website:"https://goosedarien.com/",sourceUrl:"https://goosedarien.com/contact/",checkedOn:'2026-10-23'},
+    {name:"Bodega Taco Bar",cuisine:"Modern Mexican and tacos",cuisineEs:"Cocina mexicana moderna y tacos",website:"https://bodegatacobar.com/",sourceUrl:"https://bodegatacobar.com/locations",checkedOn:'2026-10-23'},
+    {name:"Ten Twenty Post",cuisine:"Seafood, oyster bar and European bistro",cuisineEs:"Mariscos, ostras y bistró europeo",website:"https://www.tentwentypost.com/",sourceUrl:"https://www.tentwentypost.com/",checkedOn:'2026-10-23'},
+    {name:"Post Corner Pizza",cuisine:"Pizza and Italian-American",cuisineEs:"Pizza y cocina italoestadounidense",website:"https://www.postcornerpizza.com/",sourceUrl:"https://www.postcornerpizza.com/",checkedOn:'2026-10-23'},
+    {name:"Rory's Restaurant",cuisine:"American pub and comfort food",cuisineEs:"Pub estadounidense y platos tradicionales",website:"https://www.rorys.net/",sourceUrl:"https://www.rorys.net/",checkedOn:'2026-10-23'},
+  ],
   'ridgefield': [
     {name:"Bailey's Backyard",cuisine:"American farm-to-table",cuisineEs:"Cocina estadounidense de la granja a la mesa",website:"https://baileysbackyard.com/",sourceUrl:"https://baileysbackyard.com/",checkedOn:'2026-10-23'},
     {name:"TerraSole Ristorante",cuisine:"Italian and wood-fired specialties",cuisineEs:"Italiana y especialidades al horno de leña",website:"https://terrasoleridgefield.com/",sourceUrl:"https://terrasoleridgefield.com/contact",checkedOn:'2026-10-23'},
