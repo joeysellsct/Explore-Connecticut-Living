@@ -1,3 +1,4 @@
+import AllTownSpotlight from './AllTownSpotlight';
 import JoeyReviews from './JoeyReviews';
 import JoeyProductionStats from './JoeyProductionStats';
 import {RotatingHeroPhoto,RotatingPhotoTiles} from './RotatingHomepagePhotos';
@@ -98,7 +99,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </div>
     </section>
 
-    <section className="magazine-towns"><div className="magazine-towns-head"><div><span className="eyebrow dark">{es?'GUÍAS DE DESTINOS':'THE CONNECTICUT EDIT'}</span><h2>{es?'Lugares que vale la pena conocer.':'Places worth getting to know.'}</h2><p>{es?'Descubre las comunidades que hacen especial a Connecticut.':'A closer look at the communities that make Connecticut special.'}</p></div><Link href={`/${locale}/towns`} className="meet-bio-link">{es?'Ver los 169 municipios':'Explore all 169 towns'} →</Link></div><div className="magazine-town-grid">{[{name:'West Haven',slug:'west-haven',en:'Shoreline character',es:'Vida junto al mar'},{name:'Milford',slug:'milford',en:'Coastal & connected',es:'Costa y conexiones'},{name:'New Haven',slug:'new-haven',en:'Culture & city life',es:'Cultura y ciudad'},{name:'Branford',slug:'branford',en:'Classic shoreline',es:'Costa tradicional'}].map((town,i)=><Link href={`/${locale}/towns/${town.slug}`} className={`magazine-town-card magazine-town-${i+1}`} key={town.slug}><span className="magazine-town-index">0{i+1} / CONNECTICUT</span><div><small>{es?town.es:town.en}</small><h3>{town.name}</h3><span className="magazine-town-arrow" aria-hidden="true">↗</span></div></Link>)}</div></section>
+    <section className="magazine-towns"><div className="magazine-towns-head"><div><span className="eyebrow dark">{es?'GUÍAS DE DESTINOS':'THE CONNECTICUT EDIT'}</span><h2>{es?'Lugares que vale la pena conocer.':'Places worth getting to know.'}</h2><p>{es?'Los 169 municipios de Connecticut tendrán su momento destacado. Descubre nuevos lugares en cada visita.':'All 169 Connecticut towns get their turn in the spotlight. Browse a new selection each visit.'}</p></div><Link href={`/${locale}/towns`} className="meet-bio-link">{es?'Ver los 169 municipios':'Explore all 169 towns'} →</Link></div><AllTownSpotlight locale={locale} /></section>
 
     <section className="photo-section">
       <div className="photo-heading"><span className="eyebrow dark">{t.photoTag}</span><h2>{t.photoTitle}</h2><p>{t.photoLead}</p></div>
