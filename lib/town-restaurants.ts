@@ -12,6 +12,14 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  // Canton restaurants verified on their own websites 2026-10-23; no ratings or endorsements.
+  'canton': [
+    {"name":"LaSalle Market & Deli","cuisine":"Breakfast, deli sandwiches and market fare","cuisineEs":"Desayunos, sándwiches de deli y platos de mercado","website":"https://lasallemarket.com/","sourceUrl":"https://lasallemarket.com/","checkedOn":"2026-10-23"},
+    {"name":"Crown & Hammer Restaurant & Pub","cuisine":"American pub dining in Collinsville","cuisineEs":"Cocina estadounidense de pub en Collinsville","website":"https://crownandhammer.com/","sourceUrl":"https://crownandhammer.com/hours-location/","checkedOn":"2026-10-23"},
+    {"name":"Mercato Italian Kitchen & Bar","cuisine":"Contemporary Italian dishes and bar","cuisineEs":"Platos italianos contemporáneos y bar","website":"https://www.mercatoitaliankitchen.com/locations/canton","sourceUrl":"https://www.mercatoitaliankitchen.com/locations/canton","checkedOn":"2026-10-23"},
+    {"name":"American Flatbread","cuisine":"Wood-fired flatbread pizzas","cuisineEs":"Pizzas artesanales al horno de leña","website":"https://canton.americanflatbread.com/","sourceUrl":"https://canton.americanflatbread.com/","checkedOn":"2026-10-23"},
+    {"name":"Saybrook Fish House","cuisine":"Seafood and American dining","cuisineEs":"Mariscos y cocina estadounidense","website":"https://www.saybrookfishhousecanton.com/","sourceUrl":"https://www.saybrookfishhousecanton.com/","checkedOn":"2026-10-23"},
+  ],
   // Avon restaurant locations and cuisines verified on restaurant-owned websites 2026-10-23.
   'avon': [
     {"name":"The North House","cuisine":"Modern New England and American dining","cuisineEs":"Cocina moderna de Nueva Inglaterra y estadounidense","website":"https://thenorthhouse.com/","sourceUrl":"https://thenorthhouse.com/","checkedOn":"2026-10-23"},
