@@ -2,6 +2,12 @@
 // These are points of interest, not claims about proximity to a particular home.
 export const townHighlights:Record<string,{en:string;es:string;places:string[]}>= {
 
+ // Sources: https://www.cttrailfinder.com/trails/trail/still-river-greenway ;
+ // https://www.brookfieldct.gov/181/Inland-Wetlands-Commission ;
+ // https://www.brookfieldct.gov/224/Parks-Recreation
+ 'brookfield':{en:'Brookfield offers the Still River Greenway, a paved walking and cycling route with boardwalk sections and views of the river. The town also borders Candlewood Lake and Lake Lillinonah. For prospective homeowners, waterfront and wetland properties deserve extra research: Brookfield requires wetlands review for certain activities near lakes, rivers and wetlands. Check Parks and Recreation for trail and facility information, and the Land Use office before planning work on a property.',es:'Brookfield ofrece Still River Greenway, un sendero pavimentado para caminar y andar en bicicleta con pasarelas y vistas al río. El municipio también limita con Candlewood Lake y Lake Lillinonah. Si buscas vivienda, investiga especialmente los terrenos junto al agua o humedales: Brookfield exige una revisión ambiental para ciertas actividades cerca de lagos, ríos y humedales. Consulta Parques y Recreación para información sobre senderos y la oficina de Uso del Suelo antes de planificar obras.',places:['Still River Greenway','Candlewood Lake','Lake Lillinonah']},
+
+
  // Sources: https://www.eastonct.gov/1714/Parks-and-Fields ;
  // https://www.eastonct.gov/1771/Trails-Pedestrian-Recreation-Open-Space ;
  // https://portal.ct.gov/DEEP/State-Parks/Forests/Centennial-Watershed-State-Forest/Activities
