@@ -1,3 +1,4 @@
+import JoeyProductionStats from './JoeyProductionStats';
 import {RotatingHeroPhoto,RotatingPhotoTiles} from './RotatingHomepagePhotos';
 import Link from 'next/link';
 
@@ -109,6 +110,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </div>
       <div className="guide-art" aria-hidden="true"><span>169</span><small>CONNECTICUT TOWNS</small></div>
     </section>
+    <JoeyProductionStats locale={locale} compact />
     <section className="meet-joey" id="meet-joey">
       <div className="meet-photo"><img src="/headshotnew.png" alt="Joey McVety, Connecticut real estate agent with mygoodagent" loading="lazy" /></div>
       <div className="meet-copy">
