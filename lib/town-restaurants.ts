@@ -11,6 +11,9 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  'brookfield': [
+    {name:"BarNaan",cuisine:"Indian restaurant and cocktail bar",website:"https://barnaanct.com/",sourceUrl:"https://barnaanct.com/",checkedOn:'2026-10-23'},
+  ],
 
   'bethel': [
     {name:"La Zingara",cuisine:"Regional Italian",website:"https://www.lazingara.com/",sourceUrl:"https://lazingara.com/about.php",checkedOn:'2026-10-23'},
