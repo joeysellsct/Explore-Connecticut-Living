@@ -280,3 +280,18 @@ test('Canton has sourced bilingual town, restaurant and municipal guides',()=>{
  const picks=read('lib/town-restaurants.ts').split('export const joeyTopPicks')[1]||'';
  assert.doesNotMatch(picks,/^\s*'canton':/m,'Canton must not appear among Joey personal picks');
 });
+
+
+test('Canton photo gallery has two location-verified Creative Commons attributions',()=>{
+ const photos=read('lib/town-photography.ts');
+ const match=photos.match(/'canton':\s*\[([\s\S]*?)\],/);
+ assert.ok(match,'Canton photo gallery exists');
+ for(const field of ['title','file','credit','license','licenseUrl'])
+  assert.equal((match[1].match(new RegExp('"'+field+'":','g'))||[]).length,2,'Two '+field+' photo fields');
+ for(const file of ['Farmington River Trail bridge over the Farmington River, Collinsville CT.jpg','Canton Historical Museum, Canton CT.jpg'])assert.ok(match[1].includes(file),file);
+ assert.equal((match[1].match(/"license":"CC BY-SA 4.0"/g)||[]).length,2,'Both photos need a verified reuse license');
+ assert.equal((match[1].match(/"credit":"John Phelan"/g)||[]).length,2,'Both photographers must be credited');
+ const page=read('app/[locale]/towns/[slug]/page.tsx');
+ assert.match(page,/photo\.licenseUrl/);
+ assert.match(page,/photo\.credit/);
+});
