@@ -12,6 +12,14 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  // New Canaan restaurant names, towns and cuisines checked against official business websites, 2026-10-23.
+  'new-canaan': [
+    {name:"Elm Restaurant",cuisine:"Seasonal New American",cuisineEs:"Nueva cocina estadounidense de temporada",website:"https://www.elmrestaurant.com/",sourceUrl:"https://www.elmrestaurant.com/about/",checkedOn:'2026-10-23'},
+    {name:"Gates Restaurant & Bar",cuisine:"Modern American comfort food",cuisineEs:"Cocina casera estadounidense moderna",website:"https://gatesrestaurant.com/",sourceUrl:"https://gatesrestaurant.com/",checkedOn:'2026-10-23'},
+    {name:"Solé Restaurant",cuisine:"Italian and Mediterranean",cuisineEs:"Italiana y mediterránea",website:"https://www.zhospitalitygroup.com/sole/home",sourceUrl:"https://www.zhospitalitygroup.com/sole/home",checkedOn:'2026-10-23'},
+    {name:"Farmer's Table",cuisine:"Seasonal farm-to-table American",cuisineEs:"Cocina estadounidense de temporada con productos frescos",website:"https://farmerstablenc.com/",sourceUrl:"https://farmerstablenc.com/contact-us/",checkedOn:'2026-10-23'},
+    {name:"Chef Luis Restaurant",cuisine:"Contemporary global fusion",cuisineEs:"Fusión internacional contemporánea",website:"https://www.chefluis.com/",sourceUrl:"https://www.chefluis.com/",checkedOn:'2026-10-23'},
+  ],
   // Darien restaurant locations and cuisines verified against each business's official site, 2026-10-23.
   'darien': [
     {name:"The Goose",cuisine:"American bistro and tavern",cuisineEs:"Bistró y taberna de cocina estadounidense",website:"https://goosedarien.com/",sourceUrl:"https://goosedarien.com/contact/",checkedOn:'2026-10-23'},
