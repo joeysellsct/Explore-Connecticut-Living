@@ -295,3 +295,19 @@ test('Canton photo gallery has two location-verified Creative Commons attributio
  assert.match(page,/photo\.licenseUrl/);
  assert.match(page,/photo\.credit/);
 });
+
+
+test('town pages expose localized breadcrumb structured data without fabricated reviews',()=>{
+ const page=read('app/[locale]/towns/[slug]/page.tsx');
+ assert.match(page,/const townBreadcrumbs=/);
+ assert.match(page,/'@type':'BreadcrumbList'/);
+ assert.match(page,/itemListElement:/);
+ assert.match(page,/position:1/);
+ assert.match(page,/position:2/);
+ assert.match(page,/position:3/);
+ assert.match(page,/\$\{siteUrl\}\/\$\{locale\}\/towns\/\$\{slug\}/);
+ assert.match(page,/type="application\/ld\+json"/);
+ assert.doesNotMatch(page,/aggregateRating|reviewRating/);
+ assert.match(read('lib/seo.ts'),/alternates:\{canonical:current,languages:/);
+ assert.match(read('app/sitemap.ts'),/connecticutTowns\.map/);
+});
