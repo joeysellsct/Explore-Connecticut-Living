@@ -12,6 +12,7 @@ export type TownRestaurant = {
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
   'brookfield': [
+    {name:"Housaku Asian Fusion",cuisine:"Chinese, Japanese, Thai and sushi",website:"https://www.housakubrookfield.com/",sourceUrl:"https://www.housakubrookfield.com/locations",checkedOn:'2026-10-23'},
     {name:"Hacienda Don Manuel",cuisine:"Mexican",website:"https://www.haciendadonmanuel.com/",sourceUrl:"https://www.haciendadonmanuel.com/contact-us/",checkedOn:'2026-10-23'},
   ],
   'brookfield': [
