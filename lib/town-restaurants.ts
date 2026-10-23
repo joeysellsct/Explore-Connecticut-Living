@@ -12,6 +12,14 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+  // Simsbury restaurant location and cuisine verified on official sites 2026-10-23.
+  'simsbury': [
+    {"name":"Metro Bis","cuisine":"Contemporary American bistro","cuisineEs":"Bistró de cocina estadounidense contemporánea","website":"https://metrobis.com/","sourceUrl":"https://metrobis.com/","checkedOn":"2026-10-23"},
+    {"name":"Abigail's Grille & Wine Bar","cuisine":"Modern American and continental dining","cuisineEs":"Cocina estadounidense moderna y continental","website":"https://abigailsgrill.com/","sourceUrl":"https://abigailsgrill.com/","checkedOn":"2026-10-23"},
+    {"name":"Old Well Tavern","cuisine":"Casual American tavern and comfort food","cuisineEs":"Taberna informal de cocina estadounidense y platos caseros","website":"https://oldwelltavern.com/","sourceUrl":"https://oldwelltavern.com/","checkedOn":"2026-10-23"},
+    {"name":"Maple Tree Cafe","cuisine":"Italian dishes, pasta and burgers","cuisineEs":"Platos italianos, pastas y hamburguesas","website":"https://www.mapletreecafe.com/","sourceUrl":"https://www.mapletreecafe.com/","checkedOn":"2026-10-23"},
+    {"name":"Pop Over Eatery","cuisine":"Breakfast, brunch and sandwiches","cuisineEs":"Desayunos, brunch y sándwiches","website":"https://popovereatery.toast.site/visit-us","sourceUrl":"https://popovereatery.toast.site/visit-us","checkedOn":"2026-10-23"},
+  ],
   // Farmington locations and cuisines checked on restaurant-owned websites 2026-10-23.
   'farmington': [
     {"name":"Fork & Fire","cuisine":"Contemporary American restaurant and bar","cuisineEs":"Restaurante y bar de cocina estadounidense contemporánea","website":"https://www.forkandfire.net/","sourceUrl":"https://www.forkandfire.net/","checkedOn":"2026-10-23"},
