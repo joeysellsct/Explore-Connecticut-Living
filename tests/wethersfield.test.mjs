@@ -4,9 +4,14 @@ import { readFileSync } from 'node:fs';
 
 const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8');
 const townBlock = (source, slug, opener, closer) => {
-  const match = source.match(new RegExp("'"+slug+"':\\s*\\\"+opener+"([\\s\\S]*?)\\\"+closer+","));
-  assert.ok(match, slug + ' must have a dedicated entry');
-  return match[1];
+  const key = "'" + slug + "':";
+  const keyAt = source.indexOf(key);
+  assert.ok(keyAt >= 0, slug + ' must have a dedicated entry');
+  const start = source.indexOf(opener, keyAt + key.length);
+  assert.ok(start >= 0, 'Missing entry opening delimiter');
+  const end = source.indexOf(closer, start + 1);
+  assert.ok(end > start, 'Missing entry closing delimiter');
+  return source.slice(start + 1, end);
 };
 
 test('Wethersfield has distinct English and Spanish sourced editorial content', () => {
