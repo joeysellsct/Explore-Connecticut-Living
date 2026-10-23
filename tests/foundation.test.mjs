@@ -97,3 +97,22 @@ test('New Canaan bilingual guide and five restaurant listings are sourced',()=>{
  assert.equal((listings[1].match(/cuisineEs:/g)||[]).length,5);
  for(const name of ['Elm Restaurant','Gates Restaurant & Bar','Solé Restaurant',"Farmer's Table",'Chef Luis Restaurant'])assert.ok(listings[1].includes(name),name);
 });
+
+
+test('Wilton and Redding guides and restaurant lists have verified bilingual coverage',()=>{
+ const guides=read('lib/town-highlights.ts');
+ const restaurants=read('lib/town-restaurants.ts');
+ for(const slug of ['wilton','redding']){
+  const guideLine=guides.split('\n').find(line=>line.includes("'"+slug+"':{"));
+  assert.ok(guideLine,slug+' has a town-specific guide');
+  for(const field of ['"en":','"es":','"places":'])assert.ok(guideLine.includes(field),slug+' missing '+field);
+  const match=restaurants.match(new RegExp("'"+slug+"':\\s*\\[([\\s\\S]*?)\\],"));
+  assert.ok(match,slug+' restaurant listings exist');
+  const entries=match[1];
+  assert.equal((entries.match(/"?checkedOn"?:/g)||[]).length,5,slug+' has five sourced listings');
+  assert.equal((entries.match(/"?cuisineEs"?:/g)||[]).length,5,slug+' has five Spanish cuisine descriptions');
+  assert.equal((entries.match(/"?sourceUrl"?:/g)||[]).length,5,slug+' has five source URLs');
+ }
+ assert.match(guides,/merwin-meadows-pond-and-beach-closed-2025-season/);
+ assert.match(guides,/ctparks\.com\/parks\/putnam-memorial-state-park/);
+});
