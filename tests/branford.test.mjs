@@ -49,3 +49,31 @@ test('Branford additions preserve staging SEO, housing and affiliate safeguards'
   const restaurants = read('lib/town-restaurants.ts');
   assert.match(restaurants.split('export const joeyTopPicks')[1] || '', /'branford'/);
 });
+
+test('Branford restaurant directory has five sourced bilingual entries without invented ratings', () => {
+  const source = read('lib/town-restaurants.ts');
+  const match = source.match(/'branford':\s*(\[[\s\S]*?\]),\n  'orange':/);
+  assert.ok(match, 'Branford restaurant directory should exist');
+  const restaurants = JSON.parse(match[1]);
+  assert.equal(restaurants.length, 5);
+  assert.equal(new Set(restaurants.map(restaurant => restaurant.name)).size, 5);
+  for (const restaurant of restaurants) {
+    assert.ok(restaurant.cuisine && restaurant.cuisineEs && restaurant.sourceUrl && restaurant.checkedOn);
+    assert.ok(!('rating' in restaurant), 'Ratings require verified provenance');
+  }
+  assert.ok(restaurants.some(restaurant => restaurant.name === 'Rosso Vino'));
+});
+
+test('Branford photo licenses and attribution are recorded for two town-specific images', () => {
+  const source = read('lib/town-photography.ts');
+  const match = source.match(/'branford':\s*(\[[\s\S]*?\]),\n/);
+  assert.ok(match, 'Branford photo gallery should exist');
+  const photos = JSON.parse(match[1]);
+  assert.equal(photos.length, 2);
+  for (const photo of photos) {
+    assert.ok(photo.title && photo.titleEs && photo.credit && photo.file);
+    assert.equal(photo.license, 'CC BY-SA 4.0');
+    assert.equal(photo.licenseUrl, 'https://creativecommons.org/licenses/by-sa/4.0/');
+  }
+  assert.ok(photos.some(photo => photo.file === 'Stony creek branford.jpg'));
+});
