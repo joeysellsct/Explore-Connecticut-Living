@@ -2,6 +2,20 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Milford city departments, property research and state park checked 2026-10-24 on official sources; use property-specific records before relying on any estimate.
+ 'milford': [
+  {en:"City of Milford official website",es:"Sitio web oficial de la ciudad de Milford",url:"https://www.milfordct.us/"},
+  {en:"Assessor: assessments, property cards and revaluation",es:"Tasador: tasaciones, fichas de propiedades y revaluación",url:"https://milfordct.us/210/Assessors-Office"},
+  {en:"Milford property assessment map search",es:"Búsqueda de mapas y tasaciones de propiedades de Milford",url:"https://milford.mapxpress.net/"},
+  {en:"City departments: tax collector, clerk and building inspection",es:"Departamentos municipales: impuestos, secretaría e inspección de edificios",url:"https://www.milfordct.us/149/Departments"},
+  {en:"City Clerk land records and online indexed records (via site map)",es:"Registros de escrituras y documentos indexados de la secretaría municipal (mapa del sitio)",url:"https://www.milfordct.us/sitemap"},
+  {en:"Planning and Zoning: permits, land use and flood-zone maps",es:"Planificación y zonificación: permisos, uso del suelo y mapas de inundación",url:"https://milfordct.us/540/Planning-Zoning"},
+  {en:"City maps, school district maps and resident beach parking (via site map)",es:"Mapas municipales, distritos escolares y estacionamiento de residentes en playas (mapa del sitio)",url:"https://milfordct.us/sitemap"},
+  {en:"Tax collector FAQs: real estate tax installments and sewer bills",es:"Preguntas de impuestos: cuotas inmobiliarias y facturas de alcantarillado",url:"https://www.milfordct.us/faq"},
+  {en:"Milford public works and wastewater department contacts",es:"Contactos de obras públicas y aguas residuales de Milford",url:"https://www.milfordct.us/m/directory"},
+  {en:"Silver Sands State Park: access, trails and visitor rules",es:"Parque estatal Silver Sands: acceso, senderos y normas de visita",url:"https://ctparks.com/parks/silver-sands-state-park"},
+  {en:"Connecticut park transit connections and current alternatives",es:"Conexiones de transporte a parques estatales y alternativas actuales",url:"https://ctparks.com/parkconnect"}
+ ],
  // New Haven source pages checked 2026-10-24 against official City of New Haven and CTtransit websites. Links are research starting points; verify address-specific records and current policies directly.
  'new-haven': [
   {en:"City of New Haven official website",es:"Sitio web oficial de la ciudad de New Haven",url:"https://www.newhavenct.gov/"},
