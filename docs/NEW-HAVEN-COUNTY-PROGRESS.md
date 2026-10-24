@@ -7,7 +7,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **13/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **9/27**.
+- Dedicated official municipal/moving links: **10/27**.
 - Town-specific photo gallery data: **9/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
@@ -30,7 +30,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | New Haven | Yes | Yes | Yes | Yes | Not certified |
 | North Branford | No | No | No | No | Not certified |
 | North Haven | Yes | No | No | No | Not certified |
-| Orange | Yes | Yes | No | No | Not certified |
+| Orange | Yes | Yes | Yes | No | Not certified |
 | Oxford | No | No | No | No | Not certified |
 | Prospect | No | No | No | No | Not certified |
 | Seymour | Yes | Yes | No | No | Not certified |
@@ -93,3 +93,11 @@ Do not infer that GitHub Actions content tests prove a full Next.js build or Clo
 - Rechecked five restaurants against their own sites and added bilingual cuisine descriptions: https://www.cafeallegre.com/ ; https://www.amatospizzapasta.com/ ; https://barbouchee.com/ ; https://thewharfmadison.com/ ; https://donahuesmadisonbeachgrille.com/ . All are neutral directory entries, not Joey's Top Picks.
 - Added three Madison-specific photos with bilingual captions, creator credits and Commons licenses: [Madison Green (SveaA; CC BY-SA 3.0)](https://commons.wikimedia.org/wiki/File:Madison_Green,_Connecticut.JPG), [Meigs Point shoreline (Karl Thomas Moore; CC BY-SA 4.0)](https://commons.wikimedia.org/wiki/File:Hammonasset_Beach_State_Park.jpg), [Hammonasset salt-marsh footbridge (Jllm06; CC BY-SA 4.0)](https://commons.wikimedia.org/wiki/File:Hammonasset_Beach_State_Park_-_foot_bridge.jpg).
 - Added `tests/madison.test.mjs` for source-code regression checks. **Not certified:** full Next.js build, live English/Spanish page rendering, photography delivery, mobile accessibility, rendered SEO/canonical/hreflang/sitemap, affiliate and Equal Housing display, and Cloudflare deployment still need independent checks.
+
+## Orange follow-up (2026-10-24)
+
+- Added 11 bilingual links to official Orange municipal departments, the permit portal and town site map. The Tax Collector explicitly publishes **27.40 mills for July 2026 real-estate bills (October 2025 Grand List)**: https://www.orange-ct.gov/206/Tax-Collector . Confirm the assessment, exemptions and actual bill for the property.
+- Expanded the original English/Spanish guide with High Plains Community Center, Fred Wolfe Park, PEZ Visitor Center, and address-specific zoning, permits, land records, drainage, flood and utility due diligence. Sources include https://www.orange-ct.gov/153/Assessor , https://www.orange-ct.gov/158/Building-Department and https://www.orange-ct.gov/167/Public-Works .
+- Added regression checks for the Orange guide, eleven distinct bilingual resources and unique town keys in restaurant data to prevent a repeat of the Milford TypeScript build failure.
+- Orange restaurant listings still require a fresh source/bilingual audit and town-specific photography is missing. Live English/Spanish page render, mobile accessibility, metadata, disclosures, full build and Cloudflare rollout still require independent verification. Orange is **not** 100% certified.
+- A separate Cloudflare Workers production-build job was added to GitHub Actions after the duplicate Milford key was removed. Check the job's actual conclusion; do not equate passing content tests with a successful production build or deployment.
