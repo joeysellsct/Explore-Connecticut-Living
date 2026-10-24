@@ -2,6 +2,20 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Guilford links checked 2026-10-24 against the official Guilford municipal site navigation and linked portals; GIS is not a survey. Verify tax bills, utility connections and permits by parcel.
+ 'guilford': [
+  {"en":"Town of Guilford: municipal departments and resident services","es":"Municipio de Guilford: departamentos y servicios para residentes","url":"https://www.guilfordct.gov/"},
+  {"en":"Assessor: property valuation, 2026 revaluation and assessment records","es":"Tasador: valoración, reevaluación de 2026 y registros de tasación","url":"https://www.guilfordct.gov/town_departments/assessor/index.php"},
+  {"en":"Tax Collector: tax bills, payment guidance and parcel-specific charges","es":"Recaudación de impuestos: facturas, pagos y cargos por parcela","url":"https://www.guilfordct.gov/town_departments/tax_collector/index.php"},
+  {"en":"Town Clerk: deeds, recorded land documents and title research","es":"Secretaría municipal: escrituras, documentos registrados y búsqueda de títulos","url":"https://www.guilfordct.gov/town_departments/town_clerk/index.php"},
+  {"en":"Building Department: permits, inspections and permit fees","es":"Departamento de construcción: permisos, inspecciones y tarifas","url":"https://www.guilfordct.gov/town_departments/building_department/index.php"},
+  {"en":"Planning and Zoning: permitted uses, regulations and applications","es":"Planificación y zonificación: usos permitidos, normas y solicitudes","url":"https://www.guilfordct.gov/town_departments/planning___zoning/index.php"},
+  {"en":"Guilford GIS: parcel maps and land-use research (not a legal survey)","es":"GIS de Guilford: mapas de parcelas y uso del suelo (no es un plano legal)","url":"https://guilford.mapxpress.net/portal.asp"},
+  {"en":"Inland Wetlands: regulated areas and application requirements","es":"Humedales interiores: áreas reguladas y requisitos de solicitudes","url":"https://www.guilfordct.gov/town_departments/inland_wetlands_natural_resources/index.php"},
+  {"en":"Health Department: septic-system records and inspection guidance","es":"Departamento de Salud: registros de sistemas sépticos y guía de inspección","url":"https://www.guilfordct.gov/town_departments/health_department/index.php"},
+  {"en":"Engineering Department: flood hazards, drainage and public works permits","es":"Ingeniería municipal: riesgo de inundación, drenaje y permisos de obras","url":"https://www.guilfordct.gov/town_departments/engineering_department/index.php"},
+  {"en":"Guilford Parks and Recreation: facilities, activities and resident programs","es":"Parques y Recreación de Guilford: instalaciones, actividades y programas","url":"https://www.guilfordparkrec.com/"},
+ ],
  // Hamden links checked 2026-10-24 against Town of Hamden, CT Parks, RWA, GNHWPCA and Eli Whitney Museum sources. Verify parcel-level service, taxes and rules with each agency.
  'hamden': [
   {"en":"Town of Hamden: official municipal services","es":"Municipio de Hamden: servicios oficiales","url":"https://www.hamden.com/"},
