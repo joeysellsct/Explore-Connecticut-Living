@@ -45,6 +45,7 @@ test('Rocky Hill has official moving resources and two licensed, credited local 
   }
   const photos = townEntry('lib/town-photography.ts', 'rocky-hill', '[', ']');
   assert.equal((photos.match(/"file":/g) || []).length, 2);
+  assert.equal((photos.match(/"titleEs":/g) || []).length, 2);
   assert.ok(photos.includes('Daderot') && photos.includes('Denimadept'));
   assert.equal((photos.match(/"license":\s*"CC BY-SA 3.0"/g) || []).length, 2);
   assert.ok(photos.includes('2007'));
@@ -57,6 +58,7 @@ test('Town template and sitemap retain bilingual town coverage', () => {
   assert.ok(template.includes('townRestaurants[slug]'));
   assert.ok(template.includes('townOfficialLinks[slug]'));
   assert.ok(template.includes('townPhotography[slug]'));
+  assert.ok(template.includes('photo.titleEs||photo.title'));
   assert.ok(template.includes('relatedTowns.map(other=>'));
   assert.ok(template.includes('href={`/${locale}/towns/${other.slug}`}'));
   assert.ok(template.includes('countyTowns=connecticutTowns.filter(t=>t.county===town.county)'));
