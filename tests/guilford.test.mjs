@@ -11,11 +11,11 @@ const arrayFor = (path, slug) => {
   const left = source.indexOf('[', start + anchor.length);
   const right = source.indexOf('],', left);
   assert.ok(left > start && right > left, 'Missing array for ' + slug + ' in ' + path);
-  return JSON.parse(source.slice(left, right + 1).replace(/,\\s*]/g, ']'));
+  return JSON.parse(source.slice(left, right + 1).replace(/,\s*]/g, ']'));
 };
 
 test('Guilford has a substantive English and Spanish town profile', () => {
-  const match = read('lib/town-highlights.ts').match(/^ 'guilford':(\\{.*\\}),$/m);
+  const match = read('lib/town-highlights.ts').match(/^ 'guilford':(\{.*\}),$/m);
   assert.ok(match, 'Guilford town guide must be present');
   const guide = JSON.parse(match[1]);
   assert.ok(guide.en.length > 900 && guide.es.length > 900);
