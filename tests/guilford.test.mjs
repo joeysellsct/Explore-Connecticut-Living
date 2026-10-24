@@ -64,7 +64,7 @@ test('Guilford town rendering keeps shared SEO, resources and staging safeguards
   }
   const seo = read('lib/seo.ts');
   assert.ok(seo.includes("'en-US'") && seo.includes("'es-US'"));
-  assert.ok(read('app/[locale]/layout.tsx').includes('index:false,follow:false'));
+  assert.ok(read('app/[locale]/layout.tsx').includes('robots:{index:allowIndexing,follow:allowIndexing}'));
   assert.ok(read('app/robots.ts').includes("disallow:'/'"));
   const resources = read('lib/moving-resources.ts');
   assert.ok(resources.includes('frontier.com/ftr-buy'));
