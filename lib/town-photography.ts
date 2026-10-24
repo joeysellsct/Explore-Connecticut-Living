@@ -2,6 +2,15 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Madison Commons file identity, Madison location, creator and CC BY-SA licenses verified 2026-10-24:
+ // https://commons.wikimedia.org/wiki/File:Madison_Green,_Connecticut.JPG
+ // https://commons.wikimedia.org/wiki/File:Hammonasset_Beach_State_Park.jpg
+ // https://commons.wikimedia.org/wiki/File:Hammonasset_Beach_State_Park_-_foot_bridge.jpg
+ 'madison': [
+  {"title":"Madison Green Historic District (photographed October 2012)","titleEs":"Distrito histórico Madison Green (fotografía de octubre de 2012)","file":"Madison Green, Connecticut.JPG","credit":"SveaA","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Meigs Point shoreline at Hammonasset Beach State Park (photographed August 2016)","titleEs":"Costa de Meigs Point en el Parque Estatal Hammonasset Beach (fotografía de agosto de 2016)","file":"Hammonasset Beach State Park.jpg","credit":"Karl Thomas Moore","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Footbridge over the eastern salt marsh at Hammonasset Beach State Park (photographed February 2017)","titleEs":"Puente peatonal sobre la marisma oriental del Parque Estatal Hammonasset Beach (fotografía de febrero de 2017)","file":"Hammonasset Beach State Park - foot bridge.jpg","credit":"Jllm06","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
  // Guilford location, photographer and reuse license verified against Commons file pages 2026-10-24:
  // https://commons.wikimedia.org/wiki/File:The_Guilford_Town_Green_in_Connecticut.jpg
  // https://commons.wikimedia.org/wiki/File:Green_Rectangle_Trail_passing_through_Rock_Cave_near_Moose_Hill_Road_in_Westwoods,_Guilford,_Connecticut.jpg
