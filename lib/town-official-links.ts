@@ -2,6 +2,27 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Derby sources checked 2026-10-24 against derbyct.gov city department pages, CT DEEP and CTDOT.
+ // City Tax Collector confirms FY 2026–27 real-estate mill rate 38.44 and separate motor-vehicle rate 32.46.
+ // WPCA bills sewer use and capital charges separately; water availability and all utilities must be confirmed by address.
+ // CTDOT confirms Waterbury Branch bus substitution July 20, 2026–May 31, 2027.
+ 'derby': [
+  {"en":"City of Derby: official city services and department directory","es":"Ciudad de Derby: servicios y directorio de departamentos municipales","url":"https://www.derbyct.gov/city-hall"},
+  {"en":"Tax Assessor: property valuation, 2025 revaluation and assessment appeals","es":"Tasador: valoración de inmuebles, reevaluación de 2025 y apelaciones","url":"https://www.derbyct.gov/tax-assessor"},
+  {"en":"Tax Collector: FY 2026–27 real estate rate 38.44 mills, separate vehicle rate 32.46; verify each bill","es":"Recaudación: tasa inmobiliaria 2026–27 de 38,44 mills y tasa vehicular distinta de 32,46; verifica cada factura","url":"https://www.derbyct.gov/tax-collector"},
+  {"en":"City Clerk: deeds, land records, recording fees and online records access","es":"Secretaría municipal: escrituras, registros de tierras, tarifas y consulta en línea","url":"https://www.derbyct.gov/land-records-fees"},
+  {"en":"Building Department: permits, inspections, zoning and occupancy rules","es":"Departamento de Construcción: permisos, inspecciones, zonificación y normas de ocupación","url":"https://www.derbyct.gov/building-department"},
+  {"en":"Derby city map: parks, civic buildings and municipal facilities; not a parcel boundary survey","es":"Mapa municipal de Derby: parques, edificios públicos e instalaciones; no sustituye un deslinde","url":"https://www.derbyct.gov/maps"},
+  {"en":"City budgets and audits: official FY 2026–27 adopted budget and mill-rate history","es":"Presupuestos y auditorías: presupuesto aprobado 2026–27 e historial de tasas tributarias","url":"https://www.derbyct.gov/BudgetsandAudits"},
+  {"en":"Water Pollution Control Authority: sewer connections, usage and capital fees; confirm service for each address","es":"Autoridad de Aguas Residuales: conexiones, cargos por uso y capital; confirma el servicio por dirección","url":"https://www.derbyct.gov/water-pollution-control-authority"},
+  {"en":"Regional Water Authority information from Derby: confirm water supplier and connection at the address","es":"Información de la Autoridad Regional del Agua: confirma proveedor y conexión de cada vivienda","url":"https://www.derbyct.gov/regional-water-authority"},
+  {"en":"Public Works: city streets, drainage, flood infrastructure and municipal maintenance","es":"Obras Públicas: calles, drenaje, infraestructura contra inundaciones y mantenimiento","url":"https://www.derbyct.gov/public-works"},
+  {"en":"City services: sanitation, recycling, parks and local transportation resources","es":"Servicios municipales: basura, reciclaje, parques y transporte local","url":"https://www.derbyct.gov/services"},
+  {"en":"Parks and Recreation: Osbornedale State Park, Witek Memorial Park and community programs","es":"Parques y Recreación: Osbornedale, Witek Memorial Park y programas comunitarios","url":"https://www.derbyct.gov/parks-recreation"},
+  {"en":"Derby Greenway: city trail information along the Naugatuck and Housatonic river area","es":"Sendero Derby Greenway: información municipal del recorrido en la zona de los ríos Naugatuck y Housatonic","url":"https://www.derbyct.gov/maps/location/DerbyGreenway"},
+  {"en":"Connecticut DEEP: Kellogg Environmental Center and Osbornedale State Park visitor information","es":"CT DEEP: centro ambiental Kellogg y visitas al parque estatal Osbornedale","url":"https://portal.ct.gov/deep/education/kellogg/kellogg-environmental-center-directions-and-contact-information"},
+  {"en":"CTDOT: Derby–Shelton Waterbury Branch trains replaced by buses July 20, 2026–May 31, 2027; check live service","es":"CTDOT: autobuses sustituyen trenes de la línea Waterbury en Derby–Shelton del 20 de julio de 2026 al 31 de mayo de 2027; verifica avisos actuales","url":"https://portal.ct.gov/dot/ctdot-press-releases/2026/substitute-busing-wbl-july-2026-through-may-2027"},
+ ],
  // Ansonia sources checked 2026-10-24 against city department pages, CT OPM, CTDOT and CTtransit.
  // FY2027 real-property rate 29.46 mills cross-checked with https://hub.ccm-ct.org/community/ansonia/ .
  // City lists Regional Water Authority for water inquiries and Aquarion for sewer operations/billing; service is address-specific.
