@@ -41,3 +41,36 @@ test('No duplicate town keys in restaurant directory, including Milford', () => 
   assert.equal(keys.length, new Set(keys).size, 'Duplicate town keys break the production TypeScript build');
   assert.equal(keys.filter(x => x === 'milford').length, 1);
 });
+
+const townArray = (path, slug) => {
+  const source = read(path);
+  const anchor = "'" + slug + "': [";
+  const start = source.indexOf(anchor);
+  assert.ok(start >= 0, 'Missing ' + slug + ' in ' + path);
+  const left = source.indexOf('[', start + anchor.length - 1);
+  const right = source.indexOf('],', left);
+  assert.ok(right > left);
+  return JSON.parse(source.slice(left, right + 1).replace(/,\\s*]/g, ']'));
+};
+
+test('Orange has five source-checked bilingual restaurants without fabricated ratings', () => {
+  const restaurants = townArray('lib/town-restaurants.ts', 'orange');
+  assert.equal(restaurants.length, 5);
+  assert.equal(new Set(restaurants.map(x => x.name)).size, 5);
+  for (const item of restaurants) {
+    assert.ok(item.cuisine && item.cuisineEs && item.website && item.sourceUrl);
+    assert.equal(item.checkedOn, '2026-10-24');
+    assert.equal(item.rating, undefined);
+    assert.equal(item.reviewCount, undefined);
+  }
+});
+
+test('Orange has three location-specific Commons photos with bilingual captions and credits', () => {
+  const photos = townArray('lib/town-photography.ts', 'orange');
+  assert.equal(photos.length, 3);
+  assert.equal(new Set(photos.map(x => x.file)).size, 3);
+  for (const photo of photos) {
+    assert.ok(photo.title && photo.titleEs && photo.credit && photo.license);
+    assert.ok(photo.licenseUrl.startsWith('https://creativecommons.org/'));
+  }
+});
