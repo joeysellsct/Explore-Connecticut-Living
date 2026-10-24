@@ -1,0 +1,27 @@
+# Explore Connecticut Living: deferred verification and buildout work
+
+This file tracks specific blockers for incremental hourly town-profile work. A blocker must **not** stop unrelated town edits. Re-check a deferred item on a later run, and update or remove it only after verification.
+
+## Open items (checked 2026-10-23, America/New_York)
+
+| Item | Affected scope | Exact blocker | Safe next action |
+| --- | --- | --- | --- |
+| Full local test suite and build | Entire repository; most recently Manchester | The automation's container cannot resolve `github.com` during `git clone` (`Could not resolve host: github.com`). It therefore could not obtain the repository locally for `npm test`, `npm run lint` or `npm run build`. | Retry clone once on a future run; if DNS still fails, use the GitHub connector to verify changed blobs, run content assertions against fetched files, and continue with another town. |
+| GitHub Actions result | `.github/workflows/verify.yml` and `tests/manchester.test.mjs` | Workflow added to `main`, but GitHub Actions reported zero workflow runs at the first check; no CI pass can yet be claimed. | Recheck Actions runs and commit statuses. If none appears, check repository Actions settings/permissions through supported interfaces; do not invent a green build. |
+| Rendered-page audit | Manchester (`/en/towns/manchester`, `/es/towns/manchester`) | No successful live staging render was verified in this run. Metadata, hreflang, sitemap, image loading and layout have only been inspected in source. | Verify staging URL, rendered titles/descriptions, canonicals, language alternates, robots noindex/disallow and mobile image presentation when accessible. |
+| Photo delivery | `lib/town-photography.ts`, Manchester | Three Commons file pages confirm locations, authors and licenses, but live image redirects and rendering have not been tested on staging. | Verify actual rendered images and attribution; preserve source/license links. |
+
+## Editorial safeguards
+
+- Never mark a town 100% complete until content, sources, bilingual copy, photographs, metadata, sitemap, legal notices and live rendering are checked.
+- Keep staging noindex and robots disallow until explicitly authorized for public indexing.
+- Preserve the Equal Housing Opportunity logo and disclosure, existing affiliate links/disclosures, legal text and bilingual navigation.
+- Joey's only approved personal restaurant picks are Zuppardi's (West Haven), Rosso Vino (Branford), and Fuoco (Cheshire). Other restaurant listings are neutral editorial suggestions, not endorsements.
+- Avoid retry loops: refresh branch head and file blob SHA, retry transient conflicts a limited number of times, then record the specific failure and work on another town.
+
+## Manchester source ledger (2026-10-23)
+
+- Attractions and visitor rules: official Manchester parks directory, Charter Oak Park page, Wickham Park website, Lutz Children's Museum website, Manchester historical information.
+- Municipal research: official Manchester assessment/tax search, Town Clerk land records, Building Inspection Division, Planning and Economic Development.
+- Restaurants: official sites for The Main Pub, Trattoria Toscana, Mulberry Street Pizza, Cafe Aura, and The Hollow at Manchester Country Club.
+- Photos: Wikimedia Commons file pages for `Main Street, Manchester CT.jpg` (John Phelan, CC BY-SA 3.0), `Case Pond Manchester Connecticut.jpg` (Morrowlong, CC BY-SA 4.0), and `Cheney Rail Trail bridge over Bigelow Brook, Manchester CT.jpg` (John Phelan, CC BY-SA 4.0).
