@@ -2,6 +2,16 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Ansonia-specific Commons images, locations, photographers and licenses checked 2026-10-24:
+ // https://commons.wikimedia.org/wiki/File:MainStreetAnsoniaCT.jpg
+ // https://commons.wikimedia.org/wiki/File:Ansonia_Nature_and_Recreation_Center_-_building.jpg
+ // https://commons.wikimedia.org/wiki/File:AnsoniaCT_PublicLibrary.jpg
+ // Historical photographs (2010–2017) are not evidence of current property or visitor conditions.
+ 'ansonia': [
+  {"title":"Main Street in Ansonia's historic downtown (photographed 2010)","titleEs":"Main Street en el centro histórico de Ansonia (fotografía de 2010)","file":"MainStreetAnsoniaCT.jpg","credit":"Jerry Dougherty","license":"CC BY 2.5","licenseUrl":"https://creativecommons.org/licenses/by/2.5/"},
+  {"title":"Ansonia Nature and Recreation Center visitor building (photographed July 2011)","titleEs":"Edificio de visitantes del Centro de Naturaleza y Recreación de Ansonia (fotografía de julio de 2011)","file":"Ansonia Nature and Recreation Center - building.jpg","credit":"Jllm06","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Ansonia Public Library historic building (photographed October 2017)","titleEs":"Edificio histórico de la Biblioteca Pública de Ansonia (fotografía de octubre de 2017)","file":"AnsoniaCT PublicLibrary.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
  // Orange, Connecticut Commons files and reuse terms verified 2026-10-24:
  // https://commons.wikimedia.org/wiki/File:Orange_CT_town_hall.jpg
  // https://commons.wikimedia.org/wiki/File:Pez_Visitor%27s_Center_208.JPG
