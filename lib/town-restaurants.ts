@@ -12,6 +12,49 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Glastonbury businesses and locations checked on official restaurant websites 2026-10-23; editorial listings, not Joey personal picks.
+ 'glastonbury': [
+  {
+    "name": "J. Gilbert's Wood-Fired Steaks & Seafood",
+    "cuisine": "Wood-fired steakhouse and seafood",
+    "cuisineEs": "Restaurante de carnes a la leña y mariscos",
+    "website": "https://www.jgilberts.com/location/jgilberts-glastonbury/",
+    "sourceUrl": "https://www.jgilberts.com/location/jgilberts-glastonbury/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Max Fish",
+    "cuisine": "Seafood and raw bar with additional American dishes",
+    "cuisineEs": "Mariscos y barra de ostras con otros platos estadounidenses",
+    "website": "https://www.maxfishct.com/",
+    "sourceUrl": "https://www.maxfishct.com/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Bricco Trattoria",
+    "cuisine": "Rustic Italian cooking and wood-fired pizza",
+    "cuisineEs": "Cocina italiana rústica y pizza al horno de leña",
+    "website": "https://billygrant.com/",
+    "sourceUrl": "https://billygrant.com/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Sayulita",
+    "cuisine": "Mexican-inspired restaurant in South Glastonbury",
+    "cuisineEs": "Restaurante de inspiración mexicana en South Glastonbury",
+    "website": "https://www.cantinasayulita.com/",
+    "sourceUrl": "https://www.cantinasayulita.com/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Plan b Glastonbury",
+    "cuisine": "American burgers and pub-style dishes",
+    "cuisineEs": "Hamburguesas estadounidenses y platos de bar",
+    "website": "https://burgersbeerbourbon.com/glastonbury/",
+    "sourceUrl": "https://burgersbeerbourbon.com/glastonbury/",
+    "checkedOn": "2026-10-23"
+  }
+],
  // Rocky Hill restaurant locations and cuisines verified 2026-10-23 against official restaurant websites; not Joey personal picks.
  'rocky-hill': [
   {
