@@ -71,7 +71,7 @@ test('East Haven custom layout actually renders the new town data', () => {
   assert.ok(page.includes('photo.licenseUrl'));
   assert.ok(page.includes('townRestaurants[slug].map'));
   assert.ok(page.includes('TownMovingResources'));
-  assert.ok(read('app/[locale]/layout.tsx').includes('index:false,follow:false'));
+  assert.ok(read('app/[locale]/layout.tsx').includes('robots:{index:allowIndexing,follow:allowIndexing}'));
   assert.ok(read('app/robots.ts').includes("disallow:'/'"));
   const resources = read('lib/moving-resources.ts');
   assert.ok(resources.includes('frontier.com/ftr-buy'));
