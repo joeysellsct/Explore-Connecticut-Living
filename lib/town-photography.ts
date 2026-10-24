@@ -2,6 +2,16 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Guilford location, photographer and reuse license verified against Commons file pages 2026-10-24:
+ // https://commons.wikimedia.org/wiki/File:The_Guilford_Town_Green_in_Connecticut.jpg
+ // https://commons.wikimedia.org/wiki/File:Green_Rectangle_Trail_passing_through_Rock_Cave_near_Moose_Hill_Road_in_Westwoods,_Guilford,_Connecticut.jpg
+ // https://commons.wikimedia.org/wiki/File:GuilfordCT_DudleytownHD_2.jpg
+ // Cropping and live image delivery still require rendered-page QA.
+ 'guilford': [
+  {"title":"Guilford Town Green in the historic village center (photographed 2025)","titleEs":"Guilford Green en el centro histórico (fotografía de 2025)","file":"The Guilford Town Green in Connecticut.jpg","credit":"Fergo22","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Rock Cave along the Green Rectangle Trail in Westwoods Preserve (photographed 2015)","titleEs":"Rock Cave en el sendero Green Rectangle de Westwoods Preserve (fotografía de 2015)","file":"Green Rectangle Trail passing through Rock Cave near Moose Hill Road in Westwoods, Guilford, Connecticut.jpg","credit":"Morrowlong","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Dudleytown Historic District in Guilford (photographed 2018)","titleEs":"Distrito histórico de Dudleytown en Guilford (fotografía de 2018)","file":"GuilfordCT DudleytownHD 2.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
  // Hamden image identity, location, author and license checked on Commons 2026-10-24:
  // https://commons.wikimedia.org/wiki/File:Hamden,_Connecticut_town_hall_and_sign.jpg
  // https://commons.wikimedia.org/wiki/File:Sleeping_Giant_State_Park,_Hamden,_Connecticut_(54512327437).jpg
