@@ -68,7 +68,7 @@ test('Cheshire edits preserve sitewide legal, staging, and affiliate protections
   assert.match(page, /townOfficialLinks\[slug\]\.map/);
   assert.match(page, /townPhotography\[slug\]\.map/);
   assert.match(page, /localizedSeo\(locale,/);
-  assert.match(read('app/[locale]/layout.tsx'), /index:false,follow:false/);
+  assert.match(read('app/[locale]/layout.tsx'), /robots:\{index:allowIndexing,follow:allowIndexing\}/);
   assert.ok(read('app/robots.ts').includes("disallow:'/'"));
   const resources = read('lib/moving-resources.ts');
   assert.ok(resources.includes('frontier.com/ftr-buy'));
