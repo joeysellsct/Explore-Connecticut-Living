@@ -418,12 +418,13 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {"name":"Rawa","cuisine":"Middle Eastern and Mediterranean","sourceUrl":"https://visitnewhaven.com/wp-content/uploads/2024/04/New-Haven-Visitors-Guide-2024-FINAL.pdf","checkedOn":"2026-10-21"},
     {"name":"Olea","cuisine":"Spanish and Mediterranean","sourceUrl":"https://visitnewhaven.com/wp-content/uploads/2024/04/New-Haven-Visitors-Guide-2024-FINAL.pdf","checkedOn":"2026-10-21"},
   ],
+  // West Haven restaurant locations and cuisine checked 2026-10-23 against official business websites or Visit New Haven. Neutral editorial directory, not Joey endorsements.
   'west-haven': [
-    {"name":"Zuppardi’s Apizza","cuisine":"New Haven-style pizza","sourceUrl":"https://visitnewhaven.com/places/zuppardis-apizza/","checkedOn":"2026-10-21"},
-    {"name":"Biagetti’s Restaurant","cuisine":"Italian","sourceUrl":"https://ctvisit.com/listings/biagettis-restaurant","checkedOn":"2026-10-21"},
-    {"name":"Duffy’s Tavern","cuisine":"Irish pub and American","sourceUrl":"https://ctvisit.com/listings/duffys-tavern","checkedOn":"2026-10-21"},
-    {"name":"Stowe’s Seafood","cuisine":"Seafood","sourceUrl":"https://ctvisit.com/listings/city-west-haven","checkedOn":"2026-10-21"},
-    {"name":"Jerri’s Luncheonette","cuisine":"Breakfast and lunch","sourceUrl":"https://ctvisit.com/listings/city-west-haven","checkedOn":"2026-10-21"},
+    {"name":"Zuppardi’s Apizza","cuisine":"New Haven-style apizza from the original West Haven location","cuisineEs":"Apizza al estilo de New Haven en su local original de West Haven","website":"https://zuppardisapizza.com/west-haven/","sourceUrl":"https://zuppardisapizza.com/west-haven/","checkedOn":"2026-10-23"},
+    {"name":"Biagetti’s Restaurant","cuisine":"Family-owned Italian restaurant with pasta and classic entrees","cuisineEs":"Restaurante italiano familiar con pastas y platos clásicos","website":"https://biagettis.com/","sourceUrl":"https://biagettis.com/","checkedOn":"2026-10-23"},
+    {"name":"Duffy’s Tavern","cuisine":"Irish pub and restaurant serving comfort food and brunch","cuisineEs":"Pub irlandés y restaurante con platos caseros y brunch","website":"https://duffystavern.net/","sourceUrl":"https://duffystavern.net/","checkedOn":"2026-10-23"},
+    {"name":"Stowe’s Seafood","cuisine":"Seafood market and casual shorefront seafood meals","cuisineEs":"Mercado de mariscos y comidas informales de pescado y mariscos junto a la costa","website":"https://stowesseafoodct.com/","sourceUrl":"https://stowesseafoodct.com/","checkedOn":"2026-10-23"},
+    {"name":"Jerri’s Luncheonette","cuisine":"Breakfast and lunch in West Haven, including Colombian-inspired options","cuisineEs":"Desayunos y almuerzos en West Haven, con opciones de inspiración colombiana","sourceUrl":"https://visitnewhaven.com/places/jerris-luncheonette/","checkedOn":"2026-10-23"},
   ],
   'branford': [
     {"name":"Lenny’s Indian Head","cuisine":"Seafood","sourceUrl":"https://visitnewhaven.com/places/lennys-indian-head/","checkedOn":"2026-10-21"},
