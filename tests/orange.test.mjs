@@ -50,7 +50,7 @@ const townArray = (path, slug) => {
   const left = source.indexOf('[', start + anchor.length - 1);
   const right = source.indexOf('],', left);
   assert.ok(right > left);
-  return JSON.parse(source.slice(left, right + 1).replace(/,\\s*]/g, ']'));
+  return JSON.parse(source.slice(left, right + 1).replace(/,\s*]/g, ']'));
 };
 
 test('Orange has five source-checked bilingual restaurants without fabricated ratings', () => {
