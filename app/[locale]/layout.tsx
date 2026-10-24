@@ -8,7 +8,12 @@ export async function generateMetadata({params}:{params:Promise<{locale:string}>
  const es=locale==='es';
  const title=es?'Explora Connecticut | Ciudades, comunidades y bienes raíces':'Explore Connecticut Living | Towns, Communities & Real Estate';
  const description=es?'Explora los 169 municipios de Connecticut, compara estilos de vida y encuentra comunidades que se adapten a tus prioridades con Joey McVety, agente inmobiliario de mygoodagent LLC.':'Explore Connecticut towns, compare communities, and find places that fit your lifestyle with Joey McVety, Connecticut real estate agent with mygoodagent LLC.';
- return {...localizedSeo(locale,'',title,description),metadataBase:new URL(siteUrl),robots:{index:false,follow:false}}; // Staging noindex until approved production launch.
+ // Keep search indexing disabled by default. Even an explicit opt-in must not
+ // make Cloudflare preview or staging domains indexable.
+ const host=new URL(siteUrl).hostname.toLowerCase();
+ const preview=host==='localhost'||host.endsWith('.workers.dev')||host.endsWith('.pages.dev')||host.startsWith('staging.')||host.startsWith('preview.');
+ const allowIndexing=process.env.ENABLE_PRODUCTION_INDEXING==='true'&&!preview&&siteUrl.startsWith('https://');
+ return {...localizedSeo(locale,'',title,description),metadataBase:new URL(siteUrl),robots:{index:allowIndexing,follow:allowIndexing}};
 }
 export default async function LocaleLayout({children,params}:{children:ReactNode;params:Promise<{locale:string}>}) {
   const {locale}=await params;
