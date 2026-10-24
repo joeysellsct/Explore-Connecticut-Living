@@ -7,7 +7,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **13/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **7/27**.
+- Dedicated official municipal/moving links: **8/27**.
 - Town-specific photo gallery data: **7/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
@@ -20,7 +20,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | Cheshire | Yes | Yes | Yes | Yes | Not certified |
 | Derby | Yes | Yes | No | No | Not certified |
 | East Haven | Yes | Yes | Yes | Yes | Not certified |
-| Guilford | Yes | Yes | No | No | Not certified |
+| Guilford | Yes | Yes | Yes | No | Not certified |
 | Hamden | Yes | Yes | Yes | Yes | Not certified |
 | Madison | Yes | Yes | No | No | Not certified |
 | Meriden | Yes | No | No | No | Not certified |
@@ -71,3 +71,10 @@ Do not infer that GitHub Actions content tests prove a full Next.js build or Clo
 - Reverified five Hamden restaurants from official sites, adding Spanish descriptions and direct source links: Mikro Depot (https://www.mikrodepot.com/), Cafe Amici (https://amicirestaurantgroup.com/), Bangkok Boulevard (https://www.bangkokblvd.com/), Playwright Irish Pub (https://www.playwrightirishpub.com/) and Ristorante Luce (https://ristoranteluce.net/). **Watch Luce's announced future Wallingford location**; the official site still listed Hamden when checked. None are presented as Joey's personal picks.
 - Added three licensed, attributed Hamden Commons photo records: Hamden Town Hall by Kenneth C. Zirkel (CC BY-SA 4.0), Sleeping Giant State Park by Ethan Long (CC BY-SA 2.0), and Farmington Canal Heritage Trail by Ethan Long (CC BY-SA 2.0). Source file pages are recorded in `lib/town-photography.ts`. Live image loading and cropping/attribution still need review.
 - Added five Hamden content and staging-safeguard regression tests. **No Hamden launch-ready certification**: the staging page could not be accessed through the available browser on October 24; rendered EN/ES SEO, images, mobile, accessibility, Equal Housing and affiliate notices, complete Next.js build and Cloudflare deployment remain unverified.
+
+## Guilford update (2026-10-24)
+
+- Expanded the original English and Spanish Guilford town guide with village/shoreline context, flood and wetlands due diligence, permit and septic questions, and parcel-specific utility checks.
+- Added **11** bilingual municipal and moving-resource links to `lib/town-official-links.ts`, covering the Assessor, Tax Collector, Town Clerk, Building, Planning and Zoning, GIS, wetlands, health/septic, engineering/flood and parks. Official town directory: https://www.guilfordct.gov/ ; assessor: https://www.guilfordct.gov/town_departments/assessor/index.php ; GIS: https://guilford.mapxpress.net/portal.asp .
+- FY 2026–27 real-property rate **28.40 mills** (October 2025 Grand List) cross-checked against Connecticut Conference of Municipalities Guilford profile https://hub.ccm-ct.org/community/guilford/ and June 18, 2026 Board of Finance coverage https://guilfordfreepress.com/guilford-sets-28-40-mill-rate-after-three-budget-votes-here-is-what-it-means-for-your-tax-bill/ . The town Assessor confirms the October 2026 revaluation and tax impact beginning July 2027: https://www.guilfordct.gov/town_departments/assessor/index.php . Rates do not establish any individual bill or district charge.
+- **Still missing:** verified and attributed town-specific photo gallery; individual restaurant source re-audit; live English/Spanish render, image delivery, mobile and accessibility checks; metadata/hreflang/sitemap validation, full build and Cloudflare deployment verification. Guilford is **not** 100% complete.
