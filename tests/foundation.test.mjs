@@ -18,7 +18,12 @@ test('restaurant directory has unique town keys and five sourced Brookfield list
 });
 
 test('staging remains noindex and affiliate resources appear on both surfaces',()=>{
- assert.match(read('app/[locale]/layout.tsx'),/index:false,follow:false/);
+ const localeLayout=read('app/[locale]/layout.tsx');
+ assert.match(localeLayout,/ENABLE_PRODUCTION_INDEXING==='true'/);
+ assert.match(localeLayout,/host\.endsWith\('\.workers\.dev'\)/);
+ assert.match(localeLayout,/host\.endsWith\('\.pages\.dev'\)/);
+ assert.match(localeLayout,/!preview&&siteUrl\.startsWith\('https:\/\/'\)/);
+ assert.match(localeLayout,/robots:\{index:allowIndexing,follow:allowIndexing\}/);
  assert.match(read('app/robots.ts'),/disallow:'\/'/);
  const partners=read('lib/moving-resources.ts');
  assert.match(partners,/frontier\.com\/ftr-buy/);
