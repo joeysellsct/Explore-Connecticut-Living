@@ -6,7 +6,7 @@ const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8'
 
 test('West Haven guide has original English and Spanish local guidance', () => {
   const guides = read('lib/town-highlights.ts');
-  const section = guides.match(/'west-haven':\\s*\\{en:'([\\s\\S]*?)',es:'([\\s\\S]*?)',places:\\[([\\s\\S]*?)\\]\\}/);
+  const section = guides.match(/'west-haven':\s*\{en:'([\s\S]*?)',es:'([\s\S]*?)',places:\[([\s\S]*?)\]\}/);
   assert.ok(section, 'West Haven bilingual guide must exist');
   for (const phrase of ['Sandy Point Beach & Bird Sanctuary', 'Metro-North', 'sewer bills', 'flood']) {
     assert.ok(section[1].includes(phrase), 'English guide missing ' + phrase);
@@ -19,7 +19,7 @@ test('West Haven guide has original English and Spanish local guidance', () => {
 
 test('West Haven municipal links cover property due diligence and local life in both languages', () => {
   const source = read('lib/town-official-links.ts');
-  const section = source.match(/'west-haven':\\s*\\[([\\s\\S]*?)\\],/);
+  const section = source.match(/'west-haven':\s*\[([\s\S]*?)\],/);
   assert.ok(section, 'West Haven official links must exist');
   assert.equal((section[1].match(/"en":/g) || []).length, 12);
   assert.equal((section[1].match(/"es":/g) || []).length, 12);
@@ -36,5 +36,5 @@ test('West Haven stays Joey personal pick only and staging protections stay in p
   assert.ok(picks.includes('Zuppardi'), 'Zuppardi personal pick remains');
   const layout = read('app/[locale]/layout.tsx');
   assert.match(layout, /index:false,follow:false/);
-  assert.match(read('app/robots.ts'), /disallow:'\\/'/);
+  assert.match(read('app/robots.ts'), /disallow:'\/'/);
 });
