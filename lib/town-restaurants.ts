@@ -400,14 +400,15 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {"name":"Alberto's","cuisine":"Italian","sourceUrl":"https://www.albertosct.com/","checkedOn":"2026-10-22"},
     {"name":"Train Station Pizza","cuisine":"Pizza and Italian","sourceUrl":"https://www.trainstationpizza.com/","checkedOn":"2026-10-22"},
   ],
+  // Derby restaurant locations and menus checked 2026-10-24. Four direct business sites; Roseland is supported by a third-party directory because the available roseland-apizza.com page explicitly says it is unofficial.
+  // Editorial directory only: none are Joey's personal Top Picks. No ratings or opening hours asserted.
   'derby': [
-    {"name":"Roseland Apizza","cuisine":"Pizza and Italian","sourceUrl":"https://www.roselandapizza.com/","checkedOn":"2026-10-22"},
-    {"name":"Dew Drop Inn","cuisine":"American pub and wings","sourceUrl":"https://www.dewdropinnct.com/","checkedOn":"2026-10-22"},
-    {"name":"Twisted Vine Restaurant","cuisine":"American and Italian","sourceUrl":"https://www.twistedvinerestaurant.com/","checkedOn":"2026-10-22"},
-    {"name":"Tipsy Tomato Bar and Pizzeria","cuisine":"Pizza and Italian","sourceUrl":"https://www.tipsytomatopizzeria.com/","checkedOn":"2026-10-22"},
-    {"name":"River Rock Tavern","cuisine":"American tavern","sourceUrl":"https://www.riverrocktavern.com/","checkedOn":"2026-10-22"},
-  ],
-  'chester': [
+    {"name":"Roseland Apizza","cuisine":"New Haven-area apizza and Italian dishes","cuisineEs":"Apizza del área de New Haven y platos italianos","sourceUrl":"https://www.superpages.com/derby-ct/bpp/roseland-apizza-9720605","checkedOn":"2026-10-24"},
+    {"name":"Dew Drop Inn","cuisine":"Pub food, wings and burgers","cuisineEs":"Comida de bar, alitas y hamburguesas","website":"https://dewdropinnct.com/","sourceUrl":"https://dewdropinnct.com/","checkedOn":"2026-10-24"},
+    {"name":"Twisted Vine Restaurant","cuisine":"Italian-inspired dining in a historic former bank building","cuisineEs":"Cocina de inspiración italiana en un antiguo banco histórico","website":"https://twistedvinerestaurant.com/","sourceUrl":"https://twistedvinerestaurant.com/","checkedOn":"2026-10-24"},
+    {"name":"Tipsy Tomato Bar and Pizzeria","cuisine":"Thin-crust pizza, Italian dinners and casual bar fare","cuisineEs":"Pizza de masa fina, cenas italianas y platos informales de bar","website":"https://tipsytomatopizzeria.com/","sourceUrl":"https://tipsytomatopizzeria.com/","checkedOn":"2026-10-24"},
+    {"name":"River Rock Tavern","cuisine":"American tavern food, lunch and dinner","cuisineEs":"Comida estadounidense de taberna, almuerzos y cenas","website":"https://riverrocktavern.com/","sourceUrl":"https://riverrocktavern.com/","checkedOn":"2026-10-24"},
+  ],  'chester': [
     {"name":"Grano Arso","cuisine":"Italian","sourceUrl":"https://www.visitchesterct.com/dining","checkedOn":"2026-10-21"},
     {"name":"River Tavern","cuisine":"Seasonal American","sourceUrl":"https://www.visitchesterct.com/dining","checkedOn":"2026-10-21"},
     {"name":"OTTO Pizza","cuisine":"Wood-fired pizza","sourceUrl":"https://www.visitchesterct.com/dining","checkedOn":"2026-10-21"},
