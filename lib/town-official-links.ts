@@ -2,6 +2,49 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Rocky Hill town/state official links verified 2026-10-23.
+ 'rocky-hill': [
+  {
+    "en": "Town of Rocky Hill municipal services",
+    "es": "Servicios municipales de Rocky Hill",
+    "url": "https://rockyhillct.gov/"
+  },
+  {
+    "en": "Rocky Hill Assessor and property assessments",
+    "es": "Tasaciones y datos de propiedades de Rocky Hill",
+    "url": "https://rockyhillct.gov/194/Assessor"
+  },
+  {
+    "en": "Rocky Hill Town Clerk and land records",
+    "es": "Secretaría municipal y registros inmobiliarios de Rocky Hill",
+    "url": "https://rockyhillct.gov/423/Land-Records"
+  },
+  {
+    "en": "Rocky Hill GIS parcel maps (not legal surveys)",
+    "es": "Mapas de parcelas GIS (no sustituyen planos legales)",
+    "url": "https://rockyhillct.gov/254/Online-Property-Maps"
+  },
+  {
+    "en": "Rocky Hill Building Department and permits",
+    "es": "Departamento de Construcción y permisos de Rocky Hill",
+    "url": "https://www.rockyhillct.gov/195/Building-Department-Permits"
+  },
+  {
+    "en": "Rocky Hill Quarry Park visitor information",
+    "es": "Información para visitar Quarry Park",
+    "url": "https://www.rockyhillct.gov/facilities/facility/details/quarrypark-12"
+  },
+  {
+    "en": "Connecticut DOT Rocky Hill–Glastonbury Ferry information",
+    "es": "Información del ferry Rocky Hill–Glastonbury",
+    "url": "https://portal.ct.gov/dot/travel-gateway/public-transportation/ct-ferries/rocky-hill-ferry"
+  },
+  {
+    "en": "Dinosaur State Park visitor information",
+    "es": "Información para visitar Dinosaur State Park",
+    "url": "https://ctparks.com/parks/dinosaur-state-park"
+  }
+],
  // Wethersfield municipal resource URLs verified 2026-10-23 against official town pages.
  'wethersfield':[{"en":"Town of Wethersfield municipal services","es":"Servicios municipales de Wethersfield","url":"https://www.wethersfieldct.gov/"},{"en":"Wethersfield Assessor and property assessments","es":"Tasaciones y datos de propiedades de Wethersfield","url":"https://www.wethersfieldct.gov/159/Assessor"},{"en":"Wethersfield Town Clerk and recorded land documents","es":"Secretaría municipal y documentos inmobiliarios registrados","url":"https://www.wethersfieldct.gov/360/Town-Clerk"},{"en":"Wethersfield Building Department and permits","es":"Departamento de construcción y permisos municipales","url":"https://www.wethersfieldct.gov/173/Building"},{"en":"Keeney Memorial Cultural Center visitor services","es":"Centro de visitantes Keeney Memorial Cultural Center","url":"https://www.wethersfieldct.gov/740/Visitor-Services"}],
  // Middletown official municipal and state resources verified 2026-10-23.
