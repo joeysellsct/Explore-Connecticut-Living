@@ -359,3 +359,16 @@ test('Middletown photo gallery uses location-verified and attributed CC licenses
  assert.match(page,/photo\.credit/);
  assert.match(page,/photo\.licenseUrl/);
 });
+
+
+test('town moving resources disclose Amazon commissions in English and Spanish',()=>{
+ const panel=read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
+ const partners=read('lib/moving-resources.ts');
+ assert.match(panel,/As an Amazon Associate I earn from qualifying purchases\./);
+ assert.match(panel,/Como Asociado de Amazon, obtengo ingresos por las compras que cumplen los requisitos\./);
+ assert.match(panel,/es\?'Como Asociado de Amazon/);
+ assert.match(panel,/Paid referral: I may earn a commission/);
+ assert.match(panel,/Enlace remunerado: puedo ganar una comisión/);
+ assert.match(partners,/frontier\.com\/ftr-buy\?user_id=/);
+ assert.match(partners,/amazon\.com\/shop\/influencer-/);
+});
