@@ -22,7 +22,7 @@ test('Seymour has twelve distinct bilingual official research resources', () => 
   const source = read('lib/town-official-links.ts');
   const match = source.match(/^ 'seymour': \[(.*?)^ \],/ms);
   assert.ok(match, 'Missing Seymour municipal links');
-  const links = JSON.parse('[' + match[1] + ']');
+  const links = JSON.parse(('[' + match[1] + ']').replace(/,\s*]/g, ']'));
   assert.equal(links.length, 12);
   assert.equal(new Set(links.map(link => link.url)).size, links.length);
   for (const link of links) {
