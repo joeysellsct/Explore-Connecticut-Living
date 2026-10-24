@@ -7,8 +7,8 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **13/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **12/27**.
-- Town-specific photo gallery data: **12/27** (license records still require live display checks).
+- Dedicated official municipal/moving links: **13/27**.
+- Town-specific photo gallery data: **13/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -33,7 +33,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | Orange | Yes | Yes | Yes | Yes | Not certified |
 | Oxford | No | No | No | No | Not certified |
 | Prospect | No | No | No | No | Not certified |
-| Seymour | Yes | Yes | No | No | Not certified |
+| Seymour | Yes | Yes | Yes | Yes | Not certified |
 | Southbury | Yes | No | No | No | Not certified |
 | Wallingford | Yes | No | No | No | Not certified |
 | Waterbury | Yes | No | No | No | Not certified |
@@ -117,3 +117,10 @@ Do not infer that GitHub Actions content tests prove a full Next.js build or Clo
 - Reverified five restaurant entries with bilingual cuisine descriptions and no invented ratings. Roseland's available site states it is unofficial; its entry instead uses a third-party directory source, not an official-website claim.
 - Added three Commons-licensed Derby photographs with photographer credits and bilingual captions, plus regression tests.
 - **Still not certified:** Cloudflare deployment, live images, mobile and accessibility, SEO/hreflang, legal and partner disclosures and property-specific data all require independent rendered-page QA. GitHub Actions must be checked separately from deployment.
+
+## Seymour update (2026-10-24)
+
+- Expanded the original English/Spanish town guide with sourced parks, property-tax, utility and Waterbury Branch replacement-bus information; added twelve bilingual municipal and moving links.
+- Reverified five local restaurants, corrected outdated or unreachable source links, and added English/Spanish cuisine descriptions. Thai Dish uses an identifiable third-party online ordering source rather than a claimed official site. These remain editorial listings, not personal Top Picks.
+- Added three 2012 Seymour-specific photographs of Town Hall, the railroad station and Bank Street, credited to Joe Mabel and documented under CC BY-SA 3.0; historical photographs must not imply current conditions.
+- Added restaurant and photography regression tests. Full build and GitHub Actions results must be checked independently; staging rendering, mobile accessibility, metadata/hreflang, affiliate and housing disclosures, image delivery and Cloudflare deployment remain unverified. **Not certified launch-ready.**
