@@ -51,3 +51,27 @@ test('Shared town page retains bilingual resources and staging indexing safeguar
   assert.match(page, /townPhotography\[slug\]/);
   assert.match(read('app/robots.ts'), /disallow:'\/'/);
 });
+
+
+test('Beacon Falls has three sourced and attributed historic photographs', () => {
+  const source = read('lib/town-photography.ts');
+  const match = source.match(/^ 'beacon-falls': \[(.*?)^ \],/ms);
+  assert.ok(match, 'Missing Beacon Falls photo gallery');
+  const photos = JSON.parse(('[' + match[1] + ']').replace(/,\s*]/g, ']'));
+  assert.equal(photos.length, 3);
+  assert.equal(new Set(photos.map(photo => photo.file)).size, 3);
+  const expected = new Map([
+    ['BeaconFalls DepotStreetBridge.jpg', ['Magicpiano', 'CC BY-SA 4.0', '2017']],
+    ['BeaconFallsCT HomeWoolenCompany1.jpg', ['Magicpiano', 'CC BY-SA 4.0', '2017']],
+    ['Beacon Falls Station.jpg', ['Adam Moss', 'CC BY-SA 2.0', '2011']],
+  ]);
+  for (const photo of photos) {
+    const details = expected.get(photo.file);
+    assert.ok(details, 'Unexpected photo: ' + photo.file);
+    assert.equal(photo.credit, details[0]);
+    assert.equal(photo.license, details[1]);
+    assert.ok(photo.title.includes(details[2]) && photo.titleEs.includes(details[2]));
+    assert.equal(new URL(photo.licenseUrl).protocol, 'https:');
+  }
+  assert.ok(photos.find(photo => photo.file === 'Beacon Falls Station.jpg').title.includes('historic'));
+});
