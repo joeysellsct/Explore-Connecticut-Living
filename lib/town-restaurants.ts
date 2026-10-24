@@ -334,12 +334,48 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {name:"Mici Asian Bistro",cuisine:"Japanese, Chinese and Thai",website:"https://www.miciasianbistro.com/",sourceUrl:"https://www.miciasianbistro.com/",checkedOn:'2026-10-23'},
     {name:"Mex On Main",cuisine:"Tex-Mex",website:"https://www.mexonmain.com/index.php",sourceUrl:"https://www.mexonmain.com/index.php",checkedOn:'2026-10-23'},
   ],
+  // Cheshire restaurant names, menus and town locations rechecked against business-operated sites 2026-10-24. These are editorial listings, not personal recommendations.
   'cheshire': [
-    {name:"Rossini's Italian Restaurant & Pizza",cuisine:"Italian and pizza",sourceUrl:"https://www.rossinispizza.com/",checkedOn:'2026-10-22'},
-    {name:"Pho & Spice",cuisine:"Vietnamese and Thai",sourceUrl:"https://www.phoandspice.com/",checkedOn:'2026-10-22'},
-    {name:'Fuoco Coal Fired Apizza',cuisine:'Coal-fired New Haven-style apizza',website:'https://fuocoapizza.com/',sourceUrl:'https://fuocoapizza.com/contact/',checkedOn:'2026-10-22'},
-    {name:'Viron Rondo Osteria',cuisine:'Italian',website:'https://www.vironrondoosteria.com/',sourceUrl:'https://www.vironrondoosteria.com/',checkedOn:'2026-10-22'},
-    {name:'Avanti Grille',cuisine:'Italian',sourceUrl:'https://www.avantigrille.com/',checkedOn:'2026-10-22'},
+    {
+      "name": "Rossini's Italian Restaurant & Pizza",
+      "cuisine": "Italian classics, pasta and pizza",
+      "cuisineEs": "Cocina italiana, pastas y pizza",
+      "website": "https://cheshirerossini.com/",
+      "sourceUrl": "https://cheshirerossini.com/contact-us/",
+      "checkedOn": "2026-10-24"
+    },
+    {
+      "name": "Pho & Spice",
+      "cuisine": "Vietnamese pho and Thai dishes",
+      "cuisineEs": "Sopas pho vietnamitas y platos tailandeses",
+      "website": "https://www.phoandspice-ct.com/",
+      "sourceUrl": "https://www.phoandspice-ct.com/",
+      "checkedOn": "2026-10-24"
+    },
+    {
+      "name": "Fuoco Coal Fired Apizza",
+      "cuisine": "Coal-fired New Haven-style apizza",
+      "cuisineEs": "Apizza al carbón al estilo de New Haven",
+      "website": "https://fuocoapizza.com/",
+      "sourceUrl": "https://fuocoapizza.com/contact/",
+      "checkedOn": "2026-10-24"
+    },
+    {
+      "name": "Viron Rondo Osteria",
+      "cuisine": "Italian and Mediterranean dining",
+      "cuisineEs": "Cocina italiana y mediterránea",
+      "website": "https://www.vironrondoosteria.com/",
+      "sourceUrl": "https://www.vironrondoosteria.com/",
+      "checkedOn": "2026-10-24"
+    },
+    {
+      "name": "Avanti Grille",
+      "cuisine": "Italian classics and seasonal dishes",
+      "cuisineEs": "Platos italianos clásicos y especialidades de temporada",
+      "website": "https://www.avantigrille.com/",
+      "sourceUrl": "https://www.avantigrille.com/contact",
+      "checkedOn": "2026-10-24"
+    }
   ],
   'ansonia': [
     {"name":"Relish Wine Bar & Grill","cuisine":"New American","sourceUrl":"https://www.relishwinebarandgrill.net/","checkedOn":"2026-10-22"},
