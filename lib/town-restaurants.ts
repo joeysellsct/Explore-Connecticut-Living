@@ -515,14 +515,14 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     "checkedOn": "2026-10-23"
   }
 ],
+  // Orange restaurants and Orange addresses rechecked 2026-10-24 against official business websites; neutral editorial listings, not personal Top Picks.
   'orange': [
-    {name:"Andini's Restaurant",cuisine:'Italian-American and pizza',website:'https://andinisrestaurant.com/',sourceUrl:'https://andinisrestaurant.com/',checkedOn:'2026-10-23'},
-    {name:'Coromandel Cuisine of India',cuisine:'Indian',website:'https://www.coromandelorange.com/',sourceUrl:'https://www.coromandelorange.com/',checkedOn:'2026-10-23'},
-    {name:'Noodle House',cuisine:'Ramen, pho and Asian noodles',website:'https://noodle-house.com/',sourceUrl:'https://noodle-house.com/',checkedOn:'2026-10-23'},
-    {name:'Ola Restaurant',cuisine:'Nuevo Latino',website:'https://www.olarestaurantct.com/orange/',sourceUrl:'https://www.olarestaurantct.com/orange/',checkedOn:'2026-10-23'},
-    {name:'Puerto Vallarta - Orange',cuisine:'Mexican',website:'https://puertovallartausa.com/orange',sourceUrl:'https://puertovallartausa.com/orange',checkedOn:'2026-10-23'},
-  ],
-};
+    {"name":"Andini's Restaurant","cuisine":"Italian-American pasta, pizza and catering","cuisineEs":"Pastas y pizzas italoestadounidenses y servicio de banquetes","website":"https://andinisrestaurant.com/","sourceUrl":"https://andinisrestaurant.com/","checkedOn":"2026-10-24"},
+    {"name":"Coromandel Cuisine of India","cuisine":"South Indian and pan-Indian dishes, including vegetarian options","cuisineEs":"Cocina del sur de India y de otras regiones, con opciones vegetarianas","website":"https://www.coromandelorange.com/","sourceUrl":"https://www.coromandelorange.com/","checkedOn":"2026-10-24"},
+    {"name":"Noodle House","cuisine":"Ramen, pho and Asian noodle dishes","cuisineEs":"Ramen, pho y platos asiáticos de fideos","website":"https://noodle-house.com/","sourceUrl":"https://noodle-house.com/","checkedOn":"2026-10-24"},
+    {"name":"Ola Restaurant","cuisine":"Nuevo Latino cuisine and small plates","cuisineEs":"Cocina nuevo latina y platos para compartir","website":"https://www.olarestaurantct.com/orange/","sourceUrl":"https://www.olarestaurantct.com/orange/","checkedOn":"2026-10-24"},
+    {"name":"Puerto Vallarta - Orange","cuisine":"Mexican cuisine, fresh guacamole and traditional dishes","cuisineEs":"Cocina mexicana, guacamole fresco y platos tradicionales","website":"https://puertovallartausa.com/orange","sourceUrl":"https://puertovallartausa.com/orange","checkedOn":"2026-10-24"},
+  ],};
 // Personal recommendations are separate from third-party ratings.
 export const joeyTopPicks:Record<string,{name:string;note?:string;url?:string}[]> = {
   'cheshire': [
