@@ -8,8 +8,21 @@ const entry = (path, slug) => {
   const marker = "'" + slug + "':";
   const start = src.indexOf(marker);
   assert.ok(start !== -1, `Missing ${slug} in ${path}`);
-  const next = src.indexOf("\n //", start + marker.length);
-  return src.slice(start, next === -1 ? undefined : next);
+  const opener = path.includes('town-highlights') ? '{' : '[';
+  const closer = opener === '{' ? '}' : ']';
+  const from = src.indexOf(opener, start + marker.length);
+  assert.ok(from !== -1, `Missing entry opener in ${path}`);
+  let depth = 0, quoted = false, escaped = false;
+  for (let i = from; i < src.length; i++) {
+    const ch = src[i];
+    if (escaped) { escaped = false; continue; }
+    if (quoted && ch === '\\') { escaped = true; continue; }
+    if (ch === '"') { quoted = !quoted; continue; }
+    if (quoted) continue;
+    if (ch === opener) depth++;
+    if (ch === closer && --depth === 0) return src.slice(from, i + 1);
+  }
+  assert.fail(`Unclosed entry in ${path}`);
 };
 
 test('Glastonbury editorial has original bilingual moving guidance and real attractions', () => {
