@@ -442,14 +442,14 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {"name":"The Wharf Restaurant","cuisine":"New England coastal","sourceUrl":"https://thewharfmadison.com/","checkedOn":"2026-10-21"},
     {"name":"Donahue's Madison Beach Grille","cuisine":"American pub and seafood","sourceUrl":"https://donahuesmadisonbeachgrille.com/our-story/","checkedOn":"2026-10-21"},
   ],
+  // Guilford restaurant locations and menus rechecked on official business sites 2026-10-24; neutral editorial listings, not Joey's Top Picks.
   'guilford': [
-    {"name":"South Lane Bistro","cuisine":"Contemporary American","sourceUrl":"https://www.southlanebistro.com/","checkedOn":"2026-10-21"},
-    {"name":"Quattro's Italian Restaurant and Wine Bar","cuisine":"Italian and Latin-inspired","sourceUrl":"https://www.quattrositalian.com/","checkedOn":"2026-10-21"},
-    {"name":"The Guilford Bistro","cuisine":"Italian","sourceUrl":"https://www.theguilfordbistro.com/","checkedOn":"2026-10-21"},
-    {"name":"Pasta Avest & Pizzeria","cuisine":"Italian and pizza","sourceUrl":"https://www.pastaavest.com/","checkedOn":"2026-10-21"},
-    {"name":"Kamana Fine Indian Cuisine","cuisine":"Indian and Nepalese","sourceUrl":"https://www.kamanacuisine.com/","checkedOn":"2026-10-21"},
-  ],
-  // East Haven businesses and town addresses checked against official restaurant sites 2026-10-24; editorial suggestions only.
+    {"name":"South Lane Bistro","cuisine":"Contemporary American bistro dining with seasonal ingredients","cuisineEs":"Cocina contemporánea estadounidense con ingredientes de temporada","website":"https://www.southlanebistro.com/","sourceUrl":"https://www.southlanebistro.com/","checkedOn":"2026-10-24"},
+    {"name":"Quattro's Italian Restaurant and Wine Bar","cuisine":"Northern Italian cuisine with Italian-Latin fusion and tapas","cuisineEs":"Cocina del norte de Italia con fusión italo-latina y tapas","website":"https://www.quattrositalian.com/","sourceUrl":"https://www.quattrositalian.com/","checkedOn":"2026-10-24"},
+    {"name":"The Guilford Bistro","cuisine":"Italian regional dishes, pasta and modern bistro cooking","cuisineEs":"Platos regionales italianos, pasta y cocina de bistró moderna","website":"https://www.theguilfordbistro.com/","sourceUrl":"https://www.theguilfordbistro.com/","checkedOn":"2026-10-24"},
+    {"name":"Pasta Avest & Pizzeria","cuisine":"Pizza, pasta, sandwiches and Italian-American classics","cuisineEs":"Pizza, pasta, sándwiches y clásicos italoestadounidenses","website":"https://www.pastaavest.com/","sourceUrl":"https://www.pastaavest.com/","checkedOn":"2026-10-24"},
+    {"name":"Kamana Fine Indian Cuisine","cuisine":"Indian and Nepalese dishes, including momos and curries","cuisineEs":"Platos de la India y Nepal, incluidos momos y curris","website":"https://www.kamanacuisine.com/","sourceUrl":"https://www.kamanacuisine.com/","checkedOn":"2026-10-24"},
+  ],  // East Haven businesses and town addresses checked against official restaurant sites 2026-10-24; editorial suggestions only.
   'east-haven': [
     {"name":"Bistro Mediterranean & Tapas Bar","cuisine":"Mediterranean dishes and Spanish-style tapas","cuisineEs":"Platos mediterráneos y tapas de estilo español","website":"https://www.bistromediterraneanandtapasbar.com/east-haven","sourceUrl":"https://www.bistromediterraneanandtapasbar.com/","checkedOn":"2026-10-24"},
     {"name":"Tolli's Apizza","cuisine":"Brick-oven apizza, pasta and Italian-American food","cuisineEs":"Apizza al horno de ladrillo, pasta y cocina italoestadounidense","website":"https://www.tolliseasthaven.com/","sourceUrl":"https://www.tolliseasthaven.com/","checkedOn":"2026-10-24"},
