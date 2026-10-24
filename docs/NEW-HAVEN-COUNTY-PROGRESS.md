@@ -7,13 +7,13 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **13/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **10/27**.
-- Town-specific photo gallery data: **10/27** (license records still require live display checks).
+- Dedicated official municipal/moving links: **11/27**.
+- Town-specific photo gallery data: **11/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
 | --- | :---: | :---: | :---: | :---: | :---: |
-| Ansonia | Yes | Yes | No | No | Not certified |
+| Ansonia | Yes | Yes | Yes | Yes | Not certified |
 | Beacon Falls | Yes | No | No | No | Not certified |
 | Bethany | Yes | No | No | No | Not certified |
 | Branford | Yes | Yes | Yes | Yes | Not certified |
@@ -101,3 +101,11 @@ Do not infer that GitHub Actions content tests prove a full Next.js build or Clo
 - Added regression checks for the Orange guide, eleven distinct bilingual resources and unique town keys in restaurant data to prevent a repeat of the Milford TypeScript build failure.
 - **Orange restaurant and photo follow-up:** rechecked five Orange restaurants directly against their official websites and added English/Spanish descriptions (Andini's, Coromandel, Noodle House, Ola and Puerto Vallarta). Added three Commons photos of Orange Town Hall, the PEZ Visitor Center and Orange Congregational Church with author, license, and bilingual captions; photos date from 2007–2012, not evidence of current conditions. Source file pages: https://commons.wikimedia.org/wiki/File:Orange_CT_town_hall.jpg , https://commons.wikimedia.org/wiki/File:Pez_Visitor%27s_Center_208.JPG and https://commons.wikimedia.org/wiki/File:Orange_ct_congregational_church.jpg . Added regression checks for the five dining records and three photo licenses. Live English/Spanish page render, photo delivery, mobile accessibility, metadata, disclosures, full build and Cloudflare rollout still require independent verification. Orange is **not** 100% certified.
 - A separate Cloudflare Workers production-build job was added to GitHub Actions after the duplicate Milford key was removed. Check the job's actual conclusion; do not equate passing content tests with a successful production build or deployment.
+
+## Ansonia source-code follow-up (2026-10-24)
+
+- Expanded Ansonia's original English/Spanish guide with Ansonia Nature and Recreation Center, riverfront and downtown context, 29.46-mill FY 2026–27 real-property tax context (October 2025 Grand List), parcel-specific assessment and utility due diligence, and the CTDOT Waterbury Branch replacement-bus period (July 20, 2026–May 31, 2027). Sources: https://hub.ccm-ct.org/community/ansonia/ ; https://portal.ct.gov/dot/ctdot-press-releases/2026/substitute-busing-wbl-july-2026-through-may-2027 ; https://cityofansonia.com/content/8134/8374/default.aspx .
+- Added 15 bilingual Ansonia municipal, GIS, property tax, clerk, zoning, parks, trash, water/sewer and transportation links, checked against city and state source pages.
+- Rechecked five existing Ansonia restaurants on official sites and added Spanish descriptions, with no ratings or Joey personal-pick labels.
+- Added three Ansonia-specific Wikimedia Commons photos (historic Main Street, Nature Center visitor building and public library) with verified photographer names, bilingual captions and Creative Commons license links. Images date from 2010–2017 and do not prove current conditions.
+- Added dedicated regression tests. **Not 100% certified**: independent rendered EN/ES, image delivery, mobile accessibility, metadata/hreflang/sitemap, legal/affiliate visibility and Cloudflare deployment checks remain outstanding. GitHub Actions results are tracked separately from Cloudflare.
