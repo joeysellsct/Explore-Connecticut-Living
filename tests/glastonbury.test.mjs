@@ -53,8 +53,7 @@ test('Glastonbury restaurant directory has five sourced bilingual entries and no
 
 test('Glastonbury official links and photographs have bilingual labels and license attribution', () => {
   const links = entry('lib/town-official-links.ts', 'glastonbury');
-  for (const part of ['property-assessment', 'town-clerk/land-records', 'building-inspection-zoning', 'cotton-hollow']) {
-    if (part === 'cotton-hollow') continue; // facility URL uses an ID rather than a descriptive slug.
+  for (const part of ['property-assessment', 'town-clerk/land-records', 'building-inspection-zoning', 'facilitydirectory/112/180']) {
     assert.ok(links.includes(part), part);
   }
   assert.equal(links.split('"url":').length - 1, 7);
