@@ -39,3 +39,38 @@ test('Seymour does not gain an unapproved personal restaurant Top Pick', () => {
   assert.ok(picks, 'Missing personal-picks registry');
   assert.doesNotMatch(picks, /['"]seymour['"]\s*:/);
 });
+
+
+test('Seymour restaurants have verified bilingual descriptions and no invented ratings', () => {
+  const source = read('lib/town-restaurants.ts');
+  const match = source.match(/^  'seymour': \[(.*?)^  \],/ms);
+  assert.ok(match, 'Missing Seymour restaurant directory');
+  const restaurants = JSON.parse(('[' + match[1] + ']').replace(/,\s*]/g, ']'));
+  assert.equal(restaurants.length, 5);
+  assert.equal(new Set(restaurants.map(item => item.name)).size, 5);
+  for (const item of restaurants) {
+    assert.ok(item.cuisine && item.cuisineEs, 'Missing bilingual cuisine for ' + item.name);
+    assert.equal(item.checkedOn, '2026-10-24');
+    assert.equal(new URL(item.sourceUrl).protocol, 'https:');
+    assert.equal(item.rating, undefined);
+    assert.equal(item.reviewCount, undefined);
+  }
+  assert.ok(restaurants.some(item => item.name === 'Dock 34' && item.sourceUrl.includes('dock34seymour.com')));
+  assert.ok(restaurants.some(item => item.name === 'Train Station Pizza' && item.website.includes('seymourtrainstationpizza.com')));
+});
+
+test('Seymour has three separately attributed CC-licensed historic photos', () => {
+  const source = read('lib/town-photography.ts');
+  const match = source.match(/^ 'seymour': \[(.*?)^ \],/ms);
+  assert.ok(match, 'Missing Seymour photo registry');
+  const photos = JSON.parse(('[' + match[1] + ']').replace(/,\s*]/g, ']'));
+  assert.equal(photos.length, 3);
+  assert.equal(new Set(photos.map(photo => photo.file)).size, 3);
+  for (const photo of photos) {
+    assert.ok(photo.title.includes('2012') && photo.titleEs.includes('2012'));
+    assert.equal(photo.credit, 'Joe Mabel');
+    assert.equal(photo.license, 'CC BY-SA 3.0');
+    assert.equal(photo.licenseUrl, 'https://creativecommons.org/licenses/by-sa/3.0/');
+    assert.ok(photo.file.startsWith('Seymour, CT - '));
+  }
+});
