@@ -2,6 +2,27 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Ansonia sources checked 2026-10-24 against city department pages, CT OPM, CTDOT and CTtransit.
+ // FY2027 real-property rate 29.46 mills cross-checked with https://hub.ccm-ct.org/community/ansonia/ .
+ // City lists Regional Water Authority for water inquiries and Aquarion for sewer operations/billing; service is address-specific.
+ // CTDOT confirms substitute buses replace Waterbury Branch trains July 20, 2026–May 31, 2027.
+ 'ansonia': [
+  {"en":"City of Ansonia: official department directory and resident services","es":"Ciudad de Ansonia: directorio de departamentos y servicios para residentes","url":"https://cityofansonia.com/departments"},
+  {"en":"Assessor: property record cards, assessments, revaluation and GIS links","es":"Tasador: fichas de propiedades, tasaciones, reevaluación y enlaces GIS","url":"https://cityofansonia.com/content/8132/8142/8144/default.aspx"},
+  {"en":"Ansonia GIS: parcel map research; verify boundaries with the city","es":"GIS de Ansonia: mapas de parcelas; confirma los límites con el municipio","url":"https://ansonia.mapxpress.net/"},
+  {"en":"Tax Collector: real-estate bills, payments and October 2025 Grand List notice","es":"Recaudación: facturas inmobiliarias, pagos y aviso de la lista tributaria de octubre de 2025","url":"https://www.cityofansonia.com/content/8132/8142/8180/default.aspx"},
+  {"en":"Connecticut municipal tax rates: confirm Ansonia FY 2026–27 real-property rate (29.46 mills) and individual bills","es":"Tasas municipales de Connecticut: confirma los 29,46 mills de Ansonia para 2026–27 y cada factura","url":"https://portal.ct.gov/opm/igpp/publications/mill-rates"},
+  {"en":"Town & City Clerk: deeds, land records, recorded maps and regulations","es":"Secretaría municipal: escrituras, registros inmobiliarios, planos y reglamentos","url":"https://www.cityofansonia.com/content/8132/8142/8182/default.aspx"},
+  {"en":"Land Use, Zoning and Building: permits, inspections and zoning regulations","es":"Uso del suelo, zonificación y construcción: permisos, inspecciones y reglamentos","url":"https://cityofansonia.com/content/8132/8142/8190/default.aspx"},
+  {"en":"Public Works: streets, stormwater, recycling and transfer-station services","es":"Obras Públicas: calles, aguas pluviales, reciclaje y estación de transferencia","url":"https://cityofansonia.com/publicworks"},
+  {"en":"Trash & Recycling: address-based collection lookup and holiday changes","es":"Basura y reciclaje: consulta de recolección por dirección y cambios por feriados","url":"https://www.cityofansonia.com/trash"},
+  {"en":"Recreation Department: city parks and community programs","es":"Departamento de Recreación: parques y programas comunitarios","url":"https://www.cityofansonia.com/content/8132/8142/8172/default.aspx"},
+  {"en":"Ansonia Nature Center: trails, exhibits and program updates","es":"Centro de Naturaleza de Ansonia: senderos, exhibiciones y actividades","url":"https://ansonianaturecenter.org/"},
+  {"en":"City moving resources: Regional Water Authority contact and Aquarion sewer billing","es":"Recursos municipales para mudanzas: contacto de agua RWA y facturación de alcantarillado Aquarion","url":"https://cityofansonia.com/content/8134/8374/default.aspx"},
+  {"en":"CTDOT: Waterbury Branch substitute buses July 2026–May 2027; check current service","es":"CTDOT: autobuses sustitutos en la línea Waterbury de julio de 2026 a mayo de 2027; verifica el servicio","url":"https://portal.ct.gov/dot/ctdot-press-releases/2026/substitute-busing-wbl-july-2026-through-may-2027"},
+  {"en":"CTDOT: Ansonia station accessibility reconstruction and construction updates","es":"CTDOT: obras de accesibilidad y reconstrucción de la estación de Ansonia","url":"https://portal.ct.gov/dot/projects/waterbury-branch-line-improvements/ansonia"},
+  {"en":"CTtransit: route 255 New Haven–Ansonia–Seymour service alerts","es":"CTtransit: avisos de la ruta 255 New Haven–Ansonia–Seymour","url":"https://www.cttransit.com/alerts/54/details"},
+ ],
  // Orange links checked 2026-10-24 against official town department pages; tax collector confirms 27.40 mills for July 2026 bills (2025 Grand List). Confirm actual parcel bills, sewer/water connections and permits with town staff.
  'orange': [
   {"en":"Town of Orange: departments and resident services","es":"Municipio de Orange: departamentos y servicios para residentes","url":"https://www.orange-ct.gov/27/Departments"},
