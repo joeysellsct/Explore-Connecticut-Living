@@ -8,13 +8,13 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **13/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **14/27**.
-- Town-specific photo gallery data: **13/27** (license records still require live display checks).
+- Town-specific photo gallery data: **14/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
 | --- | :---: | :---: | :---: | :---: | :---: |
 | Ansonia | Yes | Yes | Yes | Yes | Not certified |
-| Beacon Falls | Yes | No | Yes | No | Not certified |
+| Beacon Falls | Yes | No | Yes | Yes | Not certified |
 | Bethany | Yes | No | No | No | Not certified |
 | Branford | Yes | Yes | Yes | Yes | Not certified |
 | Cheshire | Yes | Yes | Yes | Yes | Not certified |
@@ -131,3 +131,9 @@ Do not infer that GitHub Actions content tests prove a full Next.js build or Clo
 - The town's [final adopted FY 2026–27 budget narrative](https://beaconfalls-ct.org/DocumentCenter/View/4758/TOBF-FY27-Narrative-Final-Adopted_52826) documents **23.67 mills** on the October 2025 Grand List; the 2025 revaluation means comparing the previous 30.46-mill rate alone does **not** establish a tax reduction for any property. The [Tax Collector](https://www.beaconfalls-ct.org/209/Tax-Collector) notes possible separate sewer/water assessments; verify service and actual charges at the property address.
 - [CTDOT](https://portal.ct.gov/dot/ctdot-press-releases/2026/ctdot-announces-construction-underway-on-four-waterbury-branch-line-station-upgrades) documents Waterbury Branch substitute buses July 20, 2026–May 31, 2027, during station construction. Check live service alerts before travel.
 - **Not certified:** Beacon Falls still needs its restaurant directory, licensed photo gallery, live English/Spanish render, image delivery, SEO/hreflang, mobile/accessibility, disclosure and deployment audits. This update only advances municipal-link coverage.
+
+## Beacon Falls photo follow-up (2026-10-24)
+
+- Added three Beacon Falls-specific Commons photo records with original photographer credits, license URLs and English/Spanish historical captions: Depot Street Bridge (Magicpiano, CC BY-SA 4.0, photographed 2017), Home Woolen Company (Magicpiano, CC BY-SA 4.0, photographed 2017) and Beacon Falls railroad station (Adam Moss, CC BY-SA 2.0, photographed 2011). Sources: https://commons.wikimedia.org/wiki/File:BeaconFalls_DepotStreetBridge.jpg ; https://commons.wikimedia.org/wiki/File:BeaconFallsCT_HomeWoolenCompany1.jpg ; https://commons.wikimedia.org/wiki/File:Beacon_Falls_Station.jpg .
+- The station image is explicitly historical and does not indicate present-day Waterbury Branch train service. Added a regression test for photo file identity, licenses, credits and bilingual captions.
+- **Still not certified:** no Beacon Falls restaurant directory yet; verify active local dining businesses rather than padding the list with nearby-town restaurants. Rendered image delivery, captions and source links, bilingual SEO, mobile accessibility, affiliate and Equal Housing notices, staging robots, and Cloudflare rollout remain independently unverified.
