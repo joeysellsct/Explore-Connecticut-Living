@@ -7,8 +7,8 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **13/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **8/27**.
-- Town-specific photo gallery data: **8/27** (license records still require live display checks).
+- Dedicated official municipal/moving links: **9/27**.
+- Town-specific photo gallery data: **9/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -22,7 +22,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | East Haven | Yes | Yes | Yes | Yes | Not certified |
 | Guilford | Yes | Yes | Yes | Yes | Not certified |
 | Hamden | Yes | Yes | Yes | Yes | Not certified |
-| Madison | Yes | Yes | No | No | Not certified |
+| Madison | Yes | Yes | Yes | Yes | Not certified |
 | Meriden | Yes | No | No | No | Not certified |
 | Middlebury | No | No | No | No | Not certified |
 | Milford | Yes | Yes | Yes | Yes | Not certified |
@@ -85,3 +85,11 @@ Do not infer that GitHub Actions content tests prove a full Next.js build or Clo
 - Added three Guilford-specific photographs with bilingual captions, Commons creator credits and verified CC BY-SA 4.0 licenses: [Guilford Town Green (Fergo22)](https://commons.wikimedia.org/wiki/File:The_Guilford_Town_Green_in_Connecticut.jpg), [Westwoods Preserve Rock Cave (Morrowlong)](https://commons.wikimedia.org/wiki/File:Green_Rectangle_Trail_passing_through_Rock_Cave_near_Moose_Hill_Road_in_Westwoods,_Guilford,_Connecticut.jpg), and [Dudleytown Historic District (Magicpiano)](https://commons.wikimedia.org/wiki/File:GuilfordCT_DudleytownHD_2.jpg).
 - Added Guilford regression tests for bilingual guide presence, eleven municipal links, five sourced restaurants, three licensed photos and staging/affiliate safeguards. A content-only test cannot certify the full build or Cloudflare deployment.
 - **Still not launch-ready:** Both staging locale routes and robots.txt were inaccessible through the available browser on October 24. Rendered image delivery, metadata/canonical/hreflang, mobile layout, accessibility, Equal Housing and affiliate disclosures, full Next.js build and actual deployment remain unverified. Do not certify Guilford as 100%.
+
+## Madison source-completion pass (2026-10-24)
+
+- Expanded Madison's original English/Spanish guide to cover Hammonasset Beach State Park and Meigs Point, Surf Club and municipal beach rules, Salt Meadow Park, Shore Line East commuting, parcel research, flood exposure and water/septic due diligence. Official sources: https://ctparks.com/parks/hammonasset-beach-state-park ; https://www.madisonct.org/504/Beaches ; https://www.madisonct.org/526/Salt-Meadow-Park ; https://shorelineeast.com/stations/madison-station/ ; https://www.madisonct.org/326/Surface-Water-Protection .
+- Added **15 bilingual official municipal and transport links** for assessments, tax collection, the current tax rate, land records, permits, zoning, GIS, health, floodplain management, parks, emergency preparedness and rail service. The town publishes **23.06 mills effective July 1, 2026** at https://www.madisonct.org/434/Tax-Rate ; individual bills and special district charges must be confirmed separately.
+- Rechecked five restaurants against their own sites and added bilingual cuisine descriptions: https://www.cafeallegre.com/ ; https://www.amatospizzapasta.com/ ; https://barbouchee.com/ ; https://thewharfmadison.com/ ; https://donahuesmadisonbeachgrille.com/ . All are neutral directory entries, not Joey's Top Picks.
+- Added three Madison-specific photos with bilingual captions, creator credits and Commons licenses: [Madison Green (SveaA; CC BY-SA 3.0)](https://commons.wikimedia.org/wiki/File:Madison_Green,_Connecticut.JPG), [Meigs Point shoreline (Karl Thomas Moore; CC BY-SA 4.0)](https://commons.wikimedia.org/wiki/File:Hammonasset_Beach_State_Park.jpg), [Hammonasset salt-marsh footbridge (Jllm06; CC BY-SA 4.0)](https://commons.wikimedia.org/wiki/File:Hammonasset_Beach_State_Park_-_foot_bridge.jpg).
+- Added `tests/madison.test.mjs` for source-code regression checks. **Not certified:** full Next.js build, live English/Spanish page rendering, photography delivery, mobile accessibility, rendered SEO/canonical/hreflang/sitemap, affiliate and Equal Housing display, and Cloudflare deployment still need independent checks.
