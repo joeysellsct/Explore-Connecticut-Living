@@ -6,8 +6,8 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
-- Curated restaurant directory: **12/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **4/27**.
+- Curated restaurant directory: **13/27** (counts any directory; individual lists still need review for approximately five current restaurants).
+- Dedicated official municipal/moving links: **5/27**.
 - Town-specific photo gallery data: **5/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
@@ -25,7 +25,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | Madison | Yes | Yes | No | No | Not certified |
 | Meriden | Yes | No | No | No | Not certified |
 | Middlebury | No | No | No | No | Not certified |
-| Milford | Yes | No | No | Yes | Not certified |
+| Milford | Yes | Yes | Yes | Yes | Not certified |
 | Naugatuck | Yes | No | No | No | Not certified |
 | New Haven | Yes | Yes | Yes | Yes | Not certified |
 | North Branford | No | No | No | No | Not certified |
@@ -48,3 +48,10 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 A town is **not 100%** until all of the following are checked: original useful bilingual town narrative, five verified restaurants where available, real attractions, current municipal/moving resources, sourced tax and utility caveats, licensed town-specific photography with attribution, unique English/Spanish metadata, canonical and hreflang, internal links, structured data where appropriate, sitemap, accessibility, live image delivery, mobile presentation, staging noindex/robots protections, Equal Housing Opportunity logo/disclosure, affiliate disclosures, and successful full build and rendered deployment audit.
 
 Do not infer that GitHub Actions content tests prove a full Next.js build or Cloudflare deployment. Track outstanding verification in [BUILDOUT-BLOCKERS.md](BUILDOUT-BLOCKERS.md). Preserve Joey's only approved personal dining picks: Zuppardi's in West Haven, Rosso Vino in Branford and Fuoco in Cheshire.
+
+## Milford update (2026-10-24)
+
+- Five Milford restaurants added with bilingual cuisine summaries and direct business-site source links: Stonebridge, Dockside Brewery, SBC Restaurant & Beer Bar, Bin 100 and Gusto Trattoria. These are neutral editorial listings, not Joey's personal picks.
+- Eleven municipal, state park and transportation research links added in English and Spanish; the city site map and departments hub are intentional fallback entry points for records and permit departments.
+- Expanded the Milford guide in both languages with coastal access, protected wildlife, commuter rail and property-specific tax, flood, permit and utility research.
+- Existing Milford photo data remains subject to rendered-image and license-attribution QA. No town certified launch-ready yet; full build, live layout, accessibility, metadata and deployment checks remain open.
