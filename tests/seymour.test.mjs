@@ -93,3 +93,15 @@ test('Seymour town profile offers a same-town English/Spanish switch', () => {
   assert.ok(page.includes('Leer esta guía en español'));
   assert.ok(page.includes('Read this town guide in English'));
 });
+
+test('Seymour and other town guides publish localized municipality structured data', () => {
+  const page = read('app/[locale]/towns/[slug]/page.tsx');
+  assert.match(page, /const townPlaceSchema=/);
+  assert.match(page, /'@type':'AdministrativeArea'/);
+  assert.match(page, /'@type':'WebPage'/);
+  assert.match(page, /inLanguage:es\?'es-US':'en-US'/);
+  assert.match(page, /about:\{'@id':townPlaceId\}/);
+  assert.match(page, /JSON\.stringify\(townPlaceSchema\)/);
+  assert.match(page, /const townPageUrl=/);
+  assert.match(page, /const townPlaceId=/);
+});
