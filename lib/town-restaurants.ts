@@ -427,12 +427,13 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {"name":"Joey C's Boathouse","cuisine":"Seafood, Mexican-inspired dishes and American comfort food","website":"https://www.joeycsboathouse.com/","sourceUrl":"https://www.joeycsboathouse.com/","checkedOn":"2026-10-21"},
     {"name":"Acapulcos Mexican Restaurant","cuisine":"Mexican","website":"https://acapulcos.net/","sourceUrl":"https://acapulcos.net/mexican-restaurant-locations/stratford-ct/","checkedOn":"2026-10-21"},
   ],
+  // Hamden restaurant locations checked 2026-10-24 against the five restaurants' official sites. Luce's site mentions a future Wallingford location; Hamden remains listed as its current address at review time.
   'hamden': [
-    {"name":"Mikro Depot","cuisine":"American gastropub and small plates","sourceUrl":"https://www.mikrodepot.com/","checkedOn":"2026-10-21"},
-    {"name":"Cafe Amici","cuisine":"Italian","sourceUrl":"https://www.hamdenedc.com/business-clusters/restaurants-food-and-beverage/","checkedOn":"2026-10-21"},
-    {"name":"Bangkok Boulevard","cuisine":"Thai","sourceUrl":"https://www.hamdenedc.com/business-clusters/restaurants-food-and-beverage/","checkedOn":"2026-10-21"},
-    {"name":"Playwright Irish Pub","cuisine":"Irish pub and American","sourceUrl":"https://www.hamdenedc.com/business-clusters/restaurants-food-and-beverage/","checkedOn":"2026-10-21"},
-    {"name":"Ristorante Luce","cuisine":"Italian","sourceUrl":"https://www.hamdenedc.com/business-clusters/restaurants-food-and-beverage/","checkedOn":"2026-10-21"},
+    {"name":"Mikro Depot","cuisine":"Craft-beer gastropub with small plates, sandwiches and hearty dishes","cuisineEs":"Gastropub con cerveza artesanal, tapas, sándwiches y platos abundantes","website":"https://www.mikrodepot.com/","sourceUrl":"https://www.mikrodepot.com/eat","checkedOn":"2026-10-24"},
+    {"name":"Cafe Amici","cuisine":"Italian-American dining with pasta, seafood and private events","cuisineEs":"Cocina italoestadounidense con pasta, mariscos y eventos privados","website":"https://amicirestaurantgroup.com/","sourceUrl":"https://amicirestaurantgroup.com/","checkedOn":"2026-10-24"},
+    {"name":"Bangkok Boulevard","cuisine":"Thai cooking, curries and noodle dishes","cuisineEs":"Cocina tailandesa, curris y platos de fideos","website":"https://www.bangkokblvd.com/","sourceUrl":"https://www.bangkokblvd.com/","checkedOn":"2026-10-24"},
+    {"name":"Playwright Irish Pub","cuisine":"Irish pub fare, American dishes and live music","cuisineEs":"Platos de pub irlandés, cocina estadounidense y música en vivo","website":"https://www.playwrightirishpub.com/","sourceUrl":"https://www.playwrightirishpub.com/about-us","checkedOn":"2026-10-24"},
+    {"name":"Ristorante Luce","cuisine":"Italian restaurant with pasta, steaks and a wine-focused menu","cuisineEs":"Restaurante italiano con pasta, carnes y una amplia selección de vinos","website":"https://ristoranteluce.net/","sourceUrl":"https://ristoranteluce.net/","checkedOn":"2026-10-24"},
   ],
   'madison': [
     {"name":"Cafe Allegre","cuisine":"Italian and Mediterranean","sourceUrl":"https://cafeallegre.com/","checkedOn":"2026-10-21"},
