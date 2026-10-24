@@ -448,12 +448,13 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {"name":"Pasta Avest & Pizzeria","cuisine":"Italian and pizza","sourceUrl":"https://www.pastaavest.com/","checkedOn":"2026-10-21"},
     {"name":"Kamana Fine Indian Cuisine","cuisine":"Indian and Nepalese","sourceUrl":"https://www.kamanacuisine.com/","checkedOn":"2026-10-21"},
   ],
+  // East Haven businesses and town addresses checked against official restaurant sites 2026-10-24; editorial suggestions only.
   'east-haven': [
-    {"name":"Bistro Mediterranean & Tapas Bar","cuisine":"Mediterranean and Spanish tapas","sourceUrl":"https://www.bistromediterraneanandtapasbar.com/","checkedOn":"2026-10-21"},
-    {"name":"Tolli's Apizza","cuisine":"Pizza and Italian","sourceUrl":"https://www.tolliseasthaven.com/","checkedOn":"2026-10-21"},
-    {"name":"Transilvania Restaurant and Bar","cuisine":"Romanian and Eastern European","sourceUrl":"https://transilvaniact.com/","checkedOn":"2026-10-21"},
-    {"name":"Sandpiper Restaurant","cuisine":"Seafood and American","sourceUrl":"https://sandpiper-easthaven.com/","checkedOn":"2026-10-21"},
-    {"name":"The Lobster Shack","cuisine":"Seafood and lobster rolls","sourceUrl":"https://www.connecticutlobster.com/","checkedOn":"2026-10-21"},
+    {"name":"Bistro Mediterranean & Tapas Bar","cuisine":"Mediterranean dishes and Spanish-style tapas","cuisineEs":"Platos mediterráneos y tapas de estilo español","website":"https://www.bistromediterraneanandtapasbar.com/east-haven","sourceUrl":"https://www.bistromediterraneanandtapasbar.com/","checkedOn":"2026-10-24"},
+    {"name":"Tolli's Apizza","cuisine":"Brick-oven apizza, pasta and Italian-American food","cuisineEs":"Apizza al horno de ladrillo, pasta y cocina italoestadounidense","website":"https://www.tolliseasthaven.com/","sourceUrl":"https://www.tolliseasthaven.com/","checkedOn":"2026-10-24"},
+    {"name":"Transilvania Restaurant and Bar","cuisine":"Romanian and Eastern European specialties","cuisineEs":"Especialidades rumanas y de Europa del Este","website":"https://transilvaniact.com/","sourceUrl":"https://transilvaniact.com/contact/","checkedOn":"2026-10-24"},
+    {"name":"Sandpiper Restaurant","cuisine":"Shoreline seafood, steak, pasta and American favorites","cuisineEs":"Mariscos de la costa, carnes, pasta y platos estadounidenses","website":"https://sandpiper-easthaven.com/","sourceUrl":"https://sandpiper-easthaven.com/","checkedOn":"2026-10-24"},
+    {"name":"The Lobster Shack","cuisine":"Waterfront seafood, lobster rolls and seasonal dishes","cuisineEs":"Mariscos junto al agua, bocadillos de langosta y platos de temporada","website":"https://www.connecticutlobster.com/","sourceUrl":"https://www.connecticutlobster.com/location/the-lobster-shack/","checkedOn":"2026-10-24"},
   ],
   'new-haven': [
     {"name":"Sally’s Apizza","cuisine":"New Haven-style pizza","sourceUrl":"https://visitnewhaven.com/places/sallys-apizza/","checkedOn":"2026-10-21"},
