@@ -29,6 +29,18 @@ test('West Haven municipal links cover property due diligence and local life in 
   }
 });
 
+test('West Haven photos have Commons file identities, creators and reusable licenses', () => {
+  const photos = read('lib/town-photography.ts');
+  const section = photos.match(/'west-haven':\s*\[([\s\S]*?)\],/);
+  assert.ok(section, 'West Haven photo gallery must exist');
+  for (const name of ['Savin Rock, West Haven, CT, USA.jpg', 'WestHavenAerial5.jpg']) {
+    assert.ok(section[1].includes(name), 'Missing photo ' + name);
+  }
+  assert.equal((section[1].match(/"titleEs":/g) || []).length, 2);
+  assert.equal((section[1].match(/"credit":/g) || []).length, 2);
+  assert.equal((section[1].match(/"licenseUrl":/g) || []).length, 2);
+});
+
 test('West Haven stays Joey personal pick only and staging protections stay in place', () => {
   const restaurants = read('lib/town-restaurants.ts');
   const picks = restaurants.split('export const joeyTopPicks')[1] || '';
