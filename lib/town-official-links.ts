@@ -2,6 +2,44 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Manchester municipal resources checked 2026-10-23.
+ 'manchester': [
+  {
+    "en": "Town of Manchester official municipal website",
+    "es": "Sitio oficial del municipio de Manchester",
+    "url": "https://www.manchesterct.gov/"
+  },
+  {
+    "en": "Manchester assessment, tax and GIS property search",
+    "es": "Consulta de tasaciones, impuestos y mapas GIS",
+    "url": "https://www.manchesterct.gov/Government/Departments/Information-Technology/Tax-Public-Computer"
+  },
+  {
+    "en": "Manchester Town Clerk land records",
+    "es": "Registro de escrituras y documentos inmobiliarios del Town Clerk",
+    "url": "https://www.manchesterct.gov/Government/Departments/Office-of-The-Town-Clerk/Land-Records"
+  },
+  {
+    "en": "Building Inspection Division and permit portal",
+    "es": "Inspección de edificios y portal de permisos",
+    "url": "https://www.manchesterct.gov/Government/Departments/Public-Works/Building-Inspection-Division"
+  },
+  {
+    "en": "Planning, zoning and map resources",
+    "es": "Recursos de planificación, zonificación y mapas",
+    "url": "https://www.manchesterct.gov/Government/Departments/Planning-and-Economic-Development"
+  },
+  {
+    "en": "Manchester parks and pools directory",
+    "es": "Directorio municipal de parques y piscinas",
+    "url": "https://www.manchesterct.gov/Government/Departments/Leisure-Family-and-Recreation-Department/Recreation-Divison/Parks-Pools-Locator"
+  },
+  {
+    "en": "Charter Oak Park and The Oak facilities",
+    "es": "Instalaciones de Charter Oak Park y The Oak",
+    "url": "https://www.manchesterct.gov/Government/Departments/Leisure-Family-and-Recreation-Department/Recreation-Divison/Parks-Pools-Locator/Charter-Oak-Park-and-The-Oak"
+  }
+],
  // Glastonbury official and historical-society resources checked 2026-10-23.
  'glastonbury': [
   {
