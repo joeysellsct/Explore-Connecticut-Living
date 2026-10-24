@@ -22,7 +22,7 @@ test('Rocky Hill has sourced, distinct English and Spanish editorial content', (
   assert.match(entry, /"en":/);
   assert.match(entry, /"es":/);
   assert.ok(entry.includes('Rocky Hill–Glastonbury Ferry'));
-  assert.ok(entry.includes('rockyhillct.gov'));
+  assert.ok(read('lib/town-highlights.ts').includes('rockyhillct.gov/194/Assessor'));
 });
 
 test('Rocky Hill restaurant directory has five verified bilingual listings without invented ratings', () => {
@@ -46,7 +46,7 @@ test('Rocky Hill has official moving resources and two licensed, credited local 
   const photos = townEntry('lib/town-photography.ts', 'rocky-hill', '[', ']');
   assert.equal((photos.match(/"file":/g) || []).length, 2);
   assert.ok(photos.includes('Daderot') && photos.includes('Denimadept'));
-  assert.equal((photos.match(/"license":"CC BY-SA 3.0"/g) || []).length, 2);
+  assert.equal((photos.match(/"license":\s*"CC BY-SA 3.0"/g) || []).length, 2);
   assert.ok(photos.includes('2007'));
 });
 
