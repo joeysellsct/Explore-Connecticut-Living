@@ -2,6 +2,16 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Derby Commons file pages and licenses checked 2026-10-24:
+ // https://commons.wikimedia.org/wiki/File:Naugatuck_River,_Derby,_CT,_USA.jpg
+ // https://commons.wikimedia.org/wiki/File:City_Hall,_Derby_CT.jpg
+ // https://commons.wikimedia.org/wiki/File:Derby_Osbornedale_house.jpg
+ // Historical images do not represent current building conditions. Credit and license links must render on page.
+ 'derby': [
+  {"title":"Naugatuck River from Derby Greenway (photographed November 2020)","titleEs":"Río Naugatuck desde Derby Greenway (fotografía de noviembre de 2020)","file":"Naugatuck River, Derby, CT, USA.jpg","credit":"Staib","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Derby City Hall (photographed May 2014)","titleEs":"Ayuntamiento de Derby (fotografía de mayo de 2014)","file":"City Hall, Derby CT.jpg","credit":"John Phelan","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Historic Osbornedale house in Derby (photographed July 2008)","titleEs":"Casa histórica de Osbornedale en Derby (fotografía de julio de 2008)","file":"Derby Osbornedale house.jpg","credit":"Polaron","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0/"},
+ ],
  // Ansonia-specific Commons images, locations, photographers and licenses checked 2026-10-24:
  // https://commons.wikimedia.org/wiki/File:MainStreetAnsoniaCT.jpg
  // https://commons.wikimedia.org/wiki/File:Ansonia_Nature_and_Recreation_Center_-_building.jpg
