@@ -426,13 +426,48 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {"name":"Stowe’s Seafood","cuisine":"Seafood market and casual shorefront seafood meals","cuisineEs":"Mercado de mariscos y comidas informales de pescado y mariscos junto a la costa","website":"https://stowesseafoodct.com/","sourceUrl":"https://stowesseafoodct.com/","checkedOn":"2026-10-23"},
     {"name":"Jerri’s Luncheonette","cuisine":"Breakfast and lunch in West Haven, including Colombian-inspired options","cuisineEs":"Desayunos y almuerzos en West Haven, con opciones de inspiración colombiana","sourceUrl":"https://visitnewhaven.com/places/jerris-luncheonette/","checkedOn":"2026-10-23"},
   ],
+  // Branford restaurants checked 2026-10-23 against restaurant websites and Visit New Haven; editorial directory, not personal endorsements.
   'branford': [
-    {"name":"Lenny’s Indian Head","cuisine":"Seafood","sourceUrl":"https://visitnewhaven.com/places/lennys-indian-head/","checkedOn":"2026-10-21"},
-    {"name":"Dockside Restaurant","cuisine":"Seafood and waterfront dining","sourceUrl":"https://visitnewhaven.com/places/dockside-restaurant/","checkedOn":"2026-10-21"},
-    {"name":"Rossitto’s Ristorante","cuisine":"Italian","sourceUrl":"https://visitnewhaven.com/wp-content/uploads/2024/04/New-Haven-Visitors-Guide-2024-FINAL.pdf","checkedOn":"2026-10-21"},
-    {"name":"Jalapeño Heaven","cuisine":"Mexican","sourceUrl":"https://visitnewhaven.com/wp-content/uploads/2024/04/New-Haven-Visitors-Guide-2024-FINAL.pdf","checkedOn":"2026-10-21"},
-    {"name":"Ross Vino","cuisine":"Italian","sourceUrl":"https://ctvisit.com/articles/takeout-and-delivery-restaurants-connecticut","checkedOn":"2026-10-21"},
-  ],
+  {
+    "name": "Lenny's Indian Head Inn",
+    "cuisine": "New England seafood and American classics in Indian Neck",
+    "cuisineEs": "Mariscos de Nueva Inglaterra y platos clásicos estadounidenses en Indian Neck",
+    "website": "https://www.lennysnow.com/",
+    "sourceUrl": "https://www.lennysnow.com/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Dockside Seafood and Grill",
+    "cuisine": "Seasonal seafood and waterfront dining",
+    "cuisineEs": "Mariscos de temporada y comidas junto al agua",
+    "sourceUrl": "https://visitnewhaven.com/places/dockside-restaurant/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Rossitto's Ristorante",
+    "cuisine": "Italian pasta and contemporary American dishes",
+    "cuisineEs": "Pastas italianas y platos estadounidenses contemporáneos",
+    "website": "https://www.rossittos.com/",
+    "sourceUrl": "https://www.rossittos.com/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Jalapeño Heaven",
+    "cuisine": "Mexican dishes, tacos and fajitas",
+    "cuisineEs": "Cocina mexicana, tacos y fajitas",
+    "website": "https://jalapeno-heaven.com/",
+    "sourceUrl": "https://jalapeno-heaven.com/jalapeno-dr-menu-2022-fall.pdf",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Rosso Vino",
+    "cuisine": "Italian dining and pasta near the Branford shoreline",
+    "cuisineEs": "Cocina italiana y pastas cerca de la costa de Branford",
+    "website": "https://rossovino.net/",
+    "sourceUrl": "https://rossovino.net/contact/",
+    "checkedOn": "2026-10-23"
+  }
+],
   'orange': [
     {name:"Andini's Restaurant",cuisine:'Italian-American and pizza',website:'https://andinisrestaurant.com/',sourceUrl:'https://andinisrestaurant.com/',checkedOn:'2026-10-23'},
     {name:'Coromandel Cuisine of India',cuisine:'Indian',website:'https://www.coromandelorange.com/',sourceUrl:'https://www.coromandelorange.com/',checkedOn:'2026-10-23'},
