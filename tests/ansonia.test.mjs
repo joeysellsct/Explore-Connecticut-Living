@@ -22,7 +22,7 @@ test('Ansonia has substantive bilingual guide with current rail, tax and utility
   for (const term of ['Ansonia Nature', 'Waterbury Branch', 'July 20, 2026', 'May 31, 2027', '29.46', 'Aquarion']) {
     assert.ok(guide.en.includes(term), 'English guide missing ' + term);
   }
-  for (const term of ['Centro', '20 de julio de 2026', '31 de mayo de 2027', '29,46', 'Aquarion']) {
+  for (const term of ['Nature and Recreation Center', '20 de julio de 2026', '31 de mayo de 2027', '29,46', 'Aquarion']) {
     assert.ok(guide.es.includes(term), 'Spanish guide missing ' + term);
   }
 });
