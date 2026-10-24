@@ -12,6 +12,14 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Milford locations and cuisine checked on official restaurant sites 2026-10-24; editorial listings, not Joey's personal picks.
+ 'milford': [
+  {name:"Stonebridge Restaurant",cuisine:"Waterfront American dining, seafood and steaks",cuisineEs:"Cocina estadounidense junto al agua, mariscos y carnes",website:"https://stonebridgerestaurant.com/",sourceUrl:"https://stonebridgerestaurant.com/",checkedOn:"2026-10-24"},
+  {name:"Dockside Brewery",cuisine:"Waterfront brewery with casual food and shared plates",cuisineEs:"Cervecería junto al agua con comida informal y platos para compartir",website:"https://docksidebrewery.com/",sourceUrl:"https://docksidebrewery.com/contact",checkedOn:"2026-10-24"},
+  {name:"SBC Restaurant & Beer Bar",cuisine:"American restaurant and craft beer near Milford Harbor",cuisineEs:"Restaurante estadounidense y cerveza artesanal cerca del puerto de Milford",website:"https://www.sbcrestaurants.com/",sourceUrl:"https://www.sbcrestaurants.com/",checkedOn:"2026-10-24"},
+  {name:"Bin 100 Restaurant",cuisine:"Italian and Mediterranean-inspired dining",cuisineEs:"Cocina de inspiración italiana y mediterránea",website:"https://www.bin100.com/",sourceUrl:"https://www.bin100.com/",checkedOn:"2026-10-24"},
+  {name:"Gusto Trattoria",cuisine:"Northern Italian-style restaurant and private dining",cuisineEs:"Restaurante de estilo italiano del norte y salones privados",website:"https://gustotrattoria.com/",sourceUrl:"https://gustotrattoria.com/",checkedOn:"2026-10-24"}
+ ],
  // Manchester restaurants and town locations checked against their official sites 2026-10-23; editorial listings, not personal picks.
  'manchester': [
   {
