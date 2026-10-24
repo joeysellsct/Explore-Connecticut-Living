@@ -2,6 +2,33 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Manchester Commons file pages, locations, creators and licenses checked 2026-10-23: https://commons.wikimedia.org/wiki/File:Main_Street,_Manchester_CT.jpg ; https://commons.wikimedia.org/wiki/File:Case_Pond_Manchester_Connecticut.jpg ; https://commons.wikimedia.org/wiki/File:Cheney_Rail_Trail_bridge_over_Bigelow_Brook,_Manchester_CT.jpg
+ 'manchester': [
+  {
+    "title": "Main Street Historic District in Manchester (photographed 2013)",
+    "titleEs": "Distrito histórico de Main Street en Manchester (fotografía de 2013)",
+    "file": "Main Street, Manchester CT.jpg",
+    "credit": "John Phelan",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  {
+    "title": "Case Pond in the Case Mountain Recreational Area (photographed 2020)",
+    "titleEs": "Case Pond en el área recreativa Case Mountain (fotografía de 2020)",
+    "file": "Case Pond Manchester Connecticut.jpg",
+    "credit": "Morrowlong",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "title": "Cheney Rail Trail bridge over Bigelow Brook (photographed 2023)",
+    "titleEs": "Puente del sendero ferroviario Cheney sobre Bigelow Brook (fotografía de 2023)",
+    "file": "Cheney Rail Trail bridge over Bigelow Brook, Manchester CT.jpg",
+    "credit": "John Phelan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  }
+],
  // Glastonbury image subjects, authors and CC BY-SA 4.0 licenses verified on Wikimedia Commons file descriptions 2026-10-23.
  'glastonbury': [
   {
