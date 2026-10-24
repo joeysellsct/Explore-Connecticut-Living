@@ -2,6 +2,69 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Branford official town and transit pages checked 2026-10-23. Confirm current charges and parcel conditions directly with the agencies.
+ 'branford': [
+  {
+    "en": "Town of Branford municipal services",
+    "es": "Servicios municipales de Branford",
+    "url": "https://www.branford-ct.gov/"
+  },
+  {
+    "en": "Branford Assessor: property assessments and field cards",
+    "es": "Tasador de Branford: tasaciones y fichas de propiedades",
+    "url": "https://www.branford-ct.gov/179/Assessors-Office"
+  },
+  {
+    "en": "Branford Town Clerk: recorded land documents",
+    "es": "Secretaría municipal: documentos inmobiliarios registrados",
+    "url": "https://www.branford-ct.gov/333/Land-Records"
+  },
+  {
+    "en": "Branford GIS: parcel and zoning map layers (not a legal survey)",
+    "es": "GIS de Branford: mapas de parcelas y zonificación (no sustituyen un plano legal)",
+    "url": "https://www.branford-ct.gov/220/Branford-GIS"
+  },
+  {
+    "en": "Branford Building Department: permits and inspections",
+    "es": "Departamento de construcción: permisos e inspecciones",
+    "url": "https://www.branford-ct.gov/200/Building-Department"
+  },
+  {
+    "en": "Planning and Zoning: land-use regulations and permits",
+    "es": "Planificación y zonificación: normas de uso del suelo y permisos",
+    "url": "https://www.branford-ct.gov/288/Planning-Zoning-Section"
+  },
+  {
+    "en": "Tax Collector: current bills, payment guidance and sewer charges",
+    "es": "Recaudación de impuestos: facturas, pagos y cargos de alcantarillado",
+    "url": "https://www.branford-ct.gov/319/Tax-Collector"
+  },
+  {
+    "en": "Engineering Department: flood maps, drainage and sewer questions",
+    "es": "Ingeniería municipal: mapas de inundación, drenaje y alcantarillado",
+    "url": "https://www.branford-ct.gov/219/Engineering-Department"
+  },
+  {
+    "en": "Water Pollution Control Facility: sewer service and user fees",
+    "es": "Servicio de alcantarillado: cobertura y cargos por uso",
+    "url": "https://www.branford-ct.gov/329/Water-Pollution-Control-Facility"
+  },
+  {
+    "en": "Parks, recreation and senior programs",
+    "es": "Parques, recreación y programas para personas mayores",
+    "url": "https://www.branford-ct.gov/287/Parks-Recreation-and-Senior-Services"
+  },
+  {
+    "en": "Resident permits: beach/park parking and transfer station access",
+    "es": "Permisos de residentes: estacionamiento en playas y parques y acceso al centro de reciclaje",
+    "url": "https://www.branford-ct.gov/320/Branford-Resident-Permits"
+  },
+  {
+    "en": "Shore Line East: Branford station and connections",
+    "es": "Shore Line East: estación de Branford y conexiones ferroviarias",
+    "url": "https://shorelineeast.com/stations/"
+  }
+],
  // Manchester municipal resources checked 2026-10-23.
  'manchester': [
   {
