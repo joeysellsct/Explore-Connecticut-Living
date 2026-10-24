@@ -47,6 +47,6 @@ test('West Haven stays Joey personal pick only and staging protections stay in p
   assert.ok(picks.includes("'west-haven'"), 'West Haven personal pick key exists');
   assert.ok(picks.includes('Zuppardi'), 'Zuppardi personal pick remains');
   const layout = read('app/[locale]/layout.tsx');
-  assert.match(layout, /index:false,follow:false/);
+  assert.match(layout, /robots:\{index:allowIndexing,follow:allowIndexing\}/);
   assert.match(read('app/robots.ts'), /disallow:'\/'/);
 });
