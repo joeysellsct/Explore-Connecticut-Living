@@ -385,12 +385,13 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
       "checkedOn": "2026-10-24"
     }
   ],
+  // Ansonia restaurants and city locations rechecked against each business's website on 2026-10-24; neutral listings, not Joey's personal picks.
   'ansonia': [
-    {"name":"Relish Wine Bar & Grill","cuisine":"New American","sourceUrl":"https://www.relishwinebarandgrill.net/","checkedOn":"2026-10-22"},
-    {"name":"Retro Bar & Char","cuisine":"Pizza and American bar","sourceUrl":"https://www.retrobarandchar.com/","checkedOn":"2026-10-22"},
-    {"name":"Chifrijos Restaurant","cuisine":"Peruvian and Costa Rican","sourceUrl":"https://www.chifrijosct.com/","checkedOn":"2026-10-22"},
-    {"name":"Koi Sushi Hibachi Asian Fusion","cuisine":"Asian fusion and sushi","sourceUrl":"https://www.koiasianfusionct.com/","checkedOn":"2026-10-22"},
-    {"name":"Bangkok Room Ansonia","cuisine":"Thai","sourceUrl":"https://bangkokroomansonia.com/","checkedOn":"2026-10-22"},
+    {"name":"Relish Wine Bar & Grill","cuisine":"Contemporary New American comfort food, brunch and grill dishes","cuisineEs":"Cocina estadounidense contemporánea, brunch y platos a la parrilla","website":"https://www.relishwinebarandgrill.net/","sourceUrl":"https://www.relishwinebarandgrill.net/","checkedOn":"2026-10-24"},
+    {"name":"Retro Bar & Char","cuisine":"Pizza, pub dishes and casual bar dining","cuisineEs":"Pizza, platos de pub y comida informal de bar","website":"https://www.retrobarandchar.com/","sourceUrl":"https://www.retrobarandchar.com/","checkedOn":"2026-10-24"},
+    {"name":"Chifrijos Restaurant","cuisine":"Peruvian and Costa Rican fusion including lomo saltado and chifrijos","cuisineEs":"Fusión peruana y costarricense, incluido lomo saltado y chifrijos","website":"https://www.chifrijosct.com/","sourceUrl":"https://www.chifrijosct.com/about-us","checkedOn":"2026-10-24"},
+    {"name":"Koi Sushi Hibachi Asian Fusion","cuisine":"Sushi, hibachi and Asian fusion dishes","cuisineEs":"Sushi, hibachi y platos de fusión asiática","website":"https://www.koiasianfusionct.com/","sourceUrl":"https://www.koiasianfusionct.com/","checkedOn":"2026-10-24"},
+    {"name":"Bangkok Room Ansonia","cuisine":"Thai restaurant and takeaway","cuisineEs":"Restaurante tailandés y comida para llevar","website":"https://bangkokroomansonia.com/","sourceUrl":"https://bangkokroomansonia.com/","checkedOn":"2026-10-24"},
   ],
   'seymour': [
     {"name":"Thai Dish","cuisine":"Thai","sourceUrl":"https://www.thaidishseymour.com/","checkedOn":"2026-10-22"},
