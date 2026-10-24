@@ -45,6 +45,13 @@ test('Manchester municipal links are bilingual and use official town domains', (
   for (const token of ['Tax-Public-Computer', 'Land-Records', 'Building-Inspection-Division', 'Planning-and-Economic-Development']) assert.ok(text.includes(token), token);
 });
 
+test('Manchester photographs have verified town subjects, credits, licenses and Spanish captions', () => {
+  const text = section('lib/town-photography.ts', '\n],');
+  for (const file of ['Main Street, Manchester CT.jpg', 'Case Pond Manchester Connecticut.jpg', 'Cheney Rail Trail bridge over Bigelow Brook, Manchester CT.jpg']) assert.ok(text.includes(file), file);
+  for (const key of ['"file"', '"titleEs"', '"credit"', '"license"', '"licenseUrl"']) assert.equal(text.split(key).length - 1, 3, key);
+  assert.ok(text.includes('CC BY-SA 3.0') && text.includes('CC BY-SA 4.0'));
+});
+
 test('Shared staging, bilingual and equal housing safeguards are preserved', () => {
   const robots = read('app/robots.ts');
   const sitemap = read('app/sitemap.ts');
