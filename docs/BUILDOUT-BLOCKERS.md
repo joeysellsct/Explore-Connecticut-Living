@@ -25,3 +25,11 @@ This file tracks specific blockers for incremental hourly town-profile work. A b
 - Municipal research: official Manchester assessment/tax search, Town Clerk land records, Building Inspection Division, Planning and Economic Development.
 - Restaurants: official sites for The Main Pub, Trattoria Toscana, Mulberry Street Pizza, Cafe Aura, and The Hollow at Manchester Country Club.
 - Photos: Wikimedia Commons file pages for `Main Street, Manchester CT.jpg` (John Phelan, CC BY-SA 3.0), `Case Pond Manchester Connecticut.jpg` (Morrowlong, CC BY-SA 4.0), and `Cheney Rail Trail bridge over Bigelow Brook, Manchester CT.jpg` (John Phelan, CC BY-SA 4.0).
+
+## New Haven County priority: West Haven (checked 2026-10-23)
+
+- **Content now committed:** expanded English/Spanish town narrative, 12 verified bilingual municipal links, five source-checked restaurants with Spanish cuisine descriptions, and two Commons-licensed photos (Savin Rock by Staib, CC BY-SA 4.0; West Haven shoreline aerial by PostMan1107, CC BY-SA 3.0).
+- **Rendered page not yet verified:** the configured staging URL `https://explore-connecticut-living-staging.joeysellsct.workers.dev/en/towns/west-haven` was inaccessible through the available browser tool (internal access error). Verify actual page rendering, images, captions, metadata, mobile layout, and accessibility in a later run. Do not claim deployment or mark West Haven 100% complete.
+- **Photo rights:** Commons file pages verified for image identity, location, photographer, and licenses; check live image delivery and ensure cropped/modified-image notices and CC BY-SA conditions are respected in the rendered gallery.
+- **Testing:** GitHub Actions runs validate content tests only; the workflow does not run a full Next.js build. Check the latest run after the last West Haven commit and resolve failures before treating content checks as passing.
+- **Next productive steps:** audit the existing West Haven page for live rendering, then finish another incomplete New Haven County town before starting Fairfield County. Continue despite any inaccessible staging URL.
