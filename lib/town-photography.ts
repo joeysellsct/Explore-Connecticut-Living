@@ -2,6 +2,12 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // East Haven Commons file identities and license credits checked 2026-10-24; credits also documented at https://www.ethosguides.com/g/east-haven-ct-travel-guide/photos . Live delivery not yet verified.
+ 'east-haven': [
+  {"title":"Tidal marshes at Farm River State Park","titleEs":"Marismas de marea en Farm River State Park","file":"Marshes at Farm River State Park (54052819227).jpg","credit":"Ethan Long","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0/"},
+  {"title":"Historic trolley at the Shore Line Trolley Museum (2008)","titleEs":"Tranvía histórico en el Shore Line Trolley Museum (2008)","file":"BERA Trolley Station EastHaven-CT.jpg","credit":"Versageek","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Old Stone Church near East Haven Town Green","titleEs":"Old Stone Church junto al centro histórico de East Haven","file":"EH Old Stone Church.jpg","credit":"Versageek","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+ ],
  // Branford Wikimedia Commons location, creator and CC BY-SA 4.0 licenses verified 2026-10-23:
  // https://commons.wikimedia.org/wiki/File:Branford_Town_Green,_Connecticut.jpg
  // https://commons.wikimedia.org/wiki/File:Stony_creek_branford.jpg
