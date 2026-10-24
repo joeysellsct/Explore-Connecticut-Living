@@ -435,12 +435,13 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {"name":"Playwright Irish Pub","cuisine":"Irish pub fare, American dishes and live music","cuisineEs":"Platos de pub irlandés, cocina estadounidense y música en vivo","website":"https://www.playwrightirishpub.com/","sourceUrl":"https://www.playwrightirishpub.com/about-us","checkedOn":"2026-10-24"},
     {"name":"Ristorante Luce","cuisine":"Italian restaurant with pasta, steaks and a wine-focused menu","cuisineEs":"Restaurante italiano con pasta, carnes y una amplia selección de vinos","website":"https://ristoranteluce.net/","sourceUrl":"https://ristoranteluce.net/","checkedOn":"2026-10-24"},
   ],
+  // Madison restaurant locations and cuisine verified on official business websites 2026-10-24; neutral editorial directory, not Joey's personal picks.
   'madison': [
-    {"name":"Cafe Allegre","cuisine":"Italian and Mediterranean","sourceUrl":"https://cafeallegre.com/","checkedOn":"2026-10-21"},
-    {"name":"Amato's Pizza & Pasta","cuisine":"Pizza and Italian","sourceUrl":"https://www.visitmadisonct.org/BusinessDirectoryII.aspx?lngBusinessCategoryID=28","checkedOn":"2026-10-21"},
-    {"name":"Bar Bouchée","cuisine":"French bistro","sourceUrl":"https://barbouchee.com/","checkedOn":"2026-10-21"},
-    {"name":"The Wharf Restaurant","cuisine":"New England coastal","sourceUrl":"https://thewharfmadison.com/","checkedOn":"2026-10-21"},
-    {"name":"Donahue's Madison Beach Grille","cuisine":"American pub and seafood","sourceUrl":"https://donahuesmadisonbeachgrille.com/our-story/","checkedOn":"2026-10-21"},
+    {"name":"Cafe Allegre","cuisine":"Italian and Mediterranean dinner dishes","cuisineEs":"Platos italianos y mediterráneos para cenar","website":"https://www.cafeallegre.com/","sourceUrl":"https://www.cafeallegre.com/","checkedOn":"2026-10-24"},
+    {"name":"Amato's Pizza & Pasta","cuisine":"High-temperature pizza, house-made pasta and Italian takeout","cuisineEs":"Pizza al horno de alta temperatura, pasta casera y comida italiana para llevar","website":"https://www.amatospizzapasta.com/","sourceUrl":"https://www.amatospizzapasta.com/","checkedOn":"2026-10-24"},
+    {"name":"Bar Bouchée","cuisine":"French bistro cooking inspired by traditional Lyonnaise fare","cuisineEs":"Cocina de bistró francés inspirada en la tradición de Lyon","website":"https://barbouchee.com/","sourceUrl":"https://barbouchee.com/","checkedOn":"2026-10-24"},
+    {"name":"The Wharf Restaurant","cuisine":"Seasonal New England coastal dining at Madison Beach Hotel","cuisineEs":"Cocina costera de Nueva Inglaterra de temporada en Madison Beach Hotel","website":"https://thewharfmadison.com/","sourceUrl":"https://thewharfmadison.com/","checkedOn":"2026-10-24"},
+    {"name":"Donahue's Madison Beach Grille","cuisine":"American pub fare, burgers, steaks and seafood","cuisineEs":"Comida de pub estadounidense, hamburguesas, carnes y mariscos","website":"https://donahuesmadisonbeachgrille.com/","sourceUrl":"https://donahuesmadisonbeachgrille.com/our-story/","checkedOn":"2026-10-24"},
   ],
   // Guilford restaurant locations and menus rechecked on official business sites 2026-10-24; neutral editorial listings, not Joey's Top Picks.
   'guilford': [
