@@ -2,6 +2,14 @@
 
 This file tracks specific blockers for incremental hourly town-profile work. A blocker must **not** stop unrelated town edits. Re-check a deferred item on a later run, and update or remove it only after verification.
 
+## Current build and deployment verification (2026-10-24)
+
+- **Resolved Cloudflare build blocker:** TypeScript error TS1117 was caused by a duplicate `milford` key in `lib/town-restaurants.ts`. The duplicate older directory was removed in commit `c83bf5e2c092567721ced3ba6afa70ee51afbe21`, preserving the newer bilingual listings. Joey subsequently supplied a Cloudflare screenshot showing a **Ready** build for that fix, but the screenshot displayed **0% traffic**, so live rollout was not established.
+- **Independent build CI now exists:** `.github/workflows/verify.yml` now has separate `content-tests` and `production-build` jobs. The production job installs dependencies and runs `npm run build:worker` for the Cloudflare Workers target. Both jobs **passed** for commit `b8d04d3c91771f44e577934ccd97d2a38a2266be` in GitHub Actions run `40096321508` (2026-10-24). This verifies the source builds in GitHub Actions, **not** that Cloudflare deployed it or that pages render correctly.
+- **Recovered regression failure:** Adding an Orange source comment between the Branford and Orange restaurant blocks exposed a brittle Branford test regex; corrected the test to allow intervening comments in commit `b8d04d3c91771f44e577934ccd97d2a38a2266be`. The final content test run passed. Earlier failed runs are retained in Actions history.
+- **Remaining blockers:** confirm a Cloudflare deployment with **Ready** and a positive traffic allocation for the current commit; audit actual English/Spanish rendered pages, image attribution, metadata/hreflang, structured data, sitemap, mobile accessibility, Equal Housing and affiliate disclosures. The automation cannot independently inspect Cloudflare deployment logs from its GitHub connection. Do not certify any town 100% yet.
+- **Reproducibility:** the repository still has no committed dependency lockfile. The GitHub build job uses `npm install`, so dependency versions can drift; add and validate a lockfile in a later controlled run before switching to a frozen install.
+
 ## Open items (checked 2026-10-23, America/New_York)
 
 | Item | Affected scope | Exact blocker | Safe next action |
