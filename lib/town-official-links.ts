@@ -2,6 +2,22 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // New Haven source pages checked 2026-10-24 against official City of New Haven and CTtransit websites. Links are research starting points; verify address-specific records and current policies directly.
+ 'new-haven': [
+  {en:"City of New Haven official website",es:"Sitio web oficial de la ciudad de New Haven",url:"https://www.newhavenct.gov/"},
+  {en:"Assessor: property valuations, records and revaluation",es:"Tasador municipal: valoraciones, registros y revaluación",url:"https://www.newhavenct.gov/government/departments-divisions/assessor-s-office"},
+  {en:"Tax Collector: real estate taxes and current mill rates",es:"Recaudación de impuestos: impuestos inmobiliarios y tasas vigentes",url:"https://www.newhavenct.gov/government/departments-divisions/tax-collector-division"},
+  {en:"Real estate tax payment information for new homebuyers",es:"Información para nuevos propietarios sobre el pago de impuestos",url:"https://www.newhavenct.gov/government/departments-divisions/tax-collector-division/pay-taxes"},
+  {en:"City Clerk: recorded deeds, mortgages and liens",es:"Secretaría municipal: escrituras, hipotecas y gravámenes registrados",url:"https://www.newhavenct.gov/government/departments-divisions/city-clerk"},
+  {en:"City records hub: land and property records",es:"Centro de registros municipales: terrenos y propiedades",url:"https://www.newhavenct.gov/city-services/records"},
+  {en:"Building Inspection: online permits and historical permit research",es:"Inspección de edificios: permisos en línea y consulta de permisos anteriores",url:"https://www.newhavenct.gov/government/departments-divisions/office-of-building-inspection-enforcement/hours-of-operation/building-department-hours"},
+  {en:"City Plan: land use, planning and development",es:"Planificación municipal: uso del suelo y desarrollo",url:"https://www.newhavenct.gov/government/departments-divisions/city-plan"},
+  {en:"Official zoning maps (not a property survey)",es:"Mapas oficiales de zonificación (no sustituyen un plano de mensura)",url:"https://www.newhavenct.gov/government/departments-divisions/city-plan/interactive-maps/zoning-maps"},
+  {en:"Zoning ordinances, flood and land-use regulations",es:"Ordenanzas de zonificación y normas de inundación y uso del suelo",url:"https://www.newhavenct.gov/government/departments-divisions/city-plan/zoning-and-regulations"},
+  {en:"City parks directory and current access notices",es:"Directorio de parques y avisos actuales de acceso",url:"https://www.newhavenct.gov/government/departments-divisions/parks-department"},
+  {en:"City contact directory: utilities, public works and city services",es:"Directorio municipal: servicios públicos, obras públicas y trámites",url:"https://www.newhavenct.gov/contact"},
+  {en:"CTtransit: New Haven area bus service and schedules",es:"CTtransit: autobuses y horarios de la zona de New Haven",url:"https://www.cttransit.com/services"},
+ ],
  // Cheshire town departments and services verified 2026-10-24 against cheshirect.gov departmental pages; GIS is a town-linked portal. Confirm parcel-specific taxes, sewer and zoning directly with the municipality.
  'cheshire': [
    {
