@@ -2,6 +2,25 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Glastonbury image subjects, authors and CC BY-SA 4.0 licenses verified on Wikimedia Commons file descriptions 2026-10-23.
+ 'glastonbury': [
+  {
+    "title": "First Church of Christ in Glastonbury (photographed 2018)",
+    "titleEs": "First Church of Christ en Glastonbury (fotografía de 2018)",
+    "file": "First Church of Christ, Glastonbury CT.jpg",
+    "credit": "John Phelan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "title": "South Glastonbury Library in the historic district (photographed 2018)",
+    "titleEs": "Biblioteca de South Glastonbury en el distrito histórico (fotografía de 2018)",
+    "file": "GlastonburyCT SouthGlastonburyLibrary.jpg",
+    "credit": "Magicpiano",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  }
+],
  // Rocky Hill Commons file descriptions, locations, authors and CC BY-SA 3.0 reuse rights verified 2026-10-23. Images dated 2007, not current-service depictions.
  'rocky-hill': [
   {
