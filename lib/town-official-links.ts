@@ -476,4 +476,20 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"West Haven beach parking and resident permit information","es":"Estacionamiento de playas y permisos para residentes","url":"https://cityofwesthaven.com/166/Human-Resources-Social-Services"},
   {"en":"West Haven Public Works: sewer service and local infrastructure","es":"Obras Públicas: alcantarillado e infraestructura local","url":"https://cityofwesthaven.com/177/Public-Works"},
  ],
+ // Seymour sources checked 2026-10-24 against the official town pages; FY 2026-27 real-estate mill rate 28.64 appears on the Assessor page.
+ // Tax amounts, exemptions, sewer service, permits and utilities depend on the individual property; confirm with town and providers.
+ 'seymour': [
+  {"en":"Town of Seymour: municipal departments and contacts","es":"Municipio de Seymour: departamentos y contactos","url":"https://www.seymourct.org/directory"},
+  {"en":"Assessor: FY 2026–27 mill rate 28.64, property assessments and exemptions; verify parcel-specific taxes","es":"Tasador: tasa de 28,64 mills para 2026–27, avalúos y exenciones; verifica impuestos de cada parcela","url":"https://www.seymourct.org/directory/assessor"},
+  {"en":"Assessor's online parcel maps: research land and assessment information, not a boundary survey","es":"Mapas de parcelas del tasador: consulta terrenos y avalúos; no sustituyen un deslinde","url":"https://seymour.mapxpress.net/"},
+  {"en":"Tax Collector: property tax bills, payment schedules and delinquent balances","es":"Recaudación: facturas de impuestos, fechas de pago y saldos vencidos","url":"https://www.seymourct.org/departments/TaxCollector"},
+  {"en":"Tax Collector FAQ: July and January installments, grace periods and payment options","es":"Preguntas de impuestos: cuotas de julio y enero, plazos de gracia y formas de pago","url":"https://www.seymourct.org/departments/TaxCollector/tax-collector"},
+  {"en":"Town Clerk: recorded deeds, land records and document-copy services","es":"Secretaría municipal: escrituras, registros de tierras y copias de documentos","url":"https://www.seymourct.org/departments/TownClerk"},
+  {"en":"Building Inspector contacts: ask about permits, inspections and code compliance","es":"Contactos de inspección de edificios: consulta permisos, inspecciones y códigos","url":"https://www.seymourct.org/departments/staff_directory/BuildingInspector/"},
+  {"en":"Town documents: building and zoning permit forms, wetlands applications and ordinances","es":"Documentos municipales: formularios de construcción, zonificación, humedales y ordenanzas","url":"https://www.seymourct.org/TownDocuments"},
+  {"en":"Zoning Enforcement: land use, zoning approvals and property compliance","es":"Control de zonificación: uso de suelo, autorizaciones y cumplimiento de normas","url":"https://www.seymourct.org/departments/ZoningEnforcement"},
+  {"en":"Water Pollution Control Authority: wastewater and sewer oversight; verify connection by address","es":"Autoridad de aguas residuales: alcantarillado y supervisión; verifica la conexión por dirección","url":"https://www.seymourct.org/departments/WaterPollutionControlAuthority"},
+  {"en":"Public Works: garbage, bulk pickup, transfer station and snow removal information","es":"Obras Públicas: basura, recogida de objetos grandes, centro de transferencia y nieve","url":"https://www.seymourct.org/departments/publicworks"},
+  {"en":"Town operations: municipal facilities, parks and development administration","es":"Operaciones municipales: instalaciones, parques y administración del desarrollo","url":"https://www.seymourct.org/departments/Operations"},
+ ],
 };
