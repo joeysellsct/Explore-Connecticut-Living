@@ -8,7 +8,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **13/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **8/27**.
-- Town-specific photo gallery data: **7/27** (license records still require live display checks).
+- Town-specific photo gallery data: **8/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -20,7 +20,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | Cheshire | Yes | Yes | Yes | Yes | Not certified |
 | Derby | Yes | Yes | No | No | Not certified |
 | East Haven | Yes | Yes | Yes | Yes | Not certified |
-| Guilford | Yes | Yes | Yes | No | Not certified |
+| Guilford | Yes | Yes | Yes | Yes | Not certified |
 | Hamden | Yes | Yes | Yes | Yes | Not certified |
 | Madison | Yes | Yes | No | No | Not certified |
 | Meriden | Yes | No | No | No | Not certified |
@@ -78,3 +78,10 @@ Do not infer that GitHub Actions content tests prove a full Next.js build or Clo
 - Added **11** bilingual municipal and moving-resource links to `lib/town-official-links.ts`, covering the Assessor, Tax Collector, Town Clerk, Building, Planning and Zoning, GIS, wetlands, health/septic, engineering/flood and parks. Official town directory: https://www.guilfordct.gov/ ; assessor: https://www.guilfordct.gov/town_departments/assessor/index.php ; GIS: https://guilford.mapxpress.net/portal.asp .
 - FY 2026–27 real-property rate **28.40 mills** (October 2025 Grand List) cross-checked against Connecticut Conference of Municipalities Guilford profile https://hub.ccm-ct.org/community/guilford/ and June 18, 2026 Board of Finance coverage https://guilfordfreepress.com/guilford-sets-28-40-mill-rate-after-three-budget-votes-here-is-what-it-means-for-your-tax-bill/ . The town Assessor confirms the October 2026 revaluation and tax impact beginning July 2027: https://www.guilfordct.gov/town_departments/assessor/index.php . Rates do not establish any individual bill or district charge.
 - **Still missing:** verified and attributed town-specific photo gallery; individual restaurant source re-audit; live English/Spanish render, image delivery, mobile and accessibility checks; metadata/hreflang/sitemap validation, full build and Cloudflare deployment verification. Guilford is **not** 100% complete.
+
+## Guilford follow-up (2026-10-24)
+
+- Rechecked all five Guilford dining listings directly against official restaurant websites, added English/Spanish cuisine descriptions, and retained neutral editorial placement without ratings or invented hours: [South Lane Bistro](https://www.southlanebistro.com/), [Quattro's](https://www.quattrositalian.com/), [The Guilford Bistro](https://www.theguilfordbistro.com/), [Pasta Avest & Pizzeria](https://www.pastaavest.com/), and [Kamana](https://www.kamanacuisine.com/).
+- Added three Guilford-specific photographs with bilingual captions, Commons creator credits and verified CC BY-SA 4.0 licenses: [Guilford Town Green (Fergo22)](https://commons.wikimedia.org/wiki/File:The_Guilford_Town_Green_in_Connecticut.jpg), [Westwoods Preserve Rock Cave (Morrowlong)](https://commons.wikimedia.org/wiki/File:Green_Rectangle_Trail_passing_through_Rock_Cave_near_Moose_Hill_Road_in_Westwoods,_Guilford,_Connecticut.jpg), and [Dudleytown Historic District (Magicpiano)](https://commons.wikimedia.org/wiki/File:GuilfordCT_DudleytownHD_2.jpg).
+- Added Guilford regression tests for bilingual guide presence, eleven municipal links, five sourced restaurants, three licensed photos and staging/affiliate safeguards. A content-only test cannot certify the full build or Cloudflare deployment.
+- **Still not launch-ready:** Both staging locale routes and robots.txt were inaccessible through the available browser on October 24. Rendered image delivery, metadata/canonical/hreflang, mobile layout, accessibility, Equal Housing and affiliate disclosures, full Next.js build and actual deployment remain unverified. Do not certify Guilford as 100%.
