@@ -57,6 +57,9 @@ test('Town template and sitemap retain bilingual town coverage', () => {
   assert.ok(template.includes('townRestaurants[slug]'));
   assert.ok(template.includes('townOfficialLinks[slug]'));
   assert.ok(template.includes('townPhotography[slug]'));
+  assert.ok(template.includes('relatedTowns.map(other=>'));
+  assert.ok(template.includes('href={`/${locale}/towns/${other.slug}`}'));
+  assert.ok(template.includes('countyTowns=connecticutTowns.filter(t=>t.county===town.county)'));
   assert.ok(sitemap.includes("['en','es']"));
   assert.ok(sitemap.includes("...connecticutTowns.map(t=>'towns/'+t.slug)"));
 });
