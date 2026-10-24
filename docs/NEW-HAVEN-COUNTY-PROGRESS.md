@@ -8,7 +8,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **13/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **10/27**.
-- Town-specific photo gallery data: **9/27** (license records still require live display checks).
+- Town-specific photo gallery data: **10/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -30,7 +30,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | New Haven | Yes | Yes | Yes | Yes | Not certified |
 | North Branford | No | No | No | No | Not certified |
 | North Haven | Yes | No | No | No | Not certified |
-| Orange | Yes | Yes | Yes | No | Not certified |
+| Orange | Yes | Yes | Yes | Yes | Not certified |
 | Oxford | No | No | No | No | Not certified |
 | Prospect | No | No | No | No | Not certified |
 | Seymour | Yes | Yes | No | No | Not certified |
@@ -99,5 +99,5 @@ Do not infer that GitHub Actions content tests prove a full Next.js build or Clo
 - Added 11 bilingual links to official Orange municipal departments, the permit portal and town site map. The Tax Collector explicitly publishes **27.40 mills for July 2026 real-estate bills (October 2025 Grand List)**: https://www.orange-ct.gov/206/Tax-Collector . Confirm the assessment, exemptions and actual bill for the property.
 - Expanded the original English/Spanish guide with High Plains Community Center, Fred Wolfe Park, PEZ Visitor Center, and address-specific zoning, permits, land records, drainage, flood and utility due diligence. Sources include https://www.orange-ct.gov/153/Assessor , https://www.orange-ct.gov/158/Building-Department and https://www.orange-ct.gov/167/Public-Works .
 - Added regression checks for the Orange guide, eleven distinct bilingual resources and unique town keys in restaurant data to prevent a repeat of the Milford TypeScript build failure.
-- Orange restaurant listings still require a fresh source/bilingual audit and town-specific photography is missing. Live English/Spanish page render, mobile accessibility, metadata, disclosures, full build and Cloudflare rollout still require independent verification. Orange is **not** 100% certified.
+- **Orange restaurant and photo follow-up:** rechecked five Orange restaurants directly against their official websites and added English/Spanish descriptions (Andini's, Coromandel, Noodle House, Ola and Puerto Vallarta). Added three Commons photos of Orange Town Hall, the PEZ Visitor Center and Orange Congregational Church with author, license, and bilingual captions; photos date from 2007–2012, not evidence of current conditions. Source file pages: https://commons.wikimedia.org/wiki/File:Orange_CT_town_hall.jpg , https://commons.wikimedia.org/wiki/File:Pez_Visitor%27s_Center_208.JPG and https://commons.wikimedia.org/wiki/File:Orange_ct_congregational_church.jpg . Added regression checks for the five dining records and three photo licenses. Live English/Spanish page render, photo delivery, mobile accessibility, metadata, disclosures, full build and Cloudflare rollout still require independent verification. Orange is **not** 100% certified.
 - A separate Cloudflare Workers production-build job was added to GitHub Actions after the duplicate Milford key was removed. Check the job's actual conclusion; do not equate passing content tests with a successful production build or deployment.
