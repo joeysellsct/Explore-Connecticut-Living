@@ -38,7 +38,7 @@ test('Branford municipal resources are bilingual and point to verified official 
 });
 
 test('Branford additions preserve staging SEO, housing and affiliate safeguards', () => {
-  assert.match(read('app/[locale]/layout.tsx'), /index:false,follow:false/);
+  assert.match(read('app/[locale]/layout.tsx'), /robots:\{index:allowIndexing,follow:allowIndexing\}/);
   assert.ok(read('app/robots.ts').includes("disallow:'/'"));
   const page = read('app/[locale]/towns/[slug]/page.tsx');
   assert.match(page, /townOfficialLinks\[slug\]\.map/);
