@@ -393,12 +393,13 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {"name":"Koi Sushi Hibachi Asian Fusion","cuisine":"Sushi, hibachi and Asian fusion dishes","cuisineEs":"Sushi, hibachi y platos de fusión asiática","website":"https://www.koiasianfusionct.com/","sourceUrl":"https://www.koiasianfusionct.com/","checkedOn":"2026-10-24"},
     {"name":"Bangkok Room Ansonia","cuisine":"Thai restaurant and takeaway","cuisineEs":"Restaurante tailandés y comida para llevar","website":"https://bangkokroomansonia.com/","sourceUrl":"https://bangkokroomansonia.com/","checkedOn":"2026-10-24"},
   ],
+  // Seymour listings reverified 2026-10-24 using direct business pages or identifiable online ordering menus; editorial listings only, not personal Top Picks.
   'seymour': [
-    {"name":"Thai Dish","cuisine":"Thai","sourceUrl":"https://www.thaidishseymour.com/","checkedOn":"2026-10-22"},
-    {"name":"Dock 34","cuisine":"American tavern","sourceUrl":"https://www.dock34.com/","checkedOn":"2026-10-22"},
-    {"name":"First Street Apizza","cuisine":"Pizza and Italian","sourceUrl":"https://www.firststreetapizza.com/","checkedOn":"2026-10-22"},
-    {"name":"Alberto's","cuisine":"Italian","sourceUrl":"https://www.albertosct.com/","checkedOn":"2026-10-22"},
-    {"name":"Train Station Pizza","cuisine":"Pizza and Italian","sourceUrl":"https://www.trainstationpizza.com/","checkedOn":"2026-10-22"},
+    {"name":"Thai Dish","cuisine":"Thai and Southeast Asian dishes, curries and noodles","cuisineEs":"Platos tailandeses y del sudeste asiático, curris y fideos","sourceUrl":"https://food.orders.co/thaidishct","checkedOn":"2026-10-24"},
+    {"name":"Dock 34","cuisine":"Seasonal outdoor Housatonic River bar and grill, burgers and seafood","cuisineEs":"Bar y parrilla de temporada al aire libre junto al río Housatonic, hamburguesas y mariscos","website":"https://www.dock34seymour.com/","sourceUrl":"https://www.dock34seymour.com/","checkedOn":"2026-10-24"},
+    {"name":"First Street Apizza","cuisine":"Apizza, calzones and Italian-American pasta dishes","cuisineEs":"Apizza, calzones y platos de pasta italoestadounidenses","website":"https://firststreetapizza.com/","sourceUrl":"https://firststreetapizza.com/","checkedOn":"2026-10-24"},
+    {"name":"Alberto's","cuisine":"Italian-American pizza, Sicilian pies, pasta and grinders","cuisineEs":"Pizza italoestadounidense, pizza siciliana, pasta y sándwiches tipo grinder","website":"https://www.albertospizzact.com/","sourceUrl":"https://www.albertospizzact.com/","checkedOn":"2026-10-24"},
+    {"name":"Train Station Pizza","cuisine":"Pizza, hot-oil pies, pasta and Italian-American entrees","cuisineEs":"Pizza, pizzas con aceite picante, pasta y platos italoestadounidenses","website":"https://www.seymourtrainstationpizza.com/","sourceUrl":"https://www.seymourtrainstationpizza.com/","checkedOn":"2026-10-24"},
   ],
   // Derby restaurant locations and menus checked 2026-10-24. Four direct business sites; Roseland is supported by a third-party directory because the available roseland-apizza.com page explicitly says it is unofficial.
   // Editorial directory only: none are Joey's personal Top Picks. No ratings or opening hours asserted.
