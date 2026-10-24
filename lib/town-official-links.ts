@@ -2,6 +2,22 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // East Haven municipal, state park and museum pages checked 2026-10-24; confirm parcel-level records and current park/permit rules with each agency.
+ 'east-haven': [
+  {"en":"Town of East Haven: municipal services","es":"Municipio de East Haven: servicios municipales","url":"https://www.easthaven-ct.gov/"},
+  {"en":"Assessor: property records, assessments and 2025 Grand List mill rates","es":"Tasador: fichas, tasaciones y tasas del padrón fiscal de 2025","url":"https://www.easthaven-ct.gov/162/Assessor"},
+  {"en":"Tax Department: property bills, payment information and rates","es":"Oficina de impuestos: facturas, pagos y tasas inmobiliarias","url":"https://www.easthaven-ct.gov/196/Tax-Department"},
+  {"en":"Town Clerk: recorded deeds, maps and land records","es":"Secretaría municipal: escrituras, planos y registros inmobiliarios","url":"https://www.easthaven-ct.gov/201/Town-Clerk"},
+  {"en":"Building Department: online permits and inspections","es":"Departamento de construcción: permisos en línea e inspecciones","url":"https://www.easthaven-ct.gov/168/Building-Department"},
+  {"en":"Planning and Zoning: zoning rules, permits and map inquiries","es":"Planificación y zonificación: normas, permisos y consultas de mapas","url":"https://easthaven-ct.gov/183/Planning-Zoning-Department"},
+  {"en":"Public Services: roads, drainage and park maintenance","es":"Servicios públicos municipales: calles, drenaje y mantenimiento de parques","url":"https://www.easthaven-ct.gov/189/Public-Services"},
+  {"en":"Municipal refuse and recycling: collection and transfer guidance","es":"Basura y reciclaje municipales: recolección y orientación para residuos","url":"https://www.easthaven-ct.gov/191/Municipal-Refuse-Waste-Recycling"},
+  {"en":"Town Beach parking: seasonal permit rules and applications","es":"Estacionamiento en la playa municipal: permisos y normas de temporada","url":"https://www.easthaven-ct.gov/286/Permit-Parking---East-Haven-Town-Beach"},
+  {"en":"Town facilities: beach, playgrounds and public spaces","es":"Instalaciones municipales: playa, parques infantiles y espacios públicos","url":"https://www.easthaven-ct.gov/facilities"},
+  {"en":"Recreation Department: community programs and activities","es":"Departamento de recreación: actividades y programas comunitarios","url":"https://www.easthaven-ct.gov/216/Recreation-Department"},
+  {"en":"Farm River State Park: official access, trail and marina information","es":"Parque estatal Farm River: accesos, senderos e información de la marina","url":"https://ctparks.com/parks/farm-river-state-park"},
+  {"en":"Shore Line Trolley Museum: visitor information and schedules","es":"Museo Shore Line Trolley: visitas y programación","url":"https://shorelinetrolley.org/"},
+ ],
  // Milford city departments, property research and state park checked 2026-10-24 on official sources; use property-specific records before relying on any estimate.
  'milford': [
   {en:"City of Milford official website",es:"Sitio web oficial de la ciudad de Milford",url:"https://www.milfordct.us/"},
