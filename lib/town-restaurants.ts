@@ -12,6 +12,49 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Rocky Hill restaurant locations and cuisines verified 2026-10-23 against official restaurant websites; not Joey personal picks.
+ 'rocky-hill': [
+  {
+    "name": "Salute Rocky Hill",
+    "cuisine": "Italian-American pasta and contemporary comfort dishes",
+    "cuisineEs": "Pastas italoestadounidenses y platos contemporáneos",
+    "website": "https://saluterockyhill.com/",
+    "sourceUrl": "https://saluterockyhill.com/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Carbone's Prime",
+    "cuisine": "Steakhouse with Italian classics and seafood",
+    "cuisineEs": "Restaurante de carnes con clásicos italianos y mariscos",
+    "website": "https://www.carbonesprime.com/",
+    "sourceUrl": "https://www.carbonesprime.com/location/carbones-prime/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Kob Jai Pho and Thai Restaurant",
+    "cuisine": "Thai cooking and Vietnamese-style pho",
+    "cuisineEs": "Cocina tailandesa y sopa pho de estilo vietnamita",
+    "website": "https://www.kobjaithai.com/",
+    "sourceUrl": "https://www.kobjaithai.com/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Saybrook Fish House",
+    "cuisine": "New England seafood and American classics",
+    "cuisineEs": "Mariscos de Nueva Inglaterra y platos estadounidenses clásicos",
+    "website": "https://saybrookfishhouse.com/",
+    "sourceUrl": "https://saybrookfishhouse.com/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Wood-n-Tap Rocky Hill",
+    "cuisine": "Casual American bar-and-grill food",
+    "cuisineEs": "Comida informal estadounidense de bar y parrilla",
+    "website": "https://woodntap.com/locations/rocky-hill",
+    "sourceUrl": "https://woodntap.com/locations/rocky-hill",
+    "checkedOn": "2026-10-23"
+  }
+],
   // Wethersfield restaurant locations and cuisines checked against official websites 2026-10-23; no ratings or personal endorsements.
   'wethersfield': [
   {
