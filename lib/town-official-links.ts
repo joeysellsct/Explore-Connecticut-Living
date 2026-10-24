@@ -2,6 +2,26 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Beacon Falls links checked against the town's own department pages and CTDOT on 2026-10-24.
+ // FY 2026-27 23.67-mill rate: town's final adopted FY27 budget narrative (May 28, 2026).
+ // 2025 revaluation changed assessments; a lower mill rate does not guarantee a lower parcel tax bill.
+ // Town Tax Collector lists possible separate sewer/water assessments; verify utility availability by address.
+ // CTDOT: Waterbury Branch trains replaced by buses July 20, 2026–May 31, 2027.
+ 'beacon-falls': [
+  {en:"Town departments: local services and contacts",es:"Departamentos municipales: servicios y contactos",url:"https://www.beaconfalls-ct.org/204/Departments"},
+  {en:"Assessor: property assessments, 2025 revaluation and GIS information",es:"Tasador: avalúos, reevaluación de 2025 e información cartográfica GIS",url:"https://www.beaconfalls-ct.org/223/Assessor"},
+  {en:"Tax Collector: property tax bills, installments and possible sewer/water assessments",es:"Recaudación: facturas, plazos y posibles cargos de alcantarillado y agua",url:"https://www.beaconfalls-ct.org/209/Tax-Collector"},
+  {en:"Adopted FY 2026–27 budget: 23.67-mill rate on the 2025 Grand List; check your actual parcel assessment",es:"Presupuesto aprobado 2026–27: tasa de 23,67 mills sobre la lista de 2025; verifica el avalúo de tu inmueble",url:"https://beaconfalls-ct.org/DocumentCenter/View/4758/TOBF-FY27-Narrative-Final-Adopted_52826"},
+  {en:"Town Clerk: deeds, land records and property-document fraud alerts",es:"Secretaría municipal: escrituras, registros de tierras y alertas de fraude documental",url:"https://www.beaconfalls-ct.org/208/Town-Clerk"},
+  {en:"Building Department: permits, inspections and land-use questions",es:"Construcción: permisos, inspecciones y consultas sobre uso de suelo",url:"https://www.beaconfalls-ct.org/222/Building"},
+  {en:"Town directory: Planning & Zoning and Inland Wetlands commission contacts",es:"Directorio municipal: contactos de Planificación, Zonificación y Humedales",url:"https://www.beaconfalls-ct.org/m/directory"},
+  {en:"Health Department: local health and Naugatuck Valley Health District resources",es:"Salud: recursos locales y del Distrito de Salud del Valle de Naugatuck",url:"https://www.beaconfalls-ct.org/216/Health"},
+  {en:"Wastewater Treatment Plant: town sewer department contact; confirm connection and fees by address",es:"Planta de aguas residuales: contacto del alcantarillado; confirma conexión y cargos por dirección",url:"https://www.beaconfalls-ct.org/206/Wastewater-Treatment-Plant"},
+  {en:"Regional Water Authority: town contact information; verify the property's actual water provider",es:"Autoridad Regional del Agua: información de contacto; confirma el proveedor real de cada vivienda",url:"https://www.beaconfalls-ct.org/212/Regional-Water-Authority"},
+  {en:"Public Works: municipal road and maintenance contacts",es:"Obras Públicas: contactos para calles y mantenimiento municipal",url:"https://www.beaconfalls-ct.org/213/Public-Works"},
+  {en:"Parks & Recreation Commission: programs and local recreation information",es:"Comisión de Parques y Recreación: programas y actividades locales",url:"https://www.beaconfalls-ct.org/333/Parks-Recreation-Commission"},
+  {en:"CTDOT Waterbury Branch station upgrades: substitute buses July 20, 2026–May 31, 2027; check current schedules",es:"CTDOT: obras en la línea Waterbury y autobuses sustitutos del 20 de julio de 2026 al 31 de mayo de 2027; consulta horarios actuales",url:"https://portal.ct.gov/dot/ctdot-press-releases/2026/ctdot-announces-construction-underway-on-four-waterbury-branch-line-station-upgrades"}
+ ],
  // Derby sources checked 2026-10-24 against derbyct.gov city department pages, CT DEEP and CTDOT.
  // City Tax Collector confirms FY 2026–27 real-estate mill rate 38.44 and separate motor-vehicle rate 32.46.
  // WPCA bills sewer use and capital charges separately; water availability and all utilities must be confirmed by address.
