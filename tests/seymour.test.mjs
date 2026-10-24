@@ -84,3 +84,12 @@ test('Seymour gallery discloses cropped historic images in both languages and li
   assert.match(page, /File:\$\{encodeURIComponent\(photo\.file\)\}/);
   assert.match(page, /className="eh-gallery-credits"/);
 });
+
+
+test('Seymour town profile offers a same-town English/Spanish switch', () => {
+  const page = read('app/[locale]/towns/[slug]/page.tsx');
+  assert.ok(page.includes("href={`/${es?'en':'es'}/towns/${slug}`}"));
+  assert.ok(page.includes("hrefLang={es?'en-US':'es-US'}"));
+  assert.ok(page.includes('Leer esta guía en español'));
+  assert.ok(page.includes('Read this town guide in English'));
+});
