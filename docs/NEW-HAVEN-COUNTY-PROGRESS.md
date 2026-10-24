@@ -7,8 +7,8 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **13/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **11/27**.
-- Town-specific photo gallery data: **11/27** (license records still require live display checks).
+- Dedicated official municipal/moving links: **12/27**.
+- Town-specific photo gallery data: **12/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -18,7 +18,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | Bethany | Yes | No | No | No | Not certified |
 | Branford | Yes | Yes | Yes | Yes | Not certified |
 | Cheshire | Yes | Yes | Yes | Yes | Not certified |
-| Derby | Yes | Yes | No | No | Not certified |
+| Derby | Yes | Yes | Yes | Yes | Not certified |
 | East Haven | Yes | Yes | Yes | Yes | Not certified |
 | Guilford | Yes | Yes | Yes | Yes | Not certified |
 | Hamden | Yes | Yes | Yes | Yes | Not certified |
@@ -109,3 +109,11 @@ Do not infer that GitHub Actions content tests prove a full Next.js build or Clo
 - Rechecked five existing Ansonia restaurants on official sites and added Spanish descriptions, with no ratings or Joey personal-pick labels.
 - Added three Ansonia-specific Wikimedia Commons photos (historic Main Street, Nature Center visitor building and public library) with verified photographer names, bilingual captions and Creative Commons license links. Images date from 2010–2017 and do not prove current conditions.
 - Added dedicated regression tests. **Not 100% certified**: independent rendered EN/ES, image delivery, mobile accessibility, metadata/hreflang/sitemap, legal/affiliate visibility and Cloudflare deployment checks remain outstanding. GitHub Actions results are tracked separately from Cloudflare.
+
+## Derby update (2026-10-24)
+
+- Expanded Derby's original English/Spanish guide with the Greenway, Osbornedale State Park, Derby Green, Kellogg Environmental Center, riverfront diligence, and CTDOT's Waterbury Branch replacement buses through May 31, 2027.
+- Added 15 official bilingual resources covering Assessor, 2025 revaluation, FY 2026–27 real estate taxes (38.44 mills; vehicles separately 32.46), Clerk land records, permits and occupancy rules, WPCA sewer charges, water contacts, parks and transit.
+- Reverified five restaurant entries with bilingual cuisine descriptions and no invented ratings. Roseland's available site states it is unofficial; its entry instead uses a third-party directory source, not an official-website claim.
+- Added three Commons-licensed Derby photographs with photographer credits and bilingual captions, plus regression tests.
+- **Still not certified:** Cloudflare deployment, live images, mobile and accessibility, SEO/hreflang, legal and partner disclosures and property-specific data all require independent rendered-page QA. GitHub Actions must be checked separately from deployment.
