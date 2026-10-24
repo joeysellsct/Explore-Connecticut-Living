@@ -2,6 +2,16 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Seymour Commons file descriptions, depicted locations, photographer and CC BY-SA 3.0 licenses checked 2026-10-24:
+ // https://commons.wikimedia.org/wiki/File:Seymour,_CT_-_Town_Hall_01.jpg
+ // https://commons.wikimedia.org/wiki/File:Seymour,_CT_-_train_station_01.jpg
+ // https://commons.wikimedia.org/wiki/File:Seymour,_CT_-_Bank_St_02.jpg
+ // These 2012 photographs document historic scenes and must not be presented as current conditions.
+ 'seymour': [
+  {"title":"Seymour Town Hall in the Downtown Seymour Historic District (photographed March 2012)","titleEs":"Ayuntamiento de Seymour en el distrito histórico del centro (fotografía de marzo de 2012)","file":"Seymour, CT - Town Hall 01.jpg","credit":"Joe Mabel","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Seymour railroad station seen from Kisson's Crossing (photographed March 2012)","titleEs":"Estación de tren de Seymour vista desde Kisson's Crossing (fotografía de marzo de 2012)","file":"Seymour, CT - train station 01.jpg","credit":"Joe Mabel","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Historic Bank Street storefront in downtown Seymour (photographed March 2012)","titleEs":"Fachada comercial histórica en Bank Street, centro de Seymour (fotografía de marzo de 2012)","file":"Seymour, CT - Bank St 02.jpg","credit":"Joe Mabel","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+ ],
  // Derby Commons file pages and licenses checked 2026-10-24:
  // https://commons.wikimedia.org/wiki/File:Naugatuck_River,_Derby,_CT,_USA.jpg
  // https://commons.wikimedia.org/wiki/File:City_Hall,_Derby_CT.jpg
