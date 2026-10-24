@@ -2,6 +2,24 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Madison links verified 2026-10-24 against official Madison municipal pages and Shore Line East. The town publishes 23.06 mills effective July 1, 2026; confirm parcel-specific districts, utilities and current bills directly.
+ 'madison': [
+  {"en":"Town of Madison: municipal services and resident information","es":"Municipio de Madison: servicios e información para residentes","url":"https://www.madisonct.org/"},
+  {"en":"Assessor: assessment questions, exemptions and property valuation","es":"Tasador municipal: tasaciones, exenciones y valoración de propiedades","url":"https://www.madisonct.org/157/Assessor"},
+  {"en":"Tax Collector: bills, payments and delinquency information","es":"Recaudación de impuestos: facturas, pagos e información sobre atrasos","url":"https://www.madisonct.org/328/Tax-Collector"},
+  {"en":"Official tax rate: 23.06 mills effective July 1, 2026; check parcel and any special-district charges","es":"Tasa tributaria oficial: 23,06 mills desde el 1 de julio de 2026; verifica la parcela y posibles cargos de distritos especiales","url":"https://www.madisonct.org/434/Tax-Rate"},
+  {"en":"Town Clerk land records: deeds and recorded documents","es":"Registros de tierras de la secretaría municipal: escrituras y documentos inscritos","url":"https://www.madisonct.org/459/Land-Records"},
+  {"en":"Building Department: permit rules, inspections and historical permit searches","es":"Departamento de Construcción: permisos, inspecciones y consultas de permisos anteriores","url":"https://www.madisonct.org/241/Building-Department"},
+  {"en":"Planning and Zoning: land-use questions and applications","es":"Planificación y Zonificación: uso del suelo y solicitudes","url":"https://www.madisonct.org/349/Planning-Zoning-Department"},
+  {"en":"Zoning maps: check district boundaries and regulations before relying on a use","es":"Mapas de zonificación: consulta los límites y normas antes de decidir sobre un uso","url":"https://www.madisonct.org/354/Zoning-Maps"},
+  {"en":"GIS information: parcel and environmental mapping, not a boundary survey","es":"Información GIS: mapas de parcelas y medioambiente; no sustituyen un deslinde","url":"https://www.madisonct.org/665/Geographic-Information-System"},
+  {"en":"Health Department: environmental health, testing and property-related health questions","es":"Departamento de Salud: salud ambiental, pruebas y consultas relacionadas con inmuebles","url":"https://www.madisonct.org/200/Health-Department"},
+  {"en":"Public Works: roads, drainage and solid-waste services","es":"Obras Públicas: calles, drenaje y gestión de residuos","url":"https://www.madisonct.org/391/Public-Works-Department"},
+  {"en":"Floodplain Management: flood-risk maps and development rules","es":"Gestión de zonas inundables: mapas de riesgo y normas de construcción","url":"https://www.madisonct.org/800/Floodplain-Management"},
+  {"en":"Beach and Recreation: park programs and beach access rules","es":"Playas y Recreación: programas de parques y normas de acceso a playas","url":"https://www.madisonct.org/165/Beach-Recreation-Department"},
+  {"en":"Emergency Management: hurricane and storm preparedness","es":"Gestión de Emergencias: preparación ante huracanes y tormentas","url":"https://www.madisonct.org/247/Emergency-Management"},
+  {"en":"Shore Line East Madison station: service, accessibility and connections","es":"Estación Madison de Shore Line East: servicio, accesibilidad y conexiones","url":"https://shorelineeast.com/stations/madison-station/"},
+ ],
  // Guilford links checked 2026-10-24 against the official Guilford municipal site navigation and linked portals; GIS is not a survey. Verify tax bills, utility connections and permits by parcel.
  'guilford': [
   {"en":"Town of Guilford: municipal departments and resident services","es":"Municipio de Guilford: departamentos y servicios para residentes","url":"https://www.guilfordct.gov/"},
