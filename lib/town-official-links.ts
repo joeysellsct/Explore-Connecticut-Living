@@ -2,6 +2,44 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Glastonbury official and historical-society resources checked 2026-10-23.
+ 'glastonbury': [
+  {
+    "en": "Town of Glastonbury municipal services",
+    "es": "Servicios municipales de Glastonbury",
+    "url": "https://www.glastonburyct.gov/"
+  },
+  {
+    "en": "Glastonbury property assessments and parcel research",
+    "es": "Tasaciones y consulta de parcelas de Glastonbury",
+    "url": "https://www.glastonburyct.gov/departments/department-directory-i-z/property-assessment/-alpha-P"
+  },
+  {
+    "en": "Glastonbury Town Clerk land records",
+    "es": "Documentos inmobiliarios de la Secretaría Municipal",
+    "url": "https://www.glastonburyct.gov/departments/department-directory-i-z/town-clerk/land-records"
+  },
+  {
+    "en": "Building Inspection and Zoning permits",
+    "es": "Permisos de construcción y zonificación",
+    "url": "https://www.glastonburyct.gov/departments/department-directory-a-h/building-inspection-zoning/-alpha-W"
+  },
+  {
+    "en": "Riverfront Park and Boathouse information",
+    "es": "Información de Riverfront Park y Boathouse",
+    "url": "https://www.glastonburyct.gov/departments/department-directory-i-z/parks-and-recreation/riverfront-park-boathouse"
+  },
+  {
+    "en": "Cotton Hollow Preserve access and regulations",
+    "es": "Acceso y normas de Cotton Hollow Preserve",
+    "url": "https://www.glastonburyct.gov/home/components/facilitydirectory/facilitydirectory/112/180"
+  },
+  {
+    "en": "Historical Society of Glastonbury historic sites",
+    "es": "Lugares históricos de la Sociedad Histórica de Glastonbury",
+    "url": "https://hsgct.org/"
+  }
+],
  // Rocky Hill town/state official links verified 2026-10-23.
  'rocky-hill': [
   {
