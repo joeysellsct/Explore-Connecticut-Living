@@ -2,6 +2,16 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Orange, Connecticut Commons files and reuse terms verified 2026-10-24:
+ // https://commons.wikimedia.org/wiki/File:Orange_CT_town_hall.jpg
+ // https://commons.wikimedia.org/wiki/File:Pez_Visitor%27s_Center_208.JPG
+ // https://commons.wikimedia.org/wiki/File:Orange_ct_congregational_church.jpg
+ // Images date from 2007-2012; do not represent current facility conditions or visitor hours.
+ 'orange': [
+  {"title":"Orange Town Hall exterior (photographed March 2009)","titleEs":"Exterior del ayuntamiento de Orange (fotografía de marzo de 2009)","file":"Orange CT town hall.jpg","credit":"Staib","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0/"},
+  {"title":"PEZ Visitor Center in Orange (photographed May 2012)","titleEs":"Centro de visitantes PEZ en Orange (fotografía de mayo de 2012)","file":"Pez Visitor's Center 208.JPG","credit":"Pedro Xing","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/"},
+  {"title":"Orange Congregational Church in the historic center (photographed May 2007)","titleEs":"Iglesia congregacional de Orange en el centro histórico (fotografía de mayo de 2007)","file":"Orange ct congregational church.jpg","credit":"Staib","license":"CC BY 2.5","licenseUrl":"https://creativecommons.org/licenses/by/2.5/"},
+ ],
  // Madison Commons file identity, Madison location, creator and CC BY-SA licenses verified 2026-10-24:
  // https://commons.wikimedia.org/wiki/File:Madison_Green,_Connecticut.JPG
  // https://commons.wikimedia.org/wiki/File:Hammonasset_Beach_State_Park.jpg
