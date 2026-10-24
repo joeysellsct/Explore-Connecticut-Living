@@ -11,7 +11,7 @@ const listFor = (path, slug) => {
   const left = source.indexOf('[', start + anchor.length);
   const right = source.indexOf('],', left);
   assert.ok(left > start && right > left, 'Missing array in ' + path);
-  return JSON.parse(source.slice(left, right + 1));
+  return JSON.parse(source.slice(left, right + 1).replace(/,\s*]/g, ']'));
 };
 
 test('East Haven has detailed original English and Spanish research', () => {
