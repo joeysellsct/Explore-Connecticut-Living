@@ -2,6 +2,23 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Hamden links checked 2026-10-24 against Town of Hamden, CT Parks, RWA, GNHWPCA and Eli Whitney Museum sources. Verify parcel-level service, taxes and rules with each agency.
+ 'hamden': [
+  {"en":"Town of Hamden: official municipal services","es":"Municipio de Hamden: servicios oficiales","url":"https://www.hamden.com/"},
+  {"en":"Assessor: assessments, property cards and valuation questions","es":"Tasador: tasaciones, fichas y consultas de valor","url":"https://www.hamden.com/168/Assessors-Office"},
+  {"en":"Property card lookup (Vision): parcel assessment information","es":"Consulta de fichas inmobiliarias (Vision): tasaciones por parcela","url":"https://gis.vgsi.com/hamdenct/"},
+  {"en":"Tax Office: FY 2026–27 mill rate, bills and revaluation phase-in","es":"Oficina de impuestos: tasa 2026–27, facturas y aplicación gradual de la reevaluación","url":"https://www.hamden.com/240/Tax-Office"},
+  {"en":"Town Clerk: deeds, land records and IQS search guidance","es":"Secretaría municipal: escrituras, registros inmobiliarios y búsqueda IQS","url":"https://www.hamden.com/243/Town-Clerk"},
+  {"en":"Building Department: permits, inspections and application rules","es":"Departamento de construcción: permisos, inspecciones y solicitudes","url":"https://www.hamden.com/174/Building"},
+  {"en":"Planning and Zoning: permitted uses, wetlands and zoning questions","es":"Planificación y zonificación: usos permitidos, humedales y consultas","url":"https://www.hamden.com/199/Planning-Zoning"},
+  {"en":"Hamden GIS: map layers and parcel research (not a survey)","es":"GIS de Hamden: mapas y parcelas (no sustituye un plano legal)","url":"https://www.hamdengis.com/"},
+  {"en":"Parks and Facilities: municipal parks and recreation sites","es":"Parques e instalaciones: áreas recreativas municipales","url":"https://www.hamden.com/229/Parks-Facilities"},
+  {"en":"Brooksvale Park: farm-inspired park and trail information","es":"Brooksvale Park: parque rural, granja y senderos","url":"https://hamden.com/570/Welcome-to-Brooksvale-Park"},
+  {"en":"Sleeping Giant State Park: official trails and visitor guidance","es":"Sleeping Giant State Park: senderos y recomendaciones oficiales","url":"https://ctparks.com/parks/sleeping-giant-state-park"},
+  {"en":"Regional Water Authority: water service and customer care","es":"Autoridad Regional del Agua: servicio y atención al cliente","url":"https://www.rwater.com/"},
+  {"en":"Greater New Haven WPCA: sewer service, connection and billing questions","es":"Autoridad regional GNHWPCA: alcantarillado, conexiones y facturación","url":"https://gnhwpca.com/"},
+  {"en":"Eli Whitney Museum & Workshop: visitor and educational programs","es":"Museo y Taller Eli Whitney: visitas y programas educativos","url":"https://www.eliwhitney.org/visit"},
+ ],
  // East Haven municipal, state park and museum pages checked 2026-10-24; confirm parcel-level records and current park/permit rules with each agency.
  'east-haven': [
   {"en":"Town of East Haven: municipal services","es":"Municipio de East Haven: servicios municipales","url":"https://www.easthaven-ct.gov/"},
