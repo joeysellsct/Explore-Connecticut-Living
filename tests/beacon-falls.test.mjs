@@ -5,7 +5,7 @@ import {readFileSync} from 'node:fs';
 const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8');
 
 test('Beacon Falls has a substantive original bilingual guide with moving and visitor cautions', () => {
-  const match = read('lib/town-highlights.ts').match(/^ 'beacon-falls':(\\{.*\\}),$/m);
+  const match = read('lib/town-highlights.ts').match(/^ 'beacon-falls':(\{.*\}),$/m);
   assert.ok(match, 'Missing Beacon Falls guide');
   const guide = JSON.parse(match[1]);
   assert.ok(guide.en.length > 2000 && guide.es.length > 2200);
@@ -20,13 +20,13 @@ test('Beacon Falls has a substantive original bilingual guide with moving and vi
 
 test('Beacon Falls has thirteen unique bilingual official municipal and moving resources', () => {
   const source = read('lib/town-official-links.ts');
-  const match = source.match(/^ 'beacon-falls': \\[(.*?)^ \\],/ms);
+  const match = source.match(/^ 'beacon-falls': \[(.*?)^ \],/ms);
   assert.ok(match, 'Missing Beacon Falls resource collection');
-  const entries = match[1].split('\\n').map(line => line.trim()).filter(Boolean);
+  const entries = match[1].split('\n').map(line => line.trim()).filter(Boolean);
   assert.equal(entries.length, 13);
   const urls = [];
   for (const line of entries) {
-    assert.match(line, /^\\{en:"[^"]+",es:"[^"]+",url:"https:\\/\\/[^"]+"\\},?$/);
+    assert.match(line, /^\{en:"[^"]+",es:"[^"]+",url:"https:\/\/[^"]+"\},?$/);
     const url = line.match(/url:"([^"]+)"/)[1];
     assert.equal(new URL(url).protocol, 'https:');
     urls.push(url);
@@ -41,13 +41,13 @@ test('Beacon Falls has thirteen unique bilingual official municipal and moving r
 test('Beacon Falls stays outside Joey personal restaurant Top Picks', () => {
   const picks = read('lib/town-restaurants.ts').split('export const joeyTopPicks:')[1];
   assert.ok(picks, 'Missing personal picks registry');
-  assert.doesNotMatch(picks, /['"]beacon-falls['"]\\s*:/);
+  assert.doesNotMatch(picks, /['"]beacon-falls['"]\s*:/);
 });
 
 test('Shared town page retains bilingual resources and staging indexing safeguards', () => {
   const page = read('app/[locale]/towns/[slug]/page.tsx');
-  assert.match(page, /townOfficialLinks\\[slug\\]\\.map/);
-  assert.match(page, /townRestaurants\\[slug\\]/);
-  assert.match(page, /townPhotography\\[slug\\]/);
-  assert.match(read('app/robots.ts'), /disallow:'\\/'/);
+  assert.match(page, /townOfficialLinks\[slug\]\.map/);
+  assert.match(page, /townRestaurants\[slug\]/);
+  assert.match(page, /townPhotography\[slug\]/);
+  assert.match(read('app/robots.ts'), /disallow:'\/'/);
 });
