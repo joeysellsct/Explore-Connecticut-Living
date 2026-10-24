@@ -2,6 +2,17 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Beacon Falls Wikimedia Commons location, photographer and licenses verified 2026-10-24:
+ // https://commons.wikimedia.org/wiki/File:BeaconFalls_DepotStreetBridge.jpg (Magicpiano, CC BY-SA 4.0, 2017)
+ // https://commons.wikimedia.org/wiki/File:BeaconFallsCT_HomeWoolenCompany1.jpg (Magicpiano, CC BY-SA 4.0, 2017)
+ // https://commons.wikimedia.org/wiki/File:Beacon_Falls_Station.jpg (Adam Moss, CC BY-SA 2.0, 2011)
+ // These are dated historical views; the 2011 station photo does not show current Waterbury Branch service.
+ 'beacon-falls': [
+  {"title":"Depot Street Bridge in Beacon Falls (photographed March 2017)","titleEs":"Puente de Depot Street en Beacon Falls (fotografía de marzo de 2017)","file":"BeaconFalls DepotStreetBridge.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Historic Home Woolen Company building in Beacon Falls (photographed March 2017)","titleEs":"Edificio histórico de Home Woolen Company en Beacon Falls (fotografía de marzo de 2017)","file":"BeaconFallsCT HomeWoolenCompany1.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Beacon Falls railroad station in July 2011 (historic view; check current service alerts)","titleEs":"Estación de tren de Beacon Falls en julio de 2011 (vista histórica; consulte los avisos del servicio actual)","file":"Beacon Falls Station.jpg","credit":"Adam Moss","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0/"}
+ ],
+
  // Seymour Commons file descriptions, depicted locations, photographer and CC BY-SA 3.0 licenses checked 2026-10-24:
  // https://commons.wikimedia.org/wiki/File:Seymour,_CT_-_Town_Hall_01.jpg
  // https://commons.wikimedia.org/wiki/File:Seymour,_CT_-_train_station_01.jpg
