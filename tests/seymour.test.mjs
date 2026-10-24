@@ -74,3 +74,13 @@ test('Seymour has three separately attributed CC-licensed historic photos', () =
     assert.ok(photo.file.startsWith('Seymour, CT - '));
   }
 });
+
+
+test('Seymour gallery discloses cropped historic images in both languages and links original licensing', () => {
+  const page = read('app/[locale]/towns/[slug]/page.tsx');
+  assert.match(page, /Images are cropped to fit the layout and may depict historic scenes/);
+  assert.match(page, /Las imágenes se recortan para ajustarse al diseño/);
+  assert.match(page, /photo\.licenseUrl/);
+  assert.match(page, /File:\$\{encodeURIComponent\(photo\.file\)\}/);
+  assert.match(page, /className="eh-gallery-credits"/);
+});
