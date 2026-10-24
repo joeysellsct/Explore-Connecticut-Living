@@ -2,6 +2,13 @@
 
 This file tracks specific blockers for incremental hourly town-profile work. A blocker must **not** stop unrelated town edits. Re-check a deferred item on a later run, and update or remove it only after verification.
 
+## Beacon Falls follow-up (2026-10-24)
+
+- **Source content advanced:** 13 bilingual municipal, utility, property-tax and transit links added in `lib/town-official-links.ts`, plus a substantially expanded original English/Spanish guide in `lib/town-highlights.ts`. The town's adopted FY27 budget narrative documents **23.67 mills**, with 2025 revaluation caveats; official town park rules and CTDOT Waterbury Branch bus substitution are explicitly addressed. Regression coverage added in `tests/beacon-falls.test.mjs`.
+- **Transient test failure recovered:** initial Beacon Falls test file contained over-escaped regular expressions; corrected in commit `1ab23ca992b8a7beb0f33cf3ed44e7f02ce02f9b`. The later `content-tests` job for commit `a83a9ce5c0497824d94e4960212fd2b41173f65d` passed when checked; its `production-build` job was still running. Recheck the final outcome next run.
+- **Live deployment unverified:** staging `/en/towns/beacon-falls` and `/robots.txt` could not be opened through the available browser. A GitHub connector GET of `https://api.github.com/repos/joeysellsct/Explore-Connecticut-Living/deployments?per_page=4` returned `INVALID_ARGUMENT / HTTPError 400: GitHub Fetch URL is not an allowed public GitHub repository or search endpoint`. This is a connector endpoint restriction, **not** evidence of a failed Cloudflare deployment. Retry independent staging or Cloudflare verification later; do not certify the town.
+- **Open Beacon Falls work:** verify approximately five active restaurants, licensed attributed photos, live bilingual metadata/canonical/hreflang, sitemap, structured data, mobile/accessibility, image delivery, Equal Housing and partner disclosures. No town marked 100%.
+
 ## Current build and deployment verification (2026-10-24)
 
 - **Resolved Cloudflare build blocker:** TypeScript error TS1117 was caused by a duplicate `milford` key in `lib/town-restaurants.ts`. The duplicate older directory was removed in commit `c83bf5e2c092567721ced3ba6afa70ee51afbe21`, preserving the newer bilingual listings. Joey subsequently supplied a Cloudflare screenshot showing a **Ready** build for that fix, but the screenshot displayed **0% traffic**, so live rollout was not established.
