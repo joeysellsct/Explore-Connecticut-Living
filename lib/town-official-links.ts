@@ -2,6 +2,20 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Orange links checked 2026-10-24 against official town department pages; tax collector confirms 27.40 mills for July 2026 bills (2025 Grand List). Confirm actual parcel bills, sewer/water connections and permits with town staff.
+ 'orange': [
+  {"en":"Town of Orange: departments and resident services","es":"Municipio de Orange: departamentos y servicios para residentes","url":"https://www.orange-ct.gov/27/Departments"},
+  {"en":"Assessor: property assessments and revaluation research","es":"Tasador: tasaciones y consultas de reevaluación","url":"https://www.orange-ct.gov/153/Assessor"},
+  {"en":"Tax Collector: official 27.40-mill rate for July 2026 bills and payment details; confirm the individual bill","es":"Recaudación: tasa oficial de 27,40 mills para julio de 2026 y pagos; verifica la factura de cada inmueble","url":"https://www.orange-ct.gov/206/Tax-Collector"},
+  {"en":"Town Clerk: land records, deeds and recorded documents","es":"Secretaría municipal: registros inmobiliarios, escrituras y documentos inscritos","url":"https://www.orange-ct.gov/212/Town-Clerk"},
+  {"en":"Building Department: permits, inspections and approvals","es":"Departamento de Construcción: permisos, inspecciones y autorizaciones","url":"https://www.orange-ct.gov/158/Building-Department"},
+  {"en":"Plan and Zoning: land-use rules and zoning applications","es":"Planificación y Zonificación: normas de uso del suelo y solicitudes","url":"https://orange-ct.gov/165/Plan-Zoning-Department"},
+  {"en":"Health Department: environmental health and property-related inquiries","es":"Departamento de Salud: salud ambiental y consultas sobre propiedades","url":"https://www.orange-ct.gov/150/Health-Department"},
+  {"en":"Public Works: drainage, roads, sewer maintenance and flood-study links","es":"Obras Públicas: drenaje, caminos, mantenimiento de alcantarillado y estudios de inundación","url":"https://www.orange-ct.gov/167/Public-Works"},
+  {"en":"Parks and Recreation: town programs and facilities","es":"Parques y Recreación: programas e instalaciones municipales","url":"https://www.orange-ct.gov/480/Parks-Recreation"},
+  {"en":"Official online permit portal: confirm application and approval status with town staff","es":"Portal municipal de permisos: confirma solicitudes y aprobaciones con el personal","url":"https://orangect.portal.opengov.com/"},
+  {"en":"Town website site map: find GIS, property data, revaluation and land-record links","es":"Mapa del sitio municipal: enlaces a GIS, datos de propiedades, reevaluación y registros de tierras","url":"https://orange-ct.gov/sitemap"},
+ ],
  // Madison links verified 2026-10-24 against official Madison municipal pages and Shore Line East. The town publishes 23.06 mills effective July 1, 2026; confirm parcel-specific districts, utilities and current bills directly.
  'madison': [
   {"en":"Town of Madison: municipal services and resident information","es":"Municipio de Madison: servicios e información para residentes","url":"https://www.madisonct.org/"},
