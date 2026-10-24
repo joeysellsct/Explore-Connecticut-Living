@@ -12,6 +12,49 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Manchester restaurants and town locations checked against their official sites 2026-10-23; editorial listings, not personal picks.
+ 'manchester': [
+  {
+    "name": "The Main Pub",
+    "cuisine": "American comfort food, pub fare and live music",
+    "cuisineEs": "Comida casera estadounidense, platos de pub y música en vivo",
+    "website": "https://mainpub.com/",
+    "sourceUrl": "https://mainpub.com/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Trattoria Toscana",
+    "cuisine": "Italian-inspired dinner and pasta",
+    "cuisineEs": "Cenas y pastas de inspiración italiana",
+    "website": "https://www.trattoriatoscanact.com/",
+    "sourceUrl": "https://www.trattoriatoscanact.com/hours-and-location/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Mulberry Street Pizza",
+    "cuisine": "Pizza, Italian-American dishes and pub fare",
+    "cuisineEs": "Pizza, platos italoestadounidenses y comida de pub",
+    "website": "https://www.themulb.com/",
+    "sourceUrl": "https://www.themulb.com/contact-us",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "Cafe Aura",
+    "cuisine": "Italian steakhouse and contemporary dining",
+    "cuisineEs": "Restaurante italiano de carnes y cocina contemporánea",
+    "website": "https://www.cafeaura.com/",
+    "sourceUrl": "https://www.cafeaura.com/locations/",
+    "checkedOn": "2026-10-23"
+  },
+  {
+    "name": "The Hollow at Manchester Country Club",
+    "cuisine": "American appetizers, burgers, sandwiches and daily specials",
+    "cuisineEs": "Entrantes estadounidenses, hamburguesas, sándwiches y especialidades del día",
+    "website": "https://thehollowatmcc.com/",
+    "sourceUrl": "https://thehollowatmcc.com/",
+    "checkedOn": "2026-10-23"
+  }
+],
  // Glastonbury businesses and locations checked on official restaurant websites 2026-10-23; editorial listings, not Joey personal picks.
  'glastonbury': [
   {
