@@ -2,6 +2,27 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Branford Wikimedia Commons location, creator and CC BY-SA 4.0 licenses verified 2026-10-23:
+ // https://commons.wikimedia.org/wiki/File:Branford_Town_Green,_Connecticut.jpg
+ // https://commons.wikimedia.org/wiki/File:Stony_creek_branford.jpg
+ 'branford': [
+  {
+    "title": "Branford Town Green and historic town center (photographed 2019)",
+    "titleEs": "Branford Green y centro histórico (fotografía de 2019)",
+    "file": "Branford Town Green, Connecticut.jpg",
+    "credit": "Kenneth C. Zirkel",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "title": "Stony Creek waterfront in Branford (photographed 2019)",
+    "titleEs": "Costa de Stony Creek en Branford (fotografía de 2019)",
+    "file": "Stony creek branford.jpg",
+    "credit": "Andreas Faessler",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  }
+],
  // Manchester Commons file pages, locations, creators and licenses checked 2026-10-23: https://commons.wikimedia.org/wiki/File:Main_Street,_Manchester_CT.jpg ; https://commons.wikimedia.org/wiki/File:Case_Pond_Manchester_Connecticut.jpg ; https://commons.wikimedia.org/wiki/File:Cheney_Rail_Trail_bridge_over_Bigelow_Brook,_Manchester_CT.jpg
  'manchester': [
   {
