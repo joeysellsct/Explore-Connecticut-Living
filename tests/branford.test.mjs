@@ -52,7 +52,7 @@ test('Branford additions preserve staging SEO, housing and affiliate safeguards'
 
 test('Branford restaurant directory has five sourced bilingual entries without invented ratings', () => {
   const source = read('lib/town-restaurants.ts');
-  const match = source.match(/'branford':\s*(\[[\s\S]*?\]),\n  'orange':/);
+  const match = source.match(/'branford':\s*(\[[\s\S]*?\]),\n\s*(?:\/\/[^\n]*\n\s*)*'orange':/);
   assert.ok(match, 'Branford restaurant directory should exist');
   const restaurants = JSON.parse(match[1]);
   assert.equal(restaurants.length, 5);
