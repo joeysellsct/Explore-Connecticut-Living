@@ -1,11 +1,12 @@
 // Only show town-specific photos after checking the image's location and reuse license.
 // Wikimedia Commons file descriptions supply attribution and license information.
-export type TownPhoto={title:string;file:string;credit:string;license:string;licenseUrl:string};
+export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
  // Rocky Hill Commons file descriptions, locations, authors and CC BY-SA 3.0 reuse rights verified 2026-10-23. Images dated 2007, not current-service depictions.
  'rocky-hill': [
   {
     "title": "Dinosaur State Park exhibit dome (photographed 2007)",
+    "titleEs": "Cúpula de exposiciones de Dinosaur State Park (fotografía de 2007)",
     "file": "Dinosaur State Park (Rocky Hill, CT) - dome.JPG",
     "credit": "Daderot",
     "license": "CC BY-SA 3.0",
@@ -13,6 +14,7 @@ export const townPhotography:Record<string,TownPhoto[]>={
   },
   {
     "title": "Rocky Hill–Glastonbury Ferry (photographed 2007)",
+    "titleEs": "Ferry entre Rocky Hill y Glastonbury (fotografía de 2007)",
     "file": "IMG 4136 Rocky Hill - Glastonbury Ferry.jpg",
     "credit": "Denimadept",
     "license": "CC BY-SA 3.0",
