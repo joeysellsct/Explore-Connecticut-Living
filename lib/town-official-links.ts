@@ -2,6 +2,69 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Cheshire town departments and services verified 2026-10-24 against cheshirect.gov departmental pages; GIS is a town-linked portal. Confirm parcel-specific taxes, sewer and zoning directly with the municipality.
+ 'cheshire': [
+   {
+     "en": "Cheshire town government and services",
+     "es": "Gobierno y servicios municipales de Cheshire",
+     "url": "https://www.cheshirect.gov/"
+   },
+   {
+     "en": "Assessor: property valuations, exemptions and current mill-rate guidance",
+     "es": "Tasador: valores de propiedades, exenciones y tasa impositiva vigente",
+     "url": "https://cheshirect.gov/184/Assessor"
+   },
+   {
+     "en": "Town Clerk: recorded deeds and land records",
+     "es": "Secretaría municipal: escrituras y documentos inmobiliarios registrados",
+     "url": "https://cheshirect.gov/258/Land-Records"
+   },
+   {
+     "en": "Town GIS and property map (not a legal survey)",
+     "es": "Mapa GIS y parcelas (no sustituye un plano legal)",
+     "url": "https://cheshire.mapxpress.net/"
+   },
+   {
+     "en": "Building Department: permits and inspections",
+     "es": "Departamento de construcción: permisos e inspecciones",
+     "url": "https://cheshirect.gov/186/Building-Department"
+   },
+   {
+     "en": "Planning and Development: zoning, wetlands rules and application forms",
+     "es": "Planificación y desarrollo: zonificación, humedales y solicitudes",
+     "url": "https://cheshirect.gov/208/Regulations-Permits-Forms"
+   },
+   {
+     "en": "Collector of Revenue: property-tax and sewer-bill payment guidance",
+     "es": "Recaudación: pagos de impuestos inmobiliarios y facturas de alcantarillado",
+     "url": "https://cheshirect.gov/187/Collector-of-Revenue"
+   },
+   {
+     "en": "Sewer Division: public sewer service and connections",
+     "es": "División de alcantarillado: servicio público y conexiones",
+     "url": "https://cheshirect.gov/231/Sewer-Division-WPCD"
+   },
+   {
+     "en": "Engineering: drainage, public works permits and sewer questions",
+     "es": "Ingeniería: drenaje, permisos de obras públicas y consultas de alcantarillado",
+     "url": "https://cheshirect.gov/490/Engineering-and-Water-Pollution-Control"
+   },
+   {
+     "en": "Recreation: parks, trails, programs and facility reservations",
+     "es": "Recreación: parques, senderos, programas y reservas",
+     "url": "https://cheshirect.gov/241/Recreation"
+   },
+   {
+     "en": "Trash and recycling: collection rules and schedules",
+     "es": "Basura y reciclaje: normas y horarios de recolección",
+     "url": "https://cheshirect.gov/237/Trash-Recycling"
+   },
+   {
+     "en": "Open Space: land preservation and planning resources",
+     "es": "Espacios naturales: conservación de terrenos y planificación",
+     "url": "https://cheshirect.gov/207/Open-Space"
+   }
+ ],
  // Branford official town and transit pages checked 2026-10-23. Confirm current charges and parcel conditions directly with the agencies.
  'branford': [
   {
