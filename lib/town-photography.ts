@@ -2,6 +2,15 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Hamden image identity, location, author and license checked on Commons 2026-10-24:
+ // https://commons.wikimedia.org/wiki/File:Hamden,_Connecticut_town_hall_and_sign.jpg
+ // https://commons.wikimedia.org/wiki/File:Sleeping_Giant_State_Park,_Hamden,_Connecticut_(54512327437).jpg
+ // https://commons.wikimedia.org/wiki/File:Farmington_Canal_Heritage_Trail_by_Whitney_Avenue,_Mount_Carmel,_Hamden,_CT_(53308793522).jpg
+ 'hamden': [
+  {"title":"Hamden Memorial Town Hall and town sign (photographed 2020)","titleEs":"Ayuntamiento histórico y letrero de Hamden (fotografía de 2020)","file":"Hamden, Connecticut town hall and sign.jpg","credit":"Kenneth C. Zirkel","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Sleeping Giant State Park in Hamden (photographed 2024)","titleEs":"Sleeping Giant State Park en Hamden (fotografía de 2024)","file":"Sleeping Giant State Park, Hamden, Connecticut (54512327437).jpg","credit":"Ethan Long","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0/"},
+  {"title":"Farmington Canal Heritage Trail near Whitney Avenue in Mount Carmel (photographed 2023)","titleEs":"Sendero Farmington Canal junto a Whitney Avenue en Mount Carmel (fotografía de 2023)","file":"Farmington Canal Heritage Trail by Whitney Avenue, Mount Carmel, Hamden, CT (53308793522).jpg","credit":"Ethan Long","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0/"},
+ ],
  // East Haven Commons file identities and license credits checked 2026-10-24; credits also documented at https://www.ethosguides.com/g/east-haven-ct-travel-guide/photos . Live delivery not yet verified.
  'east-haven': [
   {"title":"Tidal marshes at Farm River State Park","titleEs":"Marismas de marea en Farm River State Park","file":"Marshes at Farm River State Park (54052819227).jpg","credit":"Ethan Long","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0/"},
