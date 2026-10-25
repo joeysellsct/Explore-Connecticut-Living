@@ -2,6 +2,25 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Prospect: official municipal, recreation and water-service sources reviewed 2026-10-25.
+ // 28.47 mills is for FY 2026–27 (October 1, 2025 Grand List); parcel assessments, service areas and fees require address-level checks.
+ 'prospect': [
+  {"en":"Assessor: check the property's assessed value, revaluation records and available exemptions","es":"Tasador: consulta la valoración fiscal de la propiedad, la reevaluación y las exenciones disponibles","url":"https://townofprospect.gov/assessor/"},
+  {"en":"FY 2026–27 real-property mill rate: Prospect reports 28.47 mills for the October 1, 2025 Grand List; verify the individual bill","es":"Tasa inmobiliaria 2026–27: Prospect indica 28,47 mills para la lista fiscal del 1 de octubre de 2025; verifica la factura individual","url":"https://townofprospect.gov/tax-faq/"},
+  {"en":"Tax Collector: verify current real-estate bills, payment methods, deadlines and sewer-use charges","es":"Recaudación de impuestos: verifica facturas inmobiliarias, pagos, vencimientos y cargos de alcantarillado","url":"https://townofprospect.gov/tax-collector/"},
+  {"en":"Tax payment guidance: review installment rules and payment options before closing","es":"Guía de pagos: consulta los plazos de cuotas y las opciones de pago antes del cierre","url":"https://townofprospect.gov/taxes-due/"},
+  {"en":"Town Clerk: obtain recorded deeds, land records, maps and other official municipal documents","es":"Secretaría municipal: solicita escrituras inscritas, registros de terrenos, planos y otros documentos oficiales","url":"https://townofprospect.gov/townclerk/"},
+  {"en":"Municipal external links: access the town's land-record search, property cards, permit portal and other tools","es":"Enlaces municipales: accede a registros de terrenos, fichas de propiedades, permisos y otras herramientas","url":"https://townofprospect.gov/links/"},
+  {"en":"Prospect GIS: review parcel maps and verify boundaries against a professional survey","es":"GIS de Prospect: consulta mapas de parcelas y confirma linderos con un levantamiento profesional","url":"https://prospect.mapxpress.net/pages/Contact.html"},
+  {"en":"Building Department: confirm permit requirements before additions, decks, pools or remodeling","es":"Departamento de Construcción: confirma permisos antes de ampliaciones, terrazas, piscinas o reformas","url":"https://townofprospect.gov/building-department/"},
+  {"en":"Land Use Office: ask about zoning permits, home occupations, variances and parcel-specific restrictions","es":"Oficina de Uso del Suelo: consulta permisos de zonificación, negocios en casa, excepciones y restricciones de la parcela","url":"https://townofprospect.gov/land-use/"},
+  {"en":"Planning and Zoning: review commission information and current land-use decisions","es":"Planificación y Zonificación: revisa información de la comisión y decisiones actuales sobre uso del suelo","url":"https://townofprospect.gov/planning-and-zoning/"},
+  {"en":"Inland Wetlands: check whether wetlands review is required before disturbing a site","es":"Humedales Interiores: comprueba si se requiere una revisión antes de alterar un terreno","url":"https://townofprospect.gov/inland-wetlands/"},
+  {"en":"Public Works: find municipal road maintenance and town infrastructure information","es":"Obras Públicas: consulta mantenimiento de calles e infraestructura municipal","url":"https://townofprospect.gov/public-works/"},
+  {"en":"Parks and Recreation: check current recreation programs and facility access rules","es":"Parques y Recreación: consulta programas vigentes y normas de acceso a instalaciones","url":"https://prospectct.myrec.com/info/default.aspx"},
+  {"en":"Prospect WPCA sewer user fees: some connected properties have separate sewer charges; confirm service and bills by address","es":"Cargos de alcantarillado de Prospect: algunas propiedades conectadas pagan cargos aparte; confirma servicio y facturas por dirección","url":"https://townofprospect.gov/sewer-user-fee/"},
+  {"en":"Waterbury Water Department: this provider serves portions of Prospect; verify the actual supplier and meter for each address","es":"Departamento de Agua de Waterbury: abastece partes de Prospect; confirma proveedor y contador de cada dirección","url":"https://waterburyct.gov/services/water"},
+ ],
  // Oxford: municipal departments, CCM FY2027 mill rate and Housatonic Valley Health District checked 2026-10-25.
  // The 20.55-mill rate is per $1,000 of assessed value; verify parcel bills, water and sewer availability individually.
  'oxford': [
