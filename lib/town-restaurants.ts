@@ -12,7 +12,16 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
- // Prospect: five restaurant-operated websites checked 2026-10-25 for Prospect street addresses and menus.
+ // Wolcott: five restaurant-operated websites checked 2026-10-25 for Wolcott addresses and menus.
+ // Neutral bilingual editorial directory; no ratings, hours or Joey personal Top Picks.
+ 'wolcott': [
+  {"name":"Mona Lisa Restaurant","cuisine":"Italian and French-inspired dining at 10 Wakelee Road with pasta, steaks and a lounge","cuisineEs":"Restaurante de inspiración italiana y francesa en 10 Wakelee Road con pastas, carnes y salón","website":"https://www.monalisarestaurant.net/","sourceUrl":"https://www.monalisarestaurant.net/","checkedOn":"2026-10-25"},
+  {"name":"Tramonti Pizzeria: Forno a Legna","cuisine":"Wood-fired Italian pizzeria at 95 Wolcott Road, part of the Tramonti restaurant group","cuisineEs":"Pizzería italiana al horno de leña en 95 Wolcott Road, parte del grupo Tramonti","website":"https://www.tramonti-ristorante.com/our-locations","sourceUrl":"https://www.tramonti-ristorante.com/our-locations","checkedOn":"2026-10-25"},
+  {"name":"Zuppa Unique Italian Pub","cuisine":"Italian pub at 524 Wolcott Road serving house-made soups, sauces and Italian dishes","cuisineEs":"Pub italiano en 524 Wolcott Road con sopas, salsas caseras y platos italianos","website":"https://www.zuppaitalianpub.com/","sourceUrl":"https://www.zuppaitalianpub.com/","checkedOn":"2026-10-25"},
+  {"name":"McBride's Restaurant & Apizza","cuisine":"Neighborhood pizzeria and bar at 246 Wolcott Road offering specialty pies and sandwiches","cuisineEs":"Pizzería y bar de barrio en 246 Wolcott Road con pizzas especiales y sándwiches","website":"https://www.mcbridesrestaurant.com/","sourceUrl":"https://www.mcbridesrestaurant.com/","checkedOn":"2026-10-25"},
+  {"name":"Wolcott Pizza Wood Fired Brick Oven","cuisine":"Wood-fired brick-oven pizzeria at 588 Wolcott Road with specialty pies and calzones","cuisineEs":"Pizzería de horno de ladrillo a leña en 588 Wolcott Road con pizzas especiales y calzones","website":"https://www.wolcottpizzawoodfiredbrickoven.com/","sourceUrl":"https://www.wolcottpizzawoodfiredbrickoven.com/","checkedOn":"2026-10-25"},
+ ],
+  // Prospect: five restaurant-operated websites checked 2026-10-25 for Prospect street addresses and menus.
  // Neutral bilingual editorial directory, not Joey personal Top Picks; no ratings or hours.
  'prospect': [
   {"name":"Haven Pizzeria Napoletana","cuisine":"Wood-fired Neapolitan-style pizza and Italian dishes at 22 Union City Road in Prospect","cuisineEs":"Pizza napolitana al horno de leña y platos italianos en 22 Union City Road, Prospect","website":"https://www.havenpizzerianapoletana.com/","sourceUrl":"https://www.havenpizzerianapoletana.com/","checkedOn":"2026-10-25"},
