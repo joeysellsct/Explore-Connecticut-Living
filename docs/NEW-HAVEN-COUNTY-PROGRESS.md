@@ -6,7 +6,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **25/27**.
-- Curated restaurant directory: **24/27** (counts any directory; individual lists still need review for approximately five current restaurants).
+- Curated restaurant directory: **25/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **25/27**.
 - Town-specific photo gallery data: **24/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
@@ -31,7 +31,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | North Branford | Yes | Yes | Yes | Yes | Not certified |
 | North Haven | Yes | Yes | Yes | Yes | Not certified |
 | Orange | Yes | Yes | Yes | Yes | Not certified |
-| Oxford | Yes | No | Yes | No | Not certified |
+| Oxford | Yes | Yes | Yes | No | Not certified |
 | Prospect | No | No | No | No | Not certified |
 | Seymour | Yes | Yes | Yes | Yes | Not certified |
 | Southbury | Yes | Yes | Yes | Yes | Not certified |
@@ -271,3 +271,9 @@ Do not infer that GitHub Actions content tests prove a full Next.js build or Clo
 - Added six English/Spanish sourced dining entries in `lib/town-restaurants.ts`: The Beacon Pizza Bar, Beacon Falls Tavern, The Original Antonio's, Rocco's Pizza, The Tap House and Molly's Bakery (a bakery/cafe, not a full-service restaurant). The five restaurant entries have town-specific direct restaurant websites or their own ordering pages; no invented ratings, review counts or hours. A new regression test checks all six entries.
 - Two older business websites claim **57 South Main Street** (New Harvest and Beacon Falls Tavern); the currently maintained Beacon Falls Tavern site was used, not both. An older Pizza Palace listing at **125 South Main Street** conflicts with Rocco's current ordering site; only Rocco's was included. The Tap House Toast ordering hours are inconsistent with third-party business hours, so hours were deliberately omitted. Recheck these in later runs.
 - Beacon Falls now has bilingual narrative, municipal resources, licensed photo records and a dining directory in source code. **Not 100% certified:** live rendered English/Spanish SEO, image delivery, accessibility, mobile, Equal Housing, affiliate disclosures and independent Cloudflare deployment still require verification.
+
+## Oxford restaurant directory update (2026-10-25)
+
+- Added five operator-sourced Oxford dining entries in `lib/town-restaurants.ts`: Sitting Duck Tavern, Char & Lemon, Oxford House Tavern, Rose's Family Restaurant and Oxford Pizza Palace. Each entry includes English and Spanish descriptions and a checked source URL; no ratings, review counts, hours or personal Top Picks were added.
+- Added a regression check to `tests/foundation.test.mjs` for record count, bilingual details, source URLs and Top Picks separation.
+- **Still not certified:** Oxford needs town-specific photographs with verified licenses and credits. Live English/Spanish rendered SEO, image delivery, accessibility, mobile layout, Equal Housing and affiliate disclosures, staging robots/noindex and Cloudflare deployment remain independently unverified.
