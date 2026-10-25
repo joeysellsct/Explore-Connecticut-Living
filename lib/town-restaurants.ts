@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Naugatuck restaurant locations and operator websites checked 2026-10-24.
+ // Editorial listings only; no invented hours, ratings or personal Joey endorsements.
+ 'naugatuck': [
+  {"name":"Jesse Camille's Restaurant","cuisine":"American restaurant with indoor dining, a brookside patio and private-event menus","cuisineEs":"Restaurante estadounidense con comedor interior, terraza junto al arroyo y menús para eventos","website":"https://www.jessecamilles.com/","sourceUrl":"https://www.jessecamilles.com/contact","checkedOn":"2026-10-24"},
+  {"name":"La Casita Mexican Restaurant & Cantina","cuisine":"Family-run Mexican restaurant serving tacos, fajitas and traditional dishes","cuisineEs":"Restaurante mexicano familiar con tacos, fajitas y platos tradicionales","website":"https://www.lacasitact.com/","sourceUrl":"https://www.lacasitact.com/","checkedOn":"2026-10-24"},
+  {"name":"Salvadorenos Restaurant","cuisine":"Salvadoran restaurant on Rubber Avenue with casual dine-in and takeout","cuisineEs":"Restaurante salvadoreño en Rubber Avenue con servicio informal y comida para llevar","website":"https://salvadorenosrestaurant.com/","sourceUrl":"https://salvadorenosrestaurant.com/","checkedOn":"2026-10-24"},
+  {"name":"The Hub Wood Burning Pizza Bar","cuisine":"Wood-fired pizza bar on Church Street with casual dining","cuisineEs":"Bar de pizzas al horno de leña en Church Street con ambiente informal","website":"https://www.thehubpizzabar.com/","sourceUrl":"https://www.thehubpizzabar.com/contact-us/","checkedOn":"2026-10-24"},
+  {"name":"The Station Restaurant & Bar","cuisine":"Water Street restaurant and bar with dining, catering and private events","cuisineEs":"Restaurante y bar en Water Street con comedor, catering y eventos privados","website":"https://www.stationrestaurantbar.com/","sourceUrl":"https://www.stationrestaurantbar.com/","checkedOn":"2026-10-24"},
+ ],
  // Bethany restaurant locations rechecked 2026-10-24 via operator sites/ordering pages and a recent local deli listing.
  // Pronto Pizza at 696 Amity Road is distinct from outdated Bethany Restaurant & Pizza listings at that address.
  // No ratings, hours, or personal Joey endorsements are asserted. Evan's is a deli, not a full-service restaurant.
