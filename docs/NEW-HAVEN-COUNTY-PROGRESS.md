@@ -6,7 +6,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
-- Curated restaurant directory: **17/27** (counts any directory; individual lists still need review for approximately five current restaurants).
+- Curated restaurant directory: **18/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **18/27**.
 - Town-specific photo gallery data: **17/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
@@ -23,7 +23,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Guilford | Yes | Yes | Yes | Yes | Not certified |
 | Hamden | Yes | Yes | Yes | Yes | Not certified |
 | Madison | Yes | Yes | Yes | Yes | Not certified |
-| Meriden | Yes | No | Yes | No | Not certified |
+| Meriden | Yes | Yes | Yes | No | Not certified |
 | Middlebury | No | No | No | No | Not certified |
 | Milford | Yes | Yes | Yes | Yes | Not certified |
 | Naugatuck | Yes | Yes | Yes | Yes | Not certified |
@@ -40,6 +40,12 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | No | No | No | Not certified |
+
+## Meriden dining source pass (2026-10-25)
+
+- Added **five neutral bilingual dining listings** verified against business-operated sites: Ted's Restaurant (https://tedsrestaurant.com/contact/), K LaMay's Steamed Cheeseburgers (https://klamayssteamedcheeseburgers.com/locations/), Taino Smokehouse Prime (https://tainosmokehouse.com/contact), Violi's Restaurant (https://violisrestaurant.com/contact/) and Lido's Restaurant & Pizzeria (https://lidositalian.com/). All five sites identify Meriden locations and relevant food offerings.
+- No ratings, review counts, operating hours or Joey personal Top Picks were added. Meriden regression tests cover bilingual descriptions, source URLs, distinct entries and the personal Top Picks restriction.
+- **Still not certified:** Meriden needs properly licensed town photography, live bilingual SEO and image/accessibility checks, legal and partner disclosures in the rendered page, and independently verified Cloudflare deployment.
 
 ## Meriden municipal links and expanded bilingual guide (2026-10-25)
 
