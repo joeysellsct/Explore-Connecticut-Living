@@ -5,9 +5,9 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 ## Coverage of 27 New Haven County towns
 
 - Directory routes: **27/27** via the 169-town shared data source.
-- Town-specific English/Spanish highlights: **23/27**.
+- Town-specific English/Spanish highlights: **24/27**.
 - Curated restaurant directory: **23/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **23/27**.
+- Dedicated official municipal/moving links: **24/27**.
 - Town-specific photo gallery data: **23/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
@@ -28,7 +28,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Milford | Yes | Yes | Yes | Yes | Not certified |
 | Naugatuck | Yes | Yes | Yes | Yes | Not certified |
 | New Haven | Yes | Yes | Yes | Yes | Not certified |
-| North Branford | No | No | No | No | Not certified |
+| North Branford | Yes | No | Yes | No | Not certified |
 | North Haven | Yes | Yes | Yes | Yes | Not certified |
 | Orange | Yes | Yes | Yes | Yes | Not certified |
 | Oxford | No | No | No | No | Not certified |
@@ -40,6 +40,14 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | Yes | Yes | Yes | Not certified |
+
+## North Branford bilingual guide and municipal resources (2026-10-25)
+
+- Added **13 bilingual municipal and moving resource descriptions** pointing to 12 unique verified URLs, including assessor/revaluation, tax, land records, building permits, planning/zoning, public sewer engineering, septic/private-well health guidance, public works, recreation and conservation trails. Engineering is intentionally linked twice for distinct sewer and streetlight topics.
+- Added an original **four-paragraph English (2,664 characters) and Spanish (2,942 characters)** guide on Northford, historic centers, Reynolds-Beers House, land-trust trails, parcel due diligence and address-specific utility questions.
+- CCM FY2027 lists **28.81 mills** for North Branford real property (https://hub.ccm-ct.org/community/north-branford/). The town's 2026–27 budget announcement still contains a **28.91-mill proposal** (https://www.northbranfordct.gov/m/newsflash/home/detail/187); distinguish the proposal from the published FY2027 figure and verify each parcel's actual bill.
+- Sources: https://www.northbranfordct.gov/200/Assessor ; https://www.northbranfordct.gov/220/Engineering-Department ; https://esdhd.org/ ; https://nblandtrust.org/trails ; https://nblandtrust.org/our-town/ .
+- **Not launch-certified:** five verified restaurant listings and licensed town-specific photographs are still missing. Live bilingual rendering, canonical/hreflang, structured data, sitemap, accessibility, image delivery, affiliate and Equal Housing disclosures, staging noindex/robots and Cloudflare deployment still require independent checks.
 
 ## Middlebury bilingual guide and municipal resources (2026-10-25)
 
