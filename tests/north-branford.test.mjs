@@ -50,7 +50,21 @@ test('North Branford uses shared town template and does not add Joey personal To
   assert.ok(page.includes(snippet), snippet);
  }
  const restaurants = read('lib/town-restaurants.ts');
- assert.ok(!restaurants.includes("'north-branford': ["), 'restaurant listings require separate operator verification');
+ const start = restaurants.indexOf(" 'north-branford': [");
+ assert.ok(start >= 0);
+ const end = restaurants.indexOf('\\n ],', start);
+ assert.ok(end > start);
+ const listings = restaurants.slice(start, end).split('\\n').map(x => x.trim()).filter(x => x.startsWith('{')).map(x => JSON.parse(x.replace(/,$/, '')));
+ assert.equal(listings.length, 5);
+ assert.equal(new Set(listings.map(x => x.name)).size, 5);
+ for (const item of listings) {
+  assert.ok(item.cuisine.length > 55 && item.cuisineEs.length > 55, item.name);
+  assert.ok(item.website.startsWith('https://'));
+  assert.ok(item.sourceUrl.startsWith('https://'));
+  assert.equal(item.checkedOn, '2026-10-25');
+  assert.equal(item.rating, undefined);
+ }
+ assert.ok(listings.some(x => x.name.includes('Millpond') && x.cuisine.includes('Northford')));
  const photos = read('lib/town-photography.ts');
  assert.ok(!photos.includes("'north-branford': ["), 'photos require separate location and license verification');
 });
