@@ -7,7 +7,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **21/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **21/27**.
+- Dedicated official municipal/moving links: **22/27**.
 - Town-specific photo gallery data: **21/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
@@ -36,10 +36,16 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Seymour | Yes | Yes | Yes | Yes | Not certified |
 | Southbury | Yes | Yes | Yes | Yes | Not certified |
 | Wallingford | Yes | Yes | Yes | Yes | Not certified |
-| Waterbury | Yes | No | No | No | Not certified |
+| Waterbury | Yes | No | Yes | No | Not certified |
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | Yes | Yes | Yes | Not certified |
+
+## Waterbury bilingual municipal resource pass (2026-10-25)
+
+- Added **16 sourced English/Spanish municipal and moving resources** for Waterbury: Assessor, Connecticut OPM FY2027 rate data, Tax Collector and online payments, Town Clerk and deed records, GIS, building permits, zoning/wetlands, engineering, water, sewer, refuse/bulky collection, recreation and 311 service requests. Primary municipal sources include https://www.waterburyct.org/assessor ; https://waterburyct.gov/landrecords ; https://www.waterburyct.org/services/tax-collection ; https://www.waterburyct.org/services/department-of-inspections ; https://www.waterburyct.gov/services/water ; https://www.waterburyct.gov/services/water-pollution .
+- The **FY 2026–27 real estate base mill rate is 43.34** per the Connecticut OPM dataset (https://data.ct.gov/Local-Government/Mill-Rates-for-FY-2014-2027/emyx-j53e); confirm the assessed parcel value and any district charges. Waterbury's water department lists a **July 1, 2026 rate of $3.50 per 100 cubic feet**, plus meter-dependent charges; sewer use and capital-recovery charges are separately listed on the same municipal page. Confirm water/sewer connection and actual bills by address.
+- Added `tests/waterbury.test.mjs` to protect source uniqueness, bilingual descriptions, tax and utility cautions, template wiring and personal Top Picks restrictions. **Still incomplete:** Waterbury needs approximately five verified restaurants, town-specific licensed photos and independent EN/ES rendered SEO, accessibility, disclosures, staging robots and Cloudflare deployment verification. **Not certified 100%.**
 
 ## Woodbridge four-category source pass (2026-10-25)
 
