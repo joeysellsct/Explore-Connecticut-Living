@@ -45,3 +45,22 @@ test('Naugatuck uses the shared compliance, moving and bilingual town template',
   assert.ok(picks);
   assert.doesNotMatch(picks, /['"]naugatuck['"]\s*:/);
 });
+
+test('Naugatuck dining directory has five current operator-sourced bilingual entries', () => {
+  const source = read('lib/town-restaurants.ts');
+  const match = source.match(/^ 'naugatuck': \[(.*?)^ \],/ms);
+  assert.ok(match, 'Missing Naugatuck restaurant directory');
+  const entries = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+  assert.equal(entries.length, 5);
+  assert.equal(new Set(entries.map(entry => entry.name)).size, 5);
+  for (const name of ["Jesse Camille's Restaurant", 'La Casita Mexican Restaurant & Cantina', 'Salvadorenos Restaurant', 'The Hub Wood Burning Pizza Bar', 'The Station Restaurant & Bar']) {
+    assert.ok(entries.some(entry => entry.name === name), 'Missing ' + name);
+  }
+  for (const entry of entries) {
+    assert.ok(entry.cuisine.length > 25 && entry.cuisineEs.length > 25);
+    assert.ok(entry.sourceUrl.startsWith('https://'));
+    assert.equal(entry.checkedOn, '2026-10-24');
+    assert.equal(entry.rating, undefined);
+    assert.equal(entry.reviewCount, undefined);
+  }
+});
