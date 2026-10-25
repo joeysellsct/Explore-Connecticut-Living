@@ -48,6 +48,27 @@ test('Prospect content uses shared town template and does not fabricate dining o
  const page = read('app/[locale]/towns/[slug]/page.tsx');
  assert.ok(page.includes('townHighlights[slug]'));
  assert.ok(page.includes('townOfficialLinks[slug]'));
- assert.ok(!read('lib/town-restaurants.ts').includes("'prospect': ["));
+ assert.ok(read('lib/town-restaurants.ts').includes("'prospect': ["));
  assert.ok(!read('lib/town-photography.ts').includes("'prospect': ["));
+});
+
+
+test('Prospect has five sourced bilingual restaurants without invented ratings or Top Picks', () => {
+ const source = read('lib/town-restaurants.ts');
+ const start = source.indexOf(" 'prospect': [");
+ assert.ok(start >= 0);
+ const end = source.indexOf('\n ],', start);
+ assert.ok(end > start);
+ const entries = source.slice(start, end).split('\n').map(s => s.trim()).filter(s => s.startsWith('{')).map(s => JSON.parse(s.replace(/,$/, '')));
+ assert.equal(entries.length, 5);
+ assert.equal(new Set(entries.map(x => x.name)).size, 5);
+ for (const entry of entries) {
+  assert.ok(entry.cuisine.length >= 40 && entry.cuisineEs.length >= 40, entry.name);
+  assert.equal(new URL(entry.sourceUrl).protocol, 'https:');
+  assert.equal(entry.checkedOn, '2026-10-25');
+  assert.equal(entry.rating, undefined);
+  assert.equal(entry.reviewCount, undefined);
+ }
+ const picks = source.slice(source.indexOf('export const joeyTopPicks'));
+ assert.ok(!picks.includes("'prospect':"));
 });
