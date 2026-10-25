@@ -52,3 +52,26 @@ test('Middlebury resources and guide use the shared bilingual template without a
  assert.ok(!picks.includes("'middlebury':"));
  for (const town of ["'cheshire':", "'branford':", "'west-haven':"]) assert.ok(picks.includes(town));
 });
+
+test('Middlebury dining contains five current operator-sourced bilingual listings', () => {
+ const source = read('lib/town-restaurants.ts');
+ const start = source.indexOf(" 'middlebury': [");
+ assert.ok(start >= 0, 'Middlebury dining directory missing');
+ const end = source.indexOf('\n ],', start);
+ assert.ok(end > start, 'Middlebury dining block not closed');
+ const entries = source.slice(start, end).split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+ assert.equal(entries.length, 5);
+ assert.equal(new Set(entries.map(item => item.name)).size, 5);
+ assert.equal(new Set(entries.map(item => item.sourceUrl)).size, 5);
+ for (const item of entries) {
+  assert.ok(item.cuisine.length > 50 && item.cuisineEs.length > 50, item.name);
+  assert.equal(new URL(item.sourceUrl).protocol, 'https:');
+  assert.equal(new URL(item.website).protocol, 'https:');
+  assert.equal(item.checkedOn, '2026-10-25');
+  assert.equal(item.rating, undefined);
+  assert.equal(item.reviewCount, undefined);
+ }
+ for (const name of ["Maggie McFly's | Middlebury", 'Vyne Restaurant & Bar', 'Pies & Pub', 'Maples Family Restaurant', "Señor Pancho's of Middlebury"]) {
+  assert.ok(entries.some(item => item.name === name), name);
+ }
+});
