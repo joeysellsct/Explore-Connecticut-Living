@@ -393,6 +393,18 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {"name":"Koi Sushi Hibachi Asian Fusion","cuisine":"Sushi, hibachi and Asian fusion dishes","cuisineEs":"Sushi, hibachi y platos de fusión asiática","website":"https://www.koiasianfusionct.com/","sourceUrl":"https://www.koiasianfusionct.com/","checkedOn":"2026-10-24"},
     {"name":"Bangkok Room Ansonia","cuisine":"Thai restaurant and takeaway","cuisineEs":"Restaurante tailandés y comida para llevar","website":"https://bangkokroomansonia.com/","sourceUrl":"https://bangkokroomansonia.com/","checkedOn":"2026-10-24"},
   ],
+  // Beacon Falls businesses and town locations checked 2026-10-24 on business-operated sites or their direct ordering pages.
+  // New Harvest and Beacon Falls Tavern both claim 57 S Main St; only the currently maintained tavern site is listed.
+  // The Tap House online ordering hours appear inconsistent, so do not publish hours or claim real-time opening status.
+  // Molly's is a bakery/cafe rather than a full-service restaurant. All entries are neutral editorial listings, not Joey's Top Picks.
+  'beacon-falls': [
+    {"name":"The Beacon Pizza Bar","cuisine":"New Haven-style pizza with housemade sausage","cuisineEs":"Pizza al estilo de New Haven con salchicha de elaboración propia","website":"https://www.thebeaconpizzabar.com/","sourceUrl":"https://www.thebeaconpizzabar.com/","checkedOn":"2026-10-24"},
+    {"name":"Beacon Falls Tavern","cuisine":"Neighborhood tavern serving casual American food and ribs","cuisineEs":"Taberna de barrio con comida estadounidense informal y costillas","website":"https://beaconfallstavern.com/","sourceUrl":"https://beaconfallstavern.com/","checkedOn":"2026-10-24"},
+    {"name":"The Original Antonio's","cuisine":"Italian-American restaurant with pizza, pasta and classic entrees","cuisineEs":"Restaurante italoestadounidense con pizza, pasta y platos tradicionales","website":"https://www.theoriginalantoniosmenu.com/","sourceUrl":"https://www.theoriginalantoniosmenu.com/","checkedOn":"2026-10-24"},
+    {"name":"Rocco's Pizza","cuisine":"Pizza, grinders, pasta and Italian-American dinners","cuisineEs":"Pizza, sándwiches tipo grinder, pasta y cenas italoestadounidenses","website":"https://www.roccospizzaofct.com/","sourceUrl":"https://www.roccospizzaofct.com/","checkedOn":"2026-10-24"},
+    {"name":"The Tap House","cuisine":"American pub food, burgers and draft beer","cuisineEs":"Comida de pub estadounidense, hamburguesas y cerveza de barril","sourceUrl":"https://www.toasttab.com/local/taphouse-29-north-main-street/r-ac098b10-d239-4e06-98bf-45a4471c8013","checkedOn":"2026-10-24"},
+    {"name":"Molly's Bakery","cuisine":"Local bakery and cafe with sourdough breads and pastries","cuisineEs":"Panadería y cafetería local con panes de masa madre y repostería","website":"https://www.mollysbakeryct.com/","sourceUrl":"https://www.mollysbakeryct.com/s/instagram","checkedOn":"2026-10-24"},
+  ],
   // Seymour listings reverified 2026-10-24 using direct business pages or identifiable online ordering menus; editorial listings only, not personal Top Picks.
   'seymour': [
     {"name":"Thai Dish","cuisine":"Thai and Southeast Asian dishes, curries and noodles","cuisineEs":"Platos tailandeses y del sudeste asiático, curris y fideos","sourceUrl":"https://food.orders.co/thaidishct","checkedOn":"2026-10-24"},
