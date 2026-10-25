@@ -67,6 +67,26 @@ test('Meriden dining directory contains five operator-sourced bilingual listings
  assert.ok(entries.some(entry => entry.name === "Lido's Restaurant & Pizzeria"));
 });
 
+test('Meriden photo gallery records three location-verified Commons files with bilingual dated credits', () => {
+ const source = read('lib/town-photography.ts');
+ const match = source.match(/^ 'meriden': \[(.*?)^ \],/ms);
+ assert.ok(match, 'Missing Meriden photography');
+ const photos = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+ assert.equal(photos.length, 3);
+ assert.equal(new Set(photos.map(photo => photo.file)).size, 3);
+ for (const photo of photos) {
+  assert.match(photo.title, /Meriden.*20(16|18)/);
+  assert.match(photo.titleEs, /Meriden.*20(16|18)/);
+  assert.ok(photo.credit.length > 5);
+  assert.match(photo.license, /^CC BY/);
+  assert.equal(new URL(photo.licenseUrl).protocol, 'https:');
+ }
+ assert.ok(photos.some(photo => photo.file === 'Castle Craig Meriden CT 2.jpg' && photo.credit === 'Hallettx'));
+ assert.ok(photos.some(photo => photo.file.includes('Walking Bridge') && photo.license === 'CC BY 3.0'));
+ assert.ok(photos.some(photo => photo.file.includes('Silver Lights') && photo.credit === 'Morrowlong'));
+});
+
+
 test('Meriden keeps bilingual resources and does not invent Joey personal Top Picks', () => {
  const page = read('app/[locale]/towns/[slug]/page.tsx');
  assert.match(page, /townOfficialLinks\[slug\]\.map/);
