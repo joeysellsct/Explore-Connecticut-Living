@@ -377,3 +377,24 @@ test('town moving resources disclose Amazon commissions in English and Spanish',
  assert.match(partners,/frontier\.com\/ftr-buy\?user_id=/);
  assert.match(partners,/amazon\.com\/shop\/influencer-/);
 });
+
+test('Oxford restaurant directory contains five sourced bilingual local listings without invented ratings',()=>{
+ const source=read('lib/town-restaurants.ts');
+ const start=source.indexOf(" 'oxford': [");
+ assert.ok(start>=0,'Oxford dining section exists');
+ const end=source.indexOf('\n ],',start);
+ assert.ok(end>start);
+ const records=source.slice(start,end).split('\n').map(s=>s.trim()).filter(s=>s.startsWith('{')).map(s=>JSON.parse(s.replace(/,$/,'')));
+ assert.equal(records.length,5);
+ assert.equal(new Set(records.map(x=>x.name)).size,5);
+ for(const entry of records){
+  assert.ok(entry.cuisine.length>=55&&entry.cuisineEs.length>=55,entry.name);
+  assert.equal(new URL(entry.website).protocol,'https:');
+  assert.equal(new URL(entry.sourceUrl).protocol,'https:');
+  assert.equal(entry.checkedOn,'2026-10-25');
+  assert.equal(entry.rating,undefined);
+  assert.equal(entry.reviewCount,undefined);
+ }
+ const picks=source.split('export const joeyTopPicks')[1]||'';
+ assert.doesNotMatch(picks,/^\\s*'oxford':/m);
+});
