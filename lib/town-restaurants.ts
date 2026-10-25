@@ -12,7 +12,16 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
- // Oxford: five restaurant-operated websites checked 2026-10-25 for Oxford addresses and menus.
+ // Prospect: five restaurant-operated websites checked 2026-10-25 for Prospect street addresses and menus.
+ // Neutral bilingual editorial directory, not Joey personal Top Picks; no ratings or hours.
+ 'prospect': [
+  {"name":"Haven Pizzeria Napoletana","cuisine":"Wood-fired Neapolitan-style pizza and Italian dishes at 22 Union City Road in Prospect","cuisineEs":"Pizza napolitana al horno de leña y platos italianos en 22 Union City Road, Prospect","website":"https://www.havenpizzerianapoletana.com/","sourceUrl":"https://www.havenpizzerianapoletana.com/","checkedOn":"2026-10-25"},
+  {"name":"Hometown Pizza","cuisine":"Neighborhood pizzeria at 29 Waterbury Road with specialty pies, pasta and sandwiches","cuisineEs":"Pizzería de barrio en 29 Waterbury Road con pizzas especiales, pasta y sándwiches","website":"https://www.hometownpizzaprospect.com/","sourceUrl":"https://www.hometownpizzaprospect.com/","checkedOn":"2026-10-25"},
+  {"name":"Anna's Prospect Pizza","cuisine":"Casual pizzeria at 34 Waterbury Road offering pizza, calzones, salads and pasta","cuisineEs":"Pizzería informal en 34 Waterbury Road con pizzas, calzones, ensaladas y pasta","website":"https://annasprospectpizzact.com/","sourceUrl":"https://annasprospectpizzact.com/","checkedOn":"2026-10-25"},
+  {"name":"Golden Wok","cuisine":"Chinese takeout restaurant at 64 Waterbury Road with an online ordering menu","cuisineEs":"Restaurante chino de comida para llevar en 64 Waterbury Road con menú para pedidos en línea","website":"https://goldenwokprospect.com/","sourceUrl":"https://goldenwokprospect.com/","checkedOn":"2026-10-25"},
+  {"name":"Señor Pancho's of Prospect","cuisine":"Mexican and Tex-Mex dining at 280 Cheshire Road, including tacos and other Mexican dishes","cuisineEs":"Restaurante de cocina mexicana y tex-mex en 280 Cheshire Road, con tacos y otros platos mexicanos","website":"https://senorpanchos.com/prospect/","sourceUrl":"https://senorpanchos.com/prospect/","checkedOn":"2026-10-25"},
+ ],
+  // Oxford: five restaurant-operated websites checked 2026-10-25 for Oxford addresses and menus.
  // Neutral English/Spanish descriptions; no ratings, hours or personal Top Picks.
  'oxford': [
   {"name":"Sitting Duck Tavern | Oxford","cuisine":"Neighborhood American tavern at Quarry Walk on Center Rock Green, with burgers, sandwiches and seasonal dishes","cuisineEs":"Taberna estadounidense en Quarry Walk, sobre Center Rock Green, con hamburguesas, sándwiches y platos de temporada","website":"https://www.sittingducktavern.com/","sourceUrl":"https://www.sittingducktavern.com/","checkedOn":"2026-10-25"},
