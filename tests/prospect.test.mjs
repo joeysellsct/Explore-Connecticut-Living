@@ -49,7 +49,7 @@ test('Prospect content uses shared town template and does not fabricate dining o
  assert.ok(page.includes('townHighlights[slug]'));
  assert.ok(page.includes('townOfficialLinks[slug]'));
  assert.ok(read('lib/town-restaurants.ts').includes("'prospect': ["));
- assert.ok(!read('lib/town-photography.ts').includes("'prospect': ["));
+ assert.ok(read('lib/town-photography.ts').includes("'prospect': ["));
 });
 
 
@@ -71,4 +71,22 @@ test('Prospect has five sourced bilingual restaurants without invented ratings o
  }
  const picks = source.slice(source.indexOf('export const joeyTopPicks'));
  assert.ok(!picks.includes("'prospect':"));
+});
+
+
+test('Prospect photographs have verified Commons filenames, credits and CC0 reuse records', () => {
+ const source = read('lib/town-photography.ts');
+ const start = source.indexOf(" 'prospect': [");
+ assert.ok(start >= 0);
+ const end = source.indexOf('\n ],', start);
+ assert.ok(end > start);
+ const entries = source.slice(start, end).split('\n').map(s => s.trim()).filter(s => s.startsWith('{')).map(s => JSON.parse(s.replace(/,$/, '')));
+ assert.equal(entries.length, 3);
+ assert.deepEqual(entries.map(x => x.file), ['Prospect, Connecticut Town Green.jpg', 'Prospect, Connecticut Town Hall.jpg', 'Prospect, CT.jpg']);
+ for (const entry of entries) {
+  assert.ok(entry.title.length > 25 && entry.titleEs.length > 25);
+  assert.ok(entry.credit.length > 4);
+  assert.equal(entry.license, 'CC0 1.0');
+  assert.equal(entry.licenseUrl, 'https://creativecommons.org/publicdomain/zero/1.0/');
+ }
 });
