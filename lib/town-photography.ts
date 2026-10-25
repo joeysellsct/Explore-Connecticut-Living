@@ -2,6 +2,16 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Meriden, Connecticut (not the namesake English village): Commons source and CC terms checked 2026-10-25.
+ // https://commons.wikimedia.org/wiki/File:Castle_Craig_Meriden_CT_2.jpg
+ // https://commons.wikimedia.org/wiki/File:The_Walking_Bridge_At_The_Hub_Park_In_Meriden_(149365613).jpeg
+ // https://commons.wikimedia.org/wiki/File:Hubbard_Park_Festival_of_Silver_Lights_20181229_Big_Cat.jpg
+ // Historical dates and cropping/attribution terms must remain visible in rendered bilingual pages.
+ 'meriden': [
+  {"title":"Castle Craig above Meriden (2018 aerial photograph)","titleEs":"Castle Craig sobre Meriden (fotografía aérea de 2018)","file":"Castle Craig Meriden CT 2.jpg","credit":"Hallettx","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Pedestrian bridge at the downtown Hub park, Meriden (2016 photograph)","titleEs":"Puente peatonal en el parque Hub del centro de Meriden (fotografía de 2016)","file":"The Walking Bridge At The Hub Park In Meriden (149365613).jpeg","credit":"Mark Balcher","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0/"},
+  {"title":"Festival of Silver Lights display in Hubbard Park, Meriden (2018 photograph)","titleEs":"Iluminación del Festival of Silver Lights en Hubbard Park, Meriden (fotografía de 2018)","file":"Hubbard Park Festival of Silver Lights 20181229 Big Cat.jpg","credit":"Morrowlong","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
  // North Haven town identity, photographer, date and CC licenses verified 2026-10-25 at:
  // https://commons.wikimedia.org/wiki/File:St._Johns_Episcopal_Church,_North_Haven,_CT.jpg
  // https://commons.wikimedia.org/wiki/File:NorthHavenCT_RisingSunTavern.jpg
