@@ -45,7 +45,7 @@ test('Wolcott guide does not create unverified dining, photos or Joey Top Picks'
  const source = read('lib/town-restaurants.ts');
  assert.ok(source.includes(" 'wolcott': ["));
  const photos = read('lib/town-photography.ts');
- assert.ok(!photos.includes(" 'wolcott': ["));
+ assert.ok(photos.includes(" 'wolcott': ["));
  const picks = source.slice(source.indexOf('export const joeyTopPicks'));
  assert.ok(!picks.includes("'wolcott':"));
 });
@@ -69,4 +69,22 @@ test('Wolcott dining directory has five sourced bilingual restaurants and no inv
  }
  const picks = source.slice(source.indexOf('export const joeyTopPicks'));
  assert.ok(!picks.includes("'wolcott':"));
+});
+
+
+test('Wolcott photos are three verified Commons historic-district files with correct licenses', () => {
+ const source = read('lib/town-photography.ts');
+ const start = source.indexOf(" 'wolcott': [");
+ assert.ok(start >= 0);
+ const end = source.indexOf('\n ],', start);
+ assert.ok(end > start);
+ const entries = source.slice(start, end).split('\n').map(s => s.trim()).filter(s => s.startsWith('{')).map(s => JSON.parse(s.replace(/,$/, '')));
+ assert.equal(entries.length, 3);
+ assert.deepEqual(entries.map(x => x.file), ['WolcottCT TownGreen.jpg', 'WolcottCT TownHall.jpg', 'WolcottCT CongregationalChurch.jpg']);
+ for (const entry of entries) {
+  assert.ok(entry.title.length > 50 && entry.titleEs.length > 50);
+  assert.equal(entry.credit, 'Magicpiano');
+  assert.equal(entry.license, 'CC BY-SA 4.0');
+  assert.equal(entry.licenseUrl, 'https://creativecommons.org/licenses/by-sa/4.0/');
+ }
 });
