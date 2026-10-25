@@ -51,3 +51,28 @@ test('Southbury town guide has researched English and Spanish copy with tax and 
  assert.match(guide.en, /not Joey's personal endorsements/);
  assert.match(guide.es, /no son recomendaciones personales de Joey/);
 });
+
+test('Southbury dining has five sourced bilingual listings without invented ratings or endorsements', () => {
+ const source = read('lib/town-restaurants.ts');
+ const match = source.match(/^ 'southbury': \[(.*?)^ \],/ms);
+ assert.ok(match, 'Southbury restaurant directory missing');
+ const entries = match[1].split('\n').map(s => s.trim()).filter(s => s.startsWith('{')).map(s => JSON.parse(s.replace(/,$/, '')));
+ assert.equal(entries.length, 5);
+ assert.equal(new Set(entries.map(entry => entry.name)).size, 5);
+ assert.equal(new Set(entries.map(entry => entry.sourceUrl)).size, 5);
+ for (const entry of entries) {
+  assert.ok(entry.cuisine.length > 30 && entry.cuisineEs.length > 30, entry.name);
+  assert.equal(new URL(entry.sourceUrl).protocol, 'https:');
+  assert.equal(new URL(entry.website).protocol, 'https:');
+  assert.equal(entry.checkedOn, '2026-10-25');
+  assert.equal(entry.rating, undefined);
+  assert.equal(entry.reviewCount, undefined);
+ }
+ for (const name of ['Brew Cafe & Bistro', 'Mercato Italian Kitchen & Bar', "Farmer's Tavern", 'Samui Thai Cuisine', "DiPalma's Pizza"]) {
+  assert.ok(entries.some(entry => entry.name === name), name);
+ }
+ const page = read('app/[locale]/towns/[slug]/page.tsx');
+ assert.match(page, /townRestaurants\[slug\]\.map/);
+ const picks = source.split('export const joeyTopPicks:')[1] || '';
+ assert.doesNotMatch(picks, /^\s*'southbury':/m);
+});
