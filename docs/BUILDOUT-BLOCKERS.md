@@ -1,3 +1,10 @@
+## October 25: Middlebury source-content completion and staging QA blocker
+
+- Middlebury source files updated on `main`: `c32b75d9` (12 bilingual municipal resources), `d00061aa` (four-paragraph EN/ES guide), `31c45f7c` (five operator-verified dining entries), `b9bdb127` (three location-verified licensed Commons photos), plus `bbb1a73c`, `507fe532` and `c682974a` for source-level regression tests and `e827b5da` for coverage tracking. Each updated file was refetched with a new blob SHA and the resulting commit SHA was recorded.
+- Push-triggered GitHub Actions were checked independently: `40200513597`, `40200548703`, `40200570946`, `40200596894`, `40200633263` and `40200645101` completed **successfully**. Photo and later documentation runs were **still in progress** at the check; revisit before reporting their outcome. Passing Actions do not establish Cloudflare deployment.
+- **Exact staging QA error:** `https://explore-connecticut-living-staging.joeysellsct.workers.dev/en/towns/middlebury`, `/es/towns/middlebury` and `/robots.txt` each returned **"URL ... is not accessible via this tool"** when independently opened on 2026-10-25. This is a verification-environment access failure, not proof that Cloudflare is down. Retry in a future run or use a separately authenticated Cloudflare deployment check. Live image delivery and attribution, canonical/hreflang, structured data, sitemap, accessibility, Equal Housing/affiliate disclosures, staging noindex and robots remain unverified.
+- Middlebury has four major source categories but **must remain uncertified**. Continue remaining New Haven County town work without waiting for this blocker; do not expand to Fairfield County prematurely.
+
 # Explore Connecticut Living: deferred verification and buildout work
 
 ## October 25: Waterbury four-category source buildout, live staging verification deferred
