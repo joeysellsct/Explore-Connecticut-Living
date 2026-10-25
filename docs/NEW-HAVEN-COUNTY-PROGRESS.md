@@ -8,7 +8,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **22/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **22/27**.
-- Town-specific photo gallery data: **21/27** (license records still require live display checks).
+- Town-specific photo gallery data: **22/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -36,7 +36,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Seymour | Yes | Yes | Yes | Yes | Not certified |
 | Southbury | Yes | Yes | Yes | Yes | Not certified |
 | Wallingford | Yes | Yes | Yes | Yes | Not certified |
-| Waterbury | Yes | Yes | Yes | No | Not certified |
+| Waterbury | Yes | Yes | Yes | Yes | Not certified |
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | Yes | Yes | Yes | Not certified |
@@ -46,7 +46,8 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 - Added **16 sourced English/Spanish municipal and moving resources** for Waterbury: Assessor, Connecticut OPM FY2027 rate data, Tax Collector and online payments, Town Clerk and deed records, GIS, building permits, zoning/wetlands, engineering, water, sewer, refuse/bulky collection, recreation and 311 service requests. Primary municipal sources include https://www.waterburyct.org/assessor ; https://waterburyct.gov/landrecords ; https://www.waterburyct.org/services/tax-collection ; https://www.waterburyct.org/services/department-of-inspections ; https://www.waterburyct.gov/services/water ; https://www.waterburyct.gov/services/water-pollution .
 - The **FY 2026–27 real estate base mill rate is 43.34** per the Connecticut OPM dataset (https://data.ct.gov/Local-Government/Mill-Rates-for-FY-2014-2027/emyx-j53e); confirm the assessed parcel value and any district charges. Waterbury's water department lists a **July 1, 2026 rate of $3.50 per 100 cubic feet**, plus meter-dependent charges; sewer use and capital-recovery charges are separately listed on the same municipal page. Confirm water/sewer connection and actual bills by address.
 - Added **five operator-sourced bilingual dining entries**: Diorio Restaurant & Bar, D'Amelio's Italian Eatery, Signatures Restaurant, Brass City Bistro and La Tavola Ristorante. Sources: https://www.diorios.com/contact-us/ ; https://damelios.com/our-story/ ; https://www.signaturesrestaurantwtby.com/contact ; https://www.brasscitybistro.com/contact ; https://latavolaristorante.com/ . No ratings, hours or personal Joey Top Picks were introduced.
-- Added `tests/waterbury.test.mjs` to protect source uniqueness, bilingual descriptions, tax/utility cautions, dining data, template wiring and personal Top Picks restrictions. **Still incomplete:** Waterbury needs town-specific licensed photos and independent EN/ES rendered SEO, accessibility, disclosures, staging robots and Cloudflare deployment verification. **Not certified 100%.**
+- Added **three Wikimedia Commons-licensed photographs** with bilingual dated captions and credited photographers: Waterbury City Hall (Farragutful, 2019), Palace Theater (Koskenart, 2016) and Waterbury Union Station (TRexEditorNJ/Ted Shaffrey, 2022), all CC BY-SA 4.0. Source pages: https://commons.wikimedia.org/wiki/File:Waterbury_City_Hall.jpg ; https://commons.wikimedia.org/wiki/File:PalaceTheater-WaterburyCT-1.jpg ; https://commons.wikimedia.org/wiki/File:WATERBURY_UNION_STATION_BUILDING.jpg . Live image delivery and visible ShareAlike attribution still need rendered QA.
+- Added `tests/waterbury.test.mjs` to protect source uniqueness, bilingual descriptions, tax/utility cautions, dining records, photo licensing, template wiring and personal Top Picks restrictions. **Still incomplete:** Waterbury needs independent EN/ES rendered SEO, accessibility, disclosures, staging robots and Cloudflare deployment verification. **Not certified 100%.**
 
 ## Woodbridge four-category source pass (2026-10-25)
 
