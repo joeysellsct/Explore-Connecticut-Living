@@ -1,5 +1,12 @@
 # Explore Connecticut Living: deferred verification and buildout work
 
+## October 25: Meriden content, CI and live-page verification
+
+- **Source commits confirmed on main:** `6285e1d7` (15 municipal/moving links), `1a60c984` (expanded EN/ES guide), `f96c9e1d` (five sourced restaurants), `52baf8a7` (three licensed Commons photographs), with dedicated Meriden regression tests and updated county coverage tracker. The first Meriden test draft failed because its regex/newline literals were over-escaped (`fe0fa97a`); corrected in `56aeab0f`. This is a recovered CI failure, not a reason to pause future runs.
+- **GitHub Actions verified separately:** push workflow `40171209575` for photo commit `52baf8a7` completed successfully, including `content-tests` and `production-build`. Newer photo-test and tracker commits require their own completed workflow verification; passing builds are not evidence of a Cloudflare deployment.
+- **Rendered staging still inaccessible:** attempts to open `/en/towns/meriden`, `/es/towns/meriden` and `/robots.txt` at `explore-connecticut-living-staging.joeysellsct.workers.dev` returned `URL ... is not accessible via this tool`. Independent container DNS checks for that hostname and `github.com` returned `gaierror [Errno -3] Temporary failure in name resolution`. This is a verification-environment limitation, not proof that the Worker failed. Recheck independently on a later run.
+- **Meriden not 100% certified:** live image rendering/attribution, canonical/hreflang, JSON-LD, sitemap, responsive accessibility, Equal Housing and partner disclosures, staging noindex/robots and Cloudflare deployment remain unverified. Continue other New Haven County work while retrying these checks.
+
 ## October 25: bilingual guide paragraph rendering and verification
 
 - **Committed on main:** `2c884efd001b47eb92799040ffbb703341418154` updates `app/[locale]/towns/[slug]/page.tsx` so existing researched English/Spanish town narratives render their blank-line-separated sections as distinct semantic `<p>` elements in both the standard town template and the East Haven custom layout. `75b49236877598282338249df25ea74f2579076a` adds a regression test; `1188a3fe8a0068fba8b263dda14a28fcaa1ad27f` corrects the test's literal separator. Connector refetch confirmed the latest source and commit SHA, and source-level assertions found two paragraph-split paths and two paragraph renderers. This is **source-level verification only**, not a completed browser accessibility audit.
