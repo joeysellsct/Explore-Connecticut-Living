@@ -2,6 +2,16 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Bethany Commons file pages, photographer credits, locations and licenses verified 2026-10-24:
+ // https://commons.wikimedia.org/wiki/File:Downs_Road,_Bethany,_Connecticut_(53834031755).jpg
+ // https://commons.wikimedia.org/wiki/File:Lake_Watrous10-28-07.jpg
+ // https://commons.wikimedia.org/wiki/File:WhittemoreSideTrailNaugatuckStateForestBethanyCT-MtLaurelPath.jpg
+ // Older views are explicitly dated and do not represent current property or trail conditions.
+ 'bethany': [
+  {"title":"Downs Road in Bethany (photographed July 2024)","titleEs":"Downs Road en Bethany (fotografía de julio de 2024)","file":"Downs Road, Bethany, Connecticut (53834031755).jpg","credit":"Ethan Long","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0/"},
+  {"title":"Lake Watrous seen from the Regicides Trail near Bethany (historic view, October 2007)","titleEs":"Lago Watrous desde el sendero Regicides cerca de Bethany (vista histórica, octubre de 2007)","file":"Lake Watrous10-28-07.jpg","credit":"Tebersold","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Whittemore side trail in Naugatuck State Forest, Bethany (historic view, April 2010)","titleEs":"Sendero secundario Whittemore en Naugatuck State Forest, Bethany (vista histórica, abril de 2010)","file":"WhittemoreSideTrailNaugatuckStateForestBethanyCT-MtLaurelPath.jpg","credit":"Morrowlong","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+ ],
  // Beacon Falls Wikimedia Commons location, photographer and licenses verified 2026-10-24:
  // https://commons.wikimedia.org/wiki/File:BeaconFalls_DepotStreetBridge.jpg (Magicpiano, CC BY-SA 4.0, 2017)
  // https://commons.wikimedia.org/wiki/File:BeaconFallsCT_HomeWoolenCompany1.jpg (Magicpiano, CC BY-SA 4.0, 2017)
