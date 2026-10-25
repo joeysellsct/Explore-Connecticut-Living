@@ -70,3 +70,22 @@ test('North Haven bilingual guide explains property due diligence and local attr
  assert.ok(guide.places.includes("Peter's Rock Park"));
  assert.ok(guide.places.includes('Quinnipiac River State Park'));
 });
+
+test('North Haven photo gallery records three verified licensed town photographs', () => {
+ const source = read('lib/town-photography.ts');
+ const match = source.match(/^ 'north-haven': \[(.*?)^ \],/ms);
+ assert.ok(match, 'Missing North Haven photo gallery');
+ const photos = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+ assert.equal(photos.length, 3);
+ assert.equal(new Set(photos.map(photo => photo.file)).size, 3);
+ for (const photo of photos) {
+  assert.ok(photo.title.includes('North Haven'));
+  assert.ok(photo.titleEs.includes('North Haven'));
+  assert.match(photo.title, /20(13|18)/);
+  assert.ok(photo.credit);
+  assert.ok(photo.license.startsWith('CC BY-SA'));
+  assert.equal(new URL(photo.licenseUrl).protocol, 'https:');
+ }
+ assert.ok(photos.some(photo => photo.credit === 'Paperchaser29' && photo.license === 'CC BY-SA 3.0'));
+ assert.equal(photos.filter(photo => photo.credit === 'Magicpiano').length, 2);
+});
