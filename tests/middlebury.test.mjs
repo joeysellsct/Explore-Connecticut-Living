@@ -75,3 +75,27 @@ test('Middlebury dining contains five current operator-sourced bilingual listing
   assert.ok(entries.some(item => item.name === name), name);
  }
 });
+
+test('Middlebury photography contains three location-verified and properly licensed images', () => {
+ const source = read('lib/town-photography.ts');
+ const start = source.indexOf(" 'middlebury': [");
+ assert.ok(start >= 0, 'Middlebury photo gallery missing');
+ const end = source.indexOf('\n ],', start);
+ assert.ok(end > start, 'Middlebury photo block not closed');
+ const entries = source.slice(start, end).split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+ assert.equal(entries.length, 3);
+ assert.equal(new Set(entries.map(item => item.file)).size, 3);
+ for (const item of entries) {
+  assert.ok(item.title.includes('photographed'));
+  assert.ok(item.titleEs.includes('fotografía'));
+  assert.ok(item.credit.length > 5);
+  assert.ok(item.license.startsWith('CC BY'));
+  assert.equal(new URL(item.licenseUrl).protocol, 'https:');
+ }
+ assert.ok(entries.some(item => item.file === 'Larkin State Park Trail cut, Middlebury CT.jpg' && item.credit.includes('John Phelan') && item.license === 'CC BY-SA 4.0'));
+ assert.ok(entries.some(item => item.file === 'Quassy Amusement Park - 48334606547.jpg' && item.license === 'CC BY 2.0'));
+ assert.ok(entries.some(item => item.file === 'WoodenWarrior.jpg' && item.license === 'CC BY 4.0'));
+ const page = read('app/[locale]/towns/[slug]/page.tsx');
+ assert.ok(page.includes('photo.licenseUrl'));
+ assert.ok(page.includes('photo.credit'));
+});
