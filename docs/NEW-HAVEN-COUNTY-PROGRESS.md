@@ -8,7 +8,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **18/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **18/27**.
-- Town-specific photo gallery data: **17/27** (license records still require live display checks).
+- Town-specific photo gallery data: **18/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -23,7 +23,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Guilford | Yes | Yes | Yes | Yes | Not certified |
 | Hamden | Yes | Yes | Yes | Yes | Not certified |
 | Madison | Yes | Yes | Yes | Yes | Not certified |
-| Meriden | Yes | Yes | Yes | No | Not certified |
+| Meriden | Yes | Yes | Yes | Yes | Not certified |
 | Middlebury | No | No | No | No | Not certified |
 | Milford | Yes | Yes | Yes | Yes | Not certified |
 | Naugatuck | Yes | Yes | Yes | Yes | Not certified |
@@ -40,6 +40,12 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | No | No | No | Not certified |
+
+## Meriden licensed town photography (2026-10-25)
+
+- Added **three location-verified Wikimedia Commons photographs** with photographer attribution, exact Creative Commons license links and bilingual dated captions: Castle Craig (Hallettx, 2018, CC BY-SA 4.0), downtown Hub pedestrian bridge (Mark Balcher, 2016, CC BY 3.0), and Hubbard Park Festival of Silver Lights (Morrowlong, 2018, CC BY-SA 4.0).
+- Sources: https://commons.wikimedia.org/wiki/File:Castle_Craig_Meriden_CT_2.jpg ; https://commons.wikimedia.org/wiki/File:The_Walking_Bridge_At_The_Hub_Park_In_Meriden_(149365613).jpeg ; https://commons.wikimedia.org/wiki/File:Hubbard_Park_Festival_of_Silver_Lights_20181229_Big_Cat.jpg . Excluded misleading Commons images of Meriden in England.
+- Meriden now has source-code entries for bilingual highlights, five restaurants, 15 municipal links and three photographs. **Not certified:** confirm the live EN/ES image delivery, visible credit/cropping notices, metadata/canonical/hreflang, structured data, sitemap, mobile accessibility, Equal Housing and partner disclosures, plus Cloudflare deployment independently before declaring launch readiness.
 
 ## Meriden dining source pass (2026-10-25)
 
