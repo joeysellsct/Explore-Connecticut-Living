@@ -51,3 +51,26 @@ test('Bethany uses shared bilingual town, referral and compliance protections', 
   assert.ok(picks);
   assert.doesNotMatch(picks, /['"]bethany['"]\s*:/);
 });
+
+test('Bethany photographs are town-specific, bilingual and CC-attributed', () => {
+  const source = read('lib/town-photography.ts');
+  const match = source.match(/^ 'bethany': \[(.*?)^ \],/ms);
+  assert.ok(match, 'Missing Bethany photo collection');
+  const photos = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+  assert.equal(photos.length, 3);
+  assert.equal(new Set(photos.map(photo => photo.file)).size, 3);
+  const expected = new Map([
+    ['Downs Road, Bethany, Connecticut (53834031755).jpg', ['Ethan Long', 'CC BY-SA 2.0', '2024']],
+    ['Lake Watrous10-28-07.jpg', ['Tebersold', 'CC BY-SA 3.0', '2007']],
+    ['WhittemoreSideTrailNaugatuckStateForestBethanyCT-MtLaurelPath.jpg', ['Morrowlong', 'CC BY-SA 3.0', '2010']],
+  ]);
+  for (const photo of photos) {
+    const expectedData = expected.get(photo.file);
+    assert.ok(expectedData, 'Unexpected Bethany photo ' + photo.file);
+    assert.equal(photo.credit, expectedData[0]);
+    assert.equal(photo.license, expectedData[1]);
+    assert.ok(photo.title.includes(expectedData[2]) && photo.titleEs.includes(expectedData[2]));
+    assert.ok(photo.licenseUrl.startsWith('https://creativecommons.org/licenses/'));
+  }
+  assert.match(read('app/[locale]/towns/[slug]/page.tsx'), /photo\.licenseUrl/);
+});
