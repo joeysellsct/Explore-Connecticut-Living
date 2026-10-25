@@ -46,6 +46,8 @@ test('Bethany uses shared bilingual town, referral and compliance protections', 
   assert.match(page, /townHighlights\[slug\]\.es/);
   assert.match(page, /townHighlights\[slug\]\.en/);
   assert.match(page, /TownMovingResources slug=\{slug\}/);
+  // Researched guides should not repeat a generic town introduction.
+  assert.match(page, /!townHighlights\[slug\] && <section/);
   assert.match(read('app/robots.ts'), /disallow:'\/'/);
   const picks = read('lib/town-restaurants.ts').split('export const joeyTopPicks:')[1];
   assert.ok(picks);
