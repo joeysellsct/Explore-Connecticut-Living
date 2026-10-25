@@ -611,4 +611,26 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Hubbard Park and Castle Craig: city history, hiking and seasonal tower-road access","es":"Hubbard Park y Castle Craig: historia, senderos y acceso estacional por carretera","url":"https://www.meridenct.gov/city-services/parks-and-recreation/hubbard-park/"},
  ],
 
+ // Southbury municipal sources verified 2026-10-25 against the Town's official department pages.
+ // Town Tax Collector lists FY 2026-27 at 25.4 mills; CCM's Southbury page currently differs (23.29),
+ // so defer to the municipality's own current published rate and verify parcel bills/district charges.
+ // WPCA states Southbury has no municipal sewage system; private septic and water service vary by address.
+ 'southbury': [
+  {"en":"Assessor: property cards, Grand List assessments and exemptions; verify the specific parcel","es":"Tasador: fichas catastrales, avalúos y exenciones; verifica la parcela","url":"https://www.southbury-ct.org/assessor"},
+  {"en":"Town's FY 2026–27 mill rate: 25.4 mills per $1,000 of taxable assessment; confirm district charges and actual bill","es":"Tasa municipal 2026–27: 25,4 mills por cada $1.000 de avalúo gravable; confirma cargos distritales y factura","url":"https://www.southbury-ct.org/mill-rate"},
+  {"en":"Tax Collector: property-tax bills, payment inquiries and delinquency information","es":"Recaudación: facturas de impuestos, consultas de pago e información de deudas","url":"https://www.southbury-ct.org/tax"},
+  {"en":"Paying taxes: municipal installment rules and secure online-payment link","es":"Pago de impuestos: plazos municipales y enlace al sistema seguro de pagos","url":"https://www.southbury-ct.org/payingtaxes"},
+  {"en":"Town Clerk: recorded deeds, land records and document-search information","es":"Secretaría municipal: escrituras registradas, registros inmobiliarios y búsquedas","url":"https://www.southbury-ct.org/townclerk"},
+  {"en":"Town Clerk recording fees: deed-copy costs and land-record filing details","es":"Tarifas del registro municipal: copias de escrituras e inscripción de documentos","url":"https://www.southbury-ct.org/content/20556/20567/21548/22062.aspx"},
+  {"en":"GIS and property cards: parcel maps and assessment context, not a legal boundary survey","es":"GIS y fichas de propiedades: mapas y avalúos orientativos; no sustituyen un deslinde legal","url":"https://www.southbury-ct.org/gis"},
+  {"en":"Building Department: construction permits, inspections and online applications","es":"Construcción: permisos de obra, inspecciones y solicitudes en línea","url":"https://www.southbury-ct.org/building"},
+  {"en":"Planning Department: subdivision questions, land-use plans and maps","es":"Planificación: consultas sobre subdivisiones, planes de uso del suelo y mapas","url":"https://www.southbury-ct.org/planning"},
+  {"en":"Zoning Department: permitted uses, zoning map and land-use applications","es":"Zonificación: usos permitidos, mapa de zonas y solicitudes de uso del suelo","url":"https://southbury-ct.org/zoning"},
+  {"en":"Inland Wetlands: permit reviews near wetlands and watercourses","es":"Humedales: revisión de permisos cerca de humedales y cursos de agua","url":"https://www.southbury-ct.org/inlandwetlands"},
+  {"en":"Water Pollution Control Authority: no municipal sewage system; verify septic arrangements and any private system for each address","es":"Autoridad de Aguas Residuales: no hay alcantarillado municipal; verifica el sistema séptico o privado de cada dirección","url":"https://www.southbury-ct.org/content/20556/20610/20673/default.aspx"},
+  {"en":"Southbury business guide: Housatonic Valley Health District handles septic and water-supply oversight; verify property-specific water source","es":"Guía municipal: el Distrito de Salud Housatonic Valley supervisa sistemas sépticos y fuentes de agua; verifica cada propiedad","url":"https://www.southbury-ct.org/startbusiness"},
+  {"en":"Public Works: road maintenance, recycling and transfer-station information","es":"Obras Públicas: mantenimiento vial, reciclaje e información del centro de residuos","url":"https://www.southbury-ct.org/publicworks"},
+  {"en":"Parks and Recreation: public parks, town pool and current program/access rules","es":"Parques y Recreación: parques públicos, piscina municipal y normas de acceso y programas","url":"https://www.southbury-ct.org/parkrec"},
+ ],
+
 };
