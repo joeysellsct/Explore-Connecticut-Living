@@ -43,9 +43,30 @@ test('Wolcott has a four-paragraph English and Spanish guide with careful proper
 
 test('Wolcott guide does not create unverified dining, photos or Joey Top Picks', () => {
  const source = read('lib/town-restaurants.ts');
- assert.ok(!source.includes(" 'wolcott': ["));
+ assert.ok(source.includes(" 'wolcott': ["));
  const photos = read('lib/town-photography.ts');
  assert.ok(!photos.includes(" 'wolcott': ["));
+ const picks = source.slice(source.indexOf('export const joeyTopPicks'));
+ assert.ok(!picks.includes("'wolcott':"));
+});
+
+
+test('Wolcott dining directory has five sourced bilingual restaurants and no invented scores', () => {
+ const source = read('lib/town-restaurants.ts');
+ const start = source.indexOf(" 'wolcott': [");
+ assert.ok(start >= 0);
+ const end = source.indexOf('\n ],', start);
+ assert.ok(end > start);
+ const entries = source.slice(start, end).split('\n').map(s => s.trim()).filter(s => s.startsWith('{')).map(s => JSON.parse(s.replace(/,$/, '')));
+ assert.equal(entries.length, 5);
+ assert.equal(new Set(entries.map(x => x.name)).size, 5);
+ for (const entry of entries) {
+  assert.ok(entry.cuisine.length >= 45 && entry.cuisineEs.length >= 45, entry.name);
+  assert.equal(new URL(entry.sourceUrl).protocol, 'https:');
+  assert.equal(entry.checkedOn, '2026-10-25');
+  assert.equal(entry.rating, undefined);
+  assert.equal(entry.reviewCount, undefined);
+ }
  const picks = source.slice(source.indexOf('export const joeyTopPicks'));
  assert.ok(!picks.includes("'wolcott':"));
 });
