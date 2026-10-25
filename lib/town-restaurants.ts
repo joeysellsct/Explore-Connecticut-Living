@@ -12,6 +12,16 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Southbury: five restaurant-operated location/menu sources checked 2026-10-25.
+ // Neutral English/Spanish directory; no scores, hours or Joey personal endorsements.
+ // Brew Cafe & Bistro is the current name at 466 Heritage Rd (formerly Hudson's).
+ 'southbury': [
+  {"name":"Brew Cafe & Bistro","cuisine":"Coffee, breakfast, brunch and lunch on Heritage Road","cuisineEs":"Café, desayunos, brunch y almuerzos en Heritage Road","website":"https://brewcafebistro.com/","sourceUrl":"https://brewcafebistro.com/contact","checkedOn":"2026-10-25"},
+  {"name":"Mercato Italian Kitchen & Bar","cuisine":"Italian pasta, wood-fired pizza and seasonal dishes on Main Street South","cuisineEs":"Pastas italianas, pizza al horno de leña y platos de temporada en Main Street South","website":"https://www.mercatoitaliankitchen.com/locations/southbury","sourceUrl":"https://www.mercatoitaliankitchen.com/locations/southbury","checkedOn":"2026-10-25"},
+  {"name":"Farmer's Tavern","cuisine":"Tavern dinners and weekend brunch on Main Street South","cuisineEs":"Cenas de taberna y brunch de fin de semana en Main Street South","website":"https://www.farmerstavernct.com/","sourceUrl":"https://www.farmerstavernct.com/","checkedOn":"2026-10-25"},
+  {"name":"Samui Thai Cuisine","cuisine":"Thai cuisine for dine-in and takeout on Main Street South","cuisineEs":"Cocina tailandesa para comer en el local o llevar en Main Street South","website":"https://samui-thai-cuisine.square.site/","sourceUrl":"https://samui-thai-cuisine.square.site/","checkedOn":"2026-10-25"},
+  {"name":"DiPalma's Pizza","cuisine":"New York-style pizza, Italian pasta and sandwiches at Union Square","cuisineEs":"Pizza al estilo neoyorquino, pastas italianas y sándwiches en Union Square","website":"https://www.dipalmaspizza.com/","sourceUrl":"https://www.dipalmaspizza.com/","checkedOn":"2026-10-25"}
+ ],
  // Wallingford: operator websites verified 2026-10-25 for town location and menu.
  // Neutral directory only; no hours, scores, review counts or Joey personal endorsements.
  'wallingford': [
