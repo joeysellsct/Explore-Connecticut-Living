@@ -571,4 +571,26 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"North Haven Memorial Library: community services and links to municipal online tools","es":"Biblioteca Memorial de North Haven: servicios comunitarios y enlaces a trámites municipales","url":"https://www.northhavenlibrary.net/community-resources"},
   {"en":"Connecticut Conference of Municipalities: FY2027 base real-property rate of 30.56 mills; confirm actual bill","es":"Conferencia de Municipios de Connecticut: tasa inmobiliaria base FY2027 de 30,56 mills; confirma la factura real","url":"https://hub.ccm-ct.org/community/north-haven/"},
  ],
+ // Meriden source pass 2026-10-25: municipal Assessor, Clerk, Building, Planning, Public Works,
+ // Water/Sewer and parks pages, plus CCM FY2027 29.99-mill base real-estate rate.
+ // The city's Tax Collection page still quotes a 2023 Grand List rate; do not present it as current.
+ // Meriden has tax districts and a 2025 revaluation: verify each property's actual bill and services.
+ 'meriden': [
+  {"en":"City Assessor: parcel values, assessment records and 2025 revaluation","es":"Tasador municipal: valores, registros catastrales y reevaluación de 2025","url":"https://www.meridenct.gov/city-services/finance/assessment-1/"},
+  {"en":"2025 citywide revaluation: new assessments used for tax bills beginning July 2026","es":"Reevaluación municipal de 2025: nuevos avalúos para facturas desde julio de 2026","url":"https://www.meridenct.gov/city-services/finance/assessment-1/2025-citywide-revaluation/"},
+  {"en":"Connecticut Conference of Municipalities: FY 2026–27 base real estate rate 29.99 mills; verify district charges and parcel bill","es":"Conferencia de Municipios: tasa inmobiliaria base 2026–27 de 29,99 mills; confirma cargos distritales y factura","url":"https://hub.ccm-ct.org/community/meriden/"},
+  {"en":"Tax Collector: property taxes and water/sewer payments; some posted mill-rate text refers to older tax years","es":"Recaudación: impuestos y pagos de agua/alcantarillado; parte de la información tributaria corresponde a años anteriores","url":"https://www.meridenct.gov/city-services/finance/tax-collection/"},
+  {"en":"City Clerk: recorded documents, deeds and official municipal records","es":"Secretaría municipal: documentos registrados, escrituras y archivos oficiales","url":"https://www.meridenct.gov/government/departments/city-clerk/"},
+  {"en":"Land records: official deed search, recording details and online access","es":"Registros de tierras: búsqueda oficial de escrituras, inscripción y acceso en línea","url":"https://www.meridenct.gov/government/departments/city-clerk/land-records/"},
+  {"en":"City GIS parcel viewer: assessment and map context, not a boundary survey","es":"Visor GIS de parcelas: avalúos y mapas orientativos, no sustituye un deslinde","url":"https://gis.meridenct.gov/meriden/"},
+  {"en":"Building Department: construction permits, inspections and occupancy certificates","es":"Departamento de Construcción: permisos, inspecciones y certificados de ocupación","url":"https://www.meridenct.gov/government/departments/building-department-/"},
+  {"en":"Planning and Zoning: zoning maps, subdivisions, wetlands and land-use approvals","es":"Planificación y Zonificación: mapas, subdivisiones, humedales y autorizaciones","url":"https://www.meridenct.gov/government/departments/planning-and-zoning/"},
+  {"en":"Engineering permits: work in public rights-of-way, drainage and utility connections","es":"Permisos de Ingeniería: obras en vías públicas, drenaje y conexiones de servicios","url":"https://www.meridenct.gov/government/departments/public-works/engineering-documents-/"},
+  {"en":"Meriden Water Division: municipal water service, billing and September 2026 rate notice; confirm each address","es":"División de Agua: servicio, facturación y aviso de tarifas de septiembre de 2026; confirma cada dirección","url":"https://www.meridenct.gov/city-services/utilities/meriden-water-division/"},
+  {"en":"Water Pollution Control: municipal sewer system and connection inquiries; confirm parcel service and charges","es":"Control de Aguas Residuales: red de alcantarillado y consultas de conexión; confirma servicio y cargos","url":"https://www.meridenct.gov/city-services/utilities/water-pollution-control-division/"},
+  {"en":"Trash and recycling: city collection applies to qualifying inner-district homes; outer-district residents arrange private hauling","es":"Basura y reciclaje: recogida municipal para viviendas elegibles del distrito interior; otras contratan servicio privado","url":"https://www.meridenct.gov/government/departments/public-works/curbside-recycling-solid-waste-trash-collection/"},
+  {"en":"Parks and recreation: municipal parks, accessibility details and reservation information","es":"Parques y recreación: espacios municipales, accesibilidad y reservas","url":"https://www.meridenct.gov/city-services/parks-and-recreation/parks-park-rentals/"},
+  {"en":"Hubbard Park and Castle Craig: city history, hiking and seasonal tower-road access","es":"Hubbard Park y Castle Craig: historia, senderos y acceso estacional por carretera","url":"https://www.meridenct.gov/city-services/parks-and-recreation/hubbard-park/"},
+ ],
+
 };
