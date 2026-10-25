@@ -443,3 +443,13 @@ test('moving resources hub localizes the Amazon Associate disclosure',()=>{
  assert.match(hub,/As an Amazon Associate I earn from qualifying purchases\./);
  assert.match(hub,/className="affiliate-disclosure"/);
 });
+
+
+test('bilingual navigation controls and decorative housing icon remain accessible',()=>{
+ const layout=read('app/[locale]/layout.tsx');
+ assert.match(layout,/aria-label=\{locale==='es'\?'Inicio de Explore Connecticut Living':'Explore Connecticut Living home'\}/);
+ assert.match(layout,/aria-label=\{locale==='es'\?'Navegación principal':'Main navigation'\}/);
+ assert.match(layout,/className="header-language"[^>]+aria-label=\{locale==='es'\?'Switch to English':'Cambiar a español'\}/);
+ assert.match(layout,/<svg[^>]+aria-hidden="true" focusable="false"/);
+ assert.match(layout,/locale==='es'\?'Igualdad de oportunidades de vivienda':'Equal Housing Opportunity'/);
+});
