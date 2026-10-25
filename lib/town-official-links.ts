@@ -2,6 +2,27 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Bethany sources verified 2026-10-24: Bethany Assessor FY2027 29.99 mills (2025 Grand List),
+ // Town Clerk, Land Use, QVHD septic, Veterans Memorial Park and CT State Parks.
+ // Town Tax Collector page may still display FY2025 29.14 mills: direct users to Assessor/current bill.
+ // The town reports no municipal water or sewer services; verify well and septic records by parcel.
+ 'bethany': [
+  {"en":"Assessor: parcel assessments, 2023 revaluation and FY 2026–27 real estate rate of 29.99 mills","es":"Tasador: avalúos, reevaluación de 2023 y tasa inmobiliaria 2026–27 de 29,99 mills","url":"https://www.bethanyct.gov/assessor"},
+  {"en":"Tax Collector: bills and payments; page may show an older Grand List rate, so confirm the bill","es":"Recaudación: facturas y pagos; la página puede mostrar una tasa anterior, confirma la factura","url":"https://bethanyct.gov/tax-collector"},
+  {"en":"Town Clerk: deeds, recorded documents and official town records","es":"Secretaría municipal: escrituras, documentos registrados y archivos oficiales","url":"https://bethanyct.gov/town-clerk"},
+  {"en":"Land records: online deeds and PropertyCheck fraud alerts","es":"Registros de propiedad: escrituras en línea y alertas de fraude PropertyCheck","url":"https://bethanyct.gov/town-clerk/land-records"},
+  {"en":"Building Department: permits, inspections and occupancy approvals","es":"Construcción: permisos, inspecciones y certificados de ocupación","url":"https://bethanyct.gov/building"},
+  {"en":"Permit application process: check health and land-use approvals before work","es":"Trámite de permisos: verifica las autorizaciones sanitarias y de uso del suelo","url":"https://bethanyct.gov/building/permit-application-process"},
+  {"en":"Land Use Department: zoning, wetlands and project review contacts","es":"Uso del suelo: contactos de zonificación, humedales y revisión de proyectos","url":"https://bethanyct.gov/land-use"},
+  {"en":"Planning and Zoning Commission: regulations, zoning map and applications","es":"Comisión de Planificación y Zonificación: reglamentos, mapa y solicitudes","url":"https://www.bethanyct.gov/planning-zoning-commission"},
+  {"en":"Inland Wetlands Commission: watercourse and wetland permit rules","es":"Comisión de Humedales: normas para permisos de humedales y cursos de agua","url":"https://www.bethanyct.gov/inland-wetlands-commission"},
+  {"en":"Quinnipiack Valley Health District: septic system permits and inspections","es":"Distrito de Salud Quinnipiack Valley: permisos e inspecciones de sistemas sépticos","url":"https://www.qvhd.org/septic"},
+  {"en":"Town profile: Bethany reports no municipal water or sewer service; verify each private system","es":"Perfil municipal: Bethany informa que no ofrece agua ni alcantarillado municipal; verifica cada sistema privado","url":"https://bethanyct.gov/about"},
+  {"en":"Veterans Memorial Park: Hockanum Lake, trails and required visitor pass","es":"Veterans Memorial Park: lago Hockanum, senderos y pase obligatorio","url":"https://bethanyct.gov/parks/vets-park"},
+  {"en":"West Rock Ridge State Park: official trail and access information","es":"Parque estatal West Rock Ridge: información oficial sobre senderos y acceso","url":"https://ctparks.com/parks/west-rock-ridge-state-park"},
+  {"en":"Public Works: town roads, recycling center and waste-service contacts","es":"Obras Públicas: calles municipales, centro de reciclaje y contactos de residuos","url":"https://www.bethanyct.gov/public-works"},
+  {"en":"Town FOI guide: locate parcel cards, GIS, permits and health records","es":"Guía municipal de acceso a registros: fichas catastrales, GIS, permisos y salud","url":"https://www.bethanyct.gov/foi"},
+ ],
  // Beacon Falls links checked against the town's own department pages and CTDOT on 2026-10-24.
  // FY 2026-27 23.67-mill rate: town's final adopted FY27 budget narrative (May 28, 2026).
  // 2025 revaluation changed assessments; a lower mill rate does not guarantee a lower parcel tax bill.
