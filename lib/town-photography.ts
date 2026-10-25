@@ -318,7 +318,13 @@ export const townPhotography:Record<string,TownPhoto[]>={
      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
    }
  ],
- 'milford':[{title:'Milford Green',file:'Milford Green.jpg',credit:'Wikimedia Commons contributor',license:'CC0 / public domain',licenseUrl:'https://commons.wikimedia.org/wiki/File:Milford_Green.jpg'}],
+ // Milford photo identities, locations, creators and licenses verified against Commons file pages 2026-10-25.
+ // https://commons.wikimedia.org/wiki/File:Milford_Green.jpg ; https://commons.wikimedia.org/wiki/File:CT-162_downtown_Milford.jpg ; https://commons.wikimedia.org/wiki/File:Silver_Sands_State_Park_(21029).jpg
+ 'milford': [
+  {"title":"Milford Green (photographed October 2011)","titleEs":"Milford Green, plaza histórica de Milford (fotografía de octubre de 2011)","file":"Milford Green.jpg","credit":"Fadein","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/"},
+  {"title":"Route 162 and downtown Milford Green (uploaded January 2009)","titleEs":"Ruta 162 y centro de Milford junto a Milford Green (imagen publicada en enero de 2009)","file":"CT-162 downtown Milford.jpg","credit":"Polaron","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Beach at Silver Sands State Park in Milford (photographed April 2017)","titleEs":"Playa del parque estatal Silver Sands en Milford (fotografía de abril de 2017)","file":"Silver Sands State Park (21029).jpg","credit":"Rhododendrites","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
  'stonington':[
   {title:'Stonington Harbor Lighthouse',file:'Stonington Harbor Lighthouse 2007.jpg',credit:'Kenneth C. Zirkel',license:'CC BY-SA 3.0',licenseUrl:'https://creativecommons.org/licenses/by-sa/3.0/'},
   {title:'Stonington Harbor Lighthouse, side view',file:'Stonington Harbor Lighthouse 2007 side view.jpg',credit:'Kenneth C. Zirkel',license:'CC BY-SA 3.0',licenseUrl:'https://creativecommons.org/licenses/by-sa/3.0/'}
