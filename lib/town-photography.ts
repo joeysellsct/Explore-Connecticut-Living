@@ -2,6 +2,16 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Wallingford, CONNECTICUT Commons source, identity, author and license checked 2026-10-25.
+ // https://commons.wikimedia.org/wiki/File:Town_Hall_of_Wallingford.jpg
+ // https://commons.wikimedia.org/wiki/File:St_Paul%27s_Episcopal_Church_Wallingford.jpg
+ // https://commons.wikimedia.org/wiki/File:Wallingford_station_from_northbound_platform,_December_2017.JPG
+ // All captions identify historical capture dates; preserve credits and ShareAlike notices on rendered pages.
+ 'wallingford': [
+  {"title":"Wallingford Town Hall on South Main Street (2012 photograph)","titleEs":"Ayuntamiento de Wallingford en South Main Street (fotografía de 2012)","file":"Town Hall of Wallingford.jpg","credit":"Nancysands1965","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"St. Paul's Episcopal Church in Wallingford (2021 photograph)","titleEs":"Iglesia episcopal de San Pablo en Wallingford (fotografía de 2021)","file":"St Paul's Episcopal Church Wallingford.jpg","credit":"Gloucester1692","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Wallingford Hartford Line station, northbound platform (2017 photograph)","titleEs":"Estación de Hartford Line en Wallingford, andén hacia el norte (fotografía de 2017)","file":"Wallingford station from northbound platform, December 2017.JPG","credit":"Pi.1415926535","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+ ],
  // Meriden, Connecticut (not the namesake English village): Commons source and CC terms checked 2026-10-25.
  // https://commons.wikimedia.org/wiki/File:Castle_Craig_Meriden_CT_2.jpg
  // https://commons.wikimedia.org/wiki/File:The_Walking_Bridge_At_The_Hub_Park_In_Meriden_(149365613).jpeg
