@@ -2,7 +2,14 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
- // Oxford: Wikimedia Commons file identity, location and author/license verified 2026-10-25.
+ // Prospect: Commons image identity, location, creator and CC0 license checked 2026-10-25.
+ // Sources: https://commons.wikimedia.org/wiki/File:Prospect,_Connecticut_Town_Green.jpg ; https://commons.wikimedia.org/wiki/File:Prospect,_Connecticut_Town_Hall.jpg ; https://commons.wikimedia.org/wiki/File:Prospect,_CT.jpg
+ 'prospect': [
+  {"title":"Prospect Town Green (photographed October 2020)","titleEs":"Plaza histórica Prospect Town Green (fotografía de octubre de 2020)","file":"Prospect, Connecticut Town Green.jpg","credit":"CosmicKanan (MsCosmicAsh)","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/"},
+  {"title":"Prospect Town Hall (photographed October 2020)","titleEs":"Ayuntamiento de Prospect (fotografía de octubre de 2020)","file":"Prospect, Connecticut Town Hall.jpg","credit":"CosmicKanan (MsCosmicAsh)","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/"},
+  {"title":"Prospect village sign (photographed June 2025)","titleEs":"Letrero de bienvenida a Prospect (fotografía de junio de 2025)","file":"Prospect, CT.jpg","credit":"CTsignhunt","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/"},
+ ],
+  // Oxford: Wikimedia Commons file identity, location and author/license verified 2026-10-25.
  // Original files: https://commons.wikimedia.org/wiki/File:Southford_Falls_I.jpg ; https://commons.wikimedia.org/wiki/File:SouthfordFallsSP_IMG_0955.jpg ; https://commons.wikimedia.org/wiki/File:Oxford_Airport.JPG
  // Southford Falls State Park spans Oxford and Southbury; some bridges/trails are closed after 2024 flooding. Photos are historical, not proof of current access.
  'oxford': [
