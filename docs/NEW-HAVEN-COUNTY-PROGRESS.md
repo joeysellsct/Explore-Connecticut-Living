@@ -41,11 +41,17 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | No | No | No | Not certified |
 
+## North Haven bilingual guide expansion (2026-10-25)
+
+- Replaced the short generic North Haven highlight with an original **1,974-character English / 2,139-character Spanish** guide covering Peter's Rock Park, the Town Green, Quinnipiac River State Park, the public library, property due diligence, the 2024 revaluation, **30.56 mills for FY 2026–27**, and parcel-specific water/sewer checks.
+- Sources: https://hub.ccm-ct.org/community/north-haven/ ; https://www.northhaven-ct.gov/ ; https://portal.ct.gov/-/media/CSC/1_Dockets-medialibrary/Docket_384/NorthHavenPOCDpdf.pdf ; https://portal.ct.gov/-/media/csc/1_dockets-medialibrary/1_media_do500_600/do508/applicantssubmissions/application/07-south-central-region---plan-of-conservation-and-development-2018-2028.pdf .
+- Added regression coverage for bilingual text, local places, tax rate and sewer due-diligence language. **Not certified:** licensed town-specific photography and independent rendered-page/deployment verification remain outstanding.
+
 ## North Haven dining source pass (2026-10-25)
 
 - Added **five English/Spanish editorial dining listings** with operator-verified North Haven locations and cuisine: La Lupa Ristorante (https://lalupact.com/), Ludal Italian Restaurant (https://www.ludalct.com/visit), Bellini's Italian Restaurant & Pizza (https://www.bellinisnorthhaven.com/), J Roo's Restaurant (https://www.jroosrestaurant.com/visit), and Giulio's Pizza Restaurant & Catering (https://giuliospizza.com/contact/).
 - No review scores, review counts, hours, or personal Joey endorsements were added. The entries are directory suggestions only. `tests/north-haven.test.mjs` checks five unique operator sources, bilingual descriptions, and the absence of invented ratings.
-- **Not certified:** North Haven still needs a town-specific photo gallery with verified licenses, a substantial original bilingual guide, and independent rendered-page checks for SEO, accessibility, disclosures, image delivery and deployment.
+- **Not certified:** North Haven still needs a town-specific photo gallery with verified licenses, and independent rendered-page checks for SEO, accessibility, disclosures, image delivery and deployment.
 
 ## North Haven municipal source pass (2026-10-24)
 
