@@ -2,6 +2,16 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Woodbridge, Connecticut: Wikimedia Commons town identity and licenses checked 2026-10-25.
+ // https://commons.wikimedia.org/wiki/File:Woodbridge-ct-1st-church-of-christ.jpg
+ // https://commons.wikimedia.org/wiki/File:WoodbridgeCT_NewEnglandCementCompanyQuarry.jpg
+ // https://commons.wikimedia.org/wiki/File:WoodbridgeCT_ChatfieldFarmstead_Barn.jpg
+ // Historical capture dates; keep author, license, ShareAlike and crop attribution visible.
+ 'woodbridge': [
+  {"title":"First Church of Christ on the Woodbridge Green (2008 photograph)","titleEs":"Primera Iglesia de Cristo en el centro de Woodbridge (fotografía de 2008)","file":"Woodbridge-ct-1st-church-of-christ.jpg","credit":"Staib","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Historic New England Cement Company Quarry in Woodbridge (2017 photograph)","titleEs":"Antigua cantera de New England Cement Company en Woodbridge (fotografía de 2017)","file":"WoodbridgeCT NewEnglandCementCompanyQuarry.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Chatfield Farmstead barn in Woodbridge (2017 photograph)","titleEs":"Granero de Chatfield Farmstead en Woodbridge (fotografía de 2017)","file":"WoodbridgeCT ChatfieldFarmstead Barn.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
  // Southbury, Connecticut: Commons identity, author and CC license verified 2026-10-25.
  // https://commons.wikimedia.org/wiki/File:Southford_Falls_State_Park_-_Connecticut_-_4965616145.jpg
  // https://commons.wikimedia.org/wiki/File:SouthburyCT_HurleyRoadHD2.jpg
