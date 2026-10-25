@@ -423,7 +423,7 @@ test('Milford gallery contains three individually attributed Commons photos with
  assert.ok(start>=0,'Milford photo gallery exists');
  const end=source.indexOf('\n ],',start);
  assert.ok(end>start,'Milford photo gallery closes');
- const photos=source.slice(start,end).split('\n').map(s=>s.trim()).filter(s=>s.startsWith('{')).map(s=>JSON.parse(s.replace(/,$/,'')).trim());
+ const photos=source.slice(start,end).split('\n').map(s=>s.trim()).filter(s=>s.startsWith('{')).map(s=>JSON.parse(s.replace(/,$/,'')));
  assert.equal(photos.length,3);
  assert.deepEqual(photos.map(p=>p.file),['Milford Green.jpg','CT-162 downtown Milford.jpg','Silver Sands State Park (21029).jpg']);
  assert.deepEqual(photos.map(p=>p.credit),['Fadein','Polaron','Rhododendrites']);
