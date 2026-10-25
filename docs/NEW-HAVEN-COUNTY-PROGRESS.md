@@ -8,7 +8,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 - Town-specific English/Spanish highlights: **26/27**.
 - Curated restaurant directory: **26/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **26/27**.
-- Town-specific photo gallery data: **25/27** (license records still require live display checks).
+- Town-specific photo gallery data: **26/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -32,7 +32,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | North Haven | Yes | Yes | Yes | Yes | Not certified |
 | Orange | Yes | Yes | Yes | Yes | Not certified |
 | Oxford | Yes | Yes | Yes | Yes | Not certified |
-| Prospect | Yes | Yes | Yes | No | Not certified |
+| Prospect | Yes | Yes | Yes | Yes | Not certified |
 | Seymour | Yes | Yes | Yes | Yes | Not certified |
 | Southbury | Yes | Yes | Yes | Yes | Not certified |
 | Wallingford | Yes | Yes | Yes | Yes | Not certified |
@@ -40,6 +40,11 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | Yes | Yes | Yes | Not certified |
+
+## Prospect licensed photography (2026-10-25)
+
+- Added three Prospect-specific Commons photographs with bilingual historical captions and photographer credits: Prospect Town Green (CosmicKanan, October 2020), Prospect Town Hall (CosmicKanan, October 2020), and Prospect village sign (CTsignhunt, June 2025). All are CC0 1.0 per their Commons file pages: https://commons.wikimedia.org/wiki/File:Prospect,_Connecticut_Town_Green.jpg ; https://commons.wikimedia.org/wiki/File:Prospect,_Connecticut_Town_Hall.jpg ; https://commons.wikimedia.org/wiki/File:Prospect,_CT.jpg .
+- All four major source categories are represented for Prospect, but this is **not** launch certification. Live image delivery, captions, bilingual metadata, accessibility, legal/affiliate disclosures, staging robots and deployment remain unverified.
 
 ## Prospect restaurant directory (2026-10-25)
 
