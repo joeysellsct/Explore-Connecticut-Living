@@ -6,9 +6,9 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
-- Curated restaurant directory: **20/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **20/27**.
-- Town-specific photo gallery data: **20/27** (license records still require live display checks).
+- Curated restaurant directory: **21/27** (counts any directory; individual lists still need review for approximately five current restaurants).
+- Dedicated official municipal/moving links: **21/27**.
+- Town-specific photo gallery data: **21/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -39,7 +39,15 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Waterbury | Yes | No | No | No | Not certified |
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
-| Woodbridge | Yes | No | No | No | Not certified |
+| Woodbridge | Yes | Yes | Yes | Yes | Not certified |
+
+## Woodbridge four-category source pass (2026-10-25)
+
+- Replaced the brief Woodbridge blurb with an original four-paragraph **2,793-character English / 2,936-character Spanish** guide covering Woodbridge Green, Darling Farmstead, Alice Newton Street Memorial Park, Fitzgerald Tract, property due diligence, and address-specific utilities. Municipal trail directory: https://www.woodbridgect.org/209/Trail-Maps ; town 2025 conservation/development plan: https://www.woodbridgect.org/DocumentCenter/View/7345 .
+- Added **13 bilingual official municipal/moving links** covering assessments, FY2027 budget, tax bills, land records, permits, zoning, wetlands, conservation planning, water service, roads, transfer station and parks. Woodbridge Assessor and adopted FY2027 budget independently confirm **33.99 mills for real estate/personal property** and **32.46 mills for motor vehicles**: https://www.woodbridgect.org/151/Assessor ; https://www.woodbridgect.org/428/Annual-Budgets . RWA serves some Woodbridge addresses, but individual properties may have private wells; sewer service is limited and concentrated in the southeast, so verify public sewer versus septic by address: https://www.rwater.com/customer-care/start-or-stop-service/ ; https://www.woodbridgect.org/DocumentCenter/View/7345 .
+- Added **five operator-sourced, neutral English/Spanish dining listings**: Woodbridge Social, Thai Stories Restaurant, Solun Tapas Bar, El Gallo Dorado, Katz's Deli. Sources: https://www.woodbridgesocial.com/index ; https://www.thaistoriesrestaurant.com/contact ; https://soluntapasbar.com/ ; https://www.elgallodoradoct.com/el-gallo-dorado-woodbridge ; https://www.katzsdeli.net/gallery . No invented ratings/hours or additional Joey personal Top Picks.
+- Added **three dated Wikimedia Commons photographs** with exact Creative Commons licenses and photographer credits: First Church of Christ (Staib, 2008, CC BY-SA 3.0), New England Cement Company Quarry (Magicpiano, 2017, CC BY-SA 4.0), Chatfield Farmstead barn (Magicpiano, 2017, CC BY-SA 4.0). Source pages: https://commons.wikimedia.org/wiki/File:Woodbridge-ct-1st-church-of-christ.jpg ; https://commons.wikimedia.org/wiki/File:WoodbridgeCT_NewEnglandCementCompanyQuarry.jpg ; https://commons.wikimedia.org/wiki/File:WoodbridgeCT_ChatfieldFarmstead_Barn.jpg . Historical image dates are stated, and visible attribution/crop obligations still require rendered QA.
+- Added dedicated Woodbridge source-level regression tests. **Not certified:** successful push-CI, live English/Spanish rendering, image delivery, canonical/hreflang/structured data/sitemap, mobile accessibility, partner/Equal Housing notices, staging noindex/robots and independent Cloudflare deployment verification must be confirmed before 100% completion.
 
 ## Southbury licensed town photography (2026-10-25)
 
