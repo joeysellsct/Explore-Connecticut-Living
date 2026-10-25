@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // North Branford/Northford: five restaurant-operated sites checked 2026-10-25 for local addresses and offerings.
+ // Editorial directory entries only: no ratings, hours, paid placement or Joey personal Top Picks.
+ 'north-branford': [
+  {"name":"Nataz | North Branford","cuisine":"Four-course prix-fixe dinners with a shared grazing board, salad, entrée choices and dessert on Branford Road","cuisineEs":"Cenas de precio fijo de cuatro tiempos con tabla para compartir, ensalada, plato principal y postre en Branford Road","website":"https://www.natazrest.com/north-branford","sourceUrl":"https://www.natazrest.com/north-branford","checkedOn":"2026-10-25"},
+  {"name":"Bobby's Apizza","cuisine":"Long-running North Branford pizzeria serving traditional and specialty apizza, grinders and casual Italian-American dishes on Foxon Road","cuisineEs":"Pizzería tradicional de North Branford con apizza clásica y especial, sándwiches tipo grinder y platos italoestadounidenses en Foxon Road","website":"https://www.bobbysapizza.com/","sourceUrl":"https://www.bobbysapizza.com/","checkedOn":"2026-10-25"},
+  {"name":"Dalton's Restaurant","cuisine":"Contemporary Italian restaurant on Foxon Road offering lunch, dinner and reservations","cuisineEs":"Restaurante italiano contemporáneo en Foxon Road que ofrece almuerzos, cenas y reservas","website":"https://www.daltonct.com/","sourceUrl":"https://www.daltonct.com/visit","checkedOn":"2026-10-25"},
+  {"name":"Supreme Seafood","cuisine":"Casual seafood restaurant on Foxon Road specializing in fried seafood, chowders and takeout","cuisineEs":"Restaurante informal de mariscos en Foxon Road especializado en mariscos fritos, sopas y pedidos para llevar","website":"https://www.connecticutseafood.com/","sourceUrl":"https://www.connecticutseafood.com/","checkedOn":"2026-10-25"},
+  {"name":"Millpond Gatherings","cuisine":"Steakhouse and tavern in a historic Northford mill with a river patio and separate event space","cuisineEs":"Restaurante de carnes y taberna en un molino histórico de Northford con patio junto al río y espacio para eventos","website":"https://millpondgatherings.com/","sourceUrl":"https://millpondgatherings.com/contact","checkedOn":"2026-10-25"},
+ ],
  // Middlebury: five current operator websites checked 2026-10-25 for Middlebury addresses and menus.
  // Neutral bilingual descriptions; no ratings, hours or personal Top Picks.
  'middlebury': [
