@@ -533,4 +533,24 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Public Works: garbage, bulk pickup, transfer station and snow removal information","es":"Obras Públicas: basura, recogida de objetos grandes, centro de transferencia y nieve","url":"https://www.seymourct.org/departments/publicworks"},
   {"en":"Town operations: municipal facilities, parks and development administration","es":"Operaciones municipales: instalaciones, parques y administración del desarrollo","url":"https://www.seymourct.org/departments/Operations"},
  ],
+ // Naugatuck links checked 2026-10-24 against borough, CTDOT, CT Parks and Connecticut Water sources.
+ // 2025 Grand List / FY 2026-27 real estate 40.44 mills and motor vehicles 32.46 mills: borough Tax Office.
+ // Water and sewer connections, additional assessments and property conditions are address-specific.
+ 'naugatuck': [
+  {"en":"Assessor: property cards, Grand List, exemptions and assessment appeals","es":"Tasador: fichas catastrales, lista de avalúos, exenciones y apelaciones","url":"https://www.naugatuck-ct.gov/assessor"},
+  {"en":"Tax Office: 2025 Grand List real-estate rate 40.44 mills; motor vehicles 32.46 mills; verify each bill","es":"Recaudación: tasa inmobiliaria de 40,44 mills para la lista de 2025; vehículos 32,46; confirma cada factura","url":"https://naugatuck-ct.gov/tax-office"},
+  {"en":"Town Clerk: deeds, land records and recorded-document requests","es":"Secretaría municipal: escrituras, registros de propiedad y solicitudes de documentos","url":"https://www.naugatuck-ct.gov/town-clerk"},
+  {"en":"Building Inspector: permits, inspections and construction-code questions","es":"Inspección de edificios: permisos, inspecciones y consultas sobre códigos","url":"https://www.naugatuck-ct.gov/building-inspector"},
+  {"en":"Land Use and Planning: zoning and wetlands contacts and application guidance","es":"Uso del suelo y planificación: contactos de zonificación, humedales y solicitudes","url":"https://www.naugatuck-ct.gov/land-use-planning-zoning"},
+  {"en":"Land Use Regulations: zoning, subdivision and wetlands rules; check current amendments","es":"Normativa de uso del suelo: zonificación, subdivisiones y humedales; consulta las modificaciones vigentes","url":"https://www.naugatuck-ct.gov/land-use-regulations"},
+  {"en":"Engineering and Water Pollution Control: drainage maps, sewer questions and possible assessments","es":"Ingeniería y control de aguas residuales: drenaje, alcantarillado y posibles cargos","url":"https://www.naugatuck-ct.gov/engineering-water-pollution-control"},
+  {"en":"Public Works: town roads, winter maintenance and municipal service requests","es":"Obras Públicas: calles, mantenimiento invernal y solicitudes de servicio","url":"https://www.naugatuck-ct.gov/public-works"},
+  {"en":"Refuse and Recycling: collection routes, transfer station and disposal rules","es":"Basura y reciclaje: rutas de recogida, centro de transferencia y normas","url":"https://www.naugatuck-ct.gov/public-works/refuse-recycle"},
+  {"en":"Parks and Recreation: municipal parks, programs and posted access rules","es":"Parques y recreación: parques municipales, programas y normas de acceso","url":"https://www.naugatuck-ct.gov/parks-rec"},
+  {"en":"Parks and Trails: borough trail maps including Gunntown and Andrew Mountain","es":"Parques y senderos: mapas municipales, incluidos Gunntown y Andrew Mountain","url":"https://naugatuck-ct.gov/parks-rec/parks-trails"},
+  {"en":"Connecticut Water: provider lists Naugatuck among served towns; confirm service at the exact address","es":"Connecticut Water: incluye Naugatuck entre sus municipios; confirma el servicio en cada dirección","url":"https://www.ctwater.com/about-us/"},
+  {"en":"CTDOT: Waterbury Branch substitute buses replace trains July 20, 2026 through May 31, 2027; check alerts","es":"CTDOT: autobuses sustituyen los trenes de Waterbury Branch del 20 de julio de 2026 al 31 de mayo de 2027; revisa avisos","url":"https://portal.ct.gov/dot/ctdot-press-releases/2026/substitute-busing-wbl-july-2026-through-may-2027"},
+  {"en":"Larkin State Park Trail: Naugatuck access and flood-related closure elsewhere on the trail","es":"Sendero estatal Larkin: acceso desde Naugatuck y cierre por inundaciones en otro tramo","url":"https://ctparks.com/parks/larkin-state-park-trail"},
+  {"en":"Naugatuck State Forest: state trail maps, access information and recreation rules","es":"Bosque estatal Naugatuck: mapas de senderos, acceso y normas de recreación","url":"https://ctparks.com/parks/naugatuck-state-forest"},
+ ],
 };
