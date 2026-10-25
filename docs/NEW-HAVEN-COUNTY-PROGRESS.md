@@ -6,9 +6,9 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **23/27**.
-- Curated restaurant directory: **22/27** (counts any directory; individual lists still need review for approximately five current restaurants).
+- Curated restaurant directory: **23/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **23/27**.
-- Town-specific photo gallery data: **22/27** (license records still require live display checks).
+- Town-specific photo gallery data: **23/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -24,7 +24,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Hamden | Yes | Yes | Yes | Yes | Not certified |
 | Madison | Yes | Yes | Yes | Yes | Not certified |
 | Meriden | Yes | Yes | Yes | Yes | Not certified |
-| Middlebury | Yes | No | Yes | No | Not certified |
+| Middlebury | Yes | Yes | Yes | Yes | Not certified |
 | Milford | Yes | Yes | Yes | Yes | Not certified |
 | Naugatuck | Yes | Yes | Yes | Yes | Not certified |
 | New Haven | Yes | Yes | Yes | Yes | Not certified |
@@ -46,7 +46,9 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 - Added **12 sourced bilingual municipal/moving links** for the Assessor, October 2025 revaluation, Vision property cards, GIS parcel maps, FY2027 state mill-rate data, tax-bill lookup, land records, building/land-use permits, sewer/WPCA, public works, parks and voter registration. Middlebury Land Trust provides additional open-space information. Key official sources: https://www.middleburyct.gov/1198/Assessors-Office ; https://gis.vgsi.com/middleburyct/ ; https://www.middleburyct.gov/1341/Town-Clerks-Office ; https://www.middleburyct.gov/1353/Water-Pollution-Control-Authority ; https://www.middleburyct.gov/1306/Public-Works-Department .
 - Published an original **four-paragraph English (2,359 characters) and Spanish (2,590 characters)** town guide covering Quassy Amusement & Waterpark, Middlebury Greenway, Larkin State Park Trail, Whittemore Glen, Hetzel Refuge, parcel due diligence and address-specific water/sewer checks. Sources: https://www.quassy.com/ ; https://www.cttrailfinder.com/trails/trail/middlebury-greenway ; https://portal.ct.gov/deep/state-parks/listing-of-state-parks ; https://flandersnaturecenter.org/land-trust/ .
 - Connecticut OPM/CCM report a **26.46-mill FY 2026–27 base real-property rate**: https://data.ct.gov/Local-Government/Mill-Rates-for-FY-2014-2027/emyx-j53e ; https://hub.ccm-ct.org/community/middlebury/ . Verify each parcel's assessment, charges and actual bill; do not assume every home has public sewer or public water.
-- Added `tests/middlebury.test.mjs` for bilingual source/guide coverage and personal Top Picks preservation. **Not 100% certified:** Middlebury still needs approximately five operator-verified restaurant listings, licensed and credited town photography, completed GitHub Actions results, live English/Spanish SEO, image/accessibility, disclosures, staging robots and independently verified Cloudflare deployment.
+- Added **five operator-verified bilingual restaurant entries**: Maggie McFly's, Vyne, Pies & Pub, Maples Family Restaurant and Señor Pancho's. Restaurant-operated sources: https://www.maggiemcflys.com/location/middlebury-ct/ ; https://www.vynerestaurant.com/ ; https://piesandpub.com/ ; https://www.maplesrestaurantct.com/our-story ; https://senorpanchos.com/middlebury/ . No ratings, hours or personal Top Picks were added.
+- Added **three Commons-licensed Middlebury photographs** with dated bilingual captions, authors and exact license URLs: Larkin Trail cut (John Phelan, 2023, CC BY-SA 4.0), Quassy Grand Carousel (Roller Coaster Philosophy, 2019, CC BY 2.0), Wooden Warrior at Quassy (Elvisisalive95, 2025, CC BY 4.0). Sources: https://commons.wikimedia.org/wiki/File:Larkin_State_Park_Trail_cut,_Middlebury_CT.jpg ; https://commons.wikimedia.org/wiki/File:Quassy_Amusement_Park_-_48334606547.jpg ; https://commons.wikimedia.org/wiki/File:WoodenWarrior.jpg .
+- Added `tests/middlebury.test.mjs` covering bilingual sources, guide, dining and photo provenance and Top Picks. **Not 100% certified:** source categories are represented, but completed GitHub Actions, live EN/ES SEO, photo delivery and visible credits, mobile/accessibility, Equal Housing/affiliate notices, staging robots and independently verified Cloudflare deployment remain to be checked.
 
 ## Waterbury bilingual municipal resource pass (2026-10-25)
 
