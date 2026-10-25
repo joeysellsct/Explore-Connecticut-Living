@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Woodbridge: five restaurant-operated sites checked 2026-10-25 for Woodbridge locations and menus.
+ // Neutral bilingual listings only; no scores, hours, or Joey personal Top Picks.
+ 'woodbridge': [
+  {"name":"Woodbridge Social","cuisine":"American restaurant with brunch, sandwiches and pub-style meals on Selden Street","cuisineEs":"Restaurante estadounidense con brunch, sándwiches y platos de taberna en Selden Street","website":"https://www.woodbridgesocial.com/index","sourceUrl":"https://www.woodbridgesocial.com/index","checkedOn":"2026-10-25"},
+  {"name":"Thai Stories Restaurant","cuisine":"Thai lunch and dinner on Selden Street","cuisineEs":"Almuerzos y cenas de cocina tailandesa en Selden Street","website":"https://www.thaistoriesrestaurant.com/","sourceUrl":"https://www.thaistoriesrestaurant.com/contact","checkedOn":"2026-10-25"},
+  {"name":"Solun Tapas Bar","cuisine":"Spanish and Mediterranean tapas on Amity Road","cuisineEs":"Tapas españolas y mediterráneas en Amity Road","website":"https://soluntapasbar.com/","sourceUrl":"https://soluntapasbar.com/","checkedOn":"2026-10-25"},
+  {"name":"El Gallo Dorado","cuisine":"Mexican burritos, quesadillas and other casual dishes on Selden Street","cuisineEs":"Burritos, quesadillas y otros platos mexicanos informales en Selden Street","website":"https://www.elgallodoradoct.com/el-gallo-dorado-woodbridge","sourceUrl":"https://www.elgallodoradoct.com/el-gallo-dorado-woodbridge","checkedOn":"2026-10-25"},
+  {"name":"Katz's Deli","cuisine":"Deli sandwiches, breakfast plates and baked goods on Litchfield Turnpike","cuisineEs":"Sándwiches de delicatessen, desayunos y productos de panadería en Litchfield Turnpike","website":"https://www.katzsdeli.net/","sourceUrl":"https://www.katzsdeli.net/gallery","checkedOn":"2026-10-25"},
+ ],
  // Southbury: five restaurant-operated location/menu sources checked 2026-10-25.
  // Neutral English/Spanish directory; no scores, hours or Joey personal endorsements.
  // Brew Cafe & Bistro is the current name at 466 Heritage Rd (formerly Hudson's).
