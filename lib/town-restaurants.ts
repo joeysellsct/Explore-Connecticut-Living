@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // North Haven: operator websites verified 2026-10-25 for town/address and offerings.
+ // Editorial dining directory, not Joey's personal Top Picks; no ratings or hours asserted.
+ 'north-haven': [
+  {"name":"La Lupa Ristorante","cuisine":"Italian dining and brick-oven pizza on Washington Avenue","cuisineEs":"Cocina italiana y pizza al horno de ladrillo en Washington Avenue","website":"https://lalupact.com/","sourceUrl":"https://lalupact.com/","checkedOn":"2026-10-25"},
+  {"name":"Ludal Italian Restaurant","cuisine":"Contemporary Italian dining, catering and private events on Broadway","cuisineEs":"Cocina italiana contemporánea, catering y eventos privados en Broadway","website":"https://www.ludalct.com/","sourceUrl":"https://www.ludalct.com/visit","checkedOn":"2026-10-25"},
+  {"name":"Bellini's Italian Restaurant & Pizza","cuisine":"Italian meals, pizza and banquet dining on Broadway","cuisineEs":"Platos italianos, pizza y banquetes en Broadway","website":"https://www.bellinisnorthhaven.com/","sourceUrl":"https://www.bellinisnorthhaven.com/","checkedOn":"2026-10-25"},
+  {"name":"J Roo's Restaurant","cuisine":"Family-owned restaurant with pizza, American and Italian dishes, and group dining","cuisineEs":"Restaurante familiar con pizza, platos estadounidenses e italianos y comidas para grupos","website":"https://www.jroosrestaurant.com/","sourceUrl":"https://www.jroosrestaurant.com/visit","checkedOn":"2026-10-25"},
+  {"name":"Giulio's Pizza Restaurant & Catering","cuisine":"Pizza, Italian specialties and catering on Middletown Avenue","cuisineEs":"Pizza, especialidades italianas y catering en Middletown Avenue","website":"https://giuliospizza.com/","sourceUrl":"https://giuliospizza.com/contact/","checkedOn":"2026-10-25"},
+ ],
  // Naugatuck restaurant locations and operator websites checked 2026-10-24.
  // Editorial listings only; no invented hours, ratings or personal Joey endorsements.
  'naugatuck': [
