@@ -2,6 +2,23 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Woodbridge official sources checked 2026-10-25: town departments, adopted FY2027 budget,
+ // adopted POCD, and Regional Water Authority. Utility service is parcel-specific.
+ 'woodbridge': [
+  {"en":"Assessor: property assessments, exemptions, and the 2025 grand-list real estate mill rate of 33.99 for July 2026–January 2027 bills; verify the parcel bill","es":"Tasador: avalúos, exenciones y tasa inmobiliaria de 33,99 mills de la lista de 2025 para facturas de julio de 2026 a enero de 2027; verifica la factura de la parcela","url":"https://www.woodbridgect.org/151/Assessor"},
+  {"en":"FY 2026–27 adopted budget: confirms 33.99 mills for real estate/personal property and 32.46 mills for motor vehicles; these are different rates","es":"Presupuesto aprobado 2026–27: confirma 33,99 mills para inmuebles/bienes personales y 32,46 para vehículos; son tasas distintas","url":"https://www.woodbridgect.org/428/Annual-Budgets"},
+  {"en":"Tax Collector: real estate bills, payment status, deadlines and payment fees","es":"Recaudación: facturas inmobiliarias, estado de pagos, vencimientos y cargos por pago","url":"https://www.woodbridgect.org/238/Tax-Collector"},
+  {"en":"Town Clerk land records: deeds, liens, online search information and recording fees","es":"Registros de la Secretaría: escrituras, gravámenes, búsqueda en línea y tarifas de inscripción","url":"https://www.woodbridgect.org/180/Land-Records"},
+  {"en":"Town Clerk: recorded documents, property transfers and municipal certificates","es":"Secretaría municipal: documentos registrados, transferencias y certificados municipales","url":"https://www.woodbridgect.org/177/Town-Clerk"},
+  {"en":"Building Department: online permits, construction records, inspections and occupancy certificates","es":"Departamento de Construcción: permisos en línea, expedientes de obra, inspecciones y certificados de ocupación","url":"https://www.woodbridgect.org/170/Building-Department"},
+  {"en":"Town Plan & Zoning: land-use rules, subdivision questions and the adopted 2025 conservation/development plan","es":"Planificación y Zonificación: usos del suelo, subdivisiones y plan de conservación y desarrollo adoptado en 2025","url":"https://www.woodbridgect.org/219/Town-Plan-Zoning"},
+  {"en":"Inland Wetlands: review of projects near wetlands and watercourses","es":"Humedales interiores: revisión de proyectos cerca de humedales y cursos de agua","url":"https://www.woodbridgect.org/287/Inland-Wetlands"},
+  {"en":"Woodbridge conservation/development plan: sewer infrastructure is limited and concentrated in the southeast; confirm sewer or septic at the address","es":"Plan municipal de conservación y desarrollo: el alcantarillado es limitado y se concentra en el sureste; confirma conexión o sistema séptico de la dirección","url":"https://www.woodbridgect.org/DocumentCenter/View/7345/Woodbridge-POCD-Adopted-December-18-2025-effective-January-1-2026?bidId="},
+  {"en":"Regional Water Authority: start/stop service for eligible Woodbridge addresses; verify municipal water versus a private well before moving","es":"Autoridad Regional del Agua: alta o baja del servicio en direcciones de Woodbridge cubiertas; verifica agua pública o pozo privado antes de mudarte","url":"https://www.rwater.com/customer-care/start-or-stop-service/"},
+  {"en":"Public Works: roads, drainage, snow response and scheduled bulky-item collection","es":"Obras Públicas: calles, drenaje, nieve y recogida programada de objetos voluminosos","url":"https://www.woodbridgect.org/271/Public-Works"},
+  {"en":"Transfer and Recycling Station: resident access, permits and waste/recycling rules","es":"Centro de transferencia y reciclaje: acceso de residentes, permisos y normas de residuos/reciclaje","url":"https://www.woodbridgect.org/163/Transfer-and-Recycling-Station"},
+  {"en":"Parks: town-maintained parks, fields and current access guidance","es":"Parques: parques y campos municipales e información actualizada de acceso","url":"https://www.woodbridgect.org/254/Parks"},
+ ],
  // Wallingford municipal and utility sources checked 2026-10-25 against town departments and CCM.
  // FY2027 base rate 24.57 mills; town electric division and partial water/sewer coverage require parcel verification.
  'wallingford': [
