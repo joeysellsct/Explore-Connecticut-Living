@@ -77,3 +77,23 @@ test('Waterbury photography includes three dated, attributed Commons-licensed to
  assert.ok(page.includes('townPhotography[slug]'));
  assert.ok(page.includes('photo.licenseUrl'));
 });
+
+test('Waterbury town guide has original multi-paragraph English and Spanish content with property cautions', () => {
+ const source = read('lib/town-highlights.ts');
+ const match = source.match(/^ 'waterbury':(\{[^\n]+\}),?$/m);
+ assert.ok(match, 'Waterbury town guide missing');
+ const guide = JSON.parse(match[1]);
+ assert.ok(guide.en.length > 2500 && guide.es.length > 2700);
+ assert.equal(guide.en.split('\n\n').length, 4);
+ assert.equal(guide.es.split('\n\n').length, 4);
+ for (const place of ['Mattatuck Museum', 'Palace Theater', 'Waterbury Green', 'Fulton Park']) {
+  assert.ok(guide.places.includes(place));
+  assert.ok(guide.en.includes(place));
+ }
+ assert.match(guide.en, /43\.34 mills/);
+ assert.match(guide.es, /43,34 milésimas/);
+ assert.match(guide.en, /May 31, 2027/);
+ assert.match(guide.es, /31 de mayo de 2027/);
+ assert.match(guide.en, /not personal endorsements/);
+ assert.match(guide.es, /no como recomendaciones personales/);
+});
