@@ -8,7 +8,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **20/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **20/27**.
-- Town-specific photo gallery data: **19/27** (license records still require live display checks).
+- Town-specific photo gallery data: **20/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -34,24 +34,30 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Oxford | No | No | No | No | Not certified |
 | Prospect | No | No | No | No | Not certified |
 | Seymour | Yes | Yes | Yes | Yes | Not certified |
-| Southbury | Yes | Yes | Yes | No | Not certified |
+| Southbury | Yes | Yes | Yes | Yes | Not certified |
 | Wallingford | Yes | Yes | Yes | Yes | Not certified |
 | Waterbury | Yes | No | No | No | Not certified |
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | No | No | No | Not certified |
 
+## Southbury licensed town photography (2026-10-25)
+
+- Added three Southbury-specific Wikimedia Commons photographs with original capture dates, bilingual captions, photographer credits and exact ShareAlike license links: Southford Falls State Park (Dougtone/Doug Kerr, 2010, CC BY-SA 2.0), Hurley Road Historic District (Magicpiano, 2016, CC BY-SA 4.0), and Russian Village Historic District (Magicpiano, 2016, CC BY-SA 4.0). Source pages: https://commons.wikimedia.org/wiki/File:Southford_Falls_State_Park_-_Connecticut_-_4965616145.jpg ; https://commons.wikimedia.org/wiki/File:SouthburyCT_HurleyRoadHD2.jpg ; https://commons.wikimedia.org/wiki/File:SouthburyCT_RussianVillage_3.jpg .
+- Source commit `072202f772d9b0845bcec72342e6389ba0715be6` and photo regression commit `3af7d982fa413c07e27d1c27fc3e523f31c291fd` confirmed through GitHub content refetch. Source-level metadata parse found three unique JPG records with matching licenses, author credits and dated English/Spanish captions.
+- **Still not certified:** actual image delivery, visible source/ShareAlike attribution and crop disclosures, rendered EN/ES SEO, accessibility, legal and affiliate notices, staging noindex/robots and independent Cloudflare deployment checks. GitHub Actions completion remains unconfirmed.
+
 ## Southbury dining source pass (2026-10-25)
 
 - Added **five neutral, English/Spanish restaurant listings** to `lib/town-restaurants.ts`: Brew Cafe & Bistro, Mercato Italian Kitchen & Bar, Farmer's Tavern, Samui Thai Cuisine, and DiPalma's Pizza. Current operator sources independently identify Southbury addresses and menus: https://brewcafebistro.com/contact ; https://www.mercatoitaliankitchen.com/locations/southbury ; https://www.farmerstavernct.com/ ; https://samui-thai-cuisine.square.site/ ; https://www.dipalmaspizza.com/ .
 - **Important naming check:** the 466 Heritage Road cafe is now Brew Cafe & Bistro, formerly Hudson's Cafe & Bistro; use the current operator site rather than stale Hudson's pages. No scores, operating hours or additional Joey personal Top Picks were published.
-- Southbury dining source commit `f2a23f5b1018147e46da2f1e5b3bc31570a3e3a3` and regression test commit `639430ffc4eae6aeac7a9cc007c3f24368403f51` were refetched and confirmed in `main`; source-level JSON parsing found five distinct HTTPS-backed bilingual entries. GitHub Actions and independent rendered-page QA remain **unconfirmed**. Licensed Southbury-specific photos remain missing, and Southbury is **not** 100% certified.
+- Southbury dining source commit `f2a23f5b1018147e46da2f1e5b3bc31570a3e3a3` and regression test commit `639430ffc4eae6aeac7a9cc007c3f24368403f51` were refetched and confirmed in `main`; source-level JSON parsing found five distinct HTTPS-backed bilingual entries. GitHub Actions and independent rendered-page QA remain **unconfirmed**. Licensed photo records were added subsequently; independent rendered-photo checks remain pending, and Southbury is **not** 100% certified.
 
 ## Southbury official resources (2026-10-25)
 
 - Added **15 bilingual, town-sourced municipal and moving links** covering Assessor, the official FY 2026–27 **25.4-mill** tax rate, Tax Collector and installments, Town Clerk deeds/fees, GIS, permits, planning/zoning, wetlands, Housatonic Valley Health District, Public Works and parks. Southbury's own Tax Collector rate page confirms **25.4 mills**, although the CCM Southbury community snapshot currently displays **23.29**; use the municipality's current published figure and verify parcel/district bills. Sources: https://www.southbury-ct.org/mill-rate ; https://www.southbury-ct.org/assessor ; https://www.southbury-ct.org/tax .
 - The town WPCA says **Southbury has no municipal sewage system**. Septic and water sources are property-specific, and the health district oversees private systems. Sources: https://www.southbury-ct.org/content/20556/20610/20673/default.aspx ; https://www.southbury-ct.org/startbusiness .
-- Added Southbury regression tests for 15 unique HTTPS municipal links, bilingual descriptions, correct FY2027 rate, sewer caution and the existing Top Picks restriction. **Still incomplete:** verified restaurant directory, licensed photography, full town guide review and independent EN/ES rendered QA, accessibility, SEO, staging robots, disclosures and Cloudflare deployment. No town marked 100%.
+- Added Southbury regression tests for 15 unique HTTPS municipal links, bilingual descriptions, correct FY2027 rate, sewer caution and the existing Top Picks restriction. **Still incomplete:** independent verification of the new restaurant/photo data, full town guide review and EN/ES rendered QA, accessibility, SEO, staging robots, disclosures and Cloudflare deployment. No town marked 100%.
 
 ## Wallingford four-category source pass (2026-10-25)
 
