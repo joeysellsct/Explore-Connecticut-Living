@@ -1,3 +1,7 @@
+## Independent staging DNS retry (2026-10-25, 15:00 EDT)
+
+- A separate Python urllib DNS/HTTPS check from the execution container attempted `/robots.txt`, `/en/towns/prospect`, and `/es/towns/wolcott` at `explore-connecticut-living-staging.joeysellsct.workers.dev`. All three failed before HTTP with `URLError: [Errno -3] Temporary failure in name resolution`. Independent web retrieval also returned `URL ... is not accessible via this tool`. Neither proves a failed Cloudflare deployment; rendered SEO, image delivery, accessibility and robots remain unverified. Retry in a later run or use a known working staging hostname.
+
 ## Wolcott source-category completion and pending launch audit (2026-10-25, after 15:00 EDT)
 
 - Wolcott now has five operator-sourced English/Spanish restaurant entries in `1988ecfb7bb2ec88be195b50c838d05aca7a97bc`: Mona Lisa, Tramonti Pizzeria, Zuppa, McBride's and Wolcott Pizza. Operator URLs and addresses were checked 2026-10-25; no hours, ratings or personal Top Picks. The initial restaurant commit's Actions run failed while an older Wolcott test still asserted no restaurants; the follow-up test commit `0c1fcd19bfa63debfe2f6f7768688d6974df2182` passed Actions.
