@@ -2,7 +2,14 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
- // Prospect: Commons image identity, location, creator and CC0 license checked 2026-10-25.
+ // Wolcott: Commons image identity, town location, Magicpiano authorship and CC BY-SA 4.0 verified 2026-10-25.
+ // Sources: https://commons.wikimedia.org/wiki/File:WolcottCT_TownGreen.jpg ; https://commons.wikimedia.org/wiki/File:WolcottCT_TownHall.jpg ; https://commons.wikimedia.org/wiki/File:WolcottCT_CongregationalChurch.jpg
+ 'wolcott': [
+  {"title":"Wolcott Town Green in the Wolcott Green Historic District (photographed April 2018)","titleEs":"Plaza Wolcott Town Green en el distrito histórico Wolcott Green (fotografía de abril de 2018)","file":"WolcottCT TownGreen.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Wolcott Town Hall in the Wolcott Green Historic District (photographed April 2018)","titleEs":"Ayuntamiento de Wolcott en el distrito histórico Wolcott Green (fotografía de abril de 2018)","file":"WolcottCT TownHall.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Congregational Church in Wolcott Green Historic District (photographed April 2018)","titleEs":"Iglesia congregacional del distrito histórico Wolcott Green (fotografía de abril de 2018)","file":"WolcottCT CongregationalChurch.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
+  // Prospect: Commons image identity, location, creator and CC0 license checked 2026-10-25.
  // Sources: https://commons.wikimedia.org/wiki/File:Prospect,_Connecticut_Town_Green.jpg ; https://commons.wikimedia.org/wiki/File:Prospect,_Connecticut_Town_Hall.jpg ; https://commons.wikimedia.org/wiki/File:Prospect,_CT.jpg
  'prospect': [
   {"title":"Prospect Town Green (photographed October 2020)","titleEs":"Plaza histórica Prospect Town Green (fotografía de octubre de 2020)","file":"Prospect, Connecticut Town Green.jpg","credit":"CosmicKanan (MsCosmicAsh)","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/"},
