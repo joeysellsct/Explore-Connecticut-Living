@@ -2,6 +2,21 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Middlebury municipal sources verified 2026-10-25; FY2027 rate 26.46 mills per CT OPM/CCM. Parcel bills and utility hookups must be checked by address.
+ 'middlebury': [
+  {"en":"Assessor: confirm assessed value, exemptions and the 2025 revaluation before estimating a specific home's taxes","es":"Tasador: confirma el avalúo, las exenciones y la reevaluación de 2025 antes de calcular los impuestos de una vivienda","url":"https://www.middleburyct.gov/1198/Assessors-Office"},
+  {"en":"Official parcel assessment database: October 1, 2025 revaluation records; assessments are not asking prices","es":"Base oficial de avalúos por parcela: reevaluación del 1 de octubre de 2025; los avalúos no son precios de venta","url":"https://gis.vgsi.com/middleburyct/"},
+  {"en":"Town GIS maps: research parcel context and nearby features; not a legal boundary survey","es":"Mapas GIS municipales: consulta parcelas y su entorno; no sustituyen un deslinde legal","url":"https://middlebury.mapxpress.net/"},
+  {"en":"Connecticut OPM FY 2026–27 mill-rate data: 26.46-mill municipal real-property base rate; verify the current parcel bill and any special charges","es":"Datos oficiales OPM 2026–27: tasa municipal inmobiliaria base de 26,46 mills; verifica la factura actual y posibles cargos especiales","url":"https://data.ct.gov/Local-Government/Mill-Rates-for-FY-2014-2027/emyx-j53e"},
+  {"en":"Middlebury online tax bills: search real-estate, personal-property and vehicle bills; confirm payment amounts with the Tax Collector","es":"Facturas tributarias en línea: consulta impuestos inmobiliarios, personales y de vehículos; confirma importes con Recaudación","url":"https://www.middleburyct.gov/1337/Online-Bill-Pay"},
+  {"en":"Town Clerk: recorded deeds, mortgages, easements, land records and property-fraud alerts","es":"Secretaría municipal: escrituras, hipotecas, servidumbres, registros de propiedad y alertas de fraude","url":"https://www.middleburyct.gov/1341/Town-Clerks-Office"},
+  {"en":"Building and Land Use: construction permits, inspections, zoning and wetlands application guidance","es":"Construcción y Uso del Suelo: permisos de obra, inspecciones, zonificación y trámites de humedales","url":"https://www.middleburyct.gov/1207/Building-Land-Use-Department"},
+  {"en":"Water Pollution Control Authority: town sewer lines and pump stations; confirm whether the specific address connects to public sewer or uses septic","es":"Autoridad de Aguas Residuales: tuberías municipales y estaciones de bombeo; confirma si la dirección tiene alcantarillado o sistema séptico","url":"https://www.middleburyct.gov/1353/Water-Pollution-Control-Authority"},
+  {"en":"Public Works: roads, storm drains, transfer station and water/sewer operations oversight; verify utility service and fees by address","es":"Obras Públicas: calles, drenaje, centro de residuos y supervisión de agua/alcantarillado; verifica servicios y tarifas por dirección","url":"https://www.middleburyct.gov/1306/Public-Works-Department"},
+  {"en":"Parks and Recreation: current programs, public facilities and access information","es":"Parques y Recreación: programas vigentes, instalaciones públicas e información de acceso","url":"https://www.middleburyct.gov/1282/Parks-Recreation"},
+  {"en":"Town voter registration: residency and voter-registration guidance for new residents","es":"Inscripción electoral municipal: orientación sobre residencia y registro de votantes para nuevos vecinos","url":"https://www.middleburyct.gov/1333/Register-to-Vote"},
+  {"en":"Middlebury Land Trust: preserved open space and trail information; check current site-specific access rules","es":"Fideicomiso de Tierras de Middlebury: espacios naturales protegidos y senderos; consulta las normas de acceso de cada lugar","url":"https://middleburylandtrust.org/"},
+ ],
  // Waterbury municipal and moving sources checked 2026-10-25 against city departments and Connecticut OPM.
  // FY2027 real-estate base rate 43.34 mills; water/sewer connections and actual bills are parcel-specific.
  'waterbury': [
