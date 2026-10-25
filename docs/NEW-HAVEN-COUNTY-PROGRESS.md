@@ -5,9 +5,9 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 ## Coverage of 27 New Haven County towns
 
 - Directory routes: **27/27** via the 169-town shared data source.
-- Town-specific English/Spanish highlights: **25/27**.
+- Town-specific English/Spanish highlights: **26/27**.
 - Curated restaurant directory: **25/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **25/27**.
+- Dedicated official municipal/moving links: **26/27**.
 - Town-specific photo gallery data: **25/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
@@ -32,7 +32,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | North Haven | Yes | Yes | Yes | Yes | Not certified |
 | Orange | Yes | Yes | Yes | Yes | Not certified |
 | Oxford | Yes | Yes | Yes | Yes | Not certified |
-| Prospect | No | No | No | No | Not certified |
+| Prospect | Yes | No | Yes | No | Not certified |
 | Seymour | Yes | Yes | Yes | Yes | Not certified |
 | Southbury | Yes | Yes | Yes | Yes | Not certified |
 | Wallingford | Yes | Yes | Yes | Yes | Not certified |
@@ -40,6 +40,12 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | Yes | Yes | Yes | Not certified |
+
+## Prospect bilingual guide and municipal resources (2026-10-25)
+
+- Added an original four-paragraph town guide in English (2,537 characters) and Spanish (2,915 characters), covering Prospect Town Green, Hotchkiss Field, Kathan Woods, College Farm, home due diligence and address-specific utility research.
+- Added **15 bilingual official municipal and moving resource links**, including assessor, tax, clerk/land records, GIS, building, land use, wetlands, public works, recreation, water provider and sewer charges. The town's assessor and Tax FAQ confirm **28.47 mills for FY 2026–27**, based on the October 1, 2025 Grand List. Sources: https://townofprospect.gov/assessor/ ; https://townofprospect.gov/tax-faq/ ; https://townofprospect.gov/sewer-user-fee/ ; https://waterburyct.gov/services/water ; https://www.seymourct.org/media/Town%20Planner/Final-NVOSI-Report-and-Guide-7.23.25.pdf .
+- **Still incomplete:** Prospect needs operator-verified restaurant listings, licensed and attributed town-specific photographs, and independently verified rendered bilingual pages, SEO, accessibility, disclosures and deployment. No launch certification is implied.
 
 ## Oxford bilingual guide and municipal resources (2026-10-25)
 
