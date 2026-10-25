@@ -7,7 +7,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **14/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **14/27**.
+- Dedicated official municipal/moving links: **15/27**.
 - Town-specific photo gallery data: **14/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
@@ -15,7 +15,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | --- | :---: | :---: | :---: | :---: | :---: |
 | Ansonia | Yes | Yes | Yes | Yes | Not certified |
 | Beacon Falls | Yes | Yes | Yes | Yes | Not certified |
-| Bethany | Yes | No | No | No | Not certified |
+| Bethany | Yes | No | Yes | No | Not certified |
 | Branford | Yes | Yes | Yes | Yes | Not certified |
 | Cheshire | Yes | Yes | Yes | Yes | Not certified |
 | Derby | Yes | Yes | Yes | Yes | Not certified |
@@ -40,6 +40,12 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | No | No | No | Not certified |
+
+## Bethany municipal sources and bilingual guide (2026-10-24)
+
+- Expanded Bethany's existing English/Spanish guide with researched rural character, Veterans Memorial Park pass rules, West Rock Ridge/Regicides Trail, land records, permits, wetlands and parcel-specific utility due diligence. The Assessor lists **29.99 mills** for the 2025 Grand List/FY 2026–27; the Tax Collector page still references **29.14 mills** for the older 2024 Grand List, so readers are directed to verify the current bill. The town states that it has **no municipal water or sewer services**, and QVHD regulates septic systems. Sources: https://www.bethanyct.gov/assessor ; https://bethanyct.gov/tax-collector ; https://bethanyct.gov/about ; https://www.qvhd.org/septic ; https://bethanyct.gov/parks/vets-park ; https://ctparks.com/parks/west-rock-ridge-state-park .
+- Added **15 bilingual, source-checked official links** for assessment/taxes, deeds, permitting, zoning, wetlands, septic, recreation and public works. Added `tests/bethany.test.mjs` to protect the content and site-wide compliance wiring.
+- **Not certified:** Bethany still lacks a verified restaurant directory and town-specific licensed photo records. Live English/Spanish rendering, image delivery, accessibility, metadata/hreflang, legal and affiliate disclosures, sitemap, robots and Cloudflare deployment remain independently unverified; staging pages and robots.txt were inaccessible through the browser on October 24. New GitHub Actions runs must be checked independently before claiming they pass.
 
 ## Work order and acceptance
 
