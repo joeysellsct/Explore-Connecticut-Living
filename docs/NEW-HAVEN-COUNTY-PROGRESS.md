@@ -6,9 +6,9 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **27/27**.
-- Curated restaurant directory: **26/27** (counts any directory; individual lists still need review for approximately five current restaurants).
+- Curated restaurant directory: **27/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **27/27**.
-- Town-specific photo gallery data: **26/27** (license records still require live display checks).
+- Town-specific photo gallery data: **27/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -38,8 +38,14 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Wallingford | Yes | Yes | Yes | Yes | Not certified |
 | Waterbury | Yes | Yes | Yes | Yes | Not certified |
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
-| Wolcott | Yes | No | Yes | No | Not certified |
+| Wolcott | Yes | Yes | Yes | Yes | Not certified |
 | Woodbridge | Yes | Yes | Yes | Yes | Not certified |
+
+## Wolcott restaurant directory and licensed photos (2026-10-25)
+
+- Added five sourced bilingual restaurant entries: Mona Lisa Restaurant, Tramonti Pizzeria: Forno a Legna, Zuppa Unique Italian Pub, McBride's Restaurant & Apizza, and Wolcott Pizza Wood Fired Brick Oven. Each operator page identifies a Wolcott address; no ratings, hours or Joey personal Top Picks. Sources: https://www.monalisarestaurant.net/ ; https://www.tramonti-ristorante.com/our-locations ; https://www.zuppaitalianpub.com/ ; https://www.mcbridesrestaurant.com/ ; https://www.wolcottpizzawoodfiredbrickoven.com/ .
+- Added three Commons-licensed Wolcott Green Historic District photos (Town Green, Town Hall and Congregational Church), all by Magicpiano, photographed April 2018 and licensed CC BY-SA 4.0. Bilingual captions distinguish historical images from present-day conditions. Sources: https://commons.wikimedia.org/wiki/File:WolcottCT_TownGreen.jpg ; https://commons.wikimedia.org/wiki/File:WolcottCT_TownHall.jpg ; https://commons.wikimedia.org/wiki/File:WolcottCT_CongregationalChurch.jpg .
+- **All 27 New Haven County towns now have four major source categories represented, not 27 launch-ready pages.** Verify each town's content depth, restaurant currency, municipal links, tax/utility sources, image delivery and licenses, unique bilingual SEO, canonical/hreflang, structured data, sitemap, accessibility, affiliate and Equal Housing disclosures, and staging noindex/robots on rendered pages before any town is marked 100% complete.
 
 ## Wolcott bilingual guide and municipal resources (2026-10-25)
 
