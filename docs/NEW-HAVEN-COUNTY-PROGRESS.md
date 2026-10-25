@@ -6,7 +6,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **26/27**.
-- Curated restaurant directory: **25/27** (counts any directory; individual lists still need review for approximately five current restaurants).
+- Curated restaurant directory: **26/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **26/27**.
 - Town-specific photo gallery data: **25/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
@@ -32,7 +32,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | North Haven | Yes | Yes | Yes | Yes | Not certified |
 | Orange | Yes | Yes | Yes | Yes | Not certified |
 | Oxford | Yes | Yes | Yes | Yes | Not certified |
-| Prospect | Yes | No | Yes | No | Not certified |
+| Prospect | Yes | Yes | Yes | No | Not certified |
 | Seymour | Yes | Yes | Yes | Yes | Not certified |
 | Southbury | Yes | Yes | Yes | Yes | Not certified |
 | Wallingford | Yes | Yes | Yes | Yes | Not certified |
@@ -40,6 +40,11 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | Yes | Yes | Yes | Not certified |
+
+## Prospect restaurant directory (2026-10-25)
+
+- Added five English/Spanish editorial restaurant listings in `lib/town-restaurants.ts`: Haven Pizzeria Napoletana, Hometown Pizza, Anna's Prospect Pizza, Golden Wok and Señor Pancho's of Prospect. Checked operator websites and Prospect addresses on 2026-10-25; no ratings, hours or Joey personal Top Picks added. Sources: https://www.havenpizzerianapoletana.com/ ; https://www.hometownpizzaprospect.com/ ; https://annasprospectpizzact.com/ ; https://goldenwokprospect.com/ ; https://senorpanchos.com/prospect/ .
+- Source directory coverage is now 26/27. Prospect still needs licensed town-specific photography and rendered bilingual/live SEO, accessibility, disclosures and deployment QA before certification.
 
 ## Prospect bilingual guide and municipal resources (2026-10-25)
 
