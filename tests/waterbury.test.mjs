@@ -54,3 +54,26 @@ test('Waterbury dining contains five operator-sourced bilingual listings without
  const page = read('app/[locale]/towns/[slug]/page.tsx');
  assert.ok(page.includes('townRestaurants[slug]'));
 });
+
+test('Waterbury photography includes three dated, attributed Commons-licensed town images', () => {
+ const source = read('lib/town-photography.ts');
+ const match = source.match(/^ 'waterbury': \[(.*?)^ \],/ms);
+ assert.ok(match, 'Waterbury photo gallery missing');
+ const entries = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+ assert.equal(entries.length, 3);
+ assert.equal(new Set(entries.map(entry => entry.file)).size, 3);
+ for (const entry of entries) {
+  assert.match(entry.title, /photograph/);
+  assert.match(entry.titleEs, /fotografía/);
+  assert.ok(entry.credit.length > 4);
+  assert.equal(entry.license, 'CC BY-SA 4.0');
+  assert.equal(entry.licenseUrl, 'https://creativecommons.org/licenses/by-sa/4.0/');
+  assert.ok(entry.file.toLowerCase().endsWith('.jpg'));
+ }
+ assert.ok(entries.some(entry => entry.file === 'Waterbury City Hall.jpg' && entry.credit === 'Farragutful'));
+ assert.ok(entries.some(entry => entry.file === 'PalaceTheater-WaterburyCT-1.jpg' && entry.credit === 'Koskenart'));
+ assert.ok(entries.some(entry => entry.file === 'WATERBURY UNION STATION BUILDING.jpg' && entry.credit.includes('Ted Shaffrey')));
+ const page = read('app/[locale]/towns/[slug]/page.tsx');
+ assert.ok(page.includes('townPhotography[slug]'));
+ assert.ok(page.includes('photo.licenseUrl'));
+});
