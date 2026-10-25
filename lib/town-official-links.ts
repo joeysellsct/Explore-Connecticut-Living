@@ -2,6 +2,24 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Wallingford municipal and utility sources checked 2026-10-25 against town departments and CCM.
+ // FY2027 base rate 24.57 mills; town electric division and partial water/sewer coverage require parcel verification.
+ 'wallingford': [
+  {"en":"Assessor: parcel assessments, 2024 revaluation and exemption questions","es":"Tasador: avalúos por parcela, reevaluación de 2024 y consultas sobre exenciones","url":"https://www.wallingfordct.gov/government/departments/assessors-office/"},
+  {"en":"Tax Collector: real estate bills, payment options and account questions","es":"Recaudación: impuestos inmobiliarios, opciones de pago y consultas de cuentas","url":"https://www.wallingfordct.gov/government/departments/tax-office/"},
+  {"en":"Connecticut Conference of Municipalities: FY 2026–27 real property rate of 24.57 mills; confirm the parcel bill","es":"Conferencia de Municipios de Connecticut: tasa inmobiliaria 2026–27 de 24,57 mills; confirma la factura de la propiedad","url":"https://hub.ccm-ct.org/community/wallingford/"},
+  {"en":"Town Clerk: deeds, liens and RECORDhub land-record access; online image/printing fees may apply","es":"Secretaría municipal: escrituras, gravámenes y registros de RECORDhub; puede haber cargos por imágenes o copias","url":"https://www.wallingfordct.gov/government/departments/town-clerk/"},
+  {"en":"Building, Rental Housing and Blight: permits, inspections and rental-code information","es":"Construcción, alquileres y mantenimiento: permisos, inspecciones y normas de viviendas arrendadas","url":"https://www.wallingfordct.gov/government/departments/building-department/"},
+  {"en":"Planning and Zoning: zoning rules, maps and land-use applications","es":"Planificación y Zonificación: normas, mapas y solicitudes de uso del suelo","url":"https://www.wallingfordct.gov/government/departments/planning-zoning/"},
+  {"en":"Inland Wetlands and Watercourses: environmental permit reviews and wetlands questions","es":"Humedales y cursos de agua: revisión de permisos ambientales y consultas sobre humedales","url":"https://www.wallingfordct.gov/government/departments/inland-wetlands-watercourses/"},
+  {"en":"Engineering: public drainage, road questions and municipal mapping; private surveys require a professional","es":"Ingeniería: drenaje público, caminos y mapas municipales; los estudios privados requieren un profesional","url":"https://www.wallingfordct.gov/government/departments/engineering-department/"},
+  {"en":"Electric Division: town-operated electric service, rates, billing and outages; verify the address","es":"División Eléctrica: servicio municipal, tarifas, facturación y cortes; verifica la dirección","url":"https://www.wallingfordct.gov/government/departments/electric-division/"},
+  {"en":"Water and Sewer Divisions: service-area inquiries, closing forms, rates and bills; not every parcel is connected","es":"Agua y Alcantarillado: cobertura, formularios de cierre, tarifas y facturas; no todas las parcelas están conectadas","url":"https://www.wallingfordct.gov/government/departments/water-sewer-divisions/"},
+  {"en":"Public Works: roads, recycling, waste disposal and seasonal collection notices","es":"Obras Públicas: calles, reciclaje, residuos y avisos de recolección estacional","url":"https://www.wallingfordct.gov/government/departments/public-works/"},
+  {"en":"Parks and Recreation: Quinnipiac River Linear Trail, park facilities and program registration","es":"Parques y Recreación: sendero del río Quinnipiac, instalaciones y programas","url":"https://www.wallingfordct.gov/government/departments/parks-recreation/"},
+  {"en":"Finance: adopted FY 2026–27 budget and financial reports","es":"Finanzas: presupuesto aprobado para 2026–27 e informes financieros","url":"https://www.wallingfordct.gov/government/departments/finance-department/"},
+  {"en":"Wallingford Public Library: local learning, events and community resources","es":"Biblioteca Pública de Wallingford: aprendizaje, eventos y recursos comunitarios","url":"https://www.wallingfordlibrary.org/"},
+ ],
  // Bethany sources verified 2026-10-24: Bethany Assessor FY2027 29.99 mills (2025 Grand List),
  // Town Clerk, Land Use, QVHD septic, Veterans Memorial Park and CT State Parks.
  // Town Tax Collector page may still display FY2025 29.14 mills: direct users to Assessor/current bill.
