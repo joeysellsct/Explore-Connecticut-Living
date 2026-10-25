@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Waterbury: five restaurant-operated sites checked 2026-10-25 for current Waterbury locations.
+ // Neutral bilingual descriptions; no hours, ratings or Joey personal endorsements.
+ 'waterbury': [
+  {"name":"Diorio Restaurant & Bar","cuisine":"Italian and American dinner restaurant on Bank Street in downtown Waterbury","cuisineEs":"Restaurante de cenas italianas y estadounidenses en Bank Street, centro de Waterbury","website":"https://www.diorios.com/","sourceUrl":"https://www.diorios.com/contact-us/","checkedOn":"2026-10-25"},
+  {"name":"D'Amelio's Italian Eatery","cuisine":"Italian pasta and neighborhood dining on Highland Avenue in Town Plot","cuisineEs":"Pastas italianas y cocina de barrio en Highland Avenue, zona de Town Plot","website":"https://damelios.com/","sourceUrl":"https://damelios.com/our-story/","checkedOn":"2026-10-25"},
+  {"name":"Signatures Restaurant","cuisine":"Italian-inspired dinners near the Palace Theater on Leavenworth Street","cuisineEs":"Cenas de inspiración italiana cerca del Palace Theater, en Leavenworth Street","website":"https://www.signaturesrestaurantwtby.com/","sourceUrl":"https://www.signaturesrestaurantwtby.com/contact","checkedOn":"2026-10-25"},
+  {"name":"Brass City Bistro","cuisine":"Bistro lunch and dinner with a seasonal menu on Hamilton Avenue","cuisineEs":"Bistró con almuerzos, cenas y menú de temporada en Hamilton Avenue","website":"https://www.brasscitybistro.com/","sourceUrl":"https://www.brasscitybistro.com/contact","checkedOn":"2026-10-25"},
+  {"name":"La Tavola Ristorante","cuisine":"Contemporary Italian pasta and dinner service on Highland Avenue","cuisineEs":"Pastas italianas contemporáneas y cenas en Highland Avenue","website":"https://latavolaristorante.com/","sourceUrl":"https://latavolaristorante.com/","checkedOn":"2026-10-25"},
+ ],
  // Woodbridge: five restaurant-operated sites checked 2026-10-25 for Woodbridge locations and menus.
  // Neutral bilingual listings only; no scores, hours, or Joey personal Top Picks.
  'woodbridge': [
