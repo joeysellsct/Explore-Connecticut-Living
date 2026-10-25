@@ -53,3 +53,20 @@ test('North Haven dining directory contains five sourced bilingual operator list
  assert.ok(names.includes("J Roo's Restaurant"));
  assert.ok(names.includes("Giulio's Pizza Restaurant & Catering"));
 });
+
+test('North Haven bilingual guide explains property due diligence and local attractions', () => {
+ const source = read('lib/town-highlights.ts');
+ const match = source.match(/^ 'north-haven':(\{.*\}),$/m);
+ assert.ok(match, 'Missing North Haven town guide');
+ const guide = JSON.parse(match[1]);
+ assert.ok(guide.en.length > 1700);
+ assert.ok(guide.es.length > 1800);
+ assert.match(guide.en, /30\.56/);
+ assert.match(guide.es, /30,56/);
+ assert.match(guide.en, /revaluation/);
+ assert.match(guide.es, /reevaluación/);
+ assert.match(guide.en, /sewer/);
+ assert.match(guide.es, /alcantarillado/);
+ assert.ok(guide.places.includes("Peter's Rock Park"));
+ assert.ok(guide.places.includes('Quinnipiac River State Park'));
+});
