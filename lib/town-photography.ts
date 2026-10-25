@@ -2,6 +2,16 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Southbury, Connecticut: Commons identity, author and CC license verified 2026-10-25.
+ // https://commons.wikimedia.org/wiki/File:Southford_Falls_State_Park_-_Connecticut_-_4965616145.jpg
+ // https://commons.wikimedia.org/wiki/File:SouthburyCT_HurleyRoadHD2.jpg
+ // https://commons.wikimedia.org/wiki/File:SouthburyCT_RussianVillage_3.jpg
+ // Captions identify original capture dates; preserve author, ShareAlike and crop notices.
+ 'southbury': [
+  {"title":"Southford Falls State Park in Southford (2010 photograph)","titleEs":"Parque estatal Southford Falls en Southford (fotografía de 2010)","file":"Southford Falls State Park - Connecticut - 4965616145.jpg","credit":"Dougtone (Doug Kerr)","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0/"},
+  {"title":"Hurley Road Historic District in Southbury (2016 photograph)","titleEs":"Distrito histórico Hurley Road en Southbury (fotografía de 2016)","file":"SouthburyCT HurleyRoadHD2.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Russian Village Historic District in Southbury (2016 photograph)","titleEs":"Distrito histórico Russian Village en Southbury (fotografía de 2016)","file":"SouthburyCT RussianVillage 3.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"}
+ ],
  // Wallingford, CONNECTICUT Commons source, identity, author and license checked 2026-10-25.
  // https://commons.wikimedia.org/wiki/File:Town_Hall_of_Wallingford.jpg
  // https://commons.wikimedia.org/wiki/File:St_Paul%27s_Episcopal_Church_Wallingford.jpg
