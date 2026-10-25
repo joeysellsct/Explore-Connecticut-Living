@@ -396,5 +396,5 @@ test('Oxford restaurant directory contains five sourced bilingual local listings
   assert.equal(entry.reviewCount,undefined);
  }
  const picks=source.split('export const joeyTopPicks')[1]||'';
- assert.doesNotMatch(picks,/^\\s*'oxford':/m);
+ assert.ok(!picks.includes("'oxford': ["),'Oxford must not become a personal Top Pick');
 });
