@@ -398,3 +398,21 @@ test('Oxford restaurant directory contains five sourced bilingual local listings
  const picks=source.split('export const joeyTopPicks')[1]||'';
  assert.ok(!picks.includes("'oxford': ["),'Oxford must not become a personal Top Pick');
 });
+
+test('Oxford photographs have Commons author, license and bilingual captions',()=>{
+ const source=read('lib/town-photography.ts');
+ const start=source.indexOf(" 'oxford': [");
+ assert.ok(start>=0);
+ const end=source.indexOf('\n ],',start);
+ assert.ok(end>start);
+ const images=source.slice(start,end).split('\n').map(s=>s.trim()).filter(s=>s.startsWith('{')).map(s=>JSON.parse(s.replace(/,$/,'')));
+ assert.equal(images.length,3);
+ assert.deepEqual(images.map(p=>p.file).sort(),['Oxford Airport.JPG','Southford Falls I.jpg','SouthfordFallsSP IMG 0955.jpg'].sort());
+ for(const p of images){
+  assert.ok(p.title.includes('Oxford')||p.title.includes('Southford'));
+  assert.ok(p.titleEs.length>65);
+  assert.ok(p.credit.length>=5);
+  assert.ok(p.license.startsWith('CC BY-SA '));
+  assert.ok(p.licenseUrl.startsWith('https://creativecommons.org/licenses/by-sa/'));
+ }
+});
