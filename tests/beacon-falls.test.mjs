@@ -75,3 +75,28 @@ test('Beacon Falls has three sourced and attributed historic photographs', () =>
   }
   assert.ok(photos.find(photo => photo.file === 'Beacon Falls Station.jpg').title.includes('historic'));
 });
+
+test('Beacon Falls has six independently sourced dining and bakery entries in both languages', () => {
+  const source = read('lib/town-restaurants.ts');
+  const match = source.match(/^  'beacon-falls': \[([\s\S]*?)^  \],/m);
+  assert.ok(match, 'Missing Beacon Falls dining directory');
+  const entries = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{'))
+    .map(line => JSON.parse(line.replace(/,$/, '')));
+  assert.equal(entries.length, 6);
+  assert.equal(new Set(entries.map(entry => entry.name)).size, 6);
+  const expected = [
+    'The Beacon Pizza Bar', 'Beacon Falls Tavern', "The Original Antonio's",
+    "Rocco's Pizza", 'The Tap House', "Molly's Bakery",
+  ];
+  assert.deepEqual(entries.map(entry => entry.name), expected);
+  for (const entry of entries) {
+    assert.ok(entry.cuisine.length > 20 && entry.cuisineEs.length > 20);
+    assert.equal(new URL(entry.sourceUrl).protocol, 'https:');
+    if (entry.website) assert.equal(new URL(entry.website).protocol, 'https:');
+    assert.equal(entry.checkedOn, '2026-10-24');
+    assert.equal(entry.rating, undefined, 'Do not invent ratings');
+    assert.equal(entry.reviewCount, undefined, 'Do not invent review counts');
+  }
+  assert.ok(!entries.some(entry => /New Harvest|Pizza Palace/i.test(entry.name)),
+    'Conflicting older restaurant listings should not be added without verification');
+});
