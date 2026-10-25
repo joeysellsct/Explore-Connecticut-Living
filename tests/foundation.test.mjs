@@ -453,3 +453,15 @@ test('bilingual navigation controls and decorative housing icon remain accessibl
  assert.match(layout,/<svg[^>]+aria-hidden="true" focusable="false"/);
  assert.match(layout,/locale==='es'\?'Igualdad de oportunidades de vivienda':'Equal Housing Opportunity'/);
 });
+
+test('staging and preview page responses fail closed at the HTTP header level',()=>{
+ const proxy=read('proxy.ts');
+ assert.match(proxy,/request\.nextUrl\.hostname/,'Check the actual request host, not only the configured canonical URL');
+ assert.match(proxy,/host\.endsWith\('\.workers\.dev'\)/);
+ assert.match(proxy,/host\.endsWith\('\.pages\.dev'\)/);
+ assert.match(proxy,/host\.startsWith\('staging\.'\)/);
+ assert.match(proxy,/host\.startsWith\('preview\.'\)/);
+ assert.match(proxy,/ENABLE_PRODUCTION_INDEXING/);
+ assert.match(proxy,/host===production\.hostname\.toLowerCase\(\)/,'Only an explicitly configured production host may index');
+ assert.match(proxy,/response\.headers\.set\('X-Robots-Tag','noindex, nofollow, noarchive'\)/);
+});
