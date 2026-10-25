@@ -2,6 +2,13 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // North Branford/Northford Commons location, original author and CC BY-SA license verified 2026-10-25.
+ // Original files: https://commons.wikimedia.org/wiki/File:NorthBranfordCT_HowdLinsleyHouse.jpg ; https://commons.wikimedia.org/wiki/File:Northford_Congregational_Church_(1846).JPG ; https://commons.wikimedia.org/wiki/File:Aerial_view_of_Tilcon_Connecticut_quarry_and_Lake_Gaillard,_July_2019.JPG
+ 'north-branford': [
+  {"title":"Howd-Linsley House in North Branford (photographed December 2018)","titleEs":"Casa Howd-Linsley en North Branford (fotografía de diciembre de 2018)","file":"NorthBranfordCT HowdLinsleyHouse.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Northford Community Church in Northford Center Historic District (photographed November 2013)","titleEs":"Iglesia comunitaria de Northford en el distrito histórico Northford Center (fotografía de noviembre de 2013)","file":"Northford Congregational Church (1846).JPG","credit":"Paperchaser29","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Aerial view of Lake Gaillard and Tilcon quarry in North Branford (photographed July 2019)","titleEs":"Vista aérea del lago Gaillard y la cantera Tilcon en North Branford (fotografía de julio de 2019)","file":"Aerial view of Tilcon Connecticut quarry and Lake Gaillard, July 2019.JPG","credit":"Pi.1415926535","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+ ],
  // Middlebury location and licenses checked 2026-10-25 against Wikimedia Commons original file pages.
  // Sources: https://commons.wikimedia.org/wiki/File:Larkin_State_Park_Trail_cut,_Middlebury_CT.jpg ; https://commons.wikimedia.org/wiki/File:Quassy_Amusement_Park_-_48334606547.jpg ; https://commons.wikimedia.org/wiki/File:WoodenWarrior.jpg
  'middlebury': [
