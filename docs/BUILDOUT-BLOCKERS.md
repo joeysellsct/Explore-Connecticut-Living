@@ -1,5 +1,11 @@
 # Explore Connecticut Living: deferred verification and buildout work
 
+## October 25: Wallingford source-completion and live staging blocker
+
+- **Published on main:** `2924cd70` (14 bilingual municipal/utility links), `623ae8ed` (expanded EN/ES town guide), `40266b02` (guide/link tests), `b0fb1843` (five sourced restaurants), `3fd90b63` (dining tests), `63b01e5f` (three Commons-licensed photographs), `faba9cd9` (photo tests), `88f3b82e` (county tracker). GitHub Actions should be evaluated per commit separately; content tests/builds do not prove deployment.
+- **Exact independent rendering failure:** `https://explore-connecticut-living-staging.joeysellsct.workers.dev/en/towns/wallingford`, `/es/towns/wallingford` and `/robots.txt` each returned **"URL ... is not accessible via this tool"** on 2026-10-25. This is a verification failure, not proof the Worker is offline. Affected town: Wallingford; affected checks: English/Spanish rendered content, canonical/hreflang, JSON-LD, images/credits, accessibility, disclosures and staging noindex/robots. Retry independently on a later run.
+- **Still not launch-certified:** Wallingford has four major source-code categories but no independent live QA or confirmed Cloudflare deployment. No new personal Top Picks were introduced. Continue other New Haven County towns while revisiting this blocker.
+
 ## October 25: Meriden content, CI and live-page verification
 
 - **Source commits confirmed on main:** `6285e1d7` (15 municipal/moving links), `1a60c984` (expanded EN/ES guide), `f96c9e1d` (five sourced restaurants), `52baf8a7` (three licensed Commons photographs), with dedicated Meriden regression tests and updated county coverage tracker. The first Meriden test draft failed because its regex/newline literals were over-escaped (`fe0fa97a`); corrected in `56aeab0f`. This is a recovered CI failure, not a reason to pause future runs.
