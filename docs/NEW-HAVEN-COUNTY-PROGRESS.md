@@ -6,9 +6,9 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
-- Curated restaurant directory: **18/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **18/27**.
-- Town-specific photo gallery data: **18/27** (license records still require live display checks).
+- Curated restaurant directory: **19/27** (counts any directory; individual lists still need review for approximately five current restaurants).
+- Dedicated official municipal/moving links: **19/27**.
+- Town-specific photo gallery data: **19/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -35,11 +35,19 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Prospect | No | No | No | No | Not certified |
 | Seymour | Yes | Yes | Yes | Yes | Not certified |
 | Southbury | Yes | No | No | No | Not certified |
-| Wallingford | Yes | No | No | No | Not certified |
+| Wallingford | Yes | Yes | Yes | Yes | Not certified |
 | Waterbury | Yes | No | No | No | Not certified |
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | No | No | No | Not certified |
+
+## Wallingford four-category source pass (2026-10-25)
+
+- Added **14 bilingual municipal and moving-resource links** sourced from Wallingford town departments and the Connecticut Conference of Municipalities. Coverage includes Assessor, Tax Collector, land records, permits, zoning, wetlands, engineering, municipal electricity, partial municipal water/sewer coverage, Public Works, parks, finance and library. FY 2026–27 **24.57-mill** real-property rate: https://hub.ccm-ct.org/community/wallingford/ . The Assessor reports a 2024 revaluation; confirm parcel assessments and bills independently.
+- Expanded Wallingford to an original **2,181-character English / 2,471-character Spanish** four-paragraph guide covering downtown, parks, Quinnipiac River Linear Trail, Gouveia Vineyards, Hartford Line service, municipal electric utility, property records, tax context and address-specific water/sewer checks. Sources: https://www.wallingfordct.gov/government/departments/parks-recreation/ ; https://hartfordline.com/route_stations/wallingford/ ; https://www.wallingfordct.gov/government/departments/electric-division/ ; https://www.wallingfordct.gov/government/departments/water-sewer-divisions/ .
+- Added **five operator-sourced neutral dining entries** with English/Spanish descriptions: Michael's Trattoria, Knuckleheads Taproom, Pig Rig BBQ, Hometown Pizza and Wood-n-Tap Wallingford. Sources: https://michaelstrattoria.com/ ; https://knuckleheadstaproom.com/ ; https://www.pigrigbbq.com/ ; https://hometownpizzawlfd.com/ ; https://woodntap.com/locations/wallingford . No ratings, hours or Joey personal Top Picks were added.
+- Added **three town-specific Wikimedia Commons photographs** with dated bilingual captions, author credits and CC BY-SA license URLs: Town Hall (Nancysands1965, 2012, CC BY-SA 4.0), St. Paul's Episcopal Church (Gloucester1692, 2021, CC BY-SA 4.0) and Wallingford station (Pi.1415926535, 2017, CC BY-SA 3.0). Sources: https://commons.wikimedia.org/wiki/File:Town_Hall_of_Wallingford.jpg ; https://commons.wikimedia.org/wiki/File:St_Paul%27s_Episcopal_Church_Wallingford.jpg ; https://commons.wikimedia.org/wiki/File:Wallingford_station_from_northbound_platform,_December_2017.JPG .
+- Added Wallingford-specific regression tests for source uniqueness, bilingual copy, five dining listings, three photo licenses and Top Picks restriction. **Not certified:** live EN/ES rendering, photo delivery and credits, canonical/hreflang, structured data, sitemap, mobile accessibility, Equal Housing/affiliate notices, staging noindex/robots and actual Cloudflare deployment require independent checks. GitHub Actions build success is not deployment evidence.
 
 ## Meriden licensed town photography (2026-10-25)
 
