@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Oxford: five restaurant-operated websites checked 2026-10-25 for Oxford addresses and menus.
+ // Neutral English/Spanish descriptions; no ratings, hours or personal Top Picks.
+ 'oxford': [
+  {"name":"Sitting Duck Tavern | Oxford","cuisine":"Neighborhood American tavern at Quarry Walk on Center Rock Green, with burgers, sandwiches and seasonal dishes","cuisineEs":"Taberna estadounidense en Quarry Walk, sobre Center Rock Green, con hamburguesas, sándwiches y platos de temporada","website":"https://www.sittingducktavern.com/","sourceUrl":"https://www.sittingducktavern.com/","checkedOn":"2026-10-25"},
+  {"name":"Char & Lemon | Oxford","cuisine":"Contemporary Italian pizzeria at Quarry Walk serving wood-fired Neapolitan-style pies, homemade pasta and Italian-inspired entrées","cuisineEs":"Pizzería italiana contemporánea en Quarry Walk con pizzas de estilo napolitano al horno de leña, pasta casera y platos de inspiración italiana","website":"https://charandlemon.com/oxford","sourceUrl":"https://charandlemon.com/oxford","checkedOn":"2026-10-25"},
+  {"name":"Oxford House Tavern","cuisine":"Locally owned American restaurant in the historic Oxford House on Oxford Road, offering burgers, appetizers and dinner entrées","cuisineEs":"Restaurante estadounidense de propietarios locales en el histórico Oxford House de Oxford Road, con hamburguesas, aperitivos y platos principales","website":"https://oxfordhousetavern.com/","sourceUrl":"https://oxfordhousetavern.com/","checkedOn":"2026-10-25"},
+  {"name":"Rose's Family Restaurant","cuisine":"Family-run Italian-American restaurant on Oxford Road serving pizza, pasta, seafood dishes and catering","cuisineEs":"Restaurante familiar italoestadounidense en Oxford Road que ofrece pizza, pasta, platos de mariscos y servicio de catering","website":"https://rosesfamilyrest.com/","sourceUrl":"https://rosesfamilyrest.com/","checkedOn":"2026-10-25"},
+  {"name":"Oxford Pizza Palace","cuisine":"Casual Oxford Road pizzeria with pizzas, calzones, grinders, gyros and salads for dine-in or takeout","cuisineEs":"Pizzería informal en Oxford Road con pizzas, calzones, sándwiches tipo grinder, gyros y ensaladas para comer allí o llevar","website":"https://www.oxford.pizza/index.html","sourceUrl":"https://www.oxford.pizza/index.html","checkedOn":"2026-10-25"},
+ ],
  // North Branford/Northford: five restaurant-operated sites checked 2026-10-25 for local addresses and offerings.
  // Editorial directory entries only: no ratings, hours, paid placement or Joey personal Top Picks.
  'north-branford': [
