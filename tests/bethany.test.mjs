@@ -72,7 +72,11 @@ test('Bethany photographs are town-specific, bilingual and CC-attributed', () =>
     assert.ok(photo.title.includes(expectedData[2]) && photo.titleEs.includes(expectedData[2]));
     assert.ok(photo.licenseUrl.startsWith('https://creativecommons.org/licenses/'));
   }
-  assert.match(read('app/[locale]/towns/[slug]/page.tsx'), /photo\.licenseUrl/);
+  const townPage = read('app/[locale]/towns/[slug]/page.tsx');
+  assert.match(townPage, /photo\.licenseUrl/);
+  // A licensed local gallery takes priority; Commons search remains a fallback for unverified towns.
+  assert.match(townPage, /\(townPhotography\[slug\]\|\|\[\]\)\.length===0 && <section/);
+  assert.match(townPage, /Browse town photographs/);
 });
 
 test('Bethany dining directory includes five sourced bilingual places without invented ratings', () => {
