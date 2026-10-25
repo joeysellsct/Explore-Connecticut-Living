@@ -8,7 +8,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **17/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **17/27**.
-- Town-specific photo gallery data: **16/27** (license records still require live display checks).
+- Town-specific photo gallery data: **17/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -29,7 +29,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Naugatuck | Yes | Yes | Yes | Yes | Not certified |
 | New Haven | Yes | Yes | Yes | Yes | Not certified |
 | North Branford | No | No | No | No | Not certified |
-| North Haven | Yes | Yes | Yes | No | Not certified |
+| North Haven | Yes | Yes | Yes | Yes | Not certified |
 | Orange | Yes | Yes | Yes | Yes | Not certified |
 | Oxford | No | No | No | No | Not certified |
 | Prospect | No | No | No | No | Not certified |
@@ -41,23 +41,29 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | No | No | No | Not certified |
 
+## North Haven licensed photo gallery (2026-10-25)
+
+- Added **three North Haven-specific Wikimedia Commons photographs**, each with English/Spanish captions identifying the image year, author attribution and a direct Creative Commons license URL: St. John's Episcopal Church (Paperchaser29, 2013, CC BY-SA 3.0); former Rising Sun Tavern (Magicpiano, 2018, CC BY-SA 4.0); Pines Bridge Historic District (Magicpiano, 2018, CC BY-SA 4.0).
+- Verified source pages: https://commons.wikimedia.org/wiki/File:St._Johns_Episcopal_Church,_North_Haven,_CT.jpg ; https://commons.wikimedia.org/wiki/File:NorthHavenCT_RisingSunTavern.jpg ; https://commons.wikimedia.org/wiki/File:NorthHavenCT_PinesBridgeHD_1.jpg . These are dated photographs, not a claim about present-day conditions. Regression tests check the source-code gallery's identity, licensing and bilingual credits.
+- **Not certified:** image rendering and any cropping/ShareAlike obligations must still be checked on a live page, along with SEO, mobile accessibility, legal notices, staging robots and actual deployment.
+
 ## North Haven bilingual guide expansion (2026-10-25)
 
 - Replaced the short generic North Haven highlight with an original **1,974-character English / 2,139-character Spanish** guide covering Peter's Rock Park, the Town Green, Quinnipiac River State Park, the public library, property due diligence, the 2024 revaluation, **30.56 mills for FY 2026–27**, and parcel-specific water/sewer checks.
 - Sources: https://hub.ccm-ct.org/community/north-haven/ ; https://www.northhaven-ct.gov/ ; https://portal.ct.gov/-/media/CSC/1_Dockets-medialibrary/Docket_384/NorthHavenPOCDpdf.pdf ; https://portal.ct.gov/-/media/csc/1_dockets-medialibrary/1_media_do500_600/do508/applicantssubmissions/application/07-south-central-region---plan-of-conservation-and-development-2018-2028.pdf .
-- Added regression coverage for bilingual text, local places, tax rate and sewer due-diligence language. **Not certified:** licensed town-specific photography and independent rendered-page/deployment verification remain outstanding.
+- Added regression coverage for bilingual text, local places, tax rate and sewer due-diligence language. **Not certified:** independent rendered-page/image-delivery/deployment verification remain outstanding.
 
 ## North Haven dining source pass (2026-10-25)
 
 - Added **five English/Spanish editorial dining listings** with operator-verified North Haven locations and cuisine: La Lupa Ristorante (https://lalupact.com/), Ludal Italian Restaurant (https://www.ludalct.com/visit), Bellini's Italian Restaurant & Pizza (https://www.bellinisnorthhaven.com/), J Roo's Restaurant (https://www.jroosrestaurant.com/visit), and Giulio's Pizza Restaurant & Catering (https://giuliospizza.com/contact/).
 - No review scores, review counts, hours, or personal Joey endorsements were added. The entries are directory suggestions only. `tests/north-haven.test.mjs` checks five unique operator sources, bilingual descriptions, and the absence of invented ratings.
-- **Not certified:** North Haven still needs a town-specific photo gallery with verified licenses, and independent rendered-page checks for SEO, accessibility, disclosures, image delivery and deployment.
+- **Not certified:** North Haven still needs independent rendered-page checks for SEO, accessibility, disclosures, image delivery and deployment.
 
 ## North Haven municipal source pass (2026-10-24)
 
 - Added **13 bilingual source-checked municipal and moving-resource links** for the Assessor, Tax Collector, tax payments, Town Clerk, Building, Land Use, Engineering, Public Works, GIS, parks, recreation, library services and Connecticut Conference of Municipalities. North Haven's official department directory: https://www.northhaven-ct.gov/ ; current fiscal-rate reference: https://hub.ccm-ct.org/community/north-haven/ .
 - CCM lists a **30.56-mill FY2027 real-property base rate**; it is not an individual tax bill. The Assessor states that a revaluation was completed for the October 1, 2024 Grand List. Cott's land-record portal warns that tax and sewer-use liens are excluded from its electronic index, so buyers must check the Tax Collector and WPCA/Town Clerk separately. Utility connections and district charges require parcel-specific verification.
-- Added `tests/north-haven.test.mjs` for bilingual link coverage, uniqueness, mill-rate wording, shared town template and preservation of Joey's personal Top Picks restriction. **Not certified:** North Haven still lacks a licensed photo gallery, and its rendered bilingual SEO, accessibility, disclosures, image delivery and Cloudflare deployment have not been independently verified.
+- Added `tests/north-haven.test.mjs` for bilingual link coverage, uniqueness, mill-rate wording, shared town template and preservation of Joey's personal Top Picks restriction. **Not certified:** North Haven's rendered bilingual SEO, accessibility, disclosures, image delivery and Cloudflare deployment have not been independently verified.
 
 ## Naugatuck source-completion pass (2026-10-24)
 
