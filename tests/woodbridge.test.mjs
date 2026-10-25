@@ -8,7 +8,7 @@ const townEntries = (path, town) => {
  const escaped = town.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
  const match = source.match(new RegExp("^ '" + escaped + "': \\[([\\s\\S]*?)^ \\],", 'm'));
  assert.ok(match, 'Missing ' + town + ' records in ' + path);
- return match[1].split('\\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+ return match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
 };
 
 test('Woodbridge municipal directory has 13 distinct bilingual source links', () => {
