@@ -8,7 +8,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **16/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **16/27**.
-- Town-specific photo gallery data: **15/27** (license records still require live display checks).
+- Town-specific photo gallery data: **16/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -26,7 +26,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | Meriden | Yes | No | No | No | Not certified |
 | Middlebury | No | No | No | No | Not certified |
 | Milford | Yes | Yes | Yes | Yes | Not certified |
-| Naugatuck | Yes | Yes | Yes | No | Not certified |
+| Naugatuck | Yes | Yes | Yes | Yes | Not certified |
 | New Haven | Yes | Yes | Yes | Yes | Not certified |
 | North Branford | No | No | No | No | Not certified |
 | North Haven | Yes | No | No | No | Not certified |
@@ -46,7 +46,8 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Replaced the short Naugatuck town highlight with an original English/Spanish guide covering borough history, Gunntown and Andrew Mountain trails, Naugatuck State Forest, the Larkin State Park Trail closure outside Naugatuck, moving due diligence and the Waterbury Branch substitute-bus period **July 20, 2026–May 31, 2027**. Sources: https://naugatuck-ct.gov/parks-rec/parks-trails ; https://ctparks.com/parks/larkin-state-park-trail ; https://portal.ct.gov/dot/ctdot-press-releases/2026/substitute-busing-wbl-july-2026-through-may-2027 .
 - Added **15 English/Spanish official and provider links** for property assessments, the Tax Office, land records, building permits, zoning, sewer/drainage, public works, recycling, recreation, Connecticut Water, CTDOT and state trails. The Borough Tax Office publishes **40.44 mills** for 2025 Grand List real estate/personal property (FY 2026–27) and **32.46 mills** for motor vehicles: https://naugatuck-ct.gov/tax-office . Connecticut Water lists Naugatuck among towns served, but public water and sewer service must be checked for the individual address: https://www.ctwater.com/about-us/ ; https://www.naugatuck-ct.gov/engineering-water-pollution-control .
 - Added five bilingual, neutral Naugatuck restaurant listings verified against operator sites: Jesse Camille's (https://www.jessecamilles.com/), La Casita (https://www.lacasitact.com/), Salvadorenos (https://salvadorenosrestaurant.com/), The Hub (https://www.thehubpizzabar.com/) and The Station (https://www.stationrestaurantbar.com/). No ratings, hours or Joey personal endorsements were added.
-- Added Naugatuck-specific regression checks for bilingual narrative, tax values, unique official links, five dining listings and shared legal/affiliate safeguards. **Not certified:** Naugatuck still lacks a verified licensed gallery, and rendered EN/ES metadata, photos, mobile accessibility, legal disclosures, staging robots and Cloudflare deployment still need independent verification. New GitHub Actions results must be checked separately; no town is 100% complete.
+- Added three Commons photo records with bilingual dated captions, attribution and verified licenses: Naugatuck Green (Kenneth C. Zirkel, 2023, CC BY-SA 4.0), Congregational Church (Kenneth C. Zirkel, 2023, CC BY-SA 4.0) and Civil War monument (Bill Hass, 2013, CC BY-SA 3.0). Sources: https://commons.wikimedia.org/wiki/File:Naugatuck_Green,_Connecticut.jpg ; https://commons.wikimedia.org/wiki/File:Congregational_Church,_Naugatuck,_Connecticut.jpg ; https://commons.wikimedia.org/wiki/File:Naugatuck_Civil_War_Monument._On_the_Green..jpg .
+- Added Naugatuck-specific regression checks for bilingual narrative, tax values, unique official links, five dining listings, photo licensing and shared legal/affiliate safeguards. **Not certified:** all four major source-code categories are now present, but rendered EN/ES metadata, image delivery, mobile accessibility, legal disclosures, staging robots and Cloudflare deployment still need independent verification. New GitHub Actions results must be checked separately; no town is 100% complete.
 
 ## Bethany municipal sources and bilingual guide (2026-10-24)
 
