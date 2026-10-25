@@ -2,6 +2,14 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Waterbury Wikimedia Commons locations, authors, dates and CC BY-SA licenses checked 2026-10-25.
+ // Original files: Waterbury City Hall.jpg; PalaceTheater-WaterburyCT-1.jpg; WATERBURY UNION STATION BUILDING.jpg.
+ // Gallery crops are adaptations; keep photographer credit, original source and ShareAlike license visible.
+ 'waterbury': [
+  {"title":"Waterbury City Hall on Grand Street (2019 photograph)","titleEs":"Ayuntamiento de Waterbury en Grand Street (fotografía de 2019)","file":"Waterbury City Hall.jpg","credit":"Farragutful","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Palace Theater in downtown Waterbury (2016 photograph)","titleEs":"Teatro Palace en el centro de Waterbury (fotografía de 2016)","file":"PalaceTheater-WaterburyCT-1.jpg","credit":"Koskenart","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Waterbury Union Station clock tower (2022 photograph)","titleEs":"Torre del reloj de Union Station en Waterbury (fotografía de 2022)","file":"WATERBURY UNION STATION BUILDING.jpg","credit":"TRexEditorNJ (Ted Shaffrey)","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
  // Woodbridge, Connecticut: Wikimedia Commons town identity and licenses checked 2026-10-25.
  // https://commons.wikimedia.org/wiki/File:Woodbridge-ct-1st-church-of-christ.jpg
  // https://commons.wikimedia.org/wiki/File:WoodbridgeCT_NewEnglandCementCompanyQuarry.jpg
