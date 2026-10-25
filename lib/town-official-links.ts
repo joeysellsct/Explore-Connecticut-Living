@@ -2,6 +2,23 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Oxford: municipal departments, CCM FY2027 mill rate and Housatonic Valley Health District checked 2026-10-25.
+ // The 20.55-mill rate is per $1,000 of assessed value; verify parcel bills, water and sewer availability individually.
+ 'oxford': [
+  {"en":"Assessor: review parcel assessments, exemptions and valuation records before estimating property taxes","es":"Tasador: revisa la tasación de la parcela, las exenciones y los registros de valoración antes de calcular los impuestos","url":"https://www.oxford-ct.gov/1243/Assessor"},
+  {"en":"FY 2026–27 real-property mill rate: CCM reports 20.55 mills; verify the parcel assessment and actual tax bill","es":"Tasa de impuesto inmobiliario 2026–27: CCM indica 20,55 mills; verifica la tasación y la factura de la parcela","url":"https://hub.ccm-ct.org/community/oxford/"},
+  {"en":"Tax Collector: check billing, payment methods and due-date guidance for the specific property","es":"Recaudación de impuestos: consulta facturas, métodos de pago y fechas de vencimiento de la propiedad","url":"https://www.oxford-ct.gov/1219/Tax-Collector"},
+  {"en":"Land Records: search recorded deeds, easements and other public property documents","es":"Registros de tierras: busca escrituras, servidumbres y otros documentos públicos de la propiedad","url":"https://www.oxford-ct.gov/1691/Land-Records"},
+  {"en":"Town Clerk: ask about recording procedures and official municipal records","es":"Secretaría municipal: consulta los trámites de inscripción y los registros municipales oficiales","url":"https://www.oxford-ct.gov/1218/Town-Clerk"},
+  {"en":"Building Department: review permits and requirements before planning renovations or additions","es":"Departamento de Construcción: revisa permisos y requisitos antes de planificar reformas o ampliaciones","url":"https://www.oxford-ct.gov/1241/Building-Department"},
+  {"en":"Planning and Zoning: check land-use rules and permit requirements for the parcel","es":"Planificación y Zonificación: consulta normas de uso del suelo y requisitos de permisos de la parcela","url":"https://www.oxford-ct.gov/1228/Planning-Zoning"},
+  {"en":"Inland Wetlands Agency: confirm whether proposed work in regulated areas requires review","es":"Agencia de Humedales Interiores: confirma si las obras en áreas reguladas necesitan autorización","url":"https://www.oxford-ct.gov/1794/Conservation-CommissionInland-Wetlands-A"},
+  {"en":"Water Pollution Control Authority: ask whether public sewer is available at the address and whether charges apply","es":"Autoridad de Control de Contaminación del Agua: pregunta si hay alcantarillado público en la dirección y qué cargos se aplican","url":"https://www.oxford-ct.gov/1216/WPCA"},
+  {"en":"Housatonic Valley Health District: ask about private wells, septic systems and health records for a property","es":"Distrito de Salud Housatonic Valley: consulta pozos privados, sistemas sépticos y registros sanitarios de la propiedad","url":"https://hvhdct.gov/communities/oxford-ct/"},
+  {"en":"Public Works and Recycling: review driveway and road-opening permits, recycling rules and private trash arrangements","es":"Obras Públicas y Reciclaje: revisa permisos de accesos y apertura de calles, normas de reciclaje y recogida privada de basura","url":"https://www.oxford-ct.gov/1225/Public-Works-Recycling-Center"},
+  {"en":"Parks and Recreation: find town recreation facilities and program information","es":"Parques y Recreación: encuentra instalaciones recreativas y programas municipales","url":"https://www.oxford-ct.gov/1229/Parks-Recreation"},
+  {"en":"Town department directory: find the appropriate municipal office for moving and property questions","es":"Directorio municipal: encuentra la oficina correspondiente para consultas de mudanza y propiedad","url":"https://www.oxford-ct.gov/1213/Departments"},
+ ],
  // North Branford: municipal department pages, health district, conservation trust and CCM FY2027 data checked 2026-10-25.
  // Town's budget news retains a 28.91 proposed rate; CCM FY2027 lists 28.81. Confirm parcel bills with Tax Department.
  'north-branford': [
