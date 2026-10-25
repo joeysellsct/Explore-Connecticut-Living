@@ -2,7 +2,22 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
- // Prospect: official municipal, recreation and water-service sources reviewed 2026-10-25.
+ // Wolcott: 11 official town sources checked 2026-10-25; 2025 Grand List 28.90 mills applies to FY 2026–27.
+ // Municipal water/sewer, parks and property records require address- or visit-specific confirmation.
+ 'wolcott': [
+  {"en":"Assessor: review parcel assessments, revaluation records and available exemptions before comparing tax bills","es":"Tasador: consulta valoraciones de parcelas, reevaluaciones y exenciones antes de comparar impuestos","url":"https://www.wolcottct.org/181/Assessor"},
+  {"en":"Tax Collector: Wolcott reports 28.90 mills for the 2025 Grand List (FY 2026–27); verify each property's assessment and bill","es":"Recaudación: Wolcott informa 28,90 mills para la lista fiscal de 2025 (año 2026–27); verifica valoración y factura de cada inmueble","url":"https://www.wolcottct.org/218/Tax-Collector"},
+  {"en":"Town Clerk: request deeds, recorded land documents and other official records before closing","es":"Secretaría municipal: solicita escrituras, registros de terrenos y documentos oficiales antes del cierre","url":"https://www.wolcottct.org/230/Town-Clerk"},
+  {"en":"Building Office: check required building, electrical, plumbing and mechanical permits for property improvements","es":"Construcción: consulta permisos de obras, electricidad, plomería y sistemas mecánicos para mejoras","url":"https://www.wolcottct.org/187/Building"},
+  {"en":"Planning and Zoning: confirm land-use rules, zoning permits and allowable changes to a parcel","es":"Planificación y Zonificación: confirma normas de uso del suelo, permisos y cambios permitidos en la parcela","url":"https://www.wolcottct.org/252/Planning-Zoning"},
+  {"en":"Sewer and Water Department: confirm whether a specific address has municipal water or sewer connections, fees and permit requirements","es":"Agua y Alcantarillado: confirma conexiones municipales, cargos y permisos de cada dirección","url":"https://www.wolcottct.org/216/Sewer-Water"},
+  {"en":"Public Works: review road work, stormwater reporting and municipal infrastructure questions","es":"Obras Públicas: consulta obras viales, reportes de aguas pluviales y preguntas de infraestructura","url":"https://www.wolcottct.org/209/Public-Works"},
+  {"en":"Recycling Center: review resident identification, curbside recycling and accepted materials before moving","es":"Centro de Reciclaje: consulta identificación de residentes, recogida y materiales aceptados antes de mudarte","url":"https://www.wolcottct.org/234/Recycling-Center-Information"},
+  {"en":"Recreation and Leisure: check Mill Pond Way, parks, reservoir activities and current facility restrictions","es":"Recreación: consulta Mill Pond Way, parques, actividades en embalses y restricciones vigentes","url":"https://www.wolcottct.org/262/Recreation-Leisure"},
+  {"en":"Woodtick Reservoir: check boat launch access and electric-motor-only rules before visiting","es":"Embalse Woodtick: consulta acceso para embarcaciones y la norma de motores solo eléctricos antes de visitar","url":"https://www.wolcottct.org/Facilities/Facility/Details/Woodtick-Reservoir-9"},
+  {"en":"Parks and Recreation Commission: verify park programs and Woodtick Recreation Area access updates","es":"Comisión de Parques y Recreación: confirma programas y novedades de acceso a Woodtick Recreation Area","url":"https://www.wolcottct.org/226/Parks-and-Recreation-and-Acquired-Facili"},
+ ],
+  // Prospect: official municipal, recreation and water-service sources reviewed 2026-10-25.
  // 28.47 mills is for FY 2026–27 (October 1, 2025 Grand List); parcel assessments, service areas and fees require address-level checks.
  'prospect': [
   {"en":"Assessor: check the property's assessed value, revaluation records and available exemptions","es":"Tasador: consulta la valoración fiscal de la propiedad, la reevaluación y las exenciones disponibles","url":"https://townofprospect.gov/assessor/"},
