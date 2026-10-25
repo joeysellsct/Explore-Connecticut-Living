@@ -92,7 +92,7 @@ test('North Haven photo gallery records three verified licensed town photographs
 
 test('Bilingual town narratives render separate semantic paragraphs in shared and East Haven layouts', () => {
  const page = read('app/[locale]/towns/[slug]/page.tsx');
- const paragraphSplit = String.raw`.split(/\\n\\s*\\n/)`;
+ const paragraphSplit = String.raw`.split(/\n\s*\n/)`;
  assert.equal(page.split(paragraphSplit).length - 1, 2, 'Both town guide layouts must split on blank lines');
  assert.ok(page.includes('townHighlights[slug]?.es:townHighlights[slug]?.en'));
  assert.ok(page.includes('townHighlights[slug].es:townHighlights[slug].en'));
