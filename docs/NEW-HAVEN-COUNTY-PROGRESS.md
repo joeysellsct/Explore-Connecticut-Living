@@ -8,7 +8,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 - Town-specific English/Spanish highlights: **25/27**.
 - Curated restaurant directory: **25/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **25/27**.
-- Town-specific photo gallery data: **24/27** (license records still require live display checks).
+- Town-specific photo gallery data: **25/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
@@ -31,7 +31,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | North Branford | Yes | Yes | Yes | Yes | Not certified |
 | North Haven | Yes | Yes | Yes | Yes | Not certified |
 | Orange | Yes | Yes | Yes | Yes | Not certified |
-| Oxford | Yes | Yes | Yes | No | Not certified |
+| Oxford | Yes | Yes | Yes | Yes | Not certified |
 | Prospect | No | No | No | No | Not certified |
 | Seymour | Yes | Yes | Yes | Yes | Not certified |
 | Southbury | Yes | Yes | Yes | Yes | Not certified |
@@ -277,3 +277,8 @@ Do not infer that GitHub Actions content tests prove a full Next.js build or Clo
 - Added five operator-sourced Oxford dining entries in `lib/town-restaurants.ts`: Sitting Duck Tavern, Char & Lemon, Oxford House Tavern, Rose's Family Restaurant and Oxford Pizza Palace. Each entry includes English and Spanish descriptions and a checked source URL; no ratings, review counts, hours or personal Top Picks were added.
 - Added a regression check to `tests/foundation.test.mjs` for record count, bilingual details, source URLs and Top Picks separation.
 - **Still not certified:** Oxford needs town-specific photographs with verified licenses and credits. Live English/Spanish rendered SEO, image delivery, accessibility, mobile layout, Equal Housing and affiliate disclosures, staging robots/noindex and Cloudflare deployment remain independently unverified.
+
+## Oxford licensed photography update (2026-10-25)
+
+- Added three Commons photographs with verified author, file name, ShareAlike license and bilingual captions: Southford Falls (Karl Thomas Moore), the covered bridge at Southford Falls (Morrowlong), and Waterbury-Oxford Airport (Zook024). The state park straddles Oxford and Southbury; do not misrepresent it as exclusively Oxford. Photo dates are historical and do not imply current public access; state alerts report flood-damaged trail and bridge closures.
+- A regression test protects photo records. Oxford now has all four major source-content categories represented, but **is not 100% certified** until rendered bilingual SEO, mobile/accessibility, image delivery and attributions, Equal Housing and affiliate disclosures, staging noindex/robots and Cloudflare deployment are independently checked.
