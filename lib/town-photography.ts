@@ -2,6 +2,16 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // North Haven town identity, photographer, date and CC licenses verified 2026-10-25 at:
+ // https://commons.wikimedia.org/wiki/File:St._Johns_Episcopal_Church,_North_Haven,_CT.jpg
+ // https://commons.wikimedia.org/wiki/File:NorthHavenCT_RisingSunTavern.jpg
+ // https://commons.wikimedia.org/wiki/File:NorthHavenCT_PinesBridgeHD_1.jpg
+ // Captions give the image year; photos are not represented as current views.
+ 'north-haven': [
+  {"title":"St. John's Episcopal Church, North Haven (2013 photograph)","titleEs":"Iglesia episcopal de San Juan, North Haven (fotografía de 2013)","file":"St. Johns Episcopal Church, North Haven, CT.jpg","credit":"Paperchaser29","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Former Rising Sun Tavern, North Haven (2018 photograph)","titleEs":"Antigua taberna Rising Sun, North Haven (fotografía de 2018)","file":"NorthHavenCT RisingSunTavern.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Pines Bridge Historic District, North Haven (2018 photograph)","titleEs":"Distrito histórico Pines Bridge, North Haven (fotografía de 2018)","file":"NorthHavenCT PinesBridgeHD 1.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
  // Naugatuck Wikimedia Commons file pages, location, author and license checked 2026-10-24:
  // https://commons.wikimedia.org/wiki/File:Naugatuck_Green,_Connecticut.jpg
  // https://commons.wikimedia.org/wiki/File:Congregational_Church,_Naugatuck,_Connecticut.jpg
