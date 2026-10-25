@@ -6,7 +6,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
-- Curated restaurant directory: **13/27** (counts any directory; individual lists still need review for approximately five current restaurants).
+- Curated restaurant directory: **14/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **14/27**.
 - Town-specific photo gallery data: **14/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
@@ -14,7 +14,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | Town | Bilingual highlights | Restaurants | Municipal links | Photos | 100% certified |
 | --- | :---: | :---: | :---: | :---: | :---: |
 | Ansonia | Yes | Yes | Yes | Yes | Not certified |
-| Beacon Falls | Yes | No | Yes | Yes | Not certified |
+| Beacon Falls | Yes | Yes | Yes | Yes | Not certified |
 | Bethany | Yes | No | No | No | Not certified |
 | Branford | Yes | Yes | Yes | Yes | Not certified |
 | Cheshire | Yes | Yes | Yes | Yes | Not certified |
@@ -137,3 +137,9 @@ Do not infer that GitHub Actions content tests prove a full Next.js build or Clo
 - Added three Beacon Falls-specific Commons photo records with original photographer credits, license URLs and English/Spanish historical captions: Depot Street Bridge (Magicpiano, CC BY-SA 4.0, photographed 2017), Home Woolen Company (Magicpiano, CC BY-SA 4.0, photographed 2017) and Beacon Falls railroad station (Adam Moss, CC BY-SA 2.0, photographed 2011). Sources: https://commons.wikimedia.org/wiki/File:BeaconFalls_DepotStreetBridge.jpg ; https://commons.wikimedia.org/wiki/File:BeaconFallsCT_HomeWoolenCompany1.jpg ; https://commons.wikimedia.org/wiki/File:Beacon_Falls_Station.jpg .
 - The station image is explicitly historical and does not indicate present-day Waterbury Branch train service. Added a regression test for photo file identity, licenses, credits and bilingual captions.
 - **Still not certified:** no Beacon Falls restaurant directory yet; verify active local dining businesses rather than padding the list with nearby-town restaurants. Rendered image delivery, captions and source links, bilingual SEO, mobile accessibility, affiliate and Equal Housing notices, staging robots, and Cloudflare rollout remain independently unverified.
+
+## Beacon Falls dining update (2026-10-24)
+
+- Added six English/Spanish sourced dining entries in `lib/town-restaurants.ts`: The Beacon Pizza Bar, Beacon Falls Tavern, The Original Antonio's, Rocco's Pizza, The Tap House and Molly's Bakery (a bakery/cafe, not a full-service restaurant). The five restaurant entries have town-specific direct restaurant websites or their own ordering pages; no invented ratings, review counts or hours. A new regression test checks all six entries.
+- Two older business websites claim **57 South Main Street** (New Harvest and Beacon Falls Tavern); the currently maintained Beacon Falls Tavern site was used, not both. An older Pizza Palace listing at **125 South Main Street** conflicts with Rocco's current ordering site; only Rocco's was included. The Tap House Toast ordering hours are inconsistent with third-party business hours, so hours were deliberately omitted. Recheck these in later runs.
+- Beacon Falls now has bilingual narrative, municipal resources, licensed photo records and a dining directory in source code. **Not 100% certified:** live rendered English/Spanish SEO, image delivery, accessibility, mobile, Equal Housing, affiliate disclosures and independent Cloudflare deployment still require verification.
