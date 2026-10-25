@@ -52,9 +52,9 @@ test('North Branford uses shared town template and does not add Joey personal To
  const restaurants = read('lib/town-restaurants.ts');
  const start = restaurants.indexOf(" 'north-branford': [");
  assert.ok(start >= 0);
- const end = restaurants.indexOf('\\n ],', start);
+ const end = restaurants.indexOf('\n ],', start);
  assert.ok(end > start);
- const listings = restaurants.slice(start, end).split('\\n').map(x => x.trim()).filter(x => x.startsWith('{')).map(x => JSON.parse(x.replace(/,$/, '')));
+ const listings = restaurants.slice(start, end).split('\n').map(x => x.trim()).filter(x => x.startsWith('{')).map(x => JSON.parse(x.replace(/,$/, '')));
  assert.equal(listings.length, 5);
  assert.equal(new Set(listings.map(x => x.name)).size, 5);
  for (const item of listings) {
