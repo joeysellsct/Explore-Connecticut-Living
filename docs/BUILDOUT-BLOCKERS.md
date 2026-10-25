@@ -1,3 +1,12 @@
+
+## Oxford completion and live verification (2026-10-25)
+
+- **Source additions:** five Oxford restaurant listings with operator links, bilingual descriptions and no ratings/hours/personal Top Picks. Operator sources: https://www.sittingducktavern.com/ ; https://charandlemon.com/oxford ; https://oxfordhousetavern.com/ ; https://rosesfamilyrest.com/ ; https://www.oxford.pizza/index.html . Added regression checks.
+- **Photos:** https://commons.wikimedia.org/wiki/File:Southford_Falls_I.jpg (Karl Thomas Moore, CC BY-SA 4.0); https://commons.wikimedia.org/wiki/File:SouthfordFallsSP_IMG_0955.jpg (Morrowlong, CC BY-SA 4.0); https://commons.wikimedia.org/wiki/File:Oxford_Airport.JPG (Zook024, CC BY-SA 3.0). Southford Falls State Park straddles Oxford and Southbury, and state park flood restrictions may affect current access; images are historical. Live gallery display and photo-credit links not verified.
+- **Rendered staging blocker:** `https://explore-connecticut-living-staging.joeysellsct.workers.dev/en/towns/oxford` and `/robots.txt` both returned **"URL ... is not accessible via this tool"** from independent web open on 2026-10-25. This is an access/verification failure, not proof of a failed Cloudflare deployment. Spanish rendered page, canonicals/hreflang, structured data, mobile/accessibility, Equal Housing, affiliate disclosures, image delivery, staging noindex/robots and actual Cloudflare deployment remain unverified.
+- **Deployment verification limitation:** GitHub connector GET `/repos/joeysellsct/Explore-Connecticut-Living/deployments?per_page=5` returned `INVALID_ARGUMENT: HTTPError: 400: GitHub Fetch URL is not an allowed public GitHub repository or search endpoint`. GitHub Actions is checked separately; a passing source build alone is not deployment verification.
+- **Next safe action:** Revisit independent staging checks in later runs and continue finishing Prospect/Wolcott content; Oxford is **not certified 100%**.
+
 ## October 25: Middlebury source-content completion and staging QA blocker
 
 - Middlebury source files updated on `main`: `c32b75d9` (12 bilingual municipal resources), `d00061aa` (four-paragraph EN/ES guide), `31c45f7c` (five operator-verified dining entries), `b9bdb127` (three location-verified licensed Commons photos), plus `bbb1a73c`, `507fe532` and `c682974a` for source-level regression tests and `e827b5da` for coverage tracking. Each updated file was refetched with a new blob SHA and the resulting commit SHA was recorded.
