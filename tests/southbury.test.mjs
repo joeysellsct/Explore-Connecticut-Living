@@ -31,3 +31,23 @@ test('Southbury resources render through the shared bilingual town template', ()
  const picks = read('lib/town-restaurants.ts').split('export const joeyTopPicks:')[1] || '';
  assert.doesNotMatch(picks, /^\s*'southbury':/m);
 });
+
+test('Southbury town guide has researched English and Spanish copy with tax and utility cautions', () => {
+ const source = read('lib/town-highlights.ts');
+ const match = source.match(/^\s*'southbury':(\{[^\n]+\}),?$/m);
+ assert.ok(match, 'Southbury bilingual guide missing');
+ const guide = JSON.parse(match[1]);
+ assert.ok(guide.en.length > 2000 && guide.es.length > 2000);
+ assert.ok(guide.en.split('\\n\\n').length >= 4);
+ assert.ok(guide.es.split('\\n\\n').length >= 4);
+ for (const place of ['Southford Falls State Park', 'Kettletown State Park', 'Settlers Park', 'Little York Park']) {
+  assert.ok(guide.places.includes(place), place);
+  assert.ok(guide.en.includes(place), place);
+ }
+ assert.match(guide.en, /25\\.4-mill/);
+ assert.match(guide.es, /25,4 milésimas/);
+ assert.match(guide.en, /no municipal sewage system/);
+ assert.match(guide.es, /no tiene un sistema de alcantarillado municipal/);
+ assert.match(guide.en, /not Joey's personal endorsements/);
+ assert.match(guide.es, /no son recomendaciones personales de Joey/);
+});
