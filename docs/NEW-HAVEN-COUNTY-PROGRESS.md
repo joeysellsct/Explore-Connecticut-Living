@@ -7,7 +7,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **19/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **19/27**.
+- Dedicated official municipal/moving links: **20/27**.
 - Town-specific photo gallery data: **19/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
@@ -34,12 +34,18 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Oxford | No | No | No | No | Not certified |
 | Prospect | No | No | No | No | Not certified |
 | Seymour | Yes | Yes | Yes | Yes | Not certified |
-| Southbury | Yes | No | No | No | Not certified |
+| Southbury | Yes | No | Yes | No | Not certified |
 | Wallingford | Yes | Yes | Yes | Yes | Not certified |
 | Waterbury | Yes | No | No | No | Not certified |
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | No | No | No | Not certified |
+
+## Southbury official resources (2026-10-25)
+
+- Added **15 bilingual, town-sourced municipal and moving links** covering Assessor, the official FY 2026–27 **25.4-mill** tax rate, Tax Collector and installments, Town Clerk deeds/fees, GIS, permits, planning/zoning, wetlands, Housatonic Valley Health District, Public Works and parks. Southbury's own Tax Collector rate page confirms **25.4 mills**, although the CCM Southbury community snapshot currently displays **23.29**; use the municipality's current published figure and verify parcel/district bills. Sources: https://www.southbury-ct.org/mill-rate ; https://www.southbury-ct.org/assessor ; https://www.southbury-ct.org/tax .
+- The town WPCA says **Southbury has no municipal sewage system**. Septic and water sources are property-specific, and the health district oversees private systems. Sources: https://www.southbury-ct.org/content/20556/20610/20673/default.aspx ; https://www.southbury-ct.org/startbusiness .
+- Added Southbury regression tests for 15 unique HTTPS municipal links, bilingual descriptions, correct FY2027 rate, sewer caution and the existing Top Picks restriction. **Still incomplete:** verified restaurant directory, licensed photography, full town guide review and independent EN/ES rendered QA, accessibility, SEO, staging robots, disclosures and Cloudflare deployment. No town marked 100%.
 
 ## Wallingford four-category source pass (2026-10-25)
 
