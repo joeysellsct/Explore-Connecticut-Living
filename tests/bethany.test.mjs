@@ -74,3 +74,22 @@ test('Bethany photographs are town-specific, bilingual and CC-attributed', () =>
   }
   assert.match(read('app/[locale]/towns/[slug]/page.tsx'), /photo\.licenseUrl/);
 });
+
+test('Bethany dining directory includes five sourced bilingual places without invented ratings', () => {
+  const source = read('lib/town-restaurants.ts');
+  const match = source.match(/^ 'bethany': \[(.*?)^ \],/ms);
+  assert.ok(match, 'Missing Bethany dining directory');
+  const entries = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+  assert.equal(entries.length, 5);
+  assert.equal(new Set(entries.map(entry => entry.name)).size, 5);
+  const expected = ["Country Corner Restaurant", "Teddy B's Restaurant & Pizzeria", "Apizza Grande Bethany", "Pronto Pizza", "Evan's Deli & Grocery LLC"];
+  assert.deepEqual(entries.map(entry => entry.name), expected);
+  for (const entry of entries) {
+    assert.ok(entry.cuisine.length > 25 && entry.cuisineEs.length > 25);
+    assert.ok(entry.sourceUrl.startsWith('https://'));
+    assert.equal(entry.checkedOn, '2026-10-24');
+    assert.equal(entry.rating, undefined);
+    assert.equal(entry.reviewCount, undefined);
+  }
+  assert.ok(entries.find(entry => entry.name.startsWith("Evan's")).cuisine.includes('deli'));
+});
