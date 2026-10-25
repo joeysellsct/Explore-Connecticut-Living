@@ -7,7 +7,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **16/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **16/27**.
+- Dedicated official municipal/moving links: **17/27**.
 - Town-specific photo gallery data: **16/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
@@ -29,7 +29,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | Naugatuck | Yes | Yes | Yes | Yes | Not certified |
 | New Haven | Yes | Yes | Yes | Yes | Not certified |
 | North Branford | No | No | No | No | Not certified |
-| North Haven | Yes | No | No | No | Not certified |
+| North Haven | Yes | No | Yes | No | Not certified |
 | Orange | Yes | Yes | Yes | Yes | Not certified |
 | Oxford | No | No | No | No | Not certified |
 | Prospect | No | No | No | No | Not certified |
@@ -40,6 +40,12 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | No | No | No | Not certified |
+
+## North Haven municipal source pass (2026-10-24)
+
+- Added **13 bilingual source-checked municipal and moving-resource links** for the Assessor, Tax Collector, tax payments, Town Clerk, Building, Land Use, Engineering, Public Works, GIS, parks, recreation, library services and Connecticut Conference of Municipalities. North Haven's official department directory: https://www.northhaven-ct.gov/ ; current fiscal-rate reference: https://hub.ccm-ct.org/community/north-haven/ .
+- CCM lists a **30.56-mill FY2027 real-property base rate**; it is not an individual tax bill. The Assessor states that a revaluation was completed for the October 1, 2024 Grand List. Cott's land-record portal warns that tax and sewer-use liens are excluded from its electronic index, so buyers must check the Tax Collector and WPCA/Town Clerk separately. Utility connections and district charges require parcel-specific verification.
+- Added `tests/north-haven.test.mjs` for bilingual link coverage, uniqueness, mill-rate wording, shared town template and preservation of Joey's personal Top Picks restriction. **Not certified:** North Haven still lacks a curated restaurant directory and licensed photo gallery, and its rendered bilingual SEO, accessibility, disclosures, image delivery and Cloudflare deployment have not been independently verified.
 
 ## Naugatuck source-completion pass (2026-10-24)
 
