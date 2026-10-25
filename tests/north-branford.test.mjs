@@ -66,5 +66,21 @@ test('North Branford uses shared town template and does not add Joey personal To
  }
  assert.ok(listings.some(x => x.name.includes('Millpond') && x.cuisine.includes('Northford')));
  const photos = read('lib/town-photography.ts');
- assert.ok(!photos.includes("'north-branford': ["), 'photos require separate location and license verification');
+ const photoStart = photos.indexOf(" 'north-branford': [");
+ assert.ok(photoStart >= 0);
+ const photoEnd = photos.indexOf('\n ],', photoStart);
+ assert.ok(photoEnd > photoStart);
+ const images = photos.slice(photoStart, photoEnd).split('\n').map(x => x.trim()).filter(x => x.startsWith('{')).map(x => JSON.parse(x.replace(/,$/, '')));
+ assert.equal(images.length, 3);
+ assert.equal(new Set(images.map(x => x.file)).size, 3);
+ for (const item of images) {
+  assert.ok(item.title.includes('North Branford') || item.title.includes('Northford'));
+  assert.ok(item.titleEs.includes('North Branford') || item.titleEs.includes('Northford'));
+  assert.ok(item.credit.length > 3);
+  assert.ok(item.license.startsWith('CC BY-SA'));
+  assert.ok(item.licenseUrl.startsWith('https://creativecommons.org/licenses/by-sa/'));
+ }
+ assert.ok(images.some(x => x.file.includes('HowdLinsleyHouse') && x.credit === 'Magicpiano'));
+ assert.ok(images.some(x => x.file.includes('Northford Congregational Church') && x.credit === 'Paperchaser29'));
+ assert.ok(images.some(x => x.file.includes('Lake Gaillard') && x.credit === 'Pi.1415926535'));
 });
