@@ -50,3 +50,24 @@ test('Wallingford content retains bilingual town rendering and restricts Joey To
  const picks = read('lib/town-restaurants.ts').split('export const joeyTopPicks:')[1] || '';
  assert.doesNotMatch(picks, /^\s*'wallingford':/m);
 });
+
+test('Wallingford has five operator-sourced bilingual restaurant listings without invented ratings', () => {
+ const source = read('lib/town-restaurants.ts');
+ const match = source.match(/^ 'wallingford': \[(.*?)^ \],/ms);
+ assert.ok(match, 'Missing Wallingford dining directory');
+ const entries = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+ assert.equal(entries.length, 5);
+ assert.equal(new Set(entries.map(entry => entry.name)).size, 5);
+ assert.equal(new Set(entries.map(entry => entry.website)).size, 5);
+ for (const entry of entries) {
+  assert.ok(entry.cuisine.length > 35 && entry.cuisineEs.length > 35);
+  assert.equal(new URL(entry.website).protocol, 'https:');
+  assert.equal(new URL(entry.sourceUrl).protocol, 'https:');
+  assert.equal(entry.checkedOn, '2026-10-25');
+  assert.equal(entry.rating, undefined);
+  assert.equal(entry.reviewCount, undefined);
+ }
+ for (const name of ["Michael's Trattoria", 'Knuckleheads Taproom', 'Pig Rig BBQ', 'Hometown Pizza', 'Wood-n-Tap Wallingford']) {
+  assert.ok(entries.some(entry => entry.name === name), name);
+ }
+});
