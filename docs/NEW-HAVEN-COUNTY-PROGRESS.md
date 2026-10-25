@@ -5,9 +5,9 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 ## Coverage of 27 New Haven County towns
 
 - Directory routes: **27/27** via the 169-town shared data source.
-- Town-specific English/Spanish highlights: **26/27**.
+- Town-specific English/Spanish highlights: **27/27**.
 - Curated restaurant directory: **26/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **26/27**.
+- Dedicated official municipal/moving links: **27/27**.
 - Town-specific photo gallery data: **26/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
@@ -38,8 +38,14 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Wallingford | Yes | Yes | Yes | Yes | Not certified |
 | Waterbury | Yes | Yes | Yes | Yes | Not certified |
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
-| Wolcott | No | No | No | No | Not certified |
+| Wolcott | Yes | No | Yes | No | Not certified |
 | Woodbridge | Yes | Yes | Yes | Yes | Not certified |
+
+## Wolcott bilingual guide and municipal resources (2026-10-25)
+
+- Added an original four-paragraph guide (2,532 English characters and 2,790 Spanish characters) covering Woodtick/Scovill Reservoir, Mill Pond Way, Peterson Park, taxes, due diligence, utilities and moving considerations. Town source pages: https://www.wolcottct.org/262/Recreation-Leisure ; https://www.wolcottct.org/Facilities/Facility/Details/Woodtick-Reservoir-9 ; https://www.wolcottct.org/218/Tax-Collector ; https://www.wolcottct.org/216/Sewer-Water .
+- Added eleven bilingual official resource links, including assessor, FY 2026–27 28.90-mill tax information, Town Clerk, building permits, zoning, sewer/water, roads, recycling and recreation. Each link requires address- or visit-specific verification; added regression tests.
+- **Still incomplete:** Wolcott needs verified restaurant listings and town-specific licensed photos. No New Haven County town is launch-certified; independently verify Cloudflare staging, rendered SEO, accessibility, disclosures, image delivery and robots before certification.
 
 ## Prospect licensed photography (2026-10-25)
 
