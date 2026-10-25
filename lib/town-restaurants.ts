@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Wallingford: operator websites verified 2026-10-25 for town location and menu.
+ // Neutral directory only; no hours, scores, review counts or Joey personal endorsements.
+ 'wallingford': [
+  {"name":"Michael's Trattoria","cuisine":"Italian pasta, eggplant Parmesan and steaks on Center Street","cuisineEs":"Pastas italianas, berenjena a la parmesana y carnes en Center Street","website":"https://michaelstrattoria.com/","sourceUrl":"https://michaelstrattoria.com/","checkedOn":"2026-10-25"},
+  {"name":"Knuckleheads Taproom","cuisine":"Casual American burgers, sandwiches and rotating draft selections on North Main Street","cuisineEs":"Hamburguesas, sándwiches y cervezas de barril variadas en North Main Street","website":"https://knuckleheadstaproom.com/","sourceUrl":"https://knuckleheadstaproom.com/contact.html","checkedOn":"2026-10-25"},
+  {"name":"Pig Rig BBQ","cuisine":"Smoked barbecue, pulled pork, brisket and ribs with a Wallingford location","cuisineEs":"Barbacoa ahumada, cerdo desmenuzado, pecho de res y costillas en Wallingford","website":"https://www.pigrigbbq.com/","sourceUrl":"https://www.pigrigbbq.com/about/","checkedOn":"2026-10-25"},
+  {"name":"Hometown Pizza","cuisine":"Brick-oven pizza, pasta, calzones and Italian-style dinners on Main Street","cuisineEs":"Pizza al horno de ladrillo, pastas, calzones y cenas italianas en Main Street","website":"https://hometownpizzawlfd.com/","sourceUrl":"https://hometownpizzawlfd.com/contact/","checkedOn":"2026-10-25"},
+  {"name":"Wood-n-Tap Wallingford","cuisine":"American tavern dining with burgers, sandwiches and seasonal menus on North Colony Road","cuisineEs":"Comida estadounidense de taberna con hamburguesas, sándwiches y menús de temporada en North Colony Road","website":"https://woodntap.com/locations/wallingford","sourceUrl":"https://woodntap.com/locations/wallingford","checkedOn":"2026-10-25"},
+ ],
  // Meriden restaurants: operator websites checked 2026-10-25 for Meriden address and menu.
  // Neutral bilingual directory; no ratings, hours or Joey personal Top Picks added.
  'meriden': [
