@@ -89,3 +89,12 @@ test('North Haven photo gallery records three verified licensed town photographs
  assert.ok(photos.some(photo => photo.credit === 'Paperchaser29' && photo.license === 'CC BY-SA 3.0'));
  assert.equal(photos.filter(photo => photo.credit === 'Magicpiano').length, 2);
 });
+
+test('Bilingual town narratives render separate semantic paragraphs in shared and East Haven layouts', () => {
+ const page = read('app/[locale]/towns/[slug]/page.tsx');
+ const paragraphSplit = String.raw`.split(/\\n\\s*\\n/)`;
+ assert.equal(page.split(paragraphSplit).length - 1, 2, 'Both town guide layouts must split on blank lines');
+ assert.ok(page.includes('townHighlights[slug]?.es:townHighlights[slug]?.en'));
+ assert.ok(page.includes('townHighlights[slug].es:townHighlights[slug].en'));
+ assert.equal(page.split('.map((paragraph,index)=><p key={index}>{paragraph}</p>)').length - 1, 2);
+});
