@@ -1,3 +1,11 @@
+## Prospect source additions and live verification (2026-10-25)
+
+- **Verified source changes:** `097d19251f4efc0175dbd82b7876709407f8f494` added 15 distinct bilingual official resources; `66182f663d5b82a5243623468430f8da4b4324ae` added a four-paragraph English/Spanish town guide; `b694757e9126a9448ce96ffa48dca4940eab68f4` added regression tests. The county tracker was updated in `1ce32e8db81cf7a60b4c837f2f2d573d2381d83a`. Prospect still has **no** verified restaurant or licensed photo records, so it remains incomplete.
+- **Tax source:** Prospect Assessor and Tax FAQ identify 28.47 mills for the October 1, 2025 Grand List (FY 2026–27): https://townofprospect.gov/assessor/ ; https://townofprospect.gov/tax-faq/ . Verify the actual parcel assessment, exemptions and bills; the number is not a property-specific estimate.
+- **Exact rendered QA error:** `https://explore-connecticut-living-staging.joeysellsct.workers.dev/en/towns/prospect`, `/es/towns/prospect` and `/robots.txt` each returned `URL ... is not accessible via this tool` on 2026-10-25. No Cloudflare deployment or launch-readiness conclusion can be drawn from this tool-access error.
+- **Deferred checks:** independently verify live Cloudflare deployment, bilingual page rendering, canonical/hreflang, metadata, structured data, sitemap, mobile accessibility, affiliate/Equal Housing notices, staging noindex and robots disallow, image delivery and photo credits after the staging hostname becomes accessible. Check GitHub Actions separately; a successful build is not deployment verification.
+- **Next safe tasks:** finish Prospect restaurant sourcing and licensed town-specific photography, then Wolcott's missing content; continue retrying rendered QA without stopping the hourly workflow.
+
 
 ## Oxford completion and live verification (2026-10-25)
 
