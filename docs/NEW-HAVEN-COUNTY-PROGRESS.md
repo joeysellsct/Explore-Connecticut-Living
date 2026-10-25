@@ -7,7 +7,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **17/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **17/27**.
+- Dedicated official municipal/moving links: **18/27**.
 - Town-specific photo gallery data: **17/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
@@ -23,7 +23,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Guilford | Yes | Yes | Yes | Yes | Not certified |
 | Hamden | Yes | Yes | Yes | Yes | Not certified |
 | Madison | Yes | Yes | Yes | Yes | Not certified |
-| Meriden | Yes | No | No | No | Not certified |
+| Meriden | Yes | No | Yes | No | Not certified |
 | Middlebury | No | No | No | No | Not certified |
 | Milford | Yes | Yes | Yes | Yes | Not certified |
 | Naugatuck | Yes | Yes | Yes | Yes | Not certified |
@@ -40,6 +40,13 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | No | No | No | Not certified |
+
+## Meriden municipal links and expanded bilingual guide (2026-10-25)
+
+- Added **15 sourced English/Spanish municipal and moving-resource links** for assessment, the 2025 revaluation, FY2027 tax context, land records, GIS, building/zoning permits, engineering, water/sewer, district-specific waste collection and parks. Primary sources: https://www.meridenct.gov/city-services/finance/assessment-1/ ; https://www.meridenct.gov/city-services/finance/tax-collection/ ; https://www.meridenct.gov/city-services/utilities/meriden-water-division/ ; https://www.meridenct.gov/government/departments/public-works/curbside-recycling-solid-waste-trash-collection/ ; https://hub.ccm-ct.org/community/meriden/ .
+- Expanded the town profile to an original **2,630-character English / 2,843-character Spanish** four-paragraph guide covering Hubbard Park, Castle Craig, Giuffrida Park, Meriden Green, Hartford Line connections, property due diligence, utilities and waste-collection districts. Sources: https://www.meridenct.gov/city-services/parks-and-recreation/hubbard-park/ ; https://www.meridenct.gov/city-services/parks-and-recreation/meriden-green/ ; https://ctrail.zendesk.com/hc/en-us/articles/38334078482843-Hartford-Line-Overview-and-FAQ .
+- **Tax caution:** CCM reports a **29.99-mill FY2027 base real-estate rate**; the city Tax Collection webpage still shows older-year figures. Meriden's 2025 revaluation changed assessments, and district charges may vary. Do not infer a property's tax bill from the rate alone. Meriden Water Division announced rate changes effective September 1, 2026; verify actual service and balances for each address.
+- Added dedicated Meriden regression tests. **Not certified:** five verified restaurants, licensed town photography, live bilingual SEO, rendered accessibility, affiliate/legal disclosures and independent Cloudflare deployment checks remain outstanding.
 
 ## North Haven licensed photo gallery (2026-10-25)
 
