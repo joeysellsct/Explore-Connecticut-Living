@@ -39,7 +39,7 @@ export default async function MovingResourcesPage({params}:{params:Promise<{loca
     <a href={link.url} target="_blank" rel="noopener noreferrer sponsored">{es?'Explorar recurso':'Explore resource'} ↗</a>
     {link.affiliate&&<small>{es?'Enlace de referido: puedo recibir compensación':'Referral link: I may receive compensation'}</small>}
    </article>)}</div>
-   <p className="affiliate-disclosure">As an Amazon Associate I earn from qualifying purchases.</p>
+   <p className="affiliate-disclosure">{es?'Como Asociado de Amazon, obtengo ingresos por las compras que cumplen los requisitos.':'As an Amazon Associate I earn from qualifying purchases.'}</p>
   </section>
   <p className="moving-hub-footer">{es?'¿Tienes preguntas sobre una mudanza a Connecticut?':'Questions about moving to Connecticut?'} <a href="mailto:JoeySellsCT@gmail.com">{es?'Escríbele a Joey':'Email Joey McVety'}</a>.</p>
  </main>;
