@@ -76,3 +76,24 @@ test('Southbury dining has five sourced bilingual listings without invented rati
  const picks = source.split('export const joeyTopPicks:')[1] || '';
  assert.doesNotMatch(picks, /^\s*'southbury':/m);
 });
+
+test('Southbury has three Commons-licensed photographs with bilingual dated captions', () => {
+ const source = read('lib/town-photography.ts');
+ const match = source.match(/^ 'southbury': \[(.*?)^ \],/ms);
+ assert.ok(match, 'Southbury photography data missing');
+ const entries = match[1].split('\n').map(s => s.trim()).filter(s => s.startsWith('{')).map(s => JSON.parse(s.replace(/,$/, '')));
+ assert.equal(entries.length, 3);
+ assert.equal(new Set(entries.map(entry => entry.file)).size, 3);
+ for (const entry of entries) {
+  assert.ok(entry.title.includes('photograph') && entry.titleEs.includes('fotografía'));
+  assert.ok(entry.credit.length > 3);
+  assert.match(entry.license, /^CC BY-SA (2\.0|4\.0)$/);
+  assert.equal(new URL(entry.licenseUrl).protocol, 'https:');
+  assert.ok(entry.file.endsWith('.jpg'));
+ }
+ assert.ok(entries.some(entry => entry.file.includes('Southford Falls') && entry.credit.includes('Doug')));
+ assert.ok(entries.some(entry => entry.file.includes('HurleyRoad') && entry.credit === 'Magicpiano'));
+ assert.ok(entries.some(entry => entry.file.includes('RussianVillage') && entry.credit === 'Magicpiano'));
+ const page = read('app/[locale]/towns/[slug]/page.tsx');
+ assert.match(page, /townPhotography\[slug\]/);
+});
