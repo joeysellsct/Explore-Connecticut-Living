@@ -2,6 +2,16 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Naugatuck Wikimedia Commons file pages, location, author and license checked 2026-10-24:
+ // https://commons.wikimedia.org/wiki/File:Naugatuck_Green,_Connecticut.jpg
+ // https://commons.wikimedia.org/wiki/File:Congregational_Church,_Naugatuck,_Connecticut.jpg
+ // https://commons.wikimedia.org/wiki/File:Naugatuck_Civil_War_Monument._On_the_Green..jpg
+ // Historic images must not be treated as a live view; cropped display is disclosed on town pages.
+ 'naugatuck': [
+  {"title":"Naugatuck Green (photographed September 2023)","titleEs":"Plaza municipal de Naugatuck (fotografía de septiembre de 2023)","file":"Naugatuck Green, Connecticut.jpg","credit":"Kenneth C. Zirkel","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Congregational Church in Naugatuck (photographed September 2023)","titleEs":"Iglesia congregacional de Naugatuck (fotografía de septiembre de 2023)","file":"Congregational Church, Naugatuck, Connecticut.jpg","credit":"Kenneth C. Zirkel","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Civil War monument on Naugatuck Green (historic view, September 2013)","titleEs":"Monumento de la Guerra Civil en la plaza de Naugatuck (vista histórica, septiembre de 2013)","file":"Naugatuck Civil War Monument. On the Green..jpg","credit":"Bill Hass","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+ ],
  // Bethany Commons file pages, photographer credits, locations and licenses verified 2026-10-24:
  // https://commons.wikimedia.org/wiki/File:Downs_Road,_Bethany,_Connecticut_(53834031755).jpg
  // https://commons.wikimedia.org/wiki/File:Lake_Watrous10-28-07.jpg
