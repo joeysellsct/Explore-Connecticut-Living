@@ -38,13 +38,13 @@ test('Southbury town guide has researched English and Spanish copy with tax and 
  assert.ok(match, 'Southbury bilingual guide missing');
  const guide = JSON.parse(match[1]);
  assert.ok(guide.en.length > 2000 && guide.es.length > 2000);
- assert.ok(guide.en.split('\\n\\n').length >= 4);
- assert.ok(guide.es.split('\\n\\n').length >= 4);
+ assert.ok(guide.en.split('\n\n').length >= 4);
+ assert.ok(guide.es.split('\n\n').length >= 4);
  for (const place of ['Southford Falls State Park', 'Kettletown State Park', 'Settlers Park', 'Little York Park']) {
   assert.ok(guide.places.includes(place), place);
   assert.ok(guide.en.includes(place), place);
  }
- assert.match(guide.en, /25\\.4-mill/);
+ assert.match(guide.en, /25\.4-mill/);
  assert.match(guide.es, /25,4 milésimas/);
  assert.match(guide.en, /no municipal sewage system/);
  assert.match(guide.es, /no tiene un sistema de alcantarillado municipal/);
