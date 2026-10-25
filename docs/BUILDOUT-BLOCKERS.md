@@ -1,5 +1,11 @@
 # Explore Connecticut Living: deferred verification and buildout work
 
+## October 25: bilingual guide paragraph rendering and verification
+
+- **Committed on main:** `2c884efd001b47eb92799040ffbb703341418154` updates `app/[locale]/towns/[slug]/page.tsx` so existing researched English/Spanish town narratives render their blank-line-separated sections as distinct semantic `<p>` elements in both the standard town template and the East Haven custom layout. `75b49236877598282338249df25ea74f2579076a` adds a regression test; `1188a3fe8a0068fba8b263dda14a28fcaa1ad27f` corrects the test's literal separator. Connector refetch confirmed the latest source and commit SHA, and source-level assertions found two paragraph-split paths and two paragraph renderers. This is **source-level verification only**, not a completed browser accessibility audit.
+- **GitHub Actions not independently confirmed:** `get_commit_combined_status` returned an empty status list, while `fetch_commit_workflow_runs` returned no runs because this connector only lists PR-triggered runs. The public GitHub Actions URL could not be fetched by the available browser (`DisabledError`). Recheck push-triggered `content-tests` and `production-build` jobs later; do not call them passing yet.
+- **Deployment/rendered QA still blocked:** container DNS lookup for `explore-connecticut-living-staging.joeysellsct.workers.dev` and `github.com` failed with `gaierror [Errno -3] Temporary failure in name resolution`. A failed lookup from this environment does **not** establish Cloudflare deployment failure. Revisit English/Spanish rendered metadata, paragraph layout, image attribution, accessibility, Equal Housing and affiliate disclosures when the staging hostname is reachable. No New Haven County town is certified 100%.
+
 This file tracks specific blockers for incremental hourly town-profile work. A blocker must **not** stop unrelated town edits. Re-check a deferred item on a later run, and update or remove it only after verification.
 
 ## Beacon Falls follow-up (2026-10-24)
