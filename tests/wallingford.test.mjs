@@ -71,3 +71,24 @@ test('Wallingford has five operator-sourced bilingual restaurant listings withou
   assert.ok(entries.some(entry => entry.name === name), name);
  }
 });
+
+test('Wallingford has three licensed town-specific photos with bilingual dated attribution', () => {
+ const source = read('lib/town-photography.ts');
+ const match = source.match(/^ 'wallingford': \[(.*?)^ \],/ms);
+ assert.ok(match, 'Missing Wallingford photos');
+ const photos = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+ assert.equal(photos.length, 3);
+ assert.equal(new Set(photos.map(photo => photo.file)).size, 3);
+ for (const photo of photos) {
+  assert.match(photo.title, /Wallingford/);
+  assert.match(photo.titleEs, /Wallingford/);
+  assert.match(photo.title, /20(12|17|21)/);
+  assert.match(photo.titleEs, /20(12|17|21)/);
+  assert.ok(photo.credit.length > 5);
+  assert.match(photo.license, /^CC BY-SA/);
+  assert.equal(new URL(photo.licenseUrl).protocol, 'https:');
+ }
+ assert.ok(photos.some(photo => photo.file === 'Town Hall of Wallingford.jpg' && photo.credit === 'Nancysands1965'));
+ assert.ok(photos.some(photo => photo.file.includes("St Paul's") && photo.credit === 'Gloucester1692'));
+ assert.ok(photos.some(photo => photo.file.includes('northbound platform') && photo.credit === 'Pi.1415926535'));
+});
