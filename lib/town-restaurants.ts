@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Meriden restaurants: operator websites checked 2026-10-25 for Meriden address and menu.
+ // Neutral bilingual directory; no ratings, hours or Joey personal Top Picks added.
+ 'meriden': [
+  {"name":"Ted's Restaurant","cuisine":"Steamed cheeseburgers and casual counter-service meals on Broad Street","cuisineEs":"Hamburguesas con queso al vapor y comidas informales en Broad Street","website":"https://tedsrestaurant.com/","sourceUrl":"https://tedsrestaurant.com/contact/","checkedOn":"2026-10-25"},
+  {"name":"K LaMay's Steamed Cheeseburgers","cuisine":"Connecticut-style steamed cheeseburgers, sandwiches and sides on East Main Street","cuisineEs":"Hamburguesas con queso al vapor al estilo de Connecticut, sándwiches y acompañamientos en East Main Street","website":"https://klamayssteamedcheeseburgers.com/","sourceUrl":"https://klamayssteamedcheeseburgers.com/locations/","checkedOn":"2026-10-25"},
+  {"name":"Taino Smokehouse Prime","cuisine":"Smoked barbecue, dry-aged steaks and house-made pasta on East Main Street","cuisineEs":"Barbacoa ahumada, cortes de carne madurados y pasta casera en East Main Street","website":"https://tainosmokehouse.com/","sourceUrl":"https://tainosmokehouse.com/contact","checkedOn":"2026-10-25"},
+  {"name":"Violi's Restaurant","cuisine":"Italian-American dining and private events overlooking Hunter Golf Club","cuisineEs":"Cocina italoestadounidense y eventos privados con vistas a Hunter Golf Club","website":"https://violisrestaurant.com/","sourceUrl":"https://violisrestaurant.com/contact/","checkedOn":"2026-10-25"},
+  {"name":"Lido's Restaurant & Pizzeria","cuisine":"Italian pasta, pizza and classic entrées on Pomeroy Avenue","cuisineEs":"Pastas italianas, pizzas y platos tradicionales en Pomeroy Avenue","website":"https://lidositalian.com/","sourceUrl":"https://lidositalian.com/","checkedOn":"2026-10-25"},
+ ],
  // North Haven: operator websites verified 2026-10-25 for town/address and offerings.
  // Editorial dining directory, not Joey's personal Top Picks; no ratings or hours asserted.
  'north-haven': [
