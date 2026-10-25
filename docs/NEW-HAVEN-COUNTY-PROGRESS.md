@@ -7,7 +7,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
 - Curated restaurant directory: **15/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **15/27**.
+- Dedicated official municipal/moving links: **16/27**.
 - Town-specific photo gallery data: **15/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
@@ -26,7 +26,7 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | Meriden | Yes | No | No | No | Not certified |
 | Middlebury | No | No | No | No | Not certified |
 | Milford | Yes | Yes | Yes | Yes | Not certified |
-| Naugatuck | Yes | No | No | No | Not certified |
+| Naugatuck | Yes | No | Yes | No | Not certified |
 | New Haven | Yes | Yes | Yes | Yes | Not certified |
 | North Branford | No | No | No | No | Not certified |
 | North Haven | Yes | No | No | No | Not certified |
@@ -40,6 +40,12 @@ Snapshot: **2026-10-24**. This is a source-code coverage checklist, not a claim 
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | No | No | No | Not certified |
+
+## Naugatuck source-completion pass (2026-10-24)
+
+- Replaced the short Naugatuck town highlight with an original English/Spanish guide covering borough history, Gunntown and Andrew Mountain trails, Naugatuck State Forest, the Larkin State Park Trail closure outside Naugatuck, moving due diligence and the Waterbury Branch substitute-bus period **July 20, 2026–May 31, 2027**. Sources: https://naugatuck-ct.gov/parks-rec/parks-trails ; https://ctparks.com/parks/larkin-state-park-trail ; https://portal.ct.gov/dot/ctdot-press-releases/2026/substitute-busing-wbl-july-2026-through-may-2027 .
+- Added **15 English/Spanish official and provider links** for property assessments, the Tax Office, land records, building permits, zoning, sewer/drainage, public works, recycling, recreation, Connecticut Water, CTDOT and state trails. The Borough Tax Office publishes **40.44 mills** for 2025 Grand List real estate/personal property (FY 2026–27) and **32.46 mills** for motor vehicles: https://naugatuck-ct.gov/tax-office . Connecticut Water lists Naugatuck among towns served, but public water and sewer service must be checked for the individual address: https://www.ctwater.com/about-us/ ; https://www.naugatuck-ct.gov/engineering-water-pollution-control .
+- Added Naugatuck-specific regression checks for bilingual narrative, tax values, unique official links and shared legal/affiliate safeguards. **Not certified:** no Naugatuck restaurant directory or verified licensed gallery yet, and rendered EN/ES metadata, photos, mobile accessibility, legal disclosures, staging robots and Cloudflare deployment still need independent verification. New GitHub Actions results must be checked separately; no town is 100% complete.
 
 ## Bethany municipal sources and bilingual guide (2026-10-24)
 
