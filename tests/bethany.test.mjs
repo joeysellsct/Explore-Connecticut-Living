@@ -13,7 +13,7 @@ test('Bethany guide gives original English and Spanish local and buyer informati
   for (const term of ['Veterans Memorial Park', 'Hockanum Lake', 'Regicides Trail', '29.99', '29.14', '1960', 'March 20, 2026']) {
     assert.ok(guide.en.includes(term), 'English guide missing ' + term);
   }
-  for (const term of ['Veterans Memorial Park', 'Hockanum Lake', 'Regicides Trail', '29,99', '29,14', '1960', '20 de marzo de 2026']) {
+  for (const term of ['Veterans Memorial Park', 'lago Hockanum', 'Regicides Trail', '29,99', '29,14', '1960', '20 de marzo de 2026']) {
     assert.ok(guide.es.includes(term), 'Spanish guide missing ' + term);
   }
   assert.ok(guide.en.includes('no municipal water or sewer'));
