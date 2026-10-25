@@ -1,5 +1,13 @@
 # Explore Connecticut Living: deferred verification and buildout work
 
+## October 25: Southbury municipal source pass and deferred QA
+
+- **Commits confirmed on main:** `429136b9a4d81fde3b016d96f48d42c6241db5ae` (15 bilingual official municipal/moving links), `5be9baf62bdebe03ed0c9d38078eb23b2beb4fa0` (Southbury regression tests), `f267e9a8a011e1fc88f104549adcd67c4df3d358` (county tracker). Fresh blob SHA used for each existing-file write. Source-level validation confirmed 15 unique HTTPS URLs, EN/ES descriptions, shared rendering wiring, and no new personal Top Picks.
+- **Tax-source discrepancy:** Southbury's own Tax Collector page reports **25.4 mills** for FY 2026–27 (https://www.southbury-ct.org/mill-rate); the CCM Southbury snapshot currently reports **23.29**. The official town figure was used, with parcel/district cautions. Recheck later rather than silently replacing the town's figure.
+- **CI cannot yet be certified for these commits:** `fetch_commit_workflow_runs` for the latest SHA returned `workflow_runs: []` (connector filters to PR-triggered runs); `get_commit_combined_status` for the first content SHA returned `statuses: []`; public Actions URL returned `DisabledError`. Recheck the push-triggered `content-tests` and `production-build` independently.
+- **Staging QA blocked:** `/en/towns/southbury`, `/es/towns/southbury` and `/robots.txt` at `explore-connecticut-living-staging.joeysellsct.workers.dev` each returned `URL ... is not accessible via this tool`. Container checks for the staging hostname and `api.github.com` failed with `NameResolutionError`. These are verification-environment errors, not proof of a failed deployment. Rendered metadata, canonical/hreflang, images, mobile accessibility, legal/affiliate disclosures, robots/noindex and Cloudflare deployment remain unverified.
+- **Next Southbury content:** verified dining, licensed town-specific photography, expanded English/Spanish guide and complete rendered-page audit. **No town is certified 100%**. Continue New Haven County-first.
+
 ## October 25: Wallingford source-completion and live staging blocker
 
 - **Published on main:** `2924cd70` (14 bilingual municipal/utility links), `623ae8ed` (expanded EN/ES town guide), `40266b02` (guide/link tests), `b0fb1843` (five sourced restaurants), `3fd90b63` (dining tests), `63b01e5f` (three Commons-licensed photographs), `faba9cd9` (photo tests), `88f3b82e` (county tracker). GitHub Actions should be evaluated per commit separately; content tests/builds do not prove deployment.
