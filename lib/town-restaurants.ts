@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Middlebury: five current operator websites checked 2026-10-25 for Middlebury addresses and menus.
+ // Neutral bilingual descriptions; no ratings, hours or personal Top Picks.
+ 'middlebury': [
+  {"name":"Maggie McFly's | Middlebury","cuisine":"American and globally inspired lunch, dinner and brunch at the original Maggie McFly's location on Woodside Avenue","cuisineEs":"Almuerzos, cenas y brunch de cocina estadounidense e internacional en la sede original de Woodside Avenue","website":"https://www.maggiemcflys.com/location/middlebury-ct/","sourceUrl":"https://www.maggiemcflys.com/location/middlebury-ct/","checkedOn":"2026-10-25"},
+  {"name":"Vyne Restaurant & Bar","cuisine":"Contemporary American dining with lunch, dinner, brunch and event menus on Whittemore Road","cuisineEs":"Cocina estadounidense contemporánea con almuerzos, cenas, brunch y menús para eventos en Whittemore Road","website":"https://www.vynerestaurant.com/","sourceUrl":"https://www.vynerestaurant.com/","checkedOn":"2026-10-25"},
+  {"name":"Pies & Pub","cuisine":"Hand-tossed pizzas, wings, burgers and salads at a Middlebury pizzeria and taproom on Store Road","cuisineEs":"Pizzas hechas a mano, alitas, hamburguesas y ensaladas en una pizzería y taberna de Store Road","website":"https://piesandpub.com/","sourceUrl":"https://piesandpub.com/","checkedOn":"2026-10-25"},
+  {"name":"Maples Family Restaurant","cuisine":"All-day breakfast, sandwiches, soups and Italian-American comfort food on Straits Turnpike","cuisineEs":"Desayunos durante todo el día, sándwiches, sopas y platos caseros italoestadounidenses en Straits Turnpike","website":"https://www.maplesrestaurantct.com/","sourceUrl":"https://www.maplesrestaurantct.com/our-story","checkedOn":"2026-10-25"},
+  {"name":"Señor Pancho's of Middlebury","cuisine":"Mexican-style tacos, combination plates and other casual meals at the Middlebury Road location","cuisineEs":"Tacos de estilo mexicano, platos combinados y otras comidas informales en Middlebury Road","website":"https://senorpanchos.com/","sourceUrl":"https://senorpanchos.com/middlebury/","checkedOn":"2026-10-25"},
+ ],
  // Waterbury: five restaurant-operated sites checked 2026-10-25 for current Waterbury locations.
  // Neutral bilingual descriptions; no hours, ratings or Joey personal endorsements.
  'waterbury': [
