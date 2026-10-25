@@ -1,5 +1,12 @@
 # Explore Connecticut Living: deferred verification and buildout work
 
+## October 25: Southbury expanded guide, independent QA deferred
+
+- **Guide commit:** `75255695eff7b7533a8fa2d119a881af7734a0f8` updated only `lib/town-highlights.ts`, replacing the one-sentence Southbury guide with four English and four Spanish paragraphs (2,559 / 2,857 characters). Source audit: Connecticut DEEP state-park directory; Southbury Settlers, Ballantine, Little York and Platt park pages; Southbury Assessor, tax calculator, FY 2026–27 mill-rate page, and WPCA. The copy includes resident-only Little York parking, the town's 25.4-mill rate, assessed-value caveat, and lack of municipal sewage.
+- **Regression commits:** `a7e02f83bb8117d3ff3bb9a1684d1b8a7b222710` added Southbury guide assertions in `tests/southbury.test.mjs`; `e3482f8a2ee23461f0810a0d66d5d1d3772f1bd5` corrected escape sequences in those assertions. A fresh blob SHA was fetched before each write. Repository source inspection confirmed the guide's EN/ES lengths, four paragraphs, parks, tax and sewer warnings; GitHub Actions execution is **not** yet confirmed.
+- **CI limitation:** `fetch_commit_workflow_runs` for the guide commit returned `workflow_runs: []` and `get_commit_combined_status` returned `statuses: []`; the connector's workflow-run endpoint only covers PR-triggered runs. Independent GitHub Actions URL retrieval returned `DisabledError`. Do not treat missing results as a passing build.
+- **Live blocker:** The staging Southbury English page and `/robots.txt` returned `URL ... is not accessible via this tool`. This does not establish a failed Cloudflare deployment. Spanish rendering, metadata, hreflang, image licenses, mobile/accessibility, disclosure display and staging robots/noindex still require an independent live audit. Southbury still lacks a verified restaurant directory and licensed photo gallery. **Not launch-ready.**
+
 ## October 25: Southbury municipal source pass and deferred QA
 
 - **Commits confirmed on main:** `429136b9a4d81fde3b016d96f48d42c6241db5ae` (15 bilingual official municipal/moving links), `5be9baf62bdebe03ed0c9d38078eb23b2beb4fa0` (Southbury regression tests), `f267e9a8a011e1fc88f104549adcd67c4df3d358` (county tracker). Fresh blob SHA used for each existing-file write. Source-level validation confirmed 15 unique HTTPS URLs, EN/ES descriptions, shared rendering wiring, and no new personal Top Picks.
