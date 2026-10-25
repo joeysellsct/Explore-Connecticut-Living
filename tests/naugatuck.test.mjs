@@ -64,3 +64,22 @@ test('Naugatuck dining directory has five current operator-sourced bilingual ent
     assert.equal(entry.reviewCount, undefined);
   }
 });
+
+test('Naugatuck photo gallery has three town-specific licensed bilingual images', () => {
+  const source = read('lib/town-photography.ts');
+  const match = source.match(/^ 'naugatuck': \[(.*?)^ \],/ms);
+  assert.ok(match, 'Naugatuck gallery missing');
+  const photos = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+  assert.equal(photos.length, 3);
+  assert.equal(new Set(photos.map(photo => photo.file)).size, 3);
+  for (const photo of photos) {
+    assert.ok(photo.title.length > 20 && photo.titleEs.length > 20);
+    assert.ok(photo.credit.length > 5);
+    assert.match(photo.license, /^CC BY-SA [34]\.0$/);
+    assert.ok(photo.licenseUrl.startsWith('https://creativecommons.org/licenses/'));
+  }
+  assert.equal(photos[0].file, 'Naugatuck Green, Connecticut.jpg');
+  assert.equal(photos[1].credit, 'Kenneth C. Zirkel');
+  assert.equal(photos[2].credit, 'Bill Hass');
+  assert.ok(photos[2].title.includes('2013'));
+});
