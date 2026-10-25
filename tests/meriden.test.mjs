@@ -44,6 +44,29 @@ test('Meriden town narrative is substantial, bilingual and cautious about revalu
  assert.match(guide.en, /Grand Central/);
 });
 
+test('Meriden dining directory contains five operator-sourced bilingual listings without invented ratings', () => {
+ const source = read('lib/town-restaurants.ts');
+ const match = source.match(/^ 'meriden': \[(.*?)^ \],/ms);
+ assert.ok(match, 'Missing Meriden restaurant directory');
+ const entries = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+ assert.equal(entries.length, 5);
+ assert.equal(new Set(entries.map(entry => entry.name)).size, 5);
+ assert.equal(new Set(entries.map(entry => entry.website)).size, 5);
+ for (const entry of entries) {
+  assert.ok(entry.cuisine.length > 35 && entry.cuisineEs.length > 35);
+  assert.equal(new URL(entry.website).protocol, 'https:');
+  assert.equal(new URL(entry.sourceUrl).protocol, 'https:');
+  assert.equal(entry.checkedOn, '2026-10-25');
+  assert.equal(entry.rating, undefined);
+  assert.equal(entry.reviewCount, undefined);
+ }
+ assert.ok(entries.some(entry => entry.name === "Ted's Restaurant"));
+ assert.ok(entries.some(entry => entry.name === "K LaMay's Steamed Cheeseburgers"));
+ assert.ok(entries.some(entry => entry.name === 'Taino Smokehouse Prime'));
+ assert.ok(entries.some(entry => entry.name === "Violi's Restaurant"));
+ assert.ok(entries.some(entry => entry.name === "Lido's Restaurant & Pizzeria"));
+});
+
 test('Meriden keeps bilingual resources and does not invent Joey personal Top Picks', () => {
  const page = read('app/[locale]/towns/[slug]/page.tsx');
  assert.match(page, /townOfficialLinks\[slug\]\.map/);
