@@ -2,6 +2,13 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Middlebury location and licenses checked 2026-10-25 against Wikimedia Commons original file pages.
+ // Sources: https://commons.wikimedia.org/wiki/File:Larkin_State_Park_Trail_cut,_Middlebury_CT.jpg ; https://commons.wikimedia.org/wiki/File:Quassy_Amusement_Park_-_48334606547.jpg ; https://commons.wikimedia.org/wiki/File:WoodenWarrior.jpg
+ 'middlebury': [
+  {"title":"Larkin State Park Trail rock cut in Middlebury (photographed October 2023)","titleEs":"Trinchera rocosa del sendero Larkin State Park Trail en Middlebury (fotografía de octubre de 2023)","file":"Larkin State Park Trail cut, Middlebury CT.jpg","credit":"John Phelan (Faolin42)","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Grand Carousel at Quassy Amusement Park in Middlebury (photographed July 2019)","titleEs":"Carrusel Grand Carousel del parque Quassy en Middlebury (fotografía de julio de 2019)","file":"Quassy Amusement Park - 48334606547.jpg","credit":"Roller Coaster Philosophy (Jeremy Thompson)","license":"CC BY 2.0","licenseUrl":"https://creativecommons.org/licenses/by/2.0/"},
+  {"title":"Wooden Warrior roller coaster at Quassy in Middlebury (photographed June 2025)","titleEs":"Montaña rusa Wooden Warrior en Quassy, Middlebury (fotografía de junio de 2025)","file":"WoodenWarrior.jpg","credit":"Elvisisalive95","license":"CC BY 4.0","licenseUrl":"https://creativecommons.org/licenses/by/4.0/"},
+ ],
  // Waterbury Wikimedia Commons locations, authors, dates and CC BY-SA licenses checked 2026-10-25.
  // Original files: Waterbury City Hall.jpg; PalaceTheater-WaterburyCT-1.jpg; WATERBURY UNION STATION BUILDING.jpg.
  // Gallery crops are adaptations; keep photographer credit, original source and ShareAlike license visible.
