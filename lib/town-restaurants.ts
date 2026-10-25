@@ -12,6 +12,16 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Bethany restaurant locations rechecked 2026-10-24 via operator sites/ordering pages and a recent local deli listing.
+ // Pronto Pizza at 696 Amity Road is distinct from outdated Bethany Restaurant & Pizza listings at that address.
+ // No ratings, hours, or personal Joey endorsements are asserted. Evan's is a deli, not a full-service restaurant.
+ 'bethany': [
+  {"name":"Country Corner Restaurant","cuisine":"Family-run Bethany diner with breakfast, sandwiches and American comfort dishes","cuisineEs":"Restaurante familiar en Bethany con desayunos, sándwiches y platos caseros estadounidenses","website":"https://www.countrycornerct.com/","sourceUrl":"https://www.countrycornerct.com/","checkedOn":"2026-10-24"},
+  {"name":"Teddy B's Restaurant & Pizzeria","cuisine":"Breakfast, Greek and Italian-American plates, grinders and pizza","cuisineEs":"Desayunos, platos griegos e italoestadounidenses, bocadillos y pizza","website":"https://www.toasttab.com/local/order/teddy-bs-restaurant-136-amity-road","sourceUrl":"https://www.toasttab.com/local/order/teddy-bs-restaurant-136-amity-road","checkedOn":"2026-10-24"},
+  {"name":"Apizza Grande Bethany","cuisine":"Apizza, calzones, grinders and Italian-American pasta dishes","cuisineEs":"Apizza, calzones, bocadillos y platos de pasta italoestadounidenses","website":"https://apizzagrandebethany.com/","sourceUrl":"https://apizzagrandebethany.com/","checkedOn":"2026-10-24"},
+  {"name":"Pronto Pizza","cuisine":"Bethany pizza shop offering pies and casual takeout","cuisineEs":"Pizzería de Bethany con pizzas y comida informal para llevar","website":"https://www.prontopizzabethany.com/","sourceUrl":"https://www.prontopizzabethany.com/menu","checkedOn":"2026-10-24"},
+  {"name":"Evan's Deli & Grocery LLC","cuisine":"Bethany deli counter with breakfast sandwiches and prepared subs","cuisineEs":"Mostrador de delicatessen en Bethany con sándwiches de desayuno y bocadillos preparados","sourceUrl":"https://www.restaurantji.com/ct/bethany/steven-s-deli-and-grocery-llc-/","checkedOn":"2026-10-24"},
+ ],
  // Milford locations and cuisine checked on official restaurant sites 2026-10-24; editorial listings, not Joey's personal picks.
  'milford': [
   {name:"Stonebridge Restaurant",cuisine:"Waterfront American dining, seafood and steaks",cuisineEs:"Cocina estadounidense junto al agua, mariscos y carnes",website:"https://stonebridgerestaurant.com/",sourceUrl:"https://stonebridgerestaurant.com/",checkedOn:"2026-10-24"},
