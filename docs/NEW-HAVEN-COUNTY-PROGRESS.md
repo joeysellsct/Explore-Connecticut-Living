@@ -5,9 +5,9 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 ## Coverage of 27 New Haven County towns
 
 - Directory routes: **27/27** via the 169-town shared data source.
-- Town-specific English/Spanish highlights: **24/27**.
+- Town-specific English/Spanish highlights: **25/27**.
 - Curated restaurant directory: **24/27** (counts any directory; individual lists still need review for approximately five current restaurants).
-- Dedicated official municipal/moving links: **24/27**.
+- Dedicated official municipal/moving links: **25/27**.
 - Town-specific photo gallery data: **24/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
 
@@ -31,7 +31,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | North Branford | Yes | Yes | Yes | Yes | Not certified |
 | North Haven | Yes | Yes | Yes | Yes | Not certified |
 | Orange | Yes | Yes | Yes | Yes | Not certified |
-| Oxford | No | No | No | No | Not certified |
+| Oxford | Yes | No | Yes | No | Not certified |
 | Prospect | No | No | No | No | Not certified |
 | Seymour | Yes | Yes | Yes | Yes | Not certified |
 | Southbury | Yes | Yes | Yes | Yes | Not certified |
@@ -40,6 +40,13 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | Yes | Yes | Yes | Not certified |
+
+## Oxford bilingual guide and municipal resources (2026-10-25)
+
+- Added **13 sourced municipal/moving resources**, with original English/Spanish descriptions: Assessor, FY2027 mill-rate source, Tax Collector, Land Records, Town Clerk, Building, Planning and Zoning, Inland Wetlands, WPCA, Housatonic Valley Health District, Public Works, Parks and Recreation, and the town department directory. Sources: https://www.oxford-ct.gov/1213/Departments ; https://hvhdct.gov/communities/oxford-ct/ ; https://hub.ccm-ct.org/community/oxford/ .
+- Added an original **four-paragraph bilingual guide** (2,627 English and 2,932 Spanish characters) covering Jackson Cove, Agnes Tetlak Schiavi Park, Rockhouse Hill Sanctuary, Larkin State Park Trail, municipal property research and address-specific utilities. State park guidance documents an **ongoing flood-related closure** on the Larkin trail; do not imply the entire route is open. Sources: https://www.oxford-ct.gov/1363/Recreation-Areas ; https://oxfordlandtrust.org/rockhouse-hill ; https://ctparks.com/parks/larkin-state-park-trail .
+- **FY 2026–27 real-property tax rate: 20.55 mills** according to CCM; property-specific assessments, bills and possible charges must be checked independently.
+- **Not launch-certified:** Oxford still needs approximately five operator-verified restaurant listings, properly licensed and attributed town-specific photography, rendered SEO/accessibility and image QA, live disclosures, staging noindex/robots and independent Cloudflare deployment checks. Staging Oxford and robots.txt requests were inaccessible from the verification environment on 2026-10-25; this does not establish deployment failure.
 
 ## North Branford bilingual guide and municipal resources (2026-10-25)
 
