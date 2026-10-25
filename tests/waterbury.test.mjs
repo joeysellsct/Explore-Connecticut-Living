@@ -31,3 +31,26 @@ test('Waterbury resources use the bilingual town template without a new personal
  const picks = read('lib/town-restaurants.ts').split('export const joeyTopPicks:')[1] || '';
  assert.doesNotMatch(picks, /^\s*'waterbury':/m);
 });
+
+test('Waterbury dining contains five operator-sourced bilingual listings without invented scores', () => {
+ const source = read('lib/town-restaurants.ts');
+ const match = source.match(/^ 'waterbury': \[(.*?)^ \],/ms);
+ assert.ok(match, 'Waterbury restaurant directory missing');
+ const entries = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+ assert.equal(entries.length, 5);
+ assert.equal(new Set(entries.map(entry => entry.name)).size, 5);
+ assert.equal(new Set(entries.map(entry => entry.sourceUrl)).size, 5);
+ for (const entry of entries) {
+  assert.ok(entry.cuisine.length > 40 && entry.cuisineEs.length > 40, entry.name);
+  assert.equal(new URL(entry.sourceUrl).protocol, 'https:');
+  assert.equal(new URL(entry.website).protocol, 'https:');
+  assert.equal(entry.checkedOn, '2026-10-25');
+  assert.equal(entry.rating, undefined);
+  assert.equal(entry.reviewCount, undefined);
+ }
+ for (const name of ['Diorio Restaurant & Bar', "D'Amelio's Italian Eatery", 'Signatures Restaurant', 'Brass City Bistro', 'La Tavola Ristorante']) {
+  assert.ok(entries.some(entry => entry.name === name), name);
+ }
+ const page = read('app/[locale]/towns/[slug]/page.tsx');
+ assert.ok(page.includes('townRestaurants[slug]'));
+});
