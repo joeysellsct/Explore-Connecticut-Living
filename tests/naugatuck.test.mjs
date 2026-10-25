@@ -6,7 +6,7 @@ const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8'
 
 test('Naugatuck English and Spanish guides explain verified local and moving facts', () => {
   const source = read('lib/town-highlights.ts');
-  const match = source.match(/^ 'naugatuck':(\\{.*\\}),$/m);
+  const match = source.match(/^ 'naugatuck':(\{.*\}),$/m);
   assert.ok(match, 'Naugatuck town guide missing');
   const guide = JSON.parse(match[1]);
   assert.ok(guide.en.length > 2000 && guide.es.length > 2200);
@@ -21,9 +21,9 @@ test('Naugatuck English and Spanish guides explain verified local and moving fac
 
 test('Naugatuck official resources have 15 unique bilingual sourced links', () => {
   const source = read('lib/town-official-links.ts');
-  const match = source.match(/^ 'naugatuck': \\[(.*?)^ \\],/ms);
+  const match = source.match(/^ 'naugatuck': \[(.*?)^ \],/ms);
   assert.ok(match, 'Naugatuck official resources missing');
-  const entries = match[1].split('\\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
+  const entries = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
   assert.equal(entries.length, 15);
   assert.equal(new Set(entries.map(entry => entry.url)).size, 15);
   for (const entry of entries) {
@@ -37,11 +37,11 @@ test('Naugatuck official resources have 15 unique bilingual sourced links', () =
 
 test('Naugatuck uses the shared compliance, moving and bilingual town template', () => {
   const page = read('app/[locale]/towns/[slug]/page.tsx');
-  assert.match(page, /townOfficialLinks\\[slug\\]\\.map/);
-  assert.match(page, /townHighlights\\[slug\\]\\.es/);
-  assert.match(page, /TownMovingResources slug=\\{slug\\}/);
-  assert.match(read('app/robots.ts'), /disallow:'\\/'/);
+  assert.match(page, /townOfficialLinks\[slug\]\.map/);
+  assert.match(page, /townHighlights\[slug\]\.es/);
+  assert.match(page, /TownMovingResources slug=\{slug\}/);
+  assert.match(read('app/robots.ts'), /disallow:'\/'/);
   const picks = read('lib/town-restaurants.ts').split('export const joeyTopPicks:')[1];
   assert.ok(picks);
-  assert.doesNotMatch(picks, /['"]naugatuck['"]\\s*:/);
+  assert.doesNotMatch(picks, /['"]naugatuck['"]\s*:/);
 });
