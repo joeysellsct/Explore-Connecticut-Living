@@ -2,6 +2,14 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Oxford: Wikimedia Commons file identity, location and author/license verified 2026-10-25.
+ // Original files: https://commons.wikimedia.org/wiki/File:Southford_Falls_I.jpg ; https://commons.wikimedia.org/wiki/File:SouthfordFallsSP_IMG_0955.jpg ; https://commons.wikimedia.org/wiki/File:Oxford_Airport.JPG
+ // Southford Falls State Park spans Oxford and Southbury; some bridges/trails are closed after 2024 flooding. Photos are historical, not proof of current access.
+ 'oxford': [
+  {"title":"Southford Falls in Oxford (photographed October 2018; park spans Oxford and Southbury)","titleEs":"Cascadas de Southford Falls en Oxford (fotografía de octubre de 2018; el parque abarca Oxford y Southbury)","file":"Southford Falls I.jpg","credit":"Karl Thomas Moore (Karlfonza)","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Covered bridge over Eight Mile Brook at Southford Falls State Park (photographed April 2015; Oxford-Southbury border park)","titleEs":"Puente cubierto sobre Eight Mile Brook en el parque estatal Southford Falls (fotografía de abril de 2015; parque entre Oxford y Southbury)","file":"SouthfordFallsSP IMG 0955.jpg","credit":"Morrowlong","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Aerial view of Waterbury-Oxford Airport in Oxford (photograph uploaded November 2007)","titleEs":"Vista aérea del aeropuerto Waterbury-Oxford en Oxford (fotografía publicada en noviembre de 2007)","file":"Oxford Airport.JPG","credit":"Zook024","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+ ],
  // North Branford/Northford Commons location, original author and CC BY-SA license verified 2026-10-25.
  // Original files: https://commons.wikimedia.org/wiki/File:NorthBranfordCT_HowdLinsleyHouse.jpg ; https://commons.wikimedia.org/wiki/File:Northford_Congregational_Church_(1846).JPG ; https://commons.wikimedia.org/wiki/File:Aerial_view_of_Tilcon_Connecticut_quarry_and_Lake_Gaillard,_July_2019.JPG
  'north-branford': [
