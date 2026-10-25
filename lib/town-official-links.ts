@@ -553,4 +553,22 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Larkin State Park Trail: Naugatuck access and flood-related closure elsewhere on the trail","es":"Sendero estatal Larkin: acceso desde Naugatuck y cierre por inundaciones en otro tramo","url":"https://ctparks.com/parks/larkin-state-park-trail"},
   {"en":"Naugatuck State Forest: state trail maps, access information and recreation rules","es":"Bosque estatal Naugatuck: mapas de senderos, acceso y normas de recreación","url":"https://ctparks.com/parks/naugatuck-state-forest"},
  ],
+ // North Haven official town department pages and links checked 2026-10-24; FY2027 rate from CCM.
+ // Cott land-record searches do not include real-estate tax or sewer-use liens: confirm with Tax Collector/WPCA.
+ // The 30.56-mill base rate does not establish a specific parcel's bill or utility connections.
+ 'north-haven': [
+  {"en":"Assessor: property assessments, Grand List, 2024 revaluation and tax-relief programs","es":"Tasador: avalúos, lista tributaria, reevaluación de 2024 y programas de alivio fiscal","url":"https://www.northhaven-ct.gov/government/town_departments/departments_(a_-_d)/assessor/index.php"},
+  {"en":"Tax Collector: current bills, installments, payments and real-estate tax liens","es":"Recaudación: facturas, plazos, pagos y gravámenes por impuestos inmobiliarios","url":"https://www.northhaven-ct.gov/government/town_departments/departments_(s_-_z)/tax_collector/index.php"},
+  {"en":"Online tax bills: official town instructions for searching and paying bills","es":"Facturas de impuestos en línea: instrucciones municipales para buscar y pagar","url":"https://www.northhaven-ct.gov/government/town_departments/departments_(s_-_z)/tax_collector/view_and_pay_tax_bills_online.php"},
+  {"en":"Town Clerk: recorded deeds, land records and copies; check lien records with the proper office","es":"Secretaría municipal: escrituras y documentos; verifica gravámenes con la oficina correspondiente","url":"https://www.northhaven-ct.gov/government/town_departments/departments_(s_-_z)/town_clerk/index.php"},
+  {"en":"Building Office: building permits, inspection scheduling and required approvals","es":"Oficina de Construcción: permisos, programación de inspecciones y autorizaciones","url":"https://www.northhaven-ct.gov/government/town_departments/departments_(a_-_d)/building/index.php"},
+  {"en":"Land Use: zoning, wetlands and development review; verify restrictions for the parcel","es":"Uso del suelo: zonificación, humedales y revisión de proyectos; verifica cada parcela","url":"https://www.northhaven-ct.gov/government/town_departments/departments_(e_-_l)/land_use/index.php"},
+  {"en":"Engineering: drainage, sewer installations, roads and floodplain regulations","es":"Ingeniería: drenaje, instalaciones de alcantarillado, calles y normas de zonas inundables","url":"https://www.northhaven-ct.gov/government/town_departments/departments_(e_-_l)/engineering/index.php"},
+  {"en":"Public Works: town maintenance, sanitation and sewer-use questions","es":"Obras Públicas: mantenimiento, saneamiento y consultas sobre alcantarillado","url":"https://www.northhaven-ct.gov/government/town_departments/departments_(m_-_r)/public_works/index.php"},
+  {"en":"Town GIS parcel map: map context is not a survey or proof of property boundaries","es":"Mapa GIS municipal: no sustituye un levantamiento ni acredita límites de propiedad","url":"https://northhavenct.mapgeo.io/"},
+  {"en":"Town parks: municipal recreation areas and current access rules","es":"Parques municipales: espacios recreativos y normas vigentes de acceso","url":"https://www.northhaven-ct.gov/government/town_departments/departments_(m_-_r)/parks.php"},
+  {"en":"Recreation Department: programs, pool information and seasonal schedules","es":"Recreación: programas, piscina y calendarios de temporada","url":"https://www.northhaven-ct.gov/government/town_departments/departments_(m_-_r)/recreation/index.php"},
+  {"en":"North Haven Memorial Library: community services and links to municipal online tools","es":"Biblioteca Memorial de North Haven: servicios comunitarios y enlaces a trámites municipales","url":"https://www.northhavenlibrary.net/community-resources"},
+  {"en":"Connecticut Conference of Municipalities: FY2027 base real-property rate of 30.56 mills; confirm actual bill","es":"Conferencia de Municipios de Connecticut: tasa inmobiliaria base FY2027 de 30,56 mills; confirma la factura real","url":"https://hub.ccm-ct.org/community/north-haven/"},
+ ],
 };
