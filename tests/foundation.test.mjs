@@ -435,3 +435,11 @@ test('Milford gallery contains three individually attributed Commons photos with
  const picks=read('lib/town-restaurants.ts').split('export const joeyTopPicks')[1]||'';
  assert.doesNotMatch(picks,/^\s*'milford':/m,'Milford is not an approved personal Top Pick');
 });
+
+
+test('moving resources hub localizes the Amazon Associate disclosure',()=>{
+ const hub=read('app/[locale]/moving-resources/page.tsx');
+ assert.match(hub,/es\?'Como Asociado de Amazon, obtengo ingresos por las compras que cumplen los requisitos\.'/);
+ assert.match(hub,/As an Amazon Associate I earn from qualifying purchases\./);
+ assert.match(hub,/className="affiliate-disclosure"/);
+});
