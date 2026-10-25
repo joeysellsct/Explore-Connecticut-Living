@@ -6,7 +6,7 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 
 - Directory routes: **27/27** via the 169-town shared data source.
 - Town-specific English/Spanish highlights: **22/27**.
-- Curated restaurant directory: **19/27** (counts any directory; individual lists still need review for approximately five current restaurants).
+- Curated restaurant directory: **20/27** (counts any directory; individual lists still need review for approximately five current restaurants).
 - Dedicated official municipal/moving links: **20/27**.
 - Town-specific photo gallery data: **19/27** (license records still require live display checks).
 - Fully launch-ready and independently certified: **0/27**. Rendered SEO, images, mobile, accessibility, legal notices and deployment remain unverified.
@@ -34,12 +34,18 @@ Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim 
 | Oxford | No | No | No | No | Not certified |
 | Prospect | No | No | No | No | Not certified |
 | Seymour | Yes | Yes | Yes | Yes | Not certified |
-| Southbury | Yes | No | Yes | No | Not certified |
+| Southbury | Yes | Yes | Yes | No | Not certified |
 | Wallingford | Yes | Yes | Yes | Yes | Not certified |
 | Waterbury | Yes | No | No | No | Not certified |
 | West Haven | Yes | Yes | Yes | Yes | Not certified |
 | Wolcott | No | No | No | No | Not certified |
 | Woodbridge | Yes | No | No | No | Not certified |
+
+## Southbury dining source pass (2026-10-25)
+
+- Added **five neutral, English/Spanish restaurant listings** to `lib/town-restaurants.ts`: Brew Cafe & Bistro, Mercato Italian Kitchen & Bar, Farmer's Tavern, Samui Thai Cuisine, and DiPalma's Pizza. Current operator sources independently identify Southbury addresses and menus: https://brewcafebistro.com/contact ; https://www.mercatoitaliankitchen.com/locations/southbury ; https://www.farmerstavernct.com/ ; https://samui-thai-cuisine.square.site/ ; https://www.dipalmaspizza.com/ .
+- **Important naming check:** the 466 Heritage Road cafe is now Brew Cafe & Bistro, formerly Hudson's Cafe & Bistro; use the current operator site rather than stale Hudson's pages. No scores, operating hours or additional Joey personal Top Picks were published.
+- Southbury dining source commit `f2a23f5b1018147e46da2f1e5b3bc31570a3e3a3` and regression test commit `639430ffc4eae6aeac7a9cc007c3f24368403f51` were refetched and confirmed in `main`; source-level JSON parsing found five distinct HTTPS-backed bilingual entries. GitHub Actions and independent rendered-page QA remain **unconfirmed**. Licensed Southbury-specific photos remain missing, and Southbury is **not** 100% certified.
 
 ## Southbury official resources (2026-10-25)
 
