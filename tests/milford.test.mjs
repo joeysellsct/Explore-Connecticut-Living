@@ -314,3 +314,16 @@ test('Changing Connecticut towns clears the previous parcel-specific tax assessm
   );
   assert.ok(component.includes('const taxableBase=hasAssessedValue?Number(assessedValue):Number(homeValue)*.7;'), 'After reset, use the generic estimate until a new parcel assessment is entered');
 });
+
+
+test('Town masthead decorative mark is hidden from link name and small wordmark meets AA contrast', () => {
+  const layout = read('app/[locale]/layout.tsx');
+  const css = read('app/globals.css');
+  assert.match(layout, /className="logo-symbol" aria-hidden="true"/, 'Decorative CT mark should not be announced as link text');
+  const match = css.match(/\.brand-header \.logo-wordmark small\{color:(#[0-9a-f]{6})\}/i);
+  assert.ok(match, 'Small wordmark needs an explicit high-contrast foreground');
+  const rgb = match[1].slice(1).match(/../g).map(x => parseInt(x, 16) / 255);
+  const linear = rgb.map(x => x <= 0.04045 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4);
+  const luminance = 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+  assert.ok(1.05 / (luminance + 0.05) >= 4.5, 'Small masthead lettering must meet WCAG AA against white');
+});
