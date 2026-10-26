@@ -211,3 +211,15 @@ test('Milford water and gas guidance uses operator sources without promising add
   assert.ok(component.includes('Confirma ambos servicios en la dirección específica'));
   assert.ok(component.includes('do not assume a home has public water or natural gas'));
 });
+
+
+test('Milford district tax estimator explains combined rates and offers a verified-rate reset', () => {
+  const component = read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
+  assert.ok(component.includes('const rateEdited=verifiedRate!==undefined&&validRate&&Number(millRate)!==verifiedRate;'), 'Only show reset for a valid edited rate');
+  assert.ok(component.includes('onClick={()=>setMillRate(String(verifiedRate))}'), 'Restore the sourced base rate without requiring a page reload');
+  assert.ok(component.includes('Restore verified municipal base rate'), 'Describe the reset in English');
+  assert.ok(component.includes('Restaurar tasa municipal base verificada'), 'Describe the reset in Spanish');
+  assert.ok(component.includes('add its rate to the municipal base rate'), 'Explain how to enter a combined district rate');
+  assert.ok(component.includes('suma sus tasas a la tasa municipal base'), 'Translate the combined-rate guidance');
+  assert.ok(component.includes('not automatically included'), 'Do not falsely imply manually entered district levies are excluded');
+});
