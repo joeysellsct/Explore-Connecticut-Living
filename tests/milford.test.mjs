@@ -275,7 +275,7 @@ test('Milford links directly to city GIS and flood-safety guidance in both langu
 });
 
 test('Milford rail commuting resources link to official MTA station and live timetable guidance', () => {
-  const entries = [...block('lib/town-official-links.ts').matchAll(/\\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\\}/g)];
+  const entries = [...block('lib/town-official-links.ts').matchAll(/\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\}/g)];
   const byUrl = new Map(entries.map(([, en, es, url]) => [url, {en, es}]));
   const station = byUrl.get('https://www.mta.info/stations/milford');
   const schedules = byUrl.get('https://www.mta.info/agency/metro-north-railroad/schedules');
