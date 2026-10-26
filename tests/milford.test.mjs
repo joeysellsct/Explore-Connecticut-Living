@@ -287,3 +287,19 @@ test('Milford rail commuting resources link to official MTA station and live tim
   assert.match(schedules.es, /cambios de servicio/);
   assert.equal(new Set(entries.map(x => x[3])).size, entries.length, 'Avoid duplicate Milford resources');
 });
+
+
+test('Milford nature and history attractions have bilingual organization-owned sources', () => {
+  const links = block('lib/town-official-links.ts');
+  const required = [
+    ['https://ctaudubon.org/locations/the-coastal-center-at-milford-point-and-smith-hubbell-sanctuary/', 'birdwatching', 'observación de aves'],
+    ['https://milfordhistoricalsociety.org/', 'Eells-Stow House', 'casa Eells-Stow'],
+  ];
+  for (const [url, en, es] of required) {
+    const line = links.split('\\n').find(entry => entry.includes('url:"' + url + '"'));
+    assert.ok(line, 'Missing Milford attraction source: ' + url);
+    assert.ok(line.includes(en), 'Missing useful English description for ' + url);
+    assert.ok(line.includes(es), 'Missing useful Spanish description for ' + url);
+    assert.equal(links.split(url).length - 1, 1, 'Duplicate attraction link: ' + url);
+  }
+});
