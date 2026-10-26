@@ -21,7 +21,7 @@ export default async function LocaleLayout({children,params}:{children:ReactNode
   if(!['en','es'].includes(locale))notFound();
   return <>
     <header className="brand-header">
-      <Link href={`/${locale}`} className="site-logo" aria-label={locale==='es'?'Inicio de Explore Connecticut Living':'Explore Connecticut Living home'}><span className="logo-symbol" aria-hidden="true">CT<span className="logo-dot">.</span></span><span className="logo-wordmark">EXPLORE <strong>CONNECTICUT</strong><small>LIVING</small></span></Link>
+      <Link href={`/${locale}`} className="site-logo"><span className="logo-symbol" aria-hidden="true">CT<span className="logo-dot">.</span></span><span className="logo-wordmark">EXPLORE <strong>CONNECTICUT</strong><small>LIVING</small></span></Link>
       <nav className="main-nav" aria-label={locale==='es'?'Navegación principal':'Main navigation'}><Link href={`/${locale}/towns`}>{locale==='es'?'Municipios':'Explore Towns'}</Link><Link href={`/${locale}/town-match`}>{locale==='es'?'Encuentra tu municipio':'Town Match'}</Link><Link href={`/${locale}/compare`}>{locale==='es'?'Comparar':'Compare'}</Link><details className="nav-more"><summary>{locale==='es'?'Más':'More'}</summary><div className="nav-more-menu"><Link href={`/${locale}/moving-resources`}>{locale==='es'?'Recursos de mudanza':'Moving Resources'}</Link><Link href={`/${locale}/about`}>{locale==='es'?'Conoce a Joey':'Meet Joey'}</Link></div></details><LocaleSwitcher locale={locale}/><a className="header-cta" href="mailto:JoeySellsCT@gmail.com">{locale==='es'?'Contactar':'Contact Joey'}</a></nav>
     </header>
     {children}
