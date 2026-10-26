@@ -437,6 +437,12 @@ test('Milford gallery contains three individually attributed Commons photos with
 });
 
 
+test('town photo attribution links remain legible and keyboard-focusable over dark image overlays',()=>{
+ const css=read('app/globals.css');
+ assert.ok(css.includes('.eh-gallery-grid figcaption a{color:#fff;text-decoration:underline;'), 'Visible white attribution links must contrast with dark photo overlays');
+ assert.ok(css.includes('.eh-gallery-grid figcaption a:focus-visible{outline:3px solid #fff;'), 'Keyboard users must see focused attribution links');
+});
+
 test('moving resources hub localizes the Amazon Associate disclosure',()=>{
  const hub=read('app/[locale]/moving-resources/page.tsx');
  assert.match(hub,/es\?'Como Asociado de Amazon, obtengo ingresos por las compras que cumplen los requisitos\.'/);
