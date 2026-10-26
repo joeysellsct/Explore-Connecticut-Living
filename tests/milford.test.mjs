@@ -52,6 +52,8 @@ test('Milford municipal research has bilingual official and parcel-specific link
   assert.ok(urls.some(url => url.includes('milford.mapxpress.net')));
   assert.ok(urls.some(url => url.includes('/210/Assessors-Office')));
   assert.ok(urls.some(url => url.includes('/540/Planning-Zoning')));
+  assert.ok(urls.includes('https://www.milfordct.us/663/Tax-Collector'), 'Use direct city guidance for tax bills and sewer charges');
+  assert.ok(urls.includes('https://www.milfordct.us/768/On-Line-Services'), 'Provide city portal for property records and tax payments');
 });
 
 test('Milford photographs retain bilingual captions and explicit reuse licenses', () => {
