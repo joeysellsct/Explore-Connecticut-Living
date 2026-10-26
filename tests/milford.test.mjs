@@ -197,3 +197,17 @@ test('Milford sewer fee is sourced, bilingual and kept separate from property ta
   assert.ok(component.includes('does not establish a particular property'), 'Warn that the actual bill is parcel-specific');
   assert.ok(component.includes('https://milfordct.us/744/Sewer-Commission'), 'Link directly to the city source');
 });
+
+
+test('Milford water and gas guidance uses operator sources without promising address-level service', () => {
+  const component = read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
+  assert.ok(component.includes('town-utility-providers-note'));
+  assert.ok(component.includes('Regional Water Authority (RWA)'));
+  assert.ok(component.includes('Autoridad Regional del Agua (RWA)'));
+  assert.ok(component.includes('Southern Connecticut Gas'));
+  assert.ok(component.includes('https://www.rwater.com/customer-care/start-or-stop-service/'));
+  assert.ok(component.includes('https://www.soconngas.com/ourcompany/whoweare/servicearea'));
+  assert.ok(component.includes('Verify both services at the exact address'));
+  assert.ok(component.includes('Confirma ambos servicios en la dirección específica'));
+  assert.ok(component.includes('do not assume a home has public water or natural gas'));
+});
