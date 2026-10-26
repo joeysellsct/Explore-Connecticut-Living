@@ -2,6 +2,13 @@
 
 Snapshot: **2026-10-26**. This is a source-code coverage checklist, not a claim that pages are live or complete. Refresh this table after meaningful updates; never count a town as 100% complete without a live rendered-page audit.
 
+## Milford live browser accessibility fix (2026-10-26, 19:04 EDT)
+
+- **Root cause from actual GitHub Actions browser logs:** run 40409268003 passed production-build, content-tests and staging-smoke, but its `milford-browser-audit` job **failed** with four `label-content-name-mismatch` findings on `.site-logo`, one each on English/Spanish desktop/mobile. All 3 Milford photographs loaded per viewport, with zero horizontal overflow; this was a real browser audit failure despite the overall workflow's `success` conclusion (the browser job uses `continue-on-error`).
+- **Fix:** `e114529fc8cecd29fa2ecf56d59fda841795fff0` removed the unnecessary custom `aria-label` from the branded home link, allowing its visible wordmark to supply the accessible name. `e9b3f8839e42db1ff5d3510d2552ce8529ee344f` updated the source regression guard to preserve that relationship. Both were single-file writes using fresh blob SHAs.
+- **Independent live browser retest:** GitHub Actions run [40416775347](https://github.com/joeysellsct/Explore-Connecticut-Living/actions/runs/40416775347) completed with all four jobs **successful**, including the previously failing `milford-browser-audit` job. Its actual browser log reports **0 axe WCAG 2.0/2.1/2.2 AA violations**, **3/3 town images loaded**, and **0px horizontal overflow** in each of the four combinations (en/es × desktop/mobile). The staging-smoke job also passed live robots/noindex and bilingual page checks. This is positive evidence that the rendered staging site now exposes the corrected accessible link; it does **not** independently identify the precise Cloudflare deployed commit.
+- **Remaining before marking Milford 100%:** review stored desktop/mobile screenshots for visual quality, manually verify keyboard navigation and screen-reader usability, independently validate photo licensing and town facts/restaurant/municipal link currency, and confirm Cloudflare deployment/version provenance. Source checks and axe alone are not full launch certification. **New Haven County 0/27 launch-certified; Fairfield County remains on hold.**
+
 ## Milford live HTTP audit breakthrough (2026-10-26, 16:05 EDT)
 
 - GitHub-hosted staging audit successfully resolved `explore-connecticut-living-staging.joeysellsct.workers.dev` and fetched `/robots.txt`, `/en/towns/milford`, `/es/towns/milford`, and `/sitemap.xml` (HTTP 200). The independent assistant execution environment still cannot resolve the same host; this is now bypassed for repeatable CI checks, not evidence of an outage.
