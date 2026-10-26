@@ -326,4 +326,22 @@ test('Town masthead decorative mark is hidden from link name and small wordmark 
   const linear = rgb.map(x => x <= 0.04045 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4);
   const luminance = 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
   assert.ok(1.05 / (luminance + 0.05) >= 4.5, 'Small masthead lettering must meet WCAG AA against white');
+  const switcher = read('app/[locale]/LocaleSwitcher.tsx');
+  assert.match(switcher, /EN: Cambiar a inglés/, 'English switcher accessible name includes visible EN');
+  assert.match(switcher, /ES: Switch to Spanish/, 'Spanish switcher accessible name includes visible ES');
+  const parseHex = hex => hex.slice(1).match(/../g).map(x => parseInt(x, 16) / 255)
+    .map(x => x <= 0.04045 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4);
+  const brightness = hex => {
+    const [r, g, b] = parseHex(hex);
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+  const contrast = (a, b) => {
+    const x = brightness(a), y = brightness(b);
+    return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05);
+  };
+  const kicker = css.match(/\\.town-profile \\.towns-kicker\\{color:(#[0-9a-f]{6})\\}/i)?.[1];
+  const detail = css.match(/\\.town-profile-details small\\{color:(#[0-9a-f]{6})\\}/i)?.[1];
+  assert.ok(kicker && detail, 'Town labels need explicit contrast-safe foregrounds');
+  assert.ok(contrast(kicker, '#edf6f0') >= 4.5, 'Town section labels need AA contrast on tinted panels');
+  assert.ok(contrast(detail, '#ffffff') >= 4.5, 'Property detail labels need AA contrast on white');
 });
