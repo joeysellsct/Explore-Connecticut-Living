@@ -319,10 +319,10 @@ export const townPhotography:Record<string,TownPhoto[]>={
    }
  ],
  // Milford photo identities, locations, creators and licenses verified against Commons file pages 2026-10-25.
- // https://commons.wikimedia.org/wiki/File:Milford_Green.jpg ; https://commons.wikimedia.org/wiki/File:CT-162_downtown_Milford.jpg ; https://commons.wikimedia.org/wiki/File:Silver_Sands_State_Park_(21029).jpg
+ // https://commons.wikimedia.org/wiki/File:Milford_Green.jpg ; https://commons.wikimedia.org/wiki/File:Milford_point_on_housatonic_(28829150353).jpg ; https://commons.wikimedia.org/wiki/File:Silver_Sands_State_Park_(21029).jpg
  'milford': [
   {"title":"Milford Green (photographed October 2011)","titleEs":"Milford Green, plaza histórica de Milford (fotografía de octubre de 2011)","file":"Milford Green.jpg","credit":"Fadein","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/"},
-  {"title":"Route 162 and downtown Milford Green (uploaded January 2009)","titleEs":"Ruta 162 y centro de Milford junto a Milford Green (imagen publicada en enero de 2009)","file":"CT-162 downtown Milford.jpg","credit":"Polaron","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Milford Point on the Housatonic River (photographed September 2016)","titleEs":"Milford Point junto al río Housatonic (fotografía de septiembre de 2016)","file":"Milford point on housatonic (28829150353).jpg","credit":"Russ (Russ Whitehurst / russimages)","license":"CC BY 2.0","licenseUrl":"https://creativecommons.org/licenses/by/2.0/"},
   {"title":"Beach at Silver Sands State Park in Milford (photographed April 2017)","titleEs":"Playa del parque estatal Silver Sands en Milford (fotografía de abril de 2017)","file":"Silver Sands State Park (21029).jpg","credit":"Rhododendrites","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
  ],
  'stonington':[
