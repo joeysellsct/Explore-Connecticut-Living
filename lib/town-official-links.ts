@@ -321,6 +321,9 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   // MTA station and timetable pages independently checked 2026-10-26; schedules and station services may change.
   {en:"Metro-North Milford station: New Haven Line, accessibility, ticket machines and local bus connections; check current notices",es:"Estación Milford de Metro-North: línea New Haven, accesibilidad, máquinas de boletos y conexiones de autobús; consulta avisos actuales",url:"https://www.mta.info/stations/milford"},
   {en:"Metro-North New Haven Line schedules: verify current Milford departures, transfers and service changes before commuting",es:"Horarios de la línea New Haven de Metro-North: comprueba salidas desde Milford, transbordos y cambios de servicio antes de viajar",url:"https://www.mta.info/agency/metro-north-railroad/schedules"},
+  // Attraction details verified 2026-10-26 directly with the organizations; visit their sites for current access and event information.
+  {en:"Connecticut Audubon Coastal Center at Milford Point: birdwatching, salt-marsh trails and sanctuary visitor guidance; check tides and nesting-area restrictions",es:"Centro Costero de Connecticut Audubon en Milford Point: observación de aves, senderos de marismas y normas de visita; comprueba mareas y restricciones de anidación",url:"https://ctaudubon.org/locations/the-coastal-center-at-milford-point-and-smith-hubbell-sanctuary/"},
+  {en:"Milford Historical Society: Eells-Stow House, historic-house exhibits and seasonal tour information",es:"Sociedad Histórica de Milford: casa Eells-Stow, exposiciones históricas y visitas de temporada",url:"https://milfordhistoricalsociety.org/"},
  ],
  // New Haven source pages checked 2026-10-24 against official City of New Haven and CTtransit websites. Links are research starting points; verify address-specific records and current policies directly.
  'new-haven': [
