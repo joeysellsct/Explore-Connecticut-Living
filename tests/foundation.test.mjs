@@ -425,9 +425,9 @@ test('Milford gallery contains three individually attributed Commons photos with
  assert.ok(end>start,'Milford photo gallery closes');
  const photos=source.slice(start,end).split('\n').map(s=>s.trim()).filter(s=>s.startsWith('{')).map(s=>JSON.parse(s.replace(/,$/,'')));
  assert.equal(photos.length,3);
- assert.deepEqual(photos.map(p=>p.file),['Milford Green.jpg','CT-162 downtown Milford.jpg','Silver Sands State Park (21029).jpg']);
- assert.deepEqual(photos.map(p=>p.credit),['Fadein','Polaron','Rhododendrites']);
- assert.deepEqual(photos.map(p=>p.license),['CC0 1.0','CC BY-SA 3.0','CC BY-SA 4.0']);
+ assert.deepEqual(photos.map(p=>p.file),['Milford Green.jpg','Milford point on housatonic (28829150353).jpg','Silver Sands State Park (21029).jpg']);
+ assert.deepEqual(photos.map(p=>p.credit),['Fadein','Russ (Russ Whitehurst / russimages)','Rhododendrites']);
+ assert.deepEqual(photos.map(p=>p.license),['CC0 1.0','CC BY 2.0','CC BY-SA 4.0']);
  for(const photo of photos){
   assert.ok(photo.title.length>=40&&photo.titleEs.length>=50,photo.file);
   assert.ok(photo.licenseUrl.startsWith('https://creativecommons.org/'),photo.file);
