@@ -44,6 +44,7 @@ jobs:
     timeout-minutes: 5
     continue-on-error: true
     steps:
+      - uses: actions/checkout@v4
       - name: Check staging DNS, bilingual pages and indexing safeguards
         shell: bash
         env:
@@ -78,3 +79,7 @@ jobs:
             echo "PASS $path"
             rm -f "$headers" "$body"
           done
+      - name: Audit rendered Milford bilingual metadata, disclosures and deployment freshness
+        run: node scripts/staging-town-audit.mjs
+        env:
+          STAGING_ORIGIN: https://explore-connecticut-living-staging.joeysellsct.workers.dev
