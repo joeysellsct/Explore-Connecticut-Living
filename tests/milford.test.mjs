@@ -339,8 +339,8 @@ test('Town masthead decorative mark is hidden from link name and small wordmark 
     const x = brightness(a), y = brightness(b);
     return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05);
   };
-  const kicker = css.match(/\\.town-profile \\.towns-kicker\\{color:(#[0-9a-f]{6})\\}/i)?.[1];
-  const detail = css.match(/\\.town-profile-details small\\{color:(#[0-9a-f]{6})\\}/i)?.[1];
+  const kicker = css.match(/\.town-profile \.towns-kicker\{color:(#[0-9a-f]{6})\}/i)?.[1];
+  const detail = css.match(/\.town-profile-details small\{color:(#[0-9a-f]{6})\}/i)?.[1];
   assert.ok(kicker && detail, 'Town labels need explicit contrast-safe foregrounds');
   assert.ok(contrast(kicker, '#edf6f0') >= 4.5, 'Town section labels need AA contrast on tinted panels');
   assert.ok(contrast(detail, '#ffffff') >= 4.5, 'Property detail labels need AA contrast on white');
