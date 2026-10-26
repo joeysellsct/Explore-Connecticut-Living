@@ -313,6 +313,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {en:"City maps, school district maps and resident beach parking (via site map)",es:"Mapas municipales, distritos escolares y estacionamiento de residentes en playas (mapa del sitio)",url:"https://milfordct.us/sitemap"},
   {en:"Tax collector FAQs: real estate tax installments and sewer bills",es:"Preguntas de impuestos: cuotas inmobiliarias y facturas de alcantarillado",url:"https://www.milfordct.us/faq"},
   {en:"Milford public works and wastewater department contacts",es:"Contactos de obras públicas y aguas residuales de Milford",url:"https://www.milfordct.us/m/directory"},
+  {en:"Milford beach parking: resident stickers and current requirements",es:"Estacionamiento en playas de Milford: permisos de residentes y requisitos vigentes",url:"https://milfordct.us/680/Resident-Parking-Stickers"},
+  {en:"Milford beach water-quality monitoring and swimming advisories",es:"Control de calidad del agua en las playas de Milford y avisos para bañistas",url:"https://www.milfordct.us/402/Beach-Monitoring"},
   {en:"Silver Sands State Park: access, trails and visitor rules",es:"Parque estatal Silver Sands: acceso, senderos y normas de visita",url:"https://ctparks.com/parks/silver-sands-state-park"},
   {en:"Connecticut park transit connections and current alternatives",es:"Conexiones de transporte a parques estatales y alternativas actuales",url:"https://ctparks.com/parkconnect"}
  ],
