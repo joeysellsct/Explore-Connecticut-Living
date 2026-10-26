@@ -2,6 +2,13 @@
 
 Snapshot: **2026-10-26**. This is a source-code coverage checklist, not a claim that pages are live or complete. Refresh this table after meaningful updates; never count a town as 100% complete without a live rendered-page audit.
 
+## Milford verified attractions and staging QA (2026-10-26)
+
+- Verified the [Connecticut Audubon Coastal Center at Milford Point](https://ctaudubon.org/locations/the-coastal-center-at-milford-point-and-smith-hubbell-sanctuary/) and [Milford Historical Society](https://milfordhistoricalsociety.org/) on their organizations' own websites. Added useful bilingual descriptions and current-source links in `lib/town-official-links.ts` (commit `165df4543b6a715de1fb71e8e69ffad1328b987c`). No unverified hours, ratings or admission promises were added. The new regression test was committed as `4dab6341f9c770a0c4c400618b403ad718003a90`; its newline splitting was corrected in `aed91b47739f9fe04e4ae6ae4bc59bac2397657f`. All three commits were confirmed on `main` with fresh per-file blob SHAs.
+- **GitHub Actions:** the three new workflows were still `in_progress` at last check (runs `40365091538`, `40365118847`, `40365156716`). Do not report these as passed until independently completed.
+- **Unresolved Milford staging blocker:** `socket.getaddrinfo` on `explore-connecticut-living-staging.joeysellsct.workers.dev:443` returned `gaierror(-3, 'Temporary failure in name resolution')`. Independent Python requests to `/en/towns/milford`, `/es/towns/milford`, and `/robots.txt` each failed with `URLError: [Errno -3] Temporary failure in name resolution`; independent web retrieval also could not access the routes. Affected checks: actual Cloudflare serving state, rendered bilingual content, metadata/hreflang, photographs, accessibility, affiliate/Equal Housing disclosures and staging noindex/robots. This is not evidence of a public outage. Retry later and continue other source-level work.
+- **Certification:** 0/27 New Haven County towns independently launch-ready. Milford remains uncertified; Fairfield County stays behind all 27 New Haven County towns.
+
 ## Milford transit-source QA (2026-10-26)
 
 - Added two directly verified, bilingual transportation research links to `lib/town-official-links.ts`: the official [MTA Milford station page](https://www.mta.info/stations/milford) (New Haven Line, station accessibility, ticketing and bus connections) and the official [Metro-North schedules page](https://www.mta.info/agency/metro-north-railroad/schedules) (updated October 23, 2026). Avoided embedding fixed commute times, fares or a potentially stale timetable. Sources checked 2026-10-26.
