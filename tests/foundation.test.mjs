@@ -496,3 +496,24 @@ test('New Haven County source coverage and Spanish photo captions remain intact'
  assert.match(page,/Condado de/);
  // These are structural source checks, NOT independent link, photo or rendered-page QA.
 });
+
+test('Milford school and building-permit links stay bilingual and distinct',()=>{
+ const source=read('lib/town-official-links.ts');
+ const start=source.indexOf(" 'milford': [");
+ const end=source.indexOf('\n ],',start);
+ assert.ok(start>=0&&end>start,'Milford resource block exists');
+ const section=source.slice(start,end);
+ const required=[
+  ['https://www.milforded.org/page/school-and-street-assignment','school attendance boundaries','límites escolares'],
+  ['https://www.milforded.org/page/registration','current enrollment instructions','instrucciones y documentos vigentes'],
+  ['https://www.milfordct.us/537/Online-Permitting-Center','building, zoning and wetlands permits','permisos de construcción, zonificación y humedales']
+ ];
+ for(const [url,en,es] of required){
+  assert.equal(section.split(url).length-1,1,url+' appears exactly once');
+  assert.ok(section.includes(en),url+' English guidance');
+  assert.ok(section.includes(es),url+' Spanish guidance');
+ }
+ const urls=[...section.matchAll(/url:"([^"]+)"/g)].map(match=>match[1]);
+ assert.equal(new Set(urls).size,urls.length,'Milford links are not duplicated');
+ assert.ok(urls.length>=21,'Milford retains its earlier verified resources');
+});
