@@ -58,7 +58,7 @@ for (const locale of ['en', 'es']) {
   const photoChecks = {
     'Wikimedia-hosted town photos': html.includes('commons.wikimedia.org/wiki/Special:Redirect/file/'),
     'Creative Commons license links': html.includes('creativecommons.org'),
-    'Localized photo-source credit': html.includes(locale === 'en' ? 'Original photo' : 'Foto original')
+    'Wikimedia original-file attribution links': html.includes('commons.wikimedia.org/wiki/File:')
   };
   for (const [check, passed] of Object.entries(photoChecks)) {
     assert.ok(passed, `${path}: missing ${check}; investigate deployment freshness or rendering`);
