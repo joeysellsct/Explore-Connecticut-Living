@@ -272,3 +272,6 @@ body{background:var(--coastal-cream);color:var(--coastal-ink)}
 
 /* Full fair housing disclosure remains visible beside the restored logo */
 .footer-housing-disclosure{flex-basis:100%;margin:.1rem 0 .35rem;color:#e2eae5;font-size:.76rem;line-height:1.65;max-width:950px}
+
+/* WCAG AA: small masthead lettering needs sufficient contrast on white. */
+.brand-header .logo-wordmark small{color:#226b42}
