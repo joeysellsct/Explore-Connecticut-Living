@@ -223,3 +223,23 @@ test('Milford district tax estimator explains combined rates and offers a verifi
   assert.ok(component.includes('suma sus tasas a la tasa municipal base'), 'Translate the combined-rate guidance');
   assert.ok(component.includes('not automatically included'), 'Do not falsely imply manually entered district levies are excluded');
 });
+
+test('Milford guide has four readable bilingual sections with sourced beach safety and tax caveats', () => {
+  const line = read('lib/town-highlights.ts').split('\n').find(x => x.startsWith(" 'milford':{en:"));
+  assert.ok(line, 'Milford guide must exist');
+  const match = line.match(/en:("(?:\\.|[^"\\])*"),es:("(?:\\.|[^"\\])*"),places:/);
+  assert.ok(match, 'Guide should have safely quoted English and Spanish fields');
+  const en = JSON.parse(match[1]);
+  const es = JSON.parse(match[2]);
+  assert.equal(en.split(/\n\s*\n/).length, 4, 'Show four English paragraphs');
+  assert.equal(es.split(/\n\s*\n/).length, 4, 'Show four Spanish paragraphs');
+  assert.ok(en.length >= 2000 && es.length >= 2000, 'Each language should have useful depth');
+  for (const phrase of ['May 1 through September 9', 'dangerous currents', 'five-year phase-in', 'special-district', 'flood maps', 'public water and sewer']) {
+    assert.ok(en.includes(phrase), 'Missing English buyer or visitor guidance: ' + phrase);
+  }
+  for (const phrase of ['1 de mayo al 9 de septiembre', 'corrientes peligrosas', 'incorporación gradual de cinco años', 'distritos especiales', 'mapas de inundación', 'agua y alcantarillado públicos']) {
+    assert.ok(es.includes(phrase), 'Missing Spanish buyer or visitor guidance: ' + phrase);
+  }
+  const page = read('app/[locale]/towns/[slug]/page.tsx');
+  assert.ok(page.includes('.split(/\\n\\s*\\n/)'), 'Render paragraph breaks as separate elements');
+});
