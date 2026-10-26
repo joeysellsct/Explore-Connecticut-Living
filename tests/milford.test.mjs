@@ -243,3 +243,20 @@ test('Milford guide has four readable bilingual sections with sourced beach safe
   const page = read('app/[locale]/towns/[slug]/page.tsx');
   assert.ok(page.includes('.split(/\\n\\s*\\n/)'), 'Render paragraph breaks as separate elements');
 });
+
+test('Milford taxable assessment override supports the five-year revaluation phase-in', () => {
+  const component = read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
+  assert.ok(component.includes("const [assessedValue,setAssessedValue]=useState('');"), 'Keep the assessed-value override optional');
+  assert.ok(component.includes("const hasAssessedValue=assessedValue.trim()!=='';"), 'Blank means use the illustrative 70% assessment');
+  assert.ok(component.includes('const validAssessedValue=!hasAssessedValue'), 'Reject invalid taxable assessment entries');
+  assert.ok(component.includes('const taxableBase=hasAssessedValue?Number(assessedValue):Number(homeValue)*.7;'), 'Use actual taxable assessment when supplied');
+  assert.ok(component.includes('(hasAssessedValue?validAssessedValue:validValue)&&validRate'), 'Allow a valid assessment to supersede an invalid market-value entry');
+  assert.ok(component.includes('Current taxable assessed value ($, optional)'), 'Label the optional input in English');
+  assert.ok(component.includes('Tasación imponible actual ($, opcional)'), 'Label the optional input in Spanish');
+  assert.ok(component.includes('instead of assuming 70% of the price'), 'Explain why the override matters');
+  assert.ok(component.includes('en vez de suponer el 70% del precio'), 'Explain the override in Spanish');
+  assert.ok(component.includes('Exemptions and special district levies are not automatically included'), 'Retain the estimate caveat');
+  const millRate = 28.67;
+  assert.equal(Math.round(400000 * .7 * millRate) / 1000, 8027.6, 'Blank override uses 70% of estimated market value');
+  assert.equal(240000 * millRate / 1000, 6880.8, 'A current taxable assessment overrides the generic 70% assumption');
+});
