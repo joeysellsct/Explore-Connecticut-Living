@@ -132,3 +132,17 @@ test('Milford special-district rates support fractional precision without implyi
   const assessed = 400000 * 0.7;
   assert.equal(assessed * (base + district) / 1000, 8173.34);
 });
+
+
+test('Milford tax estimate explains invalid fields and formats currency in the selected language', () => {
+  const component = read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
+  assert.ok(component.includes("const moneyLocale=es?'es-US':'en-US'"), 'Currency must follow the selected town-guide language');
+  assert.ok(component.includes('estimate.toLocaleString(moneyLocale'), 'Annual amount should use localized currency');
+  assert.ok(component.includes('(estimate/12).toLocaleString(moneyLocale'), 'Monthly amount should use localized currency');
+  assert.ok(component.includes('!validValue?'), 'Check the home value before reporting a mill-rate error');
+  assert.ok(component.includes('Enter a valid home value'));
+  assert.ok(component.includes('Ingresa un valor de vivienda válido'));
+  assert.ok(component.includes('Enter a valid mill rate'));
+  assert.ok(component.includes('Ingresa una tasa en mills válida'));
+  assert.ok(component.includes('aria-live="polite" aria-atomic="true"'), 'Announce complete recalculated totals to assistive technology');
+});
