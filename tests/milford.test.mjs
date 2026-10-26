@@ -296,7 +296,7 @@ test('Milford nature and history attractions have bilingual organization-owned s
     ['https://milfordhistoricalsociety.org/', 'Eells-Stow House', 'casa Eells-Stow'],
   ];
   for (const [url, en, es] of required) {
-    const line = links.split('\\n').find(entry => entry.includes('url:"' + url + '"'));
+    const line = links.split('\n').find(entry => entry.includes('url:"' + url + '"'));
     assert.ok(line, 'Missing Milford attraction source: ' + url);
     assert.ok(line.includes(en), 'Missing useful English description for ' + url);
     assert.ok(line.includes(es), 'Missing useful Spanish description for ' + url);
