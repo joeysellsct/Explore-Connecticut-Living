@@ -473,10 +473,10 @@ test('New Haven County source coverage and Spanish photo captions remain intact'
  const resources=read('lib/town-official-links.ts');
  const photography=read('lib/town-photography.ts');
  const rates=read('lib/fy2027-mill-rates.ts');
- const slugs=[...directory.matchAll(/"county": "New Haven",\\s*"fips": "[^"]+",\\s*"slug": "([^"]+)"/g)].map(match=>match[1]);
+ const slugs=[...directory.matchAll(/"county": "New Haven",\s*"fips": "[^"]+",\s*"slug": "([^"]+)"/g)].map(match=>match[1]);
  assert.equal(slugs.length,27,'All 27 historic New Haven County towns are listed');
- const entries=(source,slug)=>source.match(new RegExp("'"+slug+"':\\\\s*\\\\[([\\\\s\\\\S]*?)\\\\],"))?.[1]||'';
- const count=(source,field)=>[...source.matchAll(new RegExp('"?'+field+'"?\\\\s*:','g'))].length;
+ const entries=(source,slug)=>source.match(new RegExp("'"+slug+"':\\s*\\[([\\s\\S]*?)\\],"))?.[1]||'';
+ const count=(source,field)=>[...source.matchAll(new RegExp('"?'+field+'"?\\s*:','g'))].length;
  for(const slug of slugs){
   assert.ok(guides.includes("'"+slug+"':"),slug+' has a town guide');
   const dining=entries(restaurants,slug),official=entries(resources,slug),photos=entries(photography,slug);
