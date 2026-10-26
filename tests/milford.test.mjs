@@ -169,3 +169,15 @@ test('Milford beach access and water-quality guidance link directly to official 
     assert.ok(links.get(url).en.length > 15 && links.get(url).es.length > 15, 'Both language labels must be useful');
   }
 });
+
+
+test('Milford tax guidance discloses the five-year 2025 revaluation phase-in in both languages', () => {
+  const component = read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
+  assert.ok(component.includes("slug==='milford'"), 'Limit Milford-specific guidance to Milford');
+  assert.ok(component.includes('five-year phase-in'), 'Explain the adopted phase-in in English');
+  assert.ok(component.includes('incorporación gradual de cinco años'), 'Explain the phase-in in Spanish');
+  assert.ok(component.includes('October 1, 2025 revaluation'), 'Date the revaluation');
+  assert.ok(component.includes('70% of an estimated home price may not match'), 'Disclose why generic estimates may be inaccurate');
+  assert.ok(component.includes('70% del precio estimado de una vivienda puede no coincidir'), 'Include the Spanish estimate caveat');
+  assert.ok(component.includes('https://www.milfordct.us/210/Assessors-Office'), 'Cite the official Milford Assessor source');
+});
