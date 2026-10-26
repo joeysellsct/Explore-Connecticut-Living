@@ -55,9 +55,14 @@ for (const locale of ['en', 'es']) {
     `${path}: missing paid-referral identification`);
   assert.ok(html.includes('Frontier') && html.includes('Amazon'),
     `${path}: missing moving partner links`);
-  assert.ok(html.includes('commons.wikimedia.org/wiki/Special:Redirect/file/') &&
-    html.includes('creativecommons.org') && html.includes('Original photo') === (locale === 'en'),
-    `${path}: missing credited local photos or photo-source links`);
+  const photoChecks = {
+    'Wikimedia-hosted town photos': html.includes('commons.wikimedia.org/wiki/Special:Redirect/file/'),
+    'Creative Commons license links': html.includes('creativecommons.org'),
+    'Localized photo-source credit': html.includes(locale === 'en' ? 'Original photo' : 'Foto original')
+  };
+  for (const [check, passed] of Object.entries(photoChecks)) {
+    assert.ok(passed, `${path}: missing ${check}; investigate deployment freshness or rendering`);
+  }
   assert.ok(html.includes('school-and-street-assignment') &&
     html.includes('Online-Permitting-Center'), `${path}: recent Milford official resources are not yet deployed`);
   console.log(`PASS ${path}: bilingual metadata, SEO, housing, affiliate, photography and deployed resources`);
