@@ -49,6 +49,17 @@ try {
             failures.push(label + ': photograph ' + (i + 1) + ' did not load or lacks alt text: ' + JSON.stringify(result));
           }
         }
+        // Axe cannot reliably assess text contrast against photographic backgrounds.
+        // Verify the actual rendered gallery attribution links are white on the dark overlay.
+        const creditLinks = page.locator('section.eh-gallery figcaption a');
+        const creditCount = await creditLinks.count();
+        assert.ok(creditCount >= count * 2, label + ': expected license and source links for each photograph');
+        for (let i = 0; i < creditCount; i++) {
+          const color = await creditLinks.nth(i).evaluate(element => getComputedStyle(element).color);
+          if (color !== 'rgb(255, 255, 255)') {
+            failures.push(label + ': photo attribution link ' + (i + 1) + ' lacks white-on-dark contrast: ' + color);
+          }
+        }
         const overflow = await page.evaluate(() => ({
           scroll: document.documentElement.scrollWidth,
           viewport: window.innerWidth
