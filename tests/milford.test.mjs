@@ -273,3 +273,17 @@ test('Milford links directly to city GIS and flood-safety guidance in both langu
   }
   assert.ok(!links.has('https://milfordct.us/sitemap'), 'Link directly to the city GIS instead of a generic sitemap');
 });
+
+test('Milford rail commuting resources link to official MTA station and live timetable guidance', () => {
+  const entries = [...block('lib/town-official-links.ts').matchAll(/\\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\\}/g)];
+  const byUrl = new Map(entries.map(([, en, es, url]) => [url, {en, es}]));
+  const station = byUrl.get('https://www.mta.info/stations/milford');
+  const schedules = byUrl.get('https://www.mta.info/agency/metro-north-railroad/schedules');
+  assert.ok(station, 'Link to MTA Milford station rather than a generic rail landing page');
+  assert.ok(schedules, 'Link to MTA timetable page rather than a dated PDF');
+  assert.match(station.en, /Metro-North Milford station/);
+  assert.match(station.es, /Estación Milford de Metro-North/);
+  assert.match(schedules.en, /service changes/);
+  assert.match(schedules.es, /cambios de servicio/);
+  assert.equal(new Set(entries.map(x => x[3])).size, entries.length, 'Avoid duplicate Milford resources');
+});
