@@ -113,7 +113,7 @@ test('Milford language switch preserves the current town route in either directi
   assert.ok(switcher.includes('usePathname()'), 'Switcher must read the active route');
   assert.ok(switcher.includes('href={href}'), 'Switcher must use the computed localized route');
   assert.ok(switcher.includes('hrefLang='), 'Alternate language must be labeled');
-  const localize = (pathname, target) => pathname.replace(/^\\/(?:en|es)(?=\\/|$)/, '/' + target);
+  const localize = (pathname, target) => pathname.replace(new RegExp('^/(?:en|es)(?=/|$)'), '/' + target);
   assert.equal(localize('/en/towns/milford', 'es'), '/es/towns/milford');
   assert.equal(localize('/es/towns/milford', 'en'), '/en/towns/milford');
   assert.equal(localize('/en/towns', 'es'), '/es/towns');
