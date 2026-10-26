@@ -303,3 +303,14 @@ test('Milford nature and history attractions have bilingual organization-owned s
     assert.equal(links.split(url).length - 1, 1, 'Duplicate attraction link: ' + url);
   }
 });
+
+test('Changing Connecticut towns clears the previous parcel-specific tax assessment', () => {
+  const component = read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
+  assert.ok(component.includes("const [assessedValue,setAssessedValue]=useState('');"), 'Keep parcel-specific assessment in state');
+  assert.match(
+    component,
+    /useEffect\(\(\)=>\{setMillRate\(verifiedRate===undefined\?'':String\(verifiedRate\)\);setAssessedValue\(''\);\},\[slug,verifiedRate\]\);/,
+    'A different town must reset both its verified rate and the previous parcel assessment'
+  );
+  assert.ok(component.includes('const taxableBase=hasAssessedValue?Number(assessedValue):Number(homeValue)*.7;'), 'After reset, use the generic estimate until a new parcel assessment is entered');
+});
