@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import {localizedSeo,siteUrl} from '../../lib/seo';
 import { notFound } from 'next/navigation';
+import LocaleSwitcher from './LocaleSwitcher';
 export async function generateMetadata({params}:{params:Promise<{locale:string}>}):Promise<Metadata>{
  const {locale}=await params;
  const es=locale==='es';
@@ -21,7 +22,7 @@ export default async function LocaleLayout({children,params}:{children:ReactNode
   return <>
     <header className="brand-header">
       <Link href={`/${locale}`} className="site-logo" aria-label={locale==='es'?'Inicio de Explore Connecticut Living':'Explore Connecticut Living home'}><span className="logo-symbol">CT<span className="logo-dot">.</span></span><span className="logo-wordmark">EXPLORE <strong>CONNECTICUT</strong><small>LIVING</small></span></Link>
-      <nav className="main-nav" aria-label={locale==='es'?'Navegación principal':'Main navigation'}><Link href={`/${locale}/towns`}>{locale==='es'?'Municipios':'Explore Towns'}</Link><Link href={`/${locale}/town-match`}>{locale==='es'?'Encuentra tu municipio':'Town Match'}</Link><Link href={`/${locale}/compare`}>{locale==='es'?'Comparar':'Compare'}</Link><details className="nav-more"><summary>{locale==='es'?'Más':'More'}</summary><div className="nav-more-menu"><Link href={`/${locale}/moving-resources`}>{locale==='es'?'Recursos de mudanza':'Moving Resources'}</Link><Link href={`/${locale}/about`}>{locale==='es'?'Conoce a Joey':'Meet Joey'}</Link></div></details><Link className="header-language" href={locale==='es'?'/en':'/es'} aria-label={locale==='es'?'Switch to English':'Cambiar a español'}>{locale==='es'?'EN':'ES'}</Link><a className="header-cta" href="mailto:JoeySellsCT@gmail.com">{locale==='es'?'Contactar':'Contact Joey'}</a></nav>
+      <nav className="main-nav" aria-label={locale==='es'?'Navegación principal':'Main navigation'}><Link href={`/${locale}/towns`}>{locale==='es'?'Municipios':'Explore Towns'}</Link><Link href={`/${locale}/town-match`}>{locale==='es'?'Encuentra tu municipio':'Town Match'}</Link><Link href={`/${locale}/compare`}>{locale==='es'?'Comparar':'Compare'}</Link><details className="nav-more"><summary>{locale==='es'?'Más':'More'}</summary><div className="nav-more-menu"><Link href={`/${locale}/moving-resources`}>{locale==='es'?'Recursos de mudanza':'Moving Resources'}</Link><Link href={`/${locale}/about`}>{locale==='es'?'Conoce a Joey':'Meet Joey'}</Link></div></details><LocaleSwitcher locale={locale}/><a className="header-cta" href="mailto:JoeySellsCT@gmail.com">{locale==='es'?'Contactar':'Contact Joey'}</a></nav>
     </header>
     {children}
     <footer className="compliance-footer compact-footer">
