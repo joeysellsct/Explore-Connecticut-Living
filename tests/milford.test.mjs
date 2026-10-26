@@ -67,6 +67,16 @@ test('Milford photographs retain bilingual captions and explicit reuse licenses'
   }
 });
 
+test('Milford shoreline photo has reviewed CC BY provenance and bilingual historic caption', () => {
+  const raw = block('lib/town-photography.ts');
+  assert.ok(!raw.includes('CT-162 downtown Milford.jpg'), 'Do not reintroduce the unreviewed Commons transfer');
+  assert.ok(raw.includes('Milford point on housatonic (28829150353).jpg'), 'Use the reviewed Milford Point photograph');
+  assert.ok(raw.includes('Russ (Russ Whitehurst / russimages)'), 'Retain the credited photographer');
+  assert.ok(raw.includes('https://creativecommons.org/licenses/by/2.0/'), 'Retain the reviewed CC BY 2.0 license');
+  assert.ok(raw.includes('photographed September 2016'), 'Date the English historical photograph caption');
+  assert.ok(raw.includes('fotografía de septiembre de 2016'), 'Date the Spanish historical photograph caption');
+});
+
 test('Milford FY2027 base rate and district caveat are explicit in both languages', () => {
   const rates = read('lib/fy2027-mill-rates.ts');
   assert.match(rates, /'milford':28\.67/);
