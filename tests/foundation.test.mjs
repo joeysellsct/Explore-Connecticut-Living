@@ -452,7 +452,7 @@ test('bilingual navigation controls and decorative housing icon remain accessibl
  assert.ok(layout.includes('<LocaleSwitcher locale={locale}/>'));
  const switcher=read('app/[locale]/LocaleSwitcher.tsx');
  assert.ok(switcher.includes('className="header-language"'));
- assert.ok(switcher.includes("aria-label={locale==='es'?'Switch to English':'Cambiar a español'}"));
+ assert.ok(switcher.includes("aria-label={locale==='es'?'EN: Cambiar a inglés':'ES: Switch to Spanish'}"));
  assert.match(layout,/<svg[^>]+aria-hidden="true" focusable="false"/);
  assert.match(layout,/locale==='es'\?'Igualdad de oportunidades de vivienda':'Equal Housing Opportunity'/);
 });
