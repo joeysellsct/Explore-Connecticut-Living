@@ -95,3 +95,11 @@ test('Milford uses bilingual SEO, sitemap and staging safeguards', () => {
   assert.ok(moving.includes('affiliate-disclosure'));
   assert.ok(moving.includes('partnerLinks.map'));
 });
+
+
+test('Milford dining source links identify their restaurant for screen readers and display verification dates', () => {
+  const page = read('app/[locale]/towns/[slug]/page.tsx');
+  assert.ok(page.includes('aria-label={es?`Ver fuente de ${restaurant.name}`:`View source for ${restaurant.name}`}'));
+  assert.ok(page.includes("{es?'Fuente consultada':'Source checked'}: {restaurant.checkedOn}"));
+  assert.ok(page.includes('href={restaurant.sourceUrl}'));
+});
