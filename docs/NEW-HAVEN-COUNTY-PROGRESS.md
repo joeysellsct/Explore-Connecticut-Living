@@ -1,6 +1,13 @@
 # New Haven County town buildout tracker
 
-Snapshot: **2026-10-25**. This is a source-code coverage checklist, not a claim that pages are live or complete. Refresh this table after meaningful updates; never count a town as 100% complete without a live rendered-page audit.
+Snapshot: **2026-10-26**. This is a source-code coverage checklist, not a claim that pages are live or complete. Refresh this table after meaningful updates; never count a town as 100% complete without a live rendered-page audit.
+
+## Milford taxable-assessment estimator and staging QA (2026-10-26)
+
+- Added an optional, bilingual **current taxable assessed value** input to the shared town tax estimator. When populated, it overrides the illustrative 70%-of-market-value assumption, which is especially relevant to Milford's five-year phase-in after the October 1, 2025 revaluation. Empty input preserves the old estimate; invalid values receive a specific message. This is an estimate, not a substitute for parcel tax bills, exemptions, or special-district rates.
+- Source commit: `3b319db8b2d504bc36c9d002ff3c5e9442e06f17`; regression test commit: `c7671dcc93e95bfc505d17dc6a552b8d7e02fedb`. The source commit's GitHub Actions run `40336531216` passed content tests and production build. Check run `40336604959` separately for final test-commit verification; do not assume success until completed.
+- **Unresolved independent staging blocker:** `curl: (6) Could not resolve host: explore-connecticut-living-staging.joeysellsct.workers.dev` for `/en/towns/milford`, `/es/towns/milford`, and `/robots.txt` on 2026-10-26. All returned HTTP `000` before page response. This is a DNS failure in the verification environment, not proof the public deployment is down. Revisit next run, verify Cloudflare deployment independently, and then audit rendered bilingual SEO, image delivery, mobile accessibility, affiliate/Equal Housing disclosures and noindex/robots before certification.
+- **Certification unchanged:** 0/27 New Haven County towns independently launch-ready. Finish Milford before Fairfield County.
 
 ## Coverage of 27 New Haven County towns
 
