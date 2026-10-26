@@ -60,7 +60,9 @@ try {
           .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
           .analyze();
         for (const issue of axe.violations) {
-          failures.push(label + ': accessibility ' + issue.id + ' (' + issue.impact + '), nodes=' + issue.nodes.length + ', example=' + (issue.nodes[0]?.target || []).join(','));
+          for (const node of issue.nodes) {
+            failures.push(label + ': accessibility ' + issue.id + ' (' + issue.impact + '), target=' + node.target.join(',') + ', detail=' + (node.failureSummary || '').replace(/\n/g, ' ').slice(0, 320));
+          }
         }
         await page.screenshot({path: 'artifacts/milford-browser/' + locale + '-' + device + '.png', fullPage: true, animations: 'disabled'});
         console.log('AUDITED ' + label + ': photos=' + count + ', axe violations=' + axe.violations.length + ', overflow=' + (overflow.scroll - overflow.viewport) + 'px');
