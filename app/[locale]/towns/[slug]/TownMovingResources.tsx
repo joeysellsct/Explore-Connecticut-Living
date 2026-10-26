@@ -9,7 +9,7 @@ export default function TownMovingResources({slug,town,locale}:{slug:string;town
  const [assessedValue,setAssessedValue]=useState('');
  const verifiedRate=fy2027MillRates[slug];
  const [millRate,setMillRate]=useState(()=>verifiedRate===undefined?'':String(verifiedRate));
- useEffect(()=>{setMillRate(verifiedRate===undefined?'':String(verifiedRate));},[slug,verifiedRate]);
+ useEffect(()=>{setMillRate(verifiedRate===undefined?'':String(verifiedRate));setAssessedValue('');},[slug,verifiedRate]);
  const validValue=homeValue.trim()!==''&&Number.isFinite(Number(homeValue))&&Number(homeValue)>=0;
  const validRate=millRate.trim()!==''&&Number.isFinite(Number(millRate))&&Number(millRate)>=0;
  const hasAssessedValue=assessedValue.trim()!=='';
