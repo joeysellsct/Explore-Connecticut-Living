@@ -36,3 +36,45 @@ jobs:
           NEXT_TELEMETRY_DISABLED: '1'
           NEXT_PUBLIC_SUPABASE_URL: https://rhjihnpplgeccowimqxj.supabase.co
           NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY }}
+
+  staging-smoke:
+    # Run network checks from GitHub-hosted infrastructure instead of the assistant's
+    # DNS-restricted environment. Report failures without blocking source/build checks.
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    continue-on-error: true
+    steps:
+      - name: Check staging DNS, bilingual pages and indexing safeguards
+        shell: bash
+        env:
+          STAGING_ORIGIN: https://explore-connecticut-living-staging.joeysellsct.workers.dev
+        run: |
+          set -euo pipefail
+          host="${STAGING_ORIGIN#https://}"
+          echo "Checking DNS for $host"
+          getent ahosts "$host" || { echo "::error::Staging DNS does not resolve from GitHub runner"; exit 1; }
+          for path in /robots.txt /en/towns/milford /es/towns/milford; do
+            echo "Checking $path"
+            headers="$(mktemp)"
+            body="$(mktemp)"
+            code="$(curl --silent --show-error --location --retry 2 --retry-delay 3 --connect-timeout 10 --max-time 35 --dump-header "$headers" --output "$body" --write-out '%{http_code}' "$STAGING_ORIGIN$path")" || {
+              echo "::error::Could not fetch $path from staging"; exit 1;
+            }
+            if [[ "$code" != "200" ]]; then
+              echo "::error::Staging $path returned HTTP $code"; exit 1
+            fi
+            if [[ "$path" == "/robots.txt" ]]; then
+              if ! grep -Eiq '^Disallow:[[:space:]]*/[[:space:]]*$' "$body"; then
+                echo "::error::Staging robots.txt does not disallow all crawling"; exit 1
+              fi
+            else
+              if ! grep -Eiq '^x-robots-tag:.*noindex' "$headers" && ! grep -Eiq '<meta[^>]+name=["\x27]robots["\x27][^>]+content=["\x27][^"\x27]*noindex' "$body"; then
+                echo "::error::Missing noindex protection on $path"; exit 1
+              fi
+              if ! grep -Eiq '<html[^>]+lang=["\x27](en|es)' "$body"; then
+                echo "::error::Missing document language on $path"; exit 1
+              fi
+            fi
+            echo "PASS $path"
+            rm -f "$headers" "$body"
+          done
