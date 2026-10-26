@@ -260,3 +260,16 @@ test('Milford taxable assessment override supports the five-year revaluation pha
   assert.equal(Math.round(400000 * .7 * millRate) / 1000, 8027.6, 'Blank override uses 70% of estimated market value');
   assert.equal(240000 * millRate / 1000, 6880.8, 'A current taxable assessment overrides the generic 70% assumption');
 });
+
+test('Milford links directly to city GIS and flood-safety guidance in both languages', () => {
+  const entries = [...block('lib/town-official-links.ts').matchAll(/\\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\\}/g)];
+  const links = new Map(entries.map(([, en, es, url]) => [url, {en, es}]));
+  for (const url of [
+    'https://milfordct.us/699/City-Maps-GIS',
+    'https://milfordct.us/243/Flood-Safety-Information',
+  ]) {
+    assert.ok(links.has(url), 'Missing verified municipal GIS or flood source: ' + url);
+    assert.ok(links.get(url).en.length > 20 && links.get(url).es.length > 20, 'Require useful bilingual labels');
+  }
+  assert.ok(!links.has('https://milfordct.us/sitemap'), 'Link directly to the city GIS instead of a generic sitemap');
+});
