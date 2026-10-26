@@ -11,5 +11,5 @@ export default function LocaleSwitcher({locale}:{locale:string}){
  const currentPath=pathname||`/${locale}`;
  const localizedPath=currentPath.replace(/^\/(?:en|es)(?=\/|$)/,`/${targetLocale}`);
  const href=localizedPath===currentPath?`/${targetLocale}`:localizedPath;
- return <Link className="header-language" href={href} hrefLang={targetLocale==='es'?'es-US':'en-US'} aria-label={locale==='es'?'Switch to English':'Cambiar a español'}>{targetLocale.toUpperCase()}</Link>;
+ return <Link className="header-language" href={href} hrefLang={targetLocale==='es'?'es-US':'en-US'} aria-label={locale==='es'?'EN: Cambiar a inglés':'ES: Switch to Spanish'}>{targetLocale.toUpperCase()}</Link>;
 }
