@@ -183,3 +183,17 @@ test('Milford tax guidance discloses the five-year 2025 revaluation phase-in in 
   assert.ok(component.includes('70% del precio estimado de una vivienda puede no coincidir'), 'Include the Spanish estimate caveat');
   assert.ok(component.includes('https://www.milfordct.us/210/Assessors-Office'), 'Cite the official Milford Assessor source');
 });
+
+
+test('Milford sewer fee is sourced, bilingual and kept separate from property taxes', () => {
+  const component = read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
+  assert.ok(component.includes("slug==='milford'"), 'Only Milford should receive the Milford-specific sewer fee');
+  assert.ok(component.includes('$361.92 per-unit user fee'), 'Show the official 2025 Grand List sewer fee in English');
+  assert.ok(component.includes('$361.92 por unidad'), 'Show the same fee in Spanish');
+  assert.ok(component.includes('2025 Grand List'), 'Do not present a dated fee as timeless');
+  assert.ok(component.includes('lista de tasación de 2025'), 'Translate the dated fee context');
+  assert.ok(component.includes('separate from the property tax estimate'), 'Do not include sewer user fees in mill-rate estimates');
+  assert.ok(component.includes('distinto del impuesto inmobiliario estimado'), 'Translate the tax separation');
+  assert.ok(component.includes('does not establish a particular property'), 'Warn that the actual bill is parcel-specific');
+  assert.ok(component.includes('https://milfordct.us/744/Sewer-Commission'), 'Link directly to the city source');
+});
