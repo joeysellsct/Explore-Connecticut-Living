@@ -2,6 +2,13 @@
 
 Snapshot: **2026-10-26**. This is a source-code coverage checklist, not a claim that pages are live or complete. Refresh this table after meaningful updates; never count a town as 100% complete without a live rendered-page audit.
 
+## Milford transit-source QA (2026-10-26)
+
+- Added two directly verified, bilingual transportation research links to `lib/town-official-links.ts`: the official [MTA Milford station page](https://www.mta.info/stations/milford) (New Haven Line, station accessibility, ticketing and bus connections) and the official [Metro-North schedules page](https://www.mta.info/agency/metro-north-railroad/schedules) (updated October 23, 2026). Avoided embedding fixed commute times, fares or a potentially stale timetable. Sources checked 2026-10-26.
+- Source commit `a74a4dea3dda2a47591a0b982e6442140f81894a`; regression-test commit `da4f22b19c3562c8442f919c0cb1e35bf3dd345e`; regex correction `c7c4333fa2ff898707029ceaa148683a03b05bce`. Each was confirmed on `main` with a single-file change and a fresh blob SHA. Source-level check: 16 distinct Milford official resources, no duplicate URLs; English/Spanish rail guidance present. Newest workflow must be checked for final build completion.
+- **Unresolved rendered-page blocker, Milford:** `curl: (6) Could not resolve host: explore-connecticut-living-staging.joeysellsct.workers.dev` when requesting `/en/towns/milford` on 2026-10-26. Independent web checks also returned `URL ... is not accessible via this tool` for `/en/towns/milford` and `/robots.txt`. This is a DNS/access failure in the verification environment, not proof that the site is offline. Recheck `/en/towns/milford`, `/es/towns/milford`, `/robots.txt`, and actual Cloudflare deployment separately in later runs; do not certify rendered SEO, image delivery, accessibility, affiliate/Equal Housing disclosures or staging noindex yet.
+- **Certification unchanged:** 0/27 New Haven County towns independently launch-ready; continue Milford and other New Haven County towns before Fairfield County.
+
 ## Milford taxable-assessment estimator and staging QA (2026-10-26)
 
 - Added an optional, bilingual **current taxable assessed value** input to the shared town tax estimator. When populated, it overrides the illustrative 70%-of-market-value assumption, which is especially relevant to Milford's five-year phase-in after the October 1, 2025 revaluation. Empty input preserves the old estimate; invalid values receive a specific message. This is an estimate, not a substitute for parcel tax bills, exemptions, or special-district rates.
