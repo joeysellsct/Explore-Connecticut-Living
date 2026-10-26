@@ -119,3 +119,16 @@ test('Milford language switch preserves the current town route in either directi
   assert.equal(localize('/en/towns', 'es'), '/es/towns');
   assert.equal(localize('/es', 'en'), '/en');
 });
+
+
+test('Milford special-district rates support fractional precision without implying edited rates are verified', () => {
+  const component = read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
+  assert.ok(component.includes('step="any"'), 'Allow district rates such as 0.5205 mills without native step validation errors');
+  assert.ok(component.includes('Mill rate (editable)'), 'The user-entered rate must not be labeled verified');
+  assert.ok(component.includes('Tasa en mills (editable)'), 'The editable label must also be translated');
+  assert.ok(component.includes('validRate'), 'Retain input validation for the estimator');
+  const base = 28.67;
+  const district = 0.5205;
+  const assessed = 400000 * 0.7;
+  assert.equal(assessed * (base + district) / 1000, 8173.34);
+});
