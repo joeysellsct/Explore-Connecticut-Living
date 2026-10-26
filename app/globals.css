@@ -275,3 +275,7 @@ body{background:var(--coastal-cream);color:var(--coastal-ink)}
 
 /* WCAG AA: small masthead lettering needs sufficient contrast on white. */
 .brand-header .logo-wordmark small{color:#226b42}
+
+/* Live Milford axe audit: contrast for small labels on white and pale-green town panels. */
+.town-profile .towns-kicker{color:#176538}
+.town-profile-details small{color:#526856}
