@@ -262,7 +262,7 @@ test('Milford taxable assessment override supports the five-year revaluation pha
 });
 
 test('Milford links directly to city GIS and flood-safety guidance in both languages', () => {
-  const entries = [...block('lib/town-official-links.ts').matchAll(/\\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\\}/g)];
+  const entries = [...block('lib/town-official-links.ts').matchAll(/\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\}/g)];
   const links = new Map(entries.map(([, en, es, url]) => [url, {en, es}]));
   for (const url of [
     'https://milfordct.us/699/City-Maps-GIS',
