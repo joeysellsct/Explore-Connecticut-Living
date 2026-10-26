@@ -12,6 +12,8 @@ export default function TownMovingResources({slug,town,locale}:{slug:string;town
  const validValue=homeValue.trim()!==''&&Number.isFinite(Number(homeValue))&&Number(homeValue)>=0;
  const validRate=millRate.trim()!==''&&Number.isFinite(Number(millRate))&&Number(millRate)>=0;
  const estimate=validValue&&validRate?Number(homeValue)*.7*Number(millRate)/1000:null;
+ const moneyLocale=es?'es-US':'en-US';
+ const validationMessage=!validValue?(es?'Ingresa un valor de vivienda válido (cero o mayor).':'Enter a valid home value (zero or greater).'):(es?'Ingresa una tasa en mills válida (cero o mayor).':'Enter a valid mill rate (zero or greater).');
  const isUI=uiElectricTowns.has(slug);
  return <section className="moving-resources">
   <span className="towns-kicker">{es?'PLANIFICA LOS COSTOS Y SERVICIOS':'PLAN YOUR COSTS & SERVICES'}</span>
@@ -25,7 +27,7 @@ export default function TownMovingResources({slug,town,locale}:{slug:string;town
      <label>{es?'Valor estimado de vivienda ($)':'Estimated home value ($)'}<input type="number" min="0" value={homeValue} onChange={e=>setHomeValue(e.target.value)}/></label>
      <label>{es?'Tasa en mills (editable)':'Mill rate (editable)'}<input type="number" min="0" step="any" placeholder={es?'Ingresar tasa':'Enter rate'} value={millRate} onChange={e=>setMillRate(e.target.value)}/></label>
     </div>
-    <div className="tax-estimate" aria-live="polite">{estimate===null?(es?'Ingresa una tasa para calcular.':'Enter a mill rate to calculate.'):<><strong>{estimate.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0})}</strong> {es?'al año':'per year'} · {(estimate/12).toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0})}/{es?'mes':'month'}</>}</div>
+    <div className="tax-estimate" aria-live="polite" aria-atomic="true">{estimate===null?validationMessage:<><strong>{estimate.toLocaleString(moneyLocale,{style:'currency',currency:'USD',maximumFractionDigits:0})}</strong> {es?'al año':'per year'} · {(estimate/12).toLocaleString(moneyLocale,{style:'currency',currency:'USD',maximumFractionDigits:0})}/{es?'mes':'month'}</>}</div>
     <small>{es?'Estimación ilustrativa para bienes raíces, no vehículos, con una tasación supuesta del 70% del valor ingresado. El valor de mercado puede diferir del valor tasado. No incluye exenciones ni impuestos de distritos especiales; confirma la factura real con el municipio.':'Illustrative real estate estimate, not motor vehicle taxes, assuming assessment at 70% of entered value. Market value may differ from assessed value. Exemptions and special district levies are excluded; confirm the actual bill with the municipality.'}</small>
     {slug==='milford'&&<p className="town-tax-district-note">{es?'Aviso para Milford: según los datos de OPM para FY2027, algunas propiedades pueden pagar tasas adicionales de distrito: Woodmont Borough (0,5205 mills), Laurel Beach Association (3,34 mills) o Morningside Association (0,0738 mills). No están incluidas en la estimación base. Confirma qué distrito corresponde a la dirección y el importe real con el recaudador de impuestos de Milford.':'Milford district notice: Connecticut OPM FY2027 data lists additional rates for certain parcels in Woodmont Borough (0.5205 mills), Laurel Beach Association (3.34 mills) or Morningside Association (0.0738 mills). These are not included in the base estimate. Confirm the district for the address and the actual bill with Milford’s Tax Collector.'}</p>}
    </article>
