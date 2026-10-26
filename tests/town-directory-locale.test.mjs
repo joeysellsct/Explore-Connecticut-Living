@@ -13,3 +13,10 @@ test('town cards translate county labels and preserve English fallback', () => {
   assert.ok(directory.includes('es ? `Condado de ${t.county}` : `${t.county} County`'), 'town cards use localized county labels');
   assert.ok(directory.includes('href={`/${es?\'es\':\'en\'}/towns/${t.slug}`}'), 'town links preserve locale');
 });
+
+test('historic county quick filters are bilingual and announce their active state', () => {
+  assert.ok(directory.includes('aria-pressed={county===c}'), 'county pill announces its selected state');
+  assert.ok(directory.includes("aria-pressed={county==='all'}"), 'all-towns pill announces its selected state');
+  assert.ok(directory.includes('es?`Condado de ${c}`:c'), 'Spanish county pill labels are translated');
+  assert.ok(directory.includes('onClick={()=>setCounty(c)}'), 'county pills still filter by canonical county value');
+});
