@@ -465,3 +465,31 @@ test('staging and preview page responses fail closed at the HTTP header level',(
  assert.match(proxy,/host===production\.hostname\.toLowerCase\(\)/,'Only an explicitly configured production host may index');
  assert.match(proxy,/response\.headers\.set\('X-Robots-Tag','noindex, nofollow, noarchive'\)/);
 });
+
+test('New Haven County source coverage and Spanish photo captions remain intact',()=>{
+ const directory=read('lib/connecticut-towns.ts');
+ const guides=read('lib/town-highlights.ts');
+ const restaurants=read('lib/town-restaurants.ts').split('export const joeyTopPicks')[0];
+ const resources=read('lib/town-official-links.ts');
+ const photography=read('lib/town-photography.ts');
+ const rates=read('lib/fy2027-mill-rates.ts');
+ const slugs=[...directory.matchAll(/"county": "New Haven",\\s*"fips": "[^"]+",\\s*"slug": "([^"]+)"/g)].map(match=>match[1]);
+ assert.equal(slugs.length,27,'All 27 historic New Haven County towns are listed');
+ const entries=(source,slug)=>source.match(new RegExp("'"+slug+"':\\\\s*\\\\[([\\\\s\\\\S]*?)\\\\],"))?.[1]||'';
+ const count=(source,field)=>[...source.matchAll(new RegExp('"?'+field+'"?\\\\s*:','g'))].length;
+ for(const slug of slugs){
+  assert.ok(guides.includes("'"+slug+"':"),slug+' has a town guide');
+  const dining=entries(restaurants,slug),official=entries(resources,slug),photos=entries(photography,slug);
+  assert.ok(count(dining,'checkedOn')>=5,slug+' has five dated restaurant listings');
+  assert.equal(count(dining,'checkedOn'),count(dining,'sourceUrl'),slug+' restaurant sources are retained');
+  assert.ok(count(official,'url')>=3,slug+' has official moving resources');
+  assert.ok(count(photos,'licenseUrl')>=2,slug+' has attributed photo records');
+  assert.equal(count(photos,'licenseUrl'),count(photos,'credit'),slug+' photo credits are retained');
+  assert.equal(count(photos,'licenseUrl'),count(photos,'titleEs'),slug+' photos have Spanish captions');
+  assert.ok(rates.includes("'"+slug+"':"),slug+' has a documented FY2027 rate');
+ }
+ const page=read('app/[locale]/towns/[slug]/page.tsx');
+ assert.match(page,/CONDADO DE/);
+ assert.match(page,/Condado de/);
+ // These are structural source checks, NOT independent link, photo or rendered-page QA.
+});
