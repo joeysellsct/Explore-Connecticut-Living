@@ -447,7 +447,8 @@ test('moving resources hub localizes the Amazon Associate disclosure',()=>{
 
 test('bilingual navigation controls and decorative housing icon remain accessible',()=>{
  const layout=read('app/[locale]/layout.tsx');
- assert.match(layout,/aria-label=\{locale==='es'\?'Inicio de Explore Connecticut Living':'Explore Connecticut Living home'\}/);
+ assert.ok(layout.includes('className="site-logo"><span className="logo-symbol" aria-hidden="true">'), 'Home link uses visible brand text for its accessible name');
+ assert.ok(layout.includes('className="logo-wordmark">EXPLORE <strong>CONNECTICUT</strong><small>LIVING</small>'), 'Home link retains readable brand name');
  assert.match(layout,/aria-label=\{locale==='es'\?'Navegación principal':'Main navigation'\}/);
  assert.ok(layout.includes('<LocaleSwitcher locale={locale}/>'));
  const switcher=read('app/[locale]/LocaleSwitcher.tsx');
