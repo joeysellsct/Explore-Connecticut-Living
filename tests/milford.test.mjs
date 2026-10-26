@@ -146,3 +146,16 @@ test('Milford tax estimate explains invalid fields and formats currency in the s
   assert.ok(component.includes('Ingresa una tasa en mills válida'));
   assert.ok(component.includes('aria-live="polite" aria-atomic="true"'), 'Announce complete recalculated totals to assistive technology');
 });
+
+
+test('Milford beach access and water-quality guidance link directly to official current sources', () => {
+  const entries = [...block('lib/town-official-links.ts').matchAll(/\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\}/g)];
+  const links = new Map(entries.map(([, en, es, url]) => [url, {en, es}]));
+  for (const url of [
+    'https://milfordct.us/680/Resident-Parking-Stickers',
+    'https://www.milfordct.us/402/Beach-Monitoring',
+  ]) {
+    assert.ok(links.has(url), 'Missing official beach resource: ' + url);
+    assert.ok(links.get(url).en.length > 15 && links.get(url).es.length > 15, 'Both language labels must be useful');
+  }
+});
