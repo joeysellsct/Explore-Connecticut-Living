@@ -317,7 +317,10 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {en:"Milford beach parking: resident stickers and current requirements",es:"Estacionamiento en playas de Milford: permisos de residentes y requisitos vigentes",url:"https://milfordct.us/680/Resident-Parking-Stickers"},
   {en:"Milford beach water-quality monitoring and swimming advisories",es:"Control de calidad del agua en las playas de Milford y avisos para bañistas",url:"https://www.milfordct.us/402/Beach-Monitoring"},
   {en:"Silver Sands State Park: access, trails and visitor rules",es:"Parque estatal Silver Sands: acceso, senderos y normas de visita",url:"https://ctparks.com/parks/silver-sands-state-park"},
-  {en:"Connecticut park transit connections and current alternatives",es:"Conexiones de transporte a parques estatales y alternativas actuales",url:"https://ctparks.com/parkconnect"}
+  {en:"Connecticut park transit connections and current alternatives",es:"Conexiones de transporte a parques estatales y alternativas actuales",url:"https://ctparks.com/parkconnect"},
+  // MTA station and timetable pages independently checked 2026-10-26; schedules and station services may change.
+  {en:"Metro-North Milford station: New Haven Line, accessibility, ticket machines and local bus connections; check current notices",es:"Estación Milford de Metro-North: línea New Haven, accesibilidad, máquinas de boletos y conexiones de autobús; consulta avisos actuales",url:"https://www.mta.info/stations/milford"},
+  {en:"Metro-North New Haven Line schedules: verify current Milford departures, transfers and service changes before commuting",es:"Horarios de la línea New Haven de Metro-North: comprueba salidas desde Milford, transbordos y cambios de servicio antes de viajar",url:"https://www.mta.info/agency/metro-north-railroad/schedules"},
  ],
  // New Haven source pages checked 2026-10-24 against official City of New Haven and CTtransit websites. Links are research starting points; verify address-specific records and current policies directly.
  'new-haven': [
