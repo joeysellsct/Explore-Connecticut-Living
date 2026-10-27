@@ -670,7 +670,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"West Haven Planning and Development: zoning and land use","es":"Planificación y Desarrollo: zonificación y uso del suelo","url":"https://www.cityofwesthaven.com/174/Planning-and-Development"},
   {"en":"West Haven Parks and Recreation programs","es":"Programas de Parques y Recreación de West Haven","url":"https://www.cityofwesthaven.com/172/Parks-and-Recreation"},
   {"en":"West Haven shoreline and beach access information","es":"Información sobre la costa y el acceso a las playas","url":"https://www.cityofwesthaven.com/294/Directions-to-Beaches"},
-  {"en":"West Haven beach parking and resident permit information","es":"Estacionamiento de playas y permisos para residentes","url":"https://cityofwesthaven.com/166/Human-Resources-Social-Services"},
+  {"en":"West Haven beach parking: license-plate-based resident eligibility, nonresident payment and annual passes; separate guest/event permits for restricted streets (check current rules and fees)","es":"Estacionamiento en playas de West Haven: elegibilidad de residentes por matrícula, pagos de no residentes y pases anuales; permisos distintos para invitados y eventos en calles restringidas (verifica normas y tarifas vigentes)","url":"https://www.cityofwesthaven.com/166/Human-Resources-Social-Services"},
   {"en":"West Haven Public Works: sewer service and local infrastructure","es":"Obras Públicas: alcantarillado e infraestructura local","url":"https://cityofwesthaven.com/177/Public-Works"},
  ],
  // Seymour sources checked 2026-10-24 against the official town pages; FY 2026-27 real-estate mill rate 28.64 appears on the Assessor page.
