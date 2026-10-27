@@ -49,7 +49,7 @@ for (const locale of ['en', 'es']) {
   requireLink(html, 'alternate', `${origin}/en/towns/${town}`, {hreflang: 'x-default'});
   // Validate actual JSON-LD semantics, not just strings that might appear in
   // a broken script, an unrelated component or escaped Next.js hydration data.
-  const jsonLd = [...html.matchAll(/<script\\b([^>]*)>([\\s\\S]*?)<\\/script>/gi)]
+  const jsonLd = [...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)]
     .filter(([, attributes]) => attrs('<script ' + attributes + '>').type === 'application/ld+json')
     .map(([, , body], index) => {
       try { return JSON.parse(body); }
