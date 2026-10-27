@@ -135,3 +135,19 @@ test('West Haven estimator clearly warns that base mills exclude three fire-dist
   assert.ok(section[1].includes('https://www.cityofwesthaven.com/152/Assessors-Office'), 'Link to district street list');
   assert.ok(component.includes("const rateEdited=verifiedRate!==undefined"), 'Keep editable rate and reset behavior');
 });
+
+test('West Haven tax estimate requires a district selection and uses combined rates', () => {
+  const component = read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
+  assert.ok(component.includes("const [westHavenDistrict,setWestHavenDistrict]=useState('')"), 'District must start unselected');
+  assert.ok(component.includes("slug==='west-haven'||verifiedRate===undefined?'':String(verifiedRate)"), 'Do not prefill base-only West Haven rate');
+  assert.ok(component.includes("const needsWestHavenDistrict=slug==='west-haven'&&!westHavenDistrict"), 'Require district before estimating');
+  assert.ok(component.includes('const estimate=!needsWestHavenDistrict&&'), 'Suppress misleading base-only estimate');
+  const selector = component.split('className="town-tax-district-select"')[1]?.split('</label>}')[0];
+  assert.ok(selector, 'District selector must render on West Haven pages');
+  for (const phrase of ['District 1: Center (36.48 mills)', 'District 2: West Shore (33.36 mills)', 'District 3: Allingtown (34.41 mills)', 'Other verified rate (enter manually)', 'Distrito 1: Center (36,48 mills)', 'Distrito 2: West Shore (33,36 mills)', 'Distrito 3: Allingtown (34,41 mills)']) {
+    assert.ok(selector.includes(phrase), 'Missing bilingual fire-district option: ' + phrase);
+  }
+  assert.ok(selector.includes("district==='center'?'36.48':district==='west-shore'?'33.36':district==='allingtown'?'34.41':''"), 'Selection must populate the verified combined rate');
+  assert.ok(component.includes("if(slug==='west-haven')setWestHavenDistrict('custom')"), 'Manual edits must switch to custom-rate mode');
+  assert.ok(component.includes("rateEdited&&slug!=='west-haven'"), 'Never offer a misleading West Haven base-rate reset');
+});
