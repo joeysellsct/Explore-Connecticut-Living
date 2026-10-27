@@ -96,6 +96,28 @@ for (const locale of ['en', 'es']) {
       assert.ok(html.includes(detail),
         `${path}: West Haven parking guidance missing "${detail}"; check staging deployment freshness`);
     }
+    // Catch stale staging deployments after adding West Haven's verified
+    // municipal moving resources. These must be visible in BOTH languages.
+    const westHavenMovingResources = [
+      'rwater.com/customer-care/start-or-stop-service',
+      '266/Recycling-Info-Carts',
+      '1394/RubbishRecycling-Pickup-Schedule-Weekly',
+      '260/Bulk-Trash-Pickup-Other-Services',
+      'whschools.org/page/registration'
+    ];
+    for (const resource of westHavenMovingResources) {
+      assert.ok(html.includes(resource),
+        `${path}: West Haven moving resource not rendered: ${resource}; check staging deployment freshness`);
+    }
+    // Confirm the tax and utility caveats are actually rendered, not just
+    // present in source files; district-specific rates must not be flattened.
+    const dueDiligenceTerms = locale === 'en'
+      ? ['25.58 mills', 'fire district', 'sewer bills separately', 'Regional Water Authority']
+      : ['25,58 mills', 'distrito de bomberos', 'facturas de alcantarillado por separado', 'Regional Water Authority'];
+    for (const detail of dueDiligenceTerms) {
+      assert.ok(html.includes(detail),
+        `${path}: West Haven property due-diligence detail missing "${detail}"; check staging deployment freshness`);
+    }
   }
   console.log(`PASS ${path}: bilingual metadata, SEO, housing, affiliate, photography and deployed resources`);
 }
