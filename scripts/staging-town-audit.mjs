@@ -63,8 +63,19 @@ for (const locale of ['en', 'es']) {
   for (const [check, passed] of Object.entries(photoChecks)) {
     assert.ok(passed, `${path}: missing ${check}; investigate deployment freshness or rendering`);
   }
-  assert.ok(html.includes('school-and-street-assignment') &&
-    html.includes('Online-Permitting-Center'), `${path}: recent Milford official resources are not yet deployed`);
+  // Check the actual rendered staging page, not just source-code presence.
+  // These are the newest independently verified Milford property-due-diligence
+  // resources; check both locale routes to catch stale Cloudflare deployments.
+  const milfordResourcePaths = [
+    'school-and-street-assignment',
+    'Online-Permitting-Center',
+    'Building-Inspection',
+    'Engineering-Division',
+    '533/Inland-Wetlands'
+  ];
+  for (const resource of milfordResourcePaths) {
+    assert.ok(html.includes(resource), `${path}: verified Milford resource not rendered: ${resource}; check staging deployment freshness`);
+  }
   console.log(`PASS ${path}: bilingual metadata, SEO, housing, affiliate, photography and deployed resources`);
 }
 const sitemap = await get('/sitemap.xml');
