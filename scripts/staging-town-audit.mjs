@@ -47,8 +47,42 @@ for (const locale of ['en', 'es']) {
     requireLink(html, 'alternate', `${origin}/${route}/towns/${town}`, {hreflang: language});
   }
   requireLink(html, 'alternate', `${origin}/en/towns/${town}`, {hreflang: 'x-default'});
-  assert.ok(/application\/ld\+json/.test(html) && /BreadcrumbList/.test(html) && /WebPage/.test(html),
-    `${path}: missing town breadcrumb or WebPage structured data`);
+  // Validate actual JSON-LD semantics, not just strings that might appear in
+  // a broken script, an unrelated component or escaped Next.js hydration data.
+  const jsonLd = [...html.matchAll(/<script\\b([^>]*)>([\\s\\S]*?)<\\/script>/gi)]
+    .filter(([, attributes]) => attrs('<script ' + attributes + '>').type === 'application/ld+json')
+    .map(([, , body], index) => {
+      try { return JSON.parse(body); }
+      catch (error) { assert.fail(`${path}: JSON-LD script ${index + 1} is invalid: ${error.message}`); }
+    });
+  const breadcrumb = jsonLd.find(data => data['@type'] === 'BreadcrumbList');
+  assert.ok(breadcrumb, `${path}: missing valid BreadcrumbList JSON-LD`);
+  assert.equal(breadcrumb['@context'], 'https://schema.org', `${path}: breadcrumb schema context`);
+  const crumbs = breadcrumb.itemListElement;
+  assert.ok(Array.isArray(crumbs) && crumbs.length === 3,
+    `${path}: breadcrumb must have exactly three levels`);
+  for (const [index, expectedUrl] of [
+    `${origin}/${locale}`, `${origin}/${locale}/towns`, origin + path
+  ].entries()) {
+    const crumb = crumbs[index];
+    assert.equal(crumb?.['@type'], 'ListItem', `${path}: breadcrumb level ${index + 1} type`);
+    assert.equal(crumb.position, index + 1, `${path}: breadcrumb position ${index + 1}`);
+    assert.equal(crumb.item, expectedUrl, `${path}: breadcrumb destination ${index + 1}`);
+    assert.ok(typeof crumb.name === 'string' && crumb.name.trim(),
+      `${path}: breadcrumb level ${index + 1} lacks a label`);
+  }
+  const graph = jsonLd.flatMap(data => Array.isArray(data['@graph']) ? data['@graph'] : []);
+  const place = graph.find(node => node['@type'] === 'AdministrativeArea' &&
+    node.name === `${townName}, Connecticut`);
+  const webPage = graph.find(node => node['@type'] === 'WebPage' && node.url === origin + path);
+  assert.ok(place && webPage, `${path}: missing matching town/place and WebPage graph nodes`);
+  assert.equal(place['@id'], `${origin}/towns/${town}#place`, `${path}: place ID mismatch`);
+  assert.equal(place.containedInPlace?.name, 'Connecticut', `${path}: place state mismatch`);
+  assert.equal(webPage['@id'], origin + path + '#webpage', `${path}: WebPage ID mismatch`);
+  assert.equal(webPage.inLanguage, locale === 'es' ? 'es-US' : 'en-US',
+    `${path}: WebPage language mismatch`);
+  assert.equal(webPage.about?.['@id'], place['@id'],
+    `${path}: WebPage must reference this town's place node`);
   assert.ok(html.includes('Joey McVety') && html.includes('mygoodagent'),
     `${path}: missing agent/broker identification`);
   assert.ok(html.includes(locale === 'es' ? 'Igualdad de oportunidades de vivienda' : 'Equal Housing Opportunity'),
