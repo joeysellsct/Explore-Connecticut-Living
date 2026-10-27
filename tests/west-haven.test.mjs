@@ -76,9 +76,9 @@ test('West Haven beach parking guidance distinguishes lot plate checks from stre
 
 test('West Haven official moving resources cover recycling, collection, disposal and school registration', () => {
   const source = read('lib/town-official-links.ts');
-  const section = source.match(/'west-haven':\\s*\\[([\\s\\S]*?)\\],/);
+  const section = source.match(/'west-haven':\s*\[([\s\S]*?)\],/);
   assert.ok(section, 'West Haven official links must exist');
-  const entries = [...section[1].matchAll(/\\{[^{}]+\\}/g)].map(match => JSON.parse(match[0]));
+  const entries = [...section[1].matchAll(/\{[^{}]+\}/g)].map(match => JSON.parse(match[0]));
   assert.equal(entries.length, 16, 'Keep all sixteen verified bilingual links');
   assert.equal(new Set(entries.map(entry => entry.url)).size, entries.length, 'Avoid duplicate official URLs');
   const expected = [
