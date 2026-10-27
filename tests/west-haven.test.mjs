@@ -21,9 +21,9 @@ test('West Haven municipal links cover property due diligence and local life in 
   const source = read('lib/town-official-links.ts');
   const section = source.match(/'west-haven':\s*\[([\s\S]*?)\],/);
   assert.ok(section, 'West Haven official links must exist');
-  assert.equal((section[1].match(/"en":/g) || []).length, 16);
-  assert.equal((section[1].match(/"es":/g) || []).length, 16);
-  assert.equal((section[1].match(/"url":/g) || []).length, 16);
+  assert.equal((section[1].match(/"en":/g) || []).length, 17);
+  assert.equal((section[1].match(/"es":/g) || []).length, 17);
+  assert.equal((section[1].match(/"url":/g) || []).length, 17);
   for (const link of ['152/Assessors-Office', '156/City-Clerks-Office', '180/Tax-Collector', '154/Building', '172/Parks-and-Recreation']) {
     assert.ok(section[1].includes(link), 'Missing municipal resource ' + link);
   }
@@ -79,13 +79,14 @@ test('West Haven official moving resources cover recycling, collection, disposal
   const section = source.match(/'west-haven':\s*\[([\s\S]*?)\],/);
   assert.ok(section, 'West Haven official links must exist');
   const entries = [...section[1].matchAll(/\{[^{}]+\}/g)].map(match => JSON.parse(match[0]));
-  assert.equal(entries.length, 16, 'Keep all sixteen verified bilingual links');
+  assert.equal(entries.length, 17, 'Keep all seventeen verified bilingual links');
   assert.equal(new Set(entries.map(entry => entry.url)).size, entries.length, 'Avoid duplicate official URLs');
   const expected = [
     ['266/Recycling-Info-Carts', 'recyclables loose', 'sin bolsas plásticas'],
     ['1394/RubbishRecycling-Pickup-Schedule-Weekly', 'city district', 'distrito municipal'],
     ['260/Bulk-Trash-Pickup-Other-Services', 'construction-debris', 'escombros'],
-    ['whschools.org/page/registration', 'school assignment', 'escuela asignada']
+    ['whschools.org/page/registration', 'school assignment', 'escuela asignada'],
+    ['rwater.com/customer-care/start-or-stop-service', 'property-closing statements', 'estados de cuenta para el cierre']
   ];
   for (const [urlPart, en, es] of expected) {
     const entry = entries.find(item => item.url.includes(urlPart));
@@ -107,4 +108,15 @@ test('West Haven guide explains fire-district tax and address-specific water ser
   }
   assert.ok(section[1].length > 2500 && section[2].length > 2500, 'Both guides should have practical depth');
   assert.ok(section[1].includes('\\n\\n') && section[2].includes('\\n\\n'), 'Keep readable multi-paragraph guidance');
+});
+
+test('West Haven Assessor resource warns about district-specific combined tax rates', () => {
+  const source = read('lib/town-official-links.ts');
+  const section = source.match(/'west-haven':\s*\[([\s\S]*?)\],/);
+  assert.ok(section, 'West Haven official links missing');
+  const entries = [...section[1].matchAll(/\{[^{}]+\}/g)].map(match => JSON.parse(match[0]));
+  const assessor = entries.find(entry => entry.url.endsWith('/152/Assessors-Office'));
+  assert.ok(assessor, 'Official Assessor page must remain available');
+  assert.ok(assessor.en.includes('fire-district street list') && assessor.en.includes('combined tax rate'));
+  assert.ok(assessor.es.includes('distrito de bomberos') && assessor.es.includes('tasa total'));
 });
