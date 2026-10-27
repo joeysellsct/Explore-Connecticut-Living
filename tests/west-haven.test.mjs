@@ -21,9 +21,9 @@ test('West Haven municipal links cover property due diligence and local life in 
   const source = read('lib/town-official-links.ts');
   const section = source.match(/'west-haven':\s*\[([\s\S]*?)\],/);
   assert.ok(section, 'West Haven official links must exist');
-  assert.equal((section[1].match(/"en":/g) || []).length, 12);
-  assert.equal((section[1].match(/"es":/g) || []).length, 12);
-  assert.equal((section[1].match(/"url":/g) || []).length, 12);
+  assert.equal((section[1].match(/"en":/g) || []).length, 16);
+  assert.equal((section[1].match(/"es":/g) || []).length, 16);
+  assert.equal((section[1].match(/"url":/g) || []).length, 16);
   for (const link of ['152/Assessors-Office', '156/City-Clerks-Office', '180/Tax-Collector', '154/Building', '172/Parks-and-Recreation']) {
     assert.ok(section[1].includes(link), 'Missing municipal resource ' + link);
   }
@@ -72,4 +72,25 @@ test('West Haven beach parking guidance distinguishes lot plate checks from stre
     assert.ok(parking.es.includes(term), 'Spanish parking exceptions missing: ' + term);
   }
   assert.equal(entries.filter(entry => entry.url === parking.url).length, 1, 'Do not duplicate the official parking link');
+});
+
+test('West Haven official moving resources cover recycling, collection, disposal and school registration', () => {
+  const source = read('lib/town-official-links.ts');
+  const section = source.match(/'west-haven':\\s*\\[([\\s\\S]*?)\\],/);
+  assert.ok(section, 'West Haven official links must exist');
+  const entries = [...section[1].matchAll(/\\{[^{}]+\\}/g)].map(match => JSON.parse(match[0]));
+  assert.equal(entries.length, 16, 'Keep all sixteen verified bilingual links');
+  assert.equal(new Set(entries.map(entry => entry.url)).size, entries.length, 'Avoid duplicate official URLs');
+  const expected = [
+    ['266/Recycling-Info-Carts', 'recyclables loose', 'sin bolsas plásticas'],
+    ['1394/RubbishRecycling-Pickup-Schedule-Weekly', 'city district', 'distrito municipal'],
+    ['260/Bulk-Trash-Pickup-Other-Services', 'construction-debris', 'escombros'],
+    ['whschools.org/page/registration', 'school assignment', 'escuela asignada']
+  ];
+  for (const [urlPart, en, es] of expected) {
+    const entry = entries.find(item => item.url.includes(urlPart));
+    assert.ok(entry, 'Missing verified West Haven resource: ' + urlPart);
+    assert.ok(entry.en.includes(en), 'Missing English detail for ' + urlPart);
+    assert.ok(entry.es.includes(es), 'Missing Spanish detail for ' + urlPart);
+  }
 });
