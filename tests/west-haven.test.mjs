@@ -151,3 +151,15 @@ test('West Haven tax estimate requires a district selection and uses combined ra
   assert.ok(component.includes("if(slug==='west-haven')setWestHavenDistrict('custom')"), 'Manual edits must switch to custom-rate mode');
   assert.ok(component.includes("rateEdited&&slug!=='west-haven'"), 'Never offer a misleading West Haven base-rate reset');
 });
+
+test('West Haven rejects manually entered municipal-base-only tax estimates in both languages', () => {
+  const component = read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
+  assert.ok(component.includes("const invalidWestHavenBaseRate=slug==='west-haven'&&validRate&&Number(millRate)===verifiedRate"),
+    'Detect manual entry of the municipal base rate without a fire district');
+  assert.ok(component.includes('const estimate=!needsWestHavenDistrict&&!invalidWestHavenBaseRate&&'),
+    'Never display a West Haven estimate using only the municipal base rate');
+  assert.ok(component.includes('The 25.58-mill municipal base rate excludes fire-district taxes.'),
+    'English visitors must see why the entered base rate cannot be used');
+  assert.ok(component.includes('La tasa municipal base de 25,58 mills no incluye el distrito de bomberos.'),
+    'Spanish visitors must see why the entered base rate cannot be used');
+});
