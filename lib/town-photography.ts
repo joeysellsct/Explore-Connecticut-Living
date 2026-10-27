@@ -337,8 +337,10 @@ export const townPhotography:Record<string,TownPhoto[]>={
  ],
 
  // West Haven Commons location, photographer and licenses checked 2026-10-23: https://commons.wikimedia.org/wiki/File:Savin_Rock,_West_Haven,_CT,_USA.jpg ; https://commons.wikimedia.org/wiki/File:WestHavenAerial5.jpg. Both photos may be cropped by the page layout; preserve attribution and share-alike obligations.
+ // Additional City Hall image verified 2026-10-27: https://commons.wikimedia.org/wiki/File:West_Haven_City_Hall_109.JPG (Pedro Xing, own work, CC0 1.0; photographed 2012-04-28).
  'west-haven': [
   {"title":"Savin Rock outcropping and beach in West Haven (photographed 2021)","titleEs":"Rocas y playa de Savin Rock en West Haven (fotografía de 2021)","file":"Savin Rock, West Haven, CT, USA.jpg","credit":"Staib","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
   {"title":"Aerial view of the Bradley Point and Savin Rock shoreline (photographed 2007)","titleEs":"Vista aérea de la costa de Bradley Point y Savin Rock (fotografía de 2007)","file":"WestHavenAerial5.jpg","credit":"PostMan1107","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"West Haven City Hall on Main Street across from the Green (photographed April 2012)","titleEs":"Ayuntamiento de West Haven en Main Street frente a la plaza Green (fotografía de abril de 2012)","file":"West Haven City Hall 109.JPG","credit":"Pedro Xing","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/"},
  ],
 };
