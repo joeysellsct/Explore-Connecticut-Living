@@ -57,7 +57,7 @@ test('Milford municipal research has bilingual official and parcel-specific link
 });
 
 test('Milford building, engineering and wetlands due diligence links use official bilingual sources', () => {
-  const entries = [...block('lib/town-official-links.ts').matchAll(/\\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\\}/g)];
+  const entries = [...block('lib/town-official-links.ts').matchAll(/\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\}/g)];
   const links = new Map(entries.map(([, en, es, url]) => [url, {en, es}]));
   const required = [
     ['https://milfordct.us/517/Building-Inspection', /issued-permit/, /permisos emitidos/],
