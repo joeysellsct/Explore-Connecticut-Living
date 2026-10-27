@@ -56,6 +56,22 @@ test('Milford municipal research has bilingual official and parcel-specific link
   assert.ok(urls.includes('https://www.milfordct.us/768/On-Line-Services'), 'Provide city portal for property records and tax payments');
 });
 
+test('Milford building, engineering and wetlands due diligence links use official bilingual sources', () => {
+  const entries = [...block('lib/town-official-links.ts').matchAll(/\\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\\}/g)];
+  const links = new Map(entries.map(([, en, es, url]) => [url, {en, es}]));
+  const required = [
+    ['https://milfordct.us/517/Building-Inspection', /issued-permit/, /permisos emitidos/],
+    ['https://www.milfordct.us/535/Engineering-Division', /sewer connection permits/, /conexión al alcantarillado/],
+    ['https://www.milfordct.us/533/Inland-Wetlands', /regulated upland areas/, /zonas adyacentes reguladas/],
+  ];
+  for (const [url, enPattern, esPattern] of required) {
+    const entry = links.get(url);
+    assert.ok(entry, 'Missing verified municipal resource: ' + url);
+    assert.match(entry.en, enPattern);
+    assert.match(entry.es, esPattern);
+  }
+});
+
 test('Milford photographs retain bilingual captions and explicit reuse licenses', () => {
   const raw = block('lib/town-photography.ts');
   const records = JSON.parse('[' + raw.slice(raw.indexOf('[') + 1).trim().replace(/,\s*$/, '') + ']');
