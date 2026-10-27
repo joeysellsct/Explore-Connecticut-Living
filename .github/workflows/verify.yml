@@ -93,7 +93,7 @@ jobs:
           AUDIT_TOWN: west-haven
           STAGING_ORIGIN: https://explore-connecticut-living-staging.joeysellsct.workers.dev
 
-  milford-browser-audit:
+  new-haven-browser-audit:
     # A failing browser audit is a certification blocker, not a reason to stop
     # publishing safe source-level improvements to other New Haven County towns.
     runs-on: ubuntu-latest
@@ -108,7 +108,7 @@ jobs:
         run: |
           npm install --no-save --no-package-lock --no-audit --no-fund playwright @axe-core/playwright
           npx playwright install --with-deps chromium
-      - name: Audit live Milford EN/ES desktop and mobile rendering
+      - name: Audit live Milford and West Haven EN/ES desktop and mobile rendering
         run: node scripts/staging-milford-browser-audit.mjs
         env:
           STAGING_ORIGIN: https://explore-connecticut-living-staging.joeysellsct.workers.dev
@@ -116,7 +116,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: milford-browser-screenshots
+          name: new-haven-browser-screenshots
           path: artifacts/milford-browser/
           if-no-files-found: ignore
           retention-days: 7
