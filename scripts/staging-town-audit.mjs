@@ -80,7 +80,8 @@ for (const locale of ['en', 'es']) {
     ],
     'west-haven': [
       {file:'Savin Rock, West Haven, CT, USA.jpg',credit:'Staib',license:'https://creativecommons.org/licenses/by-sa/4.0/',en:'Savin Rock outcropping and beach in West Haven (photographed 2021)',es:'Rocas y playa de Savin Rock en West Haven (fotografía de 2021)'},
-      {file:'WestHavenAerial5.jpg',credit:'PostMan1107',license:'https://creativecommons.org/licenses/by-sa/3.0/',en:'Aerial view of the Bradley Point and Savin Rock shoreline (photographed 2007)',es:'Vista aérea de la costa de Bradley Point y Savin Rock (fotografía de 2007)'}
+      {file:'WestHavenAerial5.jpg',credit:'PostMan1107',license:'https://creativecommons.org/licenses/by-sa/3.0/',en:'Aerial view of the Bradley Point and Savin Rock shoreline (photographed 2007)',es:'Vista aérea de la costa de Bradley Point y Savin Rock (fotografía de 2007)'},
+      {file:'West Haven City Hall 109.JPG',credit:'Pedro Xing',license:'https://creativecommons.org/publicdomain/zero/1.0/',en:'West Haven City Hall on Main Street across from the Green (photographed April 2012)',es:'Ayuntamiento de West Haven en Main Street frente a la plaza Green (fotografía de abril de 2012)'}
     ]
   };
   if (auditedPhotos[town]) {
