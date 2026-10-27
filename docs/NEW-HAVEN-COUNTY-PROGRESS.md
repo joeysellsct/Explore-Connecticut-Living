@@ -2,6 +2,12 @@
 
 Snapshot: **2026-10-26**. This is a source-code coverage checklist, not a claim that pages are live or complete. Refresh this table after meaningful updates; never count a town as 100% complete without a live rendered-page audit.
 
+## Milford live keyboard-navigation regression (2026-10-26, 20:03 EDT)
+
+- **Confirmed code commit:** `c93ec61a844f9ca5bd64c80ee5b892b1ce548004` updated `scripts/staging-milford-browser-audit.mjs` to drive actual Tab key presses and verify focus order, `:focus-visible`, and a visible outline for the bilingual town-guide link and photograph credit links. Each test runs for English/Spanish desktop/mobile; the test is a real-browser supplement to axe, not a full human keyboard or screen-reader review.
+- **Verified GitHub Actions run:** [40423693037](https://github.com/joeysellsct/Explore-Connecticut-Living/actions/runs/40423693037) completed with all four jobs successful: `content-tests`, `production-build`, `staging-smoke`, and `milford-browser-audit`. Browser logs explicitly report 3 photos loaded, 0 axe violations and 0 horizontal overflow for all four locale/viewport combinations. No keyboard-focus failure was reported.
+- **Still required for Milford certification:** human keyboard and screen-reader usability review, photo license and factual source currency recheck, full visual review, and independent Cloudflare deployed-version provenance. GitHub build success is not Cloudflare deployment confirmation. **New Haven County remains 0/27 certified.**
+
 ## Milford live browser accessibility fix (2026-10-26, 19:04 EDT)
 
 - **Root cause from actual GitHub Actions browser logs:** run 40409268003 passed production-build, content-tests and staging-smoke, but its `milford-browser-audit` job **failed** with four `label-content-name-mismatch` findings on `.site-logo`, one each on English/Spanish desktop/mobile. All 3 Milford photographs loaded per viewport, with zero horizontal overflow; this was a real browser audit failure despite the overall workflow's `success` conclusion (the browser job uses `continue-on-error`).
