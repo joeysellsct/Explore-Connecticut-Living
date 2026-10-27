@@ -65,5 +65,11 @@ test('West Haven beach parking guidance distinguishes lot plate checks from stre
   for (const term of ['matrícula', 'no residentes', 'invitados y eventos', 'tarifas vigentes']) {
     assert.ok(parking.es.includes(term), 'Spanish parking guidance missing: ' + term);
   }
+  for (const term of ['Dawson Avenue', 'residents and annual pass holders', 'delinquent vehicle taxes', 'half an hour after sunset']) {
+    assert.ok(parking.en.includes(term), 'English parking exceptions missing: ' + term);
+  }
+  for (const term of ['Dawson Avenue', 'residentes y titulares de pases anuales', 'impuestos de vehículo vencidos', 'media hora después de la puesta del sol']) {
+    assert.ok(parking.es.includes(term), 'Spanish parking exceptions missing: ' + term);
+  }
   assert.equal(entries.filter(entry => entry.url === parking.url).length, 1, 'Do not duplicate the official parking link');
 });
