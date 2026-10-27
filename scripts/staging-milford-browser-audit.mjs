@@ -173,7 +173,7 @@ try {
         assert.equal(await page.locator('main h1').count(), 1, label + ': expected one main heading');
 
         const gallery = page.locator('section.eh-gallery figure');
-        assert.ok(await gallery.count() >= 2, label + ': expected two attributed West Haven photographs');
+        assert.equal(await gallery.count(), 3, label + ': expected all three licensed West Haven photographs');
         for (const [index, figure] of (await gallery.all()).entries()) {
           const photo = figure.locator('img');
           await photo.scrollIntoViewIfNeeded({timeout: 12000});
@@ -187,10 +187,12 @@ try {
                 new Promise(resolve => setTimeout(resolve, 15000))
               ]);
             }
-            return {width: element.naturalWidth, alt: element.alt};
+            return {width: element.naturalWidth, alt: element.alt, src: element.currentSrc};
           });
-          assert.ok(result.width > 0 && result.alt.includes('West Haven'),
-            label + ': image ' + (index + 1) + ' failed to load or lacks town-specific alt text');
+          assert.ok(result.width > 0,
+            label + ': image ' + (index + 1) + ' failed to load: ' + result.src);
+          assert.ok(result.alt.includes('West Haven'),
+            label + ': image ' + (index + 1) + ' lacks town-specific alt text: ' + result.alt);
           assert.equal(await figure.locator('figcaption a').count(), 2,
             label + ': image ' + (index + 1) + ' must link its license and original source');
         }
