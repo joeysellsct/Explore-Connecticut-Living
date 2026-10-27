@@ -109,6 +109,25 @@ for (const locale of ['en', 'es']) {
       assert.ok(html.includes(resource),
         `${path}: West Haven moving resource not rendered: ${resource}; check staging deployment freshness`);
     }
+    // Verify that the live page exposes the new fire-district selector.
+    // This is an SSR/deployment-freshness guard, not a substitute for
+    // interacting with the calculator in a real browser.
+    const districtSelect = html.match(/<select\b[^>]*>([\s\S]*?)<\/select>/i);
+    assert.ok(districtSelect, `${path}: West Haven fire-district selector not rendered`);
+    for (const choice of ['center', 'west-shore', 'allingtown', 'custom']) {
+      assert.ok(districtSelect[1].includes(`value="${choice}"`),
+        `${path}: missing West Haven district choice ${choice}`);
+    }
+    const selectorLabel = locale === 'en' ? 'Property fire district' : 'Distrito de bomberos de la propiedad';
+    const initialPrompt = locale === 'en'
+      ? 'Select the fire district or enter a verified custom rate to calculate.'
+      : 'Selecciona el distrito de bomberos o ingresa una tasa verificada para calcular.';
+    assert.ok(html.includes(selectorLabel), `${path}: missing localized district selector label`);
+    assert.ok(html.includes(initialPrompt),
+      `${path}: initial calculator must not display a misleading municipal-base-only estimate`);
+    for (const rate of (locale === 'en' ? ['36.48', '33.36', '34.41'] : ['36,48', '33,36', '34,41'])) {
+      assert.ok(districtSelect[1].includes(rate), `${path}: district option missing combined rate ${rate}`);
+    }
     // Confirm the tax and utility caveats are actually rendered, not just
     // present in source files; district-specific rates must not be flattened.
     const dueDiligenceTerms = locale === 'en'
