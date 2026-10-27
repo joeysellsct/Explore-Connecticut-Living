@@ -50,3 +50,20 @@ test('West Haven stays Joey personal pick only and staging protections stay in p
   assert.match(layout, /robots:\{index:allowIndexing,follow:allowIndexing\}/);
   assert.match(read('app/robots.ts'), /disallow:'\/'/);
 });
+
+
+test('West Haven beach parking guidance distinguishes lot plate checks from street guest passes', () => {
+  const source = read('lib/town-official-links.ts');
+  const section = source.match(/'west-haven':\s*\[([\s\S]*?)\],/);
+  assert.ok(section, 'West Haven municipal links missing');
+  const entries = [...section[1].matchAll(/\{[^{}]+\}/g)].map(match => JSON.parse(match[0]));
+  const parking = entries.find(entry => entry.url === 'https://www.cityofwesthaven.com/166/Human-Resources-Social-Services');
+  assert.ok(parking, 'Retain the official city beach and restricted-street parking guidance');
+  for (const term of ['license-plate-based', 'nonresident payment', 'guest/event permits', 'check current rules']) {
+    assert.ok(parking.en.includes(term), 'English parking guidance missing: ' + term);
+  }
+  for (const term of ['matrícula', 'no residentes', 'invitados y eventos', 'tarifas vigentes']) {
+    assert.ok(parking.es.includes(term), 'Spanish parking guidance missing: ' + term);
+  }
+  assert.equal(entries.filter(entry => entry.url === parking.url).length, 1, 'Do not duplicate the official parking link');
+});
