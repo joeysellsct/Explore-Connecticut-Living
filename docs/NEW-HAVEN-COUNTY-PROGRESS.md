@@ -2,6 +2,13 @@
 
 Snapshot: **2026-10-26**. This is a source-code coverage checklist, not a claim that pages are live or complete. Refresh this table after meaningful updates; never count a town as 100% complete without a live rendered-page audit.
 
+## Milford bilingual navigation and interactive tax-estimator browser QA (2026-10-26, evening EDT)
+
+- **Discovered real language-switch defect:** the browser audit's first run [40429370263](https://github.com/joeysellsct/Explore-Connecticut-Living/actions/runs/40429370263) found that changing the URL with client-side `next/link` navigation could leave the root `<html lang>` at the previous language. Root layout reads the locale from request headers, which are not refreshed on client-side transitions.
+- **Single-file fixes:** `5f28c119b19bd726a683871c94b0301b7959ba93` changed the town-guide bilingual link to a native anchor; `9884827125fc030faea7104b9544bda14d0108e3` did the same for the header language switcher. Native navigation refreshes the root document language. `6f479cf398a0c009f7997e740baa3504c997f5df` and `fc521bb7cf73636fc053fbc709dbddbdb7cdc34a` added live browser checks for the taxable-assessment override, editable mill rate, reset to Milford's 28.67 base rate, and both bilingual navigation directions.
+- **Verified rerun:** [GitHub Actions 40429572465, attempt 2](https://github.com/joeysellsct/Explore-Connecticut-Living/actions/runs/40429572465) completed with all four jobs successful, including the browser audit. The initial attempt had one stale-document-language result on EN desktop while other locale/viewport cases passed; rerunning after staging propagation passed all four. Browser logs report 3 loaded images, zero automated axe violations and zero horizontal overflow in EN/ES desktop/mobile. The interactive calculator and both language-switching assertions are included in the passing test script.
+- **Remaining before 100%:** independent Cloudflare deployment commit/version provenance, final factual and license-source rechecks, and human keyboard/screen-reader usability review. Browser automation is not equivalent to human assistive-technology testing. **New Haven County: 0/27 fully certified; Fairfield County not started.**
+
 ## Milford live keyboard-navigation regression (2026-10-26, 20:03 EDT)
 
 - **Confirmed code commit:** `c93ec61a844f9ca5bd64c80ee5b892b1ce548004` updated `scripts/staging-milford-browser-audit.mjs` to drive actual Tab key presses and verify focus order, `:focus-visible`, and a visible outline for the bilingual town-guide link and photograph credit links. Each test runs for English/Spanish desktop/mobile; the test is a real-browser supplement to axe, not a full human keyboard or screen-reader review.
