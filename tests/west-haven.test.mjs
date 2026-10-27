@@ -33,12 +33,23 @@ test('West Haven photos have Commons file identities, creators and reusable lice
   const photos = read('lib/town-photography.ts');
   const section = photos.match(/'west-haven':\s*\[([\s\S]*?)\],/);
   assert.ok(section, 'West Haven photo gallery must exist');
-  for (const name of ['Savin Rock, West Haven, CT, USA.jpg', 'WestHavenAerial5.jpg']) {
-    assert.ok(section[1].includes(name), 'Missing photo ' + name);
+  const photosByFile = [...section[1].matchAll(/\\{[^{}]+\\}/g)].map(match => JSON.parse(match[0]));
+  assert.equal(photosByFile.length, 3, 'Keep three distinct town-specific photographs');
+  assert.equal(new Set(photosByFile.map(photo => photo.file)).size, 3, 'Do not duplicate photographs');
+  for (const name of ['Savin Rock, West Haven, CT, USA.jpg', 'WestHavenAerial5.jpg', 'West Haven City Hall 109.JPG']) {
+    assert.ok(photosByFile.some(photo => photo.file === name), 'Missing photo ' + name);
   }
-  assert.equal((section[1].match(/"titleEs":/g) || []).length, 2);
-  assert.equal((section[1].match(/"credit":/g) || []).length, 2);
-  assert.equal((section[1].match(/"licenseUrl":/g) || []).length, 2);
+  for (const photo of photosByFile) {
+    assert.ok(photo.title.length > 20 && photo.titleEs.length > 20, 'Bilingual captions required');
+    assert.ok(photo.credit && photo.license && photo.licenseUrl, 'Attribution and reuse license required');
+    assert.equal(new URL(photo.licenseUrl).protocol, 'https:');
+  }
+  const cityHall = photosByFile.find(photo => photo.file === 'West Haven City Hall 109.JPG');
+  assert.equal(cityHall.credit, 'Pedro Xing');
+  assert.equal(cityHall.license, 'CC0 1.0');
+  assert.equal(cityHall.licenseUrl, 'https://creativecommons.org/publicdomain/zero/1.0/');
+  assert.match(cityHall.title, /West Haven City Hall.*2012/);
+  assert.match(cityHall.titleEs, /Ayuntamiento de West Haven.*2012/);
 });
 
 test('West Haven stays Joey personal pick only and staging protections stay in place', () => {
