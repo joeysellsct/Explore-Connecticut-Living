@@ -67,6 +67,37 @@ for (const locale of ['en', 'es']) {
   for (const [check, passed] of Object.entries(photoChecks)) {
     assert.ok(passed, `${path}: missing ${check}; investigate deployment freshness or rendering`);
   }
+  // A license string somewhere on the page is not proof that each town photo
+  // has its own caption, creator credit and original-file attribution.
+  // Check the rendered figure for every independently documented Milford and
+  // West Haven photograph in both languages. This verifies markup only; it
+  // does not prove that the remote image bytes loaded or the license is valid.
+  const auditedPhotos = {
+    'milford': [
+      {file:'Milford Green.jpg',credit:'Fadein',license:'https://creativecommons.org/publicdomain/zero/1.0/',en:'Milford Green (photographed October 2011)',es:'Milford Green, plaza histórica de Milford (fotografía de octubre de 2011)'},
+      {file:'Milford point on housatonic (28829150353).jpg',credit:'Russ (Russ Whitehurst / russimages)',license:'https://creativecommons.org/licenses/by/2.0/',en:'Milford Point on the Housatonic River (photographed September 2016)',es:'Milford Point junto al río Housatonic (fotografía de septiembre de 2016)'},
+      {file:'Silver Sands State Park (21029).jpg',credit:'Rhododendrites',license:'https://creativecommons.org/licenses/by-sa/4.0/',en:'Beach at Silver Sands State Park in Milford (photographed April 2017)',es:'Playa del parque estatal Silver Sands en Milford (fotografía de abril de 2017)'}
+    ],
+    'west-haven': [
+      {file:'Savin Rock, West Haven, CT, USA.jpg',credit:'Staib',license:'https://creativecommons.org/licenses/by-sa/4.0/',en:'Savin Rock outcropping and beach in West Haven (photographed 2021)',es:'Rocas y playa de Savin Rock en West Haven (fotografía de 2021)'},
+      {file:'WestHavenAerial5.jpg',credit:'PostMan1107',license:'https://creativecommons.org/licenses/by-sa/3.0/',en:'Aerial view of the Bradley Point and Savin Rock shoreline (photographed 2007)',es:'Vista aérea de la costa de Bradley Point y Savin Rock (fotografía de 2007)'}
+    ]
+  };
+  if (auditedPhotos[town]) {
+    const figures = [...html.matchAll(/<figure\\b[^>]*>[\\s\\S]*?<\\/figure>/gi)].map(match => match[0]);
+    for (const photo of auditedPhotos[town]) {
+      const encodedFile = encodeURIComponent(photo.file);
+      const figure = figures.find(fragment => fragment.includes('Special:Redirect/file/' + encodedFile));
+      assert.ok(figure, `${path}: missing town-specific photo ${photo.file}`);
+      const img = tags(figure, 'img').find(tag => tag.src?.includes(encodedFile));
+      assert.ok(img && img.alt?.includes(photo[locale]) && img.alt.includes(townName),
+        `${path}: missing localized, town-specific alt text for ${photo.file}`);
+      assert.ok(figure.includes(photo.credit), `${path}: missing photographer credit for ${photo.file}`);
+      assert.ok(figure.includes(photo.license), `${path}: missing per-photo license link for ${photo.file}`);
+      assert.ok(figure.includes('commons.wikimedia.org/wiki/File:' + encodedFile),
+        `${path}: missing original Wikimedia file attribution for ${photo.file}`);
+    }
+  }
   // Check the actual rendered staging page, not just source-code presence.
   // These are the newest independently verified Milford property-due-diligence
   // resources; check both locale routes to catch stale Cloudflare deployments.
