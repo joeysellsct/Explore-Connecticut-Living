@@ -197,6 +197,30 @@ try {
             label + ': image ' + (index + 1) + ' must link its license and original source');
         }
 
+        // Attribution must remain readable over the gallery overlay and reachable
+        // by keyboard, in both languages and viewport sizes.
+        const westCreditLinks = page.locator('section.eh-gallery figcaption a');
+        assert.equal(await westCreditLinks.count(), 6,
+          label + ': three photographs must expose six attribution links');
+        for (let i = 0; i < 6; i++) {
+          const color = await westCreditLinks.nth(i).evaluate(element =>
+            getComputedStyle(element).color);
+          assert.equal(color, 'rgb(255, 255, 255)',
+            label + ': attribution link ' + (i + 1) + ' is not white on dark overlay');
+        }
+        await westCreditLinks.first().focus();
+        await page.keyboard.press('Tab');
+        const creditFocus = await westCreditLinks.nth(1).evaluate(element => ({
+          active: document.activeElement === element,
+          visible: element.matches(':focus-visible'),
+          width: getComputedStyle(element).outlineWidth,
+          style: getComputedStyle(element).outlineStyle
+        }));
+        assert.ok(creditFocus.active && creditFocus.visible &&
+          creditFocus.style !== 'none' && parseFloat(creditFocus.width) >= 2,
+          label + ': attribution keyboard focus/order/indicator failed: ' +
+          JSON.stringify(creditFocus));
+
         // Confirm the visible bilingual link is reachable in the expected tab order.
         const backLink = page.locator('main a.town-back').first();
         const localeLink = page.locator('main a.town-back[hreflang]').first();
