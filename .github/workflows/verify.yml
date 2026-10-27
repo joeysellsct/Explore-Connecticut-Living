@@ -94,11 +94,11 @@ jobs:
           STAGING_ORIGIN: https://explore-connecticut-living-staging.joeysellsct.workers.dev
 
   new-haven-browser-audit:
-    # A failing browser audit is a certification blocker, not a reason to stop
-    # publishing safe source-level improvements to other New Haven County towns.
+    # Browser failures must fail verification visibly; the hourly buildout can
+    # still continue with other towns while a staging blocker is investigated.
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    continue-on-error: true
+    continue-on-error: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -109,7 +109,11 @@ jobs:
           npm install --no-save --no-package-lock --no-audit --no-fund playwright @axe-core/playwright
           npx playwright install --with-deps chromium
       - name: Audit live Milford and West Haven EN/ES desktop and mobile rendering
-        run: node scripts/staging-milford-browser-audit.mjs
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p artifacts/milford-browser
+          node scripts/staging-milford-browser-audit.mjs 2>&1 | tee artifacts/milford-browser/audit.log
         env:
           STAGING_ORIGIN: https://explore-connecticut-living-staging.joeysellsct.workers.dev
       - name: Save browser screenshots for manual visual review
