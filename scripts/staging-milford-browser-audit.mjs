@@ -60,6 +60,39 @@ try {
             failures.push(label + ': photo attribution link ' + (i + 1) + ' lacks white-on-dark contrast: ' + color);
           }
         }
+        // Exercise real keyboard tab order, not just static axe markup checks.
+        // The bilingual town-guide link must follow the back-to-towns link.
+        const backLink = page.locator('main a.town-back').first();
+        const languageLink = page.locator('main a.town-back[hreflang]').first();
+        assert.equal(await backLink.count(), 1, label + ': missing back-to-towns link');
+        assert.equal(await languageLink.count(), 1, label + ': missing bilingual town link');
+        await backLink.focus();
+        await page.keyboard.press('Tab');
+        const languageFocus = await languageLink.evaluate(element => ({
+          active: document.activeElement === element,
+          visible: element.matches(':focus-visible'),
+          outline: getComputedStyle(element).outlineWidth,
+          style: getComputedStyle(element).outlineStyle
+        }));
+        if (!languageFocus.active || !languageFocus.visible ||
+            languageFocus.style === 'none' || parseFloat(languageFocus.outline) < 2) {
+          failures.push(label + ': bilingual link keyboard focus/order/indicator failed: ' + JSON.stringify(languageFocus));
+        }
+        // Each photo has two sequentially tabbable attribution links.
+        const firstCredit = creditLinks.first();
+        const secondCredit = creditLinks.nth(1);
+        await firstCredit.focus();
+        await page.keyboard.press('Tab');
+        const creditFocus = await secondCredit.evaluate(element => ({
+          active: document.activeElement === element,
+          visible: element.matches(':focus-visible'),
+          outline: getComputedStyle(element).outlineWidth,
+          style: getComputedStyle(element).outlineStyle
+        }));
+        if (!creditFocus.active || !creditFocus.visible ||
+            creditFocus.style === 'none' || parseFloat(creditFocus.outline) < 2) {
+          failures.push(label + ': photo credit keyboard focus/order/indicator failed: ' + JSON.stringify(creditFocus));
+        }
         const overflow = await page.evaluate(() => ({
           scroll: document.documentElement.scrollWidth,
           viewport: window.innerWidth
