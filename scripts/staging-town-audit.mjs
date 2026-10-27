@@ -4,6 +4,9 @@ import assert from 'node:assert/strict';
 
 const origin = (process.env.STAGING_ORIGIN || 'https://explore-connecticut-living-staging.joeysellsct.workers.dev').replace(/\/$/, '');
 const town = process.env.AUDIT_TOWN || 'milford';
+// Restrict overrides to known-safe URL slugs; all town-specific checks must follow AUDIT_TOWN.
+assert.match(town, /^[a-z]+(?:-[a-z]+)*$/, 'AUDIT_TOWN must be a lowercase town slug');
+const townName = town.split('-').map(part => part[0].toUpperCase() + part.slice(1)).join(' ');
 const timeout = 25000;
 const get = async path => {
   const response = await fetch(origin + path, {signal: AbortSignal.timeout(timeout), redirect: 'follow'});
@@ -33,7 +36,8 @@ for (const locale of ['en', 'es']) {
   const meta = tags(html, 'meta');
   const description = meta.find(m => m.name === 'description')?.content;
   assert.ok(description && description.length >= 50 && description.length <= 170, `${path}: missing/invalid meta description`);
-  assert.ok(/<title>[^<]*Milford[^<]*<\/title>/i.test(html), `${path}: missing town-specific title`);
+  const pageTitle = html.match(/<title>([^<]*)<\/title>/i)?.[1];
+  assert.ok(pageTitle?.toLowerCase().includes(townName.toLowerCase()), `${path}: missing ${townName}-specific title`);
   const noindex = /\bnoindex\b/i.test(headers.get('x-robots-tag') || '') ||
     meta.some(m => m.name === 'robots' && /\bnoindex\b/i.test(m.content || ''));
   assert.ok(noindex, `${path}: staging is missing noindex`);
@@ -73,8 +77,10 @@ for (const locale of ['en', 'es']) {
     'Engineering-Division',
     '533/Inland-Wetlands'
   ];
-  for (const resource of milfordResourcePaths) {
-    assert.ok(html.includes(resource), `${path}: verified Milford resource not rendered: ${resource}; check staging deployment freshness`);
+  if (town === 'milford') {
+    for (const resource of milfordResourcePaths) {
+      assert.ok(html.includes(resource), `${path}: verified Milford resource not rendered: ${resource}; check staging deployment freshness`);
+    }
   }
   console.log(`PASS ${path}: bilingual metadata, SEO, housing, affiliate, photography and deployed resources`);
 }
