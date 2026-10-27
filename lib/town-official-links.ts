@@ -313,6 +313,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {en:"City GIS maps: parcel research, flood zones and school district maps",es:"Mapas SIG municipales: parcelas, zonas de inundación y distritos escolares",url:"https://milfordct.us/699/City-Maps-GIS"},
   {en:"Flood safety and insurance: local hazard guidance and FEMA map resources",es:"Seguridad y seguro contra inundaciones: riesgos locales y mapas de FEMA",url:"https://milfordct.us/243/Flood-Safety-Information"},
   {en:"Tax Collector: real estate bills, payment schedule and separate sewer charges",es:"Recaudación de impuestos: facturas inmobiliarias, fechas de pago y cargos de alcantarillado",url:"https://www.milfordct.us/663/Tax-Collector"},
+  // The City explicitly says listed boroughs and associations collect taxes separately; verify any parcel with the applicable district.
+  {en:"Boroughs and beach associations: check separate local tax collectors and potential additional bills for your address",es:"Distritos y asociaciones costeras: consulta recaudadores independientes y posibles impuestos adicionales según la dirección",url:"https://milfordct.us/668/Boroughs-Associations"},
   {en:"Milford public works and wastewater department contacts",es:"Contactos de obras públicas y aguas residuales de Milford",url:"https://www.milfordct.us/m/directory"},
   {en:"Milford beach parking: resident stickers and current requirements",es:"Estacionamiento en playas de Milford: permisos de residentes y requisitos vigentes",url:"https://milfordct.us/680/Resident-Parking-Stickers"},
   {en:"Milford beach water-quality monitoring and swimming advisories",es:"Control de calidad del agua en las playas de Milford y avisos para bañistas",url:"https://www.milfordct.us/402/Beach-Monitoring"},
