@@ -178,3 +178,54 @@ for (const locale of ['en', 'es']) {
     `sitemap.xml: missing ${locale} town page`);
 }
 console.log('PASS /sitemap.xml: both town routes present');
+
+
+// Milford certification also requires checking the SHARED Moving & Home
+// Resources destination, not just the affiliate cards embedded on town pages.
+// Run once in the Milford job; the West Haven job already checks its own town.
+if (town === 'milford') {
+  for (const locale of ['en', 'es']) {
+    const path = `/${locale}/moving-resources`;
+    const {html, headers} = await get(path);
+    const document = html.match(/<html\\b[^>]*>/i);
+    assert.ok(document && attrs(document[0]).lang === locale,
+      `${path}: missing or incorrect document language`);
+    const meta = tags(html, 'meta');
+    const noindex = /\\bnoindex\\b/i.test(headers.get('x-robots-tag') || '') ||
+      meta.some(m => m.name === 'robots' && /\\bnoindex\\b/i.test(m.content || ''));
+    assert.ok(noindex, `${path}: missing staging noindex protection`);
+    requireLink(html, 'canonical', origin + path);
+    for (const language of ['en-US', 'es-US']) {
+      const route = language === 'en-US' ? 'en' : 'es';
+      requireLink(html, 'alternate', `${origin}/${route}/moving-resources`, {hreflang: language});
+    }
+    requireLink(html, 'alternate', origin + '/en/moving-resources', {hreflang: 'x-default'});
+    const heading = locale === 'en' ? 'Moving &amp; Home Resources' : 'Recursos para mudarse e instalarse en Connecticut';
+    assert.ok(html.includes(heading) || (locale === 'en' && html.includes('Moving & Home Resources')),
+      `${path}: missing localized Moving & Home Resources heading`);
+    const expectedDisclosure = locale === 'en'
+      ? ['Affiliate disclosure:', 'As an Amazon Associate', 'Referral link: I may receive compensation']
+      : ['Aviso de afiliados:', 'Como Asociado de Amazon', 'Enlace de referido: puedo recibir compensación'];
+    for (const phrase of expectedDisclosure) {
+      assert.ok(html.includes(phrase), `${path}: missing disclosure "${phrase}"`);
+    }
+    assert.ok(html.includes('Equal Housing Opportunity') || html.includes('Igualdad de oportunidades de vivienda'),
+      `${path}: missing Equal Housing notice`);
+    const links = tags(html, 'a');
+    const frontier = links.find(a => a.href?.includes('frontier.com/ftr-buy?user_id=122784') &&
+      a.href.includes('affiliateKey=c75de3d7-1f0b-4d0d-8603-02aa8517357f'));
+    const amazon = links.find(a => a.href?.includes('amazon.com/shop/influencer-9242d3e9') &&
+      a.href.includes('tag=josephf.mcvet-20'));
+    for (const [name, link] of [['Frontier referral', frontier], ['Amazon storefront', amazon]]) {
+      assert.ok(link, `${path}: ${name} destination/tracking parameters missing`);
+      assert.ok(link.rel?.split(/\\s+/).includes('sponsored'),
+        `${path}: ${name} link missing rel=sponsored`);
+    }
+    for (const required of ['https://broadbandmap.fcc.gov/', 'https://portal.ct.gov/pura',
+      `/${locale}/compare`, `/${locale}/towns`]) {
+      assert.ok(links.some(a => a.href === required),
+        `${path}: missing moving resource/navigation link ${required}`);
+    }
+    console.log(`PASS Moving & Home Resources ${path}: bilingual SEO, noindex, disclosures, partner destinations and navigation`);
+  }
+}
