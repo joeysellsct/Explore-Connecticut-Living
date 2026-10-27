@@ -120,3 +120,18 @@ test('West Haven Assessor resource warns about district-specific combined tax ra
   assert.ok(assessor.en.includes('fire-district street list') && assessor.en.includes('combined tax rate'));
   assert.ok(assessor.es.includes('distrito de bomberos') && assessor.es.includes('tasa total'));
 });
+
+test('West Haven estimator clearly warns that base mills exclude three fire-district rates', () => {
+  const component = read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
+  const section = component.match(/\{slug==='west-haven'&&<p className="town-tax-district-note">([\s\S]*?)<\/p>\}/);
+  assert.ok(section, 'West Haven needs a prominent bilingual calculator-specific district warning');
+  for (const phrase of ['25.58-mill', '36.48', '33.36', '34.41', 'Center', 'West Shore', 'Allingtown', 'replace the base rate', 'actual bill']) {
+    assert.ok(section[1].includes(phrase), 'English district-tax warning missing ' + phrase);
+  }
+  for (const phrase of ['25,58 mills', '36,48', '33,36', '34,41', 'distrito de bomberos', 'sustituye la tasa base', 'tasa vigente']) {
+    assert.ok(section[1].includes(phrase), 'Spanish district-tax warning missing ' + phrase);
+  }
+  assert.ok(section[1].includes('https://www.cityofwesthaven.com/m/faq'), 'Link to official district-rate FAQ');
+  assert.ok(section[1].includes('https://www.cityofwesthaven.com/152/Assessors-Office'), 'Link to district street list');
+  assert.ok(component.includes("const rateEdited=verifiedRate!==undefined"), 'Keep editable rate and reset behavior');
+});
