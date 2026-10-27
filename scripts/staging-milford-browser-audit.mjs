@@ -195,6 +195,23 @@ try {
             label + ': image ' + (index + 1) + ' must link its license and original source');
         }
 
+        // Confirm the visible bilingual link is reachable in the expected tab order.
+        const backLink = page.locator('main a.town-back').first();
+        const localeLink = page.locator('main a.town-back[hreflang]').first();
+        assert.equal(await backLink.count(), 1, label + ': missing back-to-towns link');
+        assert.equal(await localeLink.count(), 1, label + ': missing bilingual town link');
+        await backLink.focus();
+        await page.keyboard.press('Tab');
+        const focus = await localeLink.evaluate(element => ({
+          active: document.activeElement === element,
+          visible: element.matches(':focus-visible'),
+          width: getComputedStyle(element).outlineWidth,
+          style: getComputedStyle(element).outlineStyle
+        }));
+        assert.ok(focus.active && focus.visible && focus.style !== 'none' &&
+          parseFloat(focus.width) >= 2,
+          label + ': bilingual keyboard tab order/focus indicator failed: ' + JSON.stringify(focus));
+
         const selector = page.locator('.town-tax-district-select select');
         const fields = page.locator('.tax-fields input');
         const estimate = page.locator('.tax-estimate');
@@ -281,8 +298,8 @@ try {
 }
 if (failures.length) {
   for (const failure of failures) console.error('::error::' + failure.replace(/\n/g, ' '));
-  console.error('Milford browser certification blocked by ' + failures.length + ' finding(s). HTTP-only checks are not sufficient.');
+  console.error('Milford/West Haven browser certification blocked by ' + failures.length + ' finding(s). HTTP-only checks are not sufficient.');
   process.exitCode = 1;
 } else {
-  console.log('PASS: Milford EN/ES desktop/mobile image loading, alt text, WCAG 2.0/2.1/2.2 AA axe checks and horizontal overflow.');
+  console.log('PASS: Milford and West Haven EN/ES desktop/mobile imagery, accessibility, tax interactions and navigation.');
 }
