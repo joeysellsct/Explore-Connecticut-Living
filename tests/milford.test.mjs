@@ -320,14 +320,14 @@ test('Milford nature and history attractions have bilingual organization-owned s
   }
 });
 
-test('Changing Connecticut towns clears the previous parcel-specific tax assessment', () => {
+test('Changing Connecticut towns clears the previous parcel-specific tax assessment and fire district', () => {
   const component = read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
   assert.ok(component.includes("const [assessedValue,setAssessedValue]=useState('');"), 'Keep parcel-specific assessment in state');
-  assert.match(
-    component,
-    /useEffect\(\(\)=>\{setMillRate\(verifiedRate===undefined\?'':String\(verifiedRate\)\);setAssessedValue\(''\);\},\[slug,verifiedRate\]\);/,
-    'A different town must reset both its verified rate and the previous parcel assessment'
-  );
+  const townReset = component.match(/useEffect\(\(\)=>\{([^}]+)\},\[slug,verifiedRate\]\);/);
+  assert.ok(townReset, 'Changing town must reset the estimator inputs');
+  assert.match(townReset[1], /setMillRate\(slug==='west-haven'\|\|verifiedRate===undefined\?'':String\(verifiedRate\)\)/, 'West Haven must not revert to its base-only rate');
+  assert.ok(townReset[1].includes("setAssessedValue('')"), 'Changing town must clear the prior parcel assessment');
+  assert.ok(townReset[1].includes("setWestHavenDistrict('')"), 'Changing town must clear the previous West Haven fire district');
   assert.ok(component.includes('const taxableBase=hasAssessedValue?Number(assessedValue):Number(homeValue)*.7;'), 'After reset, use the generic estimate until a new parcel assessment is entered');
 });
 
