@@ -109,6 +109,29 @@ try {
           }
         }
         await page.screenshot({path: 'artifacts/milford-browser/' + locale + '-' + device + '.png', fullPage: true, animations: 'disabled'});
+        // Exercise the actual interactive tax estimator, not only its markup.
+        // A current taxable assessment overrides the illustrative 70% home-value rule.
+        const taxFields = page.locator('.tax-fields input');
+        assert.equal(await taxFields.count(), 3, label + ': expected home value, taxable assessment and mill rate inputs');
+        await taxFields.nth(1).fill('240000');
+        await page.waitForFunction(() => document.querySelector('.tax-estimate')?.textContent?.includes('$6,881'), null, {timeout: 10000});
+        await taxFields.nth(2).fill('29.1905');
+        await page.waitForFunction(() => document.querySelector('.tax-estimate')?.textContent?.includes('$7,006'), null, {timeout: 10000});
+        const resetRate = page.getByRole('button', {name: locale === 'es'
+          ? 'Restaurar tasa municipal base verificada'
+          : 'Restore verified municipal base rate'});
+        await resetRate.click();
+        await page.waitForFunction(() => document.querySelector('.tax-estimate')?.textContent?.includes('$6,881'), null, {timeout: 10000});
+        assert.equal(await taxFields.nth(2).inputValue(), '28.67', label + ': reset must restore Milford FY2027 base rate');
+        // Activate the visible town-guide language link and confirm the actual
+        // destination, instead of assuming a correctly labeled link works.
+        await languageLink.click();
+        const oppositeLocale = locale === 'en' ? 'es' : 'en';
+        await page.waitForURL(origin + '/' + oppositeLocale + '/towns/milford', {timeout: 15000});
+        assert.equal(await page.locator('html').getAttribute('lang'), oppositeLocale,
+          label + ': language link did not switch the rendered document language');
+        assert.equal((await page.locator('main h1').textContent())?.trim(), 'Milford, Connecticut',
+          label + ': language link did not preserve the town');
         console.log('AUDITED ' + label + ': photos=' + count + ', axe violations=' + axe.violations.length + ', overflow=' + (overflow.scroll - overflow.viewport) + 'px');
       } catch (error) {
         failures.push(label + ': browser audit failed: ' + (error?.message || String(error)));
