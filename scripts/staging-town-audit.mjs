@@ -84,7 +84,7 @@ for (const locale of ['en', 'es']) {
     ]
   };
   if (auditedPhotos[town]) {
-    const figures = [...html.matchAll(/<figure\\b[^>]*>[\\s\\S]*?<\\/figure>/gi)].map(match => match[0]);
+    const figures = [...html.matchAll(/<figure\b[^>]*>[\s\S]*?<\/figure>/gi)].map(match => match[0]);
     for (const photo of auditedPhotos[town]) {
       const encodedFile = encodeURIComponent(photo.file);
       const figure = figures.find(fragment => fragment.includes('Special:Redirect/file/' + encodedFile));
