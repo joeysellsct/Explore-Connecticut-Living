@@ -132,6 +132,16 @@ try {
           label + ': language link did not switch the rendered document language');
         assert.equal((await page.locator('main h1').textContent())?.trim(), 'Milford, Connecticut',
           label + ': language link did not preserve the town');
+        // The header switcher must also preserve the town and restore the
+        // original document language after a full cross-locale navigation.
+        const headerSwitcher = page.locator('header a.header-language');
+        assert.equal(await headerSwitcher.count(), 1, label + ': missing header language switcher');
+        await headerSwitcher.click();
+        await page.waitForURL(origin + '/' + locale + '/towns/milford', {timeout: 15000});
+        assert.equal(await page.locator('html').getAttribute('lang'), locale,
+          label + ': header language switcher left the root document language stale');
+        assert.equal((await page.locator('main h1').textContent())?.trim(), 'Milford, Connecticut',
+          label + ': header language switcher did not preserve the town');
         console.log('AUDITED ' + label + ': photos=' + count + ', axe violations=' + axe.violations.length + ', overflow=' + (overflow.scroll - overflow.viewport) + 'px');
       } catch (error) {
         failures.push(label + ': browser audit failed: ' + (error?.message || String(error)));
