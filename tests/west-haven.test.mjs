@@ -94,3 +94,17 @@ test('West Haven official moving resources cover recycling, collection, disposal
     assert.ok(entry.es.includes(es), 'Missing Spanish detail for ' + urlPart);
   }
 });
+
+test('West Haven guide explains fire-district tax and address-specific water service in both languages', () => {
+  const guides = read('lib/town-highlights.ts');
+  const section = guides.match(/'west-haven':\\s*\\{en:'([\\s\\S]*?)',es:'([\\s\\S]*?)',places:\\[([\\s\\S]*?)\\]\\}/);
+  assert.ok(section, 'West Haven bilingual guide must exist');
+  for (const term of ['25.58 mills', 'fire district', 'street-by-fire-district', 'sewer bills separately', 'Regional Water Authority', 'does not prove']) {
+    assert.ok(section[1].includes(term), 'English due-diligence guidance missing: ' + term);
+  }
+  for (const term of ['25,58 mills', 'distrito de bomberos', 'facturas de alcantarillado por separado', 'Regional Water Authority', 'no garantiza']) {
+    assert.ok(section[2].includes(term), 'Spanish due-diligence guidance missing: ' + term);
+  }
+  assert.ok(section[1].length > 2500 && section[2].length > 2500, 'Both guides should have practical depth');
+  assert.ok(section[1].includes('\\n\\n') && section[2].includes('\\n\\n'), 'Keep readable multi-paragraph guidance');
+});
