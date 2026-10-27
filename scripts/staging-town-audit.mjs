@@ -82,6 +82,21 @@ for (const locale of ['en', 'es']) {
       assert.ok(html.includes(resource), `${path}: verified Milford resource not rendered: ${resource}; check staging deployment freshness`);
     }
   }
+  // West Haven's city-published beach-parking rules are an important moving
+  // resource. Check both live languages so a successful generic SEO audit does
+  // not hide a stale staging deployment missing the latest verified guidance.
+  if (town === 'west-haven') {
+    const westHavenParking = 'https://www.cityofwesthaven.com/166/Human-Resources-Social-Services';
+    assert.ok(html.includes(westHavenParking),
+      `${path}: official West Haven parking resource missing; check staging deployment freshness`);
+    const expectedParkingDetails = locale === 'en'
+      ? ['license-plate-based', 'Dawson Avenue', 'half an hour after sunset', 'guest/event permits']
+      : ['matrícula', 'Dawson Avenue', 'media hora después de la puesta del sol', 'invitados y eventos'];
+    for (const detail of expectedParkingDetails) {
+      assert.ok(html.includes(detail),
+        `${path}: West Haven parking guidance missing "${detail}"; check staging deployment freshness`);
+    }
+  }
   console.log(`PASS ${path}: bilingual metadata, SEO, housing, affiliate, photography and deployed resources`);
 }
 const sitemap = await get('/sitemap.xml');
