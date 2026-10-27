@@ -33,7 +33,7 @@ test('West Haven photos have Commons file identities, creators and reusable lice
   const photos = read('lib/town-photography.ts');
   const section = photos.match(/'west-haven':\s*\[([\s\S]*?)\],/);
   assert.ok(section, 'West Haven photo gallery must exist');
-  const photosByFile = [...section[1].matchAll(/\\{[^{}]+\\}/g)].map(match => JSON.parse(match[0]));
+  const photosByFile = [...section[1].matchAll(/\{[^{}]+\}/g)].map(match => JSON.parse(match[0]));
   assert.equal(photosByFile.length, 3, 'Keep three distinct town-specific photographs');
   assert.equal(new Set(photosByFile.map(photo => photo.file)).size, 3, 'Do not duplicate photographs');
   for (const name of ['Savin Rock, West Haven, CT, USA.jpg', 'WestHavenAerial5.jpg', 'West Haven City Hall 109.JPG']) {
