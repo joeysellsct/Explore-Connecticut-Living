@@ -87,6 +87,11 @@ jobs:
         run: node scripts/staging-town-audit.mjs
         env:
           STAGING_ORIGIN: https://explore-connecticut-living-staging.joeysellsct.workers.dev
+      - name: Audit West Haven bilingual town pages without claiming certification
+        run: node scripts/staging-town-audit.mjs
+        env:
+          AUDIT_TOWN: west-haven
+          STAGING_ORIGIN: https://explore-connecticut-living-staging.joeysellsct.workers.dev
 
   milford-browser-audit:
     # A failing browser audit is a certification blocker, not a reason to stop
