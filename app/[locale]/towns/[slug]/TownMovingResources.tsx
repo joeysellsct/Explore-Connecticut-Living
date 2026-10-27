@@ -19,9 +19,11 @@ export default function TownMovingResources({slug,town,locale}:{slug:string;town
  const taxableBase=hasAssessedValue?Number(assessedValue):Number(homeValue)*.7;
  // West Haven has three fire-district totals; never display a misleading base-only estimate.
  const needsWestHavenDistrict=slug==='west-haven'&&!westHavenDistrict;
- const estimate=!needsWestHavenDistrict&&(hasAssessedValue?validAssessedValue:validValue)&&validRate?taxableBase*Number(millRate)/1000:null;
+ // A manually entered municipal base rate is not a valid West Haven combined district rate.
+ const invalidWestHavenBaseRate=slug==='west-haven'&&validRate&&Number(millRate)===verifiedRate;
+ const estimate=!needsWestHavenDistrict&&!invalidWestHavenBaseRate&&(hasAssessedValue?validAssessedValue:validValue)&&validRate?taxableBase*Number(millRate)/1000:null;
  const moneyLocale=es?'es-US':'en-US';
- const validationMessage=needsWestHavenDistrict?(es?'Selecciona el distrito de bomberos o ingresa una tasa verificada para calcular.':'Select the fire district or enter a verified custom rate to calculate.'):hasAssessedValue&&!validAssessedValue?(es?'Ingresa una tasación imponible válida (cero o mayor).':'Enter a valid taxable assessed value (zero or greater).'):!hasAssessedValue&&!validValue?(es?'Ingresa un valor de vivienda válido (cero o mayor).':'Enter a valid home value (zero or greater).'):(es?'Ingresa una tasa en mills válida (cero o mayor).':'Enter a valid mill rate (zero or greater).');
+ const validationMessage=needsWestHavenDistrict?(es?'Selecciona el distrito de bomberos o ingresa una tasa verificada para calcular.':'Select the fire district or enter a verified custom rate to calculate.'):invalidWestHavenBaseRate?(es?'La tasa municipal base de 25,58 mills no incluye el distrito de bomberos. Selecciona el distrito correcto o ingresa una tasa total verificada.':'The 25.58-mill municipal base rate excludes fire-district taxes. Select the correct district or enter a verified combined rate.'):hasAssessedValue&&!validAssessedValue?(es?'Ingresa una tasación imponible válida (cero o mayor).':'Enter a valid taxable assessed value (zero or greater).'):!hasAssessedValue&&!validValue?(es?'Ingresa un valor de vivienda válido (cero o mayor).':'Enter a valid home value (zero or greater).'):(es?'Ingresa una tasa en mills válida (cero o mayor).':'Enter a valid mill rate (zero or greater).');
  const isUI=uiElectricTowns.has(slug);
  return <section className="moving-resources">
   <span className="towns-kicker">{es?'PLANIFICA LOS COSTOS Y SERVICIOS':'PLAN YOUR COSTS & SERVICES'}</span>
