@@ -171,6 +171,18 @@ for (const locale of ['en', 'es']) {
     for (const resource of milfordResourcePaths) {
       assert.ok(html.includes(resource), `${path}: verified Milford resource not rendered: ${resource}; check staging deployment freshness`);
     }
+    // OPM FY2027 distinguishes association flat fees from millage. Verify the
+    // new explanation is actually rendered on both live languages; a green
+    // source regression test alone cannot establish staging freshness.
+    const flatFeeSafeguards = locale === 'es'
+      ? ['cuota fija de $200', 'cuota fija de $300', 'NO son tasas en mills',
+         '0 mills no significa que no exista una cuota']
+      : ['$200 flat fee', '$300 flat fee', 'flat fees are NOT mill rates',
+         '0 mills does not mean no fee'];
+    for (const phrase of flatFeeSafeguards) {
+      assert.ok(html.includes(phrase),
+        `${path}: OPM FY2027 association fee safeguard missing: ${phrase}; check Cloudflare deployment freshness`);
+    }
   }
   // West Haven's city-published beach-parking rules are an important moving
   // resource. Check both live languages so a successful generic SEO audit does
