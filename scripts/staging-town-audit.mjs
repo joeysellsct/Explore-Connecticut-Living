@@ -339,10 +339,24 @@ assert.ok(internalPaths.size >= 4,
 const routes = [...internalPaths].sort();
 for (let index = 0; index < routes.length; index += 6) {
   await Promise.all(routes.slice(index, index + 6).map(async path => {
-    const response = await fetch(origin + path, {
-      signal: AbortSignal.timeout(timeout),
-      redirect: 'follow'
-    });
+    // Retry only transient network resets/timeouts. Never mask HTTP failures
+    // or redirects outside staging; both remain certification failures.
+    let response;
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        response = await fetch(origin + path, {
+          signal: AbortSignal.timeout(timeout),
+          redirect: 'follow'
+        });
+        break;
+      } catch (error) {
+        const detail = String(error?.message || error) + ' ' + String(error?.cause || '');
+        const transient = /fetch failed|ETIMEDOUT|ECONNRESET|ENETUNREACH|TimeoutError|aborted/i.test(detail);
+        if (!transient || attempt === 3) throw error;
+        console.warn(`RETRY internal ${path}: transient failure on attempt ${attempt}: ${detail.slice(0, 160)}`);
+        await new Promise(resolve => setTimeout(resolve, 1500 * attempt));
+      }
+    }
     assert.equal(response.status, 200,
       `Broken internal link from ${town} page: ${path} returned HTTP ${response.status}`);
     assert.equal(new URL(response.url).origin, origin,
