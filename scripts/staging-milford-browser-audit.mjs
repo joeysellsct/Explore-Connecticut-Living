@@ -256,6 +256,20 @@ try {
           ['allingtown', '34.41', '8258']
         ]) {
           await selector.selectOption(district);
+          // A newly hydrated page can replace an early DOM selection before React
+          // attaches its change handler. Wait for the controlled input, and retry
+          // the user selection once rather than treating hydration timing as a failure.
+          try {
+            await page.waitForFunction(expected =>
+              document.querySelectorAll('.tax-fields input')[2]?.value === expected,
+              rate, {timeout: 2500});
+          } catch {
+            await selector.selectOption('');
+            await selector.selectOption(district);
+            await page.waitForFunction(expected =>
+              document.querySelectorAll('.tax-fields input')[2]?.value === expected,
+              rate, {timeout: 10000});
+          }
           assert.equal(await fields.nth(2).inputValue(), rate,
             label + ': ' + district + ' must set the combined fire-district rate');
           await expectEstimate(dollars);
