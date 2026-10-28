@@ -129,6 +129,25 @@ for (const locale of ['en', 'es']) {
     `${path}: missing paid-referral identification`);
   assert.ok(html.includes('Frontier') && html.includes('Amazon'),
     `${path}: missing moving partner links`);
+  // Town pages must carry the actual approved referral destinations and
+  // sponsored-link attributes, not merely mention the partner names. Check
+  // both localized rendered routes; this does not attest third-party uptime.
+  const partnerAnchors = tags(html, 'a');
+  const approvedPartners = [
+    ['Frontier referral', 'frontier.com/ftr-buy?user_id=122784',
+      'affiliateKey=c75de3d7-1f0b-4d0d-8603-02aa8517357f'],
+    ['Amazon storefront', 'amazon.com/shop/influencer-9242d3e9',
+      'tag=josephf.mcvet-20']
+  ];
+  for (const [name, destination, tracking] of approvedPartners) {
+    const link = partnerAnchors.find(anchor => {
+      const href = (anchor.href || '').replace(/&amp;/g, '&');
+      return href.includes(destination) && href.includes(tracking);
+    });
+    assert.ok(link, `${path}: missing approved ${name} destination and tracking on town page`);
+    assert.ok(link.rel?.split(/\\s+/).includes('sponsored'),
+      `${path}: ${name} town-page link must use rel=sponsored`);
+  }
   const photoChecks = {
     'Wikimedia-hosted town photos': html.includes('commons.wikimedia.org/wiki/Special:Redirect/file/'),
     'Creative Commons license links': html.includes('creativecommons.org'),
