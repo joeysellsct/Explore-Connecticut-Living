@@ -215,12 +215,21 @@ for (const locale of ['en', 'es']) {
 }
 console.log('PASS /sitemap.xml: both town routes present');
 
-// Crawl every first-hop same-origin link rendered in the English and Spanish
-// town pages. This catches dead navigation and broken related-town links that
-// source-only href assertions cannot detect. It is NOT a sitewide or external
-// link audit; external operator/municipal URLs require separate source checks.
+// Crawl first-hop same-origin links from both localized town pages and, for
+// Milford's certification, the shared Moving & Home Resources pages. This
+// checks navigation destinations, not external operator/municipal URLs or
+// in-page fragment targets. Keep the shared-page crawl in the Milford job to
+// avoid duplicating the same requests in the West Haven job.
+const linkSourcePages = [...auditedTownPages];
+if (town === 'milford') {
+  for (const locale of ['en', 'es']) {
+    const path = `/${locale}/moving-resources`;
+    const {html} = await get(path);
+    linkSourcePages.push({path, html});
+  }
+}
 const internalPaths = new Set();
-for (const {path, html} of auditedTownPages) {
+for (const {path, html} of linkSourcePages) {
   for (const anchor of tags(html, 'a')) {
     if (!anchor.href || anchor.href.startsWith('#')) continue;
     let target;
@@ -233,7 +242,7 @@ for (const {path, html} of auditedTownPages) {
   }
 }
 assert.ok(internalPaths.size >= 4,
-  `Expected at least four first-hop internal routes from bilingual ${town} pages`);
+  `Expected at least four first-hop internal routes from bilingual ${town} and shared pages`);
 const routes = [...internalPaths].sort();
 for (let index = 0; index < routes.length; index += 6) {
   await Promise.all(routes.slice(index, index + 6).map(async path => {
@@ -247,7 +256,7 @@ for (let index = 0; index < routes.length; index += 6) {
       `Internal link ${path} redirected outside staging origin`);
   }));
 }
-console.log(`PASS ${town}: ${routes.length} unique first-hop internal links returned HTTP 200 across EN/ES town pages`);
+console.log(`PASS ${town}: ${routes.length} unique first-hop internal links returned HTTP 200 across EN/ES town and shared resource pages (where applicable)`);
 
 
 
