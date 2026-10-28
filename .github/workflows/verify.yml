@@ -42,11 +42,12 @@ jobs:
           NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY }}
 
   staging-smoke:
-    # Run network checks from GitHub-hosted infrastructure instead of the assistant's
-    # DNS-restricted environment. Report failures without blocking source/build checks.
+    # Formal town certification requires staging checks to pass, not merely run.
+    # Keep this job independent of source/build checks, but fail the workflow if
+    # staging is unavailable or bilingual content, disclosures or links regress.
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    continue-on-error: true
+    continue-on-error: false
     steps:
       - uses: actions/checkout@v4
       - name: Check staging DNS, bilingual pages and indexing safeguards
