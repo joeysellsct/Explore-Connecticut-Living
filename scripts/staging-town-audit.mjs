@@ -23,6 +23,23 @@ const requireLink = (html, rel, expectedHref, extra = {}) => {
   assert.ok(found, `Missing <link rel="${rel}" href="${expectedHref}"> ${JSON.stringify(extra)}`);
 };
 
+// Require the rendered Equal Housing mark and full disclosure, not just
+// an unrelated phrase somewhere in the HTML. This is an automated markup
+// safeguard, not a legal or human visual review of the logo.
+const requireHousingFooter = (html, path, locale) => {
+  const mark = html.match(/<span\b[^>]*class=["'][^"']*\bfooter-minimal-housing\b[^"']*["'][^>]*>([\s\S]*?)<\/svg>/i)?.[1];
+  assert.ok(mark && /<svg\b/i.test(mark) && (mark.match(/<path\b/gi) || []).length >= 2,
+    `${path}: missing rendered Equal Housing SVG mark or its symbol paths`);
+  const notice = html.match(/<p\b[^>]*class=["'][^"']*\bfooter-housing-disclosure\b[^"']*["'][^>]*>([\s\S]*?)<\/p>/i)?.[1];
+  assert.ok(notice && notice.length >= 80 && notice.includes(locale === 'es' ? 'Apoyamos' : 'We support'),
+    `${path}: missing localized full Equal Housing footer disclosure`);
+  const anchors = tags(html, 'a');
+  for (const route of ['privacy', 'terms']) {
+    assert.ok(anchors.some(a => a.href === `/${locale}/${route}`),
+      `${path}: missing localized footer ${route} legal link`);
+  }
+};
+
 const robots = await get('/robots.txt');
 assert.match(robots.html, /^Disallow:\s*\/\s*$/im, 'Staging must disallow all robots');
 console.log('PASS /robots.txt: disallow all');
@@ -89,6 +106,7 @@ for (const locale of ['en', 'es']) {
     `${path}: missing agent/broker identification`);
   assert.ok(html.includes(locale === 'es' ? 'Igualdad de oportunidades de vivienda' : 'Equal Housing Opportunity'),
     `${path}: missing Equal Housing disclosure`);
+  requireHousingFooter(html, path, locale);
   assert.ok(html.includes(locale === 'es' ? 'Como Asociado de Amazon' : 'As an Amazon Associate'),
     `${path}: missing Amazon compensation disclosure`);
   assert.ok(html.includes(locale === 'es' ? 'Enlace remunerado' : 'Paid referral'),
@@ -295,6 +313,7 @@ if (town === 'milford') {
     }
     assert.ok(html.includes('Equal Housing Opportunity') || html.includes('Igualdad de oportunidades de vivienda'),
       `${path}: missing Equal Housing notice`);
+    requireHousingFooter(html, path, locale);
     const links = tags(html, 'a');
     const frontier = links.find(a => a.href?.includes('frontier.com/ftr-buy?user_id=122784') &&
       a.href.includes('affiliateKey=c75de3d7-1f0b-4d0d-8603-02aa8517357f'));
