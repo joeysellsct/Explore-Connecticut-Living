@@ -27,9 +27,11 @@ const robots = await get('/robots.txt');
 assert.match(robots.html, /^Disallow:\s*\/\s*$/im, 'Staging must disallow all robots');
 console.log('PASS /robots.txt: disallow all');
 
+const auditedTownPages = [];
 for (const locale of ['en', 'es']) {
   const path = `/${locale}/towns/${town}`;
   const {html, headers} = await get(path);
+  auditedTownPages.push({path, html});
   const document = html.match(/<html\b[^>]*>/i);
   assert.ok(document, `${path}: missing html element`);
   assert.equal(attrs(document[0]).lang, locale, `${path}: wrong html lang`);
@@ -212,6 +214,41 @@ for (const locale of ['en', 'es']) {
     `sitemap.xml: missing ${locale} town page`);
 }
 console.log('PASS /sitemap.xml: both town routes present');
+
+// Crawl every first-hop same-origin link rendered in the English and Spanish
+// town pages. This catches dead navigation and broken related-town links that
+// source-only href assertions cannot detect. It is NOT a sitewide or external
+// link audit; external operator/municipal URLs require separate source checks.
+const internalPaths = new Set();
+for (const {path, html} of auditedTownPages) {
+  for (const anchor of tags(html, 'a')) {
+    if (!anchor.href || anchor.href.startsWith('#')) continue;
+    let target;
+    try { target = new URL(anchor.href.replace(/&amp;/g, '&'), origin + path); }
+    catch { assert.fail(`${path}: invalid anchor href ${anchor.href}`); }
+    if (target.origin !== origin) continue;
+    // Ignore fragment and query variations: each destination route only needs
+    // one HTTP status check, while in-page anchor behavior is browser QA.
+    internalPaths.add(target.pathname + target.search);
+  }
+}
+assert.ok(internalPaths.size >= 4,
+  `Expected at least four first-hop internal routes from bilingual ${town} pages`);
+const routes = [...internalPaths].sort();
+for (let index = 0; index < routes.length; index += 6) {
+  await Promise.all(routes.slice(index, index + 6).map(async path => {
+    const response = await fetch(origin + path, {
+      signal: AbortSignal.timeout(timeout),
+      redirect: 'follow'
+    });
+    assert.equal(response.status, 200,
+      `Broken internal link from ${town} page: ${path} returned HTTP ${response.status}`);
+    assert.equal(new URL(response.url).origin, origin,
+      `Internal link ${path} redirected outside staging origin`);
+  }));
+}
+console.log(`PASS ${town}: ${routes.length} unique first-hop internal links returned HTTP 200 across EN/ES town pages`);
+
 
 
 // Milford certification also requires checking the SHARED Moving & Home
