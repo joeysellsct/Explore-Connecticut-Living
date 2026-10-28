@@ -3,6 +3,12 @@ name: Milford primary-source watch
 # Read-only monitoring. Never auto-publish facts just because a URL responds
 # or an upstream dataset changes. Verified EN/ES updates need a separate gate.
 on:
+  # Run once on changes to this monitor so new checks are exercised before the
+  # next daily schedule. This remains read-only and cannot publish town data.
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/milford-source-watch.yml
   schedule:
     - cron: '41 13 * * *'
   workflow_dispatch:
