@@ -413,12 +413,12 @@ if (town === 'milford') {
     for (const route of ['privacy', 'terms']) {
       const path = `/${locale}/${route}`;
       const {html, headers} = await get(path);
-      const document = html.match(/<html\\b[^>]*>/i);
+      const document = html.match(/<html\b[^>]*>/i);
       assert.ok(document && attrs(document[0]).lang === locale,
         `${path}: missing or incorrect document language`);
       const meta = tags(html, 'meta');
-      const noindex = /\\bnoindex\\b/i.test(headers.get('x-robots-tag') || '') ||
-        meta.some(m => m.name === 'robots' && /\\bnoindex\\b/i.test(m.content || ''));
+      const noindex = /\bnoindex\b/i.test(headers.get('x-robots-tag') || '') ||
+        meta.some(m => m.name === 'robots' && /\bnoindex\b/i.test(m.content || ''));
       assert.ok(noindex, `${path}: staging legal route missing noindex`);
       requireHousingFooter(html, path, locale);
       const required = route === 'privacy'
