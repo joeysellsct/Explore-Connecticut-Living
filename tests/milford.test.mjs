@@ -95,6 +95,20 @@ test('Milford shoreline photo has reviewed CC BY provenance and bilingual histor
   assert.ok(raw.includes('fotografía de septiembre de 2016'), 'Date the Spanish historical photograph caption');
 });
 
+test('Milford district tax warning links to official state rates and the actual city tax bill', () => {
+  const component = read('app/[locale]/towns/[slug]/TownMovingResources.tsx');
+  assert.ok(component.includes('https://data.ct.gov/Local-Government/Mill-Rates-for-FY-2014-2027/emyx-j53e'),
+    'Use the official OPM mill-rate dataset rather than a third-party rate estimate');
+  assert.ok(component.includes('https://www.milfordct.us/663/Tax-Collector'),
+    'Let visitors confirm district applicability and the parcel bill with the city');
+  for (const label of [
+    'State source: municipal and district mill rates (OPM)',
+    'Fuente estatal: tasas por municipio y distrito (OPM)',
+    'Milford: verify the actual tax bill',
+    'Milford: verificar la factura de impuestos'
+  ]) assert.ok(component.includes(label), 'Missing bilingual source label: ' + label);
+});
+
 test('Milford FY2027 base rate and district caveat are explicit in both languages', () => {
   const rates = read('lib/fy2027-mill-rates.ts');
   assert.match(rates, /'milford':28\.67/);
