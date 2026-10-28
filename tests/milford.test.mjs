@@ -101,6 +101,15 @@ test('Milford district tax warning links to official state rates and the actual 
     'Use the official OPM mill-rate dataset rather than a third-party rate estimate');
   assert.ok(component.includes('https://www.milfordct.us/663/Tax-Collector'),
     'Let visitors confirm district applicability and the parcel bill with the city');
+  assert.ok(component.includes('https://milfordct.us/668/Boroughs-Associations'),
+    'Link the city's official list of independently collecting associations');
+  for (const name of ['Bayview Improvement Association', 'Point Beach Improvement Association']) {
+    assert.ok(component.includes(name), 'Do not omit an additional city-listed association: ' + name);
+  }
+  assert.ok(component.includes('their rates and parcel applicability are not established here'),
+    'Do not invent unverified rates or imply universal association coverage');
+  assert.ok(component.includes('aquí no se indican sus tasas ni su aplicación a una parcela'),
+    'Translate the association-rate uncertainty');
   for (const label of [
     'State source: municipal and district mill rates (OPM)',
     'Fuente estatal: tasas por municipio y distrito (OPM)',
