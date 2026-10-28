@@ -408,3 +408,27 @@ test('Town masthead decorative mark is hidden from link name and small wordmark 
   assert.ok(contrast(kicker, '#edf6f0') >= 4.5, 'Town section labels need AA contrast on tinted panels');
   assert.ok(contrast(detail, '#ffffff') >= 4.5, 'Property detail labels need AA contrast on white');
 });
+
+test('Joey personal Top Picks remain limited to his three explicitly approved restaurants statewide', () => {
+  const source = read('lib/town-restaurants.ts');
+  const declaration = source.split('export const joeyTopPicks:')[1];
+  assert.ok(declaration, 'Missing personal Top Picks declaration');
+  const picks = declaration.split('\n};')[0];
+  assert.ok(picks, 'Missing personal Top Picks object');
+  const townKeys = [...picks.matchAll(/^\s*'([a-z-]+)':\s*\[/gm)].map(match => match[1]);
+  assert.deepEqual([...townKeys].sort(), ['branford', 'cheshire', 'west-haven'],
+    'Do not add any other town to personal Top Picks without Joey approving it');
+  const approved = {
+    'branford': 'Rosso Vino',
+    'cheshire': 'Fuoco Coal Fired Apizza',
+    'west-haven': 'Zuppardi’s Apizza',
+  };
+  for (const [town, name] of Object.entries(approved)) {
+    const start = picks.indexOf("  '" + town + "': [");
+    assert.ok(start >= 0, 'Missing approved Top Picks town: ' + town);
+    const end = picks.indexOf('\n  ],', start);
+    assert.ok(end > start, 'Missing end of Top Picks array for ' + town);
+    const entries = [...picks.slice(start, end).matchAll(/\{name:'([^']+)'/g)].map(match => match[1]);
+    assert.deepEqual(entries, [name], 'Only Joey-approved personal endorsement may appear for ' + town);
+  }
+});
