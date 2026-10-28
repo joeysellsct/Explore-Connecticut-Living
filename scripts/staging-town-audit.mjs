@@ -9,7 +9,23 @@ assert.match(town, /^[a-z]+(?:-[a-z]+)*$/, 'AUDIT_TOWN must be a lowercase town 
 const townName = town.split('-').map(part => part[0].toUpperCase() + part.slice(1)).join(' ');
 const timeout = 25000;
 const get = async path => {
-  const response = await fetch(origin + path, {signal: AbortSignal.timeout(timeout), redirect: 'follow'});
+  let response;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      response = await fetch(origin + path, {
+        signal: AbortSignal.timeout(timeout), redirect: 'follow'
+      });
+      break;
+    } catch (error) {
+      // Retry transport timeouts only. HTTP errors and failed assertions must
+      // still fail the certification audit instead of being masked as passes.
+      const detail = String(error?.message || error) + ' ' + String(error?.cause || '');
+      const transient = /fetch failed|ETIMEDOUT|ECONNRESET|ENETUNREACH|TimeoutError|aborted/i.test(detail);
+      if (!transient || attempt === 3) throw error;
+      console.warn(`RETRY ${path}: transient transport failure on attempt ${attempt}: ${detail.slice(0, 160)}`);
+      await new Promise(resolve => setTimeout(resolve, 1500 * attempt));
+    }
+  }
   assert.equal(response.status, 200, `${path}: expected HTTP 200, got ${response.status}`);
   return {html: await response.text(), headers: response.headers};
 };
