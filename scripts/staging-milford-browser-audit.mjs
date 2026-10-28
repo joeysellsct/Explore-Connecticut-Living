@@ -346,6 +346,41 @@ try {
       }
     }
   }
+
+  // Milford's school district uses a client-rendered registration landing page.
+  // Check what a real browser actually displays; never mistake HTTP 200 or a
+  // district news link for proof that registration instructions are usable.
+  // This external site is outside our control, so inconclusive results are
+  // recorded as certification blockers, not hidden or treated as CI passes.
+  const districtContext = await browser.newContext({viewport: {width: 1280, height: 800}});
+  try {
+    const districtPage = await districtContext.newPage();
+    const url = 'https://www.milforded.org/page/registration';
+    let outcome = {source: url, checkedAt: new Date().toISOString(),
+      evidenceLevel: 'BROWSER_VISIBILITY_ONLY_NOT_ENROLLMENT_SUBMISSION',
+      status: 'INCONCLUSIVE'};
+    try {
+      const response = await districtPage.goto(url, {waitUntil: 'domcontentloaded', timeout: 30000});
+      await districtPage.waitForTimeout(3000);
+      const content = await districtPage.locator('body').innerText({timeout: 10000});
+      const hasInstructions = /(?:kindergarten|new student|student enrollment|online registration|registration instructions|PowerSchool Parent Portal)/i.test(content);
+      outcome = {...outcome, httpStatus: response?.status() ?? null,
+        visibleTextLength: content.length, visibleInstructions: hasInstructions,
+        status: response?.status() === 200 && hasInstructions
+          ? 'REGISTRATION_INSTRUCTIONS_VISIBLE' : 'INCONCLUSIVE_CLIENT_RENDER'};
+      await districtPage.screenshot({path: 'artifacts/milford-browser/school-registration-external.png',
+        fullPage: true, animations: 'disabled'});
+    } catch (error) {
+      outcome.reason = String(error?.message || error).split('\\n')[0].slice(0, 240);
+    }
+    console.log('SCHOOL_REGISTRATION_BROWSER ' + JSON.stringify(outcome));
+    if (outcome.status !== 'REGISTRATION_INSTRUCTIONS_VISIBLE') {
+      console.warn('::warning::Milford district registration remains a separate external-browser certification blocker: ' + outcome.status);
+    }
+  } finally {
+    await districtContext.close();
+  }
+
 } finally {
   await browser.close();
 }
