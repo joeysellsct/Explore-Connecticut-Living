@@ -143,7 +143,11 @@ for (const locale of ['en', 'es']) {
     'Online-Permitting-Center',
     'Building-Inspection',
     'Engineering-Division',
-    '533/Inland-Wetlands'
+    '533/Inland-Wetlands',
+    // Verify that both newly source-checked harbor/history resources are
+    // actually rendered in each localized Milford staging page.
+    '697/About-Milford',
+    '311/Harbor-Management-Commission-Marina'
   ];
   if (town === 'milford') {
     for (const resource of milfordResourcePaths) {
