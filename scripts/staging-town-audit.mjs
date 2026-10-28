@@ -184,6 +184,30 @@ for (const locale of ['en', 'es']) {
         `${path}: OPM FY2027 association fee safeguard missing: ${phrase}; check Cloudflare deployment freshness`);
     }
   }
+  // Milford certification: confirm all five operator-sourced restaurant
+  // entries are visible and individually linked on BOTH rendered languages.
+  // This verifies deployed content and attribution, not live business hours
+  // or the current HTTP health of third-party restaurant websites.
+  if (town === 'milford') {
+    const restaurantSources = [
+      ['Stonebridge Restaurant', 'https://stonebridgerestaurant.com/'],
+      ['Dockside Brewery', 'https://docksidebrewery.com/contact'],
+      ['SBC Restaurant & Beer Bar', 'https://www.sbcrestaurants.com/'],
+      ['Bin 100 Restaurant', 'https://www.bin100.com/'],
+      ['Gusto Trattoria', 'https://gustotrattoria.com/']
+    ];
+    const sourceLinks = tags(html, 'a');
+    for (const [name, sourceUrl] of restaurantSources) {
+      const expectedLabel = locale === 'es' ? `Ver fuente de ${name}` : `View source for ${name}`;
+      assert.ok(sourceLinks.some(link =>
+        link.href === sourceUrl &&
+        link['aria-label']?.replace(/&amp;/g, '&') === expectedLabel),
+        `${path}: missing accessible restaurant source link for ${name}; check staging deployment freshness`);
+    }
+    assert.ok(html.includes(locale === 'es' ? 'Fuente consultada' : 'Source checked'),
+      `${path}: missing localized restaurant source-check date label`);
+    console.log(`PASS ${path}: five individually attributed Milford restaurant source links`);
+  }
   // West Haven's city-published beach-parking rules are an important moving
   // resource. Check both live languages so a successful generic SEO audit does
   // not hide a stale staging deployment missing the latest verified guidance.
