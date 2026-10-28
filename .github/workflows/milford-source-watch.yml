@@ -88,7 +88,7 @@ jobs:
               {name:'Point Beach', label:'Point Beach', type:'flat_fee', value:300}
             ];
             const feeNumber = value => {
-              const match = String(value ?? '').replace(/,/g, '').match(/\\$?\\s*(\\d+(?:\\.\\d+)?)/);
+              const match = String(value ?? '').replace(/,/g, '').match(/\$?\s*(\d+(?:\.\d+)?)/);
               return match ? Number(match[1]) : NaN;
             };
             const checks = expected.map(item => {
