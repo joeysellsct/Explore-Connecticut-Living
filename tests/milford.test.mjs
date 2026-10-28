@@ -102,7 +102,7 @@ test('Milford district tax warning links to official state rates and the actual 
   assert.ok(component.includes('https://www.milfordct.us/663/Tax-Collector'),
     'Let visitors confirm district applicability and the parcel bill with the city');
   assert.ok(component.includes('https://milfordct.us/668/Boroughs-Associations'),
-    'Link the city's official list of independently collecting associations');
+    "Link the city's official list of independently collecting associations");
   for (const name of ['Bayview Improvement Association', 'Point Beach Improvement Association']) {
     assert.ok(component.includes(name), 'Do not omit an additional city-listed association: ' + name);
   }
