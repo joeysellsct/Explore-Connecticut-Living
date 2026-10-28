@@ -67,31 +67,47 @@ jobs:
             }
           });
           await Promise.all(workers);
-          const api = 'https://data.ct.gov/resource/emyx-j53e.json?$limit=5000';
+          // CT OPM publishes many fiscal years in this dataset. Compare ONLY
+          // Milford town code 84 for FY2027; otherwise old rows create false alarms.
+          // API field names confirmed against the state's published schema.
+          const api = 'https://data.ct.gov/resource/emyx-j53e.json?' +
+            new URLSearchParams({'$where':'fiscal_year=2027 AND town_code=84', '$limit':'100'});
           try {
             const response = await fetch(api, {signal:AbortSignal.timeout(30000)});
             if (!response.ok) throw new Error('HTTP ' + response.status);
             const rows = await response.json();
-            if (!Array.isArray(rows)) throw new Error('Expected Socrata JSON array');
-            const milford = rows.filter(row => JSON.stringify(row).toLowerCase().includes('milford'));
+            if (!Array.isArray(rows) || rows.length === 0) throw new Error('No FY2027 Milford rows');
+            const milford = rows.filter(row => Number(row.fiscal_year) === 2027 && Number(row.town_code) === 84);
+            if (milford.length !== rows.length) throw new Error('Unexpected town/year in filtered state data');
             const expected = [
-              ['Woodmont Borough', 0.5205],
-              ['Laurel Beach', 3.34],
-              ['Morningside', 0.0738],
-              ['Bay View', 200],
-              ['Point Beach', 300]
+              {name:'Milford municipal base', label:'Milford', type:'mills', value:28.67, exact:true},
+              {name:'Woodmont Borough', label:'Woodmont', type:'mills', value:0.5205},
+              {name:'Laurel Beach', label:'Laurel Beach', type:'mills', value:3.34},
+              {name:'Morningside', label:'Morningside', type:'mills', value:0.0738},
+              {name:'Bay View', label:'Bay View', type:'flat_fee', value:200},
+              {name:'Point Beach', label:'Point Beach', type:'flat_fee', value:300}
             ];
-            const checks = expected.map(([name, value]) => {
-              const hits = milford.filter(row => Object.values(row).some(v =>
-                typeof v === 'string' && v.toLowerCase().includes(name.toLowerCase())));
-              const numericFields = hits.flatMap(row => Object.entries(row).filter(([key, v]) =>
-                /mill|rate|fee|amount/i.test(key) && v !== null && v !== '' && Number.isFinite(Number(v))));
-              const candidateMatch = numericFields.some(([, v]) => Math.abs(Number(v) - value) < 0.000001);
-              return {district:name, previouslyVerifiedValue:value, candidateRows:hits.length,
-                numericCandidateMatch:candidateMatch, result:candidateMatch && hits.length === 1
+            const feeNumber = value => {
+              const match = String(value ?? '').replace(/,/g, '').match(/\\$?\\s*(\\d+(?:\\.\\d+)?)/);
+              return match ? Number(match[1]) : NaN;
+            };
+            const checks = expected.map(item => {
+              const hits = milford.filter(row => {
+                const label = String(row.municipality ?? '').trim().toLowerCase();
+                return item.exact ? label === item.label.toLowerCase() : label.includes(item.label.toLowerCase());
+              });
+              const observed = hits.map(row => item.type === 'flat_fee'
+                ? feeNumber(row.flat_rate_fee_other_rate)
+                : Number(row.mill_rate_real_personal ?? row.mill_rate));
+              const candidateMatch = hits.length === 1 && Number.isFinite(observed[0]) &&
+                Math.abs(observed[0] - item.value) < 0.000001;
+              return {district:item.name, rateType:item.type, previouslyVerifiedValue:item.value,
+                candidateRows:hits.length, observedCandidates:observed.map(v => Number.isFinite(v) ? v : null),
+                numericCandidateMatch:candidateMatch, result:candidateMatch
                   ? 'CANDIDATE_MATCH_REQUIRES_HUMAN_SOURCE_REVIEW' : 'REVIEW_SOURCE_SCHEMA_OR_CHANGE'};
             });
-            report.taxData = {source:api, status:'READ_ONLY_CANDIDATE_COMPARISON', rows:rows.length,
+            report.taxData = {source:api, fiscalYear:2027, townCode:84,
+              status:'READ_ONLY_CANDIDATE_COMPARISON', rows:rows.length,
               milfordRows:milford.length, checks,
               caution:'A matching number is not independently verified applicability, fee type or effective date.'};
           } catch (error) {
