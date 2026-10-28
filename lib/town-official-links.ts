@@ -318,6 +318,9 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {en:"Milford public works and wastewater department contacts",es:"Contactos de obras públicas y aguas residuales de Milford",url:"https://www.milfordct.us/m/directory"},
   {en:"Milford beach parking: resident stickers and current requirements",es:"Estacionamiento en playas de Milford: permisos de residentes y requisitos vigentes",url:"https://milfordct.us/680/Resident-Parking-Stickers"},
   {en:"Milford beach water-quality monitoring and swimming advisories",es:"Control de calidad del agua en las playas de Milford y avisos para bañistas",url:"https://www.milfordct.us/402/Beach-Monitoring"},
+  // Milford municipal primary sources reviewed 2026-10-28; verify seasonal harbor permits and access directly with the City.
+  {en:"City history and Milford Green: official downtown, harbor and historical context",es:"Historia municipal y Milford Green: información oficial sobre el centro, el puerto y el patrimonio histórico",url:"https://www.milfordct.us/697/About-Milford"},
+  {en:"Harbor Management Commission: coastal development review, public boat ramp and current marina/launch-permit rules",es:"Comisión del Puerto: revisión de obras costeras, rampa pública y normas vigentes de la marina y permisos de botadura",url:"https://www.milfordct.us/311/Harbor-Management-Commission-Marina"},
   {en:"Silver Sands State Park: access, trails and visitor rules",es:"Parque estatal Silver Sands: acceso, senderos y normas de visita",url:"https://ctparks.com/parks/silver-sands-state-park"},
   {en:"Connecticut park transit connections and current alternatives",es:"Conexiones de transporte a parques estatales y alternativas actuales",url:"https://ctparks.com/parkconnect"},
   // MTA station and timetable pages independently checked 2026-10-26; schedules and station services may change.
