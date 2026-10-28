@@ -106,10 +106,19 @@ test('Milford district tax warning links to official state rates and the actual 
   for (const name of ['Bayview Improvement Association', 'Point Beach Improvement Association']) {
     assert.ok(component.includes(name), 'Do not omit an additional city-listed association: ' + name);
   }
-  assert.ok(component.includes('their rates and parcel applicability are not established here'),
-    'Do not invent unverified rates or imply universal association coverage');
-  assert.ok(component.includes('aquí no se indican sus tasas ni su aplicación a una parcela'),
-    'Translate the association-rate uncertainty');
+  // The FY2027 state OPM data publishes *flat fees*, not additional millage,
+  // for Bay View and Point Beach. Never add these amounts to a mill-rate input.
+  for (const phrase of [
+    '$200 flat fee', '$300 flat fee', '0-mill real-property rate',
+    'flat fees are NOT mill rates', 'not automatically included in the estimator',
+    '0 mills does not mean no fee',
+    'cuota fija de $200', 'cuota fija de $300',
+    'NO son tasas en mills', '0 mills no significa que no exista una cuota'
+  ]) assert.ok(component.includes(phrase), 'Missing bilingual flat-fee safeguard: ' + phrase);
+  assert.ok(component.includes('Verify whether your parcel belongs to either one'),
+    'Do not imply that every Milford property owes these association fees');
+  assert.ok(component.includes('Confirma si tu parcela pertenece a alguna'),
+    'Translate parcel-specific association applicability');
   for (const label of [
     'State source: municipal and district mill rates (OPM)',
     'Fuente estatal: tasas por municipio y distrito (OPM)',
