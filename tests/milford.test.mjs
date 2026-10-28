@@ -56,6 +56,21 @@ test('Milford municipal research has bilingual official and parcel-specific link
   assert.ok(urls.includes('https://www.milfordct.us/768/On-Line-Services'), 'Provide city portal for property records and tax payments');
 });
 
+test('Milford registration offers a readable district-sourced fallback without claiming portal functionality', () => {
+  const entries = [...block('lib/town-official-links.ts').matchAll(/\\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\\}/g)];
+  const byUrl = new Map(entries.map(([, en, es, url]) => [url, {en, es}]));
+  const portal = byUrl.get('https://www.milforded.org/page/registration');
+  assert.ok(portal, 'Retain the district registration portal');
+  assert.match(portal.en, /if instructions do not display/i);
+  assert.match(portal.es, /si no aparecen las instrucciones/i);
+  const guidance = byUrl.get('https://www.milforded.org/article/2628419');
+  assert.ok(guidance, 'Offer the official 2026-27 district enrollment announcement as an accessible alternative');
+  assert.match(guidance.en, /2026–27 kindergarten enrollment guidance/);
+  assert.match(guidance.es, /inscripción a kínder 2026–27/);
+  assert.match(guidance.en, /confirm current steps/i);
+  assert.match(guidance.es, /confirma los pasos actuales/i);
+});
+
 test('Milford building, engineering and wetlands due diligence links use official bilingual sources', () => {
   const entries = [...block('lib/town-official-links.ts').matchAll(/\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\}/g)];
   const links = new Map(entries.map(([, en, es, url]) => [url, {en, es}]));
