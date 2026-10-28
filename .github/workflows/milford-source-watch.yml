@@ -9,6 +9,11 @@ on:
     branches: [main]
     paths:
       - .github/workflows/milford-source-watch.yml
+      # Recheck primary sources whenever town source links, restaurant evidence
+      # or the property-tax UI changes, rather than waiting for the daily run.
+      - lib/town-official-links.ts
+      - lib/town-restaurants.ts
+      - 'app/**/TownMovingResources.tsx'
   schedule:
     - cron: '41 13 * * *'
   workflow_dispatch:
@@ -127,8 +132,10 @@ jobs:
             '- Reachable (not fact-verified): ' + report.links.filter(item => item.result === 'REACHABLE_NOT_FACT_VERIFIED').length,
             '- Possible dead links requiring review: ' + suspicious.length,
             '- Inconclusive responses (including anti-bot blocks): ' + inconclusive.length,
+            '- Tax dataset status: ' + (report.taxData.status || 'INCONCLUSIVE'),
             '- Tax-data candidate rows: ' + (report.taxData.milfordRows ?? 'unavailable'),
-            '- Tax comparisons requiring review: ' + taxFlags.length,
+            '- Tax comparisons requiring review: ' + (report.taxData.status === 'INCONCLUSIVE'
+              ? 'UNKNOWN — official dataset unavailable; verification required' : taxFlags.length),
             '',
             '## Source responses requiring attention',
             ...[...suspicious, ...inconclusive].map(item => '- ' + item.result + ' (' + (item.status ?? 'no response') + '): ' + item.url),
@@ -141,7 +148,9 @@ jobs:
           ].join('\n');
           writeFileSync('artifacts/milford-source-watch/summary.md', summary + '\n');
           console.log(summary);
-          if (suspicious.length || taxFlags.length) console.log('::warning::Milford source watch found items requiring verification; no website data changed.');
+          if (suspicious.length || inconclusive.length || taxFlags.length || report.taxData.status === 'INCONCLUSIVE') {
+            console.log('::warning::Milford source watch has dead, inconclusive or changed-source evidence requiring review; no website data changed.');
+          }
           NODE
       - name: Preserve dated evidence for certification review
         if: always()
