@@ -403,3 +403,35 @@ if (town === 'milford') {
     console.log(`PASS Moving & Home Resources ${path}: bilingual SEO, noindex, disclosures, partner destinations and navigation`);
   }
 }
+
+
+// Legal routes are linked from the town footer. Check the actual bilingual
+// pages, not only the presence of footer anchors. This is an automated content
+// safeguard; it does NOT replace professional legal or privacy review.
+if (town === 'milford') {
+  for (const locale of ['en', 'es']) {
+    for (const route of ['privacy', 'terms']) {
+      const path = `/${locale}/${route}`;
+      const {html, headers} = await get(path);
+      const document = html.match(/<html\\b[^>]*>/i);
+      assert.ok(document && attrs(document[0]).lang === locale,
+        `${path}: missing or incorrect document language`);
+      const meta = tags(html, 'meta');
+      const noindex = /\\bnoindex\\b/i.test(headers.get('x-robots-tag') || '') ||
+        meta.some(m => m.name === 'robots' && /\\bnoindex\\b/i.test(m.content || ''));
+      assert.ok(noindex, `${path}: staging legal route missing noindex`);
+      requireHousingFooter(html, path, locale);
+      const required = route === 'privacy'
+        ? (locale === 'en'
+          ? ['Privacy Policy', 'Town Match', 'Follow Up Boss', 'JoeySellsCT@gmail.com']
+          : ['Política de privacidad', 'Town Match', 'Follow Up Boss', 'JoeySellsCT@gmail.com'])
+        : (locale === 'en'
+          ? ['Brokerage identification', 'Equal Housing Opportunity', 'mygoodagent LLC', 'Agency relationship']
+          : ['Identificación de la correduría', 'Igualdad de oportunidades de vivienda', 'mygoodagent LLC', 'Relación de agencia']);
+      for (const phrase of required) {
+        assert.ok(html.includes(phrase), `${path}: missing legal-page content "${phrase}"`);
+      }
+      console.log(`PASS legal pages ${path}: localized content, housing footer and staging noindex (automated only)`);
+    }
+  }
+}
