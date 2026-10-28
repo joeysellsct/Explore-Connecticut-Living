@@ -512,7 +512,7 @@ test('Milford school and building-permit links stay bilingual and distinct',()=>
  const section=source.slice(start,end);
  const required=[
   ['https://www.milforded.org/page/school-and-street-assignment','school attendance boundaries','límites escolares'],
-  ['https://www.milforded.org/page/registration','current enrollment instructions','instrucciones y documentos vigentes'],
+  ['https://www.milforded.org/page/registration','if instructions do not display','si no aparecen las instrucciones'],
   ['https://www.milfordct.us/537/Online-Permitting-Center','building, zoning and wetlands permits','permisos de construcción, zonificación y humedales']
  ];
  for(const [url,en,es] of required){
