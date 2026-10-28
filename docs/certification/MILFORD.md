@@ -234,3 +234,17 @@ All four commit records were independently fetched and each changed exactly one 
 - It also reads Connecticut's official FY2027 Socrata dataset and compares candidate numeric district/fee fields against the previously verified Milford values. A numeric match is **only a candidate**, not proof of district applicability, fee type, effective date or continuing accuracy. Dataset/schema ambiguity must be reviewed.
 - **Status:** workflow file committed; first scheduled/manual run and its evidence artifact **NOT YET VERIFIED** at this checkpoint. This does **not** complete Milford's external-link/source-currency certification gate.
 - **No automatic publishing is enabled.** Detecting a change is not 100% verification. Before any future update can be automatically published, a source-specific verification and approval policy, simultaneous EN/ES update, tests, independent deployment confirmation, rollback and monitoring must be implemented and validated. This is an initial monitoring component, not the statewide update system.
+
+## 2026-10-28 — targeted municipal-source currency recheck
+
+Five of the **27** Milford municipal/resource URLs currently listed in `lib/town-official-links.ts` were independently opened and their page subjects checked against the actual City of Milford content on 2026-10-28:
+
+| Listed municipal link | Recheck result |
+| --- | --- |
+| [Online Permitting Center](https://www.milfordct.us/537/Online-Permitting-Center) | City page resolves and describes applying for building, zoning and wetlands permits through City Squared. |
+| [Engineering Division](https://www.milfordct.us/535/Engineering-Division) | City page resolves and describes municipal engineering, inspections, street openings, sewer installation and related permits. |
+| [Inland Wetlands](https://www.milfordct.us/533/Inland-Wetlands) | City page resolves and describes the Inland Wetlands Agency's review/permitting role; includes a current payment-scam warning. |
+| [Resident Parking Stickers](https://www.milfordct.us/680/Resident-Parking-Stickers) | City page resolves and describes beach parking/sticker rules, including May–September enforcement and fees subject to change. Do not publish undated parking prices as permanent. |
+| [Harbor Management Commission & Marina](https://www.milfordct.us/311/Harbor-Management-Commission-Marina) | City page resolves and describes harbor commission jurisdiction, marina and boat-ramp resources; seasonal schedules/fees require separate date-specific verification. |
+
+**Evidence boundary:** This is a direct subject-and-link check of **5/27 municipal/resource entries**, not full external-link certification, a check of every linked PDF, or a guarantee that time-sensitive fees have not changed. The remaining 22 entries and other external links still need review. The new daily source-watch workflow does not automatically publish unverified changes.
