@@ -94,6 +94,66 @@ jobs:
           AUDIT_TOWN: west-haven
           STAGING_ORIGIN: https://explore-connecticut-living-staging.joeysellsct.workers.dev
 
+      - name: Capture Cloudflare runtime deployment evidence
+        # Record what staging actually serves, without confusing Worker version
+        # metadata with a Git SHA or failing unrelated content verification.
+        if: always()
+        env:
+          STAGING_ORIGIN: https://explore-connecticut-living-staging.joeysellsct.workers.dev
+          SOURCE_SHA: ${{ github.sha }}
+          WORKFLOW_RUN_ID: ${{ github.run_id }}
+        run: |
+          mkdir -p artifacts/cloudflare-provenance
+          node --input-type=module <<'NODE'
+          import {writeFileSync} from 'node:fs';
+          const endpoint = process.env.STAGING_ORIGIN + '/api/deployment';
+          const report = {
+            checkedAt: new Date().toISOString(),
+            sourceCommitCheckedOut: process.env.SOURCE_SHA,
+            githubWorkflowRunId: process.env.WORKFLOW_RUN_ID,
+            endpoint,
+            evidenceLevel: 'RUNTIME_VERSION_ONLY_NOT_GIT_COMMIT_ATTESTATION',
+            status: 'INCONCLUSIVE',
+          };
+          try {
+            const response = await fetch(endpoint, {
+              redirect: 'error',
+              headers: {'cache-control': 'no-cache'},
+              signal: AbortSignal.timeout(20000),
+            });
+            report.httpStatus = response.status;
+            report.cacheControl = response.headers.get('cache-control');
+            const payload = await response.json();
+            if (response.status === 200 && payload.status === 'available' &&
+                typeof payload.workerVersionId === 'string' && payload.workerVersionId) {
+              report.status = 'WORKER_VERSION_OBSERVED';
+              report.workerVersionId = payload.workerVersionId;
+              report.workerVersionTag = payload.workerVersionTag ?? null;
+              report.workerVersionCreatedAt = payload.workerVersionCreatedAt ?? null;
+            } else {
+              report.reason = String(payload.reason || 'Version metadata absent or unexpected response').slice(0, 200);
+            }
+          } catch (error) {
+            report.reason = String(error.message).slice(0, 200);
+          }
+          report.gitCommitProvenanceVerified = false;
+          report.nextStep = 'Match observed Worker version ID to independently accessed Cloudflare deployment records and their source commit SHA; compare with GitHub main.';
+          writeFileSync('artifacts/cloudflare-provenance/runtime.json', JSON.stringify(report, null, 2) + '\n');
+          const summary = 'Cloudflare runtime evidence: ' + report.status +
+            (report.workerVersionId ? ' (Worker version ' + report.workerVersionId + ')' : '') +
+            '. Git commit provenance remains unverified until Cloudflare deployment records are reconciled.';
+          console.log(summary);
+          if (report.status !== 'WORKER_VERSION_OBSERVED') console.log('::warning::' + (report.reason || 'Deployment endpoint unavailable'));
+          NODE
+      - name: Preserve Cloudflare deployment evidence for independent reconciliation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-runtime-provenance
+          path: artifacts/cloudflare-provenance/
+          if-no-files-found: warn
+          retention-days: 30
+
   new-haven-browser-audit:
     # Browser failures must fail verification visibly; the hourly buildout can
     # still continue with other towns while a staging blocker is investigated.
