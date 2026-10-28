@@ -57,7 +57,7 @@ test('Milford municipal research has bilingual official and parcel-specific link
 });
 
 test('Milford registration offers a readable district-sourced fallback without claiming portal functionality', () => {
-  const entries = [...block('lib/town-official-links.ts').matchAll(/\\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\\}/g)];
+  const entries = [...block('lib/town-official-links.ts').matchAll(/\{en:"([^"]+)",es:"([^"]+)",url:"([^"]+)"\}/g)];
   const byUrl = new Map(entries.map(([, en, es, url]) => [url, {en, es}]));
   const portal = byUrl.get('https://www.milforded.org/page/registration');
   assert.ok(portal, 'Retain the district registration portal');
