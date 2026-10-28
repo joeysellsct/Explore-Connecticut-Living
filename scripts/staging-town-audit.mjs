@@ -145,7 +145,7 @@ for (const locale of ['en', 'es']) {
       return href.includes(destination) && href.includes(tracking);
     });
     assert.ok(link, `${path}: missing approved ${name} destination and tracking on town page`);
-    assert.ok(link.rel?.split(/\\s+/).includes('sponsored'),
+    assert.ok(link.rel?.split(/\s+/).includes('sponsored'),
       `${path}: ${name} town-page link must use rel=sponsored`);
   }
   const photoChecks = {
