@@ -10,6 +10,26 @@ const failures = [];
 const browser = await chromium.launch({headless: true});
 await mkdir('artifacts/milford-browser', {recursive: true});
 
+// A slow staging response can time out even when the site is healthy. Retry
+// navigation ONCE for transient transport/timeouts, but never suppress a bad
+// HTTP status or a genuine rendering, accessibility, or interaction failure.
+async function navigateToTown(page, url, label) {
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const response = await page.goto(url, {waitUntil: 'domcontentloaded', timeout: 45000});
+      assert.equal(response?.status(), 200, label + ': expected HTTP 200');
+      if (attempt === 2) console.log('RECOVERED ' + label + ': staging navigation succeeded on retry');
+      return;
+    } catch (error) {
+      const transient = /Timeout \d+ms exceeded|net::ERR_(TIMED_OUT|CONNECTION_RESET|CONNECTION_CLOSED)/i.test(String(error?.message || error));
+      if (!transient || attempt === 2) throw error;
+      console.warn('RETRY ' + label + ': transient staging navigation failure: ' +
+        String(error.message).split('\n')[0]);
+      await page.waitForTimeout(1500);
+    }
+  }
+}
+
 try {
   for (const locale of ['en', 'es']) {
     for (const device of ['desktop', 'mobile']) {
@@ -23,11 +43,7 @@ try {
       const page = await context.newPage();
       const label = locale + '/' + device;
       try {
-        const response = await page.goto(origin + '/' + locale + '/towns/milford', {
-          waitUntil: 'domcontentloaded',
-          timeout: 45000
-        });
-        assert.equal(response?.status(), 200, label + ': expected HTTP 200');
+        await navigateToTown(page, origin + '/' + locale + '/towns/milford', label);
         assert.equal(await page.locator('html').getAttribute('lang'), locale, label + ': wrong language');
         assert.equal(await page.locator('main h1').count(), 1, label + ': expected one main heading');
         const gallery = page.locator('section.eh-gallery img');
@@ -165,10 +181,7 @@ try {
       });
       const page = await context.newPage();
       try {
-        const response = await page.goto(origin + '/' + locale + '/towns/west-haven', {
-          waitUntil: 'domcontentloaded', timeout: 45000
-        });
-        assert.equal(response?.status(), 200, label + ': expected HTTP 200');
+        await navigateToTown(page, origin + '/' + locale + '/towns/west-haven', label);
         assert.equal(await page.locator('html').getAttribute('lang'), locale, label + ': wrong document language');
         assert.equal(await page.locator('main h1').count(), 1, label + ': expected one main heading');
 
