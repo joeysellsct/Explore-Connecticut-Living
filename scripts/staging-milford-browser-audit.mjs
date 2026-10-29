@@ -163,7 +163,11 @@ try {
         assert.equal(await taxFields.nth(2).inputValue(), '28.67', label + ': reset must restore Milford FY2027 base rate');
         // Activate the visible town-guide language link and confirm the actual
         // destination, instead of assuming a correctly labeled link works.
-        await languageLink.click();
+        // Verify the town-guide language link can be activated without a mouse.
+        await languageLink.focus();
+        assert.ok(await languageLink.evaluate(element => document.activeElement === element),
+          label + ': town-guide language link cannot receive keyboard focus');
+        await page.keyboard.press('Enter');
         const oppositeLocale = locale === 'en' ? 'es' : 'en';
         await page.waitForURL(origin + '/' + oppositeLocale + '/towns/milford', {timeout: 15000});
         assert.equal(await page.locator('html').getAttribute('lang'), oppositeLocale,
@@ -174,7 +178,11 @@ try {
         // original document language after a full cross-locale navigation.
         const headerSwitcher = page.locator('header a.header-language');
         assert.equal(await headerSwitcher.count(), 1, label + ': missing header language switcher');
-        await headerSwitcher.click();
+        // A clickable header switcher is insufficient: test keyboard activation.
+        await headerSwitcher.focus();
+        assert.ok(await headerSwitcher.evaluate(element => document.activeElement === element),
+          label + ': header language switcher cannot receive keyboard focus');
+        await page.keyboard.press('Enter');
         await page.waitForURL(origin + '/' + locale + '/towns/milford', {timeout: 15000});
         assert.equal(await page.locator('html').getAttribute('lang'), locale,
           label + ': header language switcher left the root document language stale');
