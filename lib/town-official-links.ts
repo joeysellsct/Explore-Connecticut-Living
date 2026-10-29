@@ -821,4 +821,21 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Danbury Public Schools: confirm registration requirements, school assignments, transportation and current district notices","es":"Escuelas Públicas de Danbury: confirma matrícula, asignación escolar, transporte y avisos vigentes del distrito","url":"https://www.danbury.k12.ct.us/"},
  ],
 
+ // New Fairfield official municipal, school and state park resources checked 2026-10-29.
+ // Verify parcel tax districts, school assignment, permits, utility connections and seasonal park access by address or visit.
+ 'new-fairfield': [
+  {"en":"Town Hall and municipal departments: find local services, notices and contact information","es":"Ayuntamiento y departamentos: consulta servicios, avisos y contactos municipales","url":"https://www.newfairfield.org/municipal-departments"},
+  {"en":"Assessor: research property assessments, the 2024 revaluation and parcel records before estimating taxes","es":"Tasador: investiga valoraciones, la reevaluación de 2024 y expedientes de parcelas antes de estimar impuestos","url":"https://www.newfairfield.org/municipal-departments/finance-and-taxes/assessor/real-estate"},
+  {"en":"Tax Collector: confirm the 27.54-mill rate for FY 2026–27, the parcel's bill, exemptions and payment dates","es":"Recaudación: confirma la tasa de 27,54 mills para 2026–27, la factura, exenciones y vencimientos","url":"https://www.newfairfield.org/municipal-departments/finance-and-taxes/tax-collector/general-tax-questions"},
+  {"en":"Town Clerk: search recorded land documents and learn about the RecordHub property-alert service","es":"Secretaría municipal: consulta documentos de terrenos y el servicio de alertas de propiedades RecordHub","url":"https://www.newfairfield.org/municipal-departments/town-administration/town-clerk"},
+  {"en":"Building Department: verify permits, inspections and requirements before work on a property","es":"Construcción: verifica permisos, inspecciones y requisitos antes de realizar obras","url":"https://www.newfairfield.org/municipal-departments/services/building"},
+  {"en":"Zoning: review current regulations, land-use records and parcel-specific restrictions","es":"Zonificación: revisa normas vigentes, expedientes de uso del suelo y restricciones de la parcela","url":"https://www.newfairfield.org/municipal-departments/services/zoning"},
+  {"en":"Health Department: ask about septic permits, soil tests and health-related property records","es":"Salud: consulta permisos sépticos, pruebas del suelo y expedientes sanitarios de la propiedad","url":"https://www.newfairfield.org/municipal-departments/services/health"},
+  {"en":"Parks and Recreation: check Town Beach passes, programs, seasonal access and fees","es":"Parques y Recreación: consulta pases de playa, programas, acceso estacional y tarifas","url":"https://www.newfairfield.org/municipal-departments/services/parks-and-recreation"},
+  {"en":"Squantz Pond State Park: review trail information, parking reservations and current state rules","es":"Parque Estatal Squantz Pond: revisa senderos, reservas de estacionamiento y normas actuales","url":"https://ctparks.com/parks/squantz-pond-state-park"},
+  {"en":"New Fairfield Public Schools: verify registration, school assignment, transportation and district notices","es":"Escuelas Públicas de New Fairfield: confirma matrícula, asignación escolar, transporte y avisos del distrito","url":"https://www.newfairfieldschools.org/"},
+  {"en":"Drop Off Center and recycling: confirm permit requirements, accepted materials and fees","es":"Centro de residuos y reciclaje: confirma permisos, materiales aceptados y tarifas","url":"https://www.newfairfield.org/municipal-departments/services/public-works/drop-off-center-recycling"},
+  {"en":"Public Works: contact the town about roads, drainage and municipal infrastructure","es":"Obras Públicas: consulta calles, drenaje e infraestructura municipal","url":"https://www.newfairfield.org/municipal-departments/services/public-works"},
+ ],
+
 };
