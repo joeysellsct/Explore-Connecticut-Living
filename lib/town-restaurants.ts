@@ -678,6 +678,16 @@ export const joeyTopPicks:Record<string,{name:string;note?:string;url?:string}[]
   'west-haven': [
     {name:'Zuppardi’s Apizza',note:'Joey’s personal pick for West Haven. A longtime favorite for classic New Haven-style apizza.',url:'https://zuppardisapizza.com/'},
   ],
+ // New Fairfield: five operator-branded restaurant/menu sites checked 2026-10-29 for New Fairfield addresses and food types.
+ // Neutral directory only; no personal Top Picks, ratings, reviews or guaranteed operating hours.
+ 'new-fairfield': [
+  {"name":"Portofino Restaurant & Pizzeria","cuisine":"Italian restaurant and pizzeria at 88 Route 37, with pizza, pasta and catering","cuisineEs":"Restaurante italiano y pizzería en 88 Route 37, con pizzas, pastas y servicio de catering","website":"https://portofino-ct.com/","sourceUrl":"https://portofino-ct.com/","checkedOn":"2026-10-29"},
+  {"name":"Biscotti's Ristorante","cuisine":"Italian and seafood restaurant at 4 Cottontail Road, with dining, lounge and catering","cuisineEs":"Restaurante italiano y de mariscos en 4 Cottontail Road, con comedor, salón y catering","website":"https://www.biscottisristorante.net/","sourceUrl":"https://www.biscottisristorante.net/","checkedOn":"2026-10-29"},
+  {"name":"Omakase","cuisine":"Sushi restaurant at 90 Route 39, offering dine-in, takeout and chef's-choice options","cuisineEs":"Restaurante de sushi en 90 Route 39, con servicio en mesa, para llevar y opciones a elección del chef","website":"https://omakasenewfairfield.com/","sourceUrl":"https://omakasenewfairfield.com/","checkedOn":"2026-10-29"},
+  {"name":"Froggy's Sandwiches","cuisine":"Breakfast and lunch sandwich shop at 9 Brush Hill Road","cuisineEs":"Local de sándwiches para desayunos y almuerzos en 9 Brush Hill Road","website":"https://myfroggys.com/locations/froggys-new-fairfield-ct/","sourceUrl":"https://myfroggys.com/locations/froggys-new-fairfield-ct/","checkedOn":"2026-10-29"},
+  {"name":"Burger Barn","cuisine":"Burger and hot-dog restaurant at 25 Route 37, also serving wings and shakes","cuisineEs":"Restaurante de hamburguesas y perritos calientes en 25 Route 37, también con alitas y batidos","website":"https://burgerbarn0733.s4shops.com/","sourceUrl":"https://burgerbarn0733.s4shops.com/","checkedOn":"2026-10-29"},
+ ],
+
 };
 
 // Deployment trigger test: no change to restaurant listings.
