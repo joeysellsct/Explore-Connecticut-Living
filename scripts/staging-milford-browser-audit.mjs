@@ -243,6 +243,38 @@ try {
           await page.goBack({waitUntil: 'domcontentloaded', timeout: 15000});
           await page.waitForURL(origin + '/' + locale + '/towns/milford', {timeout: 15000});
         }
+        // Exercise the collapsible header menu and Moving & Home Resources
+        // using only keyboard activation. Source/HTTP link checks cannot
+        // establish that this real navigation works on both viewport sizes.
+        const moreMenu = page.locator('header details.nav-more');
+        const moreSummary = moreMenu.locator('summary');
+        assert.equal(await moreSummary.count(), 1, label + ': missing More navigation control');
+        await moreSummary.focus();
+        await page.keyboard.press('Enter');
+        assert.notEqual(await moreMenu.getAttribute('open'), null,
+          label + ': More menu did not open with Enter');
+        const movingHref = '/' + locale + '/moving-resources';
+        const movingLink = moreMenu.locator('a[href="' + movingHref + '"]');
+        assert.equal(await movingLink.count(), 1,
+          label + ': missing localized Moving & Home Resources navigation');
+        await movingLink.focus();
+        assert.ok(await movingLink.evaluate(element => document.activeElement === element),
+          label + ': Moving & Home Resources link cannot receive keyboard focus');
+        await page.keyboard.press('Enter');
+        await page.waitForURL(origin + movingHref, {timeout: 15000});
+        assert.equal(await page.locator('html').getAttribute('lang'), locale,
+          label + ': Moving & Home Resources has wrong document language');
+        assert.equal(await page.locator('main h1').count(), 1,
+          label + ': Moving & Home Resources lacks one main heading');
+        const movingDisclosure = (await page.locator('.moving-hub-partners .affiliate-disclosure').allTextContents()).join(' ');
+        assert.ok(movingDisclosure.includes(locale === 'es' ? 'Aviso de afiliados' : 'Affiliate disclosure'),
+          label + ': Moving & Home Resources lacks localized compensation disclosure');
+        assert.ok(movingDisclosure.includes(locale === 'es' ? 'Asociado de Amazon' : 'Amazon Associate'),
+          label + ': Moving & Home Resources lacks Amazon Associate disclosure');
+        assert.equal(await page.locator('.moving-hub-partner-grid a[rel~="sponsored"]').count(), 2,
+          label + ': expected both approved partner destinations marked sponsored');
+        await page.goBack({waitUntil: 'domcontentloaded', timeout: 15000});
+        await page.waitForURL(origin + '/' + locale + '/towns/milford', {timeout: 15000});
         console.log('AUDITED ' + label + ': photos=' + count + ', axe violations=' + axe.violations.length + ', overflow=' + (overflow.scroll - overflow.viewport) + 'px');
       } catch (error) {
         failures.push(label + ': browser audit failed: ' + (error?.message || String(error)));
