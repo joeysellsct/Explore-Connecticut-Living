@@ -129,6 +129,22 @@ try {
         // A current taxable assessment overrides the illustrative 70% home-value rule.
         const taxFields = page.locator('.tax-fields input');
         assert.equal(await taxFields.count(), 3, label + ': expected home value, taxable assessment and mill rate inputs');
+        // Check accessible input labels and live-region semantics in the rendered
+        // document. These checks do NOT substitute for a human screen-reader test.
+        const expectedLabels = locale === 'es'
+          ? ['Valor estimado de vivienda', 'Tasación imponible actual', 'Tasa en mills']
+          : ['Estimated home value', 'Current taxable assessed value', 'Mill rate'];
+        for (let i = 0; i < expectedLabels.length; i++) {
+          const actualLabel = await taxFields.nth(i).evaluate(element =>
+            Array.from(element.labels || []).map(item => item.textContent?.trim() || '').join(' '));
+          assert.ok(actualLabel.includes(expectedLabels[i]),
+            label + ': tax input ' + (i + 1) + ' lacks a localized accessible label: ' + actualLabel);
+        }
+        const liveEstimate = page.locator('.tax-estimate');
+        assert.equal(await liveEstimate.getAttribute('aria-live'), 'polite',
+          label + ': tax estimate must expose a polite live region');
+        assert.equal(await liveEstimate.getAttribute('aria-atomic'), 'true',
+          label + ': tax estimate must announce its complete updated value');
         await taxFields.nth(1).fill('240000');
         await page.waitForFunction(() => document.querySelector('.tax-estimate')?.textContent?.includes('$6,881'), null, {timeout: 10000});
         await taxFields.nth(2).fill('29.1905');
@@ -136,7 +152,13 @@ try {
         const resetRate = page.getByRole('button', {name: locale === 'es'
           ? 'Restaurar tasa municipal base verificada'
           : 'Restore verified municipal base rate'});
-        await resetRate.click();
+        // The reset control must be reachable from the final tax input by Tab
+        // and work with Enter, without relying on mouse/touch interaction.
+        await taxFields.nth(2).focus();
+        await page.keyboard.press('Tab');
+        assert.ok(await resetRate.evaluate(element => document.activeElement === element),
+          label + ': reset control is not next in the keyboard tab order');
+        await page.keyboard.press('Enter');
         await page.waitForFunction(() => document.querySelector('.tax-estimate')?.textContent?.includes('$6,881'), null, {timeout: 10000});
         assert.equal(await taxFields.nth(2).inputValue(), '28.67', label + ': reset must restore Milford FY2027 base rate');
         // Activate the visible town-guide language link and confirm the actual
