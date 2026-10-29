@@ -675,6 +675,13 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
   {"name":"Froggy's Sandwiches","cuisine":"Breakfast and lunch sandwich shop at 9 Brush Hill Road","cuisineEs":"Local de sándwiches para desayunos y almuerzos en 9 Brush Hill Road","website":"https://myfroggys.com/locations/froggys-new-fairfield-ct/","sourceUrl":"https://myfroggys.com/locations/froggys-new-fairfield-ct/","checkedOn":"2026-10-29"},
   {"name":"Burger Barn","cuisine":"Burger and hot-dog restaurant at 25 Route 37, also serving wings and shakes","cuisineEs":"Restaurante de hamburguesas y perritos calientes en 25 Route 37, también con alitas y batidos","website":"https://burgerbarn0733.s4shops.com/","sourceUrl":"https://burgerbarn0733.s4shops.com/","checkedOn":"2026-10-29"},
  ],
+ // Weston has a limited in-town dining market. Only two current food-serving operators with directly verified sites as of 2026-10-29.
+ // The former Lunch Box closed in 2025; do not list it as open or pad the directory with businesses from neighboring towns.
+ // These are neutral editorial listings, not Joey's personal recommendations; no ratings or hours are asserted.
+ 'weston': [
+  {"name":"The Chase","cuisine":"Neighborhood bar at 190 Weston Road with casual food; the former Lunch Box location","cuisineEs":"Bar de barrio en 190 Weston Road con comida informal; ocupa el antiguo local de Lunch Box","website":"https://www.thechasebar.com/","sourceUrl":"https://www.thechasebar.com/","checkedOn":"2026-10-29"},
+  {"name":"Lily's Weston Market Deli","cuisine":"Prepared-food counter and deli at 190 Weston Road offering sandwiches, salads and hot and cold takeaway food; a market rather than a sit-down restaurant","cuisineEs":"Mostrador de comida preparada y delicatessen en 190 Weston Road con sándwiches, ensaladas y platos fríos y calientes para llevar; es un mercado, no un restaurante con servicio de mesa","website":"https://lilyswestonmarket.com/deli/","sourceUrl":"https://lilyswestonmarket.com/deli/","checkedOn":"2026-10-29"},
+ ],
 };
 // Personal recommendations are separate from third-party ratings.
 export const joeyTopPicks:Record<string,{name:string;note?:string;url?:string}[]> = {
