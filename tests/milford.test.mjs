@@ -37,7 +37,7 @@ test('Milford has five distinct dated bilingual editorial restaurant listings', 
     // Keep the evidence date parseable and no earlier than the last operator-source
     // recheck. A future independent recheck may advance checkedOn without
     // requiring a test-code edit for every legitimate new verification date.
-    assert.match(date, /^\\d{4}-\\d{2}-\\d{2}$/, 'Restaurant source date must be ISO formatted');
+    assert.match(date, /^\d{4}-\d{2}-\d{2}$/, 'Restaurant source date must be ISO formatted');
     const checked = new Date(date + 'T00:00:00Z');
     assert.ok(Number.isFinite(checked.getTime()) && checked.toISOString().slice(0, 10) === date,
       'Restaurant source date must be a real calendar date');
