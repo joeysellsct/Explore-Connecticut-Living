@@ -363,4 +363,14 @@ export const townPhotography:Record<string,TownPhoto[]>={
   {"title":"Windmill in New Fairfield's Knollcrest area (2022)","titleEs":"Molino de viento en la zona de Knollcrest de New Fairfield (2022)","file":"KnollcrestWindmill.jpg","credit":"Mbdfar","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
  ],
 
+ // Weston: photo location, Commons attribution and license independently checked 2026-10-29.
+ // https://commons.wikimedia.org/wiki/File:Saugatuck_Reservoir.jpg
+ // https://commons.wikimedia.org/wiki/File:WestonCT_KettleCreekHD_4.jpg
+ // https://commons.wikimedia.org/wiki/File:WestonCT_KettleCreekHD_3.jpg
+ 'weston': [
+  {"title":"Aerial view of Saugatuck Reservoir in Weston (2020)","titleEs":"Vista aérea del embalse Saugatuck en Weston (2020)","file":"Saugatuck Reservoir.jpg","credit":"Benjamin Carter","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Kettle Creek Historic District in Weston (2016)","titleEs":"Distrito histórico Kettle Creek de Weston (2016)","file":"WestonCT KettleCreekHD 4.jpg","credit":"Magicpiano","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Another view of Kettle Creek Historic District in Weston (2016)","titleEs":"Otra vista del distrito histórico Kettle Creek de Weston (2016)","file":"WestonCT KettleCreekHD 3.jpg","credit":"Magicpiano","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+ ],
+
 };
