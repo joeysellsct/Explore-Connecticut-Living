@@ -787,4 +787,22 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Parks and Recreation: public parks, town pool and current program/access rules","es":"Parques y Recreación: parques públicos, piscina municipal y normas de acceso y programas","url":"https://www.southbury-ct.org/parkrec"},
  ],
 
+ // Sherman: official town/agency pages independently checked 2026-10-29.
+ // Assessor https://www.shermanct.gov/entities/assessor ; Tax Collector https://www.shermanct.gov/entities/tax-collector
+ // Clerk https://www.shermanct.gov/entities/town-clerk ; Building https://www.shermanct.gov/entities/building-department
+ // Planning https://www.shermanct.gov/entities/planning-and-zoning-department
+ // Health https://www.shermanct.gov/entities/health-department
+ // Parks https://www.shermanct.gov/subpages/catalog ; Library https://www.shermanlibrary.org/
+ 'sherman': [
+  {en:'Assessor: review the parcel field card, 2023 revaluation and eligibility for assessment exemptions',es:'Tasador: consulta la ficha de la parcela, la reevaluación de 2023 y posibles exenciones',url:'https://www.shermanct.gov/entities/assessor'},
+  {en:'Tax Collector: 17.41 municipal mills for FY 2026–27; verify the actual tax bill and any separate district levy',es:'Recaudación: tasa municipal de 17,41 mills para 2026–27; verifica la factura y posibles cargos de distritos',url:'https://www.shermanct.gov/entities/tax-collector'},
+  {en:'Town Clerk: search recorded deeds, mortgages and liens through the official land-records service',es:'Secretaría municipal: busca escrituras, hipotecas y gravámenes en el registro oficial',url:'https://www.shermanct.gov/entities/town-clerk'},
+  {en:'Building Department: confirm permits, inspections and records for proposed or existing improvements',es:'Construcción: confirma permisos, inspecciones y registros de mejoras existentes o propuestas',url:'https://www.shermanct.gov/entities/building-department'},
+  {en:'Planning and Zoning: check current land-use rules, accessory dwellings and parcel restrictions',es:'Planificación y Zonificación: consulta normas vigentes, viviendas accesorias y restricciones de la parcela',url:'https://www.shermanct.gov/entities/planning-and-zoning-department'},
+  {en:'Health Department: ask about private wells, septic permits and property-specific health records; Sherman reports no municipal water or sewer system',es:'Salud: pregunta por pozos privados, permisos sépticos y registros de la propiedad; Sherman informa que no tiene red municipal de agua ni alcantarillado',url:'https://www.shermanct.gov/entities/health-department'},
+  {en:'Park and Recreation: review the Town Park–Colonial Park nature trail, boating rules and current programs',es:'Parques y Recreación: consulta el sendero Town Park–Colonial Park, normas de navegación y programas vigentes',url:'https://www.shermanct.gov/subpages/catalog'},
+  {en:'Sherman Library: check local programs, digital materials and community resources',es:'Biblioteca de Sherman: consulta programas locales, materiales digitales y recursos comunitarios',url:'https://www.shermanlibrary.org/'},
+  {en:'Social Services: find information about housing, food and energy assistance',es:'Servicios Sociales: encuentra información sobre ayuda para vivienda, alimentos y energía',url:'https://www.shermanct.gov/entities/social-services'},
+ ],
+
 };
