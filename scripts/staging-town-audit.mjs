@@ -203,6 +203,29 @@ for (const locale of ['en', 'es']) {
     '311/Harbor-Management-Commission-Marina'
   ];
   if (town === 'milford') {
+    // Require BOTH dated district notices to be actual rendered resource links
+    // in EN/ES, not merely text embedded in a Next.js hydration payload.
+    // The 2026–27 enrollment notice and 2027–28 eligibility update are
+    // different school-year rules; one must never silently replace the other.
+    const districtNotices = [
+      'https://www.milforded.org/article/2628419',
+      'https://www.milforded.org/article/2842624'
+    ];
+    const renderedAnchors = tags(html, 'a');
+    for (const url of districtNotices) {
+      assert.ok(renderedAnchors.some(link => link.href === url),
+        `${path}: missing dated Milford school notice link ${url}; check staging deployment freshness`);
+    }
+    const yearLabels = locale === 'es'
+      ? ['2026–27', '2027–28', 'septiembre de 2027']
+      : ['2026–27', '2027–28', 'September 1, 2027'];
+    for (const label of yearLabels) {
+      assert.ok(html.includes(label),
+        `${path}: missing localized school-year distinction "${label}"`);
+    }
+    console.log(`PASS ${path}: both dated school notices and distinct year guidance`);
+  }
+  if (town === 'milford') {
     for (const resource of milfordResourcePaths) {
       assert.ok(html.includes(resource), `${path}: verified Milford resource not rendered: ${resource}; check staging deployment freshness`);
     }
