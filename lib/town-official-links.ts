@@ -838,4 +838,21 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Public Works: contact the town about roads, drainage and municipal infrastructure","es":"Obras Públicas: consulta calles, drenaje e infraestructura municipal","url":"https://www.newfairfield.org/municipal-departments/services/public-works"},
  ],
 
+ // Weston official town, school and conservation resources reviewed 2026-10-29.
+ // Property-specific taxes, school eligibility, well/septic records and utility service require confirmation.
+ 'weston': [
+  {"en":"Town Hall: municipal contacts and services at 56 Norfield Road; land-use offices are at the annex","es":"Ayuntamiento: servicios y contactos en 56 Norfield Road; las oficinas de uso del suelo están en el anexo","url":"https://www.westonct.gov/about-us/town-hall"},
+  {"en":"Assessor: review field cards, the 2023 revaluation, 24.57-mill current rate and assessment appeals","es":"Tasador: consulta fichas, reevaluación de 2023, tasa vigente de 24,57 mills y apelaciones","url":"https://www.westonct.gov/government/municipal-departments/assessor"},
+  {"en":"Tax Collector: verify property-specific tax bills, due dates, payment options and possible exemptions","es":"Recaudación: verifica facturas de la propiedad, vencimientos, pagos y posibles exenciones","url":"https://www.westonct.gov/government/municipal-departments/tax-collector"},
+  {"en":"Town Clerk: access land-record indexes, deeds, recorded maps and other official documents","es":"Secretaría municipal: consulta índices de terrenos, escrituras, planos y otros documentos oficiales","url":"https://www.westonct.gov/government/municipal-departments/town-clerk"},
+  {"en":"Building Department: check permits, inspections and certificate-of-occupancy procedures","es":"Construcción: revisa permisos, inspecciones y trámites de certificados de ocupación","url":"https://www.westonct.gov/government/municipal-departments/building-department"},
+  {"en":"Planning and Zoning: review land-use rules, applications and property restrictions","es":"Planificación y Zonificación: revisa normas de uso del suelo, solicitudes y restricciones","url":"https://www.westonct.gov/government/municipal-departments/planning-and-zoning"},
+  {"en":"Permit resources: locate building, health-district, conservation and zoning permit information","es":"Permisos: consulta trámites de construcción, distrito sanitario, conservación y zonificación","url":"https://www.westonct.gov/government/permits-regulations"},
+  {"en":"Weston Public Schools: check enrollment, residency documentation, school assignments and transportation","es":"Escuelas Públicas de Weston: consulta matrícula, residencia, asignación escolar y transporte","url":"https://www.westonps.org/student-registration"},
+  {"en":"Parks and Recreation: check park access, programs, registration and seasonal facilities","es":"Parques y Recreación: consulta acceso, programas, inscripciones e instalaciones de temporada","url":"https://www.westonct.gov/government/municipal-departments/parks-recreation"},
+  {"en":"Devil's Den Preserve: consult the Nature Conservancy's trail map, access rules and directions","es":"Reserva Devil's Den: consulta senderos, normas de acceso e indicaciones de The Nature Conservancy","url":"https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/lucius-pond-ordwaydevils-den-preserve/"},
+  {"en":"Transfer Station: confirm accepted materials, fees and waste or recycling procedures","es":"Centro de residuos: confirma materiales admitidos, tarifas y procedimientos de reciclaje","url":"https://www.westonct.gov/government/municipal-departments/transfer-station"},
+  {"en":"Stormwater resources: review local drainage information and septic-system care guidance","es":"Aguas pluviales: consulta drenaje local y recomendaciones para sistemas sépticos","url":"https://www.westonct.gov/government/municipal-departments/public-works/stormwater-management-program"},
+ ],
+
 };
