@@ -353,4 +353,14 @@ export const townPhotography:Record<string,TownPhoto[]>={
   {"title":"Danbury Railway Museum in the former Union Station building (photographed December 2007)","titleEs":"Museo Ferroviario de Danbury en el antiguo edificio de Union Station (fotografía de diciembre de 2007)","file":"Danbury Railroad Museum.jpg","credit":"Daniel Case","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
   {"title":"Historic Hearthstone Castle at Tarrywile Park in Danbury (photographed October 2016; no entry permitted)","titleEs":"Histórico castillo Hearthstone en Tarrywile Park, Danbury (fotografía de octubre de 2016; entrada prohibida)","file":"Hearthstone Castle - Danbury Ct - 2016-10-01 - 1.jpg","credit":"Dmadeo","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
  ],
+ // New Fairfield: location, author and Commons reuse license checked 2026-10-29.
+ // https://commons.wikimedia.org/wiki/File:Squantz_Pond_and_Candlewood_Lake_from_scenic_outlook_on_Pootatuck_State_Forest_Blue_Trail.jpg
+ // https://commons.wikimedia.org/wiki/File:NewFairfieldCT_CosierMurphyHouse.jpg
+ // https://commons.wikimedia.org/wiki/File:KnollcrestWindmill.jpg
+ 'new-fairfield': [
+  {"title":"Squantz Pond and Candlewood Lake from the Pootatuck State Forest Blue Trail overlook (2016)","titleEs":"Squantz Pond y Candlewood Lake desde el mirador del sendero azul de Pootatuck State Forest (2016)","file":"Squantz Pond and Candlewood Lake from scenic outlook on Pootatuck State Forest Blue Trail.jpg","credit":"Morrowlong","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Historic Cosier-Murphy House in New Fairfield (2016)","titleEs":"Casa histórica Cosier-Murphy en New Fairfield (2016)","file":"NewFairfieldCT CosierMurphyHouse.jpg","credit":"Magicpiano","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Windmill in New Fairfield's Knollcrest area (2022)","titleEs":"Molino de viento en la zona de Knollcrest de New Fairfield (2022)","file":"KnollcrestWindmill.jpg","credit":"Mbdfar","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
+
 };
