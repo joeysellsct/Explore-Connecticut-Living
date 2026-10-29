@@ -343,4 +343,14 @@ export const townPhotography:Record<string,TownPhoto[]>={
   {"title":"Aerial view of the Bradley Point and Savin Rock shoreline (photographed 2007)","titleEs":"Vista aérea de la costa de Bradley Point y Savin Rock (fotografía de 2007)","file":"WestHavenAerial5.jpg","credit":"PostMan1107","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
   {"title":"West Haven City Hall on Main Street across from the Green (photographed April 2012)","titleEs":"Ayuntamiento de West Haven en Main Street frente a la plaza Green (fotografía de abril de 2012)","file":"West Haven City Hall 109.JPG","credit":"Pedro Xing","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/"},
  ],
+ // Danbury: Wikimedia Commons file location, authorship and licenses checked 2026-10-29.
+ // Sources: https://commons.wikimedia.org/wiki/File:Tarrywile_Mansion.jpg
+ // https://commons.wikimedia.org/wiki/File:Danbury_Railroad_Museum.jpg
+ // https://commons.wikimedia.org/wiki/File:Hearthstone_Castle_-_Danbury_Ct_-_2016-10-01_-_1.jpg
+ // Photos are historical, not evidence of current building access; preserve attribution and crop/ShareAlike notices.
+ 'danbury': [
+  {"title":"Tarrywile Mansion in Danbury (photographed September 2012)","titleEs":"Mansión Tarrywile en Danbury (fotografía de septiembre de 2012)","file":"Tarrywile Mansion.jpg","credit":"Carlnlisa","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Danbury Railway Museum in the former Union Station building (photographed December 2007)","titleEs":"Museo Ferroviario de Danbury en el antiguo edificio de Union Station (fotografía de diciembre de 2007)","file":"Danbury Railroad Museum.jpg","credit":"Daniel Case","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Historic Hearthstone Castle at Tarrywile Park in Danbury (photographed October 2016; no entry permitted)","titleEs":"Histórico castillo Hearthstone en Tarrywile Park, Danbury (fotografía de octubre de 2016; entrada prohibida)","file":"Hearthstone Castle - Danbury Ct - 2016-10-01 - 1.jpg","credit":"Dmadeo","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
 };
