@@ -656,7 +656,17 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {"name":"Noodle House","cuisine":"Ramen, pho and Asian noodle dishes","cuisineEs":"Ramen, pho y platos asiáticos de fideos","website":"https://noodle-house.com/","sourceUrl":"https://noodle-house.com/","checkedOn":"2026-10-24"},
     {"name":"Ola Restaurant","cuisine":"Nuevo Latino cuisine and small plates","cuisineEs":"Cocina nuevo latina y platos para compartir","website":"https://www.olarestaurantct.com/orange/","sourceUrl":"https://www.olarestaurantct.com/orange/","checkedOn":"2026-10-24"},
     {"name":"Puerto Vallarta - Orange","cuisine":"Mexican cuisine, fresh guacamole and traditional dishes","cuisineEs":"Cocina mexicana, guacamole fresco y platos tradicionales","website":"https://puertovallartausa.com/orange","sourceUrl":"https://puertovallartausa.com/orange","checkedOn":"2026-10-24"},
-  ],};
+  ],
+ // Danbury: five restaurant-operated sites checked 2026-10-29 for Danbury locations and menus.
+ // Neutral bilingual descriptions only; no ratings, hours or personal Top Picks.
+ 'danbury': [
+  {"name":"Barbarie's Black Angus Grill","cuisine":"Steaks, seafood and American brunch or dinner at 5 Eagle Road","cuisineEs":"Carnes a la parrilla, mariscos y brunch o cenas estadounidenses en 5 Eagle Road","website":"https://www.blackangusdanbury.com/","sourceUrl":"https://www.blackangusdanbury.com/contact-us","checkedOn":"2026-10-29"},
+  {"name":"Rosy Tomorrow's","cuisine":"American comfort-food restaurant with sandwiches and entrees at 15 Old Mill Plain Road","cuisineEs":"Restaurante de cocina casera estadounidense con sándwiches y platos principales en 15 Old Mill Plain Road","website":"https://www.rosytomorrows.com/","sourceUrl":"https://www.rosytomorrows.com/contact","checkedOn":"2026-10-29"},
+  {"name":"Della Francesca","cuisine":"Northern Italian dining and pasta at 46 Mill Plain Road","cuisineEs":"Cocina del norte de Italia y pastas en 46 Mill Plain Road","website":"https://dellafrancescact.com/","sourceUrl":"https://dellafrancescact.com/","checkedOn":"2026-10-29"},
+  {"name":"Market Place Kitchen & Bar - Danbury","cuisine":"Seasonal American farm-to-table meals and brunch at 33 Mill Plain Road","cuisineEs":"Cocina estadounidense de temporada con ingredientes de granjas y brunch en 33 Mill Plain Road","website":"https://marketplacekitchenbar.com/locations/danbury","sourceUrl":"https://marketplacekitchenbar.com/locations/danbury","checkedOn":"2026-10-29"},
+  {"name":"Molly Darcy's Irish Pub - Danbury","cuisine":"Irish and American pub dishes at 39A Mill Plain Road","cuisineEs":"Platos de pub irlandés y estadounidense en 39A Mill Plain Road","website":"https://www.mollydarcy.com/mollysdanburyct","sourceUrl":"https://www.mollydarcy.com/mollysdanburyct","checkedOn":"2026-10-29"},
+ ],
+};
 // Personal recommendations are separate from third-party ratings.
 export const joeyTopPicks:Record<string,{name:string;note?:string;url?:string}[]> = {
   'cheshire': [
