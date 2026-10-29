@@ -220,7 +220,8 @@ for (const locale of ['en', 'es']) {
     // Confirm the new 2026–27 announcement is readable in each rendered
     // language and retains the school-contact fallback. This is NOT a claim
     // that the district's external registration portal itself works.
-    const portalNotice = html.match(/<a\\b[^>]*href="https:\\/\\/www\\.milforded\\.org\\/article\\/2670596"[^>]*>([\\s\\S]*?)<\\/a>/i)?.[1] || '';
+    const portalNotice = [...html.matchAll(new RegExp('<a[^>]*>(.*?)</a>', 'gis'))]
+      .find(match => match[0].includes('href="https://www.milforded.org/article/2670596"'))?.[1] || '';
     assert.ok(portalNotice.includes('PowerSchool Parent Portal'),
       `${path}: 2026–27 enrollment announcement lacks the rendered PowerSchool label`);
     const schoolFallback = locale === 'es'
