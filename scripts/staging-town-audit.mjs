@@ -203,12 +203,13 @@ for (const locale of ['en', 'es']) {
     '311/Harbor-Management-Commission-Marina'
   ];
   if (town === 'milford') {
-    // Require BOTH dated district notices to be actual rendered resource links
-    // in EN/ES, not merely text embedded in a Next.js hydration payload.
-    // The 2026–27 enrollment notice and 2027–28 eligibility update are
-    // different school-year rules; one must never silently replace the other.
+    // Require all three dated district notices to be actual rendered links,
+    // not merely source data or strings in a Next.js hydration payload.
+    // The January 30 PowerSchool announcement describes the 2026–27 route;
+    // the separate 2027–28 notice must not silently replace that guidance.
     const districtNotices = [
       'https://www.milforded.org/article/2628419',
+      'https://www.milforded.org/article/2670596',
       'https://www.milforded.org/article/2842624'
     ];
     const renderedAnchors = tags(html, 'a');
@@ -216,6 +217,17 @@ for (const locale of ['en', 'es']) {
       assert.ok(renderedAnchors.some(link => link.href === url),
         `${path}: missing dated Milford school notice link ${url}; check staging deployment freshness`);
     }
+    // Confirm the new 2026–27 announcement is readable in each rendered
+    // language and retains the school-contact fallback. This is NOT a claim
+    // that the district's external registration portal itself works.
+    const portalNotice = html.match(/<a\\b[^>]*href="https:\\/\\/www\\.milforded\\.org\\/article\\/2670596"[^>]*>([\\s\\S]*?)<\\/a>/i)?.[1] || '';
+    assert.ok(portalNotice.includes('PowerSchool Parent Portal'),
+      `${path}: 2026–27 enrollment announcement lacks the rendered PowerSchool label`);
+    const schoolFallback = locale === 'es'
+      ? 'comunícate con tu escuela asignada'
+      : 'contact your assigned school';
+    assert.ok(portalNotice.includes(schoolFallback),
+      `${path}: enrollment notice lacks the localized school-contact fallback`);
     const yearLabels = locale === 'es'
       ? ['2026–27', '2027–28', 'septiembre de 2027']
       : ['2026–27', '2027–28', 'September 1, 2027'];
@@ -223,7 +235,7 @@ for (const locale of ['en', 'es']) {
       assert.ok(html.includes(label),
         `${path}: missing localized school-year distinction "${label}"`);
     }
-    console.log(`PASS ${path}: both dated school notices and distinct year guidance`);
+    console.log(`PASS ${path}: three dated school notices, PowerSchool fallback and distinct year guidance`);
   }
   if (town === 'milford') {
     for (const resource of milfordResourcePaths) {
