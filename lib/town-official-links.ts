@@ -871,4 +871,21 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Municipal directory: find town offices and contacts for property, school and moving questions","es":"Directorio municipal: encuentra oficinas y contactos para consultas de propiedades, escuelas y mudanzas","url":"https://bethel-ct.gov/directory"},
  ],
 
+ // Redding: municipal resources and CCM FY2027 finance data reviewed 2026-10-29.
+ // Town-wide rate excludes any applicable fire-district tax; sewer, well and septic service are property-specific.
+ 'redding': [
+  {"en":"Assessor: review property assessment cards, revaluation, GIS and tax-relief programs","es":"Tasador: consulta fichas de valoración, reevaluación, mapas GIS y programas de alivio fiscal","url":"https://reddingct.gov/government/finance-and-taxes/assessor-town-of-redding-connecticut/"},
+  {"en":"Tax Collector: review real-estate tax bills, installments and Georgetown sewer charges where applicable","es":"Recaudación: consulta impuestos inmobiliarios, cuotas y cargos de alcantarillado de Georgetown cuando correspondan","url":"https://reddingct.gov/government/town-administration/tax-collector/"},
+  {"en":"FY 2026–27 town mill rate: Connecticut Conference of Municipalities reports 30.47 mills; verify applicable fire-district taxes and parcel bills","es":"Tasa municipal 2026–27: la Conferencia de Municipios de Connecticut indica 30,47 mills; verifica impuestos de distritos de bomberos y la factura de la parcela","url":"https://hub.ccm-ct.org/community/redding/"},
+  {"en":"Town and fire-district tax portals: check whether separate fire-district bills apply to an address","es":"Portales de impuestos municipales y de distritos de bomberos: comprueba si la dirección tiene facturas adicionales","url":"https://reddingct.gov/view-pay-taxes/"},
+  {"en":"Town Clerk: research recorded deeds, property transfers, land records and municipal documents","es":"Secretaría municipal: consulta escrituras inscritas, transferencias, registros de terrenos y documentos oficiales","url":"https://reddingct.gov/government/town-administration/town-clerk/"},
+  {"en":"Building Department: verify permits and approvals for construction, additions and renovations","es":"Construcción: verifica permisos y aprobaciones de obras, ampliaciones y reformas","url":"https://reddingct.gov/government/services/building-department/"},
+  {"en":"Zoning Department: review parcel-specific land-use and inland-watercourse restrictions","es":"Zonificación: revisa las restricciones de uso del suelo y cursos de agua de cada parcela","url":"https://reddingct.gov/government/services/zoning/"},
+  {"en":"Health Department: ask about septic inspections, private water quality and health records","es":"Salud: consulta inspecciones sépticas, calidad del agua privada y expedientes sanitarios","url":"https://reddingct.gov/government/services/health-department/"},
+  {"en":"Recycling and Transfer Station: review permits, fees and accepted materials before moving","es":"Reciclaje y centro de transferencia: consulta permisos, tarifas y materiales admitidos antes de mudarte","url":"https://reddingct.gov/government/services/recycling-center-and-transfer-station/"},
+  {"en":"Highway Department: consult road maintenance, winter service and drainage questions","es":"Carreteras: consulta mantenimiento vial, servicio invernal y asuntos de drenaje","url":"https://reddingct.gov/government/services/public-works-highway-transfer-station/"},
+  {"en":"Utility companies: consult the town's directory, then confirm the actual providers and service availability for the address","es":"Empresas de servicios: consulta el directorio municipal y confirma proveedores y disponibilidad para la dirección","url":"https://reddingct.gov/how-do-i/find-utility-companies/"},
+  {"en":"Schools: review official town school links and confirm enrollment eligibility directly with the district","es":"Escuelas: consulta enlaces escolares municipales y confirma directamente con el distrito los requisitos de inscripción","url":"https://reddingct.gov/about-redding/schools/"},
+ ],
+
 };
