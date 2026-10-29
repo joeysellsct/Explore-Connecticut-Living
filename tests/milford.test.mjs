@@ -69,6 +69,24 @@ test('Milford registration offers a readable district-sourced fallback without c
   assert.match(guidance.es, /inscripción a kínder 2026–27/);
   assert.match(guidance.en, /confirm current steps/i);
   assert.match(guidance.es, /confirma los pasos actuales/i);
+  // Official 2026-01-30 announcement is readable, but does not prove the
+  // third-party registration portal is usable. Keep both language labels
+  // and a school-contact fallback when the portal instructions do not render.
+  const online = byUrl.get('https://www.milforded.org/article/2670596');
+  assert.ok(online, 'Keep the district source for 2026-27 online registration');
+  assert.match(online.en, /2026–27 online kindergarten registration/);
+  assert.match(online.es, /Inscripción en línea a kínder 2026–27/);
+  for (const label of [online.en, online.es]) {
+    assert.match(label, /PowerSchool Parent Portal/);
+  }
+  assert.match(online.en, /contact your assigned school/i);
+  assert.match(online.es, /comunícate con tu escuela asignada/i);
+  const future = byUrl.get('https://www.milforded.org/article/2842624');
+  assert.ok(future, 'Retain the separate future-year kindergarten eligibility notice');
+  assert.match(future.en, /2027–28 kindergarten eligibility change/);
+  assert.match(future.es, /Cambio de elegibilidad para kínder 2027–28/);
+  assert.match(future.en, /September 1, 2027/);
+  assert.match(future.es, /1 de septiembre de 2027/);
 });
 
 test('Milford building, engineering and wetlands due diligence links use official bilingual sources', () => {
