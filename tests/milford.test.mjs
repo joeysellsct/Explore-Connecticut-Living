@@ -34,7 +34,15 @@ test('Milford has five distinct dated bilingual editorial restaurant listings', 
     assert.ok(name && en && es);
     assert.equal(new URL(website).protocol, 'https:');
     assert.equal(new URL(source).protocol, 'https:');
-    assert.equal(date, '2026-10-24');
+    // Keep the evidence date parseable and no earlier than the last operator-source
+    // recheck. A future independent recheck may advance checkedOn without
+    // requiring a test-code edit for every legitimate new verification date.
+    assert.match(date, /^\\d{4}-\\d{2}-\\d{2}$/, 'Restaurant source date must be ISO formatted');
+    const checked = new Date(date + 'T00:00:00Z');
+    assert.ok(Number.isFinite(checked.getTime()) && checked.toISOString().slice(0, 10) === date,
+      'Restaurant source date must be a real calendar date');
+    assert.ok(date >= '2026-10-29', 'Do not regress behind the last verified Milford restaurant recheck');
+    assert.ok(checked.getTime() <= Date.now(), 'Do not claim future verification');
   }
   const picks = read('lib/town-restaurants.ts').split('export const joeyTopPicks')[1];
   assert.ok(!/^\s*'milford':\s*\[/m.test(picks), 'Milford cannot be labeled a personal Top Pick');
