@@ -223,6 +223,26 @@ try {
           label + ': header language switcher left the root document language stale');
         assert.equal((await page.locator('main h1').textContent())?.trim(), 'Milford, Connecticut',
           label + ': header language switcher did not preserve the town');
+        // Footer legal links must work with keyboard activation in the actual
+        // rendered locale, not merely exist in a source/HTML link inventory.
+        // This is bounded automated keyboard coverage, not human AT review.
+        for (const legalRoute of ['privacy', 'terms']) {
+          const href = '/' + locale + '/' + legalRoute;
+          const legalLink = page.locator('footer a[href="' + href + '"]');
+          assert.equal(await legalLink.count(), 1,
+            label + ': expected one localized footer link to ' + legalRoute);
+          await legalLink.focus();
+          assert.ok(await legalLink.evaluate(element => document.activeElement === element),
+            label + ': footer ' + legalRoute + ' link cannot receive keyboard focus');
+          await page.keyboard.press('Enter');
+          await page.waitForURL(origin + href, {timeout: 15000});
+          assert.equal(await page.locator('html').getAttribute('lang'), locale,
+            label + ': ' + legalRoute + ' page has wrong document language');
+          assert.equal(await page.locator('main').count(), 1,
+            label + ': ' + legalRoute + ' page is missing its main landmark');
+          await page.goBack({waitUntil: 'domcontentloaded', timeout: 15000});
+          await page.waitForURL(origin + '/' + locale + '/towns/milford', {timeout: 15000});
+        }
         console.log('AUDITED ' + label + ': photos=' + count + ', axe violations=' + axe.violations.length + ', overflow=' + (overflow.scroll - overflow.viewport) + 'px');
       } catch (error) {
         failures.push(label + ': browser audit failed: ' + (error?.message || String(error)));
