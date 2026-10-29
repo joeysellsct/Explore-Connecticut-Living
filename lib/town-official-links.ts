@@ -805,4 +805,20 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {en:'Social Services: find information about housing, food and energy assistance',es:'Servicios Sociales: encuentra información sobre ayuda para vivienda, alimentos y energía',url:'https://www.shermanct.gov/entities/social-services'},
  ],
 
+ // Danbury municipal, tax, parks and school sources independently reviewed 2026-10-29.
+ // Rates, fees, school assignment, permits and utility connections require property-specific rechecks.
+ 'danbury': [
+  {"en":"City Hall and departments: find municipal contacts, public notices and resident services","es":"Ayuntamiento y departamentos: consulta contactos municipales, avisos públicos y servicios para residentes","url":"https://www.danbury-ct.gov/"},
+  {"en":"Assessor: research parcel assessments, Grand List records and available exemptions before estimating taxes","es":"Tasador: investiga las valoraciones de parcelas, la lista fiscal y las exenciones antes de estimar impuestos","url":"https://assessor.danbury-ct.gov/"},
+  {"en":"FY 2026–27 tax schedule: the October 1, 2025 Grand List uses 25.23 mills; check parcel bills and any additional charges","es":"Calendario fiscal 2026–27: la lista del 1 de octubre de 2025 utiliza 25,23 mills; confirma la factura y cargos adicionales","url":"https://assessor.danbury-ct.gov/162/Due-Dates"},
+  {"en":"Tax Collector: confirm payment options, current balances, due dates and municipal utility billing","es":"Recaudación: confirma opciones de pago, saldos, vencimientos y facturación municipal de servicios","url":"https://www.taxcollector.danbury-ct.gov/"},
+  {"en":"Town Clerk: request recorded deeds, land records, maps and official documents","es":"Secretaría municipal: solicita escrituras inscritas, registros de terrenos, planos y documentos oficiales","url":"https://www.danbury-ct.gov/265/Town-Clerk"},
+  {"en":"Permit Center: review building, zoning, engineering and utility permit procedures for renovations or additions","es":"Centro de Permisos: consulta trámites de construcción, zonificación, ingeniería y servicios para reformas o ampliaciones","url":"https://www.danbury-ct.gov/237/Permit-Center"},
+  {"en":"Planning and Zoning: check zoning regulations, land-use approvals and parcel-specific restrictions","es":"Planificación y Zonificación: consulta normas, autorizaciones de uso del suelo y restricciones de la parcela","url":"https://www.danbury-ct.gov/247/Planning-Zoning"},
+  {"en":"Public Utilities: verify municipal water and sewer service availability, connection procedures and recycling information by address","es":"Servicios Públicos: verifica por dirección la disponibilidad de agua y alcantarillado, conexiones y reciclaje","url":"https://www.danbury-ct.gov/337/Public-Utilities"},
+  {"en":"Public Works: ask about roads, public infrastructure and municipal service requests","es":"Obras Públicas: consulta asuntos de calles, infraestructura y solicitudes de servicios municipales","url":"https://danbury-ct.gov/295/Public-Works"},
+  {"en":"Tarrywile Park Authority: check trail access, park rules and historic-site restrictions before visiting","es":"Autoridad de Tarrywile Park: comprueba senderos, normas del parque y restricciones de sitios históricos antes de visitar","url":"https://www.danbury-ct.gov/267/Tarrywile-Park-Authority"},
+  {"en":"Danbury Public Schools: confirm registration requirements, school assignments, transportation and current district notices","es":"Escuelas Públicas de Danbury: confirma matrícula, asignación escolar, transporte y avisos vigentes del distrito","url":"https://www.danbury.k12.ct.us/"},
+ ],
+
 };
