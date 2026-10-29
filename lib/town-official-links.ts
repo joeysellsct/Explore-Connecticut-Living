@@ -855,4 +855,20 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Stormwater resources: review local drainage information and septic-system care guidance","es":"Aguas pluviales: consulta drenaje local y recomendaciones para sistemas sépticos","url":"https://www.westonct.gov/government/municipal-departments/public-works/stormwater-management-program"},
  ],
 
+ // Bethel: eleven official municipal pages verified 2026-10-29; tax rate from the Tax Collector's 2025 Grand List notice.
+ // Water/sewer connections, septic records, taxes and fees must be confirmed for each property.
+ 'bethel': [
+  {"en":"Assessor: check parcel assessments, exemptions and the applicable Grand List before estimating property taxes","es":"Tasador: revisa tasaciones de parcelas, exenciones y la lista fiscal correspondiente antes de calcular impuestos","url":"https://bethel-ct.gov/depts-assessor"},
+  {"en":"Tax Collector: the 2025 Grand List rate is 31.71 mills for FY 2026–27; confirm the actual parcel bill and any separate charges","es":"Recaudación: la tasa de la lista fiscal de 2025 es de 31,71 mills para 2026–27; confirma la factura de la parcela y los cargos adicionales","url":"https://bethel-ct.gov/depts-tax-collector"},
+  {"en":"Town Clerk: obtain recorded deeds, land records, maps and certified municipal records","es":"Secretaría municipal: solicita escrituras inscritas, registros de terrenos, planos y documentos certificados","url":"https://bethel-ct.gov/depts-clerk"},
+  {"en":"Building Department: review permits, inspection records and approval requirements for planned improvements","es":"Departamento de Construcción: consulta permisos, inspecciones y aprobaciones necesarias para reformas","url":"https://bethel-ct.gov/depts-building"},
+  {"en":"Planning and Zoning: check zoning, subdivision and inland-wetlands rules for the individual parcel","es":"Planificación y Zonificación: consulta normas de zonificación, subdivisiones y humedales para la parcela","url":"https://bethel-ct.gov/planning-zoning"},
+  {"en":"Public Works: ask about town roads, maintenance, drainage and public infrastructure","es":"Obras Públicas: consulta calles municipales, mantenimiento, drenaje e infraestructura pública","url":"https://bethel-ct.gov/public-works"},
+  {"en":"Water and sewer billing: check whether an address is connected and review usage or assessment charges before transfer","es":"Facturación de agua y alcantarillado: confirma si la dirección está conectada y revisa cargos de uso o evaluación antes de la transferencia","url":"https://bethel-ct.gov/paywatersewer"},
+  {"en":"Health Department septic guidance: verify septic permits, repairs and inspection records for properties with on-site systems","es":"Guía sanitaria sobre sistemas sépticos: verifica permisos, reparaciones e inspecciones de propiedades con sistemas individuales","url":"https://bethel-ct.gov/septic-repair"},
+  {"en":"Transfer Station: check resident permit requirements, accepted waste and recycling procedures","es":"Centro de transferencia: consulta permisos para residentes, residuos admitidos y normas de reciclaje","url":"https://bethel-ct.gov/depts-transfer-station"},
+  {"en":"Parks and Recreation: check programs, registration and current access to recreational facilities","es":"Parques y Recreación: consulta programas, inscripciones y acceso vigente a instalaciones recreativas","url":"https://bethel-ct.gov/depts-park-rec"},
+  {"en":"Municipal directory: find town offices and contacts for property, school and moving questions","es":"Directorio municipal: encuentra oficinas y contactos para consultas de propiedades, escuelas y mudanzas","url":"https://bethel-ct.gov/directory"},
+ ],
+
 };
