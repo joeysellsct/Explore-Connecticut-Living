@@ -161,6 +161,41 @@ try {
         await page.keyboard.press('Enter');
         await page.waitForFunction(() => document.querySelector('.tax-estimate')?.textContent?.includes('$6,881'), null, {timeout: 10000});
         assert.equal(await taxFields.nth(2).inputValue(), '28.67', label + ': reset must restore Milford FY2027 base rate');
+        // A valid-looking number must never survive invalid user input. Check
+        // localized validation and absence of a misleading annual total in the
+        // live React estimator, not merely source-code validation branches.
+        const invalidAssessment = locale === 'es'
+          ? 'Ingresa una tasación imponible válida'
+          : 'Enter a valid taxable assessed value';
+        const invalidRate = locale === 'es'
+          ? 'Ingresa una tasa en mills válida'
+          : 'Enter a valid mill rate';
+        const invalidHome = locale === 'es'
+          ? 'Ingresa un valor de vivienda válido'
+          : 'Enter a valid home value';
+        const expectInvalidEstimate = async message => {
+          await page.waitForFunction(expected =>
+            document.querySelector('.tax-estimate')?.textContent?.includes(expected),
+            message, {timeout: 10000});
+          assert.equal(await liveEstimate.locator('strong').count(), 0,
+            label + ': invalid tax input must suppress the numeric estimate');
+        };
+        await taxFields.nth(1).fill('-1');
+        await expectInvalidEstimate(invalidAssessment);
+        await taxFields.nth(1).fill('240000');
+        await page.waitForFunction(() =>
+          document.querySelector('.tax-estimate strong')?.textContent?.includes('$6,881'),
+          null, {timeout: 10000});
+        await taxFields.nth(2).fill('-1');
+        await expectInvalidEstimate(invalidRate);
+        await taxFields.nth(2).fill('28.67');
+        await taxFields.nth(1).fill('');
+        await taxFields.nth(0).fill('');
+        await expectInvalidEstimate(invalidHome);
+        await taxFields.nth(0).fill('400000');
+        await page.waitForFunction(() =>
+          document.querySelector('.tax-estimate strong')?.textContent?.includes('$8,028'),
+          null, {timeout: 10000});
         // Activate the visible town-guide language link and confirm the actual
         // destination, instead of assuming a correctly labeled link works.
         // Verify the town-guide language link can be activated without a mouse.
