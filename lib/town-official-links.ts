@@ -2,6 +2,21 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Thomaston: town government department and recreation pages checked 2026-10-30. Property taxes and sewer connections require address-specific verification.
+ 'thomaston': [
+  {"en":"Assessor: confirm the October 2025 Grand List mill rate, revaluation, parcel assessments and exemptions","es":"Tasador: verifica la tasa de la lista fiscal de octubre de 2025, la reevaluación, las tasaciones y exenciones","url":"https://www.thomastonct.gov/entities/assessor"},
+  {"en":"Tax Collector: check actual property bills, due dates and payment records","es":"Recaudación: consulta facturas inmobiliarias, vencimientos y pagos","url":"https://www.thomastonct.gov/entities/tax-collector"},
+  {"en":"Town Clerk: research deeds, land records and recorded documents","es":"Secretaría municipal: investiga escrituras, registros de propiedad y documentos inscritos","url":"https://www.thomastonct.gov/entities/town-clerk"},
+  {"en":"Building Department: inquire about permits, inspections and building records","es":"Construcción: consulta permisos, inspecciones y expedientes de obras","url":"https://www.thomastonct.gov/entities/building-department"},
+  {"en":"Land Use Department: research zoning, planning and land-use applications","es":"Uso del suelo: consulta zonificación, planificación y solicitudes de uso de terrenos","url":"https://www.thomastonct.gov/entities/building-land-use"},
+  {"en":"Inland Wetlands and Watercourses Commission: check regulated areas and permit processes","es":"Comisión de Humedales y Cursos de Agua: verifica zonas reguladas y trámites de permisos","url":"https://www.thomastonct.gov/entities/inland-wetlands-conservation-commission"},
+  {"en":"Public Works: find town road maintenance and public works contacts","es":"Obras Públicas: encuentra contactos de mantenimiento vial y servicios municipales","url":"https://www.thomastonct.gov/entities/highway-department"},
+  {"en":"Sewer Department: ask whether an address has municipal sewer service and what charges apply","es":"Alcantarillado: pregunta si la dirección tiene conexión municipal y qué cargos corresponden","url":"https://www.thomastonct.gov/entities/sewer-department"},
+  {"en":"Transfer Station and recycling: check disposal rules and resident requirements","es":"Centro de transferencia y reciclaje: consulta normas de residuos y requisitos para residentes","url":"https://www.thomastonct.gov/entities/solid-waste-recycling-transfer-station"},
+  {"en":"Thomaston Public Schools: find district contacts and confirm enrollment and residency requirements","es":"Escuelas Públicas de Thomaston: encuentra contactos y verifica requisitos de matrícula y residencia","url":"https://www.thomastonct.gov/entities/thomaston-public-schools"},
+  {"en":"Culture and Recreation: explore museums, railway history and local recreation options","es":"Cultura y recreación: descubre museos, historia ferroviaria y actividades locales","url":"https://www.thomastonct.gov/culture-recreation"},
+ ],
+
  // Easton: official municipal, fire district, health district and ER9 resources checked 2026-10-30.
  'easton': [
   {"en":"Assessor: check parcel assessments, exemptions and revaluation records","es":"Tasador: consulta tasaciones, exenciones y registros de reevaluación","url":"https://www.eastonct.gov/1229/Assessor"},
