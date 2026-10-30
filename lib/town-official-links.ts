@@ -1097,4 +1097,21 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Bridgeport Public Schools: check enrollment steps and residency documentation directly with the district","es":"Escuelas Públicas de Bridgeport: consulta inscripción y documentos de residencia directamente con el distrito","url":"https://www.bridgeportedu.net/information/student-registration/student-registration-home"},
  ],
 
+ // Torrington: official city, school, water and state park sources verified 2026-10-30.
+ 'torrington': [
+  {"en":"Assessor: review parcel assessments, mapping and tax relief programs","es":"Tasador: consulta tasaciones, mapas y programas de alivio fiscal","url":"https://www.torringtonct.gov/231/Assessors-Office"},
+  {"en":"Tax Collector: verify FY 2026–27 property mill rate, tax bills and sewer usage fees","es":"Recaudación: verifica la tasa fiscal 2026–27, facturas e importes de alcantarillado","url":"https://www.torringtonct.gov/216/Tax-Collectors-Office"},
+  {"en":"City Clerk: research deeds, recorded maps and land records","es":"Secretaría municipal: investiga escrituras, planos y registros de propiedades","url":"https://www.torringtonct.gov/229/City-Clerks-Office"},
+  {"en":"Building Department: check permits, inspections and online applications","es":"Construcción: consulta permisos, inspecciones y solicitudes en línea","url":"https://www.torringtonct.gov/230/Building-Department"},
+  {"en":"Planning and Zoning: review land uses, setbacks and applications","es":"Planificación y Zonificación: consulta usos del suelo, retiros y solicitudes","url":"https://www.torringtonct.gov/192/Planning-Zoning-Commission"},
+  {"en":"Land Use: find zoning maps, wetlands permits and development guidance","es":"Uso del Suelo: encuentra mapas de zonificación, permisos de humedales y orientación","url":"https://www.torringtonct.gov/455/Building-Zoning-Land-Use"},
+  {"en":"Public Works: check road maintenance and municipal infrastructure","es":"Obras Públicas: consulta mantenimiento vial e infraestructura municipal","url":"https://www.torringtonct.gov/219/Public-Works-Department"},
+  {"en":"Solid Waste: verify collection routes, recycling and bulky waste procedures","es":"Residuos: verifica rutas de recogida, reciclaje y objetos voluminosos","url":"https://www.torringtonct.gov/321/Solid-Waste-Department"},
+  {"en":"Water Pollution Control: verify whether an address has sewer service and connection fees","es":"Control de Aguas Residuales: verifica servicio de alcantarillado y cargos de conexión por dirección","url":"https://www.torringtonct.gov/318/Water-Pollution-Control-Authority"},
+  {"en":"Parks and Recreation: check recreation facilities, events and usage rules","es":"Parques y Recreación: consulta instalaciones, eventos y normas de uso","url":"https://www.torringtonct.gov/220/Parks-Recreation"},
+  {"en":"Torrington Public Schools: check 2026–27 registration, residency and school enrollment","es":"Escuelas Públicas de Torrington: consulta inscripción 2026–27, residencia y matrícula","url":"https://www.torrington.org/student-registration/new-student-registration-clone"},
+  {"en":"Torrington Water Company: check address-specific public water service and billing","es":"Torrington Water Company: verifica suministro de agua por dirección y facturación","url":"https://www.aquarionwater.com/torrington"},
+  {"en":"Connecticut state parks: check Burr Pond access and seasonal recreation notices","es":"Parques estatales: consulta acceso a Burr Pond y avisos de actividades estacionales","url":"https://ctparks.com/parks/burr-pond-state-park"},
+ ],
+
 };
