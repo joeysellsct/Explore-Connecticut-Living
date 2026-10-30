@@ -2,6 +2,18 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Harwinton: official municipal department and government portals reviewed 2026-10-30; verify parcel-specific taxes, services and permits directly.
+ 'harwinton': [
+  {"en":"Assessor: review parcel values, assessments and available tax-relief programs","es":"Tasador: consulta valores de parcelas, tasaciones y programas de alivio tributario","url":"https://www.harwinton.gov/161/Departments"},
+  {"en":"Tax Department: verify property bills, installment dates and payment records","es":"Recaudación: verifica facturas de impuestos, fechas de pago y registros de pagos","url":"https://www.harwinton.gov/183/Tax-Department"},
+  {"en":"Town Clerk: ask about deeds, land records and recorded documents","es":"Secretaría municipal: consulta escrituras, registros de propiedad y documentos inscritos","url":"https://www.harwinton.gov/161/Departments"},
+  {"en":"Building: research construction permits, inspections and occupancy documents","es":"Construcción: investiga permisos, inspecciones y documentos de ocupación","url":"https://www.harwinton.gov/161/Departments"},
+  {"en":"Land-use offices: confirm zoning and property-specific restrictions before planning work","es":"Oficinas de uso del suelo: confirma la zonificación y las restricciones de cada propiedad antes de realizar obras","url":"https://www.harwinton.gov/161/Departments"},
+  {"en":"Public Works: ask about municipal roads and maintenance contacts","es":"Obras Públicas: consulta las vías municipales y contactos de mantenimiento","url":"https://www.harwinton.gov/161/Departments"},
+  {"en":"Recycling: check disposal rules and available resident services","es":"Reciclaje: consulta normas de eliminación de residuos y servicios para residentes","url":"https://www.harwinton.gov/161/Departments"},
+  {"en":"GIS and property research: use the town portal and verify parcel details with the Assessor","es":"SIG e investigación de propiedades: utiliza el portal municipal y confirma los datos de cada parcela con el tasador","url":"https://www.harwinton.gov/"},
+  {"en":"Municipal notices and ordinances: review current local rules and public announcements","es":"Avisos y ordenanzas municipales: revisa las normas locales y los anuncios públicos vigentes","url":"https://www.harwinton.gov/27/Government"},
+ ],
  // Thomaston: town government department and recreation pages checked 2026-10-30. Property taxes and sewer connections require address-specific verification.
  'thomaston': [
   {"en":"Assessor: confirm the October 2025 Grand List mill rate, revaluation, parcel assessments and exemptions","es":"Tasador: verifica la tasa de la lista fiscal de octubre de 2025, la reevaluación, las tasaciones y exenciones","url":"https://www.thomastonct.gov/entities/assessor"},
