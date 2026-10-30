@@ -2,6 +2,20 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Stratford: municipal pages and district registration checked 2026-10-30; 2025 revaluation requires parcel-specific tax verification.
+ 'stratford': [
+  {"en":"Tax Assessor: review assessments, revaluation notices and parcel questions","es":"Tasador: consulta tasaciones, avisos de reevaluación y datos de parcelas","url":"https://www.stratfordct.gov/page/tax-assessor"},
+  {"en":"Tax Collector: check current real-estate tax bills and payment options","es":"Recaudación: verifica facturas de impuestos inmobiliarios y formas de pago","url":"https://www.stratfordct.gov/page/tax-collector"},
+  {"en":"Town Clerk: research deeds, recorded documents and land records","es":"Secretaría municipal: consulta escrituras y registros de tierras","url":"https://www.stratfordct.gov/page/town-clerk"},
+  {"en":"Building Official: ask about permits, inspections and code requirements","es":"Oficina de Construcción: consulta permisos, inspecciones y requisitos del código","url":"https://www.stratfordct.gov/page/building-official"},
+  {"en":"Planning and Zoning: review regulations and land-use documents","es":"Planificación y Zonificación: revisa reglamentos y documentos de uso de suelo","url":"https://www.stratfordct.gov/page/planning-and-zoning-documents"},
+  {"en":"Business and Construction Permit Offices: identify the correct office for work on a property","es":"Oficinas de Permisos: identifica la oficina correspondiente para obras en un inmueble","url":"https://www.stratfordct.gov/page/business-and-construction-permit-offices/"},
+  {"en":"Health Department: ask about environmental health, private systems and beach advisories","es":"Departamento de Salud: consulta salud ambiental, sistemas privados y avisos de playas","url":"https://www.stratfordct.gov/page/health"},
+  {"en":"Public Works: research town road maintenance and municipal services","es":"Obras Públicas: consulta mantenimiento de caminos y servicios municipales","url":"https://www.stratfordct.gov/page/public-works"},
+  {"en":"Garbage and Recycling: check collection schedules and disposal requirements","es":"Basura y Reciclaje: verifica calendarios de recolección y requisitos de disposición","url":"https://www.stratfordct.gov/page/garbage-recycling-information"},
+  {"en":"Beaches and Parks: check access, permits and seasonal rules","es":"Playas y Parques: consulta acceso, permisos y reglas de temporada","url":"https://www.stratfordct.gov/page/beaches-parks"},
+  {"en":"Stratford Public Schools: review K-12 registration requirements and school assignment","es":"Escuelas Públicas de Stratford: consulta inscripción K-12 y asignación escolar","url":"https://www.stratfordk12.org/documents/registration/student-registration-k-12/301533"},
+ ],
  // Trumbull: official town and district resources checked 2026-10-30; confirm fire district and sewer charges for each address.
  'trumbull': [
   {"en":"Tax Assessor: review parcel assessments, field cards, exemptions and revaluation notices","es":"Tasador: revisa tasaciones, fichas de inmuebles, exenciones y reevaluación","url":"https://trumbull-ct.gov/274/Tax-Assessor"},
