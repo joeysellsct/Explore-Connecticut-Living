@@ -2,6 +2,20 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Trumbull: official town and district resources checked 2026-10-30; confirm fire district and sewer charges for each address.
+ 'trumbull': [
+  {"en":"Tax Assessor: review parcel assessments, field cards, exemptions and revaluation notices","es":"Tasador: revisa tasaciones, fichas de inmuebles, exenciones y reevaluación","url":"https://trumbull-ct.gov/274/Tax-Assessor"},
+  {"en":"Tax Collector: verify property tax, sewer assessment and sewer usage bills","es":"Recaudación: verifica impuestos inmobiliarios y facturas de alcantarillado","url":"https://trumbull-ct.gov/280/Tax-Collector"},
+  {"en":"Town Clerk: research deeds, liens, mortgages and recorded land documents","es":"Secretaría municipal: investiga escrituras, gravámenes, hipotecas y registros de tierras","url":"https://trumbull-ct.gov/283/Town-Clerk"},
+  {"en":"Building Department: confirm permit history, inspections and certificates of occupancy","es":"Construcción: confirma permisos, inspecciones y certificados de ocupación","url":"https://trumbull-ct.gov/155/Building-Department"},
+  {"en":"Planning and Zoning: check permitted uses, applications and zoning rules","es":"Planificación y zonificación: verifica usos permitidos, solicitudes y normas","url":"https://trumbull-ct.gov/218/Planning-Zoning"},
+  {"en":"Health Department: ask about septic system reviews and environmental health requirements","es":"Salud: consulta revisiones de sistemas sépticos y requisitos ambientales","url":"https://trumbull-ct.gov/179/Health"},
+  {"en":"Public Works: ask about municipal roads, infrastructure and maintenance programs","es":"Obras Públicas: consulta caminos municipales, infraestructura y mantenimiento","url":"https://trumbull-ct.gov/268/Public-Works"},
+  {"en":"Transfer Station and Recycling Center: confirm accepted materials and current access rules","es":"Centro de transferencia y reciclaje: confirma materiales admitidos y normas de acceso","url":"https://trumbull-ct.gov/275/Transfer-Station-Recycling-Center"},
+  {"en":"Water Pollution Control Authority: confirm sewer service, connections and related questions","es":"Autoridad de Alcantarillado: confirma servicio, conexiones y consultas relacionadas","url":"https://trumbull-ct.gov/294/Water-Pollution-Control-Authority-WPCA"},
+  {"en":"Online Services: access municipal property, land record, tax and permit tools","es":"Servicios en línea: accede a registros de propiedades, tierras, impuestos y permisos","url":"https://www.trumbull-ct.gov/483/Use-Online-Services"},
+  {"en":"Trumbull Public Schools: check new-student registration and residency documentation","es":"Escuelas Públicas de Trumbull: consulta inscripción y documentos de residencia","url":"https://www.trumbullps.org/general/student-registration"},
+ ],
  // Monroe: municipal and district sources checked 2026-10-30; tax collector currently displays FY 2025-26, so do not infer FY 2026-27 rate.
  'monroe': [
   {"en":"Assessor: review property valuations, exemptions and revaluation information","es":"Tasador: revisa valoraciones, exenciones y datos de reevaluación","url":"https://monroect.gov/p/assessor"},
