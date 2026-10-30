@@ -1114,4 +1114,18 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Connecticut state parks: check Burr Pond access and seasonal recreation notices","es":"Parques estatales: consulta acceso a Burr Pond y avisos de actividades estacionales","url":"https://ctparks.com/parks/burr-pond-state-park"},
  ],
 
+ // Litchfield: official town and Region 20 resources verified 2026-10-30; borough taxes and sewer are parcel-specific.
+ 'litchfield': [
+  {"en":"Assessor: review assessments, revaluation history and tax-relief programs","es":"Tasador: consulta valoraciones, reevaluaciones y programas de alivio fiscal","url":"https://www.townoflitchfieldct.gov/entities/assessor"},
+  {"en":"Tax Collector: check bills, payments and possible Bantam or Litchfield borough taxes","es":"Recaudación: verifica facturas, pagos y posibles impuestos de los boroughs de Bantam o Litchfield","url":"https://www.townoflitchfieldct.gov/entities/tax-collector"},
+  {"en":"Town Clerk: search deeds, recorded maps and land records","es":"Secretaría municipal: busca escrituras, planos y registros de tierras","url":"https://www.townoflitchfieldct.gov/entities/town-clerk"},
+  {"en":"Building Department: check building permits and inspections","es":"Construcción: consulta permisos de obras e inspecciones","url":"https://www.townoflitchfieldct.gov/entities/building-department"},
+  {"en":"Land Use: check zoning, subdivisions, wetlands and aquifer protection","es":"Uso del Suelo: consulta zonificación, subdivisiones, humedales y protección de acuíferos","url":"https://www.townoflitchfieldct.gov/entities/land-use"},
+  {"en":"Public Works: check roads, driveway permits and town infrastructure","es":"Obras Públicas: consulta caminos, permisos de accesos e infraestructura","url":"https://www.townoflitchfieldct.gov/entities/public-works"},
+  {"en":"Recycling Center: verify resident stickers, accepted materials and private trash pickup","es":"Centro de Reciclaje: verifica distintivos, materiales aceptados y recogida privada de basura","url":"https://www.townoflitchfieldct.gov/entities/recycling-center"},
+  {"en":"Water Pollution Control Authority: ask about sewer service and usage charges","es":"Autoridad de Aguas Residuales: consulta conexión al alcantarillado y tarifas","url":"https://www.townoflitchfieldct.gov/entities/water-pollution-control-authority-wpca"},
+  {"en":"Regional School District 20: check 2026–27 K–12 registration and residency steps","es":"Distrito Escolar Regional 20: consulta inscripción K–12 para 2026–27 y requisitos de residencia","url":"https://www.rsd20.org/o/rsd-20/page/registration-k-12"},
+  {"en":"Departments and Offices: find municipal contacts for property and moving questions","es":"Departamentos municipales: encuentra contactos para consultas de propiedades y mudanzas","url":"https://www.townoflitchfieldct.gov/departments-offices"},
+ ],
+
 };
