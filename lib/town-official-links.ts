@@ -2,6 +2,21 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Easton: official municipal, fire district, health district and ER9 resources checked 2026-10-30.
+ 'easton': [
+  {"en":"Assessor: check parcel assessments, exemptions and revaluation records","es":"Tasador: consulta tasaciones, exenciones y registros de reevaluación","url":"https://www.eastonct.gov/1229/Assessor"},
+  {"en":"Tax Collector: view current property bills, payments and the 2025 Grand List mill rate","es":"Recaudación: consulta facturas, pagos y tasa impositiva de la lista fiscal de 2025","url":"https://www.eastonct.gov/1210/Tax-Collector"},
+  {"en":"Town Clerk: research deeds, recorded maps and land records, including online records from 1979","es":"Secretaría municipal: investiga escrituras, planos y registros de tierras, incluidos archivos en línea desde 1979","url":"https://www.eastonct.gov/1209/Town-Clerk"},
+  {"en":"Building Department: ask about permits, inspections and in-person property-file searches","es":"Construcción: consulta permisos, inspecciones y expedientes inmobiliarios disponibles en persona","url":"https://www.eastonct.gov/1228/Building"},
+  {"en":"Planning and Zoning Commission: review zoning rules, subdivisions and land-use applications","es":"Planificación y Zonificación: consulta normas, subdivisiones y solicitudes de uso del suelo","url":"https://www.eastonct.gov/1663/Planning-and-Zoning-Commission"},
+  {"en":"Inland Wetlands Agency: check regulated wetlands activities and permit requirements","es":"Agencia de Humedales: verifica actividades reguladas y permisos necesarios","url":"https://www.eastonct.gov/1677/Conservation-Commission-Inland-Wetlands-"},
+  {"en":"Aspetuck Health District: request septic as-built and well completion records and permit information","es":"Distrito de Salud Aspetuck: solicita planos de sistemas sépticos, registros de pozos y permisos","url":"https://www.eastonct.gov/1230/Aspetuck-Health-District"},
+  {"en":"Easton Fire District No. 1: check whether a parcel is subject to a separate fire-district tax","es":"Distrito de Bomberos N.º 1: verifica si una parcela tiene un impuesto adicional del distrito","url":"https://www.eastonct.gov/1245/Easton-Fire-District-No-1"},
+  {"en":"Special Item Disposal: check rules for electronics, paint and household hazardous waste","es":"Eliminación de residuos especiales: consulta normas sobre electrónicos, pintura y desechos peligrosos","url":"https://www.eastonct.gov/1291/Special-Item-Disposal"},
+  {"en":"Trumbull Transfer Station: verify Easton-resident access, tickets and current disposal rules","es":"Centro de transferencia de Trumbull: verifica acceso para residentes de Easton, boletos y normas vigentes","url":"https://www.trumbull-ct.gov/275/Transfer-Station-Recycling-Center"},
+  {"en":"Parks and Fields: check local parks, athletic facilities and posted access rules","es":"Parques y campos: consulta espacios recreativos, instalaciones deportivas y normas de acceso","url":"https://www.eastonct.gov/1714/Parks-and-Fields"},
+  {"en":"ER9 School Registration: check current K–12 enrollment instructions and residency requirements","es":"Inscripción escolar ER9: consulta instrucciones de matrícula K–12 y requisitos de residencia","url":"https://jbhs.er9.org/registration"},
+ ],
  // Newtown: municipal, borough, school and utility resources checked 2026-10-30; separate borough tax and zoning may apply.
  'newtown': [
   {"en":"Tax Assessor: verify parcel assessment, field cards and October 2026 revaluation","es":"Tasador: verifica tasaciones, fichas de inmuebles y reevaluación de octubre de 2026","url":"https://www.newtown-ct.gov/tax-assessor"},
