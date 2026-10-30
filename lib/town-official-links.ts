@@ -2,6 +2,21 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Newtown: municipal, borough, school and utility resources checked 2026-10-30; separate borough tax and zoning may apply.
+ 'newtown': [
+  {"en":"Tax Assessor: verify parcel assessment, field cards and October 2026 revaluation","es":"Tasador: verifica tasaciones, fichas de inmuebles y reevaluación de octubre de 2026","url":"https://www.newtown-ct.gov/tax-assessor"},
+  {"en":"Tax Collector: check property tax bills, payments and sewer or water charges","es":"Recaudación: consulta impuestos inmobiliarios, pagos y cargos de agua o alcantarillado","url":"https://www.newtown-ct.gov/tax-collector"},
+  {"en":"Borough Tax Collector: check additional borough tax obligations where applicable","es":"Recaudación del Borough: verifica impuestos adicionales del distrito cuando correspondan","url":"https://www.newtown-ct.gov/borough-tax-collector"},
+  {"en":"Town Clerk: research recorded deeds, mortgages and land documents","es":"Secretaría municipal: investiga escrituras, hipotecas y registros de tierras","url":"https://www.newtown-ct.gov/town-clerk"},
+  {"en":"Land Records Search: review online indexes and image-access terms","es":"Búsqueda de Registros: consulta índices en línea y condiciones de acceso a imágenes","url":"https://www.newtown-ct.gov/town-clerk/pages/search-public-records-online"},
+  {"en":"Building Department: find building permit and inspection contacts in the official directory","es":"Departamento de Construcción: encuentra contactos de permisos e inspecciones en el directorio oficial","url":"https://www.newtown-ct.gov/departments"},
+  {"en":"Land Use Agency: review zoning, wetlands, floodplain and permitted uses","es":"Agencia de Uso de Suelo: consulta zonificación, humedales, zonas inundables y usos permitidos","url":"https://www.newtown-ct.gov/land-use-agency"},
+  {"en":"Newtown Health District: research environmental health and private septic or well questions","es":"Distrito de Salud: consulta salud ambiental y cuestiones de pozos o sistemas sépticos","url":"https://www.newtown-ct.gov/newtown-health-district/pages/environmental-health"},
+  {"en":"Public Works: check roads, waste services and sewer infrastructure","es":"Obras Públicas: consulta caminos, residuos e infraestructura de alcantarillado","url":"https://www.newtown-ct.gov/public-works"},
+  {"en":"Recycling Information: verify transfer-station procedures and accepted materials","es":"Información de Reciclaje: verifica normas del centro de transferencia y materiales admitidos","url":"https://www.newtown-ct.gov/recycling-information"},
+  {"en":"Water and Sewer Authority: ask about service boundaries and connections for a specific parcel","es":"Autoridad de Agua y Alcantarillado: consulta zonas de servicio y conexiones de cada parcela","url":"https://www.newtown-ct.gov/water-sewer-authority"},
+  {"en":"Newtown Public Schools: check enrollment documents and address-specific assignments","es":"Escuelas Públicas de Newtown: consulta documentos de inscripción y asignación por domicilio","url":"https://newtown.k12.ct.us/NewStudentEnrollment"},
+ ],
  // Stratford: municipal pages and district registration checked 2026-10-30; 2025 revaluation requires parcel-specific tax verification.
  'stratford': [
   {"en":"Tax Assessor: review assessments, revaluation notices and parcel questions","es":"Tasador: consulta tasaciones, avisos de reevaluación y datos de parcelas","url":"https://www.stratfordct.gov/page/tax-assessor"},
