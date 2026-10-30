@@ -2,6 +2,19 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Wilton: ten town/district-operated resource pages checked 2026-10-30. Rates and service connections require address-level confirmation.
+ 'wilton': [
+  {"en":"Assessor: review parcel field cards, assessed values, exemptions and revaluation information before estimating property taxes","es":"Tasador: consulta fichas de parcelas, valores tasados, exenciones y reevaluaciones antes de estimar impuestos","url":"https://www.wiltonct.gov/assessors-office"},
+  {"en":"Tax Collector: review current property-tax bills, payment status and any sewer or water capital assessments","es":"Recaudación: revisa facturas de impuestos, pagos y posibles cargos de capital de agua o alcantarillado","url":"https://www.wiltonct.gov/tax-collector"},
+  {"en":"Town Clerk: research recorded deeds, surveys, land records and other property documents","es":"Secretaría municipal: consulta escrituras, planos, registros de tierras y otros documentos de propiedad","url":"https://www.wiltonct.gov/town-clerk"},
+  {"en":"Building Department: check construction permits, inspections and certificates of occupancy","es":"Departamento de Construcción: verifica permisos, inspecciones y certificados de ocupación","url":"https://www.wiltonct.gov/building-department"},
+  {"en":"Land Use offices: consult planning, zoning, environmental affairs and health staff before proposing changes to a parcel","es":"Oficinas de Uso del Suelo: consulta planificación, zonificación, medioambiente y salud antes de modificar una parcela","url":"https://www.wiltonct.gov/land-use"},
+  {"en":"Virtual Town Hall: access municipal transactions, property records, GIS maps, sewer connection requests and public works services","es":"Ayuntamiento virtual: accede a trámites, registros de propiedades, mapas GIS, solicitudes de conexión al alcantarillado y obras públicas","url":"https://www.wiltonct.gov/home/pages/virtual-town-hall"},
+  {"en":"Transfer Station: confirm resident vehicle permits, disposal tickets, accepted waste and recycling procedures before moving","es":"Centro de transferencia: confirma permisos de vehículos, boletos, residuos admitidos y normas de reciclaje antes de mudarte","url":"https://www.wiltonct.gov/transfer-station-waste-and-trash-disposal"},
+  {"en":"Transfer Station permit guide: check current sticker and ticket purchasing instructions; published fees may be from prior fiscal years","es":"Guía de permisos del centro de transferencia: consulta instrucciones actuales de compra; las tarifas publicadas pueden ser de años anteriores","url":"https://www.wiltonct.gov/transfer-station-waste-and-trash-disposal/pages/how-obtain-vehicle-permit-stickers-transfer-station"},
+  {"en":"Wilton Public Schools enrollment: review registration steps, residency documentation and kindergarten guidance directly with the district","es":"Inscripción en las Escuelas Públicas de Wilton: revisa los pasos, documentos de residencia y requisitos de jardín de infancia con el distrito","url":"https://www.wiltonps.org/enrollment"},
+  {"en":"Municipal departments: find official contacts for Public Works, Health, Parks and Recreation, Planning and Zoning and other services","es":"Departamentos municipales: encuentra contactos oficiales de Obras Públicas, Salud, Parques y Recreación, Planificación y Zonificación y otros servicios","url":"https://www.wiltonct.gov/departments"},
+ ],
  // Shelton: 12 official municipal, health-district and public-school sources checked 2026-10-30.
  // The Tax Collector's FY 2026–27 notice reports 15.51 mills; parcel assessments, revaluation, sewer fees and school assignment require independent checks.
  'shelton': [
