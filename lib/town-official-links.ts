@@ -28,7 +28,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Health Department: ask about environmental health, private systems and beach advisories","es":"Departamento de Salud: consulta salud ambiental, sistemas privados y avisos de playas","url":"https://www.stratfordct.gov/page/health"},
   {"en":"Public Works: research town road maintenance and municipal services","es":"Obras Públicas: consulta mantenimiento de caminos y servicios municipales","url":"https://www.stratfordct.gov/page/public-works"},
   {"en":"Garbage and Recycling: check collection schedules and disposal requirements","es":"Basura y Reciclaje: verifica calendarios de recolección y requisitos de disposición","url":"https://www.stratfordct.gov/page/garbage-recycling-information"},
-  {"en":"Beaches and Parks: check access, permits and seasonal rules","es":"Playas y Parques: consulta acceso, permisos y reglas de temporada","url":"https://www.stratfordct.gov/page/beaches-parks"},
+  {"en":"Beaches and Parks: check access, permits and seasonal rules","es":"Playas y Parques: consulta acceso, permisos y reglas de temporada","url":"https://www.stratfordct.gov/page/parks"},
   {"en":"Stratford Public Schools: review K-12 registration requirements and school assignment","es":"Escuelas Públicas de Stratford: consulta inscripción K-12 y asignación escolar","url":"https://www.stratfordk12.org/documents/registration/student-registration-k-12/301533"},
  ],
  // Trumbull: official town and district resources checked 2026-10-30; confirm fire district and sewer charges for each address.
