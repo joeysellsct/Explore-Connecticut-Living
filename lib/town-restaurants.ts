@@ -12,6 +12,49 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Stamford: five operator-verified town addresses and food descriptions checked 2026-10-29; no hours or ratings asserted.
+ 'stamford': [
+   {
+     "name": "Colony Grill",
+     "cuisine": "Thin-crust hot-oil bar pizza at 172 Myrtle Avenue",
+     "cuisineEs": "Pizza fina de bar con aceite picante en 172 Myrtle Avenue",
+     "website": "https://colonygrill.com/locations",
+     "sourceUrl": "https://colonygrill.com/locations",
+     "checkedOn": "2026-10-29"
+   },
+   {
+     "name": "Cafe Silvium",
+     "cuisine": "Italian restaurant serving pasta and regional specialties at 371 Shippan Avenue",
+     "cuisineEs": "Restaurante italiano con pastas y especialidades regionales en 371 Shippan Avenue",
+     "website": "https://www.cafesilviumct.com/",
+     "sourceUrl": "https://www.cafesilviumct.com/reviews",
+     "checkedOn": "2026-10-29"
+   },
+   {
+     "name": "Barcelona Wine Bar",
+     "cuisine": "Spanish-inspired tapas and Mediterranean small plates at 222 Summer Street",
+     "cuisineEs": "Tapas de inspiración española y platos mediterráneos para compartir en 222 Summer Street",
+     "website": "https://barcelonawinebar.com/location/stamford/",
+     "sourceUrl": "https://barcelonawinebar.com/location/stamford/",
+     "checkedOn": "2026-10-29"
+   },
+   {
+     "name": "Mecha Noodle Bar",
+     "cuisine": "Ramen, pho and Asian-inspired noodle dishes at 151 Bedford Street",
+     "cuisineEs": "Ramen, pho y platos de fideos de inspiración asiática en 151 Bedford Street",
+     "website": "https://www.mechanoodlebar.com/locations",
+     "sourceUrl": "https://www.mechanoodlebar.com/locations",
+     "checkedOn": "2026-10-29"
+   },
+   {
+     "name": "Pellicci's",
+     "cuisine": "Italian-American restaurant serving traditional dishes at 96 Stillwater Avenue",
+     "cuisineEs": "Restaurante italoestadounidense de platos tradicionales en 96 Stillwater Avenue",
+     "website": "https://pelliccis.com/",
+     "sourceUrl": "https://pelliccis.com/contact-us/",
+     "checkedOn": "2026-10-29"
+   }
+ ],
  // Norwalk: five operator websites checked 2026-10-29 for town addresses and menu style; no ratings or hours asserted.
  'norwalk': [
   {"name":"Oak + Almond","cuisine":"Seasonal American restaurant with wood-fired cooking at 544 Main Avenue","cuisineEs":"Restaurante estadounidense de temporada con cocina al fuego de leña en 544 Main Avenue","website":"https://oakandalmond.com/","sourceUrl":"https://oakandalmond.com/","checkedOn":"2026-10-29"},
