@@ -419,4 +419,14 @@ export const townPhotography:Record<string,TownPhoto[]>={
   {"title":"Historic Noyes House in New Canaan (photographed 2016)","titleEs":"Casa histórica Noyes en New Canaan (fotografía de 2016)","file":"NewCanaanCT NoyesHouse.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
  ],
 
+ // Darien: Wikimedia Commons town identity, original author and reuse license checked 2026-10-30.
+ // https://commons.wikimedia.org/wiki/File:Darien,_Connecticut_main_street.jpg
+ // https://commons.wikimedia.org/wiki/File:Noroton_Heights_station,_November_2011.jpg
+ // https://commons.wikimedia.org/wiki/File:DarienCT_DCAMeadowlands1.jpg
+ 'darien': [
+  {"title":"Main Street in Darien (photographed 2010)","titleEs":"Calle principal de Darien (fotografía de 2010)","file":"Darien, Connecticut main street.jpg","credit":"Doug Kerr","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0/"},
+  {"title":"Noroton Heights train station platform in Darien (photographed 2011)","titleEs":"Andén de la estación de tren Noroton Heights en Darien (fotografía de 2011)","file":"Noroton Heights station, November 2011.jpg","credit":"Adam Moss","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0/"},
+  {"title":"Historic Meadowlands building in Darien (photographed 2016)","titleEs":"Edificio histórico Meadowlands de Darien (fotografía de 2016)","file":"DarienCT DCAMeadowlands1.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
+
 };
