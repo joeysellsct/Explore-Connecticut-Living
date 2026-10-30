@@ -2,6 +2,18 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Norfolk: official town directory, offices and tax collector reviewed 2026-10-30; parcel-level verification required.
+ 'norfolk': [
+  {"en":"Town offices: find the Assessor, Town Clerk, Building Official, Tax Collector, Public Works and Sewer District","es":"Oficinas municipales: encuentra al tasador, secretario municipal, inspector de obras, recaudador, Obras Públicas y distrito de alcantarillado","url":"https://norfolkct.org/town-hall/town-offices/"},
+  {"en":"Assessor and property database: research parcel assessments and confirm details with the town","es":"Tasador y base de datos inmobiliarios: investiga tasaciones y confirma los datos con el municipio","url":"https://norfolkct.org/town-hall/"},
+  {"en":"Tax Collector: verify current real-estate bills, payment status and applicable tax periods","es":"Recaudación: verifica facturas inmobiliarias, pagos y períodos fiscales aplicables","url":"https://norfolkct.org/tax-collector/"},
+  {"en":"Town Clerk: inquire about recorded deeds, maps and land records","es":"Secretaría municipal: consulta escrituras, planos y registros de propiedad","url":"https://norfolkct.org/town-hall/town-offices/"},
+  {"en":"Building Official and zoning: verify permits, inspections and site-specific land-use restrictions","es":"Construcción y zonificación: verifica permisos, inspecciones y restricciones de uso del suelo de cada parcela","url":"https://norfolkct.org/town-hall/town-offices/"},
+  {"en":"Sewer District: ask whether a particular address is connected and what fees apply","es":"Distrito de alcantarillado: pregunta si una dirección está conectada y qué cargos corresponden","url":"https://norfolkct.org/town-hall/town-offices/"},
+  {"en":"Trash and recycling: confirm transfer-station eligibility and current disposal procedures","es":"Residuos y reciclaje: confirma el acceso al centro de transferencia y los procedimientos vigentes","url":"https://norfolkct.org/town-hall/"},
+  {"en":"Town directory: find municipal contacts, Botelle Elementary School and Northwestern Regional School District 7","es":"Directorio municipal: encuentra contactos, la escuela Botelle y el Distrito Escolar Regional 7","url":"https://norfolkct.org/directory/"},
+  {"en":"Town notices and documents: review current municipal rules, meetings and announcements","es":"Avisos y documentos municipales: consulta normas, reuniones y anuncios actuales","url":"https://norfolkct.org/town-hall/"},
+ ],
  // Harwinton: official municipal department and government portals reviewed 2026-10-30; verify parcel-specific taxes, services and permits directly.
  'harwinton': [
   {"en":"Assessor: review parcel values, assessments and available tax-relief programs","es":"Tasador: consulta valores de parcelas, tasaciones y programas de alivio tributario","url":"https://www.harwinton.gov/161/Departments"},
