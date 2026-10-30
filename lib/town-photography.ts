@@ -409,4 +409,14 @@ export const townPhotography:Record<string,TownPhoto[]>={
   {"title":"Another view of Kettle Creek Historic District in Weston (2016)","titleEs":"Otra vista del distrito histórico Kettle Creek de Weston (2016)","file":"WestonCT KettleCreekHD 3.jpg","credit":"Magicpiano","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
  ],
 
+ // New Canaan: Wikimedia Commons file identity, location, photographer and reuse license verified 2026-10-30.
+ // https://commons.wikimedia.org/wiki/File:New_Canaan_Town_Hall.JPG
+ // https://commons.wikimedia.org/wiki/File:Glasshouse-philip-johnson.jpg
+ // https://commons.wikimedia.org/wiki/File:NewCanaanCT_NoyesHouse.jpg
+ 'new-canaan': [
+  {"title":"New Canaan Town Hall (photographed 2009)","titleEs":"Ayuntamiento de New Canaan (fotografía de 2009)","file":"New Canaan Town Hall.JPG","credit":"Deutsch Fetisch","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Philip Johnson's Glass House in New Canaan (photographed 2009)","titleEs":"Glass House de Philip Johnson en New Canaan (fotografía de 2009)","file":"Glasshouse-philip-johnson.jpg","credit":"Staib","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Historic Noyes House in New Canaan (photographed 2016)","titleEs":"Casa histórica Noyes en New Canaan (fotografía de 2016)","file":"NewCanaanCT NoyesHouse.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
+
 };
