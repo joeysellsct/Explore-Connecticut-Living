@@ -2,6 +2,21 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Ridgefield: official town and school pages checked 2026-10-30; verify property-specific tax and service details.
+ 'ridgefield': [
+  {"en":"Assessor: verify property assessments, exemptions and parcel records","es":"Tasador: verifica tasaciones, exenciones y registros de parcelas","url":"https://ridgefieldct.gov/departments/tax_assessors_office/index.php"},
+  {"en":"Tax Collector: confirm the current mill rate, real estate bills and sewer-related charges","es":"Recaudación: confirma la tasa impositiva vigente, facturas inmobiliarias y cargos de alcantarillado","url":"https://ridgefieldct.gov/departments/tax_collector/"},
+  {"en":"Town Clerk: search recorded deeds, mortgages and survey maps","es":"Secretaría municipal: consulta escrituras, hipotecas y planos registrados","url":"https://ridgefieldct.gov/departments/town_clerk/"},
+  {"en":"Building Department: research permits, inspections and certificates for improvements","es":"Construcción: investiga permisos, inspecciones y certificados de mejoras","url":"https://ridgefieldct.gov/departments/building_department/index.php"},
+  {"en":"Planning and Zoning: review applications, permitted uses and land-use procedures","es":"Planificación y zonificación: revisa solicitudes, usos permitidos y trámites de suelo","url":"https://www.ridgefieldct.gov/departments/planning_and_zoning/planning_and_zoning_development_procedures.php"},
+  {"en":"Zoning Regulations: consult current rules and confirm later amendments with the town","es":"Normas de zonificación: consulta reglas vigentes y confirma en el municipio posibles enmiendas posteriores","url":"https://www.ridgefieldct.gov/departments/planning_and_zoning/zoning_regulations.php"},
+  {"en":"Health Department: request septic and private-well records and environmental permits","es":"Salud: solicita registros de sistemas sépticos, pozos privados y permisos ambientales","url":"https://ridgefieldct.gov/departments/health/index.php"},
+  {"en":"Public Works: check road maintenance, drainage and municipal infrastructure contacts","es":"Obras Públicas: consulta mantenimiento vial, drenaje e infraestructura municipal","url":"https://www.ridgefieldct.gov/departments/public_works/index.php"},
+  {"en":"Highway Department: inquire about town roads, driveway and excavation permits","es":"Carreteras: consulta caminos municipales y permisos para entradas y excavaciones","url":"https://ridgefieldct.gov/departments/public_works/highway_department/"},
+  {"en":"Transfer Station: check permit eligibility, accepted waste and current fees","es":"Centro de transferencia: verifica permisos, residuos aceptados y tarifas vigentes","url":"https://www.ridgefieldct.gov/government/transfer_station.php"},
+  {"en":"Recycling Center: confirm accepted materials, permits and operating guidance","es":"Centro de reciclaje: confirma materiales aceptados, permisos y normas de uso","url":"https://ridgefieldct.gov/government/recycling_center.php"},
+  {"en":"Ridgefield Public Schools: verify student registration, residency documents and street assignments","es":"Escuelas Públicas de Ridgefield: verifica inscripción, pruebas de residencia y asignación por calle","url":"https://www.ridgefield.org/registration-and-immunizations"},
+ ],
  // New Canaan: official town and school resources checked 2026-10-30; verify parcel-specific charges and services.
  'new-canaan': [
   {"en":"Assessor: review property assessments, field cards, exemptions and revaluation records","es":"Tasador: consulta tasaciones, fichas de propiedades, exenciones y reevaluaciones","url":"https://www.newcanaan.info/departments/assessor/index.php"},
