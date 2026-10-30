@@ -1128,4 +1128,19 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Departments and Offices: find municipal contacts for property and moving questions","es":"Departamentos municipales: encuentra contactos para consultas de propiedades y mudanzas","url":"https://www.townoflitchfieldct.gov/departments-offices"},
  ],
 
+ // Goshen: official town and RSD20 sources checked 2026-10-30. The assessor lists 16.7 mills for the Oct 2025 Grand List.
+ 'goshen': [
+  {"en":"Assessor: verify 2025 Grand List mill rate, parcel assessments, revaluation and exemptions","es":"Tasador: verifica la tasa de la lista fiscal de 2025, valoraciones, reevaluación y exenciones","url":"https://www.goshenct.gov/entities/assessor"},
+  {"en":"Tax Collector: check property tax bills and payment requirements","es":"Recaudación: consulta facturas del impuesto inmobiliario y requisitos de pago","url":"https://www.goshenct.gov/entities/tax-collector-s-office"},
+  {"en":"Town Clerk: request deeds, land records and recorded maps","es":"Secretaría municipal: solicita escrituras, registros de tierras y planos inscritos","url":"https://www.goshenct.gov/entities/town-clerk"},
+  {"en":"Building Official: check building permits, inspections and code questions","es":"Construcción: consulta permisos, inspecciones y normas de edificación","url":"https://www.goshenct.gov/entities/building-official"},
+  {"en":"Planning and Zoning Commission: research land-use rules and subdivisions","es":"Comisión de Planificación y Zonificación: consulta usos del suelo y subdivisiones","url":"https://www.goshenct.gov/entities/planning-zoning-commission"},
+  {"en":"Inland Wetlands Commission: review regulated activities near wetlands and watercourses","es":"Comisión de Humedales: revisa actividades reguladas cerca de humedales y cursos de agua","url":"https://www.goshenct.gov/entities/inland-wetlands-and-water-courses-commission"},
+  {"en":"Public Works: ask about roads, drainage, snow removal and infrastructure","es":"Obras Públicas: consulta carreteras, drenaje, nieve e infraestructura","url":"https://www.goshenct.gov/entities/public-works-department"},
+  {"en":"Recycling and Trash: verify resident recycling and disposal arrangements","es":"Reciclaje y Residuos: verifica los servicios y normas de eliminación para residentes","url":"https://www.goshenct.gov/entities/recycling-trash"},
+  {"en":"Water Pollution Control Authority: ask about wastewater and septic questions","es":"Autoridad de Control de Aguas: consulta cuestiones de aguas residuales y sistemas sépticos","url":"https://www.goshenct.gov/entities/water-pollution-control-authority"},
+  {"en":"Regional School District 20: check enrollment and residency documentation for 2026–27","es":"Distrito Escolar Regional 20: consulta matrícula y documentos de residencia para 2026–27","url":"https://www.rsd20.org/page/registration-k-12"},
+  {"en":"Goshen Center School: check the local elementary school and school contacts","es":"Goshen Center School: consulta la escuela primaria local y sus contactos","url":"https://www.rsd20.org/o/ngcs"},
+ ],
+
 };
