@@ -2,6 +2,15 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Bridgeport: Commons file identity, city location, creator and license checked 2026-10-30.
+ // https://commons.wikimedia.org/wiki/File:Seaside_Park_1.jpg
+ // https://commons.wikimedia.org/wiki/File:Lighthouse_Seaside_Park_Bridgeport_Connecticut_-_panoramio.jpg
+ // https://commons.wikimedia.org/wiki/File:James_W._Beardsley_Monument_(1909),_Beardsley_Park,_Bridgeport,_CT_-_April_2016.JPG
+ 'bridgeport': [
+  {"title":"Seaside Park along Long Island Sound in Bridgeport (2016)","titleEs":"Parque Seaside junto a Long Island Sound en Bridgeport (2016)","file":"Seaside Park 1.jpg","credit":"Jllm06","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Lighthouse at Seaside Park in Bridgeport (2008)","titleEs":"Faro del parque Seaside en Bridgeport (2008)","file":"Lighthouse Seaside Park Bridgeport Connecticut - panoramio.jpg","credit":"LennyDotCom","license":"CC BY 3.0","licenseUrl":"https://creativecommons.org/licenses/by/3.0/"},
+  {"title":"James W. Beardsley Monument at the entrance to Beardsley Park (2016)","titleEs":"Monumento a James W. Beardsley en la entrada del parque Beardsley (2016)","file":"James W. Beardsley Monument (1909), Beardsley Park, Bridgeport, CT - April 2016.JPG","credit":"Marty Aligata","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
  // Wolcott: Commons image identity, town location, Magicpiano authorship and CC BY-SA 4.0 verified 2026-10-25.
  // Sources: https://commons.wikimedia.org/wiki/File:WolcottCT_TownGreen.jpg ; https://commons.wikimedia.org/wiki/File:WolcottCT_TownHall.jpg ; https://commons.wikimedia.org/wiki/File:WolcottCT_CongregationalChurch.jpg
  'wolcott': [
