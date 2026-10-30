@@ -2,6 +2,21 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // New Canaan: official town and school resources checked 2026-10-30; verify parcel-specific charges and services.
+ 'new-canaan': [
+  {"en":"Assessor: review property assessments, field cards, exemptions and revaluation records","es":"Tasador: consulta tasaciones, fichas de propiedades, exenciones y reevaluaciones","url":"https://www.newcanaan.info/departments/assessor/index.php"},
+  {"en":"Tax Collector: check real estate tax billing, payment procedures and due dates","es":"Recaudación: consulta facturas inmobiliarias, procedimientos de pago y vencimientos","url":"https://www.newcanaan.info/departments/tax/index.php"},
+  {"en":"Tax account inquiry: look up a specific property's tax account and confirm payment status","es":"Consulta tributaria: busca la cuenta fiscal de una propiedad y confirma los pagos","url":"https://www.newcanaan.info/departments/tax/tax_account_inquiry.php"},
+  {"en":"Town Clerk: obtain guidance on recorded deeds, land records and municipal filings","es":"Secretaría municipal: consulta escrituras, registros de tierras y documentos municipales","url":"https://www.newcanaan.info/government/boards_councils___elected_officials/town_clerk/index.php"},
+  {"en":"Town Clerk records: start an online search for recorded land documents and verify indexing dates","es":"Registros de la Secretaría: inicia la búsqueda de documentos de tierras y verifica fechas de indexación","url":"https://www.newcanaan.info/online_services/town_clerk_records.php"},
+  {"en":"Building Department: check construction permits, inspections and property improvements","es":"Construcción: verifica permisos de obra, inspecciones y modificaciones de inmuebles","url":"https://www.newcanaan.info/departments/land_use/building/index.php"},
+  {"en":"Planning and Zoning: research permitted uses, applications and zoning rules for the parcel","es":"Planificación y zonificación: investiga usos permitidos, solicitudes y normas de la parcela","url":"https://www.newcanaan.info/departments/land_use/planning___zoning/index.php"},
+  {"en":"Health Department: ask about septic, wells and other address-specific environmental health requirements","es":"Salud: consulta sistemas sépticos, pozos y requisitos sanitarios específicos de la dirección","url":"https://www.newcanaan.info/departments/health/index.php"},
+  {"en":"Public Works: consult roads, drainage and municipal infrastructure before moving or planning construction","es":"Obras Públicas: consulta carreteras, drenaje e infraestructura antes de mudarte o construir","url":"https://www.newcanaan.info/departments/public_works/index.php"},
+  {"en":"Transfer Station: confirm current permits, recycling rules, accepted materials and disposal fees","es":"Centro de residuos: confirma permisos, normas de reciclaje, materiales admitidos y tarifas","url":"https://www.newcanaan.info/departments/public_works/transfer_station.php"},
+  {"en":"New Canaan Public Schools: review schools and contact the district to verify enrollment and address assignment","es":"Escuelas Públicas de New Canaan: consulta centros y confirma inscripción y asignación según domicilio","url":"https://www.ncps-k12.org/"},
+  {"en":"Student registration FAQ: verify residency eligibility and documentation with the school district","es":"Preguntas de inscripción: verifica residencia y documentos exigidos con el distrito escolar","url":"https://www.ncps-k12.org/page/registration-faq"},
+ ],
  // Darien: official town and school resources checked 2026-10-30; verify tax bills, utilities and permit requirements for each property.
  'darien': [
   {"en":"Assessor: research assessed values, property characteristics, exemptions and revaluation before estimating taxes","es":"Tasador: consulta valores tasados, características de la propiedad, exenciones y reevaluación antes de estimar impuestos","url":"https://darienct.gov/327/Assessor"},
