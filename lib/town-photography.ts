@@ -2,6 +2,15 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Greenwich: Commons image identity, location, creator and license checked 2026-10-30.
+ // https://commons.wikimedia.org/wiki/File:Greenwich_Ave.jpg
+ // https://commons.wikimedia.org/wiki/File:Greenwich_Point_Park_4-_beach.jpg
+ // https://commons.wikimedia.org/wiki/File:Greenwich,_Connecticut,_USA.jpg
+ 'greenwich': [
+  {"title":"Greenwich Avenue streetscape in winter (2025)","titleEs":"Vista invernal de Greenwich Avenue (2025)","file":"Greenwich Ave.jpg","credit":"Quintin Soloviev","license":"CC BY 4.0","licenseUrl":"https://creativecommons.org/licenses/by/4.0/"},
+  {"title":"Beach at Greenwich Point Park, also called Tod's Point (2013)","titleEs":"Playa del parque Greenwich Point, también llamado Tod's Point (2013)","file":"Greenwich Point Park 4- beach.jpg","credit":"Jllm06","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Aerial view of Greenwich, Connecticut (2025)","titleEs":"Vista aérea de Greenwich, Connecticut (2025)","file":"Greenwich, Connecticut, USA.jpg","credit":"Quintin Soloviev","license":"CC BY 4.0","licenseUrl":"https://creativecommons.org/licenses/by/4.0/"},
+ ],
  // Bethel: Commons file identity, location, Magicpiano authorship and CC BY-SA 4.0 checked 2026-10-30.
  // https://commons.wikimedia.org/wiki/File:BethelCT_PTBarnumSquare.jpg
  // https://commons.wikimedia.org/wiki/File:BethelCT_TownHall.jpg
