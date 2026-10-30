@@ -2,6 +2,15 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Stamford: Commons file identity, location, creator and license checked 2026-10-30.
+ // https://commons.wikimedia.org/wiki/File:Stamford,_CT.jpg
+ // https://commons.wikimedia.org/wiki/File:Stamford_CT_Old_Town_Hall.jpg
+ // https://commons.wikimedia.org/wiki/File:2024.04_Stamford-104.jpg
+ 'stamford': [
+  {"title":"Winter aerial view of downtown Stamford and the rail corridor (2025)","titleEs":"Vista aérea invernal del centro de Stamford y del corredor ferroviario (2025)","file":"Stamford, CT.jpg","credit":"Quintin Soloviev","license":"CC BY 4.0","licenseUrl":"https://creativecommons.org/licenses/by/4.0/"},
+  {"title":"Stamford's historic Old Town Hall (2017)","titleEs":"Antiguo ayuntamiento histórico de Stamford (2017)","file":"Stamford CT Old Town Hall.jpg","credit":"John9474","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Downtown Stamford skyline looking west (2024)","titleEs":"Panorama del centro de Stamford mirando al oeste (2024)","file":"2024.04 Stamford-104.jpg","credit":"WikileaksIntern","license":"CC0 1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/"},
+ ],
  // Bridgeport: Commons file identity, city location, creator and license checked 2026-10-30.
  // https://commons.wikimedia.org/wiki/File:Seaside_Park_1.jpg
  // https://commons.wikimedia.org/wiki/File:Lighthouse_Seaside_Park_Bridgeport_Connecticut_-_panoramio.jpg
