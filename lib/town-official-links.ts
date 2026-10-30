@@ -2,6 +2,20 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Brookfield: official municipal and district pages checked 2026-10-30; verify parcel-level service and tax details.
+ 'brookfield': [
+  {"en":"Assessor: review parcel assessments, field cards and exemptions","es":"Tasador: consulta tasaciones de parcelas, fichas y exenciones","url":"https://www.brookfieldct.gov/232/Assessor"},
+  {"en":"2026 Revaluation: read the town's assessment-review notices and contact instructions","es":"Reevaluación de 2026: lee avisos municipales y cómo consultar sobre tasaciones","url":"https://www.brookfieldct.gov/743/Brookfield-Revaluation-2026"},
+  {"en":"Tax Collector: check real estate bills, payments and applicable water-line assessments","es":"Recaudación: consulta impuestos inmobiliarios, pagos y posibles cargos de tuberías de agua","url":"https://www.brookfieldct.gov/217/Tax-Collector"},
+  {"en":"Town Clerk: research recorded property documents and municipal land records","es":"Secretaría municipal: investiga documentos inmobiliarios registrados y archivos de tierras","url":"https://www.brookfieldct.gov/216/Town-Clerk"},
+  {"en":"Building Department: ask about permits, inspections and completed improvements","es":"Construcción: pregunta por permisos, inspecciones y mejoras terminadas","url":"https://www.brookfieldct.gov/231/Building-Department"},
+  {"en":"Land Use: check zoning, wetlands and development applications for a specific parcel","es":"Uso del suelo: verifica zonificación, humedales y solicitudes de desarrollo para la parcela","url":"https://www.brookfieldct.gov/225/Land-Use"},
+  {"en":"Health Department: ask about environmental-health rules and property-specific concerns","es":"Salud: consulta requisitos ambientales y cuestiones sanitarias de la propiedad","url":"https://www.brookfieldct.gov/227/Health-Department"},
+  {"en":"Public Works: check municipal road maintenance, drainage and refuse permits","es":"Obras Públicas: consulta mantenimiento vial, drenaje y permisos de residuos","url":"https://www.brookfieldct.gov/222/Public-Works"},
+  {"en":"Water Pollution Control Authority: confirm whether a property is served by sewer and any applicable charges","es":"Autoridad de Alcantarillado: confirma si una propiedad tiene conexión y posibles cargos","url":"https://www.brookfieldct.gov/215/Water-Pollution-Control-Authority"},
+  {"en":"Online Services: find property data, mapping, tax and permit portals","es":"Servicios en línea: encuentra datos de propiedades, mapas, impuestos y permisos","url":"https://www.brookfieldct.gov/409/Online-Services"},
+  {"en":"Brookfield Public Schools: verify registration steps and residency documentation","es":"Escuelas Públicas de Brookfield: verifica inscripción y documentos de residencia","url":"https://www.brookfieldps.org/37926_3"},
+ ],
  // Ridgefield: official town and school pages checked 2026-10-30; verify property-specific tax and service details.
  'ridgefield': [
   {"en":"Assessor: verify property assessments, exemptions and parcel records","es":"Tasador: verifica tasaciones, exenciones y registros de parcelas","url":"https://ridgefieldct.gov/departments/tax_assessors_office/index.php"},
