@@ -757,6 +757,10 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
   {"name":"Joseph's Steakhouse","cuisine":"Traditional steakhouse at 360 Fairfield Avenue serving dry-aged prime beef","cuisineEs":"Restaurante de carnes en 360 Fairfield Avenue especializado en cortes de res madurados","website":"https://www.josephssteakhouse.com/","sourceUrl":"https://www.josephssteakhouse.com/","checkedOn":"2026-10-29"},
   {"name":"El Coquito","cuisine":"Family-operated Puerto Rican restaurant at 510 East Main Street serving traditional plates","cuisineEs":"Restaurante puertorriqueño familiar en 510 East Main Street con platos tradicionales","website":"https://www.elcoquitoct.com/","sourceUrl":"https://www.elcoquitoct.com/contact-us/","checkedOn":"2026-10-29"},
  ],
+ // Harwinton: restaurant ordering page verified 2026-10-30; additional venues pending reliable current confirmation.
+ 'harwinton': [
+  {"name":"Harwinton Pizza & Restaurant","cuisine":"Pizza, grinders and Italian-American dishes at 122 Litchfield Road","cuisineEs":"Pizza, sándwiches tipo grinder y platos italoestadounidenses en 122 Litchfield Road","website":"https://www.harwintonpizzarestaurant.com/","sourceUrl":"https://www.harwintonpizzarestaurant.com/","checkedOn":"2026-10-30"},
+ ],
  // Torrington: five operator-verified restaurants checked 2026-10-30; no ratings or hours asserted.
  'torrington': [
   {"name":"Sasso's Coal Fired Pizza","cuisine":"Coal-fired pizza and Italian-American fare at 52 Main Street","cuisineEs":"Pizza al horno de carbón y cocina italoestadounidense en 52 Main Street","website":"https://www.sassoscoalfired.com/","sourceUrl":"https://www.sassoscoalfired.com/","checkedOn":"2026-10-30"},
