@@ -748,6 +748,14 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
   {"name":"Joseph's Steakhouse","cuisine":"Traditional steakhouse at 360 Fairfield Avenue serving dry-aged prime beef","cuisineEs":"Restaurante de carnes en 360 Fairfield Avenue especializado en cortes de res madurados","website":"https://www.josephssteakhouse.com/","sourceUrl":"https://www.josephssteakhouse.com/","checkedOn":"2026-10-29"},
   {"name":"El Coquito","cuisine":"Family-operated Puerto Rican restaurant at 510 East Main Street serving traditional plates","cuisineEs":"Restaurante puertorriqueño familiar en 510 East Main Street con platos tradicionales","website":"https://www.elcoquitoct.com/","sourceUrl":"https://www.elcoquitoct.com/contact-us/","checkedOn":"2026-10-29"},
  ],
+ // Torrington: five operator-verified restaurants checked 2026-10-30; no ratings or hours asserted.
+ 'torrington': [
+  {"name":"Sasso's Coal Fired Pizza","cuisine":"Coal-fired pizza and Italian-American fare at 52 Main Street","cuisineEs":"Pizza al horno de carbón y cocina italoestadounidense en 52 Main Street","website":"https://www.sassoscoalfired.com/","sourceUrl":"https://www.sassoscoalfired.com/","checkedOn":"2026-10-30"},
+  {"name":"Geppetto Osteria e Bisteccheria","cuisine":"Italian osteria and steakhouse at 24 East Main Street","cuisineEs":"Osteria italiana y restaurante de carnes en 24 East Main Street","website":"https://geppettoct.com/","sourceUrl":"https://geppettoct.com/contact-us","checkedOn":"2026-10-30"},
+  {"name":"Sawyer's Restaurant & Bar","cuisine":"Caribbean-inspired restaurant and bar at 79 Center Street","cuisineEs":"Restaurante y bar de inspiración caribeña en 79 Center Street","website":"https://www.sawyersct.com/","sourceUrl":"https://www.sawyersct.com/","checkedOn":"2026-10-30"},
+  {"name":"Ordinary Joe's North","cuisine":"Sports pub and grill at 823 New Harwinton Road","cuisineEs":"Bar deportivo y parrilla en 823 New Harwinton Road","website":"https://www.ordinaryjoesnorth.com/","sourceUrl":"https://www.ordinaryjoesnorth.com/","checkedOn":"2026-10-30"},
+  {"name":"Winchester Restaurant","cuisine":"Steak, American dining and casual bar fare at 144 Wolcott Avenue","cuisineEs":"Carnes, cocina estadounidense y platos informales de bar en 144 Wolcott Avenue","website":"https://www.winchester-restaurant.com/","sourceUrl":"https://www.winchester-restaurant.com/","checkedOn":"2026-10-30"},
+ ],
 };
 // Personal recommendations are separate from third-party ratings.
 export const joeyTopPicks:Record<string,{name:string;note?:string;url?:string}[]> = {
