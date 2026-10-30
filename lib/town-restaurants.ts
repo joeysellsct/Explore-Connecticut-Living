@@ -12,6 +12,15 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Thomaston: five operator-verified locations and food categories checked 2026-10-30; no ratings, prices or hours asserted.
+ 'thomaston': [
+  {"name":"Rozzi's Restaurant","cuisine":"All-day breakfast, sandwiches and American fare at 265 Watertown Road","cuisineEs":"Desayunos todo el día, sándwiches y comida estadounidense en 265 Watertown Road","website":"https://www.rozzisrestaurant.com/","sourceUrl":"https://www.rozzisrestaurant.com/","checkedOn":"2026-10-30"},
+  {"name":"Black Rock Tavern","cuisine":"American tavern dishes, burgers and sandwiches at 78 Main Street","cuisineEs":"Comida de taberna estadounidense, hamburguesas y sándwiches en 78 Main Street","website":"https://www.blackrocktavern.com/","sourceUrl":"https://www.blackrocktavern.com/","checkedOn":"2026-10-30"},
+  {"name":"Crabby Al's","cuisine":"Seafood and American classics at 157 East Main Street","cuisineEs":"Mariscos y platos clásicos estadounidenses en 157 East Main Street","website":"https://www.crabbyals.com/","sourceUrl":"https://www.crabbyals.com/","checkedOn":"2026-10-30"},
+  {"name":"Milestone Pizza","cuisine":"Wood-fired New Haven-style pizza at 68 East Main Street","cuisineEs":"Pizza al horno de leña al estilo de New Haven en 68 East Main Street","website":"https://milestonewoodfiredpizza.com/","sourceUrl":"https://milestonewoodfiredpizza.com/","checkedOn":"2026-10-30"},
+  {"name":"Tramonti Ristorante","cuisine":"Italian restaurant at 76 Watertown Road, Unit 1L","cuisineEs":"Restaurante italiano en 76 Watertown Road, local 1L","website":"https://www.tramonti-ristorante.com/","sourceUrl":"https://www.tramonti-ristorante.com/our-locations","checkedOn":"2026-10-30"},
+ ],
+
  // Easton: three operator-verified food businesses checked 2026-10-30; no ratings or hours asserted.
  'easton': [
   {"name":"Greiser's Coffee & Market","cuisine":"Coffee, pastries, sandwiches and café fare at 299 Center Road","cuisineEs":"Café con café, repostería y sándwiches en 299 Center Road","website":"https://greisers.com/","sourceUrl":"https://greisers.com/coffee-and-food","checkedOn":"2026-10-30"},
