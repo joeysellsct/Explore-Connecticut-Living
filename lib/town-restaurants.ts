@@ -756,6 +756,15 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
   {"name":"Ordinary Joe's North","cuisine":"Sports pub and grill at 823 New Harwinton Road","cuisineEs":"Bar deportivo y parrilla en 823 New Harwinton Road","website":"https://www.ordinaryjoesnorth.com/","sourceUrl":"https://www.ordinaryjoesnorth.com/","checkedOn":"2026-10-30"},
   {"name":"Winchester Restaurant","cuisine":"Steak, American dining and casual bar fare at 144 Wolcott Avenue","cuisineEs":"Carnes, cocina estadounidense y platos informales de bar en 144 Wolcott Avenue","website":"https://www.winchester-restaurant.com/","sourceUrl":"https://www.winchester-restaurant.com/","checkedOn":"2026-10-30"},
  ],
+ // Litchfield: operator websites checked 2026-10-30 for name, food and location; no ratings, prices or hours asserted.
+ 'litchfield': [
+  {"name":"West Street Grill","cuisine":"Seasonal New American dining at 43 West Street","cuisineEs":"Cocina estadounidense contemporánea de temporada en 43 West Street","website":"https://www.weststreetgrill.com/","sourceUrl":"https://www.weststreetgrill.com/","checkedOn":"2026-10-30"},
+  {"name":"The Village Restaurant","cuisine":"Traditional American restaurant at 25 West Street","cuisineEs":"Restaurante de cocina estadounidense tradicional en 25 West Street","website":"https://www.villagelitchfield.com/","sourceUrl":"https://www.villagelitchfield.com/","checkedOn":"2026-10-30"},
+  {"name":"Market Place Tavern Litchfield","cuisine":"American tavern food in a historic building at 7 North Street","cuisineEs":"Comida de taberna estadounidense en un edificio histórico en 7 North Street","website":"https://mptavern.com/litchfield/","sourceUrl":"https://mptavern.com/litchfield/","checkedOn":"2026-10-30"},
+  {"name":"Meraki","cuisine":"Breakfast, sandwiches and bakery fare at 239 West Street","cuisineEs":"Desayunos, sándwiches y productos de panadería en 239 West Street","website":"https://www.merakifood.com/","sourceUrl":"https://www.merakifood.com/","checkedOn":"2026-10-30"},
+  {"name":"Arethusa al tavolo","cuisine":"Seasonal American restaurant using Arethusa dairy products at 828 Bantam Road, Bantam (within Litchfield)","cuisineEs":"Restaurante estadounidense de temporada con lácteos Arethusa en 828 Bantam Road, Bantam (dentro de Litchfield)","website":"https://www.arethusaaltavolo.com/","sourceUrl":"https://www.arethusaaltavolo.com/","checkedOn":"2026-10-30"},
+ ],
+
 };
 // Personal recommendations are separate from third-party ratings.
 export const joeyTopPicks:Record<string,{name:string;note?:string;url?:string}[]> = {
