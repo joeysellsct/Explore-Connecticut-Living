@@ -449,4 +449,14 @@ export const townPhotography:Record<string,TownPhoto[]>={
   {"title":"Connecticut Audubon Society Center at Fairfield (photographed 2017)","titleEs":"Centro de la Sociedad Audubon de Connecticut en Fairfield (fotografía de 2017)","file":"Connecticut Audubon Society Center at Fairfield 1.jpg","credit":"Jllm06","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
  ],
 
+ // Norwalk: Wikimedia Commons town location, author and reuse license verified 2026-10-30.
+ // https://commons.wikimedia.org/wiki/File:Peck_ledge_lighthouse_during_a_beautiful_morning_in_Norwalk,_CT.jpg
+ // https://commons.wikimedia.org/wiki/File:Norwalk_Maritime_Aquarium.jpg
+ // https://commons.wikimedia.org/wiki/File:NorwalkCT_WallStreetHD2.jpg
+ 'norwalk': [
+  {"title":"Peck Ledge Lighthouse in Norwalk Harbor (photographed 2023)","titleEs":"Faro Peck Ledge en el puerto de Norwalk (fotografía de 2023)","file":"Peck ledge lighthouse during a beautiful morning in Norwalk, CT.jpg","credit":"New England Lighthouses (Barry Mullin)","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Maritime Aquarium in Norwalk (photographed 2008)","titleEs":"Acuario Marítimo de Norwalk (fotografía de 2008)","file":"Norwalk Maritime Aquarium.jpg","credit":"Stilfehler (Wikivoyage Shared)","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/"},
+  {"title":"Wall Street Historic District in Norwalk (photographed 2016)","titleEs":"Distrito histórico de Wall Street en Norwalk (fotografía de 2016)","file":"NorwalkCT WallStreetHD2.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
+
 };
