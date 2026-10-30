@@ -439,4 +439,14 @@ export const townPhotography:Record<string,TownPhoto[]>={
   {"title":"Historic Lewis June House in Ridgefield (photographed 2014)","titleEs":"Casa histórica Lewis June en Ridgefield (fotografía de 2014)","file":"RidgefieldCT LewisJuneHouse.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
  ],
 
+ // Fairfield: Wikimedia Commons town location, authorship and licenses verified 2026-10-30.
+ // https://commons.wikimedia.org/wiki/File:Penfield_Beach_II.jpg
+ // https://commons.wikimedia.org/wiki/File:FairfieldCT_TownHall.jpg
+ // https://commons.wikimedia.org/wiki/File:Connecticut_Audubon_Society_Center_at_Fairfield_1.jpg
+ 'fairfield': [
+  {"title":"Penfield Beach in Fairfield in winter (photographed 2017)","titleEs":"Playa Penfield de Fairfield en invierno (fotografía de 2017)","file":"Penfield Beach II.jpg","credit":"Karl Thomas Moore","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Fairfield Town Hall in the historic district (photographed 2018)","titleEs":"Ayuntamiento de Fairfield en el distrito histórico (fotografía de 2018)","file":"FairfieldCT TownHall.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Connecticut Audubon Society Center at Fairfield (photographed 2017)","titleEs":"Centro de la Sociedad Audubon de Connecticut en Fairfield (fotografía de 2017)","file":"Connecticut Audubon Society Center at Fairfield 1.jpg","credit":"Jllm06","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
+
 };
