@@ -2,6 +2,21 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Darien: official town and school resources checked 2026-10-30; verify tax bills, utilities and permit requirements for each property.
+ 'darien': [
+  {"en":"Assessor: research assessed values, property characteristics, exemptions and revaluation before estimating taxes","es":"Tasador: consulta valores tasados, características de la propiedad, exenciones y reevaluación antes de estimar impuestos","url":"https://darienct.gov/327/Assessor"},
+  {"en":"Property record cards: search the assessor's address-based database; verify the parcel and assessment year","es":"Fichas de propiedad: busca por dirección en la base del tasador y verifica la parcela y el año de tasación","url":"https://assessment.darienct.gov/"},
+  {"en":"Tax Collector: check real estate tax bills, payment dates, sewer charges and special assessments","es":"Recaudación: consulta facturas inmobiliarias, fechas de pago, cargos de alcantarillado y contribuciones especiales","url":"https://www.darienct.gov/1354/Collector"},
+  {"en":"Town Clerk: research recorded deeds, survey maps and land records before purchasing","es":"Secretaría municipal: investiga escrituras, planos y registros de tierras antes de comprar","url":"https://www.darienct.gov/278/Town-Clerk"},
+  {"en":"Building Department: review permits, inspections and occupancy records; older permit research may require an in-person visit","es":"Construcción: revisa permisos, inspecciones y registros de ocupación; algunos archivos antiguos pueden requerir una visita","url":"https://www.darienct.gov/157/Building-Department"},
+  {"en":"Planning and Zoning: verify permitted uses, land-use approvals and current electronic permit procedures","es":"Planificación y zonificación: verifica usos permitidos, autorizaciones de suelo y trámites electrónicos vigentes","url":"https://www.darienct.gov/273/Planning-Zoning"},
+  {"en":"Health Department: ask about environmental health and property-specific public-health requirements","es":"Salud municipal: consulta requisitos sanitarios y ambientales aplicables a la propiedad","url":"https://www.darienct.gov/186/Health"},
+  {"en":"Public Works: check roads, drainage, sanitary sewers and street-opening requirements; confirm connections for each address","es":"Obras Públicas: consulta calles, drenaje, alcantarillado y permisos de apertura; confirma conexiones por dirección","url":"https://www.darienct.gov/282/Public-Works"},
+  {"en":"Recycling Center: check current residential permit requirements, accepted materials and disposal fees","es":"Centro de reciclaje: verifica permisos residenciales, materiales aceptados y tarifas vigentes","url":"https://www.darienct.gov/287/Recycling-Center"},
+  {"en":"Darien Public Schools registration: review residency documents and enrollment steps directly with the district","es":"Inscripción escolar de Darien: revisa documentos de residencia y pasos de matrícula con el distrito","url":"https://www.darienps.org/parents/student-registration-process"},
+  {"en":"Parks and Recreation: check beach permits, park access, facilities and current seasonal rules","es":"Parques y Recreación: verifica permisos de playa, acceso, instalaciones y normas de temporada","url":"https://www.darienct.gov/101/Departments"},
+  {"en":"Shoreline Management: research coastal-water and harbor matters when relevant to a property","es":"Gestión costera: investiga asuntos de aguas costeras y puertos cuando correspondan a una propiedad","url":"https://www.darienct.gov/101/Departments"},
+ ],
  // Wilton: ten town/district-operated resource pages checked 2026-10-30. Rates and service connections require address-level confirmation.
  'wilton': [
   {"en":"Assessor: review parcel field cards, assessed values, exemptions and revaluation information before estimating property taxes","es":"Tasador: consulta fichas de parcelas, valores tasados, exenciones y reevaluaciones antes de estimar impuestos","url":"https://www.wiltonct.gov/assessors-office"},
