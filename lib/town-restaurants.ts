@@ -12,6 +12,12 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Easton: three operator-verified food businesses checked 2026-10-30; no ratings or hours asserted.
+ 'easton': [
+  {"name":"Greiser's Coffee & Market","cuisine":"Coffee, pastries, sandwiches and café fare at 299 Center Road","cuisineEs":"Café con café, repostería y sándwiches en 299 Center Road","website":"https://greisers.com/","sourceUrl":"https://greisers.com/coffee-and-food","checkedOn":"2026-10-30"},
+  {"name":"The Olde Blue Bird Inn","cuisine":"Breakfast and lunch restaurant at 363 Black Rock Turnpike","cuisineEs":"Restaurante de desayunos y almuerzos en 363 Black Rock Turnpike","website":"https://oldebluebirdinn.com/","sourceUrl":"https://oldebluebirdinn.com/","checkedOn":"2026-10-30"},
+  {"name":"Gourmet United","cuisine":"Indian and Mexican kitchen with takeout, delivery and patio dining at 440 Sport Hill Road","cuisineEs":"Cocina india y mexicana con pedidos para llevar, entrega y patio en 440 Sport Hill Road","website":"https://www.gourmetunited.com/","sourceUrl":"https://www.gourmetunited.com/","checkedOn":"2026-10-30"},
+ ],
  // Stamford: five operator-verified town addresses and food descriptions checked 2026-10-29; no hours or ratings asserted.
  'stamford': [
    {
