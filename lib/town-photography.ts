@@ -2,6 +2,15 @@
 // Wikimedia Commons file descriptions supply attribution and license information.
 export type TownPhoto={title:string;titleEs?:string;file:string;credit:string;license:string;licenseUrl:string};
 export const townPhotography:Record<string,TownPhoto[]>={
+ // Bethel: Commons file identity, location, Magicpiano authorship and CC BY-SA 4.0 checked 2026-10-30.
+ // https://commons.wikimedia.org/wiki/File:BethelCT_PTBarnumSquare.jpg
+ // https://commons.wikimedia.org/wiki/File:BethelCT_TownHall.jpg
+ // https://commons.wikimedia.org/wiki/File:BethelCT_SeelyeHouse.jpg
+ 'bethel': [
+  {"title":"P. T. Barnum Square in Bethel's Greenwood Avenue Historic District (2017)","titleEs":"Plaza P. T. Barnum en el distrito histórico de Greenwood Avenue en Bethel (2017)","file":"BethelCT PTBarnumSquare.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Bethel Town Hall (2017)","titleEs":"Ayuntamiento de Bethel (2017)","file":"BethelCT TownHall.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+  {"title":"Historic Seth Seelye House, now the Bethel Public Library (2017)","titleEs":"Casa histórica Seth Seelye, actual biblioteca pública de Bethel (2017)","file":"BethelCT SeelyeHouse.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
  // Stamford: Commons file identity, location, creator and license checked 2026-10-30.
  // https://commons.wikimedia.org/wiki/File:Stamford,_CT.jpg
  // https://commons.wikimedia.org/wiki/File:Stamford_CT_Old_Town_Hall.jpg
