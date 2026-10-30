@@ -2,6 +2,20 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Monroe: municipal and district sources checked 2026-10-30; tax collector currently displays FY 2025-26, so do not infer FY 2026-27 rate.
+ 'monroe': [
+  {"en":"Assessor: review property valuations, exemptions and revaluation information","es":"Tasador: revisa valoraciones, exenciones y datos de reevaluación","url":"https://monroect.gov/p/assessor"},
+  {"en":"Tax Collector: verify current bills, payment options and fiscal-year mill rates","es":"Recaudación: verifica facturas, opciones de pago y tasas por año fiscal","url":"https://monroect.gov/p/tax-collector"},
+  {"en":"Town Clerk: request recorded deeds and land-record research guidance","es":"Secretaría municipal: solicita escrituras y orientación para consultar registros de tierras","url":"https://monroect.gov/p/town-clerk"},
+  {"en":"Building Department: check permits, inspections and improvements","es":"Construcción: consulta permisos, inspecciones y mejoras de inmuebles","url":"https://monroect.gov/p/building"},
+  {"en":"Online Permitting: find application procedures for building, health, wetlands and zoning","es":"Permisos en línea: encuentra trámites de construcción, salud, humedales y zonificación","url":"https://monroect.gov/p/online-permitting"},
+  {"en":"Planning and Zoning: research zoning maps, wetlands and permitted property uses","es":"Planificación y zonificación: investiga mapas, humedales y usos permitidos","url":"https://monroect.gov/p/planning-zoning"},
+  {"en":"Health Department: ask about subsurface sewage disposal and environmental health reviews","es":"Salud: consulta sistemas sépticos y revisiones de salud ambiental","url":"https://monroect.gov/p/health-department"},
+  {"en":"Public Works: check town road maintenance, drainage, refuse and transfer station guidance","es":"Obras Públicas: consulta caminos, drenaje, residuos y centro de transferencia","url":"https://www.monroect.gov/p/public-works"},
+  {"en":"Electronics Recycling: confirm eligible devices and drop-off instructions","es":"Reciclaje electrónico: confirma dispositivos aceptados e instrucciones de entrega","url":"https://monroect.gov/p/electronics-recycling-program"},
+  {"en":"Department Directory: locate municipal contacts for property and moving questions","es":"Directorio municipal: encuentra contactos para consultas inmobiliarias y de mudanza","url":"https://www.monroect.gov/p/department-directory"},
+  {"en":"Monroe Public Schools: verify registration, residency documents and elementary assignment","es":"Escuelas Públicas de Monroe: verifica inscripción, documentos de residencia y escuela primaria asignada","url":"https://www.monroeps.org/373203_2"},
+ ],
  // Brookfield: official municipal and district pages checked 2026-10-30; verify parcel-level service and tax details.
  'brookfield': [
   {"en":"Assessor: review parcel assessments, field cards and exemptions","es":"Tasador: consulta tasaciones de parcelas, fichas y exenciones","url":"https://www.brookfieldct.gov/232/Assessor"},
