@@ -682,6 +682,15 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
   {"name":"The Chase","cuisine":"Neighborhood bar at 190 Weston Road with casual food; the former Lunch Box location","cuisineEs":"Bar de barrio en 190 Weston Road con comida informal; ocupa el antiguo local de Lunch Box","website":"https://www.thechasebar.com/","sourceUrl":"https://www.thechasebar.com/","checkedOn":"2026-10-29"},
   {"name":"Lily's Weston Market Deli","cuisine":"Prepared-food counter and deli at 190 Weston Road offering sandwiches, salads and hot and cold takeaway food; a market rather than a sit-down restaurant","cuisineEs":"Mostrador de comida preparada y delicatessen en 190 Weston Road con sándwiches, ensaladas y platos fríos y calientes para llevar; es un mercado, no un restaurante con servicio de mesa","website":"https://lilyswestonmarket.com/deli/","sourceUrl":"https://lilyswestonmarket.com/deli/","checkedOn":"2026-10-29"},
  ],
+ // Bridgeport: five restaurant-operated websites checked 2026-10-29 for Bridgeport locations and current menus.
+ // Neutral bilingual listings; no ratings, operating hours or Joey personal Top Picks.
+ 'bridgeport': [
+  {"name":"Trattoria 'A Vucchella","cuisine":"Italian trattoria at 272 Fairfield Avenue with house-made pasta and wood-oven pizza","cuisineEs":"Trattoria italiana en 272 Fairfield Avenue con pasta casera y pizza al horno de leña","website":"https://avucchella.com/","sourceUrl":"https://avucchella.com/","checkedOn":"2026-10-29"},
+  {"name":"Brewport Brewing Co.","cuisine":"Pizza, salads and locally brewed beer at 225 South Frontage Road","cuisineEs":"Pizza, ensaladas y cerveza elaborada en el local, en 225 South Frontage Road","website":"https://brewportct.com/","sourceUrl":"https://brewportct.com/","checkedOn":"2026-10-29"},
+  {"name":"Ralph 'n' Rich's","cuisine":"Italian-American dining at 815 Main Street with classic pasta and entrees","cuisineEs":"Restaurante italoestadounidense en 815 Main Street con pastas y platos clásicos","website":"https://ralphnrichs.com/","sourceUrl":"https://ralphnrichs.com/contact","checkedOn":"2026-10-29"},
+  {"name":"Joseph's Steakhouse","cuisine":"Traditional steakhouse at 360 Fairfield Avenue serving dry-aged prime beef","cuisineEs":"Restaurante de carnes en 360 Fairfield Avenue especializado en cortes de res madurados","website":"https://www.josephssteakhouse.com/","sourceUrl":"https://www.josephssteakhouse.com/","checkedOn":"2026-10-29"},
+  {"name":"El Coquito","cuisine":"Family-operated Puerto Rican restaurant at 510 East Main Street serving traditional plates","cuisineEs":"Restaurante puertorriqueño familiar en 510 East Main Street con platos tradicionales","website":"https://www.elcoquitoct.com/","sourceUrl":"https://www.elcoquitoct.com/contact-us/","checkedOn":"2026-10-29"},
+ ],
 };
 // Personal recommendations are separate from third-party ratings.
 export const joeyTopPicks:Record<string,{name:string;note?:string;url?:string}[]> = {
