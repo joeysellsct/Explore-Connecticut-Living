@@ -429,4 +429,14 @@ export const townPhotography:Record<string,TownPhoto[]>={
   {"title":"Historic Meadowlands building in Darien (photographed 2016)","titleEs":"Edificio histórico Meadowlands de Darien (fotografía de 2016)","file":"DarienCT DCAMeadowlands1.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
  ],
 
+ // Ridgefield: Wikimedia Commons photo identity, original authors and reuse licenses checked 2026-10-30.
+ // https://commons.wikimedia.org/wiki/File:Town_Hall_-_Ridgefield,_Connecticut.jpg
+ // https://commons.wikimedia.org/wiki/File:Memorial_-_Ridgefield,_Connecticut.jpg
+ // https://commons.wikimedia.org/wiki/File:RidgefieldCT_LewisJuneHouse.jpg
+ 'ridgefield': [
+  {"title":"Ridgefield Town Hall (photographed 2010)","titleEs":"Ayuntamiento de Ridgefield (fotografía de 2010)","file":"Town Hall - Ridgefield, Connecticut.jpg","credit":"Doug Kerr","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0/"},
+  {"title":"Memorial in Ridgefield (photographed 2010)","titleEs":"Monumento conmemorativo de Ridgefield (fotografía de 2010)","file":"Memorial - Ridgefield, Connecticut.jpg","credit":"Doug Kerr","license":"CC BY-SA 2.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/2.0/"},
+  {"title":"Historic Lewis June House in Ridgefield (photographed 2014)","titleEs":"Casa histórica Lewis June en Ridgefield (fotografía de 2014)","file":"RidgefieldCT LewisJuneHouse.jpg","credit":"Magicpiano","license":"CC BY-SA 4.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/4.0/"},
+ ],
+
 };
