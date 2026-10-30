@@ -2,6 +2,18 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Burlington: official municipal department pages checked 2026-10-30; services and taxes require parcel-specific verification.
+ 'burlington': [
+  {"en":"Assessor: review property cards, GIS maps, exemptions and the dated 2025 Grand List mill rate","es":"Tasador: consulta fichas inmobiliarias, mapas SIG, exenciones y la tasa fechada de la lista fiscal de 2025","url":"https://www.burlingtonct.gov/212/Assessor"},
+  {"en":"Town Clerk: research recorded deeds, subdivision maps and easements","es":"Secretaría municipal: investiga escrituras inscritas, planos de subdivisión y servidumbres","url":"https://burlingtonct.gov/256/Town-Clerk"},
+  {"en":"Tax Collector: verify current property bills, installments and payment status","es":"Recaudación: verifica facturas de impuestos, cuotas y estado de pagos","url":"https://www.burlingtonct.gov/31/Departments"},
+  {"en":"Building Department: check permits, inspections and online application instructions","es":"Construcción: consulta permisos, inspecciones e instrucciones de solicitudes en línea","url":"https://burlingtonct.gov/158/Building"},
+  {"en":"Zoning Enforcement: research land-use rules, zoning maps and permit reviews","es":"Zonificación: investiga normas de uso del suelo, mapas y revisiones de permisos","url":"https://www.burlingtonct.gov/282/Zoning-Enforcement"},
+  {"en":"Public Works and recycling: confirm local road, transfer and disposal contacts","es":"Obras Públicas y reciclaje: confirma contactos de carreteras y eliminación de residuos","url":"https://www.burlingtonct.gov/m/directory"},
+  {"en":"Municipal departments: find town offices, library and local services","es":"Departamentos municipales: encuentra oficinas, biblioteca y servicios locales","url":"https://www.burlingtonct.gov/31/Departments"},
+  {"en":"Town government: locate boards, commissions and municipal notices","es":"Gobierno municipal: encuentra juntas, comisiones y avisos públicos","url":"https://www.burlingtonct.gov/454/Town-Government"},
+  {"en":"Quick links: access GIS, real estate database, tax payments and trash information","es":"Enlaces útiles: accede a mapas SIG, base de datos inmobiliaria, pagos de impuestos y residuos","url":"https://burlingtonct.gov/QuickLinks.aspx?CID=15"}
+ ],
  // Norfolk: official town directory, offices and tax collector reviewed 2026-10-30; parcel-level verification required.
  'norfolk': [
   {"en":"Town offices: find the Assessor, Town Clerk, Building Official, Tax Collector, Public Works and Sewer District","es":"Oficinas municipales: encuentra al tasador, secretario municipal, inspector de obras, recaudador, Obras Públicas y distrito de alcantarillado","url":"https://norfolkct.org/town-hall/town-offices/"},
