@@ -2,6 +2,21 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Norwalk: 12 official city/authority resources checked 2026-10-29. Property-tax rates vary by district; no universal mill rate.
+ 'norwalk': [
+  {"en":"Tax Assessor: look up a parcel assessment, revaluation phase-in and exemptions before estimating property taxes","es":"Tasador: consulta valoración de la parcela, aplicación gradual de reevaluación y exenciones antes de estimar impuestos","url":"https://norwalkct.gov/224/Tax-Assessor"},
+  {"en":"Tax Collector: review the current 2025 Grand List bills and district-specific FY 2026–27 mill rates; Norwalk does not have one universal real-estate rate","es":"Recaudación: consulta facturas de la lista fiscal de 2025 y tasas por distrito del año 2026–27; Norwalk no tiene una sola tasa inmobiliaria","url":"https://norwalkct.gov/225/Tax-Collector"},
+  {"en":"Town Clerk: search recorded deeds and land records and confirm recording requirements","es":"Secretaría municipal: consulta escrituras y registros de propiedad y confirma requisitos de inscripción","url":"https://www.norwalkct.gov/155/Town-Clerk"},
+  {"en":"Building and Code Enforcement: check permit history, open permits, inspections and certificates of occupancy","es":"Construcción y cumplimiento: revisa historial y permisos abiertos, inspecciones y certificados de ocupación","url":"https://www.norwalkct.gov/16/Building-Code-Enforcement"},
+  {"en":"Planning and Zoning: review permitted uses, zoning maps, applications and coastal or flood-related considerations","es":"Planificación y Zonificación: revisa usos permitidos, mapas, solicitudes y condiciones costeras o de inundación","url":"https://www.norwalkct.gov/3901/Planning-Zoning"},
+  {"en":"City GIS Mapping: investigate parcel maps and geographic information; confirm boundaries against recorded documents","es":"Mapas GIS municipales: consulta mapas de parcelas e información geográfica; confirma límites con documentos registrados","url":"https://norwalkct.gov/1397/GIS-Mapping"},
+  {"en":"Public Works: ask about city streets, drainage, stormwater, road permits and public infrastructure","es":"Obras Públicas: consulta calles, drenaje, aguas pluviales, permisos viales e infraestructura municipal","url":"https://www.norwalkct.gov/19/Public-Works"},
+  {"en":"Water Pollution Control Authority: verify sewer availability, account obligations and service at the specific address","es":"Autoridad de Alcantarillado: verifica disponibilidad, cargos y servicio de alcantarillado para cada dirección","url":"https://www.norwalkwpca.org/"},
+  {"en":"Solid Waste and Recycling: confirm household collection, transfer station rules and disposal options","es":"Residuos y Reciclaje: confirma recolección domiciliaria, normas de la estación de transferencia y opciones de desecho","url":"https://www.norwalkct.gov/189/Solid-Waste-Recycling-Yard-Waste"},
+  {"en":"Recreation and Parks: check current park and beach access, programs, passes and seasonal rules","es":"Parques y Recreación: consulta acceso a parques y playas, programas, pases y normas de temporada","url":"https://www.norwalkct.gov/3898/Recreation-Parks"},
+  {"en":"Resident Pass Verification: check eligibility for separate parks-parking and disposal passes","es":"Verificación de pases: consulta requisitos de pases separados para estacionamiento en parques y para desechos","url":"https://hub.norwalkct.gov/passes/"},
+  {"en":"City Departments: locate official contacts for health, schools, transportation and other moving-related questions","es":"Departamentos municipales: encuentra contactos oficiales de salud, escuelas, transporte y otros trámites de mudanza","url":"https://www.norwalkct.gov/3943/Departments"},
+ ],
  // Wolcott: 11 official town sources checked 2026-10-25; 2025 Grand List 28.90 mills applies to FY 2026–27.
  // Municipal water/sewer, parks and property records require address- or visit-specific confirmation.
  'wolcott': [
