@@ -2,6 +2,22 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // Shelton: 12 official municipal, health-district and public-school sources checked 2026-10-30.
+ // The Tax Collector's FY 2026–27 notice reports 15.51 mills; parcel assessments, revaluation, sewer fees and school assignment require independent checks.
+ 'shelton': [
+  {"en":"Assessor: review property assessments, the 2025 revaluation, exemptions and parcel-specific information before estimating taxes","es":"Tasador: consulta avalúos, reevaluación de 2025, exenciones y datos de cada parcela antes de calcular impuestos","url":"https://www.shelton-ct.gov/p/assessor/"},
+  {"en":"Tax Collector: the FY 2026–27 notice lists 15.51 mills for the October 1, 2025 Grand List; verify the individual tax bill and separate sewer charges","es":"Recaudación: el aviso del año fiscal 2026–27 indica 15,51 mills para la lista fiscal del 1 de octubre de 2025; verifica la factura individual y cargos de alcantarillado","url":"https://www.cityofshelton.org/p/tax-collector"},
+  {"en":"City/Town Clerk: research recorded deeds, mortgages, liens and land records before closing","es":"Secretaría municipal: consulta escrituras, hipotecas, gravámenes y registros de propiedad antes del cierre","url":"https://www.shelton-ct.gov/p/city-town-clerk/"},
+  {"en":"Building Department: ask about permits, inspections and building-code requirements for renovations","es":"Departamento de Construcción: consulta permisos, inspecciones y requisitos de construcción para reformas","url":"https://www.shelton-ct.gov/p/building-department/"},
+  {"en":"Planning and Zoning: check parcel zoning, permitted uses, site plans and applications before proposing improvements","es":"Planificación y Zonificación: verifica zonificación, usos permitidos, planos y solicitudes antes de proponer mejoras","url":"https://www.shelton-ct.gov/p/zoning-planning"},
+  {"en":"Public Works: check road maintenance, drainage, stormwater and municipal infrastructure information","es":"Obras Públicas: consulta mantenimiento vial, drenaje, aguas pluviales e infraestructura municipal","url":"https://www.shelton-ct.gov/p/public-works/"},
+  {"en":"Waste Disposal and Recycling: confirm current collection guidelines, accepted materials and resident disposal rules","es":"Residuos y Reciclaje: confirma normas de recogida, materiales aceptados y reglas de eliminación para residentes","url":"https://www.shelton-ct.gov/p/waste-disposal-recycling/"},
+  {"en":"Water Pollution Control Authority: confirm sewer service, connections and account charges for the exact address","es":"Autoridad de Aguas Residuales: confirma servicio de alcantarillado, conexiones y cargos para la dirección exacta","url":"https://www.shelton-ct.gov/p/water-pollution-control-authority/"},
+  {"en":"Naugatuck Valley Health District: ask about private wells, septic systems and applicable environmental health reviews","es":"Distrito de Salud Naugatuck Valley: consulta pozos privados, sistemas sépticos y revisiones de salud ambiental aplicables","url":"https://www.nvhd.org/about/"},
+  {"en":"Shelton Public Schools registration: check current K–12 enrollment forms, appointment requirements and school-by-street assignment","es":"Inscripción escolar de Shelton: consulta formularios K–12, citas obligatorias y asignación escolar por calle","url":"https://www.sheltonpublicschools.org/grades_112_forms"},
+  {"en":"Shelton Public Schools residency: verify required documents for owners, renters or other living arrangements","es":"Residencia para escuelas públicas: verifica documentos exigidos a propietarios, inquilinos y otras situaciones de vivienda","url":"https://www.sheltonpublicschools.org/residency"},
+  {"en":"Shelton Public Schools transportation: check current school-by-street information and bus-route updates","es":"Transporte escolar: consulta asignación por calle y cambios actuales en las rutas de autobús","url":"https://www.sheltonpublicschools.org/transportation"},
+ ],
  // Stamford: 12 municipal/district resources verified against official city and school pages 2026-10-29.
  // Stamford real estate tax rates differ by taxing district; verify the specific parcel and any Downtown Special Services District levy.
  'stamford': [
