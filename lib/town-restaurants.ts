@@ -12,6 +12,14 @@ export type TownRestaurant = {
  checkedOn:string;
 };
 export const townRestaurants:Record<string,TownRestaurant[]> = {
+ // Norwalk: five operator websites checked 2026-10-29 for town addresses and menu style; no ratings or hours asserted.
+ 'norwalk': [
+  {"name":"Oak + Almond","cuisine":"Seasonal American restaurant with wood-fired cooking at 544 Main Avenue","cuisineEs":"Restaurante estadounidense de temporada con cocina al fuego de leña en 544 Main Avenue","website":"https://oakandalmond.com/","sourceUrl":"https://oakandalmond.com/","checkedOn":"2026-10-29"},
+  {"name":"O'Neill's Irish Pub & Restaurant","cuisine":"Irish-style pub serving food at 93 North Main Street in South Norwalk","cuisineEs":"Pub de estilo irlandés con comidas en 93 North Main Street, South Norwalk","website":"https://www.oneillsono.com/","sourceUrl":"https://www.oneillsono.com/","checkedOn":"2026-10-29"},
+  {"name":"Match Restaurant","cuisine":"Seasonal, globally influenced New American dining at 98 Washington Street in SoNo","cuisineEs":"Cocina estadounidense contemporánea de temporada con influencias internacionales en 98 Washington Street, SoNo","website":"https://matchsono.com/","sourceUrl":"https://matchsono.com/","checkedOn":"2026-10-29"},
+  {"name":"Valencia Cocina","cuisine":"Latin and Venezuelan cooking, including arepas and wood-fire dishes, at 164 Main Street; formerly Valencia Luncheria","cuisineEs":"Cocina latina y venezolana, incluidas arepas y platos a la leña, en 164 Main Street; antes Valencia Luncheria","website":"https://valencialuncheria.com/","sourceUrl":"https://valencialuncheria.com/","checkedOn":"2026-10-29"},
+  {"name":"Colony Grill","cuisine":"Thin-crust pizza restaurant at 515 West Avenue","cuisineEs":"Restaurante de pizza de masa fina en 515 West Avenue","website":"https://colonygrill.com/locations","sourceUrl":"https://colonygrill.com/locations","checkedOn":"2026-10-29"},
+ ],
  // Wolcott: five restaurant-operated websites checked 2026-10-25 for Wolcott addresses and menus.
  // Neutral bilingual editorial directory; no ratings, hours or Joey personal Top Picks.
  'wolcott': [
