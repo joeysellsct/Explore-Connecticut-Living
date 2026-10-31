@@ -546,6 +546,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Milford city departments, property research and state park checked 2026-10-24 on official sources; use property-specific records before relying on any estimate.
  'milford': [
+  // Transit district services cross-checked with its published site and MTA station connections 2026-10-31.
+  {en:"Milford Transit District: local bus routes, train-station parking information and eligibility guidance for accessible transportation; verify current schedules and fees",es:"Distrito de Transporte de Milford: rutas de autobús, información sobre estacionamiento de la estación y requisitos de transporte accesible; confirma horarios y tarifas vigentes",url:"https://www.milfordtransit.com/"},
   {en:"City of Milford official website",es:"Sitio web oficial de la ciudad de Milford",url:"https://www.milfordct.us/"},
   {en:"Assessor: assessments, property cards and revaluation",es:"Tasador: tasaciones, fichas de propiedades y revaluación",url:"https://milfordct.us/210/Assessors-Office"},
   {en:"Milford property assessment map search",es:"Búsqueda de mapas y tasaciones de propiedades de Milford",url:"https://milford.mapxpress.net/"},
