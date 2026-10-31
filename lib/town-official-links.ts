@@ -548,6 +548,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Milford city departments, property research and state park checked 2026-10-24 on official sources; use property-specific records before relying on any estimate.
  'milford': [
+  // Fall 2026 bulk collection guidance: City of Milford public notice dated 2026-08-27; verify future seasonal dates with Public Works.
+  {en:"Seasonal bulk-waste collection: review Milford’s Fall 2026 curbside preparation rules, accepted and prohibited materials, and collection dates by regular garbage day; check for newer city notices before setting items out",es:"Recolección estacional de residuos voluminosos: consulta las reglas de preparación, materiales permitidos y prohibidos y fechas del otoño de 2026 según el día habitual de basura; verifica si hay avisos municipales más recientes antes de sacar los artículos",url:"https://www.milfordct.us/m/newsflash/home/detail/80"},
   {en:"Milford Animal Control: dog licensing and rabies requirements, lost pets and shelter contacts; the division also serves Orange",es:"Control de Animales de Milford: licencias caninas, requisitos de vacunación antirrábica, mascotas perdidas y contactos del refugio; también atiende a Orange",url:"https://milfordct.us/169/Animal-Control"},
 
   // Milford emergency notification and preparedness portals checked against city sources 2026-10-31.
