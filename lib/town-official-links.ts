@@ -976,6 +976,9 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Water Pollution Control Authority: wastewater and sewer oversight; verify connection by address","es":"Autoridad de aguas residuales: alcantarillado y supervisión; verifica la conexión por dirección","url":"https://www.seymourct.org/departments/WaterPollutionControlAuthority"},
   {"en":"Public Works: garbage, bulk pickup, transfer station and snow removal information","es":"Obras Públicas: basura, recogida de objetos grandes, centro de transferencia y nieve","url":"https://www.seymourct.org/departments/publicworks"},
   {"en":"Town operations: municipal facilities, parks and development administration","es":"Operaciones municipales: instalaciones, parques y administración del desarrollo","url":"https://www.seymourct.org/departments/Operations"},
+  {"en":"Parks: find Broad Street Park, Chatfield Park and other recreation sites; check facilities and park-use permits","es":"Parques: consulta Broad Street Park, Chatfield Park y otros espacios recreativos; verifica instalaciones y permisos de uso","url":"https://www.seymourct.org/departments/Parks"},
+  {"en":"Town Planner: review zoning, subdivision, wetlands and flood-hazard permit guidance before planning work","es":"Planificación municipal: revisa normas y permisos de zonificación, subdivisiones, humedales y zonas inundables antes de iniciar obras","url":"https://www.seymourct.org/departments/TownPlanner"},
+  {"en":"Registrar of Voters: check registration, election information and voter-record services","es":"Registro electoral: consulta inscripción, información de elecciones y servicios del padrón electoral","url":"https://www.seymourct.org/departments/registrarofvoters"},
  ],
  // Naugatuck links checked 2026-10-24 against borough, CTDOT, CT Parks and Connecticut Water sources.
  // 2025 Grand List / FY 2026-27 real estate 40.44 mills and motor vehicles 32.46 mills: borough Tax Office.
