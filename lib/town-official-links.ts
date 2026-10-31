@@ -558,6 +558,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   // The City explicitly says listed boroughs and associations collect taxes separately; verify any parcel with the applicable district.
   {en:"Boroughs and beach associations: check separate local tax collectors and potential additional bills for your address",es:"Distritos y asociaciones costeras: consulta recaudadores independientes y posibles impuestos adicionales según la dirección",url:"https://milfordct.us/668/Boroughs-Associations"},
   {en:"Milford public works and wastewater department contacts",es:"Contactos de obras públicas y aguas residuales de Milford",url:"https://www.milfordct.us/m/directory"},
+  // Official city open-space walking directory; checked against the existing Milford guide 2026-10-30.
+  {en:"Milford open-space walking maps: check official routes, access points and trail guidance for Beaver Brook, Eisenhower Park, Great River Walk, Mondo Ponds, Solomon Woods and Wilcox Park",es:"Mapas municipales de senderos: consulta rutas, accesos e indicaciones para Beaver Brook, Eisenhower Park, Great River Walk, Mondo Ponds, Solomon Woods y Wilcox Park",url:"https://www.milfordct.us/490/Milford-Open-Space-Walks"},
   {en:"Milford beach parking: resident stickers and current requirements",es:"Estacionamiento en playas de Milford: permisos de residentes y requisitos vigentes",url:"https://milfordct.us/680/Resident-Parking-Stickers"},
   {en:"Milford beach water-quality monitoring and swimming advisories",es:"Control de calidad del agua en las playas de Milford y avisos para bañistas",url:"https://www.milfordct.us/402/Beach-Monitoring"},
   // Milford municipal primary sources reviewed 2026-10-28; verify seasonal harbor permits and access directly with the City.
