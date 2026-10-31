@@ -16,7 +16,7 @@ test('Orange has a substantive sourced English-Spanish guide', () => {
   assert.ok(guide.en.includes('septic') && guide.es.includes('séptico'));
 });
 
-test('Orange provides eleven distinct official bilingual property research links', () => {
+test('Orange provides twelve distinct official bilingual property research links', () => {
   const source = read('lib/town-official-links.ts');
   const anchor = " 'orange': [";
   const start = source.indexOf(anchor);
@@ -24,8 +24,8 @@ test('Orange provides eleven distinct official bilingual property research links
   const left = source.indexOf('[', start + anchor.length - 1);
   const right = source.indexOf('],', left);
   const links = JSON.parse(source.slice(left, right + 1).replace(/,\s*]/g, ']'));
-  assert.equal(links.length, 11);
-  assert.equal(new Set(links.map(x => x.url)).size, 11);
+  assert.equal(links.length, 12);
+  assert.equal(new Set(links.map(x => x.url)).size, 12);
   for (const link of links) {
     assert.ok(link.en && link.es);
     assert.equal(new URL(link.url).protocol, 'https:');
