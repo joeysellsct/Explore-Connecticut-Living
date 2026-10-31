@@ -920,6 +920,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 
  // West Haven municipal and public-resource pages verified 2026-10-23. Check current fees, eligibility and address-specific conditions with the city.
  'west-haven': [
+  {"en":"West Haven official shoreline and tourism guide: explore Sandy Point birdwatching, Bradley Point history and public shoreline destinations; confirm beach parking and swimming rules separately","es":"Guía oficial de turismo y costa de West Haven: explora la observación de aves en Sandy Point, la historia de Bradley Point y los destinos costeros públicos; verifica por separado las normas de estacionamiento y baño","url":"https://www.cityofwesthaven.com/293/Tourism"},
   {"en":"City of West Haven official website","es":"Sitio web oficial de la ciudad de West Haven","url":"https://www.cityofwesthaven.com/"},
   {"en":"West Haven Assessor: assessments, 2024 revaluation, municipal mill rate and fire-district street list; verify each parcel’s combined tax rate","es":"Tasador de West Haven: avalúos, revaluación de 2024, tasa municipal y lista de calles por distrito de bomberos; confirma la tasa total de cada parcela","url":"https://www.cityofwesthaven.com/152/Assessors-Office"},
   {"en":"West Haven GIS and real property parcel search","es":"Mapas GIS y consulta de parcelas inmobiliarias","url":"https://westhaven.mapxpress.net/"},
