@@ -546,6 +546,9 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Milford city departments, property research and state park checked 2026-10-24 on official sources; use property-specific records before relying on any estimate.
  'milford': [
+  // Milford Public Library official registration and museum-pass pages reviewed 2026-10-31.
+  {en:"Milford Public Library card: free for eligible Milford residents; review address-ID requirements and temporary online digital-card application",es:"Tarjeta de la Biblioteca Pública de Milford: gratuita para residentes elegibles; consulta los requisitos de identificación y la solicitud temporal de tarjeta digital",url:"https://www.milfordct.us/574/Library-Card-Sign-Up"},
+  {en:"Milford library museum passes: check free or discounted cultural-attraction admission, eligibility, reservations and changing participating museums",es:"Pases de museos de la biblioteca de Milford: consulta entradas gratuitas o con descuento, requisitos, reservas y cambios en los museos participantes",url:"https://www.milfordct.us/583/Passes-To-Cultural-Attractions"},
   // Transit district services cross-checked with its published site and MTA station connections 2026-10-31.
   {en:"Milford Transit District: local bus routes, train-station parking information and eligibility guidance for accessible transportation; verify current schedules and fees",es:"Distrito de Transporte de Milford: rutas de autobús, información sobre estacionamiento de la estación y requisitos de transporte accesible; confirma horarios y tarifas vigentes",url:"https://www.milfordtransit.com/"},
   {en:"City of Milford official website",es:"Sitio web oficial de la ciudad de Milford",url:"https://www.milfordct.us/"},
