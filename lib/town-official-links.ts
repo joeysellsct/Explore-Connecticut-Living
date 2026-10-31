@@ -467,7 +467,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Orange links checked 2026-10-24 against official town department pages; tax collector confirms 27.40 mills for July 2026 bills (2025 Grand List). Confirm actual parcel bills, sewer/water connections and permits with town staff.
  'orange': [
-  {en:"Animal Control for Orange: Milford Animal Control also serves Orange; check pet complaints, roaming dogs, rabies rules and shelter contacts",es:"Control de Animales para Orange: el servicio de Milford también atiende a Orange; consulta denuncias, perros sueltos, normas antirrábicas y contactos del refugio",url:"https://milfordct.us/169/Animal-Control"},
+  {"en":"Animal Control for Orange: Milford Animal Control also serves Orange; check pet complaints, roaming dogs, rabies rules and shelter contacts","es":"Control de Animales para Orange: el servicio de Milford también atiende a Orange; consulta denuncias, perros sueltos, normas antirrábicas y contactos del refugio","url":"https://milfordct.us/169/Animal-Control"},
 
   {"en":"Town of Orange: departments and resident services","es":"Municipio de Orange: departamentos y servicios para residentes","url":"https://www.orange-ct.gov/27/Departments"},
   {"en":"Assessor: property assessments and revaluation research","es":"Tasador: tasaciones y consultas de reevaluación","url":"https://www.orange-ct.gov/153/Assessor"},
