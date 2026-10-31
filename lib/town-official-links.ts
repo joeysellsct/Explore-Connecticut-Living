@@ -467,6 +467,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Orange links checked 2026-10-24 against official town department pages; tax collector confirms 27.40 mills for July 2026 bills (2025 Grand List). Confirm actual parcel bills, sewer/water connections and permits with town staff.
  'orange': [
+  {en:"Animal Control for Orange: Milford Animal Control also serves Orange; check pet complaints, roaming dogs, rabies rules and shelter contacts",es:"Control de Animales para Orange: el servicio de Milford también atiende a Orange; consulta denuncias, perros sueltos, normas antirrábicas y contactos del refugio",url:"https://milfordct.us/169/Animal-Control"},
+
   {"en":"Town of Orange: departments and resident services","es":"Municipio de Orange: departamentos y servicios para residentes","url":"https://www.orange-ct.gov/27/Departments"},
   {"en":"Assessor: property assessments and revaluation research","es":"Tasador: tasaciones y consultas de reevaluación","url":"https://www.orange-ct.gov/153/Assessor"},
   {"en":"Tax Collector: official 27.40-mill rate for July 2026 bills and payment details; confirm the individual bill","es":"Recaudación: tasa oficial de 27,40 mills para julio de 2026 y pagos; verifica la factura de cada inmueble","url":"https://www.orange-ct.gov/206/Tax-Collector"},
@@ -546,6 +548,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Milford city departments, property research and state park checked 2026-10-24 on official sources; use property-specific records before relying on any estimate.
  'milford': [
+  {en:"Milford Animal Control: dog licensing and rabies requirements, lost pets and shelter contacts; the division also serves Orange",es:"Control de Animales de Milford: licencias caninas, requisitos de vacunación antirrábica, mascotas perdidas y contactos del refugio; también atiende a Orange",url:"https://milfordct.us/169/Animal-Control"},
+
   // Milford emergency notification and preparedness portals checked against city sources 2026-10-31.
   {en:"Milford Alerts: register or update phone, text and email preferences for city emergency notifications and optional community bulletins",es:"Alertas de Milford: registra o actualiza tus preferencias de llamadas, mensajes de texto y correo para avisos de emergencia y boletines comunitarios opcionales",url:"https://www.milfordct.us/772/E-Alerts"},
   {en:"Emergency preparedness: find city flood-zone and FEMA mapping resources, evacuation guidance and local preparedness information; verify risk for a specific address",es:"Preparación para emergencias: encuentra mapas de zonas inundables y de FEMA, orientación sobre evacuaciones y recursos locales; verifica los riesgos de cada dirección",url:"https://www.milfordct.us/235/Prepare"},
