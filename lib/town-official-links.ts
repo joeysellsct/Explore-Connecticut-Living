@@ -587,6 +587,11 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Regional Water Authority: water service and customer care","es":"Autoridad Regional del Agua: servicio y atención al cliente","url":"https://www.rwater.com/"},
   {"en":"Greater New Haven WPCA: sewer service, connection and billing questions","es":"Autoridad regional GNHWPCA: alcantarillado, conexiones y facturación","url":"https://gnhwpca.com/"},
   {"en":"Eli Whitney Museum & Workshop: visitor and educational programs","es":"Museo y Taller Eli Whitney: visitas y programas educativos","url":"https://www.eliwhitney.org/visit"},
+  // Official Hamden transfer station, library and Public Works pages checked 2026-11-01; confirm changing schedules and fees.
+  {"en":"Transfer Station and Recycling Center: check Hamden-resident access, accepted materials, current hours and weight-based disposal fees before bringing bulky waste or recyclables to 231 Wintergreen Avenue","es":"Centro de transferencia y reciclaje: verifica acceso para residentes de Hamden, materiales admitidos, horarios y tarifas de eliminación por peso antes de llevar residuos voluminosos o reciclables a 231 Wintergreen Avenue","url":"https://www.hamden.com/218/Recycling-Center-Transfer-Station"},
+  {"en":"Hamden Public Library: explore the Miller Memorial, Brundage and Whitneyville branches, borrowing services and community programs; confirm changing hours before visiting","es":"Biblioteca Pública de Hamden: conoce las sucursales Miller Memorial, Brundage y Whitneyville, los préstamos y programas comunitarios; confirma los horarios vigentes antes de acudir","url":"https://hamdenlibrary.org/"},
+  {"en":"Hamden Public Works: find municipal street, sanitation, recycling and tree-maintenance contacts; confirm service schedules and eligibility with the department","es":"Obras Públicas de Hamden: encuentra contactos para calles, saneamiento, reciclaje y mantenimiento de árboles; confirma calendarios y requisitos con el departamento","url":"https://www.hamden.com/m/directory/department?did=29"},
+
  ],
  // East Haven municipal, state park and museum pages checked 2026-10-24; confirm parcel-level records and current park/permit rules with each agency.
  'east-haven': [
