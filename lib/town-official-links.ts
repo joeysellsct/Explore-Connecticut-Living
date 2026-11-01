@@ -330,6 +330,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // Waterbury municipal and moving sources checked 2026-10-25 against city departments and Connecticut OPM.
  // FY2027 real-estate base rate 43.34 mills; water/sewer connections and actual bills are parcel-specific.
  'waterbury': [
+  {"en":"Connecticut EdSight school finder: explore official public-school and district data; confirm enrollment boundaries and residency requirements directly with the district","es":"Buscador escolar EdSight de Connecticut: consulta datos oficiales de escuelas públicas y distritos; confirma los límites de matrícula y los requisitos de residencia directamente con el distrito","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: assessment records, exemptions and revaluation questions; assessed values are not sale prices","es":"Tasador: avalúos, exenciones y consultas de reevaluación; el valor tasado no es el precio de venta","url":"https://www.waterburyct.org/assessor"},
   {"en":"Connecticut OPM FY 2026–27 mill-rate dataset: Waterbury real-property base rate is 43.34 mills; confirm the parcel bill and any district charges","es":"Datos estatales OPM 2026–27: tasa base inmobiliaria de Waterbury de 43,34 mills; confirma la factura de la parcela y posibles cargos de distrito","url":"https://data.ct.gov/Local-Government/Mill-Rates-for-FY-2014-2027/emyx-j53e"},
   {"en":"Tax Collector: real-estate bills, July and January installments, payment options and late-payment rules","es":"Recaudación: facturas inmobiliarias, cuotas de julio y enero, formas de pago y normas por retrasos","url":"https://www.waterburyct.org/services/tax-collection"},
@@ -371,6 +372,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // Wallingford municipal and utility sources checked 2026-10-25 against town departments and CCM.
  // FY2027 base rate 24.57 mills; town electric division and partial water/sewer coverage require parcel verification.
  'wallingford': [
+  {"en":"Connecticut EdSight school finder: explore official public-school and district data; confirm enrollment boundaries and residency requirements directly with the district","es":"Buscador escolar EdSight de Connecticut: consulta datos oficiales de escuelas públicas y distritos; confirma los límites de matrícula y los requisitos de residencia directamente con el distrito","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: parcel assessments, 2024 revaluation and exemption questions","es":"Tasador: avalúos por parcela, reevaluación de 2024 y consultas sobre exenciones","url":"https://www.wallingfordct.gov/government/departments/assessors-office/"},
   {"en":"Tax Collector: real estate bills, payment options and account questions","es":"Recaudación: impuestos inmobiliarios, opciones de pago y consultas de cuentas","url":"https://www.wallingfordct.gov/government/departments/tax-office/"},
   {"en":"Connecticut Conference of Municipalities: FY 2026–27 real property rate of 24.57 mills; confirm the parcel bill","es":"Conferencia de Municipios de Connecticut: tasa inmobiliaria 2026–27 de 24,57 mills; confirma la factura de la propiedad","url":"https://hub.ccm-ct.org/community/wallingford/"},
@@ -432,6 +434,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // WPCA bills sewer use and capital charges separately; water availability and all utilities must be confirmed by address.
  // CTDOT confirms Waterbury Branch bus substitution July 20, 2026–May 31, 2027.
  'derby': [
+  {"en":"Connecticut EdSight school finder: explore official public-school and district data; confirm enrollment boundaries and residency requirements directly with the district","es":"Buscador escolar EdSight de Connecticut: consulta datos oficiales de escuelas públicas y distritos; confirma los límites de matrícula y los requisitos de residencia directamente con el distrito","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"City of Derby: official city services and department directory","es":"Ciudad de Derby: servicios y directorio de departamentos municipales","url":"https://www.derbyct.gov/city-hall"},
   {"en":"Tax Assessor: property valuation, 2025 revaluation and assessment appeals","es":"Tasador: valoración de inmuebles, reevaluación de 2025 y apelaciones","url":"https://www.derbyct.gov/tax-assessor"},
   {"en":"Tax Collector: FY 2026–27 real estate rate 38.44 mills, separate vehicle rate 32.46; verify each bill","es":"Recaudación: tasa inmobiliaria 2026–27 de 38,44 mills y tasa vehicular distinta de 32,46; verifica cada factura","url":"https://www.derbyct.gov/tax-collector"},
@@ -453,6 +456,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // City lists Regional Water Authority for water inquiries and Aquarion for sewer operations/billing; service is address-specific.
  // CTDOT confirms substitute buses replace Waterbury Branch trains July 20, 2026–May 31, 2027.
  'ansonia': [
+  {"en":"Connecticut EdSight school finder: explore official public-school and district data; confirm enrollment boundaries and residency requirements directly with the district","es":"Buscador escolar EdSight de Connecticut: consulta datos oficiales de escuelas públicas y distritos; confirma los límites de matrícula y los requisitos de residencia directamente con el distrito","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"City of Ansonia: official department directory and resident services","es":"Ciudad de Ansonia: directorio de departamentos y servicios para residentes","url":"https://cityofansonia.com/departments"},
   {"en":"Assessor: property record cards, assessments, revaluation and GIS links","es":"Tasador: fichas de propiedades, tasaciones, reevaluación y enlaces GIS","url":"https://cityofansonia.com/content/8132/8142/8144/default.aspx"},
   {"en":"Ansonia GIS: parcel map research; verify boundaries with the city","es":"GIS de Ansonia: mapas de parcelas; confirma los límites con el municipio","url":"https://ansonia.mapxpress.net/"},
@@ -493,6 +497,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Madison links verified 2026-10-24 against official Madison municipal pages and Shore Line East. The town publishes 23.06 mills effective July 1, 2026; confirm parcel-specific districts, utilities and current bills directly.
  'madison': [
+  {"en":"Connecticut EdSight school finder: explore official public-school and district data; confirm enrollment boundaries and residency requirements directly with the district","es":"Buscador escolar EdSight de Connecticut: consulta datos oficiales de escuelas públicas y distritos; confirma los límites de matrícula y los requisitos de residencia directamente con el distrito","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Town of Madison: municipal services and resident information","es":"Municipio de Madison: servicios e información para residentes","url":"https://www.madisonct.org/"},
   {"en":"Assessor: assessment questions, exemptions and property valuation","es":"Tasador municipal: tasaciones, exenciones y valoración de propiedades","url":"https://www.madisonct.org/157/Assessor"},
   {"en":"Tax Collector: bills, payments and delinquency information","es":"Recaudación de impuestos: facturas, pagos e información sobre atrasos","url":"https://www.madisonct.org/328/Tax-Collector"},
@@ -511,6 +516,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Guilford links checked 2026-10-24 against the official Guilford municipal site navigation and linked portals; GIS is not a survey. Verify tax bills, utility connections and permits by parcel.
  'guilford': [
+  {"en":"Connecticut EdSight school finder: explore official public-school and district data; confirm enrollment boundaries and residency requirements directly with the district","es":"Buscador escolar EdSight de Connecticut: consulta datos oficiales de escuelas públicas y distritos; confirma los límites de matrícula y los requisitos de residencia directamente con el distrito","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Town of Guilford: municipal departments and resident services","es":"Municipio de Guilford: departamentos y servicios para residentes","url":"https://www.guilfordct.gov/"},
   {"en":"Assessor: property valuation, 2026 revaluation and assessment records","es":"Tasador: valoración, reevaluación de 2026 y registros de tasación","url":"https://www.guilfordct.gov/town_departments/assessor/index.php"},
   {"en":"Tax Collector: tax bills, payment guidance and parcel-specific charges","es":"Recaudación de impuestos: facturas, pagos y cargos por parcela","url":"https://www.guilfordct.gov/town_departments/tax_collector/index.php"},
@@ -685,6 +691,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Cheshire town departments and services verified 2026-10-24 against cheshirect.gov departmental pages; GIS is a town-linked portal. Confirm parcel-specific taxes, sewer and zoning directly with the municipality.
  'cheshire': [
+  {"en":"Connecticut EdSight school finder: explore official public-school and district data; confirm enrollment boundaries and residency requirements directly with the district","es":"Buscador escolar EdSight de Connecticut: consulta datos oficiales de escuelas públicas y distritos; confirma los límites de matrícula y los requisitos de residencia directamente con el distrito","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
    {
      "en": "Cheshire town government and services",
      "es": "Gobierno y servicios municipales de Cheshire",
@@ -748,6 +755,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Branford official town and transit pages checked 2026-10-23. Confirm current charges and parcel conditions directly with the agencies.
  'branford': [
+  {"en":"Connecticut EdSight school finder: explore official public-school and district data; confirm enrollment boundaries and residency requirements directly with the district","es":"Buscador escolar EdSight de Connecticut: consulta datos oficiales de escuelas públicas y distritos; confirma los límites de matrícula y los requisitos de residencia directamente con el distrito","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   // Branford official Form Center reviewed 2026-11-01; confirm current complaint procedure and eligibility with town.
   {"en":"Branford municipal online forms: find the Fair Rent Commission complaint form for rental-housing concerns, along with Assessor, Building Department, inland wetlands and sustainability forms; check current procedures before submitting","es":"Formularios municipales de Branford: encuentra el formulario de quejas de la Comisión de Alquileres Justos para asuntos de vivienda en alquiler, además de formularios del tasador, construcción, humedales y sostenibilidad; confirma los procedimientos vigentes antes de enviarlos","url":"https://www.branford-ct.gov/FormCenter"},
   {
@@ -1042,6 +1050,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // Seymour sources checked 2026-10-24 against the official town pages; FY 2026-27 real-estate mill rate 28.64 appears on the Assessor page.
  // Tax amounts, exemptions, sewer service, permits and utilities depend on the individual property; confirm with town and providers.
  'seymour': [
+  {"en":"Connecticut EdSight school finder: explore official public-school and district data; confirm enrollment boundaries and residency requirements directly with the district","es":"Buscador escolar EdSight de Connecticut: consulta datos oficiales de escuelas públicas y distritos; confirma los límites de matrícula y los requisitos de residencia directamente con el distrito","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   // Seymour emergency preparedness and fire-safety portals checked against town pages 2026-10-31; alert platform may change.
   {"en":"Seymour emergency notifications: review the town's current alert-registration instructions for safety notices, road closures and community updates; confirm the active signup provider on the official page","es":"Alertas de emergencia de Seymour: consulta las instrucciones municipales vigentes para recibir avisos de seguridad, cierres de calles y noticias comunitarias; confirma el proveedor de inscripción en la página oficial","url":"https://www.seymourct.org/departments/EmergencyServices"},
   {"en":"Office of Emergency Management: learn about local disaster planning, evacuation and shelter coordination, and preparedness responsibilities","es":"Oficina de Gestión de Emergencias: conoce la planificación ante desastres, la coordinación de evacuaciones y refugios y las responsabilidades de preparación","url":"https://www.seymourct.org/departments/EmergencyServices/OfficeofEmergencyManagement"},
@@ -1071,6 +1080,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // 2025 Grand List / FY 2026-27 real estate 40.44 mills and motor vehicles 32.46 mills: borough Tax Office.
  // Water and sewer connections, additional assessments and property conditions are address-specific.
  'naugatuck': [
+  {"en":"Connecticut EdSight school finder: explore official public-school and district data; confirm enrollment boundaries and residency requirements directly with the district","es":"Buscador escolar EdSight de Connecticut: consulta datos oficiales de escuelas públicas y distritos; confirma los límites de matrícula y los requisitos de residencia directamente con el distrito","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: property cards, Grand List, exemptions and assessment appeals","es":"Tasador: fichas catastrales, lista de avalúos, exenciones y apelaciones","url":"https://www.naugatuck-ct.gov/assessor"},
   {"en":"Tax Office: 2025 Grand List real-estate rate 40.44 mills; motor vehicles 32.46 mills; verify each bill","es":"Recaudación: tasa inmobiliaria de 40,44 mills para la lista de 2025; vehículos 32,46; confirma cada factura","url":"https://naugatuck-ct.gov/tax-office"},
   {"en":"Town Clerk: deeds, land records and recorded-document requests","es":"Secretaría municipal: escrituras, registros de propiedad y solicitudes de documentos","url":"https://www.naugatuck-ct.gov/town-clerk"},
@@ -1091,6 +1101,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // Cott land-record searches do not include real-estate tax or sewer-use liens: confirm with Tax Collector/WPCA.
  // The 30.56-mill base rate does not establish a specific parcel's bill or utility connections.
  'north-haven': [
+  {"en":"Connecticut EdSight school finder: explore official public-school and district data; confirm enrollment boundaries and residency requirements directly with the district","es":"Buscador escolar EdSight de Connecticut: consulta datos oficiales de escuelas públicas y distritos; confirma los límites de matrícula y los requisitos de residencia directamente con el distrito","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: property assessments, Grand List, 2024 revaluation and tax-relief programs","es":"Tasador: avalúos, lista tributaria, reevaluación de 2024 y programas de alivio fiscal","url":"https://www.northhaven-ct.gov/government/town_departments/departments_(a_-_d)/assessor/index.php"},
   {"en":"Tax Collector: current bills, installments, payments and real-estate tax liens","es":"Recaudación: facturas, plazos, pagos y gravámenes por impuestos inmobiliarios","url":"https://www.northhaven-ct.gov/government/town_departments/departments_(s_-_z)/tax_collector/index.php"},
   {"en":"Online tax bills: official town instructions for searching and paying bills","es":"Facturas de impuestos en línea: instrucciones municipales para buscar y pagar","url":"https://www.northhaven-ct.gov/government/town_departments/departments_(s_-_z)/tax_collector/view_and_pay_tax_bills_online.php"},
@@ -1110,6 +1121,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // The city's Tax Collection page still quotes a 2023 Grand List rate; do not present it as current.
  // Meriden has tax districts and a 2025 revaluation: verify each property's actual bill and services.
  'meriden': [
+  {"en":"Connecticut EdSight school finder: explore official public-school and district data; confirm enrollment boundaries and residency requirements directly with the district","es":"Buscador escolar EdSight de Connecticut: consulta datos oficiales de escuelas públicas y distritos; confirma los límites de matrícula y los requisitos de residencia directamente con el distrito","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"City Assessor: parcel values, assessment records and 2025 revaluation","es":"Tasador municipal: valores, registros catastrales y reevaluación de 2025","url":"https://www.meridenct.gov/city-services/finance/assessment-1/"},
   {"en":"2025 citywide revaluation: new assessments used for tax bills beginning July 2026","es":"Reevaluación municipal de 2025: nuevos avalúos para facturas desde julio de 2026","url":"https://www.meridenct.gov/city-services/finance/assessment-1/2025-citywide-revaluation/"},
   {"en":"Connecticut Conference of Municipalities: FY 2026–27 base real estate rate 29.99 mills; verify district charges and parcel bill","es":"Conferencia de Municipios: tasa inmobiliaria base 2026–27 de 29,99 mills; confirma cargos distritales y factura","url":"https://hub.ccm-ct.org/community/meriden/"},
