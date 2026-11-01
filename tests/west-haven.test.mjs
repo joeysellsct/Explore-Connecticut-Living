@@ -21,9 +21,12 @@ test('West Haven municipal links cover property due diligence and local life in 
   const source = read('lib/town-official-links.ts');
   const section = source.match(/'west-haven':\s*\[([\s\S]*?)\],/);
   assert.ok(section, 'West Haven official links must exist');
-  assert.equal((section[1].match(/"en":/g) || []).length, 21);
-  assert.equal((section[1].match(/"es":/g) || []).length, 21);
-  assert.equal((section[1].match(/"url":/g) || []).length, 21);
+  const enCount = (section[1].match(/"en":/g) || []).length;
+  const esCount = (section[1].match(/"es":/g) || []).length;
+  const urlCount = (section[1].match(/"url":/g) || []).length;
+  assert.ok(urlCount >= 21, 'Retain at least the original 21 official resources');
+  assert.equal(enCount, urlCount, 'Every resource needs English guidance');
+  assert.equal(esCount, urlCount, 'Every resource needs Spanish guidance');
   for (const link of ['152/Assessors-Office', '156/City-Clerks-Office', '180/Tax-Collector', '154/Building', '172/Parks-and-Recreation']) {
     assert.ok(section[1].includes(link), 'Missing municipal resource ' + link);
   }
@@ -90,7 +93,7 @@ test('West Haven official moving resources cover recycling, collection, disposal
   const section = source.match(/'west-haven':\s*\[([\s\S]*?)\],/);
   assert.ok(section, 'West Haven official links must exist');
   const entries = [...section[1].matchAll(/\{[^{}]+\}/g)].map(match => JSON.parse(match[0]));
-  assert.equal(entries.length, 21, 'Keep all twenty-one verified bilingual links');
+  assert.ok(entries.length >= 21, 'Keep at least the original twenty-one verified bilingual links');
   assert.equal(new Set(entries.map(entry => entry.url)).size, entries.length, 'Avoid duplicate official URLs');
   const expected = [
     ['266/Recycling-Info-Carts', 'recyclables loose', 'sin bolsas plásticas'],
