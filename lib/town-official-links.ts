@@ -761,8 +761,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
     "url": "https://www.branford-ct.gov/288/Planning-Zoning-Section"
   },
   {
-    "en": "Tax Collector: current bills, payment guidance and sewer charges",
-    "es": "Recaudación de impuestos: facturas, pagos y cargos de alcantarillado",
+    "en": "Branford Tax Collector: check the current 22.16-mill rate and property bills; beginning July 2026, real-estate and WPCA sewer-use charges appear together on one bill (verify parcel-specific charges and due dates)",
+    "es": "Recaudación de Branford: consulta la tasa vigente de 22,16 mills y las facturas; desde julio de 2026, los impuestos inmobiliarios y cargos de alcantarillado WPCA aparecen en una sola factura (verifica cargos y vencimientos de cada propiedad)",
     "url": "https://www.branford-ct.gov/319/Tax-Collector"
   },
   {
