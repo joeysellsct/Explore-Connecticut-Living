@@ -7,13 +7,20 @@ const towns = [...read('connecticut-towns.ts').matchAll(/"name":\s*"([^"]+)",\s*
 if (towns.length !== 169) throw new Error('Expected 169 Connecticut towns, found ' + towns.length);
 function sections(file, start, end) {
   const raw = read(file);
-  const region = raw.slice(raw.indexOf(start), end ? raw.indexOf(end) : undefined);
+  const startAt = raw.indexOf(start);
+  if (startAt < 0) throw new Error('Missing section marker ' + start + ' in ' + file);
+  const endAt = end ? raw.indexOf(end, startAt + start.length) : -1;
+  if (end && endAt < 0) throw new Error('Missing end marker ' + end + ' in ' + file);
+  const region = raw.slice(startAt, endAt < 0 ? undefined : endAt);
   const result = new Map();
-  const keys = [...region.matchAll(/^\s*'([^']+)':\s*(\[|\{)/gm)];
+  // Top-level town keys can be single-quoted, double-quoted or bare.
+  const keys = [...region.matchAll(/^ ['"]?([a-z][a-z0-9-]*)['"]?:\s*(\[|\{)/gm)];
   for (let i = 0; i < keys.length; i++) {
+    const slug = keys[i][1];
+    if (result.has(slug)) throw new Error('Duplicate town key ' + slug + ' in ' + file);
     const from = keys[i].index + keys[i][0].length;
     const to = i + 1 < keys.length ? keys[i + 1].index : region.length;
-    result.set(keys[i][1], region.slice(from, to));
+    result.set(slug, region.slice(from, to));
   }
   return result;
 }
