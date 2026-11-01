@@ -25,7 +25,7 @@ const rates = new Set([...read('fy2027-mill-rates.ts').matchAll(/'([^']+)':\s*\d
 const count = (map, slug, token) => (map.get(slug)?.match(token) ?? []).length;
 const rows = towns.map(t => ({
   ...t,
-  bilingualGuide: /(?:\\ben:|"en":)/.test(highlights.get(t.slug) ?? '') && /(?:\\bes:|"es":)/.test(highlights.get(t.slug) ?? ''),
+  bilingualGuide: /(?:en:|"en":)/.test(highlights.get(t.slug) ?? '') && /(?:es:|"es":)/.test(highlights.get(t.slug) ?? ''),
   municipalLinks: count(resources, t.slug, /"url":/g),
   restaurants: count(restaurants, t.slug, /(?:sourceUrl|"sourceUrl")\s*:/g),
   photos: count(photos, t.slug, /"licenseUrl":/g),
