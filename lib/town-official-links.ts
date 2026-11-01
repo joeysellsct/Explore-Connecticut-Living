@@ -941,6 +941,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 
  // West Haven municipal and public-resource pages verified 2026-10-23. Check current fees, eligibility and address-specific conditions with the city.
  'west-haven': [
+  {"en":"Animal Shelter: find animal-control contacts, report animal welfare concerns and ask about adoption","es":"Refugio de Animales: encuentra contactos de control animal, informa sobre bienestar animal y consulta adopciones","url":"https://www.cityofwesthaven.com/151/Animal-Shelter"},
   // West Haven official emergency-management and notification pages checked 2026-10-31; confirm current shelter and alert instructions during an incident.
   {"en":"West Haven emergency alerts: sign up for city notices about severe weather, road closures and evacuations; choose phone, text or email delivery options","es":"Alertas de emergencia de West Haven: inscríbete para recibir avisos municipales sobre tormentas, cierres de calles y evacuaciones; elige teléfono, mensaje de texto o correo electrónico","url":"https://www.cityofwesthaven.com/alerts"},
   {"en":"West Haven Emergency Management: review hurricane preparedness, emergency supply guidance and shelter information; follow current city instructions during an emergency","es":"Gestión de Emergencias de West Haven: consulta la preparación para huracanes, suministros de emergencia y refugios; sigue las instrucciones municipales vigentes durante una emergencia","url":"https://www.cityofwesthaven.com/182/Emergency-Info"},
