@@ -728,6 +728,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Branford official town and transit pages checked 2026-10-23. Confirm current charges and parcel conditions directly with the agencies.
  'branford': [
+  // Branford official Form Center reviewed 2026-11-01; confirm current complaint procedure and eligibility with town.
+  {"en":"Branford municipal online forms: find the Fair Rent Commission complaint form for rental-housing concerns, along with Assessor, Building Department, inland wetlands and sustainability forms; check current procedures before submitting","es":"Formularios municipales de Branford: encuentra el formulario de quejas de la Comisión de Alquileres Justos para asuntos de vivienda en alquiler, además de formularios del tasador, construcción, humedales y sostenibilidad; confirma los procedimientos vigentes antes de enviarlos","url":"https://www.branford-ct.gov/FormCenter"},
   {
     "en": "Town of Branford municipal services",
     "es": "Servicios municipales de Branford",
