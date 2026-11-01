@@ -247,6 +247,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // Wolcott: 11 official town sources checked 2026-10-25; 2025 Grand List 28.90 mills applies to FY 2026–27.
  // Municipal water/sewer, parks and property records require address- or visit-specific confirmation.
  'wolcott': [
+  {"en":"Connecticut EdSight: research public-school and district profiles; confirm address-specific enrollment and residency requirements directly with the district","es":"EdSight de Connecticut: consulta perfiles de escuelas públicas y distritos; confirma directamente con el distrito la matrícula y los requisitos de residencia para cada dirección","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: review parcel assessments, revaluation records and available exemptions before comparing tax bills","es":"Tasador: consulta valoraciones de parcelas, reevaluaciones y exenciones antes de comparar impuestos","url":"https://www.wolcottct.org/181/Assessor"},
   {"en":"Tax Collector: Wolcott reports 28.90 mills for the 2025 Grand List (FY 2026–27); verify each property's assessment and bill","es":"Recaudación: Wolcott informa 28,90 mills para la lista fiscal de 2025 (año 2026–27); verifica valoración y factura de cada inmueble","url":"https://www.wolcottct.org/218/Tax-Collector"},
   {"en":"Town Clerk: request deeds, recorded land documents and other official records before closing","es":"Secretaría municipal: solicita escrituras, registros de terrenos y documentos oficiales antes del cierre","url":"https://www.wolcottct.org/230/Town-Clerk"},
@@ -262,6 +263,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   // Prospect: official municipal, recreation and water-service sources reviewed 2026-10-25.
  // 28.47 mills is for FY 2026–27 (October 1, 2025 Grand List); parcel assessments, service areas and fees require address-level checks.
  'prospect': [
+  {"en":"Connecticut EdSight: research public-school and district profiles; confirm address-specific enrollment and residency requirements directly with the district","es":"EdSight de Connecticut: consulta perfiles de escuelas públicas y distritos; confirma directamente con el distrito la matrícula y los requisitos de residencia para cada dirección","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: check the property's assessed value, revaluation records and available exemptions","es":"Tasador: consulta la valoración fiscal de la propiedad, la reevaluación y las exenciones disponibles","url":"https://townofprospect.gov/assessor/"},
   {"en":"FY 2026–27 real-property mill rate: Prospect reports 28.47 mills for the October 1, 2025 Grand List; verify the individual bill","es":"Tasa inmobiliaria 2026–27: Prospect indica 28,47 mills para la lista fiscal del 1 de octubre de 2025; verifica la factura individual","url":"https://townofprospect.gov/tax-faq/"},
   {"en":"Tax Collector: verify current real-estate bills, payment methods, deadlines and sewer-use charges","es":"Recaudación de impuestos: verifica facturas inmobiliarias, pagos, vencimientos y cargos de alcantarillado","url":"https://townofprospect.gov/tax-collector/"},
@@ -281,6 +283,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // Oxford: municipal departments, CCM FY2027 mill rate and Housatonic Valley Health District checked 2026-10-25.
  // The 20.55-mill rate is per $1,000 of assessed value; verify parcel bills, water and sewer availability individually.
  'oxford': [
+  {"en":"Connecticut EdSight: research public-school and district profiles; confirm address-specific enrollment and residency requirements directly with the district","es":"EdSight de Connecticut: consulta perfiles de escuelas públicas y distritos; confirma directamente con el distrito la matrícula y los requisitos de residencia para cada dirección","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: review parcel assessments, exemptions and valuation records before estimating property taxes","es":"Tasador: revisa la tasación de la parcela, las exenciones y los registros de valoración antes de calcular los impuestos","url":"https://www.oxford-ct.gov/1243/Assessor"},
   {"en":"FY 2026–27 real-property mill rate: CCM reports 20.55 mills; verify the parcel assessment and actual tax bill","es":"Tasa de impuesto inmobiliario 2026–27: CCM indica 20,55 mills; verifica la tasación y la factura de la parcela","url":"https://hub.ccm-ct.org/community/oxford/"},
   {"en":"Tax Collector: check billing, payment methods and due-date guidance for the specific property","es":"Recaudación de impuestos: consulta facturas, métodos de pago y fechas de vencimiento de la propiedad","url":"https://www.oxford-ct.gov/1219/Tax-Collector"},
@@ -298,6 +301,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // North Branford: municipal department pages, health district, conservation trust and CCM FY2027 data checked 2026-10-25.
  // Town's budget news retains a 28.91 proposed rate; CCM FY2027 lists 28.81. Confirm parcel bills with Tax Department.
  'north-branford': [
+  {"en":"Connecticut EdSight: research public-school and district profiles; confirm address-specific enrollment and residency requirements directly with the district","es":"EdSight de Connecticut: consulta perfiles de escuelas públicas y distritos; confirma directamente con el distrito la matrícula y los requisitos de residencia para cada dirección","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: research the 2025 revaluation, assessed value, property exemptions and parcel details before estimating taxes","es":"Tasador: consulta la reevaluación de 2025, el valor tasado, las exenciones y los datos de la parcela antes de calcular impuestos","url":"https://www.northbranfordct.gov/200/Assessor"},
   {"en":"Connecticut Conference of Municipalities: FY 2026–27 real-property rate is 28.81 mills per $1,000 of assessed value; check the actual parcel bill","es":"Conferencia de Municipios de Connecticut: tasa inmobiliaria de 2026–27 de 28,81 mills por cada $1.000 de valor tasado; verifica la factura real","url":"https://hub.ccm-ct.org/community/north-branford/"},
   {"en":"Tax Department: confirm real-estate tax bills, payment options, due dates and outstanding balances","es":"Departamento de Impuestos: confirma facturas inmobiliarias, pagos, vencimientos y saldos pendientes","url":"https://www.northbranfordct.gov/255/Tax-Department"},
@@ -314,6 +318,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Middlebury municipal sources verified 2026-10-25; FY2027 rate 26.46 mills per CT OPM/CCM. Parcel bills and utility hookups must be checked by address.
  'middlebury': [
+  {"en":"Connecticut EdSight: research public-school and district profiles; confirm address-specific enrollment and residency requirements directly with the district","es":"EdSight de Connecticut: consulta perfiles de escuelas públicas y distritos; confirma directamente con el distrito la matrícula y los requisitos de residencia para cada dirección","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: confirm assessed value, exemptions and the 2025 revaluation before estimating a specific home's taxes","es":"Tasador: confirma el avalúo, las exenciones y la reevaluación de 2025 antes de calcular los impuestos de una vivienda","url":"https://www.middleburyct.gov/1198/Assessors-Office"},
   {"en":"Official parcel assessment database: October 1, 2025 revaluation records; assessments are not asking prices","es":"Base oficial de avalúos por parcela: reevaluación del 1 de octubre de 2025; los avalúos no son precios de venta","url":"https://gis.vgsi.com/middleburyct/"},
   {"en":"Town GIS maps: research parcel context and nearby features; not a legal boundary survey","es":"Mapas GIS municipales: consulta parcelas y su entorno; no sustituyen un deslinde legal","url":"https://middlebury.mapxpress.net/"},
@@ -393,6 +398,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // Town Tax Collector page may still display FY2025 29.14 mills: direct users to Assessor/current bill.
  // The town reports no municipal water or sewer services; verify well and septic records by parcel.
  'bethany': [
+  {"en":"Connecticut EdSight: research public-school and district profiles; confirm address-specific enrollment and residency requirements directly with the district","es":"EdSight de Connecticut: consulta perfiles de escuelas públicas y distritos; confirma directamente con el distrito la matrícula y los requisitos de residencia para cada dirección","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: parcel assessments, 2023 revaluation and FY 2026–27 real estate rate of 29.99 mills","es":"Tasador: avalúos, reevaluación de 2023 y tasa inmobiliaria 2026–27 de 29,99 mills","url":"https://www.bethanyct.gov/assessor"},
   {"en":"Tax Collector: bills and payments; page may show an older Grand List rate, so confirm the bill","es":"Recaudación: facturas y pagos; la página puede mostrar una tasa anterior, confirma la factura","url":"https://bethanyct.gov/tax-collector"},
   {"en":"Town Clerk: deeds, recorded documents and official town records","es":"Secretaría municipal: escrituras, documentos registrados y archivos oficiales","url":"https://bethanyct.gov/town-clerk"},
@@ -415,6 +421,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // Town Tax Collector lists possible separate sewer/water assessments; verify utility availability by address.
  // CTDOT: Waterbury Branch trains replaced by buses July 20, 2026–May 31, 2027.
  'beacon-falls': [
+  {"en":"Connecticut EdSight: research public-school and district profiles; confirm address-specific enrollment and residency requirements directly with the district","es":"EdSight de Connecticut: consulta perfiles de escuelas públicas y distritos; confirma directamente con el distrito la matrícula y los requisitos de residencia para cada dirección","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {en:"Town departments: local services and contacts",es:"Departamentos municipales: servicios y contactos",url:"https://www.beaconfalls-ct.org/204/Departments"},
   {en:"Assessor: property assessments, 2025 revaluation and GIS information",es:"Tasador: avalúos, reevaluación de 2025 e información cartográfica GIS",url:"https://www.beaconfalls-ct.org/223/Assessor"},
   {en:"Tax Collector: property tax bills, installments and possible sewer/water assessments",es:"Recaudación: facturas, plazos y posibles cargos de alcantarillado y agua",url:"https://www.beaconfalls-ct.org/209/Tax-Collector"},
@@ -1144,6 +1151,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // so defer to the municipality's own current published rate and verify parcel bills/district charges.
  // WPCA states Southbury has no municipal sewage system; private septic and water service vary by address.
  'southbury': [
+  {"en":"Connecticut EdSight: research public-school and district profiles; confirm address-specific enrollment and residency requirements directly with the district","es":"EdSight de Connecticut: consulta perfiles de escuelas públicas y distritos; confirma directamente con el distrito la matrícula y los requisitos de residencia para cada dirección","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: property cards, Grand List assessments and exemptions; verify the specific parcel","es":"Tasador: fichas catastrales, avalúos y exenciones; verifica la parcela","url":"https://www.southbury-ct.org/assessor"},
   {"en":"Town's FY 2026–27 mill rate: 25.4 mills per $1,000 of taxable assessment; confirm district charges and actual bill","es":"Tasa municipal 2026–27: 25,4 mills por cada $1.000 de avalúo gravable; confirma cargos distritales y factura","url":"https://www.southbury-ct.org/mill-rate"},
   {"en":"Tax Collector: property-tax bills, payment inquiries and delinquency information","es":"Recaudación: facturas de impuestos, consultas de pago e información de deudas","url":"https://www.southbury-ct.org/tax"},
