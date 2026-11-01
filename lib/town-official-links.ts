@@ -856,8 +856,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
     "url": "https://www.branford-ct.gov/333/Land-Records"
   },
   {
-    "en": "Branford GIS: parcel and zoning map layers (not a legal survey)",
-    "es": "GIS de Branford: mapas de parcelas y zonificación (no sustituyen un plano legal)",
+    "en": "Branford GIS: research property summary cards, zoning and school-district layers, open space, shellfish beds and elevation. The town warns that data may be outdated and is not for legal use; verify boundaries and school assignments with the responsible offices.",
+    "es": "GIS de Branford: consulta fichas de propiedades, capas de zonificación y distritos escolares, espacios abiertos, bancos de mariscos y elevación. El municipio advierte que los datos pueden estar desactualizados y no sirven para uso legal; verifica límites y asignaciones escolares con las oficinas correspondientes.",
     "url": "https://www.branford-ct.gov/220/Branford-GIS"
   },
   {
