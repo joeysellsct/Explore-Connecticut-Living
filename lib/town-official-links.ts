@@ -427,6 +427,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // Town Tax Collector lists possible separate sewer/water assessments; verify utility availability by address.
  // CTDOT: Waterbury Branch trains replaced by buses July 20, 2026–May 31, 2027.
  'beacon-falls': [
+  {"en":"Regional School District 16: Beacon Falls and Prospect families can check district schools, calendars and enrollment contacts; confirm placement and residency directly with the district","es":"Distrito Escolar Regional 16: las familias de Beacon Falls y Prospect pueden consultar escuelas, calendarios y contactos de matrícula; confirma la asignación y los requisitos de residencia directamente con el distrito","url":"https://www.region16ct.org/"},
   {"en":"Connecticut EdSight: research public-school and district profiles; confirm address-specific enrollment and residency requirements directly with the district","es":"EdSight de Connecticut: consulta perfiles de escuelas públicas y distritos; confirma directamente con el distrito la matrícula y los requisitos de residencia para cada dirección","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {en:"Town departments: local services and contacts",es:"Departamentos municipales: servicios y contactos",url:"https://www.beaconfalls-ct.org/204/Departments"},
   {en:"Assessor: property assessments, 2025 revaluation and GIS information",es:"Tasador: avalúos, reevaluación de 2025 e información cartográfica GIS",url:"https://www.beaconfalls-ct.org/223/Assessor"},
