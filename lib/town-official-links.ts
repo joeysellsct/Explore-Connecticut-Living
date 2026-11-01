@@ -558,6 +558,10 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Hamden links checked 2026-10-24 against Town of Hamden, CT Parks, RWA, GNHWPCA and Eli Whitney Museum sources. Verify parcel-level service, taxes and rules with each agency.
  'hamden': [
+  // Hamden: municipal registrar and resident resources reviewed 2026-11-01.
+  {"en":"Registrar of Voters: check registration, voting districts, polling places and election notices before voting","es":"Registro electoral: consulta la inscripción, los distritos, los centros de votación y los avisos electorales antes de votar","url":"https://hamden.com/246/Registrar-of-Voters"},
+  {"en":"Resident resources: find municipal permits, food assistance, emergency information and the 2026 elections guide","es":"Recursos para residentes: encuentra permisos municipales, ayuda alimentaria, información de emergencias y la guía electoral de 2026","url":"https://hamden.com/477/Resources"},
+
   // Official Hamden recreation, tourism and education pages reviewed 2026-11-01; confirm changing programs and enrollment.
   {"en":"Hamden recreation registration and park reservations: explore town programs, pool-pass information and the application process for using municipal parks; confirm current availability and fees with Recreation","es":"Inscripción recreativa y reservas de parques de Hamden: consulta programas municipales, información de pases de piscina y solicitudes para usar parques; confirma disponibilidad y tarifas vigentes con Recreación","url":"https://www.hamden.com/228/Recreation"},
   {"en":"Hamden cultural and outdoor attractions: explore the town's official guide to playgrounds, trails, historic sites, parks and community spaces; verify each site's access and hours before visiting","es":"Atracciones culturales y naturales de Hamden: explora la guía municipal de parques infantiles, senderos, lugares históricos, parques y espacios comunitarios; verifica acceso y horarios antes de visitar","url":"https://www.hamden.com/993/Tourism-and-Cultural-Assets"},
