@@ -601,6 +601,9 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Milford city departments, property research and state park checked 2026-10-24 on official sources; use property-specific records before relying on any estimate.
  'milford': [
+  // Official Milford shoreline and permit pages checked 2026-11-01; verify changing seasonal rules and rates.
+  {"en":"Milford boat ramp permits: review vessel-registration requirements, application methods and dated 2026 permit fees; confirm the latest rates and launch rules with Harbor Management before use","es":"Permisos de rampas para embarcaciones en Milford: consulta requisitos de matrícula, métodos de solicitud y tarifas de 2026; confirma los precios y normas vigentes con la oficina del puerto antes de utilizar la rampa","url":"https://www.milfordct.us/667/Boat-Ramp-Permit-Sticker"},
+
   // Official city library and preparedness guidance reviewed 2026-11-01; rules and alerts may change.
   {"en":"Milford emergency preparedness: review the city's flood maps, hazard mitigation resources, emergency alerts and Community Emergency Response Team information; check current warnings during storms","es":"Preparación para emergencias en Milford: consulta mapas de inundaciones, recursos de mitigación de riesgos, alertas municipales e información del equipo comunitario de respuesta; revisa los avisos vigentes durante tormentas","url":"https://milfordct.us/235/Prepare"},
   // Official Milford flood, mapping and food-safety resources reviewed 2026-11-01; confirm parcel-specific details.
