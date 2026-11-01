@@ -639,6 +639,10 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {en:"Engineering Division: sanitary sewer connection permits, septic abandonment forms, driveway approaches and street-opening requirements; confirm service for the address",es:"División de Ingeniería: permisos de conexión al alcantarillado, formularios para abandonar sistemas sépticos, accesos y apertura de calles; confirma el servicio por dirección",url:"https://www.milfordct.us/535/Engineering-Division"},
   {en:"Inland Wetlands Agency: review permit requirements for work in or near wetlands, watercourses and regulated upland areas before altering a parcel",es:"Agencia de Humedales Interiores: revisa permisos para obras en humedales, cursos de agua y zonas adyacentes reguladas antes de modificar una parcela",url:"https://www.milfordct.us/533/Inland-Wetlands"},
 
+  // Official Milford Health and Permitting pages checked 2026-11-01; verify current instructions before acting.
+  {en:"Floods and hurricanes: city health guidance on evacuation-zone awareness, emergency supplies, food and water safety, mold and returning after a flood; follow current official alerts",es:"Inundaciones y huracanes: orientación municipal sobre zonas de evacuación, suministros de emergencia, seguridad de alimentos y agua, moho y regreso tras una inundación; sigue las alertas oficiales vigentes",url:"https://milfordct.us/428/Floods-Hurricanes"},
+  {en:"Post-storm construction and repair: city permitting guidance for flood-damaged buildings, inspections, electrical safety and rebuilding; confirm current code and permit requirements with city staff",es:"Construcción y reparaciones después de tormentas: guía municipal sobre permisos para edificios dañados por inundaciones, inspecciones, seguridad eléctrica y reconstrucción; confirma los códigos y permisos vigentes con el municipio",url:"https://milfordct.us/529/Post-Storm-Construction-Repair"},
+
  ],
  // New Haven source pages checked 2026-10-24 against official City of New Haven and CTtransit websites. Links are research starting points; verify address-specific records and current policies directly.
  'new-haven': [
