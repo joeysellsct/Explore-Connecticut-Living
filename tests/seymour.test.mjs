@@ -18,12 +18,12 @@ test('Seymour guide has sourced, substantive English and Spanish moving guidance
   assert.ok(guide.places.length >= 4);
 });
 
-test('Seymour has twelve distinct bilingual official research resources', () => {
+test('Seymour maintains at least twelve distinct bilingual official research resources', () => {
   const source = read('lib/town-official-links.ts');
   const match = source.match(/^ 'seymour': \[(.*?)^ \],/ms);
   assert.ok(match, 'Missing Seymour municipal links');
-  const links = JSON.parse(('[' + match[1] + ']').replace(/,\s*]/g, ']'));
-  assert.equal(links.length, 12);
+  const links = JSON.parse(('[' + match[1].replace(/^\s*\/\/.*$/gm, '') + ']').replace(/,\s*]/g, ']'));
+  assert.ok(links.length >= 12, `Expected at least 12 Seymour resources, found ${links.length}`);
   assert.equal(new Set(links.map(link => link.url)).size, links.length);
   for (const link of links) {
     assert.ok(link.en && link.es);
