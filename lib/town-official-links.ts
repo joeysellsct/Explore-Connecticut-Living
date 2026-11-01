@@ -601,6 +601,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Milford city departments, property research and state park checked 2026-10-24 on official sources; use property-specific records before relying on any estimate.
  'milford': [
+  // Official city library and preparedness guidance reviewed 2026-11-01; rules and alerts may change.
+  {"en":"Milford emergency preparedness: review the city's flood maps, hazard mitigation resources, emergency alerts and Community Emergency Response Team information; check current warnings during storms","es":"Preparación para emergencias en Milford: consulta mapas de inundaciones, recursos de mitigación de riesgos, alertas municipales e información del equipo comunitario de respuesta; revisa los avisos vigentes durante tormentas","url":"https://milfordct.us/235/Prepare"},
   // Official Milford flood, mapping and food-safety resources reviewed 2026-11-01; confirm parcel-specific details.
   {"en":"Milford restaurant food safety: learn how the Health Department inspects food establishments, investigates complaints and oversees food-service permits; contact Environmental Health for establishment-specific information","es":"Seguridad alimentaria en restaurantes de Milford: conoce cómo el Departamento de Salud inspecciona establecimientos, investiga quejas y supervisa permisos; consulta a Salud Ambiental sobre un establecimiento específico","url":"https://www.milfordct.us/833/Food-Protection"},
 
