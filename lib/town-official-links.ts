@@ -4,6 +4,7 @@ export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // Burlington: official municipal department pages checked 2026-10-30; services and taxes require parcel-specific verification.
  'burlington': [
+  {"en":"Connecticut DEEP municipal recycling directory: find the Burlington municipal coordinator and confirm local collection, drop-off and hazardous-waste rules directly with the town","es":"Directorio municipal de reciclaje de Connecticut DEEP: encuentra al coordinador de Burlington y confirma directamente con el municipio las normas de recogida, entrega y residuos peligrosos","url":"https://portal.ct.gov/DEEP/Reduce-Reuse-Recycle/Local-Municipal-Recycling-Coordinators"},
   {"en":"Assessor: review property cards, GIS maps, exemptions and the dated 2025 Grand List mill rate","es":"Tasador: consulta fichas inmobiliarias, mapas SIG, exenciones y la tasa fechada de la lista fiscal de 2025","url":"https://www.burlingtonct.gov/212/Assessor"},
   {"en":"Town Clerk: research recorded deeds, subdivision maps and easements","es":"Secretaría municipal: investiga escrituras inscritas, planos de subdivisión y servidumbres","url":"https://burlingtonct.gov/256/Town-Clerk"},
   {"en":"Tax Collector: verify current property bills, installments and payment status","es":"Recaudación: verifica facturas de impuestos, cuotas y estado de pagos","url":"https://www.burlingtonct.gov/31/Departments"},
@@ -16,6 +17,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Norfolk: official town directory, offices and tax collector reviewed 2026-10-30; parcel-level verification required.
  'norfolk': [
+  {"en":"Connecticut DEEP municipal recycling directory: find the Norfolk municipal coordinator and confirm local collection, drop-off and hazardous-waste rules directly with the town","es":"Directorio municipal de reciclaje de Connecticut DEEP: encuentra al coordinador de Norfolk y confirma directamente con el municipio las normas de recogida, entrega y residuos peligrosos","url":"https://portal.ct.gov/DEEP/Reduce-Reuse-Recycle/Local-Municipal-Recycling-Coordinators"},
   {"en":"Town offices: find the Assessor, Town Clerk, Building Official, Tax Collector, Public Works and Sewer District","es":"Oficinas municipales: encuentra al tasador, secretario municipal, inspector de obras, recaudador, Obras Públicas y distrito de alcantarillado","url":"https://norfolkct.org/town-hall/town-offices/"},
   {"en":"Assessor and property database: research parcel assessments and confirm details with the town","es":"Tasador y base de datos inmobiliarios: investiga tasaciones y confirma los datos con el municipio","url":"https://norfolkct.org/town-hall/"},
   {"en":"Tax Collector: verify current real-estate bills, payment status and applicable tax periods","es":"Recaudación: verifica facturas inmobiliarias, pagos y períodos fiscales aplicables","url":"https://norfolkct.org/tax-collector/"},
@@ -28,6 +30,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Harwinton: official municipal department and government portals reviewed 2026-10-30; verify parcel-specific taxes, services and permits directly.
  'harwinton': [
+  {"en":"Connecticut DEEP municipal recycling directory: find the Harwinton municipal coordinator and confirm local collection, drop-off and hazardous-waste rules directly with the town","es":"Directorio municipal de reciclaje de Connecticut DEEP: encuentra al coordinador de Harwinton y confirma directamente con el municipio las normas de recogida, entrega y residuos peligrosos","url":"https://portal.ct.gov/DEEP/Reduce-Reuse-Recycle/Local-Municipal-Recycling-Coordinators"},
   {"en":"Assessor: review parcel values, assessments and available tax-relief programs","es":"Tasador: consulta valores de parcelas, tasaciones y programas de alivio tributario","url":"https://www.harwinton.gov/161/Departments"},
   {"en":"Tax Department: verify property bills, installment dates and payment records","es":"Recaudación: verifica facturas de impuestos, fechas de pago y registros de pagos","url":"https://www.harwinton.gov/183/Tax-Department"},
   {"en":"Town Clerk: ask about deeds, land records and recorded documents","es":"Secretaría municipal: consulta escrituras, registros de propiedad y documentos inscritos","url":"https://www.harwinton.gov/161/Departments"},
@@ -40,6 +43,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Thomaston: town government department and recreation pages checked 2026-10-30. Property taxes and sewer connections require address-specific verification.
  'thomaston': [
+  {"en":"Connecticut DEEP municipal recycling directory: find the Thomaston municipal coordinator and confirm local collection, drop-off and hazardous-waste rules directly with the town","es":"Directorio municipal de reciclaje de Connecticut DEEP: encuentra al coordinador de Thomaston y confirma directamente con el municipio las normas de recogida, entrega y residuos peligrosos","url":"https://portal.ct.gov/DEEP/Reduce-Reuse-Recycle/Local-Municipal-Recycling-Coordinators"},
   {"en":"Assessor: confirm the October 2025 Grand List mill rate, revaluation, parcel assessments and exemptions","es":"Tasador: verifica la tasa de la lista fiscal de octubre de 2025, la reevaluación, las tasaciones y exenciones","url":"https://www.thomastonct.gov/entities/assessor"},
   {"en":"Tax Collector: check actual property bills, due dates and payment records","es":"Recaudación: consulta facturas inmobiliarias, vencimientos y pagos","url":"https://www.thomastonct.gov/entities/tax-collector"},
   {"en":"Town Clerk: research deeds, land records and recorded documents","es":"Secretaría municipal: investiga escrituras, registros de propiedad y documentos inscritos","url":"https://www.thomastonct.gov/entities/town-clerk"},
@@ -321,6 +325,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // North Branford: municipal department pages, health district, conservation trust and CCM FY2027 data checked 2026-10-25.
  // Town's budget news retains a 28.91 proposed rate; CCM FY2027 lists 28.81. Confirm parcel bills with Tax Department.
  'north-branford': [
+  {"en":"Connecticut DEEP municipal recycling directory: find the North Branford municipal coordinator and confirm local collection, drop-off and hazardous-waste rules directly with the town","es":"Directorio municipal de reciclaje de Connecticut DEEP: encuentra al coordinador de North Branford y confirma directamente con el municipio las normas de recogida, entrega y residuos peligrosos","url":"https://portal.ct.gov/DEEP/Reduce-Reuse-Recycle/Local-Municipal-Recycling-Coordinators"},
   {"en":"Connecticut EdSight: research public-school and district profiles; confirm address-specific enrollment and residency requirements directly with the district","es":"EdSight de Connecticut: consulta perfiles de escuelas públicas y distritos; confirma directamente con el distrito la matrícula y los requisitos de residencia para cada dirección","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: research the 2025 revaluation, assessed value, property exemptions and parcel details before estimating taxes","es":"Tasador: consulta la reevaluación de 2025, el valor tasado, las exenciones y los datos de la parcela antes de calcular impuestos","url":"https://www.northbranfordct.gov/200/Assessor"},
   {"en":"Connecticut Conference of Municipalities: FY 2026–27 real-property rate is 28.81 mills per $1,000 of assessed value; check the actual parcel bill","es":"Conferencia de Municipios de Connecticut: tasa inmobiliaria de 2026–27 de 28,81 mills por cada $1.000 de valor tasado; verifica la factura real","url":"https://hub.ccm-ct.org/community/north-branford/"},
@@ -451,6 +456,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // Town Tax Collector lists possible separate sewer/water assessments; verify utility availability by address.
  // CTDOT: Waterbury Branch trains replaced by buses July 20, 2026–May 31, 2027.
  'beacon-falls': [
+  {"en":"Connecticut DEEP municipal recycling directory: find the Beacon Falls municipal coordinator and confirm local collection, drop-off and hazardous-waste rules directly with the town","es":"Directorio municipal de reciclaje de Connecticut DEEP: encuentra al coordinador de Beacon Falls y confirma directamente con el municipio las normas de recogida, entrega y residuos peligrosos","url":"https://portal.ct.gov/DEEP/Reduce-Reuse-Recycle/Local-Municipal-Recycling-Coordinators"},
   // Beacon Falls GIS and planning resources checked against town-linked public portals 2026-11-01; verify parcel records with town staff.
   {"en":"Town GIS and real-property map: explore parcel boundaries and assessment-linked property records; GIS maps were marked updated January 2026 and property data nightly, but confirm legal boundaries and current assessments with the town","es":"Mapa SIG municipal e inmuebles: consulta parcelas y datos inmobiliarios vinculados a tasaciones; el portal indica mapas actualizados en enero de 2026 y datos de propiedades cada noche, pero confirma los límites legales y avalúos actuales con el municipio","url":"https://beaconfalls.mapxpress.net/"},
   {"en":"Planning and Zoning Commission: review zoning and subdivision regulations, zoning maps, meeting agendas and land-use application guidance before planning renovations or a move","es":"Comisión de Planificación y Zonificación: consulta normas de zonificación y subdivisión, mapas, agendas y orientación sobre solicitudes de uso del suelo antes de planificar obras o una mudanza","url":"https://beaconfalls-ct.org/332/Planning-Zoning-Commission"},
@@ -570,6 +576,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Madison links verified 2026-10-24 against official Madison municipal pages and Shore Line East. The town publishes 23.06 mills effective July 1, 2026; confirm parcel-specific districts, utilities and current bills directly.
  'madison': [
+  {"en":"Connecticut DEEP municipal recycling directory: find the Madison municipal coordinator and confirm local collection, drop-off and hazardous-waste rules directly with the town","es":"Directorio municipal de reciclaje de Connecticut DEEP: encuentra al coordinador de Madison y confirma directamente con el municipio las normas de recogida, entrega y residuos peligrosos","url":"https://portal.ct.gov/DEEP/Reduce-Reuse-Recycle/Local-Municipal-Recycling-Coordinators"},
   {"en":"Connecticut EdSight school finder: explore official public-school and district data; confirm enrollment boundaries and residency requirements directly with the district","es":"Buscador escolar EdSight de Connecticut: consulta datos oficiales de escuelas públicas y distritos; confirma los límites de matrícula y los requisitos de residencia directamente con el distrito","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Town of Madison: municipal services and resident information","es":"Municipio de Madison: servicios e información para residentes","url":"https://www.madisonct.org/"},
   {"en":"Assessor: assessment questions, exemptions and property valuation","es":"Tasador municipal: tasaciones, exenciones y valoración de propiedades","url":"https://www.madisonct.org/157/Assessor"},
@@ -821,6 +828,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // New Haven source pages checked 2026-10-24 against official City of New Haven and CTtransit websites. Links are research starting points; verify address-specific records and current policies directly.
  'new-haven': [
+  {"en":"Connecticut DEEP municipal recycling directory: find the New Haven municipal coordinator and confirm local collection, drop-off and hazardous-waste rules directly with the town","es":"Directorio municipal de reciclaje de Connecticut DEEP: encuentra al coordinador de New Haven y confirma directamente con el municipio las normas de recogida, entrega y residuos peligrosos","url":"https://portal.ct.gov/DEEP/Reduce-Reuse-Recycle/Local-Municipal-Recycling-Coordinators"},
   // US Census QuickFacts and city Public Works pages checked 2026-11-01; figures have distinct reference periods.
   {en:"U.S. Census QuickFacts for New Haven city: compare the July 1, 2025 population estimate (138,774) with the 2020 Census count (134,023); the 2020–2024 ACS median gross rent is $1,488. Check the source's reference year before comparing figures.",es:"Datos QuickFacts del Censo para la ciudad de New Haven: compara la población estimada al 1 de julio de 2025 (138.774) con el conteo censal de 2020 (134.023); el alquiler bruto mediano de la ACS de 2020–2024 es de $1.488. Comprueba el año de referencia antes de comparar cifras.",url:"https://www.census.gov/quickfacts/fact/table/newhavencityconnecticut/PST120225"},
   {en:"Trash and recycling when moving: New Haven Public Works publishes weekly collection guidance and holiday changes; bulk items require a separate appointment, not regular curbside pickup. For missing carts or service questions, call Resident Services at 203-946-7700.",es:"Basura y reciclaje al mudarte: Obras Públicas de New Haven publica las indicaciones de recogida semanal y los cambios por festivos; los objetos voluminosos requieren una cita aparte, no la recogida habitual. Para contenedores faltantes o consultas, llama a Servicios para Residentes al 203-946-7700.",url:"https://www.newhavenct.gov/government/departments-divisions/public-works-department/trash-recycling"},
@@ -977,6 +985,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Manchester municipal resources checked 2026-10-23.
  'manchester': [
+  {"en":"Connecticut DEEP municipal recycling directory: find the Manchester municipal coordinator and confirm local collection, drop-off and hazardous-waste rules directly with the town","es":"Directorio municipal de reciclaje de Connecticut DEEP: encuentra al coordinador de Manchester y confirma directamente con el municipio las normas de recogida, entrega y residuos peligrosos","url":"https://portal.ct.gov/DEEP/Reduce-Reuse-Recycle/Local-Municipal-Recycling-Coordinators"},
   {
     "en": "Town of Manchester official municipal website",
     "es": "Sitio oficial del municipio de Manchester",
@@ -1015,6 +1024,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Glastonbury official and historical-society resources checked 2026-10-23.
  'glastonbury': [
+  {"en":"Connecticut DEEP municipal recycling directory: find the Glastonbury municipal coordinator and confirm local collection, drop-off and hazardous-waste rules directly with the town","es":"Directorio municipal de reciclaje de Connecticut DEEP: encuentra al coordinador de Glastonbury y confirma directamente con el municipio las normas de recogida, entrega y residuos peligrosos","url":"https://portal.ct.gov/DEEP/Reduce-Reuse-Recycle/Local-Municipal-Recycling-Coordinators"},
   {
     "en": "Town of Glastonbury municipal services",
     "es": "Servicios municipales de Glastonbury",
@@ -1053,6 +1063,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Rocky Hill town/state official links verified 2026-10-23.
  'rocky-hill': [
+  {"en":"Connecticut DEEP municipal recycling directory: find the Rocky Hill municipal coordinator and confirm local collection, drop-off and hazardous-waste rules directly with the town","es":"Directorio municipal de reciclaje de Connecticut DEEP: encuentra al coordinador de Rocky Hill y confirma directamente con el municipio las normas de recogida, entrega y residuos peligrosos","url":"https://portal.ct.gov/DEEP/Reduce-Reuse-Recycle/Local-Municipal-Recycling-Coordinators"},
   {
     "en": "Town of Rocky Hill municipal services",
     "es": "Servicios municipales de Rocky Hill",
