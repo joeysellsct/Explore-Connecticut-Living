@@ -422,6 +422,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"West Rock Ridge State Park: official trail and access information","es":"Parque estatal West Rock Ridge: información oficial sobre senderos y acceso","url":"https://ctparks.com/parks/west-rock-ridge-state-park"},
   {"en":"Public Works: town roads, recycling center and waste-service contacts","es":"Obras Públicas: calles municipales, centro de reciclaje y contactos de residuos","url":"https://www.bethanyct.gov/public-works"},
   {"en":"Town FOI guide: locate parcel cards, GIS, permits and health records","es":"Guía municipal de acceso a registros: fichas catastrales, GIS, permisos y salud","url":"https://www.bethanyct.gov/foi"},
+  {"en":"U.S. Census QuickFacts: Bethany's July 2025 estimated population was 5,339 and 2020–2024 median owner-occupied housing value was $418,000. Median gross rent is not reported; missing data does not mean zero.","es":"Censo de EE. UU.: la población estimada de Bethany en julio de 2025 fue de 5.339 y el valor mediano de vivienda ocupada por su propietario en 2020–2024 fue de $418.000. No se publica el alquiler bruto mediano; la falta de datos no significa cero.","url":"https://www.census.gov/quickfacts/fact/table/bethanytownsouthcentralconnecticutplanningregionconnecticut/POP645223"}
  ],
  // Beacon Falls links checked against the town's own department pages and CTDOT on 2026-10-24.
  // FY 2026-27 23.67-mill rate: town's final adopted FY27 budget narrative (May 28, 2026).
@@ -576,6 +577,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Health Department: septic-system records and inspection guidance","es":"Departamento de Salud: registros de sistemas sépticos y guía de inspección","url":"https://www.guilfordct.gov/town_departments/health_department/index.php"},
   {"en":"Engineering Department: flood hazards, drainage and public works permits","es":"Ingeniería municipal: riesgo de inundación, drenaje y permisos de obras","url":"https://www.guilfordct.gov/town_departments/engineering_department/index.php"},
   {"en":"Guilford Parks and Recreation: facilities, activities and resident programs","es":"Parques y Recreación de Guilford: instalaciones, actividades y programas","url":"https://www.guilfordparkrec.com/"},
+  {"en":"U.S. Census QuickFacts: Guilford's July 2025 estimated population was 22,322; 2020–2024 median gross rent was $1,717 and median owner-occupied housing value was $515,800. Historical townwide figures, not current asking prices.","es":"Censo de EE. UU.: la población estimada de Guilford en julio de 2025 fue de 22.322; el alquiler bruto mediano de 2020–2024 fue de $1.717 y el valor mediano de vivienda ocupada por su propietario fue de $515.800. Cifras históricas municipales, no precios actuales.","url":"https://www.census.gov/quickfacts/fact/table/guilfordtownsouthcentralconnecticutplanningregionconnecticut/BZA110222"}
  ],
  // Hamden links checked 2026-10-24 against Town of Hamden, CT Parks, RWA, GNHWPCA and Eli Whitney Museum sources. Verify parcel-level service, taxes and rules with each agency.
  'hamden': [
