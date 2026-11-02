@@ -67,7 +67,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Trumbull Transfer Station: verify Easton-resident access, tickets and current disposal rules","es":"Centro de transferencia de Trumbull: verifica acceso para residentes de Easton, boletos y normas vigentes","url":"https://www.trumbull-ct.gov/275/Transfer-Station-Recycling-Center"},
   {"en":"Parks and Fields: check local parks, athletic facilities and posted access rules","es":"Parques y campos: consulta espacios recreativos, instalaciones deportivas y normas de acceso","url":"https://www.eastonct.gov/1714/Parks-and-Fields"},
   {"en":"ER9 School Registration: check current K–12 enrollment instructions and residency requirements","es":"Inscripción escolar ER9: consulta instrucciones de matrícula K–12 y requisitos de residencia","url":"https://jbhs.er9.org/registration"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Newtown: municipal, borough, school and utility resources checked 2026-10-30; separate borough tax and zoning may apply.
  'newtown': [
   {"en":"Tax Assessor: verify parcel assessment, field cards and October 2026 revaluation","es":"Tasador: verifica tasaciones, fichas de inmuebles y reevaluación de octubre de 2026","url":"https://www.newtown-ct.gov/tax-assessor"},
@@ -82,7 +83,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Recycling Information: verify transfer-station procedures and accepted materials","es":"Información de Reciclaje: verifica normas del centro de transferencia y materiales admitidos","url":"https://www.newtown-ct.gov/recycling-information"},
   {"en":"Water and Sewer Authority: ask about service boundaries and connections for a specific parcel","es":"Autoridad de Agua y Alcantarillado: consulta zonas de servicio y conexiones de cada parcela","url":"https://www.newtown-ct.gov/water-sewer-authority"},
   {"en":"Newtown Public Schools: check enrollment documents and address-specific assignments","es":"Escuelas Públicas de Newtown: consulta documentos de inscripción y asignación por domicilio","url":"https://newtown.k12.ct.us/NewStudentEnrollment"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Stratford: municipal pages and district registration checked 2026-10-30; 2025 revaluation requires parcel-specific tax verification.
  'stratford': [
   {"en":"Tax Assessor: review assessments, revaluation notices and parcel questions","es":"Tasador: consulta tasaciones, avisos de reevaluación y datos de parcelas","url":"https://www.stratfordct.gov/page/tax-assessor"},
@@ -96,7 +98,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Garbage and Recycling: check collection schedules and disposal requirements","es":"Basura y Reciclaje: verifica calendarios de recolección y requisitos de disposición","url":"https://www.stratfordct.gov/page/garbage-recycling-information"},
   {"en":"Beaches and Parks: check access, permits and seasonal rules","es":"Playas y Parques: consulta acceso, permisos y reglas de temporada","url":"https://www.stratfordct.gov/page/parks"},
   {"en":"Stratford Public Schools: review K-12 registration requirements and school assignment","es":"Escuelas Públicas de Stratford: consulta inscripción K-12 y asignación escolar","url":"https://www.stratfordk12.org/documents/registration/student-registration-k-12/301533"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Trumbull: official town and district resources checked 2026-10-30; confirm fire district and sewer charges for each address.
  'trumbull': [
   {"en":"Tax Assessor: review parcel assessments, field cards, exemptions and revaluation notices","es":"Tasador: revisa tasaciones, fichas de inmuebles, exenciones y reevaluación","url":"https://trumbull-ct.gov/274/Tax-Assessor"},
@@ -110,7 +113,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Water Pollution Control Authority: confirm sewer service, connections and related questions","es":"Autoridad de Alcantarillado: confirma servicio, conexiones y consultas relacionadas","url":"https://trumbull-ct.gov/294/Water-Pollution-Control-Authority-WPCA"},
   {"en":"Online Services: access municipal property, land record, tax and permit tools","es":"Servicios en línea: accede a registros de propiedades, tierras, impuestos y permisos","url":"https://www.trumbull-ct.gov/483/Use-Online-Services"},
   {"en":"Trumbull Public Schools: check new-student registration and residency documentation","es":"Escuelas Públicas de Trumbull: consulta inscripción y documentos de residencia","url":"https://www.trumbullps.org/general/student-registration"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Monroe: municipal and district sources checked 2026-10-30; tax collector currently displays FY 2025-26, so do not infer FY 2026-27 rate.
  'monroe': [
   {"en":"Assessor: review property valuations, exemptions and revaluation information","es":"Tasador: revisa valoraciones, exenciones y datos de reevaluación","url":"https://monroect.gov/p/assessor"},
@@ -124,7 +128,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Electronics Recycling: confirm eligible devices and drop-off instructions","es":"Reciclaje electrónico: confirma dispositivos aceptados e instrucciones de entrega","url":"https://monroect.gov/p/electronics-recycling-program"},
   {"en":"Department Directory: locate municipal contacts for property and moving questions","es":"Directorio municipal: encuentra contactos para consultas inmobiliarias y de mudanza","url":"https://www.monroect.gov/p/department-directory"},
   {"en":"Monroe Public Schools: verify registration, residency documents and elementary assignment","es":"Escuelas Públicas de Monroe: verifica inscripción, documentos de residencia y escuela primaria asignada","url":"https://www.monroeps.org/373203_2"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Brookfield: official municipal and district pages checked 2026-10-30; verify parcel-level service and tax details.
  'brookfield': [
   {"en":"Assessor: review parcel assessments, field cards and exemptions","es":"Tasador: consulta tasaciones de parcelas, fichas y exenciones","url":"https://www.brookfieldct.gov/232/Assessor"},
@@ -138,7 +143,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Water Pollution Control Authority: confirm whether a property is served by sewer and any applicable charges","es":"Autoridad de Alcantarillado: confirma si una propiedad tiene conexión y posibles cargos","url":"https://www.brookfieldct.gov/215/Water-Pollution-Control-Authority"},
   {"en":"Online Services: find property data, mapping, tax and permit portals","es":"Servicios en línea: encuentra datos de propiedades, mapas, impuestos y permisos","url":"https://www.brookfieldct.gov/409/Online-Services"},
   {"en":"Brookfield Public Schools: verify registration steps and residency documentation","es":"Escuelas Públicas de Brookfield: verifica inscripción y documentos de residencia","url":"https://www.brookfieldps.org/37926_3"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Ridgefield: official town and school pages checked 2026-10-30; verify property-specific tax and service details.
  'ridgefield': [
   {"en":"Assessor: verify property assessments, exemptions and parcel records","es":"Tasador: verifica tasaciones, exenciones y registros de parcelas","url":"https://ridgefieldct.gov/departments/tax_assessors_office/index.php"},
@@ -153,7 +159,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Transfer Station: check permit eligibility, accepted waste and current fees","es":"Centro de transferencia: verifica permisos, residuos aceptados y tarifas vigentes","url":"https://www.ridgefieldct.gov/government/transfer_station.php"},
   {"en":"Recycling Center: confirm accepted materials, permits and operating guidance","es":"Centro de reciclaje: confirma materiales aceptados, permisos y normas de uso","url":"https://ridgefieldct.gov/government/recycling_center.php"},
   {"en":"Ridgefield Public Schools: verify student registration, residency documents and street assignments","es":"Escuelas Públicas de Ridgefield: verifica inscripción, pruebas de residencia y asignación por calle","url":"https://www.ridgefield.org/registration-and-immunizations"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // New Canaan: official town and school resources checked 2026-10-30; verify parcel-specific charges and services.
  'new-canaan': [
   {"en":"Assessor: review property assessments, field cards, exemptions and revaluation records","es":"Tasador: consulta tasaciones, fichas de propiedades, exenciones y reevaluaciones","url":"https://www.newcanaan.info/departments/assessor/index.php"},
@@ -168,7 +175,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Transfer Station: confirm current permits, recycling rules, accepted materials and disposal fees","es":"Centro de residuos: confirma permisos, normas de reciclaje, materiales admitidos y tarifas","url":"https://www.newcanaan.info/departments/public_works/transfer_station.php"},
   {"en":"New Canaan Public Schools: review schools and contact the district to verify enrollment and address assignment","es":"Escuelas Públicas de New Canaan: consulta centros y confirma inscripción y asignación según domicilio","url":"https://www.ncps-k12.org/"},
   {"en":"Student registration FAQ: verify residency eligibility and documentation with the school district","es":"Preguntas de inscripción: verifica residencia y documentos exigidos con el distrito escolar","url":"https://www.ncps-k12.org/page/registration-faq"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Darien: official town and school resources checked 2026-10-30; verify tax bills, utilities and permit requirements for each property.
  'darien': [
   {"en":"Assessor: research assessed values, property characteristics, exemptions and revaluation before estimating taxes","es":"Tasador: consulta valores tasados, características de la propiedad, exenciones y reevaluación antes de estimar impuestos","url":"https://darienct.gov/327/Assessor"},
@@ -183,7 +191,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Darien Public Schools registration: review residency documents and enrollment steps directly with the district","es":"Inscripción escolar de Darien: revisa documentos de residencia y pasos de matrícula con el distrito","url":"https://www.darienps.org/parents/student-registration-process"},
   {"en":"Parks and Recreation: check beach permits, park access, facilities and current seasonal rules","es":"Parques y Recreación: verifica permisos de playa, acceso, instalaciones y normas de temporada","url":"https://www.darienct.gov/101/Departments"},
   {"en":"Shoreline Management: research coastal-water and harbor matters when relevant to a property","es":"Gestión costera: investiga asuntos de aguas costeras y puertos cuando correspondan a una propiedad","url":"https://www.darienct.gov/101/Departments"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Wilton: ten town/district-operated resource pages checked 2026-10-30. Rates and service connections require address-level confirmation.
  'wilton': [
   {"en":"Assessor: review parcel field cards, assessed values, exemptions and revaluation information before estimating property taxes","es":"Tasador: consulta fichas de parcelas, valores tasados, exenciones y reevaluaciones antes de estimar impuestos","url":"https://www.wiltonct.gov/assessors-office"},
@@ -196,7 +205,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Transfer Station permit guide: check current sticker and ticket purchasing instructions; published fees may be from prior fiscal years","es":"Guía de permisos del centro de transferencia: consulta instrucciones actuales de compra; las tarifas publicadas pueden ser de años anteriores","url":"https://www.wiltonct.gov/transfer-station-waste-and-trash-disposal/pages/how-obtain-vehicle-permit-stickers-transfer-station"},
   {"en":"Wilton Public Schools enrollment: review registration steps, residency documentation and kindergarten guidance directly with the district","es":"Inscripción en las Escuelas Públicas de Wilton: revisa los pasos, documentos de residencia y requisitos de jardín de infancia con el distrito","url":"https://www.wiltonps.org/enrollment"},
   {"en":"Municipal departments: find official contacts for Public Works, Health, Parks and Recreation, Planning and Zoning and other services","es":"Departamentos municipales: encuentra contactos oficiales de Obras Públicas, Salud, Parques y Recreación, Planificación y Zonificación y otros servicios","url":"https://www.wiltonct.gov/departments"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Shelton: 12 official municipal, health-district and public-school sources checked 2026-10-30.
  // The Tax Collector's FY 2026–27 notice reports 15.51 mills; parcel assessments, revaluation, sewer fees and school assignment require independent checks.
  'shelton': [
@@ -212,7 +222,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Shelton Public Schools registration: check current K–12 enrollment forms, appointment requirements and school-by-street assignment","es":"Inscripción escolar de Shelton: consulta formularios K–12, citas obligatorias y asignación escolar por calle","url":"https://www.sheltonpublicschools.org/grades_112_forms"},
   {"en":"Shelton Public Schools residency: verify required documents for owners, renters or other living arrangements","es":"Residencia para escuelas públicas: verifica documentos exigidos a propietarios, inquilinos y otras situaciones de vivienda","url":"https://www.sheltonpublicschools.org/residency"},
   {"en":"Shelton Public Schools transportation: check current school-by-street information and bus-route updates","es":"Transporte escolar: consulta asignación por calle y cambios actuales en las rutas de autobús","url":"https://www.sheltonpublicschools.org/transportation"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Stamford: 12 municipal/district resources verified against official city and school pages 2026-10-29.
  // Stamford real estate tax rates differ by taxing district; verify the specific parcel and any Downtown Special Services District levy.
  'stamford': [
@@ -227,8 +238,9 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Health and Permits: check well, septic and other property-related permit requirements where applicable","es":"Salud y permisos: consulta requisitos de pozos, sistemas sépticos y otros permisos según corresponda","url":"https://www.stamfordct.gov/residents/permits-and-licenses"},
   {"en":"Stamford Public Schools: check current enrollment documents and registration steps","es":"Escuelas Públicas de Stamford: consulta documentos y pasos de inscripción vigentes","url":"https://www.stamfordpublicschools.org/departments/office-of-family-community-engagement/student-registration"},
   {"en":"Find a School: look up the current public-school attendance boundary by street address; boundaries may change","es":"Buscar escuela: consulta la zona escolar actual por dirección; los límites pueden cambiar","url":"https://www.stamfordpublicschools.org/connect/find-a-school"},
-  {"en":"Cove Island Park: review city park facilities, beach parking and permit information","es":"Parque Cove Island: consulta instalaciones, estacionamiento de playa e información sobre permisos","url":"https://www.stamfordct.gov/Home/Components/FacilityDirectory/FacilityDirectory/120/507"}
- ],
+  {"en":"Cove Island Park: review city park facilities, beach parking and permit information","es":"Parque Cove Island: consulta instalaciones, estacionamiento de playa e información sobre permisos","url":"https://www.stamfordct.gov/Home/Components/FacilityDirectory/FacilityDirectory/120/507"},
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Norwalk: 12 official city/authority resources checked 2026-10-29. Property-tax rates vary by district; no universal mill rate.
  'norwalk': [
   {"en":"Tax Assessor: look up a parcel assessment, revaluation phase-in and exemptions before estimating property taxes","es":"Tasador: consulta valoración de la parcela, aplicación gradual de reevaluación y exenciones antes de estimar impuestos","url":"https://norwalkct.gov/224/Tax-Assessor"},
@@ -243,7 +255,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Recreation and Parks: check current park and beach access, programs, passes and seasonal rules","es":"Parques y Recreación: consulta acceso a parques y playas, programas, pases y normas de temporada","url":"https://www.norwalkct.gov/3898/Recreation-Parks"},
   {"en":"Resident Pass Verification: check eligibility for separate parks-parking and disposal passes","es":"Verificación de pases: consulta requisitos de pases separados para estacionamiento en parques y para desechos","url":"https://hub.norwalkct.gov/passes/"},
   {"en":"City Departments: locate official contacts for health, schools, transportation and other moving-related questions","es":"Departamentos municipales: encuentra contactos oficiales de salud, escuelas, transporte y otros trámites de mudanza","url":"https://www.norwalkct.gov/3943/Departments"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Wolcott: 11 official town sources checked 2026-10-25; 2025 Grand List 28.90 mills applies to FY 2026–27.
  // Municipal water/sewer, parks and property records require address- or visit-specific confirmation.
  'wolcott': [
@@ -1130,19 +1143,22 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Greenwich property assessments","es":"Tasaciones de propiedades de Greenwich","url":"https://www.greenwichct.gov/150/Assessor"},
   {"en":"Greenwich Town Clerk and land records","es":"Secretaría municipal y registros de propiedad de Greenwich","url":"https://www.greenwichct.gov/319/Town-Clerk"},
   {"en":"Greenwich parks and seasonal passes","es":"Parques y pases de temporada de Greenwich","url":"https://www.greenwichct.gov/799/Parks-Recreation"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Verified 2026-10-23: https://www.fairfieldct.org/ ; https://gis.vgsi.com/fairfieldct/ ; https://www.ffldcommunity.com/waterfront/index.php
  'fairfield':[
   {en:'Town of Fairfield',es:'Municipio de Fairfield',url:'https://www.fairfieldct.org/'},
   {en:'Fairfield property assessment search',es:'Consulta de tasaciones de Fairfield',url:'https://gis.vgsi.com/fairfieldct/'},
   {en:'Fairfield beach and lake passes',es:'Pases de playas y lago de Fairfield',url:'https://www.ffldcommunity.com/waterfront/index.php'},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
  // Verified 2026-10-23: https://www.westportct.gov/ ; https://www.westportct.gov/how-do-i/access-property-information/town-gis-map-system ; https://www.westportct.gov/government/departments-a-z/parks-and-recreation/memberships/parking-emblems
  'westport':[
   {en:'Town of Westport',es:'Municipio de Westport',url:'https://www.westportct.gov/'},
   {en:'Westport property and GIS maps',es:'Mapas GIS y propiedades de Westport',url:'https://www.westportct.gov/how-do-i/access-property-information/town-gis-map-system'},
   {en:'Westport beach parking emblems',es:'Distintivos de estacionamiento de playas de Westport',url:'https://www.westportct.gov/government/departments-a-z/parks-and-recreation/memberships/parking-emblems'},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
 
  // West Haven municipal and public-resource pages verified 2026-10-23. Check current fees, eligibility and address-specific conditions with the city.
  'west-haven': [
@@ -1368,7 +1384,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {en:'Park and Recreation: review the Town Park–Colonial Park nature trail, boating rules and current programs',es:'Parques y Recreación: consulta el sendero Town Park–Colonial Park, normas de navegación y programas vigentes',url:'https://www.shermanct.gov/subpages/catalog'},
   {en:'Sherman Library: check local programs, digital materials and community resources',es:'Biblioteca de Sherman: consulta programas locales, materiales digitales y recursos comunitarios',url:'https://www.shermanlibrary.org/'},
   {en:'Social Services: find information about housing, food and energy assistance',es:'Servicios Sociales: encuentra información sobre ayuda para vivienda, alimentos y energía',url:'https://www.shermanct.gov/entities/social-services'},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
 
  // Danbury municipal, tax, parks and school sources independently reviewed 2026-10-29.
  // Rates, fees, school assignment, permits and utility connections require property-specific rechecks.
@@ -1384,7 +1401,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Public Works: ask about roads, public infrastructure and municipal service requests","es":"Obras Públicas: consulta asuntos de calles, infraestructura y solicitudes de servicios municipales","url":"https://danbury-ct.gov/295/Public-Works"},
   {"en":"Tarrywile Park Authority: check trail access, park rules and historic-site restrictions before visiting","es":"Autoridad de Tarrywile Park: comprueba senderos, normas del parque y restricciones de sitios históricos antes de visitar","url":"https://www.danbury-ct.gov/267/Tarrywile-Park-Authority"},
   {"en":"Danbury Public Schools: confirm registration requirements, school assignments, transportation and current district notices","es":"Escuelas Públicas de Danbury: confirma matrícula, asignación escolar, transporte y avisos vigentes del distrito","url":"https://www.danbury.k12.ct.us/"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
 
  // New Fairfield official municipal, school and state park resources checked 2026-10-29.
  // Verify parcel tax districts, school assignment, permits, utility connections and seasonal park access by address or visit.
@@ -1401,7 +1419,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"New Fairfield Public Schools: verify registration, school assignment, transportation and district notices","es":"Escuelas Públicas de New Fairfield: confirma matrícula, asignación escolar, transporte y avisos del distrito","url":"https://www.newfairfieldschools.org/"},
   {"en":"Drop Off Center and recycling: confirm permit requirements, accepted materials and fees","es":"Centro de residuos y reciclaje: confirma permisos, materiales aceptados y tarifas","url":"https://www.newfairfield.org/municipal-departments/services/public-works/drop-off-center-recycling"},
   {"en":"Public Works: contact the town about roads, drainage and municipal infrastructure","es":"Obras Públicas: consulta calles, drenaje e infraestructura municipal","url":"https://www.newfairfield.org/municipal-departments/services/public-works"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
 
  // Weston official town, school and conservation resources reviewed 2026-10-29.
  // Property-specific taxes, school eligibility, well/septic records and utility service require confirmation.
@@ -1418,7 +1437,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Devil's Den Preserve: consult the Nature Conservancy's trail map, access rules and directions","es":"Reserva Devil's Den: consulta senderos, normas de acceso e indicaciones de The Nature Conservancy","url":"https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/lucius-pond-ordwaydevils-den-preserve/"},
   {"en":"Transfer Station: confirm accepted materials, fees and waste or recycling procedures","es":"Centro de residuos: confirma materiales admitidos, tarifas y procedimientos de reciclaje","url":"https://www.westonct.gov/government/municipal-departments/transfer-station"},
   {"en":"Stormwater resources: review local drainage information and septic-system care guidance","es":"Aguas pluviales: consulta drenaje local y recomendaciones para sistemas sépticos","url":"https://www.westonct.gov/government/municipal-departments/public-works/stormwater-management-program"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
 
  // Bethel: eleven official municipal pages verified 2026-10-29; tax rate from the Tax Collector's 2025 Grand List notice.
  // Water/sewer connections, septic records, taxes and fees must be confirmed for each property.
@@ -1434,7 +1454,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Transfer Station: check resident permit requirements, accepted waste and recycling procedures","es":"Centro de transferencia: consulta permisos para residentes, residuos admitidos y normas de reciclaje","url":"https://bethel-ct.gov/depts-transfer-station"},
   {"en":"Parks and Recreation: check programs, registration and current access to recreational facilities","es":"Parques y Recreación: consulta programas, inscripciones y acceso vigente a instalaciones recreativas","url":"https://bethel-ct.gov/depts-park-rec"},
   {"en":"Municipal directory: find town offices and contacts for property, school and moving questions","es":"Directorio municipal: encuentra oficinas y contactos para consultas de propiedades, escuelas y mudanzas","url":"https://bethel-ct.gov/directory"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
 
  // Redding: municipal resources and CCM FY2027 finance data reviewed 2026-10-29.
  // Town-wide rate excludes any applicable fire-district tax; sewer, well and septic service are property-specific.
@@ -1451,7 +1472,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"Highway Department: consult road maintenance, winter service and drainage questions","es":"Carreteras: consulta mantenimiento vial, servicio invernal y asuntos de drenaje","url":"https://reddingct.gov/government/services/public-works-highway-transfer-station/"},
   {"en":"Utility companies: consult the town's directory, then confirm the actual providers and service availability for the address","es":"Empresas de servicios: consulta el directorio municipal y confirma proveedores y disponibilidad para la dirección","url":"https://reddingct.gov/how-do-i/find-utility-companies/"},
   {"en":"Schools: review official town school links and confirm enrollment eligibility directly with the district","es":"Escuelas: consulta enlaces escolares municipales y confirma directamente con el distrito los requisitos de inscripción","url":"https://reddingct.gov/about-redding/schools/"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
 
  // Bridgeport: official city department pages and Bridgeport Public Schools checked 2026-10-29.
  // FY 2026–27 rate is for real/personal property; property-level assessments, sewer connections and charges require confirmation.
@@ -1469,7 +1491,8 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
   {"en":"New-homeowner trash and recycling bins: check the city's documentation and replacement-toter process","es":"Contenedores para nuevos propietarios: consulta la documentación municipal y el proceso de solicitud o reemplazo","url":"https://www.bridgeportct.gov/government/departments/public-facilities/trash-recycling/toter-request"},
   {"en":"Parks and Recreation: consult current park access, amenities and rules before planning a visit","es":"Parques y Recreación: consulta acceso, instalaciones y normas vigentes antes de planear una visita","url":"https://www.bridgeportct.gov/government/departments/parks-recreation"},
   {"en":"Bridgeport Public Schools: check enrollment steps and residency documentation directly with the district","es":"Escuelas Públicas de Bridgeport: consulta inscripción y documentos de residencia directamente con el distrito","url":"https://www.bridgeportedu.net/information/student-registration/student-registration-home"},
- ],
+  {"en":"Connecticut DEEP municipal recycling contacts: find the local coordinator and confirm collection, transfer-station access, accepted materials and hazardous-waste options before moving","es":"Contactos municipales de reciclaje de Connecticut DEEP: encuentra al coordinador local y confirma recolección, acceso a centros de transferencia, materiales aceptados y opciones para residuos peligrosos antes de mudarte","url":"https://portal.ct.gov/deep/reduce-reuse-recycle/local-municipal-recycling-coordinators"}
+],
 
  // Torrington: official city, school, water and state park sources verified 2026-10-30.
  'torrington': [
