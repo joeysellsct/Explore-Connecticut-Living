@@ -626,6 +626,10 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Milford city departments, property research and state park checked 2026-10-24 on official sources; use property-specific records before relying on any estimate.
  'milford': [
+  // Milford Board of Education and Fire Marshal permit instructions checked against official city pages 2026-11-01.
+  {"en":"Milford Board of Education: review public meeting dates, agendas and approved minutes; consult Milford Public Schools directly for current enrollment, school assignments and transportation","es":"Junta de Educación de Milford: consulta fechas de reuniones públicas, órdenes del día y actas aprobadas; confirma con las Escuelas Públicas de Milford la matrícula, la asignación escolar y el transporte vigentes","url":"https://milfordct.us/695/Board-of-Education"},
+  {"en":"Milford Fire Marshal plan review: check which fire-related permits require review, how to submit plans through the Building Department portal, and current fees before beginning work; other permits follow separate procedures","es":"Revisión de planos del jefe de prevención de incendios de Milford: verifica qué permisos contra incendios requieren revisión, cómo presentar planos en el portal de Construcción y las tarifas vigentes antes de iniciar obras; otros permisos siguen trámites distintos","url":"https://www.milfordct.us/307/Plan-Review-and-Permits"},
+
   // Official Milford shoreline and permit pages checked 2026-11-01; verify changing seasonal rules and rates.
   {"en":"Milford boat ramp permits: review vessel-registration requirements, application methods and dated 2026 permit fees; confirm the latest rates and launch rules with Harbor Management before use","es":"Permisos de rampas para embarcaciones en Milford: consulta requisitos de matrícula, métodos de solicitud y tarifas de 2026; confirma los precios y normas vigentes con la oficina del puerto antes de utilizar la rampa","url":"https://www.milfordct.us/667/Boat-Ramp-Permit-Sticker"},
 
