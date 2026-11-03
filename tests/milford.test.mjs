@@ -26,10 +26,10 @@ test('Milford has substantial original English and Spanish moving guidance', () 
   }
 });
 
-test('Milford has five distinct dated bilingual editorial restaurant listings', () => {
+test('Milford retains at least five distinct dated bilingual editorial restaurant listings', () => {
   const entries = [...block('lib/town-restaurants.ts').matchAll(/\{name:"([^"]+)",cuisine:"([^"]+)",cuisineEs:"([^"]+)",website:"([^"]+)",sourceUrl:"([^"]+)",checkedOn:"([^"]+)"\}/g)];
-  assert.equal(entries.length, 5);
-  assert.equal(new Set(entries.map(x => x[1])).size, 5);
+  assert.ok(entries.length >= 5, 'Retain at least five verified Milford restaurants while allowing expansion');
+  assert.equal(new Set(entries.map(x => x[1])).size, entries.length, 'Restaurant names must remain unique');
   for (const [, name, en, es, website, source, date] of entries) {
     assert.ok(name && en && es);
     assert.equal(new URL(website).protocol, 'https:');
