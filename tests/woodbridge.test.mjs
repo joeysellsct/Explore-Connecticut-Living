@@ -11,10 +11,10 @@ const townEntries = (path, town) => {
  return match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
 };
 
-test('Woodbridge municipal directory has 13 distinct bilingual source links', () => {
+test('Woodbridge municipal directory retains at least 13 distinct bilingual source links', () => {
  const links = townEntries('lib/town-official-links.ts', 'woodbridge');
- assert.equal(links.length, 13);
- assert.equal(new Set(links.map(item => item.url)).size, 13);
+ assert.ok(links.length >= 13, 'Do not remove the 13 verified baseline links');
+ assert.equal(new Set(links.map(item => item.url)).size, links.length, 'Every municipal URL must be unique');
  for (const item of links) {
   assert.ok(item.en.length > 35 && item.es.length > 35);
   assert.equal(new URL(item.url).protocol, 'https:');
