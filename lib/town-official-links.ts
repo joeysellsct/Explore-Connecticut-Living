@@ -63,6 +63,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 
  // Easton: official municipal, fire district, health district and ER9 resources checked 2026-10-30.
  'easton': [
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Easton; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Easton; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: check parcel assessments, exemptions and revaluation records","es":"Tasador: consulta tasaciones, exenciones y registros de reevaluación","url":"https://www.eastonct.gov/1229/Assessor"},
   {"en":"Tax Collector: view current property bills, payments and the 2025 Grand List mill rate","es":"Recaudación: consulta facturas, pagos y tasa impositiva de la lista fiscal de 2025","url":"https://www.eastonct.gov/1210/Tax-Collector"},
   {"en":"Town Clerk: research deeds, recorded maps and land records, including online records from 1979","es":"Secretaría municipal: investiga escrituras, planos y registros de tierras, incluidos archivos en línea desde 1979","url":"https://www.eastonct.gov/1209/Town-Clerk"},
@@ -79,6 +80,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Newtown: municipal, borough, school and utility resources checked 2026-10-30; separate borough tax and zoning may apply.
  'newtown': [
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Newtown; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Newtown; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Tax Assessor: verify parcel assessment, field cards and October 2026 revaluation","es":"Tasador: verifica tasaciones, fichas de inmuebles y reevaluación de octubre de 2026","url":"https://www.newtown-ct.gov/tax-assessor"},
   {"en":"Tax Collector: check property tax bills, payments and sewer or water charges","es":"Recaudación: consulta impuestos inmobiliarios, pagos y cargos de agua o alcantarillado","url":"https://www.newtown-ct.gov/tax-collector"},
   {"en":"Borough Tax Collector: check additional borough tax obligations where applicable","es":"Recaudación del Borough: verifica impuestos adicionales del distrito cuando correspondan","url":"https://www.newtown-ct.gov/borough-tax-collector"},
@@ -95,6 +97,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Stratford: municipal pages and district registration checked 2026-10-30; 2025 revaluation requires parcel-specific tax verification.
  'stratford': [
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Stratford; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Stratford; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Tax Assessor: review assessments, revaluation notices and parcel questions","es":"Tasador: consulta tasaciones, avisos de reevaluación y datos de parcelas","url":"https://www.stratfordct.gov/page/tax-assessor"},
   {"en":"Tax Collector: check current real-estate tax bills and payment options","es":"Recaudación: verifica facturas de impuestos inmobiliarios y formas de pago","url":"https://www.stratfordct.gov/page/tax-collector"},
   {"en":"Town Clerk: research deeds, recorded documents and land records","es":"Secretaría municipal: consulta escrituras y registros de tierras","url":"https://www.stratfordct.gov/page/town-clerk"},
@@ -110,6 +113,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Trumbull: official town and district resources checked 2026-10-30; confirm fire district and sewer charges for each address.
  'trumbull': [
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Trumbull; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Trumbull; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Tax Assessor: review parcel assessments, field cards, exemptions and revaluation notices","es":"Tasador: revisa tasaciones, fichas de inmuebles, exenciones y reevaluación","url":"https://trumbull-ct.gov/274/Tax-Assessor"},
   {"en":"Tax Collector: verify property tax, sewer assessment and sewer usage bills","es":"Recaudación: verifica impuestos inmobiliarios y facturas de alcantarillado","url":"https://trumbull-ct.gov/280/Tax-Collector"},
   {"en":"Town Clerk: research deeds, liens, mortgages and recorded land documents","es":"Secretaría municipal: investiga escrituras, gravámenes, hipotecas y registros de tierras","url":"https://trumbull-ct.gov/283/Town-Clerk"},
@@ -125,6 +129,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Monroe: municipal and district sources checked 2026-10-30; tax collector currently displays FY 2025-26, so do not infer FY 2026-27 rate.
  'monroe': [
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Monroe; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Monroe; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: review property valuations, exemptions and revaluation information","es":"Tasador: revisa valoraciones, exenciones y datos de reevaluación","url":"https://monroect.gov/p/assessor"},
   {"en":"Tax Collector: verify current bills, payment options and fiscal-year mill rates","es":"Recaudación: verifica facturas, opciones de pago y tasas por año fiscal","url":"https://monroect.gov/p/tax-collector"},
   {"en":"Town Clerk: request recorded deeds and land-record research guidance","es":"Secretaría municipal: solicita escrituras y orientación para consultar registros de tierras","url":"https://monroect.gov/p/town-clerk"},
@@ -140,6 +145,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Brookfield: official municipal and district pages checked 2026-10-30; verify parcel-level service and tax details.
  'brookfield': [
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Brookfield; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Brookfield; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: review parcel assessments, field cards and exemptions","es":"Tasador: consulta tasaciones de parcelas, fichas y exenciones","url":"https://www.brookfieldct.gov/232/Assessor"},
   {"en":"2026 Revaluation: read the town's assessment-review notices and contact instructions","es":"Reevaluación de 2026: lee avisos municipales y cómo consultar sobre tasaciones","url":"https://www.brookfieldct.gov/743/Brookfield-Revaluation-2026"},
   {"en":"Tax Collector: check real estate bills, payments and applicable water-line assessments","es":"Recaudación: consulta impuestos inmobiliarios, pagos y posibles cargos de tuberías de agua","url":"https://www.brookfieldct.gov/217/Tax-Collector"},
@@ -155,6 +161,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Ridgefield: official town and school pages checked 2026-10-30; verify property-specific tax and service details.
  'ridgefield': [
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Ridgefield; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Ridgefield; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: verify property assessments, exemptions and parcel records","es":"Tasador: verifica tasaciones, exenciones y registros de parcelas","url":"https://ridgefieldct.gov/departments/tax_assessors_office/index.php"},
   {"en":"Tax Collector: confirm the current mill rate, real estate bills and sewer-related charges","es":"Recaudación: confirma la tasa impositiva vigente, facturas inmobiliarias y cargos de alcantarillado","url":"https://ridgefieldct.gov/departments/tax_collector/"},
   {"en":"Town Clerk: search recorded deeds, mortgages and survey maps","es":"Secretaría municipal: consulta escrituras, hipotecas y planos registrados","url":"https://ridgefieldct.gov/departments/town_clerk/"},
@@ -171,6 +178,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // New Canaan: official town and school resources checked 2026-10-30; verify parcel-specific charges and services.
  'new-canaan': [
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving New Canaan; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de New Canaan; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: review property assessments, field cards, exemptions and revaluation records","es":"Tasador: consulta tasaciones, fichas de propiedades, exenciones y reevaluaciones","url":"https://www.newcanaan.info/departments/assessor/index.php"},
   {"en":"Tax Collector: check real estate tax billing, payment procedures and due dates","es":"Recaudación: consulta facturas inmobiliarias, procedimientos de pago y vencimientos","url":"https://www.newcanaan.info/departments/tax/index.php"},
   {"en":"Tax account inquiry: look up a specific property's tax account and confirm payment status","es":"Consulta tributaria: busca la cuenta fiscal de una propiedad y confirma los pagos","url":"https://www.newcanaan.info/departments/tax/tax_account_inquiry.php"},
@@ -187,6 +195,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Darien: official town and school resources checked 2026-10-30; verify tax bills, utilities and permit requirements for each property.
  'darien': [
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Darien; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Darien; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: research assessed values, property characteristics, exemptions and revaluation before estimating taxes","es":"Tasador: consulta valores tasados, características de la propiedad, exenciones y reevaluación antes de estimar impuestos","url":"https://darienct.gov/327/Assessor"},
   {"en":"Property record cards: search the assessor's address-based database; verify the parcel and assessment year","es":"Fichas de propiedad: busca por dirección en la base del tasador y verifica la parcela y el año de tasación","url":"https://assessment.darienct.gov/"},
   {"en":"Tax Collector: check real estate tax bills, payment dates, sewer charges and special assessments","es":"Recaudación: consulta facturas inmobiliarias, fechas de pago, cargos de alcantarillado y contribuciones especiales","url":"https://www.darienct.gov/1354/Collector"},
@@ -203,6 +212,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Wilton: ten town/district-operated resource pages checked 2026-10-30. Rates and service connections require address-level confirmation.
  'wilton': [
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Wilton; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Wilton; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: review parcel field cards, assessed values, exemptions and revaluation information before estimating property taxes","es":"Tasador: consulta fichas de parcelas, valores tasados, exenciones y reevaluaciones antes de estimar impuestos","url":"https://www.wiltonct.gov/assessors-office"},
   {"en":"Tax Collector: review current property-tax bills, payment status and any sewer or water capital assessments","es":"Recaudación: revisa facturas de impuestos, pagos y posibles cargos de capital de agua o alcantarillado","url":"https://www.wiltonct.gov/tax-collector"},
   {"en":"Town Clerk: research recorded deeds, surveys, land records and other property documents","es":"Secretaría municipal: consulta escrituras, planos, registros de tierras y otros documentos de propiedad","url":"https://www.wiltonct.gov/town-clerk"},
@@ -218,6 +228,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // Shelton: 12 official municipal, health-district and public-school sources checked 2026-10-30.
  // The Tax Collector's FY 2026–27 notice reports 15.51 mills; parcel assessments, revaluation, sewer fees and school assignment require independent checks.
  'shelton': [
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Shelton; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Shelton; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Assessor: review property assessments, the 2025 revaluation, exemptions and parcel-specific information before estimating taxes","es":"Tasador: consulta avalúos, reevaluación de 2025, exenciones y datos de cada parcela antes de calcular impuestos","url":"https://www.shelton-ct.gov/p/assessor/"},
   {"en":"Tax Collector: the FY 2026–27 notice lists 15.51 mills for the October 1, 2025 Grand List; verify the individual tax bill and separate sewer charges","es":"Recaudación: el aviso del año fiscal 2026–27 indica 15,51 mills para la lista fiscal del 1 de octubre de 2025; verifica la factura individual y cargos de alcantarillado","url":"https://www.cityofshelton.org/p/tax-collector"},
   {"en":"City/Town Clerk: research recorded deeds, mortgages, liens and land records before closing","es":"Secretaría municipal: consulta escrituras, hipotecas, gravámenes y registros de propiedad antes del cierre","url":"https://www.shelton-ct.gov/p/city-town-clerk/"},
@@ -235,6 +246,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  // Stamford: 12 municipal/district resources verified against official city and school pages 2026-10-29.
  // Stamford real estate tax rates differ by taxing district; verify the specific parcel and any Downtown Special Services District levy.
  'stamford': [
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Stamford; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Stamford; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Property Assessment: search parcel assessments and check the current district-specific real estate mill rates and revaluation information","es":"Tasación de propiedades: consulta avalúos y las tasas inmobiliarias por distrito y la información sobre reevaluaciones","url":"https://www.stamfordct.gov/government/administration/property-assessment/"},
   {"en":"Tax Collection: review real estate tax bills, payment options and any outstanding balances before closing","es":"Recaudación de impuestos: revisa facturas inmobiliarias, opciones de pago y saldos pendientes antes del cierre","url":"https://www.stamfordct.gov/government/administration/tax-collection/paying-your-taxes"},
   {"en":"Town Clerk: research recorded deeds, mortgages, maps and land records","es":"Secretaría municipal: consulta escrituras, hipotecas, planos y registros de propiedad","url":"https://www.stamfordct.gov/government/town-clerk/land-records/search-land-records"},
@@ -251,6 +263,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Norwalk: 12 official city/authority resources checked 2026-10-29. Property-tax rates vary by district; no universal mill rate.
  'norwalk': [
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Norwalk; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Norwalk; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Tax Assessor: look up a parcel assessment, revaluation phase-in and exemptions before estimating property taxes","es":"Tasador: consulta valoración de la parcela, aplicación gradual de reevaluación y exenciones antes de estimar impuestos","url":"https://norwalkct.gov/224/Tax-Assessor"},
   {"en":"Tax Collector: review the current 2025 Grand List bills and district-specific FY 2026–27 mill rates; Norwalk does not have one universal real-estate rate","es":"Recaudación: consulta facturas de la lista fiscal de 2025 y tasas por distrito del año 2026–27; Norwalk no tiene una sola tasa inmobiliaria","url":"https://norwalkct.gov/225/Tax-Collector"},
   {"en":"Town Clerk: search recorded deeds and land records and confirm recording requirements","es":"Secretaría municipal: consulta escrituras y registros de propiedad y confirma requisitos de inscripción","url":"https://www.norwalkct.gov/155/Town-Clerk"},
@@ -1174,6 +1187,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Greenwich municipal sources checked 2026-10-23.
  'greenwich':[
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Greenwich; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Greenwich; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {"en":"Town of Greenwich","es":"Municipio de Greenwich","url":"https://www.greenwichct.gov/"},
   {"en":"Greenwich property assessments","es":"Tasaciones de propiedades de Greenwich","url":"https://www.greenwichct.gov/150/Assessor"},
   {"en":"Greenwich Town Clerk and land records","es":"Secretaría municipal y registros de propiedad de Greenwich","url":"https://www.greenwichct.gov/319/Town-Clerk"},
@@ -1182,6 +1196,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Verified 2026-10-23: https://www.fairfieldct.org/ ; https://gis.vgsi.com/fairfieldct/ ; https://www.ffldcommunity.com/waterfront/index.php
  'fairfield':[
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Fairfield; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Fairfield; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {en:'Town of Fairfield',es:'Municipio de Fairfield',url:'https://www.fairfieldct.org/'},
   {en:'Fairfield property assessment search',es:'Consulta de tasaciones de Fairfield',url:'https://gis.vgsi.com/fairfieldct/'},
   {en:'Fairfield beach and lake passes',es:'Pases de playas y lago de Fairfield',url:'https://www.ffldcommunity.com/waterfront/index.php'},
@@ -1189,6 +1204,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 ],
  // Verified 2026-10-23: https://www.westportct.gov/ ; https://www.westportct.gov/how-do-i/access-property-information/town-gis-map-system ; https://www.westportct.gov/government/departments-a-z/parks-and-recreation/memberships/parking-emblems
  'westport':[
+  {"en":"Connecticut EdSight Find Schools: research state-reported public schools and districts serving Westport; confirm current enrollment, attendance boundaries and transportation with the district","es":"EdSight de Connecticut, buscador de escuelas: consulta datos estatales de escuelas públicas y distritos de Westport; confirma la matrícula, las zonas de asistencia y el transporte con el distrito correspondiente","url":"https://public-edsight.ct.gov/Overview/Find-Schools"},
   {en:'Town of Westport',es:'Municipio de Westport',url:'https://www.westportct.gov/'},
   {en:'Westport property and GIS maps',es:'Mapas GIS y propiedades de Westport',url:'https://www.westportct.gov/how-do-i/access-property-information/town-gis-map-system'},
   {en:'Westport beach parking emblems',es:'Distintivos de estacionamiento de playas de Westport',url:'https://www.westportct.gov/government/departments-a-z/parks-and-recreation/memberships/parking-emblems'},
