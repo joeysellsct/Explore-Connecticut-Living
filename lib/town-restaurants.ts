@@ -621,11 +621,11 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {"name":"Otter Cove Restaurant & Bar","cuisine":"American","sourceUrl":"https://ctvisit.com/listings/town-old-saybrook","checkedOn":"2026-10-21"},
   ],
   'stratford': [
-    {"name":"Outriggers Restaurant","cuisine":"Seafood and American waterfront dining","website":"https://outriggersrestaurant.com/","sourceUrl":"https://outriggersrestaurant.com/","checkedOn":"2026-10-21"},
-    {"name":"Sitting Duck Tavern","cuisine":"New American tavern","website":"https://www.sittingducktavern.com/","sourceUrl":"https://www.sittingducktavern.com/stratford","checkedOn":"2026-10-21"},
-    {"name":"Station House Wine Bar & Grill","cuisine":"American grill and Japanese sushi","website":"https://stationhousewinebargrill.com/","sourceUrl":"https://stationhousewinebargrill.com/about/","checkedOn":"2026-10-21"},
-    {"name":"Joey C's Boathouse","cuisine":"Seafood, Mexican-inspired dishes and American comfort food","website":"https://www.joeycsboathouse.com/","sourceUrl":"https://www.joeycsboathouse.com/","checkedOn":"2026-10-21"},
-    {"name":"Acapulcos Mexican Restaurant","cuisine":"Mexican","website":"https://acapulcos.net/","sourceUrl":"https://acapulcos.net/mexican-restaurant-locations/stratford-ct/","checkedOn":"2026-10-21"},
+    {"name":"Outriggers Restaurant","cuisine":"Seafood and American waterfront dining","cuisineEs":"Mariscos y cocina estadounidense junto al agua","website":"https://outriggersrestaurant.com/","sourceUrl":"https://outriggersrestaurant.com/","checkedOn":"2026-10-21"},
+    {"name":"Sitting Duck Tavern","cuisine":"New American tavern","cuisineEs":"Taberna de cocina estadounidense contemporánea","website":"https://www.sittingducktavern.com/","sourceUrl":"https://www.sittingducktavern.com/stratford","checkedOn":"2026-10-21"},
+    {"name":"Station House Wine Bar & Grill","cuisine":"American grill and Japanese sushi","cuisineEs":"Parrilla estadounidense y sushi japonés","website":"https://stationhousewinebargrill.com/","sourceUrl":"https://stationhousewinebargrill.com/about/","checkedOn":"2026-10-21"},
+    {"name":"Joey C's Boathouse","cuisine":"Seafood, Mexican-inspired dishes and American comfort food","cuisineEs":"Mariscos, platos de inspiración mexicana y comida casera estadounidense","website":"https://www.joeycsboathouse.com/","sourceUrl":"https://www.joeycsboathouse.com/","checkedOn":"2026-10-21"},
+    {"name":"Acapulcos Mexican Restaurant","cuisine":"Mexican","cuisineEs":"Cocina mexicana","website":"https://acapulcos.net/","sourceUrl":"https://acapulcos.net/mexican-restaurant-locations/stratford-ct/","checkedOn":"2026-10-21"},
   ],
   // Hamden restaurant locations checked 2026-10-24 against the five restaurants' official sites. Luce's site mentions a future Wallingford location; Hamden remains listed as its current address at review time.
   'hamden': [
