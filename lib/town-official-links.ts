@@ -734,6 +734,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Milford city departments, property research and state park checked 2026-10-24 on official sources; use property-specific records before relying on any estimate.
  'milford': [
+  {"en":"Milford Public Works service requests: use the city form to report potholes, missed trash or recycling pickup, storm-drain concerns and other listed maintenance issues; for urgent hazards, contact the appropriate emergency service rather than relying on an online form","es":"Solicitudes a Obras Públicas de Milford: utiliza el formulario municipal para informar sobre baches, recolección de basura o reciclaje omitida, problemas de desagües pluviales y otros asuntos de mantenimiento indicados; ante peligros urgentes, comunícate con el servicio de emergencias correspondiente en vez de depender del formulario","url":"https://www.milfordct.us/FormCenter/Public-Works-7/DPW-Service-Request-Form-51"},
   // Milford Registrars of Voters official page checked 2026-11-04.
   {"en":"Milford Registrars of Voters: find the city election office, voter-registration forms in English and Spanish, district maps and current election notices; confirm polling locations and deadlines with the office","es":"Oficina de Registro de Votantes de Milford: consulta la oficina electoral municipal, formularios de inscripción en inglés y español, mapas de distritos y avisos electorales actuales; confirma los centros de votación y los plazos con la oficina","url":"https://milfordct.us/612/Registrars-of-Voters"},
 
