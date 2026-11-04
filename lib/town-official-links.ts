@@ -734,6 +734,9 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // Milford city departments, property research and state park checked 2026-10-24 on official sources; use property-specific records before relying on any estimate.
  'milford': [
+  // Milford Registrars of Voters official page checked 2026-11-04.
+  {"en":"Milford Registrars of Voters: find the city election office, voter-registration forms in English and Spanish, district maps and current election notices; confirm polling locations and deadlines with the office","es":"Oficina de Registro de Votantes de Milford: consulta la oficina electoral municipal, formularios de inscripción en inglés y español, mapas de distritos y avisos electorales actuales; confirma los centros de votación y los plazos con la oficina","url":"https://milfordct.us/612/Registrars-of-Voters"},
+
   // Milford Public Library Children's Department, city primary source checked 2026-11-03.
   {"en":"Milford Public Library Children's Department: explore early-literacy programs, children's collections, family learning resources and the event calendar; confirm registration and current schedules with the library","es":"Departamento Infantil de la Biblioteca Pública de Milford: consulta programas de alfabetización temprana, colecciones infantiles, recursos de aprendizaje familiar y el calendario de actividades; confirma la inscripción y los horarios actuales con la biblioteca","url":"https://www.milfordct.us/569/Childrens-Department"},
   {"en":"Milford Conservation Commission: explore the city's conservation work, open-space information and invasive-species resources; check access rules before visiting protected land","es":"Comisión de Conservación de Milford: consulta la labor municipal de conservación, información sobre espacios abiertos y recursos sobre especies invasoras; verifica las normas de acceso antes de visitar terrenos protegidos","url":"https://milfordct.us/720/Conservation-Commission"},
