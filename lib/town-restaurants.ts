@@ -659,11 +659,11 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {"name":"The Lobster Shack","cuisine":"Waterfront seafood, lobster rolls and seasonal dishes","cuisineEs":"Mariscos junto al agua, bocadillos de langosta y platos de temporada","website":"https://www.connecticutlobster.com/","sourceUrl":"https://www.connecticutlobster.com/location/the-lobster-shack/","checkedOn":"2026-10-24"},
   ],
   'new-haven': [
-    {"name":"Sally’s Apizza","cuisine":"New Haven-style pizza","sourceUrl":"https://visitnewhaven.com/places/sallys-apizza/","checkedOn":"2026-10-21"},
-    {"name":"Modern Apizza","cuisine":"New Haven-style pizza","sourceUrl":"https://visitnewhaven.com/events/national-pizza-day/","checkedOn":"2026-10-21"},
-    {"name":"Zeneli Pizzeria","cuisine":"Neapolitan pizza","sourceUrl":"https://visitnewhaven.com/wp-content/uploads/2024/04/New-Haven-Visitors-Guide-2024-FINAL.pdf","checkedOn":"2026-10-21"},
-    {"name":"Rawa","cuisine":"Middle Eastern and Mediterranean","sourceUrl":"https://visitnewhaven.com/wp-content/uploads/2024/04/New-Haven-Visitors-Guide-2024-FINAL.pdf","checkedOn":"2026-10-21"},
-    {"name":"Olea","cuisine":"Spanish and Mediterranean","sourceUrl":"https://visitnewhaven.com/wp-content/uploads/2024/04/New-Haven-Visitors-Guide-2024-FINAL.pdf","checkedOn":"2026-10-21"},
+    {"name":"Sally’s Apizza","cuisine":"New Haven-style pizza","cuisineEs":"Pizza estilo New Haven","sourceUrl":"https://visitnewhaven.com/places/sallys-apizza/","checkedOn":"2026-10-21"},
+    {"name":"Modern Apizza","cuisine":"New Haven-style pizza","cuisineEs":"Pizza estilo New Haven","sourceUrl":"https://visitnewhaven.com/events/national-pizza-day/","checkedOn":"2026-10-21"},
+    {"name":"Zeneli Pizzeria","cuisine":"Neapolitan pizza","cuisineEs":"Pizza napolitana","sourceUrl":"https://visitnewhaven.com/wp-content/uploads/2024/04/New-Haven-Visitors-Guide-2024-FINAL.pdf","checkedOn":"2026-10-21"},
+    {"name":"Rawa","cuisine":"Middle Eastern and Mediterranean","cuisineEs":"Cocina de Oriente Medio y del Mediterráneo","sourceUrl":"https://visitnewhaven.com/wp-content/uploads/2024/04/New-Haven-Visitors-Guide-2024-FINAL.pdf","checkedOn":"2026-10-21"},
+    {"name":"Olea","cuisine":"Spanish and Mediterranean","cuisineEs":"Cocina española y mediterránea","sourceUrl":"https://visitnewhaven.com/wp-content/uploads/2024/04/New-Haven-Visitors-Guide-2024-FINAL.pdf","checkedOn":"2026-10-21"},
   ],
   // West Haven restaurant locations and cuisine checked 2026-10-23 against official business websites or Visit New Haven. Neutral editorial directory, not Joey endorsements.
   'west-haven': [
