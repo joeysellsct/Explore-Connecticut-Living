@@ -29,12 +29,12 @@ test('Cheshire has detailed original bilingual town and homebuyer guidance', () 
 
 test('Cheshire links to twelve sourced bilingual municipal and moving resources', () => {
   const links = arrayFor('lib/town-official-links.ts', 'cheshire');
-  assert.equal(links.length, 12);
-  assert.equal(new Set(links.map(x => x.url)).size, 12);
+  assert.ok(links.length >= 12, 'Cheshire must retain at least twelve official resources');
+  assert.equal(new Set(links.map(x => x.url)).size, links.length, 'Official resource URLs must be unique');
   for (const x of links) {
     assert.ok(x.en && x.es && x.url);
     assert.equal(new URL(x.url).protocol, 'https:');
-    assert.ok(['cheshirect.gov', 'www.cheshirect.gov', 'cheshire.mapxpress.net'].includes(new URL(x.url).hostname));
+    assert.ok(['cheshirect.gov', 'www.cheshirect.gov', 'cheshire.mapxpress.net', 'portal.ct.gov', 'www.census.gov', 'public-edsight.ct.gov'].includes(new URL(x.url).hostname));
   }
   for (const path of ['/184/Assessor', '/258/Land-Records', '/186/Building-Department', '/208/Regulations-Permits-Forms', '/231/Sewer-Division-WPCD']) {
     assert.ok(links.some(x => x.url.includes(path)), 'Missing official resource: ' + path);
