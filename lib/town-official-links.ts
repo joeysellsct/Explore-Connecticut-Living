@@ -902,10 +902,10 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 
   // Milford city open-space and StoryWalk primary sources reviewed 2026-11-03.
   {"en":"Eisenhower Park StoryWalk: a children's reading-and-walking trail behind the splash pad combines outdoor exercise with pages of a story displayed along the path; confirm park access and current story with the city","es":"StoryWalk de Eisenhower Park: un recorrido de lectura infantil detrás de la zona de juegos de agua combina paseo al aire libre con páginas de un cuento a lo largo del sendero; confirma el acceso y el cuento actual con la ciudad","url":"https://www.milfordct.us/581/StoryWalk-Eagle-Scout-Project"},
- ],
- // New Haven source pages checked 2026-10-24 against official City of New Haven and CTtransit websites. Links are research starting points; verify address-specific records and current policies directly.
   // Milford open-space and sustainability primary source checked 2026-11-04.
   {"en":"Milford Open Space & Sustainability: explore the city’s open-space Storymap for walking routes, scenic viewpoints and natural areas; check current access conditions and trail information before visiting","es":"Espacios abiertos y sostenibilidad de Milford: consulta el mapa interactivo municipal de espacios naturales para encontrar caminatas, miradores y áreas al aire libre; verifica el acceso y las condiciones actuales de los senderos antes de visitar","url":"https://www.milfordct.us/474/Open-Space-Sustainability"},
+ ],
+ // New Haven source pages checked 2026-10-24 against official City of New Haven and CTtransit websites. Links are research starting points; verify address-specific records and current policies directly.
 
  'new-haven': [
   {"en":"Moving to or within New Haven: Connecticut DMV address-change instructions for a driver's license, state ID and vehicle registration; check current requirements and update records promptly","es":"Mudanza a New Haven o dentro del municipio: instrucciones del DMV de Connecticut para cambiar la dirección de la licencia de conducir, identificación estatal y registro del vehículo; consulta los requisitos vigentes y actualiza tus datos cuanto antes","url":"https://portal.ct.gov/dmv/licenses-permits-ids/change-driver-license"},
