@@ -514,18 +514,18 @@ export const townRestaurants:Record<string,TownRestaurant[]> = {
     {name:"Bella Rosa Pizzeria Ristorante",cuisine:"Italian, pizza and Portuguese dishes",cuisineEs:"Italiana, pizza y platos portugueses",website:"https://www.bellarosapizza.com/",sourceUrl:"https://www.bellarosapizza.com/",checkedOn:'2026-10-23'},
   ],
   'shelton': [
-    {name:"Spotted Horse Tavern - Shelton",cuisine:"American tavern",website:"https://spottedhorsetavernct.com/shelton/",sourceUrl:"https://spottedhorsetavernct.com/shelton/",checkedOn:'2026-10-23'},
-    {name:"Ritrovo",cuisine:"Italian and pizza",website:"https://ritrovoshelton.com/",sourceUrl:"https://ritrovoshelton.com/",checkedOn:'2026-10-23'},
-    {name:"Il Palio",cuisine:"Italian and Tuscan",website:"https://ilpalioct.com/",sourceUrl:"https://ilpalioct.com/",checkedOn:'2026-10-23'},
-    {name:"Tacomida",cuisine:"Mexican and tacos",website:"https://tacomidashelton.com/",sourceUrl:"https://tacomidashelton.com/",checkedOn:'2026-10-23'},
-    {name:"Market Place Kitchen & Bar",cuisine:"Contemporary American",website:"https://marketplacekitchenbar.com/locations/shelton",sourceUrl:"https://marketplacekitchenbar.com/locations/shelton",checkedOn:'2026-10-23'},
+    {name:"Spotted Horse Tavern - Shelton",cuisine:"American tavern",cuisineEs:"Taberna de cocina estadounidense",website:"https://spottedhorsetavernct.com/shelton/",sourceUrl:"https://spottedhorsetavernct.com/shelton/",checkedOn:'2026-10-23'},
+    {name:"Ritrovo",cuisine:"Italian and pizza",cuisineEs:"Cocina italiana y pizza",website:"https://ritrovoshelton.com/",sourceUrl:"https://ritrovoshelton.com/",checkedOn:'2026-10-23'},
+    {name:"Il Palio",cuisine:"Italian and Tuscan",cuisineEs:"Cocina italiana y toscana",website:"https://ilpalioct.com/",sourceUrl:"https://ilpalioct.com/",checkedOn:'2026-10-23'},
+    {name:"Tacomida",cuisine:"Mexican and tacos",cuisineEs:"Cocina mexicana y tacos",website:"https://tacomidashelton.com/",sourceUrl:"https://tacomidashelton.com/",checkedOn:'2026-10-23'},
+    {name:"Market Place Kitchen & Bar",cuisine:"Contemporary American",cuisineEs:"Cocina estadounidense contemporánea",website:"https://marketplacekitchenbar.com/locations/shelton",sourceUrl:"https://marketplacekitchenbar.com/locations/shelton",checkedOn:'2026-10-23'},
   ],
   'trumbull': [
-    {name:"Antonio’s Kitchen & Bar",cuisine:"Italian",website:"https://antoniostrumbull.com/",sourceUrl:"https://antoniostrumbull.com/",checkedOn:'2026-10-23'},
-    {name:"Prime One Eleven",cuisine:"Steakhouse and New American",website:"https://primeoneeleven.com/",sourceUrl:"https://primeoneeleven.com/",checkedOn:'2026-10-23'},
-    {name:"Old Towne Restaurant",cuisine:"American, Italian and pizza",website:"https://www.oldtownerestaurant.net/",sourceUrl:"https://www.oldtownerestaurant.net/",checkedOn:'2026-10-23'},
-    {name:"Mici Asian Bistro",cuisine:"Japanese, Chinese and Thai",website:"https://www.miciasianbistro.com/",sourceUrl:"https://www.miciasianbistro.com/",checkedOn:'2026-10-23'},
-    {name:"Mex On Main",cuisine:"Tex-Mex",website:"https://www.mexonmain.com/index.php",sourceUrl:"https://www.mexonmain.com/index.php",checkedOn:'2026-10-23'},
+    {name:"Antonio’s Kitchen & Bar",cuisine:"Italian",cuisineEs:"Cocina italiana",website:"https://antoniostrumbull.com/",sourceUrl:"https://antoniostrumbull.com/",checkedOn:'2026-10-23'},
+    {name:"Prime One Eleven",cuisine:"Steakhouse and New American",cuisineEs:"Restaurante de carnes y cocina estadounidense contemporánea",website:"https://primeoneeleven.com/",sourceUrl:"https://primeoneeleven.com/",checkedOn:'2026-10-23'},
+    {name:"Old Towne Restaurant",cuisine:"American, Italian and pizza",cuisineEs:"Cocina estadounidense e italiana, y pizza",website:"https://www.oldtownerestaurant.net/",sourceUrl:"https://www.oldtownerestaurant.net/",checkedOn:'2026-10-23'},
+    {name:"Mici Asian Bistro",cuisine:"Japanese, Chinese and Thai",cuisineEs:"Cocina japonesa, china y tailandesa",website:"https://www.miciasianbistro.com/",sourceUrl:"https://www.miciasianbistro.com/",checkedOn:'2026-10-23'},
+    {name:"Mex On Main",cuisine:"Tex-Mex",cuisineEs:"Cocina tex-mex",website:"https://www.mexonmain.com/index.php",sourceUrl:"https://www.mexonmain.com/index.php",checkedOn:'2026-10-23'},
   ],
   // Cheshire restaurant names, menus and town locations rechecked against business-operated sites 2026-10-24. These are editorial listings, not personal recommendations.
   'cheshire': [
