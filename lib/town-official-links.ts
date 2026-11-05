@@ -1346,6 +1346,9 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
 
  // West Haven municipal and public-resource pages verified 2026-10-23. Check current fees, eligibility and address-specific conditions with the city.
  'west-haven': [
+  // West Haven city economic development source reviewed 2026-11-05; incentives require city eligibility review.
+  {"en":"West Haven business relocation and investment: review the city Economic Development office’s guidance, including its real-property tax incentive policy for eligible projects; incentives are not automatic, so confirm qualifications and current terms directly with the city","es":"Traslado e inversión de negocios en West Haven: consulta la orientación de la Oficina de Desarrollo Económico municipal, incluida su política de incentivos del impuesto sobre bienes inmuebles para proyectos elegibles; los incentivos no son automáticos, así que confirma los requisitos y las condiciones vigentes directamente con la ciudad","url":"https://www.cityofwesthaven.com/1407/Economic-Development"},
+
   // West Haven City Clerk official municipal page checked 2026-11-04; confirm fees and processing rules before applying.
   {"en":"West Haven City Clerk: find land-record recording guidance, birth, marriage and death certificates, dog and marriage licenses, and links to current forms and fees; verify requirements directly with the clerk before submitting documents","es":"Secretaría Municipal de West Haven: consulta información para registrar documentos inmobiliarios, obtener actas de nacimiento, matrimonio y defunción, tramitar licencias para perros y matrimonios, y acceder a formularios y tarifas vigentes; confirma los requisitos con la oficina antes de presentar documentos","url":"https://cityofwesthaven.com/156/City-Clerks-Office"},
   // West Haven 911 Emergency Communications Center official city page checked 2026-11-04.
