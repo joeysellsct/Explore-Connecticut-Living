@@ -42,8 +42,8 @@ const rows = towns.map(t => ({
 const countyOrder = ['New Haven', 'Fairfield', 'Hartford', 'Litchfield', 'Middlesex', 'New London', 'Tolland', 'Windham'];
 rows.sort((a,b) => countyOrder.indexOf(a.county)-countyOrder.indexOf(b.county) || a.name.localeCompare(b.name));
 const total = (fn) => rows.filter(fn).length;
-console.log('Inventory only; presence does not establish accuracy, licensing, accessibility, or certification.');
-console.log(JSON.stringify({
+if (!process.argv.includes('--json')) console.log('Inventory only; presence does not establish accuracy, licensing, accessibility, or certification.');
+if (!process.argv.includes('--json')) console.log(JSON.stringify({
   towns: rows.length, bilingualGuides: total(r=>r.bilingualGuide),
   municipalDirectories: total(r=>r.municipalLinks>0),
   restaurantDirectories: total(r=>r.restaurants>0),
@@ -51,5 +51,30 @@ console.log(JSON.stringify({
   photographyCollections: total(r=>r.photos>0),
   fy2027BaseRates: total(r=>r.fy2027BaseRate)
 }, null, 2));
+// Optional machine-readable inventory for repeatable hourly progress comparisons.
+// Counts indicate record presence only, never source validation or launch certification.
+if (process.argv.includes('--json')) {
+  const summary = {
+    towns: rows.length,
+    bilingualGuides: total(r=>r.bilingualGuide),
+    municipalDirectories: total(r=>r.municipalLinks>0),
+    restaurantDirectoriesWithFive: total(r=>r.restaurants>=5),
+    photographyCollections: total(r=>r.photos>0),
+    fy2027BaseRates: total(r=>r.fy2027BaseRate)
+  };
+  const gaps = rows.map(r => ({
+    county:r.county, town:r.name, slug:r.slug,
+    missing:[
+      ...(!r.bilingualGuide?['bilingual-guide']:[]),
+      ...(r.municipalLinks===0?['municipal-resources']:[]),
+      ...(r.restaurants<5?['restaurants-to-five']:[]),
+      ...(r.photos===0?['licensed-photography']:[]),
+      ...(!r.fy2027BaseRate?['verified-fy2027-base-rate']:[])
+    ],
+    restaurants:r.restaurants, municipalLinks:r.municipalLinks, photos:r.photos
+  }));
+  process.stdout.write(JSON.stringify({notice:'Inventory only. Missing means no counted record, not proof the source does not exist. Tax-rate gaps must not be filled by estimates.',summary,gaps},null,2)+'\\n');
+  process.exit(0);
+}
 console.log('county,town,guide,municipal_links,restaurants,photos,fy2027_base_rate');
 for (const r of rows) console.log([r.county,r.name,+r.bilingualGuide,r.municipalLinks,r.restaurants,r.photos,+r.fy2027BaseRate].join(','));
