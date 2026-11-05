@@ -64,6 +64,18 @@ if (process.argv.includes('--json')) {
     photographyCollections: total(r=>r.photos>0),
     fy2027BaseRates: total(r=>r.fy2027BaseRate)
   };
+  // County-level counts expose uneven coverage without implying source verification.
+  const byCounty = countyOrder.map(county => {
+    const subset = rows.filter(r => r.county === county);
+    return {
+      county, towns: subset.length,
+      bilingualGuides: subset.filter(r => r.bilingualGuide).length,
+      municipalDirectories: subset.filter(r => r.municipalLinks > 0).length,
+      restaurantDirectoriesWithFive: subset.filter(r => r.restaurants >= 5).length,
+      photographyCollections: subset.filter(r => r.photos > 0).length,
+      fy2027BaseRates: subset.filter(r => r.fy2027BaseRate).length
+    };
+  });
   const gaps = rows.map(r => ({
     county:r.county, town:r.name, slug:r.slug,
     missing:[
@@ -75,7 +87,7 @@ if (process.argv.includes('--json')) {
     ],
     restaurants:r.restaurants, municipalLinks:r.municipalLinks, photos:r.photos
   }));
-  process.stdout.write(JSON.stringify({notice:'Inventory only. Missing means no counted record, not proof the source does not exist. Tax-rate gaps must not be filled by estimates.',summary,gaps},null,2)+'\n');
+  process.stdout.write(JSON.stringify({notice:'Inventory only. Missing means no counted record, not proof the source does not exist. Tax-rate gaps must not be filled by estimates.',summary,byCounty,gaps},null,2)+'\n');
   process.exit(0);
 }
 console.log('county,town,guide,municipal_links,restaurants,photos,fy2027_base_rate');
