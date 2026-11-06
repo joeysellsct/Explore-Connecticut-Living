@@ -1,15 +1,9 @@
 // Fast parser check before Cloudflare's longer Next.js build.
 // Catches malformed town-data strings (including unescaped apostrophes).
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import ts from 'typescript';
 
-const paths = [
-  'lib/town-highlights.ts',
-  'lib/town-official-links.ts',
-  'lib/town-restaurants.ts',
-  'lib/town-photography.ts',
-  'lib/fy2027-mill-rates.ts',
-];
+const paths = readdirSync('lib').filter(name => name.endsWith('.ts') || name.endsWith('.tsx')).map(name => `lib/${name}`);
 let failures = 0;
 for (const path of paths) {
   const source = ts.createSourceFile(path, readFileSync(path, 'utf8'), ts.ScriptTarget.Latest, true, ts.ScriptKind.TS);
