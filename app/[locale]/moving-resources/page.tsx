@@ -27,6 +27,12 @@ export default async function MovingResourcesPage({params}:{params:Promise<{loca
     <Link href={`/${locale}/compare`}>{es?'Comparar municipios':'Compare Connecticut towns'} →</Link>
     <Link href={`/${locale}/towns`}>{es?'Explorar las 169 localidades':'Browse all 169 towns'} →</Link>
    </article>
+   <article className="moving-resource-card">
+    <h2>{es?'Licencia de conducir y registro del vehículo':'Driver license & vehicle registration'}</h2>
+    <p>{es?'Si te mudas desde otro estado, revisa con el Departamento de Vehículos Motorizados de Connecticut los requisitos actuales para transferir la licencia y registrar el vehículo. Consulta los documentos, plazos, inspecciones y citas directamente con el DMV; los requisitos dependen de tu situación.':'Moving from another state? Review Connecticut DMV requirements for transferring your driver license and registering your vehicle. Check documents, deadlines, inspections and appointments directly with the DMV; requirements depend on your situation.'}</p>
+    <a href="https://portal.ct.gov/dmv" target="_blank" rel="noopener noreferrer">{es?'Departamento de Vehículos Motorizados de Connecticut':'Connecticut DMV official services'} ↗</a>
+    <a href="https://portal.ct.gov/services/driving-and-transportation/vehicle-registration-and-title/register-your-vehicle" target="_blank" rel="noopener noreferrer">{es?'Guía oficial para registrar un vehículo':'Official vehicle registration guidance'} ↗</a>
+   </article>
   </div>
   <section className="moving-hub-partners">
    <span className="towns-kicker">{es?'RECURSOS OPCIONALES':'OPTIONAL RESOURCES'}</span>
