@@ -33,6 +33,11 @@ export default async function MovingResourcesPage({params}:{params:Promise<{loca
     <a href="https://portal.ct.gov/dmv" target="_blank" rel="noopener noreferrer">{es?'Departamento de Vehículos Motorizados de Connecticut':'Connecticut DMV official services'} ↗</a>
     <a href="https://portal.ct.gov/services/driving-and-transportation/vehicle-registration-and-title/register-your-vehicle" target="_blank" rel="noopener noreferrer">{es?'Guía oficial para registrar un vehículo':'Official vehicle registration guidance'} ↗</a>
    </article>
+   <article className="moving-resource-card">
+    <h2>{es?'Registro electoral y cambio de domicilio':'Voter registration & address updates'}</h2>
+    <p>{es?'Al mudarte dentro de Connecticut o desde otro estado, consulta la Secretaría del Estado para registrarte o actualizar tu domicilio electoral. Comprueba los requisitos, plazos y lugar de votación con los funcionarios electorales de tu municipio; no supongas que el cambio de dirección del DMV actualiza tu inscripción.':'Moving within Connecticut or arriving from another state? Consult the Secretary of the State about registering or updating your voter address. Confirm eligibility, deadlines and polling location with your town election officials; do not assume a DMV address change updates voter registration.'}</p>
+    <a href="https://portal.ct.gov/sots/election-services/voter-information/voter-registration-information" target="_blank" rel="noopener noreferrer">{es?'Información oficial de registro electoral (CT)':'Official Connecticut voter registration information'} ↗</a>
+   </article>
   </div>
   <section className="moving-hub-partners">
    <span className="towns-kicker">{es?'RECURSOS OPCIONALES':'OPTIONAL RESOURCES'}</span>
