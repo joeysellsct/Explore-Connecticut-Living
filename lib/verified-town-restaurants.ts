@@ -115,6 +115,20 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
       descriptionEn: "An Italian restaurant on West Main Street; verify its current menu and hours directly before visiting.",
       descriptionEs: "Restaurante italiano en West Main Street; confirma directamente el menú y los horarios antes de visitarlo.",
       sourceUrl: "https://www.lomonacos.com/", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "Nellie's", address: "50 Maple St, Branford, CT 06405",
+      cuisineEn: "American restaurant and waterfront dining", cuisineEs: "Restaurante estadounidense junto al agua",
+      descriptionEn: "A Maple Street restaurant by the Branford River with an all-day menu and seasonal hours; check the restaurant's website before visiting.",
+      descriptionEs: "Restaurante de Maple Street junto al río Branford con menú para todo el día y horarios de temporada; consulta su sitio web antes de ir.",
+      sourceUrl: "https://nelliesbranford.com/", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "Lenny's Indian Head Inn", address: "205 South Montowese Street, Branford, CT 06405",
+      cuisineEn: "New England seafood and American dishes", cuisineEs: "Mariscos de Nueva Inglaterra y platos estadounidenses",
+      descriptionEn: "An Indian Neck restaurant established in 1968 serving New England seafood along with steaks and ribs; check current hours directly.",
+      descriptionEs: "Restaurante de Indian Neck fundado en 1968 que sirve mariscos de Nueva Inglaterra, además de carnes y costillas; confirma directamente el horario actual.",
+      sourceUrl: "https://www.lennysnow.com/", verifiedOn: "2026-11-07"
     }
   ],
   cheshire: [
