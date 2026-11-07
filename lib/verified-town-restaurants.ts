@@ -1,6 +1,6 @@
 // Editorial restaurant research, not endorsements or personal Top Picks.
 // Verified against each business's own website on 2026-11-06.
-// Not yet connected to the town-page renderer; integrate after reviewing its data model.
+// Rendered on bilingual town pages; entries overlapping the main directory are deduplicated.
 // Recheck operating status, address, menus and accessibility before publication.
 export type VerifiedRestaurant = {
   name: string;
@@ -41,6 +41,20 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
       descriptionEn: "An Italian restaurant publishing lunch, dinner and takeout menus. Its website displays inconsistent street numbers (487 and 489); confirm the exact entrance before visiting.",
       descriptionEs: "Restaurante italiano con menús de almuerzo, cena y comida para llevar. Su web muestra números de calle distintos (487 y 489); confirma la entrada antes de ir.",
       sourceUrl: "https://www.reggianosmilford.com/menus", verifiedOn: "2026-11-06"
+    }    ,{
+      name: "Papa's Pizza II", address: "2005 Bridgeport Ave, Milford, CT 06460",
+      cuisineEn: "New Haven-style pizza", cuisineEs: "Pizza al estilo de New Haven",
+      descriptionEn: "The Bridgeport Avenue location of Papa's Pizza serves brick-oven New Haven-style pies, calzones and cone grinders.",
+      descriptionEs: "El local de Papa's Pizza en Bridgeport Avenue ofrece pizzas al horno de ladrillo al estilo de New Haven, calzones y sándwiches tipo cono.",
+      sourceUrl: "https://www.papaspizzaonline.com/", verifiedOn: "2026-11-06"
+    },
+    {
+      name: "Scratch Baking", address: "84 Broad Street, Milford, CT 06460",
+      cuisineEn: "Bakery and lunch café", cuisineEs: "Panadería y cafetería para almorzar",
+      descriptionEn: "A downtown bakery with pastries, sandwiches, lunch offerings and cakes; check the current menu before visiting.",
+      descriptionEs: "Panadería del centro con repostería, sándwiches, opciones de almuerzo y pasteles; consulta el menú actual antes de ir.",
+      sourceUrl: "https://scratchbakingct.com/", verifiedOn: "2026-11-06"
     }
+
   ]
 };
