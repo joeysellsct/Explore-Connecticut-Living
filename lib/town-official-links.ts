@@ -2,6 +2,16 @@
 // These are information portals, not guarantees about an individual property's records.
 export type TownOfficialLink = {en:string;es:string;url:string};
 export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
+ // West Haven: official statewide school and tax research portals checked 2026-11-07; address-specific details require local verification.
+ 'west_haven': [
+  {"en":"West Haven public-school research: find schools, districts and state-reported education information on Connecticut EdSight; verify attendance assignments and transportation directly for a specific address","es":"Investigación de escuelas públicas de West Haven: consulta escuelas, distritos y datos educativos oficiales en EdSight de Connecticut; confirma la asignación y el transporte para cada dirección","url":"https://public-edsight.ct.gov/overview/find-schools"},
+  {"en":"West Haven property-tax research: select the town, fiscal year and any applicable district in Connecticut OPM's mill-rate data; confirm the actual parcel bill and exemptions with local officials","es":"Investigación de impuestos inmobiliarios de West Haven: selecciona el municipio, año fiscal y distrito aplicable en los datos de tasas de OPM; confirma la factura real y las exenciones con las autoridades locales","url":"https://data.ct.gov/Local-Government/Mill-Rates-for-FY-2014-2027/emyx-j53e"}
+ ],
+ // North Haven: official statewide school and tax research portals checked 2026-11-07; address-specific details require local verification.
+ 'north_haven': [
+  {"en":"North Haven public-school research: find schools, districts and state-reported education information on Connecticut EdSight; verify attendance assignments and transportation directly for a specific address","es":"Investigación de escuelas públicas de North Haven: consulta escuelas, distritos y datos educativos oficiales en EdSight de Connecticut; confirma la asignación y el transporte para cada dirección","url":"https://public-edsight.ct.gov/overview/find-schools"},
+  {"en":"North Haven property-tax research: select the town, fiscal year and any applicable district in Connecticut OPM's mill-rate data; confirm the actual parcel bill and exemptions with local officials","es":"Investigación de impuestos inmobiliarios de North Haven: selecciona el municipio, año fiscal y distrito aplicable en los datos de tasas de OPM; confirma la factura real y las exenciones con las autoridades locales","url":"https://data.ct.gov/Local-Government/Mill-Rates-for-FY-2014-2027/emyx-j53e"}
+ ],
  // East Haven: municipal sources checked 2026-11-07; verify address-specific taxes, permits, schools and services.
  'east_haven': [
   {"en":"East Haven Assessor: check parcel assessments, the Grand List, exemptions and revaluation notices; confirm the applicable tax year and bill directly","es":"Tasador de East Haven: consulta tasaciones de parcelas, la lista fiscal, exenciones y avisos de revaluación; confirma directamente el año tributario y la factura correspondientes","url":"https://www.easthaven-ct.gov/162/Assessor"},
