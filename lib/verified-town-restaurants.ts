@@ -167,5 +167,42 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
       descriptionEs: "Restaurante en West Main Street con pizzas y platos italianos; publica su menú y datos de contacto en su sitio web.",
       sourceUrl: "https://www.bellagioct.com/menu", verifiedOn: "2026-11-07"
     }
+  ],
+  north_haven: [
+    {
+      name: "J Roo's Restaurant", address: "243 State Street, North Haven, CT 06473",
+      cuisineEn: "American, Italian and pizza", cuisineEs: "Cocina estadounidense, italiana y pizza",
+      descriptionEn: "A State Street restaurant serving pizza and American and Italian dishes, with group dining and catering information on its website.",
+      descriptionEs: "Restaurante en State Street con pizzas y platos estadounidenses e italianos; su sitio web ofrece información sobre comidas para grupos y catering.",
+      sourceUrl: "https://www.jroosrestaurant.com/visit", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "Ludal Italian Restaurant", address: "28-30 Broadway, North Haven, CT 06473",
+      cuisineEn: "Italian restaurant", cuisineEs: "Restaurante italiano",
+      descriptionEn: "A Broadway Italian restaurant offering lunch, dinner, takeout and private-event dining; consult its official site for current service.",
+      descriptionEs: "Restaurante italiano en Broadway con almuerzo, cena, comida para llevar y eventos privados; consulta su sitio oficial para conocer el servicio actual.",
+      sourceUrl: "https://www.ludalct.com/visit", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "Bellini's Italian Restaurant & Pizza", address: "2 Broadway, North Haven, CT 06473",
+      cuisineEn: "Italian restaurant and pizza", cuisineEs: "Restaurante italiano y pizzería",
+      descriptionEn: "A Broadway Italian restaurant offering pizza, dining, takeout, catering and banquet menus.",
+      descriptionEs: "Restaurante italiano en Broadway con pizzas, servicio de comedor, comida para llevar, catering y menús para banquetes.",
+      sourceUrl: "https://bellinispizza.com/?page=contact", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "La Lupa Ristorante", address: "344 Washington Avenue, North Haven, CT 06473",
+      cuisineEn: "Italian restaurant and brick-oven pizza", cuisineEs: "Restaurante italiano y pizza al horno de ladrillo",
+      descriptionEn: "A Washington Avenue Italian restaurant publishing dinner, pizza, children's and catering menus.",
+      descriptionEs: "Restaurante italiano en Washington Avenue que publica menús de cena, pizza, opciones infantiles y catering.",
+      sourceUrl: "https://lalupact.com/", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "Giulio's Pizza Restaurant", address: "126 Middletown Avenue, North Haven, CT 06473",
+      cuisineEn: "Pizza and Italian dishes", cuisineEs: "Pizza y platos italianos",
+      descriptionEn: "A Middletown Avenue pizza restaurant with Italian dinners, appetizers and an adjoining lounge; check current hours before visiting.",
+      descriptionEs: "Pizzería en Middletown Avenue con cenas italianas, aperitivos y un salón contiguo; confirma los horarios antes de visitarla.",
+      sourceUrl: "https://giuliospizza.com/", verifiedOn: "2026-11-07"
+    }
   ]
 };
