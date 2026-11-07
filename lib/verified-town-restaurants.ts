@@ -138,6 +138,34 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
       descriptionEn: "A West Main Street pizzeria specializing in coal-fired apizza, with takeout and catering information on its official website.",
       descriptionEs: "Pizzería en West Main Street especializada en apizza al horno de carbón; su sitio oficial ofrece información sobre pedidos para llevar y catering.",
       sourceUrl: "https://fuocoapizza.com/contact/", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "Viron Rondo Osteria", address: "1721 Highland Ave, Cheshire, CT 06410",
+      cuisineEn: "Italian osteria", cuisineEs: "Osteria italiana",
+      descriptionEn: "A Highland Avenue Italian restaurant with lunch and dinner menus and a garden bar; consult its official site for current service details.",
+      descriptionEs: "Restaurante italiano en Highland Avenue con menús de almuerzo y cena y bar en el jardín; consulta su sitio oficial para conocer los servicios actuales.",
+      sourceUrl: "https://www.vironrondoosteria.com/our-menu/", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "Vespucci's Restaurant", address: "150 Main Street, Cheshire, CT 06410",
+      cuisineEn: "Italian restaurant", cuisineEs: "Restaurante italiano",
+      descriptionEn: "A Main Street Italian restaurant serving pasta, pizza and other dishes, with catering and reservation information on its website.",
+      descriptionEs: "Restaurante italiano en Main Street que sirve pasta, pizza y otros platos; su sitio web incluye información sobre catering y reservas.",
+      sourceUrl: "https://vespuccisrestaurant.com/", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "Rossini's Italian Restaurant & Pizza", address: "529 West Main Street, Cheshire, CT 06410",
+      cuisineEn: "Italian restaurant and pizza", cuisineEs: "Restaurante italiano y pizzería",
+      descriptionEn: "A West Main Street Italian restaurant and pizzeria that says it opened in 1979; check its official menu and opening days before visiting.",
+      descriptionEs: "Restaurante italiano y pizzería en West Main Street que indica haber abierto en 1979; consulta su menú oficial y los días de apertura antes de visitarlo.",
+      sourceUrl: "https://cheshirerossini.com/", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "Bella'Gio Ristorante & Pizzeria", address: "835 West Main Street, Cheshire, CT 06410",
+      cuisineEn: "Italian restaurant and pizza", cuisineEs: "Restaurante italiano y pizzería",
+      descriptionEn: "A West Main Street restaurant with pizza and Italian dishes, including a published menu and contact information on its website.",
+      descriptionEs: "Restaurante en West Main Street con pizzas y platos italianos; publica su menú y datos de contacto en su sitio web.",
+      sourceUrl: "https://www.bellagioct.com/menu", verifiedOn: "2026-11-07"
     }
   ]
 };
