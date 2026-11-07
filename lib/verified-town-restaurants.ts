@@ -41,7 +41,8 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
       descriptionEn: "An Italian restaurant publishing lunch, dinner and takeout menus. Its website displays inconsistent street numbers (487 and 489); confirm the exact entrance before visiting.",
       descriptionEs: "Restaurante italiano con menús de almuerzo, cena y comida para llevar. Su web muestra números de calle distintos (487 y 489); confirma la entrada antes de ir.",
       sourceUrl: "https://www.reggianosmilford.com/menus", verifiedOn: "2026-11-06"
-    }    ,{
+    },
+    {
       name: "Papa's Pizza II", address: "2005 Bridgeport Ave, Milford, CT 06460",
       cuisineEn: "New Haven-style pizza", cuisineEs: "Pizza al estilo de New Haven",
       descriptionEn: "The Bridgeport Avenue location of Papa's Pizza serves brick-oven New Haven-style pies, calzones and cone grinders.",
@@ -55,6 +56,21 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
       descriptionEs: "Panadería del centro con repostería, sándwiches, opciones de almuerzo y pasteles; consulta el menú actual antes de ir.",
       sourceUrl: "https://scratchbakingct.com/", verifiedOn: "2026-11-06"
     }
-
+  ],
+  west_haven: [
+    {
+      name: "Zuppardi’s Apizza", address: "179 Union Ave, West Haven, CT 06516",
+      cuisineEn: "New Haven-style apizza", cuisineEs: "Apizza al estilo de New Haven",
+      descriptionEn: "The original Union Avenue location of the family-run pizzeria, established in 1934, serving New Haven-style apizza.",
+      descriptionEs: "El local original de Union Avenue de esta pizzería familiar, fundada en 1934, que sirve apizza al estilo de New Haven.",
+      sourceUrl: "https://zuppardisapizza.com/west-haven/", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "744 West Restaurant", address: "744 Boston Post Road, West Haven, CT 06516",
+      cuisineEn: "Restaurant and bar", cuisineEs: "Restaurante y bar",
+      descriptionEn: "A restaurant on Boston Post Road; check its current menu and hours directly before visiting.",
+      descriptionEs: "Restaurante en Boston Post Road; consulta directamente su menú y horario actual antes de ir.",
+      sourceUrl: "https://744west.com/", verifiedOn: "2026-11-07"
+    }
   ]
 };
