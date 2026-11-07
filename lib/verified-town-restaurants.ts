@@ -93,5 +93,37 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
       descriptionEs: "Pub irlandés y restaurante de Campbell Avenue fundado en 1983, con platos caseros y brunch dominical; confirma el horario actual de cocina.",
       sourceUrl: "https://www.duffystavern.net/", verifiedOn: "2026-11-07"
     }
+  ],
+  branford: [
+    {
+      name: "Rosso Vino", address: "130 Shore Dr, Branford, CT 06405",
+      cuisineEn: "Italian restaurant", cuisineEs: "Restaurante italiano",
+      descriptionEn: "An Italian restaurant on Shore Drive with a published menu; check current dining hours and reservations with the restaurant.",
+      descriptionEs: "Restaurante italiano en Shore Drive con menú publicado; consulta directamente los horarios y las reservas.",
+      sourceUrl: "https://rossovino.net/menu/", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "Rossitto's Ristorante", address: "284 E Main Street, Branford, CT 06405",
+      cuisineEn: "Italian and modern American", cuisineEs: "Cocina italiana y estadounidense contemporánea",
+      descriptionEn: "A family-operated restaurant on East Main Street serving Italian classics and modern American specials.",
+      descriptionEs: "Restaurante familiar en East Main Street que ofrece clásicos italianos y especialidades estadounidenses contemporáneas.",
+      sourceUrl: "https://www.rossittos.com/", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "LoMonaco's Ristorante", address: "990 West Main Street, Branford, CT 06405",
+      cuisineEn: "Italian restaurant", cuisineEs: "Restaurante italiano",
+      descriptionEn: "An Italian restaurant on West Main Street; verify its current menu and hours directly before visiting.",
+      descriptionEs: "Restaurante italiano en West Main Street; confirma directamente el menú y los horarios antes de visitarlo.",
+      sourceUrl: "https://www.lomonacos.com/", verifiedOn: "2026-11-07"
+    }
+  ],
+  cheshire: [
+    {
+      name: "Fuoco Apizza", address: "461 W Main St, Cheshire, CT 06410",
+      cuisineEn: "Coal-fired apizza", cuisineEs: "Apizza al horno de carbón",
+      descriptionEn: "A West Main Street pizzeria specializing in coal-fired apizza, with takeout and catering information on its official website.",
+      descriptionEs: "Pizzería en West Main Street especializada en apizza al horno de carbón; su sitio oficial ofrece información sobre pedidos para llevar y catering.",
+      sourceUrl: "https://fuocoapizza.com/contact/", verifiedOn: "2026-11-07"
+    }
   ]
 };
