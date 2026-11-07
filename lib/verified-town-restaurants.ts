@@ -71,6 +71,27 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
       descriptionEn: "A restaurant on Boston Post Road; check its current menu and hours directly before visiting.",
       descriptionEs: "Restaurante en Boston Post Road; consulta directamente su menú y horario actual antes de ir.",
       sourceUrl: "https://744west.com/", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "Dive Bar & Restaurant", address: "24 Ocean Ave, West Haven, CT 06516",
+      cuisineEn: "Coastal American restaurant and bar", cuisineEs: "Restaurante y bar de cocina estadounidense costera",
+      descriptionEn: "A casual Ocean Avenue restaurant near Long Island Sound with burgers, shareable plates and indoor and outdoor seating; check its current menu and hours.",
+      descriptionEs: "Restaurante informal en Ocean Avenue, cerca de Long Island Sound, con hamburguesas, platos para compartir y mesas interiores y exteriores; consulta el menú y horario actuales.",
+      sourceUrl: "https://divebarandrestaurant.com/", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "Lorenzo’s Italian Restaurant", address: "39 Elm St, West Haven, CT 06516",
+      cuisineEn: "Italian restaurant", cuisineEs: "Restaurante italiano",
+      descriptionEn: "An Italian restaurant on Elm Street with a dining room; consult the restaurant directly for current menus, hours and reservations.",
+      descriptionEs: "Restaurante italiano en Elm Street con comedor; consulta directamente los menús, horarios y reservas actuales.",
+      sourceUrl: "https://www.lorenzoswh.net/contact", verifiedOn: "2026-11-07"
+    },
+    {
+      name: "Duffy’s Tavern", address: "241 Campbell Avenue, West Haven, CT 06516",
+      cuisineEn: "Irish pub and American comfort food", cuisineEs: "Pub irlandés y comida casera estadounidense",
+      descriptionEn: "A Campbell Avenue Irish pub and restaurant established in 1983, serving comfort food and Sunday brunch; confirm current kitchen hours.",
+      descriptionEs: "Pub irlandés y restaurante de Campbell Avenue fundado en 1983, con platos caseros y brunch dominical; confirma el horario actual de cocina.",
+      sourceUrl: "https://www.duffystavern.net/", verifiedOn: "2026-11-07"
     }
   ]
 };
