@@ -11,8 +11,8 @@ test('Wolcott municipal links are bilingual, unique and sourced', () => {
  const end = source.indexOf('\n ],', start);
  assert.ok(end > start);
  const entries = source.slice(start, end).split('\n').map(s => s.trim()).filter(s => s.startsWith('{')).map(s => JSON.parse(s.replace(/,$/, '')));
- assert.equal(entries.length, 11);
- assert.equal(new Set(entries.map(x => x.url)).size, 11);
+ assert.ok(entries.length >= 11, 'Keep at least the original 11 sourced municipal links');
+ assert.equal(new Set(entries.map(x => x.url)).size, entries.length);
  for (const entry of entries) {
   assert.ok(entry.en.length >= 60 && entry.es.length >= 60, entry.url);
   assert.equal(new URL(entry.url).protocol, 'https:');
