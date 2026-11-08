@@ -17,6 +17,7 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
  ],
  // North Haven: official statewide school and tax research portals checked 2026-11-07; address-specific details require local verification.
  'north_haven': [
+  {"en":"North Haven property flood-map research: enter a specific address in FEMA’s Flood Map Service Center and review the effective map and any amendments. Confirm applicable requirements with local floodplain officials; a map does not establish a property’s full flood risk or insurance premium.","es":"Consulta de mapas de inundación de North Haven: introduce una dirección específica en el Centro de Servicios de Mapas de FEMA y revisa el mapa vigente y sus modificaciones. Confirma los requisitos con las autoridades locales; el mapa no determina todo el riesgo de inundación ni la prima del seguro.","url":"https://msc.fema.gov/portal/home"},
   {"en":"Moving to North Haven: use the Connecticut Secretary of the State voter-registration guidance to review eligibility, registration and address updates; confirm deadlines and polling details with local election officials.","es":"Mudanza a North Haven: consulta la guía de inscripción electoral de la Secretaría del Estado de Connecticut para revisar requisitos, inscripción y cambios de dirección; confirma los plazos y el lugar de votación con las autoridades electorales locales.","url":"https://portal.ct.gov/sots/election-services/voter-information/voter-registration-information"},
 
 
