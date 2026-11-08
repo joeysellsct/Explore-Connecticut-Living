@@ -27,10 +27,10 @@ test('Ansonia has substantive bilingual guide with current rail, tax and utility
   }
 });
 
-test('Ansonia has fifteen unique official bilingual research resources', () => {
+test('Ansonia retains at least fifteen unique official bilingual research resources', () => {
   const links = townArray('lib/town-official-links.ts', 'ansonia');
-  assert.equal(links.length, 15);
-  assert.equal(new Set(links.map(x => x.url)).size, 15);
+  assert.ok(links.length >= 15, 'Keep the original verified baseline while allowing new sourced resources');
+  assert.equal(new Set(links.map(x => x.url)).size, links.length, 'Every resource URL must be unique');
   for (const item of links) {
     assert.ok(item.en && item.es);
     assert.equal(new URL(item.url).protocol, 'https:');
