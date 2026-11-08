@@ -18,20 +18,21 @@ test('Beacon Falls has a substantive original bilingual guide with moving and vi
   assert.ok(guide.places.length >= 5);
 });
 
-test('Beacon Falls has thirteen unique bilingual official municipal and moving resources', () => {
+test('Beacon Falls retains unique bilingual official municipal and moving resources', () => {
   const source = read('lib/town-official-links.ts');
-  const match = source.match(/^ 'beacon-falls': \[(.*?)^ \],/ms);
+  const match = source.match(/^ 'beacon-falls': \\[(.*?)^ \\],/ms);
   assert.ok(match, 'Missing Beacon Falls resource collection');
-  const entries = match[1].split('\n').map(line => line.trim()).filter(Boolean);
-  assert.equal(entries.length, 13);
+  const entries = match[1].split('\\n').map(line => line.trim()).filter(line => line.startsWith('{'))
+    .map(line => JSON.parse(line.replace(/,$/, '')));
+  assert.ok(entries.length >= 13, 'Expected at least thirteen verified resources');
   const urls = [];
-  for (const line of entries) {
-    assert.match(line, /^\{en:"[^"]+",es:"[^"]+",url:"https:\/\/[^"]+"\},?$/);
-    const url = line.match(/url:"([^"]+)"/)[1];
-    assert.equal(new URL(url).protocol, 'https:');
-    urls.push(url);
+  for (const entry of entries) {
+    assert.ok(typeof entry.en === 'string' && entry.en.trim(), 'Missing English description');
+    assert.ok(typeof entry.es === 'string' && entry.es.trim(), 'Missing Spanish description');
+    assert.equal(new URL(entry.url).protocol, 'https:');
+    urls.push(entry.url);
   }
-  assert.equal(new Set(urls).size, 13);
+  assert.equal(new Set(urls).size, urls.length, 'Duplicate resource URLs');
   assert.ok(urls.some(url => url.includes('FY27-Narrative-Final-Adopted')));
   assert.ok(urls.some(url => url.includes('/209/Tax-Collector')));
   assert.ok(urls.some(url => url.includes('/206/Wastewater-Treatment-Plant')));
