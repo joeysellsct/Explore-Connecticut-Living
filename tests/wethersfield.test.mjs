@@ -41,7 +41,7 @@ test('Wethersfield dining listings are five researched businesses, not personal 
 
 test('Wethersfield has official resources and licensed, credited photographs', () => {
   const links = townBlock(read('lib/town-official-links.ts'), 'wethersfield', '[', ']');
-  assert.equal((links.match(/"url":/g) || []).length, 5);
+  assert.ok((links.match(/"url":/g) || []).length >= 5, "Keep at least five sourced municipal resources while allowing verified additions");
   assert.ok(links.includes('www.wethersfieldct.gov/360/Town-Clerk'));
   assert.ok(links.includes('www.wethersfieldct.gov/173/Building'));
   const photos = townBlock(read('lib/town-photography.ts'), 'wethersfield', '[', ']');
