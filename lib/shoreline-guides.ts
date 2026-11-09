@@ -60,4 +60,16 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://www.newhavenct.gov/government/departments-divisions/parks-department/our-parks",
     places:["East Rock Park","Edgewood Park","Edgerton Park","Lighthouse Point Park"]
   },
+  woodbridge:{
+    en:"Woodbridge's official trail-map directory includes Alice Newton Street Memorial Park, the Fitzgerald Tract, Racebrook Tract and several other walking areas. Alice Newton Street Memorial Park is intended for daylight hiking and nature study; dogs must be leashed, and motorized vehicles and horses are prohibited. The town also identifies three Regional Water Authority trail systems that require a separate RWA recreation permit. Review the linked maps and current access rules before visiting.",
+    es:"El directorio oficial de senderos de Woodbridge incluye Alice Newton Street Memorial Park, Fitzgerald Tract, Racebrook Tract y otras áreas para caminar. Alice Newton Street Memorial Park está destinado a caminatas y observación de la naturaleza durante el día; los perros deben llevar correa y se prohíben los vehículos motorizados y los caballos. El municipio también identifica tres sistemas de senderos de la Regional Water Authority que requieren un permiso recreativo independiente. Consulta los mapas y las normas de acceso vigentes antes de visitar.",
+    source:"https://www.woodbridgect.org/209/Trail-Maps",
+    places:["Alice Newton Street Memorial Park","Fitzgerald Tract","Racebrook Tract"]
+  },
+  wallingford:{
+    en:"Wharton Brook State Park, on the Wallingford–North Haven line, offers a pondside walking loop, fishing, picnicking and a designated seasonal swimming area. Connecticut State Parks identifies it as a trout park and provides a trail map and picnic-shelter reservation information. State swimming-water monitoring has ended for the 2026 season, so do not assume current water-quality testing or swimming supervision. Check official park notices, fishing regulations and swimming advisories before visiting.",
+    es:"Wharton Brook State Park, situado entre Wallingford y North Haven, ofrece un circuito para caminar junto al estanque, pesca, pícnics y una zona de baño de temporada. Connecticut State Parks lo identifica como parque de truchas y ofrece un mapa de senderos e información para reservar refugios de pícnic. El monitoreo estatal de la calidad del agua terminó por la temporada de 2026; no presupongas que hay pruebas actuales del agua ni vigilancia de natación. Consulta los avisos oficiales, las normas de pesca y los avisos de baño antes de visitar.",
+    source:"https://ctparks.com/parks/wharton-brook-state-park",
+    places:["Wharton Brook State Park"]
+  },
 };
