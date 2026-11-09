@@ -72,4 +72,10 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://ctparks.com/parks/wharton-brook-state-park",
     places:["Wharton Brook State Park"]
   },
+  'north-haven':{
+    en:"Wharton Brook State Park lies along the North Haven–Wallingford town line. Connecticut State Parks describes opportunities for pondside walks, fishing, picnics and swimming in a designated area during the appropriate season. The park provides trail information and details about reservable picnic facilities. Check current state notices for swimming-water advisories, fishing rules, parking and facility availability; seasonal amenities and monitoring should not be assumed to operate year-round.",
+    es:"Wharton Brook State Park se encuentra en el límite entre North Haven y Wallingford. Connecticut State Parks describe opciones para caminar junto al estanque, pescar, hacer pícnics y nadar en una zona designada durante la temporada correspondiente. El parque ofrece información sobre senderos e instalaciones para pícnics que se pueden reservar. Consulta los avisos estatales actuales sobre la calidad del agua, las normas de pesca, el estacionamiento y la disponibilidad de instalaciones; no supongas que los servicios y el monitoreo de temporada funcionan todo el año.",
+    source:"https://ctparks.com/parks/wharton-brook-state-park",
+    places:["Wharton Brook State Park"]
+  },
 };
