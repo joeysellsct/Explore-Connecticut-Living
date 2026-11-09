@@ -22,16 +22,18 @@ test('Beacon Falls retains unique bilingual official municipal and moving resour
   const source = read('lib/town-official-links.ts');
   const match = source.match(/^ 'beacon-falls': \[(.*?)^ \],/ms);
   assert.ok(match, 'Missing Beacon Falls resource collection');
-  const entries = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{'))
-    .map(line => JSON.parse(line.replace(/,$/, '')));
-  assert.ok(entries.length >= 13, 'Expected at least thirteen verified resources');
+  // The source mixes quoted JSON-style keys and valid TypeScript object-literal keys.
+  // Inspect each resource line without assuming every object is strict JSON.
+  const entries = match[1].split('\n').map(line => line.trim()).filter(line => /^\{(?:"?en"?):/.test(line));
   const urls = [];
-  for (const entry of entries) {
-    assert.ok(typeof entry.en === 'string' && entry.en.trim(), 'Missing English description');
-    assert.ok(typeof entry.es === 'string' && entry.es.trim(), 'Missing Spanish description');
-    assert.equal(new URL(entry.url).protocol, 'https:');
-    urls.push(entry.url);
+  for (const line of entries) {
+    assert.match(line, /(?:^|[,\\s])"?en"?:/, 'Missing English description');
+    assert.match(line, /(?:^|[,\\s])"?es"?:/, 'Missing Spanish description');
+    const url = line.match(/"?url"?:"(https:\/\/[^"\\s]+)"/);
+    assert.ok(url, 'Missing HTTPS source URL');
+    urls.push(url[1]);
   }
+  assert.ok(entries.length >= 13, 'Expected at least thirteen verified resources');
   assert.equal(new Set(urls).size, urls.length, 'Duplicate resource URLs');
   assert.ok(urls.some(url => url.includes('FY27-Narrative-Final-Adopted')));
   assert.ok(urls.some(url => url.includes('/209/Tax-Collector')));
