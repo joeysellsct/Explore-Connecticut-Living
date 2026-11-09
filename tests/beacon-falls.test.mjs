@@ -20,9 +20,9 @@ test('Beacon Falls has a substantive original bilingual guide with moving and vi
 
 test('Beacon Falls retains unique bilingual official municipal and moving resources', () => {
   const source = read('lib/town-official-links.ts');
-  const match = source.match(/^ 'beacon-falls': \\[(.*?)^ \\],/ms);
+  const match = source.match(/^ 'beacon-falls': \[(.*?)^ \],/ms);
   assert.ok(match, 'Missing Beacon Falls resource collection');
-  const entries = match[1].split('\\n').map(line => line.trim()).filter(line => line.startsWith('{'))
+  const entries = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{'))
     .map(line => JSON.parse(line.replace(/,$/, '')));
   assert.ok(entries.length >= 13, 'Expected at least thirteen verified resources');
   const urls = [];
