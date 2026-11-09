@@ -48,4 +48,10 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://www.easthaven-ct.gov/facilities",
     places:["East Haven Town Beach","Farm River State Park"]
   },
+  hamden:{
+    en:"Hamden offers several distinct outdoor outings. Sleeping Giant State Park has a broad gravel Tower Trail to a stone observation tower, plus more demanding wooded ridge trails; the state recommends checking trail maps and parking conditions before setting out. Brooksvale Park, operated by the town, combines walking trails with a working-farm atmosphere, gardens and a barnyard; visitors must not feed the animals. West Rock Ridge State Park also extends into Hamden, with ridge hiking and views across the New Haven area. Check each park's official rules and seasonal access before visiting.",
+    es:"Hamden ofrece varias opciones para disfrutar al aire libre. Sleeping Giant State Park cuenta con un amplio sendero de grava hacia una torre de observación de piedra, además de rutas más exigentes por las crestas boscosas; el estado recomienda consultar los mapas y las condiciones de estacionamiento antes de salir. Brooksvale Park, administrado por el municipio, combina senderos con un ambiente de granja, jardines y animales de corral; está prohibido alimentarlos. West Rock Ridge State Park también se extiende por Hamden y ofrece caminatas por la cresta y vistas de la zona de New Haven. Consulta las normas oficiales y el acceso de temporada de cada parque antes de ir.",
+    source:"https://ctparks.com/parks/sleeping-giant-state-park",
+    places:["Sleeping Giant State Park","Brooksvale Park","West Rock Ridge State Park"]
+  },
 };
