@@ -42,4 +42,10 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://cityofwesthaven.com/294/Directions-to-Beaches",
     places:["Sandy Point Beach & Bird Sanctuary","Bradley Point Park","Morse Park"]
   }
+  'east-haven':{
+    en:"East Haven's town recreation facilities include East Haven Town Beach on Cosey Beach Avenue, with a pavilion, bocce courts, volleyball courts and a splash pad. Nearby Farm River State Park offers a different coastal experience: a self-guided nature trail, birdwatching and views of the tidal estuary. The state notes limited parking at the park's Short Beach Road entrance and separate permit requirements for marina access and boat launching. Check town beach parking rules, seasonal facilities, swimming advisories and state park access information before visiting.",
+    es:"Las instalaciones recreativas de East Haven incluyen East Haven Town Beach, en Cosey Beach Avenue, con pabellón, canchas de bochas y voleibol y una zona de juegos de agua. El cercano Farm River State Park ofrece otra experiencia costera: un sendero natural autoguiado, observación de aves y vistas del estuario. El estado advierte que hay pocos espacios de estacionamiento en la entrada de Short Beach Road y que el acceso a la marina y el lanzamiento de embarcaciones requieren permisos distintos. Consulta las normas de estacionamiento de la playa municipal, las instalaciones de temporada, los avisos sobre el agua y las condiciones de acceso al parque estatal antes de visitar.",
+    source:"https://www.easthaven-ct.gov/facilities",
+    places:["East Haven Town Beach","Farm River State Park"]
+  },
 };
