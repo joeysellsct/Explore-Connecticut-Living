@@ -27,9 +27,9 @@ test('Beacon Falls retains unique bilingual official municipal and moving resour
   const entries = match[1].split('\n').map(line => line.trim()).filter(line => /^\{(?:"?en"?):/.test(line));
   const urls = [];
   for (const line of entries) {
-    assert.match(line, /(?:^|[,\\s])"?en"?:/, 'Missing English description');
-    assert.match(line, /(?:^|[,\\s])"?es"?:/, 'Missing Spanish description');
-    const url = line.match(/"?url"?:"(https:\/\/[^"\\s]+)"/);
+    assert.match(line, /"?en"?:/, 'Missing English description');
+    assert.match(line, /"?es"?:/, 'Missing Spanish description');
+    const url = line.match(/"?url"?:"(https:\/\/[^"]+)"/);
     assert.ok(url, 'Missing HTTPS source URL');
     urls.push(url[1]);
   }
