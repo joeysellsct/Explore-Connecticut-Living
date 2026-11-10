@@ -78,4 +78,10 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://ctparks.com/parks/wharton-brook-state-park",
     places:["Wharton Brook State Park"]
   },
+  cheshire:{
+    en:"Cheshire's municipal recreation areas include Bartlem Park, Cheshire Park and Mixville Recreation Area. The town's published financial report describes sports fields and a playground at Bartlem Park, trails and courts at Cheshire Park, and a pond, picnic areas and walking trails at Mixville. The Farmington Canal Linear Trail also runs through Cheshire and provides a paved route for walking and cycling. Check the town's current recreation notices for pool access, swimming schedules, permits, reservations and facility closures before visiting.",
+    es:"Entre los espacios recreativos municipales de Cheshire se encuentran Bartlem Park, Cheshire Park y Mixville Recreation Area. El informe financiero publicado por el municipio describe campos deportivos y un parque infantil en Bartlem Park, senderos y canchas en Cheshire Park, y un estanque, zonas de pícnic y senderos en Mixville. El Farmington Canal Linear Trail también atraviesa Cheshire y ofrece una ruta pavimentada para caminar y andar en bicicleta. Consulta los avisos municipales vigentes sobre acceso a la piscina, horarios de baño, permisos, reservas y cierres antes de visitar.",
+    source:"https://www.cheshirect.org/UserFiles/Servers/Server_8580856/File/Government/Finance/2023%20Annual%20Comprehensive%20Financial%20Report.pdf",
+    places:["Bartlem Park","Cheshire Park","Mixville Recreation Area","Farmington Canal Linear Trail"]
+  },
 };
