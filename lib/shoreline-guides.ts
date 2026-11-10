@@ -96,4 +96,22 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://ctparks.com/parks/indian-well-state-park",
     places:["Indian Well State Park","Paugussett Trail","Indian Well waterfall"]
   },
+  southbury:{
+    en:"Southbury's Kettletown State Park overlooks Lake Zoar and offers day-use picnicking and the William Miller Trail. Flood damage from August 2024 has closed the campground and the Pomperaug, Crest and Brook trails; the state says the campground will remain closed through the 2026–2027 seasons. Swimming is prohibited. The Larkin State Park Trail also reaches Southbury, but its section between Kettletown Road and Christian Street in Oxford remains closed. Consult current state maps and alerts before visiting.",
+    es:"Kettletown State Park, en Southbury, tiene vistas al lago Zoar y ofrece áreas de pícnic y acceso diurno al sendero William Miller. Las inundaciones de agosto de 2024 causaron el cierre del campamento y de los senderos Pomperaug, Crest y Brook; según el estado, el campamento permanecerá cerrado durante las temporadas 2026–2027. Está prohibido nadar. El sendero estatal Larkin también llega a Southbury, pero sigue cerrado el tramo entre Kettletown Road y Christian Street en Oxford. Consulta los mapas y avisos estatales actuales antes de ir.",
+    source:"https://ctparks.com/parks/kettletown-state-park",
+    places:["Kettletown State Park","William Miller Trail","Larkin State Park Trail"]
+  },
+  oxford:{
+    en:"The Larkin State Park Trail crosses Oxford on a former railroad corridor shared by walkers, cyclists and horseback riders. Its surfaces vary from packed earth to gravel and can be wet. Connecticut State Parks warns that the section from Kettletown Road in Southbury to Christian Street in Oxford remains closed after the August 2024 floods. Review the official closure map and use only open access points; do not assume the entire route is passable.",
+    es:"El sendero estatal Larkin atraviesa Oxford por una antigua vía férrea utilizada por caminantes, ciclistas y jinetes. El terreno alterna tierra compactada y grava, y puede estar húmedo. Connecticut State Parks advierte que el tramo entre Kettletown Road en Southbury y Christian Street en Oxford sigue cerrado por los daños de las inundaciones de agosto de 2024. Revisa el mapa oficial de cierres y utiliza solo los accesos abiertos; no supongas que toda la ruta es transitable.",
+    source:"https://ctparks.com/parks/larkin-state-park-trail",
+    places:["Larkin State Park Trail"]
+  },
+  middlebury:{
+    en:"The Larkin State Park Trail passes through Middlebury as part of a 10.3-mile former railroad route spanning Southbury, Oxford, Middlebury and Naugatuck. It is used for walking, running, cycling and horseback riding, with varying trail surfaces and seasonal wet spots. A substantial section farther west, from Kettletown Road in Southbury to Christian Street in Oxford, remains closed following 2024 flood damage. Check the state's current trail map and alerts before planning a through-trip.",
+    es:"El sendero estatal Larkin pasa por Middlebury y forma parte de una antigua ruta ferroviaria de 10,3 millas que atraviesa Southbury, Oxford, Middlebury y Naugatuck. Se utiliza para caminar, correr, andar en bicicleta y montar a caballo, con superficies variadas y sectores húmedos según la estación. Un tramo importante más al oeste, entre Kettletown Road en Southbury y Christian Street en Oxford, permanece cerrado tras las inundaciones de 2024. Consulta el mapa y los avisos estatales antes de planear un recorrido completo.",
+    source:"https://ctparks.com/parks/larkin-state-park-trail",
+    places:["Larkin State Park Trail"]
+  },
 };
