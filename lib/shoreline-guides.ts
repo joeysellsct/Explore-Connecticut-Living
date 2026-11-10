@@ -84,4 +84,16 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://www.cheshirect.org/UserFiles/Servers/Server_8580856/File/Government/Finance/2023%20Annual%20Comprehensive%20Financial%20Report.pdf",
     places:["Bartlem Park","Cheshire Park","Mixville Recreation Area","Farmington Canal Linear Trail"]
   },
+  derby:{
+    en:"Osbornedale State Park in Derby offers walking trails, fishing and picnic areas. Within the park's Kellogg Estate, the Osborne Homestead Museum interprets the life of conservationist Frances Osborne Kellogg, while the Kellogg Environmental Center hosts nature education and exhibits. The museum's regular guided-tour season is May through October; check official program calendars, reservations and park notices before traveling. The park also extends toward Ansonia.",
+    es:"Osbornedale State Park, en Derby, ofrece senderos para caminar, pesca y zonas de pícnic. Dentro de la finca Kellogg del parque, Osborne Homestead Museum presenta la vida de la conservacionista Frances Osborne Kellogg, mientras que Kellogg Environmental Center ofrece educación ambiental y exposiciones. La temporada habitual de visitas guiadas del museo va de mayo a octubre; consulta el calendario oficial, las reservas y los avisos del parque antes de viajar. El parque también se extiende hacia Ansonia.",
+    source:"https://ctparks.com/parks/osbornedale-state-park",
+    places:["Osbornedale State Park","Osborne Homestead Museum","Kellogg Environmental Center"]
+  },
+  shelton:{
+    en:"Indian Well State Park in Shelton sits beside the Housatonic River and includes a waterfall and gorge, the blue-blazed Paugussett Trail, fishing, a picnic grove and a seasonal swimming beach. The park's official guide notes that vehicle access closes from November through March, although walk-in access remains available. Check current water-quality reports, swimming rules, trail conditions and boat-launch information before visiting; the park prohibits alcohol.",
+    es:"Indian Well State Park, en Shelton, está junto al río Housatonic y cuenta con una cascada y un desfiladero, el sendero Paugussett de marcas azules, pesca, una zona de pícnic y una playa de baño estacional. Según la guía oficial, el acceso de vehículos cierra de noviembre a marzo, aunque se permite entrar a pie. Consulta los informes actuales sobre la calidad del agua, las normas de baño, los senderos y el acceso para embarcaciones antes de visitar; está prohibido consumir alcohol.",
+    source:"https://ctparks.com/parks/indian-well-state-park",
+    places:["Indian Well State Park","Paugussett Trail","Indian Well waterfall"]
+  },
 };
