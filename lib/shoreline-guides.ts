@@ -120,4 +120,10 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://ctparks.com/parks/larkin-state-park-trail",
     places:["Larkin State Park Trail"]
   },
+  ansonia:{
+    en:"Ansonia residents can explore the nearby Osbornedale State Park landscape along the Derby–Ansonia area, with woodland walks and opportunities to learn about local conservation history. The park's Osborne Homestead Museum and Kellogg Environmental Center are in Derby, so check their separate schedules before traveling. Use Connecticut State Parks' official map to identify the appropriate entrance, trail routes and current restrictions; do not assume that every trailhead or facility is within Ansonia.",
+    es:"Quienes viven en Ansonia pueden explorar el paisaje cercano de Osbornedale State Park, en la zona de Derby y Ansonia, con caminatas por el bosque y oportunidades para conocer la historia de la conservación local. Osborne Homestead Museum y Kellogg Environmental Center están en Derby, así que consulta sus horarios por separado antes de viajar. Utiliza el mapa oficial de Connecticut State Parks para identificar la entrada adecuada, los senderos y las restricciones vigentes; no supongas que todos los accesos o instalaciones se encuentran en Ansonia.",
+    source:"https://ctparks.com/parks/osbornedale-state-park",
+    places:["Osbornedale State Park"]
+  },
 };
