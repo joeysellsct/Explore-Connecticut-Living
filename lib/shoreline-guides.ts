@@ -126,4 +126,16 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://ctparks.com/parks/osbornedale-state-park",
     places:["Osbornedale State Park"]
   },
+  beaconfalls:{
+    en:"Naugatuck State Forest's East and West Blocks offer outdoor routes around Beacon Falls and neighboring Naugatuck and Oxford. Connecticut DEEP lists an East Block entrance from Andrasko Road in Beacon Falls and a West Block access point at the end of Cold Spring Road; the latter parking area is closed in winter. Trail uses vary by block and route, so consult DEEP's maps and posted signs before hiking or mountain biking. The state lists no parking fee for this forest.",
+    es:"Los sectores este y oeste de Naugatuck State Forest ofrecen rutas al aire libre alrededor de Beacon Falls y los municipios vecinos de Naugatuck y Oxford. Connecticut DEEP indica una entrada al sector este desde Andrasko Road en Beacon Falls y un acceso al sector oeste al final de Cold Spring Road; este último estacionamiento cierra durante el invierno. Los usos permitidos varían según el sector y el sendero, por lo que conviene consultar los mapas de DEEP y la señalización antes de caminar o andar en bicicleta de montaña. El estado indica que no se cobra estacionamiento en este bosque.",
+    source:"https://portal.ct.gov/deep/state-parks/locate-park-forest/other-state-parks-and-forests",
+    places:["Naugatuck State Forest East Block","Naugatuck State Forest West Block"]
+  },
+  seymour:{
+    en:"The Quillinan Reservoir Block of Naugatuck State Forest extends through Seymour and Ansonia. Connecticut DEEP lists a parking area on Route 313 in Seymour and identifies hiking, mountain biking, fishing and paddling among activities in this forest block. Check the official trail map and signs for the appropriate routes, water access and seasonal conditions; do not assume every trail permits every activity. The state lists no parking fee.",
+    es:"El sector Quillinan Reservoir de Naugatuck State Forest se extiende por Seymour y Ansonia. Connecticut DEEP señala un estacionamiento en la Ruta 313 en Seymour e incluye senderismo, ciclismo de montaña, pesca y actividades de remo entre las opciones del sector. Consulta el mapa oficial y las señales para conocer los senderos adecuados, los accesos al agua y las condiciones de temporada; no todos los senderos permiten todas las actividades. El estado indica que no se cobra estacionamiento.",
+    source:"https://portal.ct.gov/deep/state-parks/locate-park-forest/other-state-parks-and-forests",
+    places:["Naugatuck State Forest Quillinan Reservoir Block"]
+  },
 };
