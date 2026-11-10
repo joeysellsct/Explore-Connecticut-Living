@@ -150,4 +150,10 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://prospectct.myrec.com/info/facilities/default.aspx",
     places:["Canfield Park","Caplan Park","McGrath Park","Prospect Green"]
   },
+  fairfield:{
+    en:"Fairfield's Jennings Beach is a municipal shoreline destination at 880 South Benson Road. Before planning a visit, consult the Town of Fairfield for current beach-pass eligibility, parking arrangements, seasonal swimming guidance and any posted restrictions. People considering a move can use the town's official property and municipal resources to research an individual address; a beach's proximity does not establish property-level access rights or conditions.",
+    es:"Jennings Beach es una playa municipal de Fairfield situada en 880 South Benson Road. Antes de visitarla, consulta al municipio de Fairfield sobre los requisitos actuales de pases, estacionamiento, condiciones de baño durante la temporada y restricciones publicadas. Quienes estén pensando en mudarse pueden consultar los recursos municipales y de propiedades para investigar una dirección específica; vivir cerca de la playa no garantiza derechos de acceso ni condiciones particulares de una propiedad.",
+    source:"https://fairfieldct.org/Jennings%20Beach%20Park%20RAR%2006-02-2022.pdf",
+    places:["Jennings Beach"]
+  },
 };
