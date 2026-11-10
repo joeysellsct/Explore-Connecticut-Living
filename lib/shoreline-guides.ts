@@ -138,4 +138,10 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://portal.ct.gov/deep/state-parks/locate-park-forest/other-state-parks-and-forests",
     places:["Naugatuck State Forest Quillinan Reservoir Block"]
   },
+  bethany:{
+    en:"Bethany's Veterans Memorial Park at 265 Beacon Road has a lodge and a pavilion that may be reserved through the town. The town's published park rules require dogs to be leashed and prohibit animals on the beach; nonresidents should check sticker requirements before visiting. The town also lists recreational fields and horse rings at the former airport property on Amity Road. For moving and municipal records, the Bethany Town Clerk at 40 Peck Road handles land records and vital records; confirm office hours, appointment requirements and any fees directly with the town. Check current park notices and swimming advisories before a trip.",
+    es:"Veterans Memorial Park, en 265 Beacon Road en Bethany, cuenta con un edificio y un pabellón que pueden reservarse por medio del municipio. Las normas publicadas exigen llevar a los perros con correa y prohíben los animales en la playa; las personas no residentes deben consultar los requisitos de identificación o permiso antes de visitar. El municipio también ofrece campos recreativos y pistas para caballos en el antiguo terreno del aeropuerto de Amity Road. Para trámites de mudanza y documentos municipales, la oficina del secretario municipal de Bethany, en 40 Peck Road, administra registros de propiedad y documentos vitales; confirma directamente horarios, citas y tarifas. Consulta los avisos del parque y las alertas sobre el agua antes de ir.",
+    source:"https://www.bethany-ct.com/reservation-and-rentals",
+    places:["Veterans Memorial Park","Bethany Airport Recreation Fields"]
+  },
 };
