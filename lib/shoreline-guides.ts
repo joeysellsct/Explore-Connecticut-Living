@@ -144,4 +144,10 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://www.bethany-ct.com/reservation-and-rentals",
     places:["Veterans Memorial Park","Bethany Airport Recreation Fields"]
   },
+  prospect:{
+    en:"Prospect's recreation facilities directory lists Canfield Park at 36 Coer Road with a multipurpose field and tennis courts, Caplan Park at 91 New Haven Road, and McGrath Park at 21 Cheshire Road with a pond. The department also lists Prospect Green and community-center spaces for local activities. For a move to town, Prospect Town Hall at 36 Center Street provides access to the assessor, tax collector, town clerk and building department; the municipal website links to land records, property cards and tax payments. Check facility reservations and current rules with Parks and Recreation before visiting, and confirm municipal office hours before a trip.",
+    es:"El directorio de instalaciones recreativas de Prospect incluye Canfield Park, en 36 Coer Road, con un campo multiuso y canchas de tenis; Caplan Park, en 91 New Haven Road; y McGrath Park, en 21 Cheshire Road, con un estanque. El departamento también incluye Prospect Green y espacios del centro comunitario para actividades locales. Si te mudas al municipio, el ayuntamiento en 36 Center Street reúne servicios del tasador, recaudador de impuestos, secretario municipal y departamento de construcción; el sitio oficial enlaza a registros de propiedad, fichas de inmuebles y pagos de impuestos. Consulta las reservas y las normas vigentes con Parques y Recreación antes de visitar y confirma los horarios de las oficinas municipales.",
+    source:"https://prospectct.myrec.com/info/facilities/default.aspx",
+    places:["Canfield Park","Caplan Park","McGrath Park","Prospect Green"]
+  },
 };
