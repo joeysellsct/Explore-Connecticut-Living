@@ -168,10 +168,5 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://fairfieldct.org/Jennings%20Beach%20Park%20RAR%2006-02-2022.pdf",
     places:["Jennings Beach"]
   },
-  "west-haven":{
-    en:"West Haven's shoreline links Bradley Point Park, Savin Rock and Sandy Point through a paved waterfront walking route. Bradley Point offers views of Long Island Sound and historic memorials; Sandy Point is especially notable for coastal bird habitat, so observe posted protections and avoid disturbing wildlife. The city publishes directions to beach parking areas, including Bradley Point and Sandy Point. Before visiting, check current resident and nonresident parking rules, seasonal lifeguard schedules and beach advisories rather than relying on old fee lists. For a move, West Haven City Hall at 355 Main Street provides links to property taxes, zoning, municipal services and public records; confirm requirements for the specific address with the city.",
-    es:"La costa de West Haven conecta Bradley Point Park, Savin Rock y Sandy Point mediante un paseo pavimentado junto al agua. Bradley Point ofrece vistas de Long Island Sound y monumentos históricos; Sandy Point destaca por su hábitat de aves costeras, por lo que conviene respetar las zonas protegidas y no molestar a la fauna. El municipio publica indicaciones para llegar a los estacionamientos de las playas, incluidos Bradley Point y Sandy Point. Antes de ir, consulta las reglas vigentes de estacionamiento para residentes y visitantes, los horarios estacionales de salvavidas y los avisos de las playas; no dependas de tarifas antiguas. Para una mudanza, el ayuntamiento de West Haven, en 355 Main Street, ofrece enlaces a impuestos inmobiliarios, zonificación, servicios municipales y registros públicos; confirma los requisitos de cada dirección con la ciudad.",
-    source:"https://cityofwesthaven.com/294/Directions-to-Beaches",
-    places:["Bradley Point Park","Savin Rock","Sandy Point Beach & Bird Sanctuary"]
-  },
+
 };
