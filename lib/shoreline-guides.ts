@@ -209,4 +209,10 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://www.norwalkct.gov/4021/Parks-Facilities",
     places:["Calf Pasture Beach","Shady Beach","Cranbury Park","Veterans Memorial Park and Marina","Mathews Park","Oyster Shell Park"]
   },
+  northhaven:{
+    en:"North Haven residents can explore Wharton Brook State Park, which spans the Wallingford–North Haven area along Route 5. The state describes wooded paths around a pond, fishing, picnic facilities and a designated swimming area. Swimming access depends on current water-quality advisories and seasonal conditions; check the Connecticut State Parks notices before entering the water. The park's picnic shelters require advance reservations for guaranteed use, and the state notes that those shelters are not wheelchair accessible. For a move to North Haven, confirm parcel assessments and taxes with the town, school enrollment and assignment with the district, and electricity, gas, water and internet service with providers for the exact address. Do not assume a nearby home's service or school assignment applies to another parcel.",
+    es:"En el área de North Haven y Wallingford se encuentra Wharton Brook State Park, junto a la Ruta 5. Según el estado, este parque cuenta con senderos arbolados alrededor de un estanque, pesca, espacios para pícnic y una zona designada para nadar. Antes de entrar al agua, consulta los avisos vigentes sobre calidad del agua y las condiciones de temporada. Los refugios para pícnic pueden reservarse con anticipación y, según el estado, no son accesibles para usuarios de sillas de ruedas. Si estás considerando mudarte a North Haven, verifica la tasación y los impuestos de la parcela con el municipio, la inscripción y asignación escolar con el distrito, y los servicios de electricidad, gas, agua e internet con los proveedores para la dirección exacta. No supongas que los servicios o la escuela de una vivienda cercana corresponden a otra propiedad.",
+    source:"https://ctparks.com/parks/wharton-brook-state-park",
+    places:["Wharton Brook State Park"]
+  },
 };
