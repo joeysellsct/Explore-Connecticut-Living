@@ -281,4 +281,12 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
   },
 
 
+  wilton:{
+    en:"Wilton offers several different ways to enjoy its parks and river corridor. Merwin Meadows Park near the town center has a playground, athletic field and picnic areas, along with a swimming pond and beach that historically operated seasonally. Storm damage led to a closure of the pond and beach during the 2025 season, so do not assume swimming has reopened: confirm current water access, lifeguards, park passes and fees with Wilton Parks and Recreation before visiting. Schenck's Island, south of the town center along the Norwalk River, has meadow paths and places to walk or pause by the water; the Norwalk River Valley Trail also connects portions of this corridor. Check current trail conditions and posted rules, especially after heavy rain. People comparing homes should confirm the assessment and tax bill for the exact parcel with Wilton officials, school enrollment and transportation with the district, and internet and other utility availability with providers rather than assuming service from nearby addresses.",
+    es:"Wilton ofrece distintas formas de disfrutar de sus parques y del corredor del río. Merwin Meadows Park, cerca del centro, cuenta con parque infantil, campo deportivo y zonas de pícnic, además de un estanque y una playa que históricamente funcionaban por temporada. Los daños de tormenta provocaron el cierre del estanque y la playa durante la temporada 2025, así que no supongas que ya se puede nadar: confirma el acceso actual al agua, los socorristas, los pases y las tarifas con el departamento de Parques y Recreación de Wilton antes de ir. Schenck's Island, al sur del centro junto al río Norwalk, tiene senderos entre praderas y espacios para pasear o descansar cerca del agua; el Norwalk River Valley Trail también conecta partes de este corredor. Consulta el estado de los senderos y las normas publicadas, especialmente después de lluvias intensas. Si comparas viviendas, verifica la tasación y factura de impuestos de la parcela exacta con el municipio, la matrícula y el transporte escolar con el distrito y la disponibilidad de internet y otros servicios con los proveedores; no la deduzcas de direcciones cercanas.",
+    source:"https://www.wiltonct.gov/sites/g/files/vyhlif10026/f/uploads/merwin_meadows-schencks_island_rfq.pdf",
+    places:["Merwin Meadows Park","Schenck's Island","Norwalk River Valley Trail"]
+  },
+
+
 };
