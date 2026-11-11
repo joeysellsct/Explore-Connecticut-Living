@@ -189,4 +189,11 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     places:["East Rock Park","Edgewood Park","Edgerton Park","West River Memorial Park","Lighthouse Point Park"]
   },
 
+  westport:{
+    en:"Westport's Sherwood Island State Park offers a mile of Long Island Sound shoreline, East and West beaches, salt-marsh walks, disc golf and a seasonal Nature Center. Sherwood Point holds Connecticut's Living 9/11 Memorial. The state lists daily park hours of 8 a.m. to sunset, but swimming conditions, parking fees and seasonal facilities should be checked before travel. The main pavilion is listed as closed for the 2026 season; the East Beach picnic shelter has a separate reservation season. Visitors should review posted beach and pet rules. Prospective residents can compare Westport neighborhoods while confirming each property's assessment and taxes, school assignment and utility availability directly with the town, district and service providers.",
+    es:"Sherwood Island State Park, en Westport, ofrece aproximadamente una milla de costa junto a Long Island Sound, las playas East y West, paseos por marismas, disc golf y un centro de naturaleza de temporada. En Sherwood Point se encuentra el monumento conmemorativo viviente del 11 de septiembre de Connecticut. El estado indica un horario diario de 8:00 a. m. al atardecer, pero conviene verificar las condiciones de baño, tarifas de estacionamiento y servicios de temporada antes de viajar. El pabellón principal figura como cerrado durante la temporada 2026; el refugio para pícnic de East Beach tiene otro calendario de reservas. Consulta las normas de playa y mascotas. Si estás considerando mudarte, verifica las tasaciones e impuestos de cada vivienda, la asignación escolar y los servicios disponibles directamente con el municipio, el distrito y los proveedores.",
+    source:"https://ctparks.com/node/132",
+    places:["Sherwood Island State Park","East Beach","West Beach","Sherwood Island Nature Center","Connecticut Living 9/11 Memorial"]
+  },
+
 };
