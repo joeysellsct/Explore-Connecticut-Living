@@ -196,4 +196,11 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     places:["Sherwood Island State Park","East Beach","West Beach","Sherwood Island Nature Center","Connecticut Living 9/11 Memorial"]
   },
 
+  "west-haven":{
+    en:"West Haven's Long Island Sound shoreline includes Sandy Point Beach & Bird Sanctuary, a birdwatching destination with a Beach Street parking area and an observation deck. Sandy Point protects nesting and migrating shorebirds, so respect posted habitat closures and use nearby designated beaches for swimming instead. The city's shoreline recreation path links coastal stops including Morse Park and Bradley Point Park. Bradley Point also marks the July 1779 British landing; Savin Rock is another landmark in the city's waterfront history. Check the city for current beach parking permits, seasonal rules and water-quality advisories before visiting. If planning a move, verify each address's assessment, taxes, school enrollment and utility availability directly with the city, school district and providers.",
+    es:"La costa de West Haven junto a Long Island Sound incluye Sandy Point Beach & Bird Sanctuary, un lugar para observar aves con estacionamiento en Beach Street y una plataforma de observación. Sandy Point protege aves costeras migratorias y que anidan; respeta los cierres señalizados para proteger su hábitat y utiliza las playas designadas cercanas para nadar. Un paseo recreativo costero conecta lugares como Morse Park y Bradley Point Park. Bradley Point también recuerda el desembarco británico de julio de 1779; Savin Rock es otro punto de interés de la historia costera de la ciudad. Antes de visitar, consulta al municipio sobre permisos de estacionamiento, reglas de temporada y avisos de calidad del agua. Si piensas mudarte, verifica la tasación e impuestos de cada dirección, la inscripción escolar y la disponibilidad de servicios directamente con la ciudad, el distrito escolar y los proveedores.",
+    source:"https://www.cityofwesthaven.com/294/Directions-to-Beaches",
+    places:["Sandy Point Beach & Bird Sanctuary","Bradley Point Park","Morse Park","Savin Rock","West Haven Shoreline Recreation Path"]
+  },
+
 };
