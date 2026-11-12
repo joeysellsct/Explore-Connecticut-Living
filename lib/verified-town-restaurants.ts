@@ -13,6 +13,13 @@ export type VerifiedRestaurant = {
   verifiedOn: string;
 };
 export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
+  east_haven: [
+    { name: "Tolli's Apizza", address: "410 Main Street, East Haven, CT 06512", cuisineEn: "Brick-oven pizza and Italian dishes", cuisineEs: "Pizza al horno de ladrillo y platos italianos", descriptionEn: "A Main Street pizzeria publishing dine-in, takeout and delivery hours.", descriptionEs: "Pizzería de Main Street que publica horarios de comedor, comida para llevar y entrega a domicilio.", sourceUrl: "https://www.tolliseasthaven.com/", verifiedOn: "2026-11-11" },
+    { name: "Sandpiper Restaurant", address: "161 Cosey Beach Avenue, East Haven, CT 06512", cuisineEn: "Seafood and American dishes", cuisineEs: "Mariscos y cocina estadounidense", descriptionEn: "A shoreline restaurant offering seafood, pizza, steak and patio dining.", descriptionEs: "Restaurante junto a la costa que ofrece mariscos, pizza, carnes y comedor en patio.", sourceUrl: "https://sandpiper-easthaven.com/", verifiedOn: "2026-11-11" },
+    { name: "Adé Restaurant", address: "212 Main Street, Unit B, East Haven, CT 06512", cuisineEn: "Nigerian and West African cuisine", cuisineEs: "Cocina nigeriana y de África occidental", descriptionEn: "A Main Street restaurant serving Nigerian classics and fusion dishes.", descriptionEs: "Restaurante de Main Street que sirve platos tradicionales nigerianos y opciones de fusión.", sourceUrl: "https://aderestaurant.com/", verifiedOn: "2026-11-11" },
+    { name: "Aniello's Pizza and Italian Restaurant", address: "346 Hemingway Avenue, East Haven, CT 06512", cuisineEn: "Pizza and Italian dishes", cuisineEs: "Pizza y platos italianos", descriptionEn: "A Hemingway Avenue restaurant publishing pizza and Italian menu selections.", descriptionEs: "Restaurante de Hemingway Avenue que publica opciones de pizza y platos italianos.", sourceUrl: "https://www.aniellos.com/", verifiedOn: "2026-11-11" },
+    { name: "The Rib House", address: "190 Main Street, East Haven, CT 06512", cuisineEn: "Barbecue and American dishes", cuisineEs: "Barbacoa y cocina estadounidense", descriptionEn: "A Main Street restaurant offering ribs, burgers, steaks and catering.", descriptionEs: "Restaurante de Main Street con costillas, hamburguesas, carnes y servicio de catering.", sourceUrl: "https://therib-house.com/", verifiedOn: "2026-11-11" }
+  ],
   milford: [
     {
       name: "Colony Grill", address: "36 Broad St, Milford, CT 06460",
