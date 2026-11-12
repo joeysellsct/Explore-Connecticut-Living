@@ -219,4 +219,10 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
       sourceUrl: "https://giuliospizza.com/", verifiedOn: "2026-11-07"
     }
   ]
+  orange: [
+    {"name":"Chip's Family Restaurant","address":"321 Boston Post Road, Orange, CT 06477","cuisineEn":"Breakfast and American family dining","cuisineEs":"Desayunos y cocina familiar estadounidense","descriptionEn":"A Boston Post Road family restaurant known for pancakes and offering breakfast, lunch and dinner; consult its website for current menus and hours.","descriptionEs":"Restaurante familiar de Boston Post Road conocido por sus panqueques, con desayunos, almuerzos y cenas; consulta su sitio web para ver los menús y horarios actuales.","sourceUrl":"https://chipsrestaurants.com/chips-family-restaurant-in-orange-ct/","verifiedOn":"2026-11-12"},
+    {"name":"Ola Restaurant","address":"350 Boston Post Road, Orange, CT 06477","cuisineEn":"Nuevo Latino cuisine","cuisineEs":"Cocina nuevo latinoamericana","descriptionEn":"A Boston Post Road restaurant presenting Latin-inspired dishes and a bar; its website lists current dining hours and contact information.","descriptionEs":"Restaurante de Boston Post Road con platos de inspiración latinoamericana y bar; su sitio web publica horarios y datos de contacto.","sourceUrl":"https://www.olarestaurantct.com/orange/","verifiedOn":"2026-11-12"},
+    {"name":"Puerto Vallarta","address":"377 Boston Post Road, Orange, CT","cuisineEn":"Mexican cuisine","cuisineEs":"Cocina mexicana","descriptionEn":"A Mexican restaurant on Boston Post Road with traditional dishes, tableside guacamole and a cocktail menu; verify current service details directly.","descriptionEs":"Restaurante mexicano en Boston Post Road con platos tradicionales, guacamole preparado junto a la mesa y cócteles; confirma los detalles del servicio directamente.","sourceUrl":"https://puertovallartausa.com/orange","verifiedOn":"2026-11-12"}
+  ],
+
 };
