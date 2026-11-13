@@ -26,16 +26,25 @@ function sections(file, start, end) {
 }
 const resources = sections('town-official-links.ts', 'export const townOfficialLinks');
 const restaurants = sections('town-restaurants.ts', 'export const townRestaurants', '// Personal recommendations');
+const verifiedRestaurants = sections('verified-town-restaurants.ts', 'export const verifiedTownRestaurants');
 const photos = sections('town-photography.ts', 'export const townPhotography');
 const highlights = sections('town-highlights.ts', 'export const townHighlights');
 const rates = new Set([...read('fy2027-mill-rates.ts').matchAll(/'([^']+)':\s*\d/g)].map(m => m[1]));
+// Curated restaurant research uses underscore town keys; combine both datasets
+// by business name to avoid counting overlapping entries twice.
 const count = (map, slug, token) => (map.get(slug)?.match(token) ?? []).length;
+const restaurantNames = (block) => [...(block ?? '').matchAll(/(?:\\bname\\s*:|"name"\\s*:)\\s*["']([^"']+)["']/g)].map(m => m[1].toLocaleLowerCase('en-US').replace(/[’']/g, '').trim());
+const restaurantCount = slug => {
+  const keys = [slug, slug.replace(/-/g, '_')];
+  const names = keys.flatMap(key => [...restaurantNames(restaurants.get(key)), ...restaurantNames(verifiedRestaurants.get(key))]);
+  return new Set(names).size;
+};
 // Both quoted JSON-style and unquoted TypeScript object keys occur in the curated data.
 const rows = towns.map(t => ({
   ...t,
   bilingualGuide: /(?:\ben\s*:|"en"\s*:)/.test(highlights.get(t.slug) ?? '') && /(?:\bes\s*:|"es"\s*:)/.test(highlights.get(t.slug) ?? ''),
   municipalLinks: count(resources, t.slug, /(?:\burl\s*:|"url"\s*:)/g),
-  restaurants: count(restaurants, t.slug, /(?:\bsourceUrl\s*:|"sourceUrl"\s*:)/g),
+  restaurants: restaurantCount(t.slug),
   photos: count(photos, t.slug, /(?:\blicenseUrl\s*:|"licenseUrl"\s*:)/g),
   fy2027BaseRate: rates.has(t.slug)
 }));
