@@ -33,7 +33,7 @@ const rates = new Set([...read('fy2027-mill-rates.ts').matchAll(/'([^']+)':\s*\d
 // Curated restaurant research uses underscore town keys; combine both datasets
 // by business name to avoid counting overlapping entries twice.
 const count = (map, slug, token) => (map.get(slug)?.match(token) ?? []).length;
-const restaurantNames = (block) => [...(block ?? '').matchAll(/(?:\\bname\\s*:|"name"\\s*:)\\s*["']([^"']+)["']/g)].map(m => m[1].toLocaleLowerCase('en-US').replace(/[’']/g, '').trim());
+const restaurantNames = (block) => [...(block ?? '').matchAll(/(?:\bname\s*:|"name"\s*:)\s*["']([^"']+)["']/g)].map(m => m[1].toLocaleLowerCase('en-US').replace(/[’']/g, '').trim());
 const restaurantCount = slug => {
   const keys = [slug, slug.replace(/-/g, '_')];
   const names = keys.flatMap(key => [...restaurantNames(restaurants.get(key)), ...restaurantNames(verifiedRestaurants.get(key))]);
