@@ -2763,4 +2763,112 @@ export const townOfficialLinks:Record<string,TownOfficialLink[]> = {
     {"en":"Internet research for Sprague: enter the exact service address in the FCC National Broadband Map to review provider-reported technologies and speeds. Reported coverage does not guarantee installation, prices or plans; verify with providers.","es":"Internet en Sprague: introduce la dirección exacta en el Mapa Nacional de Banda Ancha de la FCC para revisar tecnologías y velocidades declaradas por proveedores. La cobertura declarada no garantiza instalación, precios ni planes; confirma con los proveedores.","url":"https://broadbandmap.fcc.gov/"},
     {"en":"Moving and community assistance in Sprague: search Connecticut 211 by town or ZIP code for housing, food, utility-bill assistance and other programs. Confirm current availability and eligibility directly with each provider.","es":"Mudanzas y ayuda comunitaria en Sprague: busca en Connecticut 211 por municipio o código postal recursos de vivienda, alimentos, ayuda con facturas de servicios y otros programas. Confirma directamente con cada proveedor la disponibilidad y los requisitos actuales.","url":"https://www.211ct.org/search/"}
   ],
+  'ashford': [
+  {
+    "en": "School research for Ashford: consult Connecticut EdSight for published school and district reports, including enrollment. Confirm any address-specific assignment with the district before making a housing decision.",
+    "es": "Escuelas de Ashford: consulta Connecticut EdSight para revisar informes publicados de escuelas y distritos, incluida la matrícula. Confirma con el distrito la asignación escolar de una dirección específica antes de decidir sobre una vivienda.",
+    "url": "https://public-edsight.ct.gov/"
+  },
+  {
+    "en": "Property-tax research for Ashford: use Connecticut OPM's municipal mill-rate tables for the relevant fiscal year. Verify the current rate, assessment, exemptions and district charges with the local assessor or tax collector; a rate table is not a tax bill.",
+    "es": "Impuestos inmobiliarios de Ashford: consulta las tablas municipales de tasas de OPM de Connecticut para el año fiscal correspondiente. Verifica la tasa vigente, la tasación, las exenciones y los cargos de distrito con el tasador o recaudador local; la tabla no es una factura de impuestos.",
+    "url": "https://portal.ct.gov/opm/igpp/publications/mill-rates"
+  },
+  {
+    "en": "Population and housing research for Ashford: select the town, measure and year in the U.S. Census data explorer. Distinguish decennial population counts from American Community Survey estimates and review margins of error.",
+    "es": "Población y vivienda de Ashford: selecciona el municipio, indicador y año en el explorador de datos del Censo de EE. UU. Distingue los conteos decenales de las estimaciones de la Encuesta sobre la Comunidad Estadounidense y revisa los márgenes de error.",
+    "url": "https://data.census.gov/"
+  },
+  {
+    "en": "Internet research for Ashford: enter the exact address in the FCC National Broadband Map to see provider-reported service and speeds. Reported availability does not guarantee installation, pricing or a particular plan; confirm with each provider.",
+    "es": "Internet en Ashford: introduce la dirección exacta en el Mapa Nacional de Banda Ancha de la FCC para ver servicios y velocidades declarados por proveedores. La disponibilidad declarada no garantiza instalación, precios ni planes; confirma con cada proveedor.",
+    "url": "https://broadbandmap.fcc.gov/"
+  },
+  {
+    "en": "Moving and community assistance in Ashford: search Connecticut 211 by town or ZIP code for housing, food, utility-payment and other local assistance. Confirm current eligibility and availability directly with providers.",
+    "es": "Mudanzas y ayuda comunitaria en Ashford: busca en Connecticut 211 por municipio o código postal recursos de vivienda, alimentos, ayuda para pagar servicios y otros programas locales. Confirma directamente con los proveedores la disponibilidad y los requisitos actuales.",
+    "url": "https://www.211ct.org/search/"
+  }
+],
+  'brooklyn': [
+  {
+    "en": "School research for Brooklyn: consult Connecticut EdSight for published school and district reports, including enrollment. Confirm any address-specific assignment with the district before making a housing decision.",
+    "es": "Escuelas de Brooklyn: consulta Connecticut EdSight para revisar informes publicados de escuelas y distritos, incluida la matrícula. Confirma con el distrito la asignación escolar de una dirección específica antes de decidir sobre una vivienda.",
+    "url": "https://public-edsight.ct.gov/"
+  },
+  {
+    "en": "Property-tax research for Brooklyn: use Connecticut OPM's municipal mill-rate tables for the relevant fiscal year. Verify the current rate, assessment, exemptions and district charges with the local assessor or tax collector; a rate table is not a tax bill.",
+    "es": "Impuestos inmobiliarios de Brooklyn: consulta las tablas municipales de tasas de OPM de Connecticut para el año fiscal correspondiente. Verifica la tasa vigente, la tasación, las exenciones y los cargos de distrito con el tasador o recaudador local; la tabla no es una factura de impuestos.",
+    "url": "https://portal.ct.gov/opm/igpp/publications/mill-rates"
+  },
+  {
+    "en": "Population and housing research for Brooklyn: select the town, measure and year in the U.S. Census data explorer. Distinguish decennial population counts from American Community Survey estimates and review margins of error.",
+    "es": "Población y vivienda de Brooklyn: selecciona el municipio, indicador y año en el explorador de datos del Censo de EE. UU. Distingue los conteos decenales de las estimaciones de la Encuesta sobre la Comunidad Estadounidense y revisa los márgenes de error.",
+    "url": "https://data.census.gov/"
+  },
+  {
+    "en": "Internet research for Brooklyn: enter the exact address in the FCC National Broadband Map to see provider-reported service and speeds. Reported availability does not guarantee installation, pricing or a particular plan; confirm with each provider.",
+    "es": "Internet en Brooklyn: introduce la dirección exacta en el Mapa Nacional de Banda Ancha de la FCC para ver servicios y velocidades declarados por proveedores. La disponibilidad declarada no garantiza instalación, precios ni planes; confirma con cada proveedor.",
+    "url": "https://broadbandmap.fcc.gov/"
+  },
+  {
+    "en": "Moving and community assistance in Brooklyn: search Connecticut 211 by town or ZIP code for housing, food, utility-payment and other local assistance. Confirm current eligibility and availability directly with providers.",
+    "es": "Mudanzas y ayuda comunitaria en Brooklyn: busca en Connecticut 211 por municipio o código postal recursos de vivienda, alimentos, ayuda para pagar servicios y otros programas locales. Confirma directamente con los proveedores la disponibilidad y los requisitos actuales.",
+    "url": "https://www.211ct.org/search/"
+  }
+],
+  'canterbury': [
+  {
+    "en": "School research for Canterbury: consult Connecticut EdSight for published school and district reports, including enrollment. Confirm any address-specific assignment with the district before making a housing decision.",
+    "es": "Escuelas de Canterbury: consulta Connecticut EdSight para revisar informes publicados de escuelas y distritos, incluida la matrícula. Confirma con el distrito la asignación escolar de una dirección específica antes de decidir sobre una vivienda.",
+    "url": "https://public-edsight.ct.gov/"
+  },
+  {
+    "en": "Property-tax research for Canterbury: use Connecticut OPM's municipal mill-rate tables for the relevant fiscal year. Verify the current rate, assessment, exemptions and district charges with the local assessor or tax collector; a rate table is not a tax bill.",
+    "es": "Impuestos inmobiliarios de Canterbury: consulta las tablas municipales de tasas de OPM de Connecticut para el año fiscal correspondiente. Verifica la tasa vigente, la tasación, las exenciones y los cargos de distrito con el tasador o recaudador local; la tabla no es una factura de impuestos.",
+    "url": "https://portal.ct.gov/opm/igpp/publications/mill-rates"
+  },
+  {
+    "en": "Population and housing research for Canterbury: select the town, measure and year in the U.S. Census data explorer. Distinguish decennial population counts from American Community Survey estimates and review margins of error.",
+    "es": "Población y vivienda de Canterbury: selecciona el municipio, indicador y año en el explorador de datos del Censo de EE. UU. Distingue los conteos decenales de las estimaciones de la Encuesta sobre la Comunidad Estadounidense y revisa los márgenes de error.",
+    "url": "https://data.census.gov/"
+  },
+  {
+    "en": "Internet research for Canterbury: enter the exact address in the FCC National Broadband Map to see provider-reported service and speeds. Reported availability does not guarantee installation, pricing or a particular plan; confirm with each provider.",
+    "es": "Internet en Canterbury: introduce la dirección exacta en el Mapa Nacional de Banda Ancha de la FCC para ver servicios y velocidades declarados por proveedores. La disponibilidad declarada no garantiza instalación, precios ni planes; confirma con cada proveedor.",
+    "url": "https://broadbandmap.fcc.gov/"
+  },
+  {
+    "en": "Moving and community assistance in Canterbury: search Connecticut 211 by town or ZIP code for housing, food, utility-payment and other local assistance. Confirm current eligibility and availability directly with providers.",
+    "es": "Mudanzas y ayuda comunitaria en Canterbury: busca en Connecticut 211 por municipio o código postal recursos de vivienda, alimentos, ayuda para pagar servicios y otros programas locales. Confirma directamente con los proveedores la disponibilidad y los requisitos actuales.",
+    "url": "https://www.211ct.org/search/"
+  }
+],
+  'chaplin': [
+  {
+    "en": "School research for Chaplin: consult Connecticut EdSight for published school and district reports, including enrollment. Confirm any address-specific assignment with the district before making a housing decision.",
+    "es": "Escuelas de Chaplin: consulta Connecticut EdSight para revisar informes publicados de escuelas y distritos, incluida la matrícula. Confirma con el distrito la asignación escolar de una dirección específica antes de decidir sobre una vivienda.",
+    "url": "https://public-edsight.ct.gov/"
+  },
+  {
+    "en": "Property-tax research for Chaplin: use Connecticut OPM's municipal mill-rate tables for the relevant fiscal year. Verify the current rate, assessment, exemptions and district charges with the local assessor or tax collector; a rate table is not a tax bill.",
+    "es": "Impuestos inmobiliarios de Chaplin: consulta las tablas municipales de tasas de OPM de Connecticut para el año fiscal correspondiente. Verifica la tasa vigente, la tasación, las exenciones y los cargos de distrito con el tasador o recaudador local; la tabla no es una factura de impuestos.",
+    "url": "https://portal.ct.gov/opm/igpp/publications/mill-rates"
+  },
+  {
+    "en": "Population and housing research for Chaplin: select the town, measure and year in the U.S. Census data explorer. Distinguish decennial population counts from American Community Survey estimates and review margins of error.",
+    "es": "Población y vivienda de Chaplin: selecciona el municipio, indicador y año en el explorador de datos del Censo de EE. UU. Distingue los conteos decenales de las estimaciones de la Encuesta sobre la Comunidad Estadounidense y revisa los márgenes de error.",
+    "url": "https://data.census.gov/"
+  },
+  {
+    "en": "Internet research for Chaplin: enter the exact address in the FCC National Broadband Map to see provider-reported service and speeds. Reported availability does not guarantee installation, pricing or a particular plan; confirm with each provider.",
+    "es": "Internet en Chaplin: introduce la dirección exacta en el Mapa Nacional de Banda Ancha de la FCC para ver servicios y velocidades declarados por proveedores. La disponibilidad declarada no garantiza instalación, precios ni planes; confirma con cada proveedor.",
+    "url": "https://broadbandmap.fcc.gov/"
+  },
+  {
+    "en": "Moving and community assistance in Chaplin: search Connecticut 211 by town or ZIP code for housing, food, utility-payment and other local assistance. Confirm current eligibility and availability directly with providers.",
+    "es": "Mudanzas y ayuda comunitaria en Chaplin: busca en Connecticut 211 por municipio o código postal recursos de vivienda, alimentos, ayuda para pagar servicios y otros programas locales. Confirma directamente con los proveedores la disponibilidad y los requisitos actuales.",
+    "url": "https://www.211ct.org/search/"
+  }
+],
 };
