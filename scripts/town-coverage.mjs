@@ -14,7 +14,7 @@ function sections(file, start, end) {
   const region = raw.slice(startAt, endAt < 0 ? undefined : endAt);
   const result = new Map();
   // Top-level town keys can be single-quoted, double-quoted or bare.
-  const keys = [...region.matchAll(/^ ['"]?([a-z][a-z0-9-]*)['"]?:\s*(\[|\{)/gm)];
+  const keys = [...region.matchAll(/^ ['"]?([a-z][a-z0-9_-]*)['"]?:\s*(\[|\{)/gm)];
   for (let i = 0; i < keys.length; i++) {
     const slug = keys[i][1];
     if (result.has(slug)) throw new Error('Duplicate town key ' + slug + ' in ' + file);
