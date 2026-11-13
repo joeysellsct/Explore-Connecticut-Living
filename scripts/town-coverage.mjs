@@ -32,7 +32,8 @@ const highlights = sections('town-highlights.ts', 'export const townHighlights')
 const rates = new Set([...read('fy2027-mill-rates.ts').matchAll(/'([^']+)':\s*\d/g)].map(m => m[1]));
 // Curated restaurant research uses underscore town keys; combine both datasets
 // by business name to avoid counting overlapping entries twice.
-const count = (map, slug, token) => (map.get(slug)?.match(token) ?? []).length;
+const townBlock = (map, slug) => map.get(slug) ?? map.get(slug.replace(/-/g, '_')) ?? '';
+const count = (map, slug, token) => (townBlock(map, slug).match(token) ?? []).length;
 const restaurantNames = (block) => [...(block ?? '').matchAll(/(?:\bname\s*:|"name"\s*:)\s*["']([^"']+)["']/g)].map(m => m[1].toLocaleLowerCase('en-US').replace(/[’']/g, '').trim());
 const restaurantCount = slug => {
   const keys = [slug, slug.replace(/-/g, '_')];
@@ -42,7 +43,7 @@ const restaurantCount = slug => {
 // Both quoted JSON-style and unquoted TypeScript object keys occur in the curated data.
 const rows = towns.map(t => ({
   ...t,
-  bilingualGuide: /(?:\ben\s*:|"en"\s*:)/.test(highlights.get(t.slug) ?? '') && /(?:\bes\s*:|"es"\s*:)/.test(highlights.get(t.slug) ?? ''),
+  bilingualGuide: /(?:\ben\s*:|"en"\s*:)/.test(townBlock(highlights, t.slug)) && /(?:\bes\s*:|"es"\s*:)/.test(townBlock(highlights, t.slug)),
   municipalLinks: count(resources, t.slug, /(?:\burl\s*:|"url"\s*:)/g),
   restaurants: restaurantCount(t.slug),
   photos: count(photos, t.slug, /(?:\blicenseUrl\s*:|"licenseUrl"\s*:)/g),
