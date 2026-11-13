@@ -363,4 +363,11 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     places:["Matthies Park","Pent Road Recreation Center","Toby's Pond","Riverbend Park","Veterans Park"]
   },
 
+  sherman:{
+    en:"Sherman sits at the northern end of Candlewood Lake. The town's Parks and Recreation Commission oversees municipal recreation facilities, including beaches, boat moorings, playgrounds and athletic areas. Its current facility directory lists Town Park on Saw Mill Road, Colonial Park and the Scout House; check access and reservation rules directly before visiting (https://www.shermanct.gov/entities/park-recreation; https://shermanct.myrec.com/info/facilities/). The town's recreation department publishes information about seasonal beach passes and programs; do not assume a beach pass or boat mooring is automatically included with a property (https://www.shermanct.gov/entities/park-recreation-01e22). For a move, verify the actual parcel's assessment and tax bill, zoning, flood exposure, water and septic systems, school enrollment and address-specific internet and utility service. Townwide descriptions cannot establish conditions at an individual home.",
+    es:"Sherman se encuentra en el extremo norte del lago Candlewood. La Comisión municipal de Parques y Recreación supervisa instalaciones recreativas, incluidas playas, amarres, parques infantiles y espacios deportivos. Su directorio actual incluye Town Park en Saw Mill Road, Colonial Park y Scout House; consulta las normas de acceso y reservas antes de visitar (https://www.shermanct.gov/entities/park-recreation; https://shermanct.myrec.com/info/facilities/). El departamento municipal publica información sobre pases de playa de temporada y programas; no supongas que una propiedad incluye automáticamente un pase de playa o amarre (https://www.shermanct.gov/entities/park-recreation-01e22). Antes de mudarte, verifica la tasación y factura de impuestos de la parcela, zonificación, riesgo de inundación, agua y sistema séptico, matrícula escolar y disponibilidad de internet y otros servicios en la dirección exacta. Una descripción general del municipio no determina las condiciones de una vivienda.",
+    source:"https://www.shermanct.gov/entities/park-recreation",
+    places:["Town Park","Colonial Park","Scout House"]
+  },
+
 };
