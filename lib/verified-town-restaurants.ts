@@ -107,7 +107,7 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
       descriptionEs: "Pub irlandés y restaurante de Campbell Avenue fundado en 1983, con platos caseros y brunch dominical; confirma el horario actual de cocina.",
       sourceUrl: "https://www.duffystavern.net/", verifiedOn: "2026-11-07"
     },
-    ,{
+    {
       name: "Saray Turkish Restaurant", address: "770 Campbell Avenue, West Haven, CT 06516",
       cuisineEn: "Turkish cuisine", cuisineEs: "Cocina turca",
       descriptionEn: "A Campbell Avenue Turkish restaurant whose published menu includes cold appetizers, kebabs, vegetarian dishes and desserts. Confirm current hours and menu directly.",
