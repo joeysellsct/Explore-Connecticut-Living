@@ -29,6 +29,13 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
   ],
   milford: [
     {
+      name: "SBC Restaurant & Beer Bar", address: "33 New Haven Avenue, Milford, CT 06460",
+      cuisineEn: "American dining and craft beer", cuisineEs: "Cocina estadounidense y cerveza artesanal",
+      descriptionEn: "A downtown Milford restaurant by the Wepawaug River serving American dishes, local craft beer and cocktails; check the official site for current menus and hours.",
+      descriptionEs: "Restaurante del centro de Milford junto al río Wepawaug con platos estadounidenses, cerveza artesanal local y cócteles; consulta su sitio oficial para ver menús y horarios actuales.",
+      sourceUrl: "https://www.sbcrestaurants.com/", verifiedOn: "2026-11-14"
+    },
+    {
       name: "Colony Grill", address: "36 Broad St, Milford, CT 06460",
       cuisineEn: "Thin-crust bar pizza", cuisineEs: "Pizza fina estilo bar",
       descriptionEn: "A downtown location of the Connecticut pizza restaurant known for its thin-crust bar pies and optional hot-oil topping.",
