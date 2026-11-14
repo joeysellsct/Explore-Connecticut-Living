@@ -106,6 +106,20 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
       descriptionEn: "A Campbell Avenue Irish pub and restaurant established in 1983, serving comfort food and Sunday brunch; confirm current kitchen hours.",
       descriptionEs: "Pub irlandés y restaurante de Campbell Avenue fundado en 1983, con platos caseros y brunch dominical; confirma el horario actual de cocina.",
       sourceUrl: "https://www.duffystavern.net/", verifiedOn: "2026-11-07"
+    },
+    ,{
+      name: "Saray Turkish Restaurant", address: "770 Campbell Avenue, West Haven, CT 06516",
+      cuisineEn: "Turkish cuisine", cuisineEs: "Cocina turca",
+      descriptionEn: "A Campbell Avenue Turkish restaurant whose published menu includes cold appetizers, kebabs, vegetarian dishes and desserts. Confirm current hours and menu directly.",
+      descriptionEs: "Restaurante turco en Campbell Avenue cuyo menú publicado incluye entrantes fríos, kebabs, platos vegetarianos y postres. Confirma directamente el horario y menú actuales.",
+      sourceUrl: "https://saraykebab.com/", verifiedOn: "2026-11-14"
+    },
+    {
+      name: "Turkish Kebab House", address: "1157 Campbell Avenue, West Haven, CT 06516",
+      cuisineEn: "Turkish kebabs and pide", cuisineEs: "Kebabs y pide turcos",
+      descriptionEn: "A Campbell Avenue restaurant listing kebabs, Turkish pide, döner, lahmacun and desserts on its own website. Check current service details before visiting.",
+      descriptionEs: "Restaurante en Campbell Avenue que anuncia kebabs, pide turco, döner, lahmacun y postres en su propia web. Comprueba los detalles actuales del servicio antes de ir.",
+      sourceUrl: "https://www.turkishkebabhousewesthaven.com/", verifiedOn: "2026-11-14"
     }
   ],
   branford: [
