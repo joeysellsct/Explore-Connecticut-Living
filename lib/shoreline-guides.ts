@@ -370,10 +370,4 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     places:["Town Park","Colonial Park","Scout House"]
   },
 
-  'north-haven':{
-    en:"North Haven offers several distinct outdoor experiences. Peter's Rock is town-owned open space supported by the Peter's Rock Association, with hiking trails and observation areas. Quinnipiac River State Park protects river and floodplain habitat; the state's trail brochure describes a Banton Street access route, walking paths, paddling access and seasonal permitted hunting. Check current trail conditions and posted rules before setting out, especially after flooding. Wharton Brook State Park spans the Wallingford–North Haven area and offers hiking, picnicking, fishing and seasonal swimming; check Connecticut State Parks for water-quality advisories and current access information. For a move, confirm the property's school assignment, assessment and tax bill, flood risk, permits, and exact-address utility and broadband availability with the responsible agencies.",
-    es:"North Haven ofrece distintas opciones para disfrutar de la naturaleza. Peter's Rock es un espacio natural municipal apoyado por la asociación Peter's Rock Association, con senderos y miradores. Quinnipiac River State Park protege el río y sus zonas inundables; el folleto estatal describe acceso por Banton Street, caminos para caminar, entrada para canoas y kayaks, y caza estacional con permiso. Consulta las condiciones de los senderos y las normas publicadas antes de salir, especialmente después de inundaciones. Wharton Brook State Park se extiende por Wallingford y North Haven y ofrece senderismo, pícnic, pesca y natación de temporada; consulta los avisos de calidad del agua y acceso en Connecticut State Parks. Antes de mudarte, verifica la escuela asignada a la dirección, la tasación y los impuestos, el riesgo de inundación, los permisos y la disponibilidad de servicios e internet para la propiedad concreta.",
-    source:"https://ctparks.com/parks/wharton-brook-state-park",
-    places:["Peter's Rock","Quinnipiac River State Park","Wharton Brook State Park"]
-  },
 };
