@@ -388,4 +388,16 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     places:["Bushnell Park","Keney Park","Pope Park","Colt Park","Goodwin Park"]
   },
 
+  // Wethersfield municipal parks and facilities reviewed 2026-11-14:
+  // https://www.wethersfieldct.gov/246/Parks-Recreation
+  // https://www.wethersfieldct.gov/facilities/facility/details/millwoodspark-8
+  // https://www.wethersfieldct.gov/275/Eleanor-Buck-Wolf-Nature-Center
+  // https://wethersfieldct.gov/facilities/facility/details/covepark-5
+  wethersfield:{
+    en:"Wethersfield's municipal parks connect outdoor recreation with the Connecticut River. Mill Woods Park on Prospect Street offers walking trails, sports fields, a playground, dog park, fishing pond and seasonal swimming facilities; check Parks and Recreation for access rules and current operating schedules. Next to the park, the Eleanor Buck Wolf Nature Center offers environmental exhibits, live-animal displays and educational programs, with visiting arrangements subject to the center's notices. Cove Park on Main Street includes picnic areas, sports fields and a boat launch accessing the Connecticut River; the Cove Marina operates seasonally, so boaters should confirm fees, registration requirements and availability before arriving. The town also maintains the Solomon Welles House and community recreation facilities. Before a move, review the specific property's assessment and tax bill, recorded land documents, school enrollment eligibility, flood exposure and address-level utilities with the responsible offices. Park descriptions are not representations about any individual home.",
+    es:"Los parques municipales de Wethersfield combinan actividades al aire libre con acceso al río Connecticut. Mill Woods Park, en Prospect Street, cuenta con senderos, campos deportivos, juegos infantiles, un parque para perros, un estanque para pescar e instalaciones de natación de temporada; consulta con Parques y Recreación las normas y los horarios vigentes. Junto al parque, Eleanor Buck Wolf Nature Center ofrece exposiciones sobre la naturaleza, animales vivos y programas educativos; las visitas están sujetas a los avisos del centro. Cove Park, en Main Street, dispone de áreas para pícnic, campos deportivos y una rampa para embarcaciones con acceso al río Connecticut; la marina funciona por temporada, así que conviene confirmar tarifas, requisitos de registro y disponibilidad antes de llegar. El municipio también mantiene Solomon Welles House e instalaciones recreativas comunitarias. Antes de mudarte, consulta con las oficinas correspondientes la tasación y factura de impuestos del inmueble, los documentos de propiedad, la elegibilidad de matrícula escolar, el riesgo de inundación y los servicios disponibles en la dirección exacta. Las descripciones de parques no representan las condiciones de una vivienda particular.",
+    source:"https://www.wethersfieldct.gov/246/Parks-Recreation",
+    places:["Mill Woods Park","Eleanor Buck Wolf Nature Center","Cove Park","Wethersfield Cove Marina","Solomon Welles House"]
+  },
+
 };
