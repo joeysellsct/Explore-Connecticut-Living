@@ -5,6 +5,10 @@
 // actual assessed values may change a parcel's tax bill. Never use for motor vehicles.
 // Coverage currently: all 27 New Haven County towns and 23 Fairfield County towns.
 // Absence from this map means the rate has NOT been verified for this site.
+// Hamden cross-check (2026-11-15): its Tax Office independently confirms 53.67 for FY2026–27
+// and warns that the October 1, 2024 revaluation is phased in over four years.
+// https://www.hamden.com/240/Tax-Office
+// The base mill rate alone cannot reproduce a Hamden parcel's phase-in-adjusted bill.
 export const fy2027MillRates: Readonly<Record<string, number>> = {
  'ansonia':29.46,'beacon-falls':23.67,'bethany':29.99,'branford':22.16,
  'cheshire':31.36,'derby':38.44,'east-haven':35.78,'guilford':28.4,
