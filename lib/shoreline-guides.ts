@@ -407,4 +407,12 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     places:["Mill Woods Park","Eleanor Buck Wolf Nature Center","Cove Park","Wethersfield Cove Marina","Solomon Welles House"]
   },
 
+
+  avon:{
+    en:"Avon's municipal recreation directory lists Fisher Meadows Recreation Area at 800 Old Farms Road, with nature trails, playing fields, pavilions, a playground and access near the Farmington River. Alsop Meadows, at Route 44 and Waterville Road, includes open space and a canoe launch. Countryside Park on Huckleberry Hill Road has ponds and outdoor recreation space; the town's facility rules prohibit swimming and ice skating there. Sycamore Hills Recreation Area on West Avon Road includes playgrounds, courts, trails and seasonal pools; check current pool access and schedules directly with Avon Recreation and Parks. Fisher Farm also has trails and river access. These are municipal recreation descriptions, not promises about any individual home. Before moving, check school assignment and enrollment with the district, assessed values and taxes with the town, and broadband and other utility service at the exact property address. Confirm park rules, parking, permits and conditions before visiting.",
+    es:"El directorio municipal de Avon incluye Fisher Meadows Recreation Area, en 800 Old Farms Road, con senderos naturales, campos deportivos, pabellones, juegos infantiles y acceso cerca del río Farmington. Alsop Meadows, en Route 44 y Waterville Road, ofrece espacios abiertos y una rampa para canoas. Countryside Park, en Huckleberry Hill Road, tiene estanques y espacios recreativos; las normas municipales prohíben nadar y patinar sobre hielo allí. Sycamore Hills Recreation Area, en West Avon Road, dispone de juegos infantiles, canchas, senderos y piscinas de temporada; confirma el acceso y los horarios actuales con el departamento de parques y recreación. Fisher Farm también cuenta con senderos y acceso al río. Estas descripciones son de instalaciones municipales y no garantizan características de una vivienda. Antes de mudarte, verifica la asignación y matrícula escolar con el distrito, la tasación y los impuestos con el municipio y los servicios e internet en la dirección exacta. Confirma las normas, el estacionamiento, los permisos y las condiciones antes de visitar.",
+    source:"https://avonct.myrec.com/info/facilities/default.aspx",
+    places:["Fisher Meadows Recreation Area","Alsop Meadows","Countryside Park","Sycamore Hills Recreation Area","Fisher Farm"]
+  },
+
 };
