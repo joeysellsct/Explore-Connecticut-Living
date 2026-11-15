@@ -381,5 +381,11 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://www.shermanct.gov/entities/park-recreation",
     places:["Town Park","Colonial Park","Scout House"]
   },
+  hartford:{
+    en:"Hartford's park system offers downtown landmarks and larger green spaces. Bushnell Park at 60 Elm Street has a historic carousel, monuments and event grounds; check the Bushnell Park Conservancy for current carousel hours and event-related access. Keney Park at 337 Vine Street features meadows, woodland landscapes and a public golf course; the city also describes seasonal fishing at Waltermere Pond subject to state rules. Other city parks include Pope Park, Colt Park and Goodwin Park. Confirm current facilities and restrictions with Hartford Parks and Recreation before visiting. For a move, check the exact property's assessment and tax bill with city offices, school enrollment with the district, and address-level broadband and utility availability rather than assuming citywide conditions apply.",
+    es:"El sistema de parques de Hartford ofrece monumentos en el centro y grandes espacios verdes. Bushnell Park, en 60 Elm Street, cuenta con un carrusel histórico, monumentos y espacios para eventos; consulta con Bushnell Park Conservancy los horarios actuales del carrusel y las restricciones durante eventos. Keney Park, en 337 Vine Street, tiene praderas, paisajes boscosos y un campo de golf público; la ciudad también describe la pesca de temporada en Waltermere Pond, sujeta a las normas estatales. Otros parques municipales incluyen Pope Park, Colt Park y Goodwin Park. Antes de visitar, confirma las instalaciones y restricciones actuales con Parques y Recreación de Hartford. Si piensas mudarte, verifica la tasación y factura de impuestos de la propiedad con el municipio, la matrícula escolar con el distrito y la disponibilidad de internet y otros servicios para la dirección específica.",
+    source:"https://www.hartfordct.gov/Government/Departments/Public-Works/Parks-Directory/Bushnell",
+    places:["Bushnell Park","Keney Park","Pope Park","Colt Park","Goodwin Park"]
+  },
 
 };
