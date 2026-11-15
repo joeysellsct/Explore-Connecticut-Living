@@ -1,5 +1,6 @@
 // Editorial restaurant research, not endorsements or personal Top Picks.
-// Verified against each business's own website on 2026-11-06.
+// Research dates are recorded per listing in verifiedOn; there is no single dataset-wide verification date.
+// A source URL and research date do not guarantee current operation or a successful live-site audit.
 // Rendered on bilingual town pages; entries overlapping the main directory are deduplicated.
 // Recheck operating status, address, menus and accessibility before publication.
 export type VerifiedRestaurant = {
