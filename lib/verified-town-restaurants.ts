@@ -134,7 +134,14 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
       descriptionEn: "A Campbell Avenue restaurant listing kebabs, Turkish pide, döner, lahmacun and desserts on its own website. Check current service details before visiting.",
       descriptionEs: "Restaurante en Campbell Avenue que anuncia kebabs, pide turco, döner, lahmacun y postres en su propia web. Comprueba los detalles actuales del servicio antes de ir.",
       sourceUrl: "https://www.turkishkebabhousewesthaven.com/", verifiedOn: "2026-11-14"
-    }
+    },
+    {
+      name: "Stowe's Seafood", address: "347 Beach Street, West Haven, CT 06516",
+      cuisineEn: "Seafood shack and takeout", cuisineEs: "Marisquería informal y comida para llevar",
+      descriptionEn: "A Beach Street seafood restaurant across from the shoreline serving freshly prepared fried seafood and other coastal dishes. Its official site states that payment is cash only.",
+      descriptionEs: "Marisquería de Beach Street frente a la costa con mariscos fritos preparados al momento y otros platos costeros. Su sitio oficial indica que solo acepta efectivo.",
+      sourceUrl: "https://stowesseafoodct.com/", verifiedOn: "2026-11-15"
+    },
   ],
   branford: [
     {
