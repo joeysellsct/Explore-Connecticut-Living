@@ -40,7 +40,7 @@ test('Guilford dining contains five verified bilingual editorial listings', () =
     assert.ok(restaurant.name && restaurant.cuisine && restaurant.cuisineEs);
     assert.equal(new URL(restaurant.website).protocol, 'https:');
     assert.equal(new URL(restaurant.sourceUrl).protocol, 'https:');
-    assert.match(restaurant.checkedOn, /^\\d{4}-\\d{2}-\\d{2}$/);
+    assert.match(restaurant.checkedOn, /^\d{4}-\d{2}-\d{2}$/);
     const checked = new Date(restaurant.checkedOn + 'T00:00:00Z');
     assert.ok(Number.isFinite(checked.getTime()) && checked.toISOString().slice(0, 10) === restaurant.checkedOn,
       'Verification date must be a real calendar date');
