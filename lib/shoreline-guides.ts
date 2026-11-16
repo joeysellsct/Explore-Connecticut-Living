@@ -415,4 +415,11 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     places:["Fisher Meadows Recreation Area","Alsop Meadows","Countryside Park","Sycamore Hills Recreation Area","Fisher Farm"]
   },
 
+  // New Milford municipal tourism and adopted 2021 conservation plan checked 2026-11-16.
+  'new-milford':{
+    en:"New Milford's historic village center is organized around its Town Green, with shops and restaurants nearby. The town's tourism office highlights Lover's Leap State Park and its bridge, while its adopted conservation plan identifies walking routes along the Housatonic River, including the New Milford River Trail. Candlewood Lake provides another major recreation destination, though beach, boating and parking access may depend on location, season and permits. Residents planning a move can consult the town's departments directory for assessor, tax collector, building, planning and public works contacts. Confirm school enrollment, parcel taxes, utilities and internet at the specific address rather than relying on general town descriptions.",
+    es:"El centro histórico de New Milford se organiza alrededor de su plaza principal, Town Green, con tiendas y restaurantes cercanos. La oficina municipal de turismo destaca Lover's Leap State Park y su puente, mientras que el plan de conservación aprobado por el municipio identifica rutas para caminar junto al río Housatonic, incluido New Milford River Trail. Candlewood Lake es otro destino recreativo importante, aunque el acceso a playas, embarcaciones y estacionamiento puede depender del lugar, la temporada y los permisos. Quienes planeen mudarse pueden consultar el directorio municipal para contactar a las oficinas de tasación, recaudación de impuestos, construcción, planificación y obras públicas. Confirma la matrícula escolar, los impuestos de la parcela y la disponibilidad de servicios e internet para la dirección específica, sin depender de descripciones generales del municipio.",
+    source:"https://www.newmilford.org/tourism",
+    places:["New Milford Town Green","Lover's Leap State Park","New Milford River Trail","Housatonic River","Candlewood Lake"]
+  },
 };
