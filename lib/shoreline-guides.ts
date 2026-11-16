@@ -446,4 +446,11 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     places:["Kent Falls State Park","Kent Falls Steps Trail","Macedonia Brook State Park","Cobble Mountain"]
   },
 
+  cornwall:{
+    en:"Cornwall shares Mohawk State Park/Forest with neighboring Goshen. Connecticut State Parks describes forest trails, the Mohawk Mountain overlook and Black Spruce Bog, where a boardwalk helps protect a distinctive wetland habitat. The park's Route 4 entrance serves hiking and nature visits; the state lists regular park access from April through November, so check current seasonal notices before traveling. Backcountry campsites require permits and advance reservations. Housatonic State Forest also has separate access blocks near West Cornwall, including trail and backcountry camping opportunities. Confirm the correct trailhead and conditions with the state rather than assuming the forests share one entrance. For any Cornwall home, confirm school enrollment, parcel-specific assessments and taxes, flood information and utility or broadband availability with the relevant agencies.",
+    es:"Cornwall comparte Mohawk State Park/Forest con Goshen. Connecticut State Parks describe senderos forestales, el mirador de Mohawk Mountain y Black Spruce Bog, donde una pasarela ayuda a proteger un humedal singular. La entrada por la Ruta 4 permite hacer senderismo y observar la naturaleza; el estado indica acceso habitual de abril a noviembre, por lo que conviene consultar los avisos de temporada antes de viajar. Para acampar en el interior del bosque se necesitan permisos y reservas anticipadas. Housatonic State Forest también tiene sectores de acceso separados cerca de West Cornwall, con senderos y opciones de acampada rústica. Confirma con el estado el punto de acceso correcto y las condiciones, ya que los bosques no comparten una única entrada. Para cualquier vivienda en Cornwall, verifica la inscripción escolar, las tasaciones e impuestos de la parcela, la información sobre inundaciones y la disponibilidad de servicios e internet con las entidades correspondientes.",
+    source:"https://ctparks.com/parks/mohawk-state-parkforest",
+    places:["Mohawk State Park/Forest","Mohawk Mountain Overlook","Black Spruce Bog","Housatonic State Forest"]
+  },
+
 };
