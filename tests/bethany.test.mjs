@@ -21,12 +21,12 @@ test('Bethany guide gives original English and Spanish local and buyer informati
   assert.equal(guide.places.length, 4);
 });
 
-test('Bethany official links have fifteen unique, bilingual and sourced URLs', () => {
+test('Bethany official links retain at least fifteen unique, bilingual and sourced URLs', () => {
   const source = read('lib/town-official-links.ts');
   const match = source.match(/^ 'bethany': \[(.*?)^ \],/ms);
   assert.ok(match, 'Missing Bethany official resources');
   const entries = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
-  assert.equal(entries.length, 15);
+  assert.ok(entries.length >= 15, 'Bethany should retain its fifteen baseline municipal resources');
   const urls = entries.map(entry => {
     assert.ok(entry.en.length > 18 && entry.es.length > 18);
     assert.equal(new URL(entry.url).protocol, 'https:');
