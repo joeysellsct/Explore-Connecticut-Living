@@ -422,4 +422,12 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://www.newmilford.org/tourism",
     places:["New Milford Town Green","Lover's Leap State Park","New Milford River Trail","Housatonic River","Candlewood Lake"]
   },
+
+  // Connecticut State Parks official Harkness guide checked 2026-11-16.
+  waterford:{
+    en:"Waterford's Harkness Memorial State Park, at 275 Great Neck Road, combines Long Island Sound views with the historic Eolia mansion and formal gardens. The state describes a 1.3-mile Harkness Memorial Loop past the mansion, boardwalk and wildlife viewing areas, plus the shorter Niering Walk overlooking Goshen Cove. Visitors can picnic, watch birds and enjoy shoreline scenery, but swimming is prohibited at this park. The beach and formal gardens have different pet restrictions from the picnic lawns, and mansion tours are seasonal; check current state park notices before visiting. Camp Harkness next door is a separate facility with restricted beach access, not an extension of the state park's public swimming area. Before moving, confirm the individual parcel's tax assessment, school eligibility, flood information and utility and broadband availability with the responsible offices and providers.",
+    es:"En Waterford, Harkness Memorial State Park, en 275 Great Neck Road, combina vistas de Long Island Sound con la histórica mansión Eolia y sus jardines formales. El estado describe un circuito de 1,3 millas que pasa por la mansión, un paseo y áreas de observación de fauna, además del sendero más corto Niering Walk con vistas a Goshen Cove. Se puede hacer pícnic, observar aves y disfrutar del paisaje costero, pero está prohibido nadar en este parque. La playa y los jardines tienen restricciones para mascotas distintas de las áreas de césped y las visitas a la mansión son de temporada; consulta los avisos actuales del parque antes de ir. Camp Harkness, al lado, es una instalación separada con acceso restringido a su playa, no una zona pública de natación del parque estatal. Antes de mudarte, confirma la tasación fiscal de cada parcela, la elegibilidad escolar, la información sobre inundaciones y la disponibilidad de servicios e internet con las oficinas y empresas correspondientes.",
+    source:"https://ctparks.com/parks/harkness-memorial-state-park",
+    places:["Harkness Memorial State Park","Eolia Mansion","Harkness Memorial Loop","Niering Walk","Goshen Cove"]
+  },
 };
