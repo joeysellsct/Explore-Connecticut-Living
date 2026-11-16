@@ -116,8 +116,8 @@ test('Milford building, engineering and wetlands due diligence links use officia
 test('Milford photographs retain bilingual captions and explicit reuse licenses', () => {
   const raw = block('lib/town-photography.ts');
   const records = JSON.parse('[' + raw.slice(raw.indexOf('[') + 1).trim().replace(/,\s*$/, '') + ']');
-  assert.equal(records.length, 3);
-  assert.equal(new Set(records.map(x => x.file)).size, 3);
+  assert.ok(records.length >= 3, 'Retain at least three licensed Milford photographs while allowing verified additions');
+  assert.equal(new Set(records.map(x => x.file)).size, records.length, 'Photograph files must remain unique');
   for (const photo of records) {
     assert.ok(photo.title.length > 15 && photo.titleEs.length > 15);
     assert.ok(photo.file.endsWith('.jpg') && photo.credit && photo.license);
