@@ -453,4 +453,11 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     places:["Mohawk State Park/Forest","Mohawk Mountain Overlook","Black Spruce Bog","Housatonic State Forest"]
   },
 
+  torrington:{
+    en:"Burr Pond State Park on Burr Mountain Road is a practical starting point for exploring Torrington outdoors. Connecticut State Parks lists a sandy swimming area, picnic space, paddling access and the 2.5-mile Walcott Trail loop around the pond. The 2.1-mile John Muir Trail connects through Paugnut State Forest toward Sunnybrook State Park, offering a longer option for hikers. The pond also has a history marker recalling Gail Borden Jr.'s condensed-milk factory, established here in 1857. Swimming water-quality monitoring is seasonal; check the state's current report before entering the water, and do not assume lifeguards or rentals are operating on a particular day. Alcohol is prohibited in the park. For a move to Torrington, confirm school assignments, parcel assessments and tax bills, flood exposure, and utility and broadband availability for the exact address.",
+    es:"Burr Pond State Park, en Burr Mountain Road, es un buen punto de partida para conocer los espacios naturales de Torrington. Connecticut State Parks informa que el parque tiene una zona de baño con arena, áreas para pícnic, acceso para remar y el sendero circular Walcott Trail de 2,5 millas alrededor del estanque. El John Muir Trail, de 2,1 millas, conecta a través de Paugnut State Forest hacia Sunnybrook State Park y ofrece una opción más larga para senderistas. Una placa histórica recuerda la fábrica de leche condensada que Gail Borden Jr. estableció aquí en 1857. El control de calidad del agua para nadar es estacional; consulta el informe estatal vigente antes de entrar al agua y no des por hecho que habrá socorristas o alquiler de embarcaciones un día determinado. Está prohibido consumir alcohol en el parque. Si piensas mudarte a Torrington, confirma las escuelas asignadas, la tasación y los impuestos de la parcela, el riesgo de inundación y la disponibilidad de servicios e internet para la dirección exacta.",
+    source:"https://ctparks.com/parks/burr-pond-state-park",
+    places:["Burr Pond State Park","Walcott Trail","John Muir Trail","Paugnut State Forest","Sunnybrook State Park"]
+  },
+
 };
