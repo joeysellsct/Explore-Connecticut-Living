@@ -34,12 +34,18 @@ test('Guilford municipal research retains at least eleven unique bilingual sourc
 
 test('Guilford dining contains five verified bilingual editorial listings', () => {
   const restaurants = arrayFor('lib/town-restaurants.ts', 'guilford');
-  assert.equal(restaurants.length, 5);
-  assert.equal(new Set(restaurants.map(x => x.name)).size, 5);
+  assert.ok(restaurants.length >= 5, 'Retain at least five verified Guilford restaurants');
+  assert.equal(new Set(restaurants.map(x => x.name)).size, restaurants.length);
   for (const restaurant of restaurants) {
     assert.ok(restaurant.name && restaurant.cuisine && restaurant.cuisineEs);
-    assert.ok(restaurant.website && restaurant.sourceUrl);
-    assert.equal(restaurant.checkedOn, '2026-10-24');
+    assert.equal(new URL(restaurant.website).protocol, 'https:');
+    assert.equal(new URL(restaurant.sourceUrl).protocol, 'https:');
+    assert.match(restaurant.checkedOn, /^\\d{4}-\\d{2}-\\d{2}$/);
+    const checked = new Date(restaurant.checkedOn + 'T00:00:00Z');
+    assert.ok(Number.isFinite(checked.getTime()) && checked.toISOString().slice(0, 10) === restaurant.checkedOn,
+      'Verification date must be a real calendar date');
+    assert.ok(restaurant.checkedOn >= '2026-10-24', 'Do not regress the last source check');
+    assert.ok(checked.getTime() <= Date.now(), 'Do not claim future verification');
     assert.equal(restaurant.rating, undefined);
     assert.equal(restaurant.reviewCount, undefined);
   }
