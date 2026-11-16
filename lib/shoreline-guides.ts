@@ -438,4 +438,12 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     source:"https://eltownhall.com/visitors-recreation/sites-of-interest/parks/",
     places:["McCook Point Park and Beach","Hole-in-the-Wall Beach","Niantic Bay Boardwalk","Cini Memorial Park","Oswegatchie Hills Nature Preserve","Samuel M. Peretz Park at Bridebrook"]
   },
+  // Connecticut State Parks Kent Falls and Macedonia Brook guides reviewed 2026-11-16.
+  kent:{
+    en:"Kent offers two distinctive state-park outings. At Kent Falls State Park on Kent Cornwall Road, a covered bridge and an accessible approach to the base of the falls lead to views of cascading water. The uphill Kent Falls Steps Trail is short but steep; swimming and entering the water are prohibited. At Macedonia Brook State Park, visitors can hike wooded ridges and the challenging Blue Trail across Cobble Mountain for distant mountain views. The park also offers rustic camping by advance reservation, but campground pets are prohibited and cell reception is limited. Confirm current park rules, trail conditions and campground dates before setting out. When evaluating a home in Kent, check school enrollment, property assessments, local taxes, flood exposure and service availability for the exact address rather than relying on townwide assumptions.",
+    es:"Kent ofrece dos excursiones destacadas en parques estatales. En Kent Falls State Park, sobre Kent Cornwall Road, un puente cubierto y un acceso adaptado hasta la base de las cascadas permiten contemplar el agua. Kent Falls Steps Trail es corto, pero tiene una subida empinada; está prohibido nadar o entrar al agua. En Macedonia Brook State Park se puede caminar por bosques y recorrer el exigente sendero azul que cruza Cobble Mountain, con vistas de montañas lejanas. También hay campamentos rústicos con reserva anticipada, pero no se permiten mascotas en el área de acampada y la señal de telefonía móvil es limitada. Consulta las normas vigentes, el estado de los senderos y las fechas de acampada antes de salir. Si estás considerando una vivienda en Kent, verifica la inscripción escolar, la tasación e impuestos de la propiedad, el riesgo de inundación y los servicios disponibles para la dirección exacta.",
+    source:"https://ctparks.com/parks/kent-falls-state-park",
+    places:["Kent Falls State Park","Kent Falls Steps Trail","Macedonia Brook State Park","Cobble Mountain"]
+  },
+
 };
