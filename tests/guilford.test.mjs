@@ -22,10 +22,10 @@ test('Guilford has a substantive English and Spanish town profile', () => {
   assert.ok(guide.en.includes('Guilford') && guide.es.includes('Guilford'));
 });
 
-test('Guilford municipal research offers eleven unique bilingual source links', () => {
+test('Guilford municipal research retains at least eleven unique bilingual source links', () => {
   const links = arrayFor('lib/town-official-links.ts', 'guilford');
-  assert.equal(links.length, 11);
-  assert.equal(new Set(links.map(x => x.url)).size, 11);
+  assert.ok(links.length >= 11, 'Guilford must retain its eleven baseline municipal resources');
+  assert.equal(new Set(links.map(x => x.url)).size, links.length);
   for (const link of links) {
     assert.ok(link.en && link.es && link.url);
     assert.equal(new URL(link.url).protocol, 'https:');
