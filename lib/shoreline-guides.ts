@@ -488,4 +488,11 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     places:["Barn Island Wildlife Management Area","Barn Island Boat Launch","Barn Island Marsh Observation Area","Mystic River Park","Stonington Point","Stonington Town Dock Fishing Pier"]
   },
 
+  'prospect':{
+    en:"Prospect's municipal recreation directory identifies Canfield Park (36 Coer Road), Caplan Park (91 New Haven Road) and Hotchkiss Field (61 Waterbury Road). Hotchkiss Field lists baseball, basketball and soccer facilities; Canfield Park lists tennis courts and a multipurpose field. The town's Parks and Recreation department manages program registration and facility requests. Check current access, reservations and seasonal conditions before visiting. The official town website at 36 Center Street provides links to tax payments, property cards, land records, GIS, permits and voter registration. For a move, verify school enrollment with the district, parcel-specific assessments and taxes with the town, and water, sewer or septic, electricity and broadband availability at the precise address. Do not assume that a facility's directory listing guarantees unrestricted public access.",
+    es:"El directorio municipal de recreación de Prospect identifica Canfield Park (36 Coer Road), Caplan Park (91 New Haven Road) y Hotchkiss Field (61 Waterbury Road). Hotchkiss Field incluye instalaciones de béisbol, baloncesto y fútbol; Canfield Park incluye canchas de tenis y un campo multiuso. El departamento municipal de Parques y Recreación administra la inscripción en programas y las solicitudes de uso de instalaciones. Confirma el acceso, las reservas y las condiciones de temporada antes de visitar. El sitio oficial del municipio, con sede en 36 Center Street, enlaza al pago de impuestos, fichas de propiedades, registros de tierras, mapas GIS, permisos e inscripción electoral. Antes de mudarte, confirma la inscripción escolar con el distrito, los impuestos y tasaciones de la parcela con el municipio y la disponibilidad de agua, alcantarillado o sistema séptico, electricidad e internet en la dirección exacta. La aparición de una instalación en el directorio no garantiza acceso público sin restricciones.",
+    source:"https://prospectct.myrec.com/info/facilities/default.aspx",
+    places:["Canfield Park","Caplan Park","Hotchkiss Field"]
+  },
+
 };
