@@ -32,7 +32,10 @@ const highlights = sections('town-highlights.ts', 'export const townHighlights')
 const rates = new Set([...read('fy2027-mill-rates.ts').matchAll(/'([^']+)':\s*\d/g)].map(m => m[1]));
 // Curated restaurant research uses underscore town keys; combine both datasets
 // by business name to avoid counting overlapping entries twice.
-const townBlock = (map, slug) => map.get(slug) ?? map.get(slug.replace(/-/g, '_')) ?? '';
+// Merge legacy underscore and canonical hyphen keys rather than silently ignoring one.
+// This is a source-record inventory, not proof that either set of records is verified.
+const townBlock = (map, slug) => [...new Set([slug, slug.replace(/-/g, '_')])]
+  .map(key => map.get(key) ?? '').filter(Boolean).join('\n');
 const count = (map, slug, token) => (townBlock(map, slug).match(token) ?? []).length;
 const restaurantNames = (block) => [...(block ?? '').matchAll(/(?:\bname\s*:|"name"\s*:)\s*["']([^"']+)["']/g)].map(m => m[1].toLocaleLowerCase('en-US').replace(/[’']/g, '').trim());
 const restaurantCount = slug => {
