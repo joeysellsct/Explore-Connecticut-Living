@@ -42,6 +42,16 @@ export default async function MovingResourcesPage({params}:{params:Promise<{loca
     <a href="https://uwc.211ct.org/categorysearch/utility-assistance/" target="_blank" rel="noopener noreferrer">{es?'Explorar programas de ayuda para servicios públicos':'Explore utility assistance programs'} ↗</a>
    </article>
    <article className="moving-resource-card">
+    <h2>{es?'Escuelas públicas y asignación escolar':'Public schools & school assignments'}</h2>
+    <p>{es?'Consulta EdSight del Departamento de Educación de Connecticut para encontrar escuelas públicas y explorar los datos oficiales disponibles. La proximidad de una vivienda a una escuela no garantiza la asignación: confirma la dirección y los procedimientos de inscripción directamente con el distrito escolar.':'Use the Connecticut State Department of Education’s EdSight portal to find public schools and review available official data. Living near a school does not guarantee assignment: confirm your specific address and enrollment procedures with the school district.'}</p>
+    <a href="https://public-edsight.ct.gov/overview/find-schools" target="_blank" rel="noopener noreferrer">{es?'Buscar escuelas en Connecticut EdSight':'Find schools through Connecticut EdSight'} ↗</a>
+   </article>
+   <article className="moving-resource-card">
+    <h2>{es?'Mapas de inundación y seguros':'Flood maps & insurance research'}</h2>
+    <p>{es?'Antes de comprar o alquilar, busca la dirección exacta en el Centro de Servicios de Mapas de Inundación de FEMA. Revisa los mapas vigentes y cualquier cambio preliminar, y consulta con el municipio y tu aseguradora sobre requisitos específicos. Estar fuera de una zona de alto riesgo cartografiada no elimina el riesgo de inundación.':'Before buying or renting, search the exact property address in FEMA’s Flood Map Service Center. Review effective maps and any preliminary changes, and ask local officials and your insurer about property-specific requirements. Being outside a mapped high-risk zone does not eliminate flood risk.'}</p>
+    <a href="https://msc.fema.gov/portal/home" target="_blank" rel="noopener noreferrer">{es?'Consultar mapas oficiales de FEMA':'Search official FEMA flood maps'} ↗</a>
+   </article>
+   <article className="moving-resource-card">
     <h2>{es?'Registro electoral y cambio de domicilio':'Voter registration & address updates'}</h2>
     <p>{es?'Al mudarte dentro de Connecticut o desde otro estado, consulta la Secretaría del Estado para registrarte o actualizar tu domicilio electoral. Comprueba los requisitos, plazos y lugar de votación con los funcionarios electorales de tu municipio; no supongas que el cambio de dirección del DMV actualiza tu inscripción.':'Moving within Connecticut or arriving from another state? Consult the Secretary of the State about registering or updating your voter address. Confirm eligibility, deadlines and polling location with your town election officials; do not assume a DMV address change updates voter registration.'}</p>
     <a href="https://portal.ct.gov/sots/election-services/voter-information/voter-registration-information" target="_blank" rel="noopener noreferrer">{es?'Información oficial de registro electoral (CT)':'Official Connecticut voter registration information'} ↗</a>
