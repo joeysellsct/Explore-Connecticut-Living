@@ -100,7 +100,14 @@ if (process.argv.includes('--json')) {
     ],
     restaurants:r.restaurants, municipalLinks:r.municipalLinks, photos:r.photos
   }));
-  process.stdout.write(JSON.stringify({notice:'Inventory only. Missing means no counted record, not proof the source does not exist. Tax-rate gaps must not be filled by estimates.',summary,byCounty,gaps},null,2)+'\n');
+  // Prioritize incomplete towns in the existing county and Milford/West Haven order.
+  // This is a record-presence inventory, not evidence of source verification.
+  const priorityGaps = gaps.filter(r => r.missing.length > 0).slice(0, 25);
+  const missingByType = Object.fromEntries(
+    ['bilingual-guide','municipal-resources','restaurants-to-five','licensed-photography','verified-fy2027-base-rate']
+      .map(type => [type, gaps.filter(r => r.missing.includes(type)).length])
+  );
+  process.stdout.write(JSON.stringify({notice:'Inventory only. Missing means no counted record, not proof the source does not exist. Tax-rate gaps must not be filled by estimates.',summary,byCounty,missingByType,priorityGaps,gaps},null,2)+'\n');
   process.exit(0);
 }
 console.log('county,town,guide,municipal_links,restaurants,photos,fy2027_base_rate');
