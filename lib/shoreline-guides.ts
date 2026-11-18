@@ -489,4 +489,11 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
   },
 
 
+  bristol:{
+    en:"Bristol's parks system includes Rockwell Park, Page Park, Peck Park, Seymour Park and Federal Hill Green. The city identifies Rockwell Park at 63 Dutton Avenue and Page Park at 21 DeWitt Page Park Road in its playground-improvement program; planned renovations can affect facilities, so check project notices before visiting. Federal Hill Green's renovated playground opened in September 2025, while Seymour Park's renovated playground opened in June 2024. The city's Parks, Recreation, Youth and Community Services Department maintains recreation facilities and publishes programs and access information. For a move, verify school assignments with the district, parcel taxes with the city, and internet and utility availability for the exact address rather than assuming townwide coverage.",
+    es:"El sistema de parques de Bristol incluye Rockwell Park, Page Park, Peck Park, Seymour Park y Federal Hill Green. La ciudad identifica Rockwell Park en 63 Dutton Avenue y Page Park en 21 DeWitt Page Park Road dentro de su programa de mejoras de áreas infantiles; las obras previstas pueden afectar las instalaciones, así que consulta los avisos antes de visitar. El área infantil renovada de Federal Hill Green abrió en septiembre de 2025 y la de Seymour Park en junio de 2024. El Departamento de Parques, Recreación y Servicios Comunitarios municipal administra instalaciones y publica información sobre programas y acceso. Antes de mudarte, confirma la asignación escolar con el distrito, los impuestos de la parcela con la ciudad y los servicios e internet para la dirección exacta.",
+    source:"https://bprycs-project-portal.constantcontactsites.com/upgrade-your-play",
+    places:["Rockwell Park","Page Park","Peck Park","Seymour Park","Federal Hill Green"]
+  },
+
 };
