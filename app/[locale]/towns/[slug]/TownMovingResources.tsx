@@ -30,6 +30,16 @@ export default function TownMovingResources({slug,town,locale}:{slug:string;town
   <h2>{es?`Impuestos, servicios y mudanza en ${town}`:`Property taxes, utilities & moving to ${town}`}</h2>
   <div className="moving-resources-grid">
    <article className="moving-resource-card">
+    <h3>{es?'Datos oficiales de escuelas':'Official school data'}</h3>
+    <p>{es?'Consulta los perfiles, la matrícula y los informes de rendimiento de escuelas y distritos en EdSight, el portal del Departamento de Educación de Connecticut. Los datos publicados no confirman por sí solos la escuela asignada a una dirección: verifica la inscripción y los límites con el distrito.':'Explore school and district profiles, enrollment and performance reports in EdSight, Connecticut’s Department of Education data portal. Published statistics do not establish which school serves a particular address: verify enrollment and attendance boundaries with the district.'}</p>
+    <a href="https://edsight.ct.gov/" target="_blank" rel="noopener noreferrer">{es?'Consultar EdSight':'Explore EdSight'} ↗</a>
+   </article>
+   <article className="moving-resource-card">
+    <h3>{es?'Internet por dirección':'Internet by address'}</h3>
+    <p>{es?'Busca la dirección exacta en el mapa nacional de banda ancha de la FCC para comparar la disponibilidad declarada por los proveedores. Los datos son declaraciones de las empresas, no una garantía de instalación, precio ni velocidad real. Confirma el servicio directamente antes de mudarte.':'Search the exact address on the FCC National Broadband Map to compare provider-reported availability. The map reflects provider submissions, not a guarantee of installation, pricing or actual speeds. Confirm service directly before moving.'}</p>
+    <a href="https://broadbandmap.fcc.gov/" target="_blank" rel="noopener noreferrer">{es?'Mapa oficial de la FCC':'Official FCC broadband map'} ↗</a>
+   </article>
+   <article className="moving-resource-card">
     <h3>{es?'Calculadora de impuestos inmobiliarios':'Property tax estimator'}</h3>
     <p>{verifiedRate===undefined?(es?'No tenemos una tasa municipal FY2027 verificada para este municipio. Consulta la fuente oficial e ingresa la tasa de bienes raíces correspondiente.':'A verified FY2027 municipal rate is not yet available here. Check the official source and enter the applicable real estate rate.'):(es?`Tasa municipal base FY2027: ${verifiedRate} mills (lista de tasación del 1 de octubre de 2025). Puedes editarla si corresponde un distrito tributario adicional.`:`FY2027 municipal base rate: ${verifiedRate} mills (October 1, 2025 Grand List). You can edit the rate if additional district taxes apply.`)}</p>
     <a href={fy2027MillRateSource} target="_blank" rel="noopener noreferrer">{es?'Fuente oficial OPM, FY2027':'Official Connecticut OPM FY2027 data'} ↗</a>
