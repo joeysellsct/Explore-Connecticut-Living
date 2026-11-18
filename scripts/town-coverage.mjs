@@ -37,6 +37,13 @@ const rates = new Set([...read('fy2027-mill-rates.ts').matchAll(/'([^']+)':\s*\d
 const townBlock = (map, slug) => [...new Set([slug, slug.replace(/-/g, '_')])]
   .map(key => map.get(key) ?? '').filter(Boolean).join('\n');
 const count = (map, slug, token) => (townBlock(map, slug).match(token) ?? []).length;
+// Duplicate source URLs can trigger content regression tests even when each entry is bilingual.
+// Compare within each municipality only; the same statewide resource may legitimately serve many towns.
+const duplicateMunicipalUrls = slug => {
+  const urls = [...townBlock(resources, slug).matchAll(/(?:\\burl\\s*:|"url"\\s*:)\\s*["']([^"']+)["']/g)].map(m => m[1]);
+  const seen = new Set();
+  return [...new Set(urls.filter(url => seen.has(url) || !seen.add(url)))];
+};
 const restaurantNames = (block) => [...(block ?? '').matchAll(/(?:\bname\s*:|"name"\s*:)\s*["']([^"']+)["']/g)].map(m => m[1].toLocaleLowerCase('en-US').replace(/[’']/g, '').trim());
 const restaurantCount = slug => {
   const keys = [slug, slug.replace(/-/g, '_')];
@@ -109,7 +116,7 @@ if (process.argv.includes('--json')) {
       ...(r.photos===0?['licensed-photography']:[]),
       ...(!r.fy2027BaseRate?['verified-fy2027-base-rate']:[])
     ],
-    restaurants:r.restaurants, municipalLinks:r.municipalLinks, photos:r.photos
+    restaurants:r.restaurants, municipalLinks:r.municipalLinks, photos:r.photos, duplicateMunicipalUrls:duplicateMunicipalUrls(r.slug)
   }));
   // Prioritize incomplete towns in the existing county and Milford/West Haven order.
   // This is a record-presence inventory, not evidence of source verification.
@@ -118,7 +125,8 @@ if (process.argv.includes('--json')) {
     ['bilingual-guide','municipal-resources','restaurants-to-five','licensed-photography','verified-fy2027-base-rate']
       .map(type => [type, gaps.filter(r => r.missing.includes(type)).length])
   );
-  process.stdout.write(JSON.stringify({notice:'Inventory only. Missing means no counted record, not proof the source does not exist. Tax-rate gaps must not be filled by estimates.',summary,categoryCoveragePercent,fullyPopulatedInTrackedCategories,byCounty,missingByType,priorityGaps,gaps},null,2)+'\n');
+  const townsWithDuplicateMunicipalUrls = gaps.filter(r => r.duplicateMunicipalUrls.length > 0).length;
+  process.stdout.write(JSON.stringify({notice:'Inventory only. Missing means no counted record, not proof the source does not exist. Tax-rate gaps must not be filled by estimates.',summary,categoryCoveragePercent,fullyPopulatedInTrackedCategories,byCounty,missingByType,townsWithDuplicateMunicipalUrls,priorityGaps,gaps},null,2)+'\n');
   process.exit(0);
 }
 console.log('county,town,guide,municipal_links,restaurants,photos,fy2027_base_rate');
