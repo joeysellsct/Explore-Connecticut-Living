@@ -48,8 +48,8 @@ const duplicateMunicipalUrls = slug => {
 // structural check only; it does not validate translations or the linked pages.
 const incompleteMunicipalTranslations = slug => {
   const block = townBlock(resources, slug);
-  const entries = [...block.matchAll(/\\{\\s*(?:(?:["']?en["']?|["']?es["']?)\\s*:)[\\s\\S]*?\\}/g)].map(m => m[0]);
-  return entries.filter(entry => !/(?:\\ben\\s*:|"en"\\s*:)/.test(entry) || !/(?:\\bes\\s*:|"es"\\s*:)/.test(entry)).length;
+  const entries = [...block.matchAll(/\{\s*(?:(?:["']?en["']?|["']?es["']?)\s*:)[\s\S]*?\}/g)].map(m => m[0]);
+  return entries.filter(entry => !/(?:\ben\s*:|"en"\s*:)/.test(entry) || !/(?:\bes\s*:|"es"\s*:)/.test(entry)).length;
 };
 const restaurantNames = (block) => [...(block ?? '').matchAll(/(?:\bname\s*:|"name"\s*:)\s*["']([^"']+)["']/g)].map(m => m[1].toLocaleLowerCase('en-US').replace(/[’']/g, '').trim());
 const restaurantCount = slug => {
