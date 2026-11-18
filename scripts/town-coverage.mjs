@@ -40,7 +40,7 @@ const count = (map, slug, token) => (townBlock(map, slug).match(token) ?? []).le
 // Duplicate source URLs can trigger content regression tests even when each entry is bilingual.
 // Compare within each municipality only; the same statewide resource may legitimately serve many towns.
 const duplicateMunicipalUrls = slug => {
-  const urls = [...townBlock(resources, slug).matchAll(/(?:\\burl\\s*:|"url"\\s*:)\\s*["']([^"']+)["']/g)].map(m => m[1]);
+  const urls = [...townBlock(resources, slug).matchAll(/(?:\burl\s*:|"url"\s*:)\s*["']([^"']+)["']/g)].map(m => m[1]);
   const seen = new Set();
   return [...new Set(urls.filter(url => seen.has(url) || !seen.add(url)))];
 };
