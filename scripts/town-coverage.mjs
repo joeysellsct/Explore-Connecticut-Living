@@ -77,6 +77,17 @@ if (process.argv.includes('--json')) {
     photographyCollections: total(r=>r.photos>0),
     fy2027BaseRates: total(r=>r.fy2027BaseRate)
   };
+  // Record-presence progress across the five tracked categories; not launch readiness.
+  const categoryCounts = {
+    bilingualGuide: summary.bilingualGuides,
+    municipalResources: summary.municipalDirectories,
+    restaurantsAtLeastFive: summary.restaurantDirectoriesWithFive,
+    licensedPhotoRecord: summary.photographyCollections,
+    fy2027BaseRateRecord: summary.fy2027BaseRates
+  };
+  const categoryCoveragePercent = Object.fromEntries(Object.entries(categoryCounts)
+    .map(([category, count]) => [category, Number((100 * count / towns.length).toFixed(1))]));
+  const fullyPopulatedInTrackedCategories = rows.filter(r => r.bilingualGuide && r.municipalLinks > 0 && r.restaurants >= 5 && r.photos > 0 && r.fy2027BaseRate).length;
   // County-level counts expose uneven coverage without implying source verification.
   const byCounty = countyOrder.map(county => {
     const subset = rows.filter(r => r.county === county);
@@ -107,7 +118,7 @@ if (process.argv.includes('--json')) {
     ['bilingual-guide','municipal-resources','restaurants-to-five','licensed-photography','verified-fy2027-base-rate']
       .map(type => [type, gaps.filter(r => r.missing.includes(type)).length])
   );
-  process.stdout.write(JSON.stringify({notice:'Inventory only. Missing means no counted record, not proof the source does not exist. Tax-rate gaps must not be filled by estimates.',summary,byCounty,missingByType,priorityGaps,gaps},null,2)+'\n');
+  process.stdout.write(JSON.stringify({notice:'Inventory only. Missing means no counted record, not proof the source does not exist. Tax-rate gaps must not be filled by estimates.',summary,categoryCoveragePercent,fullyPopulatedInTrackedCategories,byCounty,missingByType,priorityGaps,gaps},null,2)+'\n');
   process.exit(0);
 }
 console.log('county,town,guide,municipal_links,restaurants,photos,fy2027_base_rate');
