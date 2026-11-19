@@ -525,4 +525,12 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     places:["Farmington Canal Heritage Trail","Farmington River Trail","Tunxis Mead Park","Suburban Park","Shade Swamp Sanctuary"]
   },
 
+
+  "beacon-falls":{
+    en:"Beacon Falls maintains several distinct recreation areas. Matthies Park has wooded walking trails around Carrington Pond, a playground and a reservable pavilion; the town's facilities directory labels the park residents-only, so confirm eligibility and posted rules before visiting. Pent Road Recreation Center offers athletic fields, courts, playgrounds and a walking track. Toby's Pond has a waterside trail and fishing, while Riverbend Park offers river access; the town warns that changing currents make paddling there appropriate only for experienced users. Lantern Ridge is preserved open space for walking. Beacon Falls Public Library is on the second floor of Town Hall at 10 Maple Avenue. For a move, check school assignment with the district, parcel taxes with the town, and water, sewer, electricity and broadband availability at the exact address. The municipal parks directory and library page are linked in the town source and local government website; park rules, reservations and access can change.",
+    es:"Beacon Falls cuenta con varias áreas recreativas. Matthies Park tiene senderos boscosos alrededor de Carrington Pond, área infantil y un pabellón que puede reservarse; el directorio municipal lo identifica como exclusivo para residentes, por lo que conviene confirmar los requisitos y las reglas antes de ir. Pent Road Recreation Center ofrece campos deportivos, canchas, áreas infantiles y una pista para caminar. Toby's Pond tiene un sendero junto al agua y espacios para pescar; Riverbend Park permite acceder al río, pero el municipio advierte que las corrientes variables hacen que remar allí sea apropiado solo para personas con experiencia. Lantern Ridge conserva espacios naturales para pasear. La biblioteca pública está en el segundo piso del Ayuntamiento, en 10 Maple Avenue. Antes de mudarte, verifica la asignación escolar con el distrito, los impuestos de la propiedad con el municipio y la disponibilidad de agua, alcantarillado, electricidad e internet en la dirección exacta. Consulta las normas y reservas vigentes, ya que pueden cambiar.",
+    source:"https://beaconfalls-ct.org/376/Beacon-Falls---Parks-and-Recreation-Faci",
+    places:["Matthies Park","Pent Road Recreation Center","Toby's Pond","Riverbend Park","Lantern Ridge"]
+  },
+
 };
