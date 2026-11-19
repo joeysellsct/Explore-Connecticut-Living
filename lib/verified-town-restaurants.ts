@@ -66,16 +66,16 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
     {
       name: "Colony Grill", address: "36 Broad St, Milford, CT 06460",
       cuisineEn: "Thin-crust bar pizza", cuisineEs: "Pizza fina estilo bar",
-      descriptionEn: "A downtown location of the Connecticut pizza restaurant known for its thin-crust bar pies and optional hot-oil topping.",
-      descriptionEs: "Local del centro de esta pizzería de Connecticut, conocida por sus pizzas de masa fina y su opción de aceite picante.",
-      sourceUrl: "https://colonygrill.com/locations", verifiedOn: "2026-11-06"
+      descriptionEn: "The operator lists its downtown Milford location at 36 Broad Street and serves thin-crust bar pies with an optional hot-oil topping; check the current menu before visiting.",
+      descriptionEs: "El establecimiento confirma su local del centro de Milford en 36 Broad Street y ofrece pizzas finas de estilo bar con aceite picante opcional; consulta el menú actual antes de ir.",
+      sourceUrl: "https://colonygrill.com/locations", verifiedOn: "2026-11-18"
     },
     {
       name: "Stonebridge Restaurant", address: "50 Daniel Street, Milford, CT 06460",
       cuisineEn: "American and seafood", cuisineEs: "Cocina estadounidense y mariscos",
-      descriptionEn: "A riverside downtown restaurant with American dishes, seafood and space for private events.",
-      descriptionEs: "Restaurante junto al río en el centro con platos estadounidenses, mariscos y espacios para eventos privados.",
-      sourceUrl: "https://stonebridgerestaurant.com/", verifiedOn: "2026-11-06"
+      descriptionEn: "A downtown restaurant overlooking the Wepawaug River with seafood, American dishes and private-event spaces; confirm menus and hours directly.",
+      descriptionEs: "Restaurante céntrico con vistas al río Wepawaug, mariscos, platos estadounidenses y espacios para eventos privados; confirma directamente el menú y el horario.",
+      sourceUrl: "https://stonebridgerestaurant.com/", verifiedOn: "2026-11-18"
     },
     {
       name: "7 Seas", address: "16 New Haven Avenue, Milford, CT 06460",
