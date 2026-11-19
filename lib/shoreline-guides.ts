@@ -518,4 +518,11 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     places:["Squantz Pond State Park","New Fairfield Town Park","New Fairfield Town Marina","Community Park","Ball Pond"]
   },
 
+  farmington:{
+    en:"Farmington and Unionville connect to two paved multi-use routes: the Farmington Canal Heritage Trail and the Farmington River Trail. The town describes the river trail as branching from the canal trail near Tunxis Mead Park and reconnecting in Simsbury. For shorter walks, the town lists Suburban Park in Unionville, where paths pass remnants of a nineteenth-century amusement park, and Shade Swamp Sanctuary, with nature trails near Route 6. The town also describes a historic Heritage Bridge Trail starting at Tunxis Mead Park. Check official trail maps, weather and current closures before visiting. New residents can use the municipal recreation department for programs and the town directory for services; confirm school enrollment boundaries, parcel-specific tax bills and utility or broadband service directly with the responsible agencies before moving.",
+    es:"Farmington y Unionville tienen acceso a dos rutas pavimentadas de uso compartido: Farmington Canal Heritage Trail y Farmington River Trail. Según el municipio, el sendero del río se separa del sendero del canal cerca de Tunxis Mead Park y vuelve a conectarse en Simsbury. Para paseos más cortos, el municipio señala Suburban Park en Unionville, cuyos caminos pasan por restos de un antiguo parque de diversiones del siglo XIX, y Shade Swamp Sanctuary, con senderos naturales cerca de la Ruta 6. También describe el histórico Heritage Bridge Trail, que comienza en Tunxis Mead Park. Consulta los mapas oficiales, el clima y posibles cierres antes de visitar. Los nuevos residentes pueden consultar el departamento municipal de recreación y el directorio de servicios; antes de mudarse deben confirmar con las entidades correspondientes la asignación escolar, los impuestos de cada propiedad y la disponibilidad de servicios e internet en la dirección concreta.",
+    source:"https://www.farmington-ct.org/community/trail-system/",
+    places:["Farmington Canal Heritage Trail","Farmington River Trail","Tunxis Mead Park","Suburban Park","Shade Swamp Sanctuary"]
+  },
+
 };
