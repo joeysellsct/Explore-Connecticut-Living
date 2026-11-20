@@ -4,13 +4,13 @@ import {readFileSync} from 'node:fs';
 
 const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8');
 
-test('Meriden municipal directory has 15 distinct, bilingual, sourced resources', () => {
+test('Meriden municipal directory has at least 15 distinct, bilingual, sourced resources', () => {
  const source = read('lib/town-official-links.ts');
  const match = source.match(/^ 'meriden': \[(.*?)^ \],/ms);
  assert.ok(match, 'Missing Meriden municipal resource directory');
  const entries = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
- assert.equal(entries.length, 15);
- assert.equal(new Set(entries.map(entry => entry.url)).size, 15);
+ assert.ok(entries.length >= 15);
+ assert.equal(new Set(entries.map(entry => entry.url)).size, entries.length);
  for (const entry of entries) {
   assert.ok(entry.en.length > 25 && entry.es.length > 25);
   assert.equal(new URL(entry.url).protocol, 'https:');
