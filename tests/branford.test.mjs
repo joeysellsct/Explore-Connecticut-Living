@@ -30,7 +30,7 @@ test('Branford municipal resources are bilingual and point to verified official 
     assert.ok(link.en && link.es && link.url, 'Each link needs both languages and a URL');
     const url = new URL(link.url);
     assert.equal(url.protocol, 'https:');
-    assert.ok(['www.branford-ct.gov','shorelineeast.com','portal.ct.gov','www.census.gov','public-edsight.ct.gov'].includes(url.hostname));
+    assert.ok(['www.branford-ct.gov','shorelineeast.com','portal.ct.gov','www.census.gov','public-edsight.ct.gov','esdhd.org','www.211ct.org','www.energizect.com','broadbandmap.fcc.gov','msc.fema.gov','data.census.gov','data.ct.gov'].includes(url.hostname));
   }
   for (const resource of ['/179/Assessors-Office','/333/Land-Records','/200/Building-Department','/319/Tax-Collector','/329/Water-Pollution-Control-Facility']) {
     assert.ok(links.some(link => link.url.includes(resource)), 'Missing ' + resource);
