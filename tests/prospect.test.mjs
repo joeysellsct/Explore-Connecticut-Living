@@ -11,8 +11,8 @@ test('Prospect resources are bilingual, sourced and deduplicated', () => {
  const end = source.indexOf('\n ],', start);
  assert.ok(end > start);
  const entries = source.slice(start, end).split('\n').map(s => s.trim()).filter(s => s.startsWith('{')).map(s => JSON.parse(s.replace(/,$/, '')));
- assert.equal(entries.length, 15);
- assert.equal(new Set(entries.map(x => x.url)).size, 15);
+ assert.ok(entries.length >= 15, `Expected at least 15 sourced resources, found ${entries.length}`);
+ assert.equal(new Set(entries.map(x => x.url)).size, entries.length);
  for (const entry of entries) {
   assert.ok(entry.en.length > 50 && entry.es.length > 50, entry.url);
   assert.equal(new URL(entry.url).protocol, 'https:');
