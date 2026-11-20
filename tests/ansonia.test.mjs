@@ -11,7 +11,7 @@ const townArray = (path, slug) => {
   const left = source.indexOf('[', start + anchor.length - 1);
   const right = source.indexOf('],', left);
   assert.ok(right > left, 'Missing closing town array in ' + path);
-  return JSON.parse(source.slice(left, right + 1).replace(/,\s*]/g, ']'));
+  return JSON.parse(source.slice(left, right + 1).replace(/^\s*\/\/.*$/gm, '').replace(/,\s*]/g, ']'));
 };
 
 test('Ansonia has substantive bilingual guide with current rail, tax and utility cautions', () => {
