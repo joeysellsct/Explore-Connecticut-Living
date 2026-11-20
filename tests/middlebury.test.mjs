@@ -30,8 +30,8 @@ test('Middlebury guide contains at least four substantive English and Spanish pa
  assert.ok(line, 'Middlebury town guide missing');
  const guide = JSON.parse(line.slice(line.indexOf('{')).replace(/,$/, ''));
  assert.ok(guide.en.length > 2000 && guide.es.length > 2200);
- assert.equal(guide.en.split('\n\n').length, 4);
- assert.equal(guide.es.split('\n\n').length, 4);
+ assert.ok(guide.en.split('\n\n').length >= 4);
+ assert.ok(guide.es.split('\n\n').length >= 4);
  for (const place of ['Quassy Amusement & Waterpark', 'Middlebury Greenway', 'Larkin State Park Trail', 'Hetzel Refuge']) {
   assert.ok(guide.places.includes(place), place);
   assert.ok(guide.en.includes(place), place);
