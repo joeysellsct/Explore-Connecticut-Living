@@ -23,7 +23,7 @@ test('Orange maintains at least twelve distinct official bilingual property rese
   assert.ok(start >= 0);
   const left = source.indexOf('[', start + anchor.length - 1);
   const right = source.indexOf('],', left);
-  const links = JSON.parse(source.slice(left, right + 1).replace(/,\s*]/g, ']'));
+  const links = JSON.parse(source.slice(left, right + 1).replace(/^\s*\/\/.*$/gm, '').replace(/,\s*]/g, ']'));
   assert.ok(links.length >= 12, `Expected at least 12 Orange resources, found ${links.length}`);
   assert.equal(new Set(links.map(x => x.url)).size, links.length);
   for (const link of links) {
@@ -50,7 +50,7 @@ const townArray = (path, slug) => {
   const left = source.indexOf('[', start + anchor.length - 1);
   const right = source.indexOf('],', left);
   assert.ok(right > left);
-  return JSON.parse(source.slice(left, right + 1).replace(/,\s*]/g, ']'));
+  return JSON.parse(source.slice(left, right + 1).replace(/^\s*\/\/.*$/gm, '').replace(/,\s*]/g, ']'));
 };
 
 test('Orange has five source-checked bilingual restaurants without fabricated ratings', () => {
