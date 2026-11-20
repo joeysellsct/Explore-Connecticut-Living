@@ -55,8 +55,8 @@ test('Branford restaurant directory has five sourced bilingual entries without i
   const match = source.match(/'branford':\s*(\[[\s\S]*?\]),\n\s*(?:\/\/[^\n]*\n\s*)*'orange':/);
   assert.ok(match, 'Branford restaurant directory should exist');
   const restaurants = JSON.parse(match[1]);
-  assert.equal(restaurants.length, 5);
-  assert.equal(new Set(restaurants.map(restaurant => restaurant.name)).size, 5);
+  assert.ok(restaurants.length >= 5, 'Preserve at least five verified restaurants while allowing sourced additions');
+  assert.equal(new Set(restaurants.map(restaurant => restaurant.name)).size, restaurants.length);
   for (const restaurant of restaurants) {
     assert.ok(restaurant.cuisine && restaurant.cuisineEs && restaurant.sourceUrl && restaurant.checkedOn);
     assert.ok(!('rating' in restaurant), 'Ratings require verified provenance');
@@ -69,7 +69,7 @@ test('Branford photo licenses and attribution are recorded for two town-specific
   const match = source.match(/'branford':\s*(\[[\s\S]*?\]),\n/);
   assert.ok(match, 'Branford photo gallery should exist');
   const photos = JSON.parse(match[1]);
-  assert.equal(photos.length, 2);
+  assert.ok(photos.length >= 2, 'Preserve both licensed Branford photographs while allowing verified additions');
   for (const photo of photos) {
     assert.ok(photo.title && photo.titleEs && photo.credit && photo.file);
     assert.equal(photo.license, 'CC BY-SA 4.0');
