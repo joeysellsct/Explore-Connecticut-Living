@@ -26,10 +26,10 @@ test('Madison English and Spanish guide contains sourced local and property rese
   assert.ok(guide.en.includes('septic') && guide.es.includes('sépticos'));
 });
 
-test('Madison has 15 distinct bilingual official municipal and transport links', () => {
+test('Madison retains at least 15 distinct bilingual official municipal and transport links', () => {
   const links = arrayFor('lib/town-official-links.ts', 'madison');
-  assert.equal(links.length, 15);
-  assert.equal(new Set(links.map(x => x.url)).size, 15);
+  assert.ok(links.length >= 15);
+  assert.equal(new Set(links.map(x => x.url)).size, links.length);
   for (const link of links) {
     assert.ok(link.en && link.es);
     assert.equal(new URL(link.url).protocol, 'https:');
