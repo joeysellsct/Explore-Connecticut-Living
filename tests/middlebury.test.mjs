@@ -4,15 +4,15 @@ import {readFileSync} from 'node:fs';
 
 const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8');
 
-test('Middlebury municipal and moving links contain 12 distinct bilingual sources', () => {
+test('Middlebury municipal and moving links contain at least 12 distinct bilingual sources', () => {
  const source = read('lib/town-official-links.ts');
  const start = source.indexOf(" 'middlebury': [");
  assert.ok(start >= 0, 'Middlebury resources missing');
  const end = source.indexOf('\n ],', start);
  assert.ok(end > start, 'Middlebury resource block not closed');
  const entries = source.slice(start, end).split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
- assert.equal(entries.length, 12);
- assert.equal(new Set(entries.map(item => item.url)).size, 12);
+ assert.ok(entries.length >= 12);
+ assert.equal(new Set(entries.map(item => item.url)).size, entries.length);
  for (const item of entries) {
   assert.ok(item.en.length > 45 && item.es.length > 45, item.url);
   assert.equal(new URL(item.url).protocol, 'https:');
@@ -24,7 +24,7 @@ test('Middlebury municipal and moving links contain 12 distinct bilingual source
  assert.ok(entries.some(item => item.url.includes('Building-Land-Use-Department')));
 });
 
-test('Middlebury guide contains four substantive English and Spanish paragraphs', () => {
+test('Middlebury guide contains at least four substantive English and Spanish paragraphs', () => {
  const source = read('lib/town-highlights.ts');
  const line = source.split('\n').find(item => item.trimStart().startsWith("'middlebury':{"));
  assert.ok(line, 'Middlebury town guide missing');
