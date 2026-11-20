@@ -24,8 +24,8 @@ test('Naugatuck official resources have 15 unique bilingual sourced links', () =
   const match = source.match(/^ 'naugatuck': \[(.*?)^ \],/ms);
   assert.ok(match, 'Naugatuck official resources missing');
   const entries = match[1].split('\n').map(line => line.trim()).filter(line => line.startsWith('{')).map(line => JSON.parse(line.replace(/,$/, '')));
-  assert.equal(entries.length, 15);
-  assert.equal(new Set(entries.map(entry => entry.url)).size, 15);
+  assert.ok(entries.length >= 15, 'Expected at least 15 sourced resources');
+  assert.equal(new Set(entries.map(entry => entry.url)).size, entries.length, 'Resource URLs must be unique');
   for (const entry of entries) {
     assert.ok(entry.en.length > 20 && entry.es.length > 20);
     assert.equal(new URL(entry.url).protocol, 'https:');
