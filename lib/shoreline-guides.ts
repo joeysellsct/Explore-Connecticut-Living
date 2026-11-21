@@ -549,4 +549,13 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
     places:["Durham Community Center","Allyn Brook Pavilion","White Farm","Curtis Woodlands","Otte Meadows"]
   },
 
+  // New Britain: municipal parks directory and recreation registration checked 2026-11-21.
+  // Sources: https://www.newbritainct.gov/visit-nb/parkshtm and https://newbritainct.myrec.com/info/facilities/default.aspx
+  'new-britain':{
+    en:"New Britain's municipal parks directory identifies Walnut Hill Park, with a rose garden, walking loop and Darius Miller Concert Shell; Stanley Quarter Park, with a skate park, fishing pond and sports fields; and A.W. Stanley Park, with nature trails and picnic areas. Willow Street Park offers a pavilion and outdoor games, while Chesley Park includes courts and ball fields. Park facilities and seasonal programs may change, so check the city's Recreation and Community Services registration portal for current availability, reservations and rules before visiting. For a move, use the City of New Britain website to locate the assessor, tax collector and city clerk, and request the current property-specific assessment and tax information. Confirm school enrollment with the school district and utility or internet availability with each provider at the actual address; a citywide listing is not a guarantee of service.",
+    es:"El directorio municipal de parques de New Britain incluye Walnut Hill Park, con jardín de rosas, circuito para caminar y el escenario Darius Miller; Stanley Quarter Park, con parque de patinaje, estanque de pesca y campos deportivos; y A.W. Stanley Park, con senderos naturales y zonas de pícnic. Willow Street Park cuenta con un pabellón y juegos al aire libre, mientras que Chesley Park tiene canchas y campos de pelota. Las instalaciones y actividades de temporada pueden cambiar; consulta el portal de inscripciones del Departamento de Recreación y Servicios Comunitarios para confirmar disponibilidad, reservas y normas antes de visitar. Si piensas mudarte, utiliza el sitio oficial de la ciudad para localizar las oficinas de tasación, recaudación de impuestos y secretaría municipal, y solicita los datos vigentes de tasación e impuestos de la propiedad específica. Confirma la inscripción escolar con el distrito y la disponibilidad de servicios e internet con cada proveedor para la dirección exacta; una lista municipal no garantiza el servicio.",
+    source:"https://www.newbritainct.gov/visit-nb/parkshtm",
+    places:["Walnut Hill Park","Stanley Quarter Park","A.W. Stanley Park","Willow Street Park","Chesley Park"]
+  },
+
 };
