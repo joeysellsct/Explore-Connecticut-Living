@@ -521,4 +521,13 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
 
 
 
+  // Bolton town parks and visitor resources checked against official town pages 2026-11-20.
+  bolton:{
+    en:"Bolton's three town-maintained parks offer different outings. Indian Notch Park at 60 Tolland Road has a seasonal beach on Bolton Lake, picnic areas, courts and a pavilion; the town says the beach is closed for the 2026 season, and admission rules and fees should be checked before a summer visit. Herrick Park at 29 Hebron Road has fields, a playground, basketball and a rentable community building. Freja Park, off Route 44 near Bolton Notch Pond, offers undeveloped land for walking and hiking. Bolton also includes Bolton Notch State Park and part of the Hop River State Park Trail. For a move, start with Town Hall at 222 Bolton Center Road and confirm school enrollment, property-specific assessments and taxes, waste services, and utility availability with the relevant offices. Park rules and seasonal access can change.",
+    es:"Los tres parques municipales de Bolton ofrecen distintas actividades. Indian Notch Park, en 60 Tolland Road, tiene una playa de temporada en Bolton Lake, zonas de pícnic, canchas y un pabellón; el municipio indica que la playa ya cerró por la temporada de 2026. Antes de visitarla en verano, verifica los requisitos de entrada y las tarifas. Herrick Park, en 29 Hebron Road, tiene campos deportivos, juegos infantiles, baloncesto y un edificio comunitario que se puede alquilar. Freja Park, cerca de la Ruta 44 y Bolton Notch Pond, conserva espacios naturales para caminar. Bolton también comprende Bolton Notch State Park y parte del sendero estatal Hop River. Si estás pensando mudarte, comienza por el ayuntamiento en 222 Bolton Center Road y confirma con las oficinas correspondientes la matrícula escolar, los impuestos y la tasación de la propiedad, la recolección de residuos y los servicios disponibles en la dirección específica. Las normas y el acceso a los parques pueden cambiar.",
+    source:"https://www.boltonct.gov/services/town-parks",
+    places:["Indian Notch Park","Herrick Park","Freja Park","Bolton Notch State Park","Hop River State Park Trail"]
+  },
+
+
 };
