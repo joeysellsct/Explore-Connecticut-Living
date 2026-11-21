@@ -530,4 +530,14 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
   },
 
 
+
+  // Berlin recreation details checked against town planning and parks documents 2026-11-20.
+  berlin:{
+    en:"Berlin offers both organized recreation and wooded trails. The town's Parks and Recreation facilities inventory identifies Sage Park, Veterans Memorial Park, Paper Goods Pond Park and Timberlin Park among its outdoor spaces. Timberlin Park includes wooded walking areas, while the municipal Timberlin Golf Club at 330 Southington Road offers an 18-hole course; golf fees and tee-time availability should be checked directly. Park amenities, pool access and seasonal conditions can change, so consult the town before visiting. For a move to Berlin, Kensington or East Berlin, verify school assignment with the district, request the specific property's current assessment and tax bill, and confirm water, sewer, trash collection and internet availability for the address rather than assuming townwide coverage.",
+    es:"Berlin ofrece instalaciones deportivas y senderos entre áreas arboladas. El inventario municipal de Parques y Recreación incluye Sage Park, Veterans Memorial Park, Paper Goods Pond Park y Timberlin Park. Timberlin Park tiene espacios para caminar entre árboles; el campo municipal Timberlin Golf Club, en 330 Southington Road, cuenta con 18 hoyos. Consulta directamente los precios y la disponibilidad para jugar. Los servicios de los parques, el acceso a las piscinas y las condiciones de temporada pueden cambiar, así que verifica la información municipal antes de visitar. Si piensas mudarte a Berlin, Kensington o East Berlin, confirma la asignación escolar con el distrito, solicita la tasación y factura de impuestos actuales de la propiedad y comprueba la disponibilidad de agua, alcantarillado, recolección de basura e internet en la dirección específica.",
+    source:"https://www.berlinct.gov/egov/apps/document/center.egov?id=10383&view=item",
+    places:["Timberlin Park","Timberlin Golf Club","Sage Park","Veterans Memorial Park","Paper Goods Pond Park"]
+  },
+
+
 };
