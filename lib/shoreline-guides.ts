@@ -540,4 +540,13 @@ export const shorelineGuides: Record<string,{en:string;es:string;source:string;p
   },
 
 
+
+  // Durham municipal resources reviewed 2026-11-20; verify current programs before visiting.
+  durham:{
+    en:"Durham's Recreation Department operates from the Durham Community Center at 144 Pickett Lane and posts program registration, cancellations and rental information through RecDesk. Residents can inquire about activities such as youth basketball, indoor pickleball and community events; schedules and eligibility change by season. The department lists the Allyn Brook Pavilion and Community Center as rental options. The Conservation Commission maintains information about town open-space properties including White Farm, Curtis Woodlands and Otte Meadows; check current access rules and any hunting notices before visiting. For a move, Durham Town Hall at 30 Town House Road provides links to the Assessor, Tax Collector, Town Clerk and Building and Land Use offices. School questions should go to Regional School District 13; verify the specific address, property assessment, current tax bill and utility availability rather than assuming all Durham properties share the same arrangements.",
+    es:"El Departamento de Recreación de Durham funciona en el Durham Community Center, en 144 Pickett Lane, y publica inscripciones, cancelaciones y alquileres mediante RecDesk. Los residentes pueden consultar actividades como baloncesto juvenil, pickleball bajo techo y eventos comunitarios; los horarios y requisitos cambian según la temporada. El departamento ofrece información sobre el alquiler del pabellón de Allyn Brook y del centro comunitario. La Comisión de Conservación publica información sobre espacios naturales municipales, entre ellos White Farm, Curtis Woodlands y Otte Meadows; comprueba las normas de acceso y los avisos de caza antes de visitarlos. Para una mudanza, el ayuntamiento de Durham, en 30 Town House Road, enlaza las oficinas de Tasación, Recaudación de Impuestos, Secretaría Municipal y Uso del Suelo. Consulta las escuelas con el Distrito Escolar Regional 13 y verifica la dirección, la tasación, la factura de impuestos vigente y la disponibilidad de servicios para la propiedad concreta.",
+    source:"https://www.townofdurhamct.org/entities/recreation-department",
+    places:["Durham Community Center","Allyn Brook Pavilion","White Farm","Curtis Woodlands","Otte Meadows"]
+  },
+
 };
