@@ -18,12 +18,13 @@ Basic bilingual homepage and town directory, Google OAuth foundation, database m
 ## Safety
 Do not submit real buyer data until consent, validation, rate limiting, retention and deletion are implemented. Google login does not automatically grant admin access. Free Supabase does not guarantee managed backups. Use a Next.js-compatible Cloudflare Workers adapter for eventual staging deployment.
 
-## Town-data coverage ledger (updated 2026-11-15)
+## Town-data coverage ledger (updated 2026-11-22)
 
 The target is all **169 Connecticut municipalities**. A directory entry or a link to a data portal does **not** establish that town-specific data is complete. No town is certified by this ledger.
 
 | Dataset | Source-code coverage currently evidenced | Outstanding work |
 | --- | --- | --- |
+| Official research-resource town keys | 169 of 169 municipality keys in `lib/town-official-links.ts` as independently read after commit [`0abb742`](https://github.com/joeysellsct/Explore-Connecticut-Living/commit/0abb74227b2d7f0b1907dbb982b851badb413033) on 2026-11-22. These are bilingual links/guidance, **not** 169 fully populated town profiles. | Verify each resource renders, check links for freshness, and fill actual town-specific datasets rather than treating research portals as populated statistics. |
 | FY2027 municipal base mill rates | 50 entries: all 27 New Haven County and 23 Fairfield County towns in `lib/fy2027-mill-rates.ts`, attributed to [CT OPM](https://data.ct.gov/Local-Government/Mill-Rates-for-FY-2014-2027/emyx-j53e) | 119 towns; verify against OPM; distinguish district taxes and actual parcel assessments |
 | Demographics | Census research links exist for many New Haven County towns; links are not demographic figures | Dated town-specific figures, geographic definitions and ACS margins of error |
 | Schools and crime | Research guidance does not establish numerical coverage | Dated, sourced local facts and reporting caveats |
