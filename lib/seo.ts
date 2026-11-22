@@ -12,7 +12,9 @@ export function localizedSeo(locale:string,path:string,title:string,description:
   robots:(()=>{
    const host=new URL(siteUrl).hostname.toLowerCase();
    const preview=host==='localhost'||host.endsWith('.workers.dev')||host.endsWith('.pages.dev')||host.startsWith('staging.')||host.startsWith('preview.');
-   const approved=process.env.ENABLE_PRODUCTION_INDEXING==='true'&&!preview&&siteUrl.startsWith('https://');
+   const productionHosts=new Set(['exploreconnecticutliving.com','www.exploreconnecticutliving.com']);
+   // An explicit production-domain allowlist prevents accidental indexing on custom preview hosts.
+   const approved=process.env.ENABLE_PRODUCTION_INDEXING==='true'&&!preview&&productionHosts.has(host)&&new URL(siteUrl).protocol==='https:';
    return {index:approved,follow:approved};
   })(),
   alternates:{canonical:current,languages:{'en-US':en,'es-US':es,'x-default':en}},
