@@ -153,6 +153,7 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
     }
   ],
   west_haven: [
+    { name: "Savin Rock Roasting Company", address: "305 Captain Thomas Boulevard, West Haven, CT 06516", cuisineEn: "American restaurant and slow-roasted meats", cuisineEs: "Restaurante estadounidense y carnes asadas lentamente", descriptionEn: "A Captain Thomas Boulevard restaurant known for slow-roasted meats, sandwiches and traditional American dishes. Confirm current hours and menu directly before visiting.", descriptionEs: "Restaurante de Captain Thomas Boulevard conocido por sus carnes asadas lentamente, sándwiches y platos tradicionales estadounidenses. Confirma directamente los horarios y el menú antes de visitarlo.", sourceUrl: "https://nextdoor.com/pages/savin-rock-roasting-company-west-haven-ct-1/", verifiedOn: "2026-11-23" },
     {
       name: "Zuppardi’s Apizza", address: "179 Union Ave, West Haven, CT 06516",
       cuisineEn: "New Haven-style apizza", cuisineEs: "Apizza al estilo de New Haven",
