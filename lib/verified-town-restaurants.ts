@@ -93,6 +93,7 @@ export const verifiedTownRestaurants: Record<string, VerifiedRestaurant[]> = {
     { name: "The Rib House", address: "190 Main Street, East Haven, CT 06512", cuisineEn: "Barbecue and American dishes", cuisineEs: "Barbacoa y cocina estadounidense", descriptionEn: "A Main Street restaurant offering ribs, burgers, steaks and catering.", descriptionEs: "Restaurante de Main Street con costillas, hamburguesas, carnes y servicio de catering.", sourceUrl: "https://therib-house.com/", verifiedOn: "2026-11-11" }
   ],
   milford: [
+    { name: "Founders House Pub & Patio", address: "117 Broad Street, Milford, CT 06460", cuisineEn: "American restaurant and pub", cuisineEs: "Restaurante y pub de cocina estadounidense", descriptionEn: "A pub and patio restaurant facing Milford Green, with American dishes, weekend brunch and outdoor seating; check the operator's website for current menus and hours.", descriptionEs: "Restaurante con pub y patio frente a Milford Green, con platos estadounidenses, brunch de fin de semana y mesas al aire libre; consulta el sitio oficial para conocer menús y horarios actuales.", sourceUrl: "https://www.milfordfoundershouse.com/", verifiedOn: "2026-11-22" },
     {
       name: "SBC Restaurant & Beer Bar", address: "33 New Haven Avenue, Milford, CT 06460",
       cuisineEn: "American dining and craft beer", cuisineEs: "Cocina estadounidense y cerveza artesanal",
