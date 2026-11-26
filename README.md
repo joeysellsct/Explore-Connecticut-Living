@@ -18,7 +18,7 @@ Basic bilingual homepage and town directory, Google OAuth foundation, database m
 ## Safety
 Do not submit real buyer data until consent, validation, rate limiting, retention and deletion are implemented. Google login does not automatically grant admin access. Free Supabase does not guarantee managed backups. Use a Next.js-compatible Cloudflare Workers adapter for eventual staging deployment.
 
-## Town-data coverage ledger (updated 2026-11-22)
+## Town-data coverage ledger (updated 2026-11-26)
 
 The target is all **169 Connecticut municipalities**. A directory entry or a link to a data portal does **not** establish that town-specific data is complete. No town is certified by this ledger.
 
@@ -31,7 +31,7 @@ The target is all **169 Connecticut municipalities**. A directory entry or a lin
 | Restaurants | `lib/verified-town-restaurants.ts` currently contains **83 source-linked bilingual restaurant records across 15 explicit town keys** (source-code inventory checked 2026-11-22; counts are not an operating-status or source-link audit). Some other restaurant directories may contain additional entries. | Expand coverage across all towns; independently reconfirm operation, address and source links; target roughly five per town where available | 
 | Photos | Existing image assets have not been comprehensively audited for town identity or reuse rights | Town-specific images with documented license, creator, source and attribution; do not publish unverified images |
 | Spanish and SEO | Existing bilingual content and metadata need per-town checks | Original localized content, canonical/hreflang, internal links, schema and sitemap |
-| Bilingual attraction/moving guides | `lib/shoreline-guides.ts` contains 70 distinct source-code keys with English and Spanish text (inventory checked 2026-11-19). Some keys are aliases for the same municipality (for example `northbranford` and `north-branford`), so 70 is **not** a count of municipalities covered or verified facts. | Normalize aliases, audit official-source freshness and check that each guide renders on the intended town page; expand missing towns without duplicate keys |
+| Bilingual attraction/moving guides | `lib/shoreline-guides.ts` contains 84 distinct source-code keys with English and Spanish text (inventory checked 2026-11-26), including Brooklyn and Plainville. Normalizing hyphens and underscores yields 76 distinct identifiers; this is not a verified municipality or rendered-page count. Some keys are aliases (for example `northbranford` and `north-branford`). | Normalize aliases, audit official-source freshness and check that each guide renders on the intended town page; expand missing towns without duplicate keys |
 
 **Priority:** Milford, West Haven, other New Haven County towns; Fairfield County; remaining counties. Advance multiple towns rather than repeatedly polishing one. Preserve only the three approved personal Top Picks, referral and storefront tracking links and disclosures, Equal Housing Opportunity materials, and staging noindex/robots rules. For each new factual claim record the official source and verification date. Essential automated checks continue during development; final human visual, screen-reader and launch certification remain deferred. This is a source-code inventory, not evidence of a passing build or live deployment.
 
